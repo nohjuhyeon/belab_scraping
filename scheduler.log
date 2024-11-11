@@ -1,0 +1,728 @@
+2024-11-07 11:05:27,770 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 11:05:27,771 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 11:05:27,771 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 11:05:27,771 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 11:05:27,772 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 11:05:27,772 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 11:05:27,772 - INFO - Added job "email_sending" to job store "default"
+2024-11-07 11:05:27,772 - INFO - Added job "venture_doctors" to job store "default"
+2024-11-07 11:05:27,772 - INFO - Added job "statistic_bank" to job store "default"
+2024-11-07 11:05:27,772 - INFO - Added job "seoul_institute" to job store "default"
+2024-11-07 11:05:27,772 - INFO - Added job "ict_news" to job store "default"
+2024-11-07 11:05:27,772 - INFO - Added job "total_update" to job store "default"
+2024-11-07 11:05:27,772 - INFO - Scheduler started
+2024-11-07 11:05:27,772 - INFO - Scheduler started...
+2024-11-07 11:05:36,405 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 11:05:36,405 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 11:05:36,405 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 11:05:36,405 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 11:05:36,405 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 11:05:36,405 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 11:05:36,405 - INFO - Added job "email_sending" to job store "default"
+2024-11-07 11:05:36,405 - INFO - Added job "venture_doctors" to job store "default"
+2024-11-07 11:05:36,405 - INFO - Added job "statistic_bank" to job store "default"
+2024-11-07 11:05:36,405 - INFO - Added job "seoul_institute" to job store "default"
+2024-11-07 11:05:36,405 - INFO - Added job "ict_news" to job store "default"
+2024-11-07 11:05:36,405 - INFO - Added job "total_update" to job store "default"
+2024-11-07 11:05:36,405 - INFO - Scheduler started
+2024-11-07 11:05:36,462 - INFO - Scheduler started...
+2024-11-07 11:56:03,640 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 11:56:03,690 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 11:56:03,690 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 11:56:03,690 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 11:56:03,690 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 11:56:03,690 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 11:56:03,690 - INFO - Added job "email_sending" to job store "default"
+2024-11-07 11:56:03,690 - INFO - Added job "venture_doctors" to job store "default"
+2024-11-07 11:56:03,690 - INFO - Added job "statistic_bank" to job store "default"
+2024-11-07 11:56:03,690 - INFO - Added job "seoul_institute" to job store "default"
+2024-11-07 11:56:03,690 - INFO - Added job "ict_news" to job store "default"
+2024-11-07 11:56:03,690 - INFO - Added job "total_update" to job store "default"
+2024-11-07 11:56:03,690 - INFO - Scheduler started
+2024-11-07 11:56:03,690 - INFO - Scheduler started...
+2024-11-07 11:56:34,287 - INFO - Scheduler has been shut down
+2024-11-07 11:56:34,288 - INFO - Scheduler shut down.
+2024-11-07 11:59:22,467 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 11:59:22,467 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 11:59:22,467 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 11:59:22,467 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 11:59:22,467 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 11:59:22,467 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 11:59:22,467 - INFO - Added job "email_sending" to job store "default"
+2024-11-07 11:59:22,467 - INFO - Added job "venture_doctors" to job store "default"
+2024-11-07 11:59:22,467 - INFO - Added job "statistic_bank" to job store "default"
+2024-11-07 11:59:22,467 - INFO - Added job "seoul_institute" to job store "default"
+2024-11-07 11:59:22,467 - INFO - Added job "ict_news" to job store "default"
+2024-11-07 11:59:22,467 - INFO - Added job "total_update" to job store "default"
+2024-11-07 11:59:22,467 - INFO - Scheduler started
+2024-11-07 11:59:22,467 - INFO - Scheduler started...
+2024-11-07 12:00:00,012 - INFO - Running job "venture_doctors (trigger: cron[hour='12', minute='0'], next run at: 2024-11-07 12:00:00 KST)" (scheduled at 2024-11-07 12:00:00+09:00)
+2024-11-07 12:00:00,891 - INFO - ====== WebDriver manager ======
+2024-11-07 12:00:02,131 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 12:00:02,163 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 12:00:02,178 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-07 12:00:29,520 - INFO - Job "venture_doctors (trigger: cron[hour='12', minute='0'], next run at: 2024-11-08 12:00:00 KST)" executed successfully
+2024-11-07 12:15:00,007 - INFO - Running job "statistic_bank (trigger: cron[hour='12', minute='15'], next run at: 2024-11-08 12:15:00 KST)" (scheduled at 2024-11-07 12:15:00+09:00)
+2024-11-07 12:15:00,176 - INFO - ====== WebDriver manager ======
+2024-11-07 12:15:01,280 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 12:15:01,307 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 12:15:01,330 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-07 12:15:23,826 - INFO - Job "statistic_bank (trigger: cron[hour='12', minute='15'], next run at: 2024-11-08 12:15:00 KST)" executed successfully
+2024-11-07 12:30:00,014 - INFO - Running job "seoul_institute (trigger: cron[hour='12', minute='30'], next run at: 2024-11-08 12:30:00 KST)" (scheduled at 2024-11-07 12:30:00+09:00)
+2024-11-07 12:30:00,175 - INFO - ====== WebDriver manager ======
+2024-11-07 12:30:01,449 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 12:30:01,507 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 12:30:01,589 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-07 12:30:20,038 - INFO - Job "seoul_institute (trigger: cron[hour='12', minute='30'], next run at: 2024-11-08 12:30:00 KST)" executed successfully
+2024-11-07 12:45:00,015 - INFO - Running job "ict_news (trigger: cron[hour='12', minute='45'], next run at: 2024-11-08 12:45:00 KST)" (scheduled at 2024-11-07 12:45:00+09:00)
+2024-11-07 12:45:00,109 - INFO - ====== WebDriver manager ======
+2024-11-07 12:45:01,842 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 12:45:01,859 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 12:45:01,880 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-07 12:47:27,316 - INFO - Job "ict_news (trigger: cron[hour='12', minute='45'], next run at: 2024-11-08 12:45:00 KST)" executed successfully
+2024-11-07 13:00:00,008 - INFO - Running job "total_update (trigger: cron[hour='13', minute='0'], next run at: 2024-11-08 13:00:00 KST)" (scheduled at 2024-11-07 13:00:00+09:00)
+2024-11-07 13:00:00,367 - INFO - Job "total_update (trigger: cron[hour='13', minute='0'], next run at: 2024-11-08 13:00:00 KST)" executed successfully
+2024-11-07 15:03:39,897 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 15:03:39,897 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 15:03:39,897 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 15:03:39,897 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 15:03:39,897 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 15:03:39,897 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 15:03:39,913 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 15:03:39,913 - INFO - Added job "email_sending" to job store "default"
+2024-11-07 15:03:39,913 - INFO - Added job "venture_doctors" to job store "default"
+2024-11-07 15:03:39,913 - INFO - Added job "statistic_bank" to job store "default"
+2024-11-07 15:03:39,913 - INFO - Added job "seoul_institute" to job store "default"
+2024-11-07 15:03:39,913 - INFO - Added job "ict_news" to job store "default"
+2024-11-07 15:03:39,913 - INFO - Added job "total_update" to job store "default"
+2024-11-07 15:03:39,913 - INFO - Added job "email_sending" to job store "default"
+2024-11-07 15:03:39,913 - INFO - Scheduler started
+2024-11-07 15:03:39,913 - INFO - Scheduler started...
+2024-11-07 15:05:00,006 - INFO - Running job "email_sending (trigger: cron[hour='15', minute='5'], next run at: 2024-11-07 15:05:00 KST)" (scheduled at 2024-11-07 15:05:00+09:00)
+2024-11-07 15:05:00,006 - INFO - ====== WebDriver manager ======
+2024-11-07 15:05:01,775 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 15:05:01,797 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 15:05:01,815 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-07 15:05:10,453 - ERROR - Job "email_sending (trigger: cron[hour='15', minute='5'], next run at: 2024-11-08 15:05:00 KST)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\JH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\develops\bepet_scraping\g2b_notice_check\email_push.py", line 40, in email_sending
+    ai_notice_list, check_notice_list = g2b_notice_collection()
+  File "C:\develops\bepet_scraping\g2b_notice_check\g2b_notice.py", line 295, in g2b_notice_collection
+    notice_list = notice_search('isp',notice_list,notice_titles)
+  File "C:\develops\bepet_scraping\g2b_notice_check\g2b_notice.py", line 69, in notice_search
+    os.makedirs(folder_path, exist_ok=True)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\os.py", line 215, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\os.py", line 225, in makedirs
+    mkdir(name, mode)
+PermissionError: [WinError 5] �׼����� �źεǾ����ϴ�: 'C:\\Windows\\system32\\notice_list'
+2024-11-07 15:54:51,479 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 15:54:51,479 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 15:54:51,479 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 15:54:51,479 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 15:54:51,479 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 15:54:51,479 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 15:54:51,479 - INFO - Added job "email_sending" to job store "default"
+2024-11-07 15:54:51,479 - INFO - Added job "venture_doctors" to job store "default"
+2024-11-07 15:54:51,479 - INFO - Added job "statistic_bank" to job store "default"
+2024-11-07 15:54:51,479 - INFO - Added job "seoul_institute" to job store "default"
+2024-11-07 15:54:51,479 - INFO - Added job "ict_news" to job store "default"
+2024-11-07 15:54:51,479 - INFO - Added job "total_update" to job store "default"
+2024-11-07 15:54:51,479 - INFO - Scheduler started
+2024-11-07 15:54:51,494 - INFO - Scheduler started...
+2024-11-07 16:02:09,858 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:02:09,873 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:02:09,873 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:02:09,874 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:02:09,874 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:02:09,874 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:02:09,874 - INFO - Added job "email_sending" to job store "default"
+2024-11-07 16:02:09,874 - INFO - Added job "venture_doctors" to job store "default"
+2024-11-07 16:02:09,874 - INFO - Added job "statistic_bank" to job store "default"
+2024-11-07 16:02:09,874 - INFO - Added job "seoul_institute" to job store "default"
+2024-11-07 16:02:09,874 - INFO - Added job "ict_news" to job store "default"
+2024-11-07 16:02:09,874 - INFO - Added job "total_update" to job store "default"
+2024-11-07 16:02:09,874 - INFO - Scheduler started
+2024-11-07 16:02:09,874 - INFO - Scheduler started...
+2024-11-07 16:05:22,171 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:05:22,202 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:05:22,202 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:05:22,202 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:05:22,202 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:05:22,202 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:05:22,202 - INFO - Added job "email_sending" to job store "default"
+2024-11-07 16:05:22,202 - INFO - Added job "venture_doctors" to job store "default"
+2024-11-07 16:05:22,202 - INFO - Added job "statistic_bank" to job store "default"
+2024-11-07 16:05:22,202 - INFO - Added job "seoul_institute" to job store "default"
+2024-11-07 16:05:22,202 - INFO - Added job "ict_news" to job store "default"
+2024-11-07 16:05:22,202 - INFO - Added job "total_update" to job store "default"
+2024-11-07 16:05:22,202 - INFO - Scheduler started
+2024-11-07 16:05:22,202 - INFO - Scheduler started...
+2024-11-07 16:07:00,023 - INFO - Running job "total_update (trigger: cron[hour='16', minute='7'], next run at: 2024-11-07 16:07:00 KST)" (scheduled at 2024-11-07 16:07:00+09:00)
+2024-11-07 16:07:01,334 - INFO - Job "total_update (trigger: cron[hour='16', minute='7'], next run at: 2024-11-08 16:07:00 KST)" executed successfully
+2024-11-07 16:07:39,957 - INFO - Scheduler has been shut down
+2024-11-07 16:07:39,957 - INFO - Scheduler shut down.
+2024-11-07 16:10:05,809 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:10:05,809 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:10:05,809 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:10:05,809 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:10:05,809 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:10:05,809 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:10:05,809 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:10:05,809 - INFO - Added job "email_sending" to job store "default"
+2024-11-07 16:10:05,824 - INFO - Added job "venture_doctors" to job store "default"
+2024-11-07 16:10:05,824 - INFO - Added job "statistic_bank" to job store "default"
+2024-11-07 16:10:05,824 - INFO - Added job "seoul_institute" to job store "default"
+2024-11-07 16:10:05,824 - INFO - Added job "ict_news" to job store "default"
+2024-11-07 16:10:05,824 - INFO - Added job "total_update" to job store "default"
+2024-11-07 16:10:05,824 - INFO - Added job "email_sending" to job store "default"
+2024-11-07 16:10:05,824 - INFO - Scheduler started
+2024-11-07 16:10:05,824 - INFO - Scheduler started...
+2024-11-07 16:13:00,012 - INFO - Running job "email_sending (trigger: cron[hour='16', minute='13'], next run at: 2024-11-07 16:13:00 KST)" (scheduled at 2024-11-07 16:13:00+09:00)
+2024-11-07 16:13:00,057 - INFO - ====== WebDriver manager ======
+2024-11-07 16:13:01,252 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:13:01,284 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:13:01,315 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-07 16:15:17,979 - INFO - ====== WebDriver manager ======
+2024-11-07 16:15:19,047 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:15:19,078 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:15:19,094 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-07 16:16:14,946 - INFO - ====== WebDriver manager ======
+2024-11-07 16:16:15,894 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:16:15,925 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:16:15,941 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-07 16:16:31,019 - ERROR - Job "email_sending (trigger: cron[hour='16', minute='13'], next run at: 2024-11-08 16:13:00 KST)" raised an exception
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\shutil.py", line 816, in move
+    os.rename(src, real_dst)
+PermissionError: [WinError 32] �ٸ� ���μ����� ������ ��� ���̱� ������ ���μ����� �׼��� �� �� �����ϴ�: 'C:\\develops\\bepet_scraping\\preparation_list\\��Ȯ�� 719882.crdownload' -> 'C:\\develops\\bepet_scraping\\preparation_list\\�濵�����ý��� ���� ISP/BPR ���� ���\\��Ȯ�� 719882.crdownload'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\JH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\develops\bepet_scraping\g2b_notice_check\email_push.py", line 60, in email_sending
+    ai_preparation_list, check_preparation_list = g2b_preparation_collection()
+  File "C:\develops\bepet_scraping\g2b_notice_check\g2b_preparation.py", line 274, in g2b_preparation_collection
+    preparation_list = preparation_search('isp',preparation_list,preparation_titles)
+  File "C:\develops\bepet_scraping\g2b_notice_check\g2b_preparation.py", line 81, in preparation_search
+    move_files_to_folder(download_folder_path, folder_path)
+  File "C:\develops\bepet_scraping\g2b_notice_check\g2b_preparation.py", line 19, in move_files_to_folder
+    shutil.move(src_file, dest_file)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\shutil.py", line 837, in move
+    os.unlink(src)
+PermissionError: [WinError 32] �ٸ� ���μ����� ������ ��� ���̱� ������ ���μ����� �׼��� �� �� �����ϴ�: 'C:\\develops\\bepet_scraping\\preparation_list\\��Ȯ�� 719882.crdownload'
+2024-11-07 16:20:43,204 - INFO - Scheduler has been shut down
+2024-11-07 16:20:43,204 - INFO - Scheduler shut down.
+2024-11-07 16:21:25,671 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:21:25,671 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:21:25,671 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:21:25,671 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:21:25,671 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:21:25,671 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:21:25,671 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:21:25,671 - INFO - Added job "email_sending" to job store "default"
+2024-11-07 16:21:25,671 - INFO - Added job "venture_doctors" to job store "default"
+2024-11-07 16:21:25,671 - INFO - Added job "statistic_bank" to job store "default"
+2024-11-07 16:21:25,671 - INFO - Added job "seoul_institute" to job store "default"
+2024-11-07 16:21:25,671 - INFO - Added job "ict_news" to job store "default"
+2024-11-07 16:21:25,671 - INFO - Added job "total_update" to job store "default"
+2024-11-07 16:21:25,671 - INFO - Added job "email_sending" to job store "default"
+2024-11-07 16:21:25,671 - INFO - Scheduler started
+2024-11-07 16:21:25,686 - INFO - Scheduler started...
+2024-11-07 16:22:00,011 - INFO - Running job "email_sending (trigger: cron[hour='16', minute='22'], next run at: 2024-11-07 16:22:00 KST)" (scheduled at 2024-11-07 16:22:00+09:00)
+2024-11-07 16:22:00,011 - INFO - ====== WebDriver manager ======
+2024-11-07 16:22:01,026 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:22:01,057 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:22:01,073 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-07 16:24:16,884 - INFO - ====== WebDriver manager ======
+2024-11-07 16:24:17,972 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:24:18,003 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:24:18,019 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-07 16:25:12,999 - INFO - ====== WebDriver manager ======
+2024-11-07 16:25:14,074 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:25:14,105 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:25:14,121 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-07 16:25:32,289 - ERROR - Job "email_sending (trigger: cron[hour='16', minute='22'], next run at: 2024-11-08 16:22:00 KST)" raised an exception
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\shutil.py", line 816, in move
+    os.rename(src, real_dst)
+PermissionError: [WinError 32] �ٸ� ���μ����� ������ ��� ���̱� ������ ���μ����� �׼��� �� �� �����ϴ�: 'C:\\develops\\bepet_scraping\\preparation_list\\��Ȯ�� 661824.crdownload' -> 'C:\\develops\\bepet_scraping\\preparation_list\\2024�� ����� ����ȭ������ȹ(ISP) ����\\��Ȯ�� 661824.crdownload'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\JH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\develops\bepet_scraping\g2b_notice_check\email_push.py", line 60, in email_sending
+    ai_preparation_list, check_preparation_list = g2b_preparation_collection()
+  File "C:\develops\bepet_scraping\g2b_notice_check\g2b_preparation.py", line 274, in g2b_preparation_collection
+    preparation_list = preparation_search('isp',preparation_list,preparation_titles)
+  File "C:\develops\bepet_scraping\g2b_notice_check\g2b_preparation.py", line 81, in preparation_search
+    move_files_to_folder(download_folder_path, folder_path)
+  File "C:\develops\bepet_scraping\g2b_notice_check\g2b_preparation.py", line 19, in move_files_to_folder
+    shutil.move(src_file, dest_file)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\shutil.py", line 837, in move
+    os.unlink(src)
+PermissionError: [WinError 32] �ٸ� ���μ����� ������ ��� ���̱� ������ ���μ����� �׼��� �� �� �����ϴ�: 'C:\\develops\\bepet_scraping\\preparation_list\\��Ȯ�� 661824.crdownload'
+2024-11-07 16:26:21,760 - INFO - Scheduler has been shut down
+2024-11-07 16:26:21,760 - INFO - Scheduler shut down.
+2024-11-07 16:26:38,523 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:26:38,523 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:26:38,523 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:26:38,523 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:26:38,523 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:26:38,523 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:26:38,523 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:26:38,523 - INFO - Added job "email_sending" to job store "default"
+2024-11-07 16:26:38,523 - INFO - Added job "venture_doctors" to job store "default"
+2024-11-07 16:26:38,523 - INFO - Added job "statistic_bank" to job store "default"
+2024-11-07 16:26:38,523 - INFO - Added job "seoul_institute" to job store "default"
+2024-11-07 16:26:38,523 - INFO - Added job "ict_news" to job store "default"
+2024-11-07 16:26:38,523 - INFO - Added job "total_update" to job store "default"
+2024-11-07 16:26:38,523 - INFO - Added job "email_sending" to job store "default"
+2024-11-07 16:26:38,523 - INFO - Scheduler started
+2024-11-07 16:26:38,523 - INFO - Scheduler started...
+2024-11-07 16:28:00,017 - INFO - Running job "email_sending (trigger: cron[hour='16', minute='28'], next run at: 2024-11-07 16:28:00 KST)" (scheduled at 2024-11-07 16:28:00+09:00)
+2024-11-07 16:28:00,017 - INFO - ====== WebDriver manager ======
+2024-11-07 16:28:01,088 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:28:01,120 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:28:01,135 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-07 16:28:15,061 - INFO - ====== WebDriver manager ======
+2024-11-07 16:28:16,179 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:28:16,226 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:28:16,241 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-07 16:28:30,437 - INFO - ====== WebDriver manager ======
+2024-11-07 16:28:31,462 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:28:31,493 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:28:31,528 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-07 16:29:33,022 - INFO - ====== WebDriver manager ======
+2024-11-07 16:29:34,064 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:29:34,074 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:29:34,105 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-07 16:30:13,888 - ERROR - Job "email_sending (trigger: cron[hour='16', minute='28'], next run at: 2024-11-08 16:28:00 KST)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\JH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\develops\bepet_scraping\g2b_notice_check\email_push.py", line 77, in email_sending
+    for receiver_email in range(receiver_email_list):
+TypeError: 'list' object cannot be interpreted as an integer
+2024-11-07 16:30:13,888 - INFO - Scheduler has been shut down
+2024-11-07 16:30:13,888 - INFO - Scheduler shut down.
+2024-11-07 16:33:39,360 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:33:39,360 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:33:39,360 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:33:39,360 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:33:39,360 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:33:39,360 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:33:39,360 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:33:39,360 - INFO - Added job "email_sending" to job store "default"
+2024-11-07 16:33:39,360 - INFO - Added job "venture_doctors" to job store "default"
+2024-11-07 16:33:39,360 - INFO - Added job "statistic_bank" to job store "default"
+2024-11-07 16:33:39,360 - INFO - Added job "seoul_institute" to job store "default"
+2024-11-07 16:33:39,360 - INFO - Added job "ict_news" to job store "default"
+2024-11-07 16:33:39,360 - INFO - Added job "total_update" to job store "default"
+2024-11-07 16:33:39,360 - INFO - Added job "email_sending" to job store "default"
+2024-11-07 16:33:39,360 - INFO - Scheduler started
+2024-11-07 16:33:39,360 - INFO - Scheduler started...
+2024-11-07 16:35:00,015 - INFO - Running job "email_sending (trigger: cron[hour='16', minute='35'], next run at: 2024-11-07 16:35:00 KST)" (scheduled at 2024-11-07 16:35:00+09:00)
+2024-11-07 16:35:00,015 - INFO - ====== WebDriver manager ======
+2024-11-07 16:35:01,287 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:35:01,318 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:35:01,338 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-07 16:37:18,962 - INFO - ====== WebDriver manager ======
+2024-11-07 16:37:19,936 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:37:19,968 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:37:19,985 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-07 16:38:15,309 - INFO - ====== WebDriver manager ======
+2024-11-07 16:38:16,510 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:38:16,526 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:38:16,548 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-07 16:39:17,945 - INFO - ====== WebDriver manager ======
+2024-11-07 16:39:19,032 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:39:19,055 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:39:19,085 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-07 16:40:01,224 - ERROR - Job "email_sending (trigger: cron[hour='16', minute='35'], next run at: 2024-11-08 16:35:00 KST)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\JH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\develops\bepet_scraping\g2b_notice_check\email_push.py", line 77, in email_sending
+    for receiver_email in range(receiver_email_list):
+TypeError: 'list' object cannot be interpreted as an integer
+2024-11-07 16:41:57,073 - INFO - Scheduler has been shut down
+2024-11-07 16:41:57,073 - INFO - Scheduler shut down.
+2024-11-07 16:44:04,702 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:44:04,702 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:44:04,702 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:44:04,702 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:44:04,702 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:44:04,702 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:44:04,702 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-07 16:44:04,702 - INFO - Added job "email_sending" to job store "default"
+2024-11-07 16:44:04,702 - INFO - Added job "venture_doctors" to job store "default"
+2024-11-07 16:44:04,702 - INFO - Added job "statistic_bank" to job store "default"
+2024-11-07 16:44:04,718 - INFO - Added job "seoul_institute" to job store "default"
+2024-11-07 16:44:04,718 - INFO - Added job "ict_news" to job store "default"
+2024-11-07 16:44:04,718 - INFO - Added job "total_update" to job store "default"
+2024-11-07 16:44:04,718 - INFO - Added job "email_sending" to job store "default"
+2024-11-07 16:44:04,718 - INFO - Scheduler started
+2024-11-07 16:44:04,718 - INFO - Scheduler started...
+2024-11-07 16:45:00,001 - INFO - Running job "email_sending (trigger: cron[hour='16', minute='45'], next run at: 2024-11-07 16:45:00 KST)" (scheduled at 2024-11-07 16:45:00+09:00)
+2024-11-07 16:45:00,072 - INFO - ====== WebDriver manager ======
+2024-11-07 16:45:01,437 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:45:01,463 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:45:01,483 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-07 16:47:21,860 - INFO - ====== WebDriver manager ======
+2024-11-07 16:47:22,974 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:47:22,990 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:47:23,005 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-07 16:48:17,624 - INFO - ====== WebDriver manager ======
+2024-11-07 16:48:18,677 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:48:18,693 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:48:18,724 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-07 16:49:20,684 - INFO - ====== WebDriver manager ======
+2024-11-07 16:49:21,611 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:49:21,627 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-07 16:49:21,643 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-07 16:50:12,777 - INFO - Job "email_sending (trigger: cron[hour='16', minute='45'], next run at: 2024-11-08 16:45:00 KST)" executed successfully
+2024-11-08 08:45:01,687 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 08:45:01,687 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 08:45:01,687 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 08:45:01,687 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 08:45:01,687 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 08:45:01,687 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 08:45:01,687 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 08:45:01,687 - INFO - Added job "email_sending" to job store "default"
+2024-11-08 08:45:01,687 - INFO - Added job "venture_doctors" to job store "default"
+2024-11-08 08:45:01,687 - INFO - Added job "statistic_bank" to job store "default"
+2024-11-08 08:45:01,687 - INFO - Added job "seoul_institute" to job store "default"
+2024-11-08 08:45:01,687 - INFO - Added job "ict_news" to job store "default"
+2024-11-08 08:45:01,687 - INFO - Added job "total_update" to job store "default"
+2024-11-08 08:45:01,687 - INFO - Added job "email_sending" to job store "default"
+2024-11-08 08:45:01,687 - INFO - Scheduler started
+2024-11-08 08:45:01,687 - INFO - Scheduler started...
+2024-11-08 08:54:33,490 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 08:54:33,490 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 08:54:33,490 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 08:54:33,490 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 08:54:33,490 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 08:54:33,490 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 08:54:33,490 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 08:54:33,490 - INFO - Added job "email_sending" to job store "default"
+2024-11-08 08:54:33,490 - INFO - Added job "venture_doctors" to job store "default"
+2024-11-08 08:54:33,490 - INFO - Added job "statistic_bank" to job store "default"
+2024-11-08 08:54:33,490 - INFO - Added job "seoul_institute" to job store "default"
+2024-11-08 08:54:33,490 - INFO - Added job "ict_news" to job store "default"
+2024-11-08 08:54:33,490 - INFO - Added job "total_update" to job store "default"
+2024-11-08 08:54:33,490 - INFO - Added job "email_sending" to job store "default"
+2024-11-08 08:54:33,490 - INFO - Scheduler started
+2024-11-08 08:54:33,490 - INFO - Scheduler started...
+2024-11-08 09:30:00,263 - INFO - Running job "email_sending (trigger: cron[hour='9', minute='30'], next run at: 2024-11-08 09:30:00 KST)" (scheduled at 2024-11-08 09:30:00+09:00)
+2024-11-08 09:30:00,356 - INFO - ====== WebDriver manager ======
+2024-11-08 09:30:01,963 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-08 09:30:02,203 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-08 09:30:02,294 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-08 09:30:16,708 - INFO - ====== WebDriver manager ======
+2024-11-08 09:30:17,863 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-08 09:30:17,895 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-08 09:30:17,914 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-08 09:30:31,720 - INFO - ====== WebDriver manager ======
+2024-11-08 09:30:32,777 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-08 09:30:32,809 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-08 09:30:32,826 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-08 09:30:45,073 - INFO - ====== WebDriver manager ======
+2024-11-08 09:30:46,237 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-08 09:30:46,260 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-08 09:30:46,285 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-08 09:30:58,462 - INFO - Job "email_sending (trigger: cron[hour='9', minute='30'], next run at: 2024-11-09 09:30:00 KST)" executed successfully
+2024-11-08 12:00:00,285 - INFO - Running job "venture_doctors (trigger: cron[hour='12', minute='0'], next run at: 2024-11-08 12:00:00 KST)" (scheduled at 2024-11-08 12:00:00+09:00)
+2024-11-08 12:00:01,494 - INFO - ====== WebDriver manager ======
+2024-11-08 12:00:03,023 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-08 12:00:03,101 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-08 12:00:03,119 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-08 12:00:36,908 - INFO - Job "venture_doctors (trigger: cron[hour='12', minute='0'], next run at: 2024-11-09 12:00:00 KST)" executed successfully
+2024-11-08 12:15:00,006 - INFO - Running job "statistic_bank (trigger: cron[hour='12', minute='15'], next run at: 2024-11-09 12:15:00 KST)" (scheduled at 2024-11-08 12:15:00+09:00)
+2024-11-08 12:15:00,148 - INFO - ====== WebDriver manager ======
+2024-11-08 12:15:01,272 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-08 12:15:01,297 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-08 12:15:01,313 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-08 12:15:23,772 - INFO - Job "statistic_bank (trigger: cron[hour='12', minute='15'], next run at: 2024-11-09 12:15:00 KST)" executed successfully
+2024-11-08 12:30:00,012 - INFO - Running job "seoul_institute (trigger: cron[hour='12', minute='30'], next run at: 2024-11-09 12:30:00 KST)" (scheduled at 2024-11-08 12:30:00+09:00)
+2024-11-08 12:30:00,118 - INFO - ====== WebDriver manager ======
+2024-11-08 12:30:01,321 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-08 12:30:01,352 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-08 12:30:01,370 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-08 12:30:21,720 - INFO - Job "seoul_institute (trigger: cron[hour='12', minute='30'], next run at: 2024-11-09 12:30:00 KST)" executed successfully
+2024-11-08 12:45:00,021 - INFO - Running job "ict_news (trigger: cron[hour='12', minute='45'], next run at: 2024-11-09 12:45:00 KST)" (scheduled at 2024-11-08 12:45:00+09:00)
+2024-11-08 12:45:00,110 - INFO - ====== WebDriver manager ======
+2024-11-08 12:45:01,387 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-08 12:45:01,425 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-08 12:45:01,443 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-08 12:47:23,563 - INFO - Job "ict_news (trigger: cron[hour='12', minute='45'], next run at: 2024-11-09 12:45:00 KST)" executed successfully
+2024-11-08 12:47:23,577 - INFO - Scheduler has been shut down
+2024-11-08 12:47:23,579 - INFO - Scheduler shut down.
+2024-11-08 12:49:24,736 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 12:49:24,738 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 12:49:24,738 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 12:49:24,739 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 12:49:24,740 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 12:49:24,741 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 12:49:24,741 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 12:49:24,742 - INFO - Added job "email_sending" to job store "default"
+2024-11-08 12:49:24,743 - INFO - Added job "venture_doctors" to job store "default"
+2024-11-08 12:49:24,744 - INFO - Added job "statistic_bank" to job store "default"
+2024-11-08 12:49:24,744 - INFO - Added job "seoul_institute" to job store "default"
+2024-11-08 12:49:24,744 - INFO - Added job "ict_news" to job store "default"
+2024-11-08 12:49:24,745 - INFO - Added job "total_update" to job store "default"
+2024-11-08 12:49:24,745 - INFO - Added job "email_sending" to job store "default"
+2024-11-08 12:49:24,745 - INFO - Scheduler started
+2024-11-08 12:49:24,747 - INFO - Scheduler started...
+2024-11-08 13:00:00,270 - INFO - Running job "total_update (trigger: cron[hour='13', minute='0'], next run at: 2024-11-09 13:00:00 KST)" (scheduled at 2024-11-08 13:00:00+09:00)
+2024-11-08 13:00:02,620 - INFO - Job "total_update (trigger: cron[hour='13', minute='0'], next run at: 2024-11-09 13:00:00 KST)" executed successfully
+2024-11-08 13:09:27,732 - INFO - Scheduler has been shut down
+2024-11-08 13:09:27,752 - INFO - Scheduler shut down.
+2024-11-08 14:27:41,562 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 14:27:41,562 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 14:27:41,562 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 14:27:41,562 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 14:27:41,571 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 14:27:41,571 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 14:27:41,571 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 14:27:41,571 - INFO - Added job "email_sending" to job store "default"
+2024-11-08 14:27:41,571 - INFO - Added job "venture_doctors" to job store "default"
+2024-11-08 14:27:41,571 - INFO - Added job "statistic_bank" to job store "default"
+2024-11-08 14:27:41,571 - INFO - Added job "seoul_institute" to job store "default"
+2024-11-08 14:27:41,571 - INFO - Added job "ict_news" to job store "default"
+2024-11-08 14:27:41,571 - INFO - Added job "total_update" to job store "default"
+2024-11-08 14:27:41,571 - INFO - Added job "email_sending" to job store "default"
+2024-11-08 14:27:41,571 - INFO - Scheduler started
+2024-11-08 14:27:41,588 - INFO - Scheduler started...
+2024-11-08 14:35:52,987 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 14:35:52,987 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 14:35:52,987 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 14:35:52,987 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 14:35:52,987 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 14:35:52,987 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 14:35:52,987 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 14:35:52,987 - INFO - Added job "email_sending" to job store "default"
+2024-11-08 14:35:53,003 - INFO - Added job "venture_doctors" to job store "default"
+2024-11-08 14:35:53,003 - INFO - Added job "statistic_bank" to job store "default"
+2024-11-08 14:35:53,003 - INFO - Added job "seoul_institute" to job store "default"
+2024-11-08 14:35:53,003 - INFO - Added job "ict_news" to job store "default"
+2024-11-08 14:35:53,003 - INFO - Added job "total_update" to job store "default"
+2024-11-08 14:35:53,003 - INFO - Added job "email_sending" to job store "default"
+2024-11-08 14:35:53,003 - INFO - Scheduler started
+2024-11-08 14:35:53,003 - INFO - Scheduler started...
+2024-11-08 14:51:41,158 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 14:51:41,158 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 14:51:41,158 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 14:51:41,159 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 14:51:41,159 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 14:51:41,159 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 14:51:41,159 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 14:51:41,160 - INFO - Added job "email_sending" to job store "default"
+2024-11-08 14:51:41,160 - INFO - Added job "venture_doctors" to job store "default"
+2024-11-08 14:51:41,160 - INFO - Added job "statistic_bank" to job store "default"
+2024-11-08 14:51:41,160 - INFO - Added job "seoul_institute" to job store "default"
+2024-11-08 14:51:41,161 - INFO - Added job "ict_news" to job store "default"
+2024-11-08 14:51:41,161 - INFO - Added job "total_update" to job store "default"
+2024-11-08 14:51:41,161 - INFO - Added job "email_sending" to job store "default"
+2024-11-08 14:51:41,161 - INFO - Scheduler started
+2024-11-08 14:51:41,163 - INFO - Scheduler started...
+2024-11-08 15:02:28,719 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 15:02:28,719 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 15:02:28,719 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 15:02:28,719 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 15:02:28,719 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 15:02:28,719 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 15:02:28,719 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 15:02:28,719 - INFO - Added job "email_sending" to job store "default"
+2024-11-08 15:02:28,719 - INFO - Added job "venture_doctors" to job store "default"
+2024-11-08 15:02:28,719 - INFO - Added job "statistic_bank" to job store "default"
+2024-11-08 15:02:28,727 - INFO - Added job "seoul_institute" to job store "default"
+2024-11-08 15:02:28,728 - INFO - Added job "ict_news" to job store "default"
+2024-11-08 15:02:28,728 - INFO - Added job "total_update" to job store "default"
+2024-11-08 15:02:28,728 - INFO - Added job "email_sending" to job store "default"
+2024-11-08 15:02:28,728 - INFO - Scheduler started
+2024-11-08 15:02:28,732 - INFO - Scheduler started...
+2024-11-08 15:59:49,646 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 15:59:49,647 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 15:59:49,647 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 15:59:49,648 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 15:59:49,648 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 15:59:49,649 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 15:59:49,649 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 15:59:49,650 - INFO - Added job "email_sending" to job store "default"
+2024-11-08 15:59:49,651 - INFO - Added job "venture_doctors" to job store "default"
+2024-11-08 15:59:49,651 - INFO - Added job "statistic_bank" to job store "default"
+2024-11-08 15:59:49,651 - INFO - Added job "seoul_institute" to job store "default"
+2024-11-08 15:59:49,651 - INFO - Added job "ict_news" to job store "default"
+2024-11-08 15:59:49,652 - INFO - Added job "total_update" to job store "default"
+2024-11-08 15:59:49,652 - INFO - Added job "email_sending" to job store "default"
+2024-11-08 15:59:49,652 - INFO - Scheduler started
+2024-11-08 15:59:49,663 - INFO - Scheduler started...
+2024-11-08 16:06:15,494 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 16:06:15,494 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 16:06:15,495 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 16:06:15,495 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 16:06:15,495 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 16:06:15,495 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 16:06:15,495 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 16:06:15,497 - INFO - Added job "email_sending" to job store "default"
+2024-11-08 16:06:15,497 - INFO - Added job "venture_doctors" to job store "default"
+2024-11-08 16:06:15,497 - INFO - Added job "statistic_bank" to job store "default"
+2024-11-08 16:06:15,497 - INFO - Added job "seoul_institute" to job store "default"
+2024-11-08 16:06:15,497 - INFO - Added job "ict_news" to job store "default"
+2024-11-08 16:06:15,497 - INFO - Added job "total_update" to job store "default"
+2024-11-08 16:06:15,497 - INFO - Added job "email_sending" to job store "default"
+2024-11-08 16:06:15,497 - INFO - Scheduler started
+2024-11-08 16:06:15,500 - INFO - Scheduler started...
+2024-11-08 16:13:52,168 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 16:13:52,168 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 16:13:52,168 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 16:13:52,168 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 16:13:52,168 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 16:13:52,168 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 16:13:52,168 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 16:13:52,168 - INFO - Added job "email_sending" to job store "default"
+2024-11-08 16:13:52,168 - INFO - Added job "venture_doctors" to job store "default"
+2024-11-08 16:13:52,168 - INFO - Added job "statistic_bank" to job store "default"
+2024-11-08 16:13:52,168 - INFO - Added job "seoul_institute" to job store "default"
+2024-11-08 16:13:52,168 - INFO - Added job "ict_news" to job store "default"
+2024-11-08 16:13:52,168 - INFO - Added job "total_update" to job store "default"
+2024-11-08 16:13:52,168 - INFO - Added job "email_sending" to job store "default"
+2024-11-08 16:13:52,168 - INFO - Scheduler started
+2024-11-08 16:13:52,183 - INFO - Scheduler started...
+2024-11-08 17:02:55,179 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:02:55,180 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:02:55,181 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:02:55,182 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:02:55,182 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:02:55,182 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:02:55,182 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:02:55,184 - INFO - Added job "email_sending" to job store "default"
+2024-11-08 17:02:55,184 - INFO - Added job "venture_doctors" to job store "default"
+2024-11-08 17:02:55,184 - INFO - Added job "statistic_bank" to job store "default"
+2024-11-08 17:02:55,185 - INFO - Added job "seoul_institute" to job store "default"
+2024-11-08 17:02:55,185 - INFO - Added job "ict_news" to job store "default"
+2024-11-08 17:02:55,185 - INFO - Added job "total_update" to job store "default"
+2024-11-08 17:02:55,187 - INFO - Added job "email_sending" to job store "default"
+2024-11-08 17:02:55,187 - INFO - Scheduler started
+2024-11-08 17:02:55,200 - INFO - Scheduler started...
+2024-11-08 17:07:58,101 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:07:58,102 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:07:58,102 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:07:58,103 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:07:58,103 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:07:58,104 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:07:58,104 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:07:58,105 - INFO - Added job "email_sending" to job store "default"
+2024-11-08 17:07:58,105 - INFO - Added job "venture_doctors" to job store "default"
+2024-11-08 17:07:58,106 - INFO - Added job "statistic_bank" to job store "default"
+2024-11-08 17:07:58,106 - INFO - Added job "seoul_institute" to job store "default"
+2024-11-08 17:07:58,107 - INFO - Added job "ict_news" to job store "default"
+2024-11-08 17:07:58,108 - INFO - Added job "total_update" to job store "default"
+2024-11-08 17:07:58,109 - INFO - Added job "email_sending" to job store "default"
+2024-11-08 17:07:58,109 - INFO - Scheduler started
+2024-11-08 17:07:58,114 - INFO - Scheduler started...
+2024-11-08 17:11:01,732 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:11:01,732 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:11:01,732 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:11:01,732 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:11:01,732 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:11:01,732 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:11:01,732 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:11:01,732 - INFO - Added job "email_sending" to job store "default"
+2024-11-08 17:11:01,737 - INFO - Added job "venture_doctors" to job store "default"
+2024-11-08 17:11:01,737 - INFO - Added job "statistic_bank" to job store "default"
+2024-11-08 17:11:01,737 - INFO - Added job "seoul_institute" to job store "default"
+2024-11-08 17:11:01,737 - INFO - Added job "ict_news" to job store "default"
+2024-11-08 17:11:01,737 - INFO - Added job "total_update" to job store "default"
+2024-11-08 17:11:01,737 - INFO - Added job "email_sending" to job store "default"
+2024-11-08 17:11:01,737 - INFO - Scheduler started
+2024-11-08 17:11:01,737 - INFO - Scheduler started...
+2024-11-08 17:14:47,962 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:14:47,963 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:14:47,963 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:14:47,964 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:14:47,964 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:14:47,964 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:14:47,965 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:14:47,965 - INFO - Added job "email_sending" to job store "default"
+2024-11-08 17:14:47,965 - INFO - Added job "venture_doctors" to job store "default"
+2024-11-08 17:14:47,967 - INFO - Added job "statistic_bank" to job store "default"
+2024-11-08 17:14:47,968 - INFO - Added job "seoul_institute" to job store "default"
+2024-11-08 17:14:47,969 - INFO - Added job "ict_news" to job store "default"
+2024-11-08 17:14:47,970 - INFO - Added job "total_update" to job store "default"
+2024-11-08 17:14:47,971 - INFO - Added job "email_sending" to job store "default"
+2024-11-08 17:14:47,971 - INFO - Scheduler started
+2024-11-08 17:14:47,975 - INFO - Scheduler started...
+2024-11-08 17:23:34,052 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:23:34,054 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:23:34,054 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:23:34,055 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:23:34,055 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:23:34,055 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:23:34,056 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:23:34,057 - INFO - Added job "email_sending" to job store "default"
+2024-11-08 17:23:34,057 - INFO - Added job "venture_doctors" to job store "default"
+2024-11-08 17:23:34,058 - INFO - Added job "statistic_bank" to job store "default"
+2024-11-08 17:23:34,058 - INFO - Added job "seoul_institute" to job store "default"
+2024-11-08 17:23:34,058 - INFO - Added job "ict_news" to job store "default"
+2024-11-08 17:23:34,059 - INFO - Added job "total_update" to job store "default"
+2024-11-08 17:23:34,059 - INFO - Added job "email_sending" to job store "default"
+2024-11-08 17:23:34,059 - INFO - Scheduler started
+2024-11-08 17:23:34,078 - INFO - Scheduler started...
+2024-11-08 17:30:38,018 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:30:38,018 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:30:38,018 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:30:38,018 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:30:38,018 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:30:38,018 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:30:38,022 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-08 17:30:38,022 - INFO - Added job "email_sending" to job store "default"
+2024-11-08 17:30:38,022 - INFO - Added job "venture_doctors" to job store "default"
+2024-11-08 17:30:38,022 - INFO - Added job "statistic_bank" to job store "default"
+2024-11-08 17:30:38,022 - INFO - Added job "seoul_institute" to job store "default"
+2024-11-08 17:30:38,022 - INFO - Added job "ict_news" to job store "default"
+2024-11-08 17:30:38,022 - INFO - Added job "total_update" to job store "default"
+2024-11-08 17:30:38,022 - INFO - Added job "email_sending" to job store "default"
+2024-11-08 17:30:38,022 - INFO - Scheduler started
+2024-11-08 17:30:38,022 - INFO - Scheduler started...
+2024-11-11 08:51:47,032 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-11 08:51:47,033 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-11 08:51:47,033 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-11 08:51:47,034 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-11 08:51:47,034 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-11 08:51:47,034 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-11 08:51:47,035 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-11 08:51:47,036 - INFO - Added job "email_sending" to job store "default"
+2024-11-11 08:51:47,036 - INFO - Added job "venture_doctors" to job store "default"
+2024-11-11 08:51:47,036 - INFO - Added job "statistic_bank" to job store "default"
+2024-11-11 08:51:47,036 - INFO - Added job "seoul_institute" to job store "default"
+2024-11-11 08:51:47,037 - INFO - Added job "ict_news" to job store "default"
+2024-11-11 08:51:47,037 - INFO - Added job "total_update" to job store "default"
+2024-11-11 08:51:47,037 - INFO - Added job "email_sending" to job store "default"
+2024-11-11 08:51:47,037 - INFO - Scheduler started
+2024-11-11 08:51:47,038 - INFO - Scheduler started...
+2024-11-11 09:30:00,093 - INFO - Running job "email_sending (trigger: cron[hour='9', minute='30'], next run at: 2024-11-12 09:30:00 KST)" (scheduled at 2024-11-11 09:30:00+09:00)
+2024-11-11 09:30:00,183 - INFO - ====== WebDriver manager ======
+2024-11-11 09:30:02,183 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-11 09:30:02,392 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-11 09:30:02,417 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-11 09:31:50,660 - INFO - ====== WebDriver manager ======
+2024-11-11 09:31:51,751 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-11 09:31:51,784 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-11 09:31:51,815 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-11 09:32:49,036 - INFO - ====== WebDriver manager ======
+2024-11-11 09:32:50,220 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-11 09:32:50,270 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-11 09:32:50,317 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-11 09:33:58,094 - INFO - ====== WebDriver manager ======
+2024-11-11 09:34:00,083 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-11 09:34:00,151 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-11 09:34:00,176 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-11 09:34:41,904 - INFO - Job "email_sending (trigger: cron[hour='9', minute='30'], next run at: 2024-11-12 09:30:00 KST)" executed successfully
