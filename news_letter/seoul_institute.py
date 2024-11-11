@@ -12,40 +12,37 @@ import os
 from selenium.webdriver.chrome.options import Options
 
 from pymongo import MongoClient
-def seoul_institute():
-    crawling_count = 0
-    mongo_url = os.getenv("DATABASE_URL")
-    mongo_client = MongoClient(mongo_url)
-    # database 연결
-    database = mongo_client["news_scraping"]
-    # collection 작업
-    collection = database['seoul_institute']
+import pandas as pd 
+from selenium.webdriver.common.by import By          # - 정보 획득
+
+def init_browser():
     # Chrome 브라우저 옵션 생성
     chrome_options = Options()
 
     # User-Agent 설정
     chrome_options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36")
 
+    # 다운로드 폴더 설정
+
+    # 추가적인 Chrome 옵션 설정 (특히 Docker 환경에서 필요할 수 있음)
+    chrome_options.add_argument('--headless')  # GUI 없는 환경에서 실행
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--disable-dev-shm-usage')
+    chrome_options.add_argument('--disable-gpu')  # GPU 사용 안함
+
     # WebDriver 생성
-    webdriver_manager_dricetory = ChromeDriverManager().install()
+    webdriver_manager_directory = ChromeDriverManager().install()
+    service = ChromeService(webdriver_manager_directory)
 
-    browser = webdriver.Chrome(service = ChromeService(webdriver_manager_directory), options=chrome_options)                        # - chrome browser 열기
+    # User-Agent 설정
 
-    # Chrome WebDriver의 capabilities 속성 사용
-    capabilities = browser.capabilities
-    from selenium.webdriver.common.by import By          # - 정보 획득
-    # browser.save_screenshot('./formats.png')           
-    import pandas as pd 
+    # WebDriver 생성
 
-    pass
-    browser.get("https://www.si.re.kr/research_report")                                     # - 주소 입력
+    browser = webdriver.Chrome(service=service, options=chrome_options)
+    return browser
 
-                                                        # - 가능 여부에 대한 OK 받음
-    pass
-    html = browser.page_source                          # - html 파일 받음(and 확인)
-    # print(html)
-    results = collection.find({},{'_id':0,'news_link':1})
-    link_list = [i['news_link'] for i in results]
+
+def research_report(browser,link_list,collection,crawling_count):
     finish_check = False
 
     while True:
@@ -82,10 +79,11 @@ def seoul_institute():
             next_btn = browser.find_element(by=By.CSS_SELECTOR,value='#center > article > div > div > div.item-list > ul > li.pager-next > a')
             next_btn.click()
             time.sleep(1)
+    browser.quit()                                      # - 브라우저 종료
+    return crawling_count
             
+def world_trends(browser,link_list,collection,crawling_count):
     finish_check = False
-    world_content_list = browser.find_element(by=By.CSS_SELECTOR,value='#block-system-main-menu > div > ul > li:nth-child(2) > a')
-    world_content_list.click()
 
     while True:
         time.sleep(1)
@@ -132,9 +130,30 @@ def seoul_institute():
             time.sleep(1)
 
         time.sleep(1)
+    return crawling_count
 
-    browser.quit()                                      # - 브라우저 종료
+def seoul_institute(): 
+    crawling_count = 0
+    mongo_url = os.environ.get("DATABASE_URL")
+    mongo_client = MongoClient(mongo_url)
+    # database 연결
+    database = mongo_client["news_scraping"]
+    # collection 작업
+    collection = database['seoul_institute']
+
+    results = collection.find({},{'_id':0,'news_link':1})
+    link_list = [i['news_link'] for i in results]
+
+    pass
+    browser = init_browser()
+    browser.get("https://www.si.re.kr/research_report")                                     # - 주소 입력
+    crawling_count = research_report(browser,link_list,collection,crawling_count)
+    browser = init_browser()
+    browser.get("https://www.si.re.kr/world_trends")                                     # - 주소 입력
+    crawling_count = world_trends(browser,link_list,collection,crawling_count)
     print('seoul institute crawling finish')
     print('crawling count : ',crawling_count)
+                                                        # - 가능 여부에 대한 OK 받음
+    pass
 
 # seoul_institute()

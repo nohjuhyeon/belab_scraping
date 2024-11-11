@@ -10,7 +10,7 @@ from torch.nn.init import xavier_uniform_
 
 MAX_TOKEN_COUNT = 512
 N_EPOCHS = 10
- 
+
 BERT_MODEL_NAME = 'kpfbert-base' # kpf-BERT 경로
 tokenizer = BertTokenizer.from_pretrained(BERT_MODEL_NAME)
 

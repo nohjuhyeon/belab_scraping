@@ -19,7 +19,9 @@ def notice_search(search_keyword,notice_list,notice_titles,folder_path):
     chrome_options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36")
 
     # 다운로드 폴더 설정
-    download_folder_path = os.path.abspath(folder_path+'notice_list')
+    download_folder_path = os.path.abspath(folder_path + '/notice_list')
+    if not os.path.exists(download_folder_path):
+        os.makedirs(download_folder_path)
     prefs = {
         'download.default_directory': download_folder_path,
         'download.prompt_for_download': False,
@@ -27,15 +29,24 @@ def notice_search(search_keyword,notice_list,notice_titles,folder_path):
     }
     chrome_options.add_experimental_option('prefs', prefs)
 
+    # 추가적인 Chrome 옵션 설정 (특히 Docker 환경에서 필요할 수 있음)
+    chrome_options.add_argument('--headless')  # GUI 없는 환경에서 실행
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--disable-dev-shm-usage')
+    chrome_options.add_argument('--disable-gpu')  # GPU 사용 안함
+
     # WebDriver 생성
     webdriver_manager_directory = ChromeDriverManager().install()
+    service = ChromeService(webdriver_manager_directory)
+    browser = webdriver.Chrome(service=service, options=chrome_options)
+
     browser = webdriver.Chrome(service=ChromeService(webdriver_manager_directory), options=chrome_options)
     browser_url = "https://infose.info21c.net/info21c/bids/list/index?bidtype=ser&bid_suc=bid&division=1&mode=&searchtype=condition&page=1&pageSize=100&bid_kind=&conlevel=&searchWord=&word_type=&sort=-writedt&detailSearch=&search_code%5B%5D=&search_code%5B%5D=&search_code%5B%5D=&search_loc%5B%5D=&search_local%5B%5D=&search_loc%5B%5D=&search_local%5B%5D=&search_loc%5B%5D=&search_local%5B%5D=&date_column=writedt&from_date=2024-10-06&to_date=2024-11-06&price_column=basic&from_price=&to_price=&search_org=&word_column=constnm&word={}&apt_vw=N&sortList=-writedt".format(search_keyword)
     browser.get(browser_url)                                     # - 주소 입력
     time.sleep(1)
     id_input = browser.find_element(by=By.CSS_SELECTOR,value='#id')
-    infose_id = os.getenv("infose_id")
-    infose_password = os.getenv("infose_password")
+    infose_id = os.environ.get("infose_id")
+    infose_password = os.environ.get("infose_password")
 
     id_input.send_keys(infose_id)
     password_input = browser.find_element(by=By.CSS_SELECTOR,value='#pass')
@@ -249,7 +260,7 @@ def save_notice_list_to_json(notice_list, file_path):
 def g2b_notice_collection():
     notice_list = []
     # 함수 호출
-    folder_path = os.getenv("folder_path")
+    folder_path = os.environ.get("folder_path")
 
     notice_titles = load_notice_titles_from_json(folder_path+'notice_list.json')
     notice_list = notice_search('isp',notice_list,notice_titles,folder_path)

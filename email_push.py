@@ -4,15 +4,17 @@ from email.mime.multipart import MIMEMultipart
 import os 
 from g2b_notice_check.g2b_notice import g2b_notice_collection
 from g2b_notice_check.g2b_preparation import g2b_preparation_collection
-import datetime
+from dotenv import load_dotenv
+import logging
+from datetime import datetime
 
 def html_write(html_content, ai_list, check_list, notice_type, notice_type_eng):
     html_content += "<h3>{}: AI관련 공고 {}건, 확인이 필요한 공고 {}건이 올라왔습니다.</h3>".format(notice_type, len(ai_list), len(check_list))
     if len(ai_list) > 0:
-        sorted_notices = sorted(ai_list,key=lambda x: datetime.datetime.strptime(x["{}_start_date".format(notice_type_eng)], "%Y/%m/%d"),reverse=True)
+        sorted_notices = sorted(ai_list,key=lambda x: datetime.strptime(x["{}_start_date".format(notice_type_eng)], "%Y/%m/%d"),reverse=True)
         html_content += "<h4>AI관련 공고 {}건</h4>".format(len(sorted_notices))
         html_content += """
-        <table border='1' style='border-collapse: collapse; width: 80%; margin-bottom: 20px;'>
+        <table border='1' style='border-collapse: collapse; width: 1200px; margin-bottom: 20px;'>
             <tr>
                 <th style='padding: 10px; width: 6%; text-align: center;'>번호</th>
                 <th style='padding: 10px; width: 30%; text-align: center;'>공고명</th>
@@ -48,11 +50,11 @@ def html_write(html_content, ai_list, check_list, notice_type, notice_type_eng):
         html_content += "</table>"
 
     if len(check_list) > 0:
-        sorted_notices = sorted(check_list,key=lambda x: datetime.datetime.strptime(x["{}_start_date".format(notice_type_eng)], "%Y/%m/%d"),reverse=True)
+        sorted_notices = sorted(check_list,key=lambda x: datetime.strptime(x["{}_start_date".format(notice_type_eng)], "%Y/%m/%d"),reverse=True)
 
         html_content += "<h4>확인이 필요한 공고 {}건</h4>".format(len(sorted_notices))
         html_content += """
-        <table border='1' style='border-collapse: collapse; width: 80%; margin-bottom: 20px;'>
+        <table border='1' style='border-collapse: collapse; width: 1200px; margin-bottom: 20px;'>
             <tr>
                 <th style='padding: 10px; width: 6%; text-align: center;'>번호</th>
                 <th style='padding: 10px; width: 30%; text-align: center;'>공고명</th>
@@ -94,7 +96,7 @@ def email_sending():
     ai_notice_list, check_notice_list = g2b_notice_collection()
     ai_preparation_list, check_preparation_list = g2b_preparation_collection()
     gmail_user = 'jh.belab@gmail.com'
-    gmail_password = os.getenv("gmail_password")
+    gmail_password = os.environ.get("gmail_password")
     print('이메일을 보내겠습니다.')
 
     sender_email = 'jh.belab@gmail.com'
@@ -130,4 +132,18 @@ def email_sending():
     else:
         print('새로운 공고가 없습니다.')
 
-email_sending()
+try:
+    print("----------------공고 확인 시작----------------")
+    print(datetime.now())
+    load_dotenv()
+    folder_path = os.environ.get("folder_path")
+    logging.basicConfig(filename=folder_path+'scheduler.log', level=logging.INFO, 
+                        format='%(asctime)s - %(levelname)s - %(message)s')
+    logging.info("----------------notice check started----------------") # 스케줄러 시작 로그 기록
+    email_sending()
+except (KeyboardInterrupt, SystemExit):
+    print("notice check shut down.")
+    logging.info("notice check shut down.") # 스케줄러 종료 로그 기록
+finally:
+    print("공고 확인 완료!")
+

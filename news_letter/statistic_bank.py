@@ -12,8 +12,21 @@ from news_crawling_func.statistic_bank_scraping_func import nate, chosun, digita
 def init_browser():
     # Chrome 브라우저 옵션 및 WebDriver 설정
     chrome_options = Options()
+
+    # User-Agent 설정
     chrome_options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36")
-    service = ChromeService(ChromeDriverManager().install())
+
+    # 다운로드 폴더 설정
+
+    # 추가적인 Chrome 옵션 설정 (특히 Docker 환경에서 필요할 수 있음)
+    chrome_options.add_argument('--headless')  # GUI 없는 환경에서 실행
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--disable-dev-shm-usage')
+    chrome_options.add_argument('--disable-gpu')  # GPU 사용 안함
+
+    # WebDriver 생성
+    webdriver_manager_directory = ChromeDriverManager().install()
+    service = ChromeService(webdriver_manager_directory)
     return webdriver.Chrome(service=service, options=chrome_options)
 
 def fetch_news_date(news_link, browser):
@@ -146,7 +159,7 @@ def insert_news(collection, title, content, date, link):
 def statistic_bank():
     crawling_count = 0
     # MongoDB 클라이언트 및 컬렉션 설정
-    mongo_url = os.getenv("DATABASE_URL")
+    mongo_url = os.environ.get("DATABASE_URL")
     mongo_client = MongoClient(mongo_url)
     collection = mongo_client["news_scraping"]['statistic_bank']
 

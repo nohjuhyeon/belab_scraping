@@ -18,7 +18,9 @@ def preparation_search(search_keyword,preparation_list,preparation_titles,folder
     chrome_options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36")
 
     # 다운로드 폴더 설정
-    download_folder_path = os.path.abspath(folder_path+'preparation_list')
+    download_folder_path = os.path.abspath(folder_path + '/preparation_list')
+    if not os.path.exists(download_folder_path):
+        os.makedirs(download_folder_path)
     prefs = {
         'download.default_directory': download_folder_path,
         'download.prompt_for_download': False,
@@ -26,9 +28,16 @@ def preparation_search(search_keyword,preparation_list,preparation_titles,folder
     }
     chrome_options.add_experimental_option('prefs', prefs)
 
+    # 추가적인 Chrome 옵션 설정 (특히 Docker 환경에서 필요할 수 있음)
+    chrome_options.add_argument('--headless')  # GUI 없는 환경에서 실행
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--disable-dev-shm-usage')
+    chrome_options.add_argument('--disable-gpu')  # GPU 사용 안함
+
     # WebDriver 생성
     webdriver_manager_directory = ChromeDriverManager().install()
-    browser = webdriver.Chrome(service=ChromeService(webdriver_manager_directory), options=chrome_options)
+    service = ChromeService(webdriver_manager_directory)
+    browser = webdriver.Chrome(service=service, options=chrome_options)
     browser.get("https://www.g2b.go.kr:8081/ep/preparation/prestd/preStdSrch.do?preStdRegNo=&referNo=&srchCl=&srchNo=&instCl=2&taskClCd=1&swbizTgYn=&instNm=&dminstCd=&listPageCount=&orderbyItem=1&instSearchRange=&myProdSearchYn=&searchDetailPrdnmNo=&searchDetailPrdnm=&pubYn=Y&taskClCds=A&recordCountPerPage=100")  # - 주소 입력
     time.sleep(1)
     keyword = browser.find_element(by=By.CSS_SELECTOR, value='#prodNm')
@@ -226,7 +235,7 @@ def save_preparation_list_to_json(preparation_list, file_path):
 def g2b_preparation_collection():
     preparation_list = []
     # 함수 호출
-    folder_path = os.getenv("folder_path")
+    folder_path = os.environ.get("folder_path")
 
     preparation_titles = load_preparation_titles_from_json(folder_path+'preparation_list.json')
     preparation_list = preparation_search('isp',preparation_list,preparation_titles,folder_path)

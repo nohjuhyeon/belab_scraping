@@ -3,8 +3,15 @@ import torch
 from bson import ObjectId
 from pymongo import MongoClient
 from transformers import PreTrainedTokenizerFast, BartForConditionalGeneration
+from news_letter.ict_news import ict_news
+from news_letter.seoul_institute import seoul_institute
+from news_letter.statistic_bank import statistic_bank
+from news_letter.venture_doctors import venture_doctors
 import os
-# MongoDB 연결 설정
+from dotenv import load_dotenv
+import logging
+from datetime import datetime
+
 
 # KoBART 모델과 토크나이저 불러오기
 tokenizer = PreTrainedTokenizerFast.from_pretrained("ainize/kobart-news")
@@ -104,20 +111,32 @@ def update_news_summary(collection):
                 print(f"뉴스 {news_id} 업데이트 중 오류 발생: {e}")
 
 def total_update():
-    mongo_url = os.getenv("DATABASE_URL")
+    load_dotenv()
+    mongo_url = os.environ.get("DATABASE_URL")
     mongo_client = MongoClient(mongo_url)
     # database 연결
     database = mongo_client["news_scraping"]
     # collection 작업
+    ict_news()
     update_news_summary(database['ict_news'])
+    seoul_institute()
     update_news_summary(database['seoul_institute'])
+    statistic_bank()
     update_news_summary(database['statistic_bank'])
+    venture_doctors()
     update_news_summary(database['venture_doctors'])
 
-# total_update()
-if __name__ == "__main__":
-    print("뉴스 요약 업데이트 시작...")
-    try:
-        total_update()
-    finally:
-        print("뉴스 요약 업데이트 완료!")
+try:
+    print("----------------뉴스 요약 업데이트 시작----------------")
+    print(datetime.now())
+    load_dotenv()
+    folder_path = os.environ.get("folder_path")
+    logging.basicConfig(filename=folder_path+'scheduler.log', level=logging.INFO, 
+                        format='%(asctime)s - %(levelname)s - %(message)s')
+    logging.info("----------------news summarization started----------------") # 스케줄러 시작 로그 기록
+    total_update()
+except (KeyboardInterrupt, SystemExit):
+    print("summarization shut down.")
+    logging.info("summarization shut down.") # 스케줄러 종료 로그 기록
+finally:
+    print("뉴스 요약 업데이트 완료!")

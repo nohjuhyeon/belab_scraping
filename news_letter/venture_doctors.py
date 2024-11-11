@@ -15,7 +15,7 @@ import os
 
 def venture_doctors():
         crawling_count = 0
-        mongo_url = os.getenv("DATABASE_URL")
+        mongo_url = os.environ.get("DATABASE_URL")
         mongo_client = MongoClient(mongo_url)
         # database 연결
         database = mongo_client["news_scraping"]
@@ -27,11 +27,24 @@ def venture_doctors():
         # User-Agent 설정
         chrome_options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36")
 
+        # 다운로드 폴더 설정
+
+        # 추가적인 Chrome 옵션 설정 (특히 Docker 환경에서 필요할 수 있음)
+        chrome_options.add_argument('--headless')  # GUI 없는 환경에서 실행
+        chrome_options.add_argument('--no-sandbox')
+        chrome_options.add_argument('--disable-dev-shm-usage')
+        chrome_options.add_argument('--disable-gpu')  # GPU 사용 안함
+
         # WebDriver 생성
-        webdriver_manager_dricetory = ChromeDriverManager().install()
+        webdriver_manager_directory = ChromeDriverManager().install()
+        service = ChromeService(webdriver_manager_directory)
 
-        browser = webdriver.Chrome(service = ChromeService(webdriver_manager_directory), options=chrome_options)                        # - chrome browser 열기
+        # User-Agent 설정
 
+        # WebDriver 생성
+    
+        browser = webdriver.Chrome(service=service, options=chrome_options)
+    
         # Chrome WebDriver의 capabilities 속성 사용
         capabilities = browser.capabilities
 
