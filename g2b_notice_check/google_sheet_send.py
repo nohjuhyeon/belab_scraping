@@ -148,4 +148,3 @@ def google_sheet_update():
     notice_type = '새로 올라온 공고'
     google_sheet_add(notice_type,new_df)
 
-google_sheet_update()
