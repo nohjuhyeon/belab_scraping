@@ -9,7 +9,7 @@
         "preparation_end_date": "2024/11/11",
         "preparation_link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1509517",
         "new_preparation": false,
-        "preparation_type": null
+        "preparation_type": "ai_preparation"
     },
     {
         "preparation_id": "122483038000001",
