@@ -3,7 +3,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 import gspread
 import json
 import numpy as np
-from datetime import datetime
+from datetime import datetime, timedelta
 import os 
 def load_json(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
@@ -50,7 +50,10 @@ def google_sheet_add(notice_type,data):
     return today_df
 
 def notice_add(data,notice_type,sheet):
-    today = datetime.now().strftime('%Y/%m/%d')
+    update_date = datetime.now() - timedelta(days=1)
+
+    # 어제 날짜를 원하는 형식으로 포맷팅
+    update_date = update_date.strftime('%Y/%m/%d')
     if notice_type == '새로 올라온 공고':
         data.drop_duplicates(subset='공고번호', keep='first', inplace=True)
         data.sort_values(by='공고 유형',ascending=False, inplace=True)
@@ -115,7 +118,7 @@ def notice_add(data,notice_type,sheet):
 
         # '비고' 열에서 'check' 값을 '검토가 필요한 공고'로 변경
         combined_df.loc[combined_df['비고'] == 'check', '비고'] = '검토 필요'
-        today_df=combined_df.loc[combined_df['개시일']=='2024/11/08']
+        today_df=combined_df.loc[combined_df['개시일']==update_date]
         today_df['공고 유형']=notice_type
         columns = ['공고 유형'] + [col for col in today_df.columns if col != '공고 유형']
         today_df = today_df[columns]
