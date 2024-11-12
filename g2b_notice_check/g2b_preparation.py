@@ -7,7 +7,13 @@ import os
 import time
 import json
 from dotenv import load_dotenv
+from datetime import datetime
 import zipfile
+import xml.etree.ElementTree as ET
+import olefile
+import zlib
+import struct
+
 load_dotenv()
 
 def preparation_search(search_keyword,preparation_list,preparation_titles,folder_path):
@@ -87,7 +93,6 @@ def preparation_search(search_keyword,preparation_list,preparation_titles,folder
             file_path = os.path.join(download_folder_path, file_name)
             if file_name.lower().endswith('.zip'):
                 with zipfile.ZipFile(file_path, 'r') as zip_ref:
-                    # 압축 해제할 임시 폴더 경로
                     extract_path = os.path.join(download_folder_path)
                     zip_ref.extractall(extract_path)
         preparation_type = check_list_insert(preparation_type, download_folder_path)
@@ -127,12 +132,6 @@ def check_list_insert(preparation_type, download_folder_path):
         if not has_hwp_file:
             preparation_type = 'check'
     return preparation_type
-
-import os
-import shutil
-import olefile
-import zlib
-import struct
 
 def get_hwp_text(filename):
     try:
@@ -189,32 +188,62 @@ def get_hwp_text(filename):
     except Exception as e:
         return None
 
+def get_hwpx_text(file_path):
+    all_contents = ""  # 모든 파일의 내용을 저장할 변수
+    
+    with zipfile.ZipFile(file_path, 'r') as zf:
+        # 압축 파일 내의 모든 파일 목록을 가져옵니다.
+        all_files = zf.namelist()
+        
+        # 'Contents/' 폴더에 있는 파일들만 필터링합니다.
+        contents_files = [file for file in all_files if file.startswith('Contents/')]
 
-def search_keywords_in_hwp(file_name,file_path, keywords):
+        # 각 파일의 내용을 읽어 변수에 저장합니다.
+        for file in contents_files:
+            with zf.open(file) as f:
+                content = f.read()
+                try:
+                    # 파일 내용을 문자열로 디코딩하고 XML로 파싱하여 읽기 쉽게 변환합니다.
+                    xml_content = content.decode('utf-8')
+                    root = ET.fromstring(xml_content)
+                    
+                    # XML 요소를 순회하며 텍스트를 추출합니다.
+                    for elem in root.iter():
+                        if elem.text:
+                            all_contents += elem.text.strip() + " "
+                except ET.ParseError:
+                    # XML 파싱에 실패한 경우 원본 텍스트를 추가합니다.
+                    all_contents += f"Contents of {file} could not be parsed as XML.\n"
+                    
+    return all_contents
+
+def search_keywords(file_name, keywords,text):
     """HWP 파일 내에 특정 키워드가 포함되어 있는지 확인"""
-    text = get_hwp_text(file_path)
-    if text:
-        for keyword in keywords:
-            if keyword in text:
-                print("파일명 : ", file_name)
-                print("키워드 : ", keyword)
-                return True
+    for keyword in keywords:
+        if keyword in text:
+            print("파일명 : ", file_name)
+            print("키워드 : ", keyword)
+            return True
     return False
 
 def ai_preparation_list_insert(preparation_type, download_folder_path,keywords):
     """공고 폴더 내 HWP 및 PDF 파일에서 키워드 검색 후 해당 폴더 이동"""
-    # ai_notice_list 폴더 경로 설정
     for file_name in os.listdir(download_folder_path):
         file_path = os.path.join(download_folder_path, file_name)
-        if file_name.lower().endswith('.hwp') or file_name.lower().endswith('.hwpx'):
-            if search_keywords_in_hwp(file_name,file_path, keywords):
+        if file_name.lower().endswith('.hwp') :
+            text = get_hwp_text(file_path)
+            if search_keywords(file_name, keywords,text):
+                preparation_type = 'ai_preparation'
+                time.sleep(1)
+                break
+        elif file_name.lower().endswith('.hwpx'):
+            text = get_hwpx_text(file_path)
+            if search_keywords(file_name, keywords,text):
                 preparation_type = 'ai_preparation'
                 time.sleep(1)
                 break
     return preparation_type
                     
-import json
-
 def load_preparation_titles_from_json(file_path):
     # JSON 파일에서 preparation_title만 추출하여 리스트로 반환
     with open(file_path, 'r', encoding='utf-8') as json_file:
@@ -222,10 +251,6 @@ def load_preparation_titles_from_json(file_path):
     
     preparation_titles = [preparation['preparation_title'] for preparation in preparation_list]
     return preparation_titles
-
-
-import json
-import os
 
 def save_preparation_list_to_json(preparation_list, file_path):
     """
@@ -238,7 +263,6 @@ def save_preparation_list_to_json(preparation_list, file_path):
 
     with open(file_path, 'w', encoding='utf-8') as json_file:
         json.dump(preparation_list, json_file, ensure_ascii=False, indent=4)
-
 
 def g2b_preparation_collection():
     preparation_list = []

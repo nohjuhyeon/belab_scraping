@@ -9,8 +9,6 @@ import json
 from dotenv import load_dotenv
 from datetime import datetime
 import zipfile
-import xml.etree.ElementTree as ET
-
 load_dotenv()
 
 def notice_search(search_keyword,notice_list,notice_titles,folder_path):
@@ -216,36 +214,10 @@ def get_hwp_text(filename):
     except Exception as e:
         return None
 
-def get_hwpx_text(file_path):
-    try:
-        with zipfile.ZipFile(file_path, 'r') as z:
-            # 수정된 경로 사용
-            with z.open('Content.xml') as content_file:
-                tree = ET.parse(content_file)
-                root = tree.getroot()
 
-                # XML 네임스페이스 처리
-                ns = {'w': 'http://www.w3.org/1999/xhtml'}
-
-                # 모든 문단의 텍스트를 추출
-                paragraphs = root.findall('.//w:p', ns)
-                text = []
-                for para in paragraphs:
-                    texts = [node.text for node in para.findall('.//w:t', ns) if node.text]
-                    text.append(''.join(texts))
-
-                return '\n'.join(text)
-    except Exception as e:
-        print(f"An error occurred in get_hwpx_text: {e}")
-        return None
-
-    
 def search_keywords_in_hwp(file_name,file_path, keywords):
     """HWP 파일 내에 특정 키워드가 포함되어 있는지 확인"""
-    if file_name.lower().endswith('.hwp'):
-        text = get_hwp_text(file_path)
-    else:
-        text = get_hwpx_text(file_path)
+    text = get_hwp_text(file_path)
     if text:
         for keyword in keywords:
             if keyword in text:
