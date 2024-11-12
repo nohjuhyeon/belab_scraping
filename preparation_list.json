@@ -108,6 +108,18 @@
         "preparation_type": "check"
     },
     {
+        "preparation_id": "RE240296AD",
+        "preparation_title": "협약업무 사업관리 시스템 구축을 위한 ISMP 수립",
+        "preparation_price": "₩  459,725,598",
+        "publishing_agency": "국방과학연구소",
+        "requesting_agency": "국방과학연구소",
+        "preparation_start_date": "2024/11/11",
+        "preparation_end_date": "2024/11/14",
+        "preparation_link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1512036",
+        "new_preparation": false,
+        "preparation_type": null
+    },
+    {
         "preparation_id": "정보지원팀-1142",
         "preparation_title": "차세대 경주운영관리시스템 구축 컨설팅(BPR/ISMP)",
         "preparation_price": "₩  587,000,000",

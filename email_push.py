@@ -14,7 +14,7 @@ def html_write(html_content, ai_list, check_list, notice_type, notice_type_eng):
         sorted_notices = sorted(ai_list,key=lambda x: datetime.strptime(x["{}_start_date".format(notice_type_eng)], "%Y/%m/%d"),reverse=True)
         html_content += "<h4>AI관련 공고 {}건</h4>".format(len(sorted_notices))
         html_content += """
-        <table border='1' style='border-collapse: collapse; width: 1200px; margin-bottom: 20px;'>
+        <table border='1' style='border-collapse: collapse; width: 1220px; margin-bottom: 20px;'>
             <tr>
                 <th style='padding: 10px; width: 6%; text-align: center;'>번호</th>
                 <th style='padding: 10px; width: 30%; text-align: center;'>공고명</th>
@@ -54,7 +54,7 @@ def html_write(html_content, ai_list, check_list, notice_type, notice_type_eng):
 
         html_content += "<h4>확인이 필요한 공고 {}건</h4>".format(len(sorted_notices))
         html_content += """
-        <table border='1' style='border-collapse: collapse; width: 1200px; margin-bottom: 20px;'>
+        <table border='1' style='border-collapse: collapse; width: 1220px; margin-bottom: 20px;'>
             <tr>
                 <th style='padding: 10px; width: 6%; text-align: center;'>번호</th>
                 <th style='padding: 10px; width: 30%; text-align: center;'>공고명</th>
@@ -100,7 +100,7 @@ def email_sending():
     print('이메일을 보내겠습니다.')
 
     sender_email = 'jh.belab@gmail.com'
-    receiver_email_list = ['jh.noh@belab.co.kr']
+    receiver_email_list = ['sy.lee@belab.co.kr','jh.noh@belab.co.kr']
     # receiver_email = 'jh.noh@belab.co.kr'
     subject = '나라장터에 새로운 ISP 공고가 올라왔습니다.'
     if len(ai_notice_list) > 0 or len(check_notice_list) > 0 or len(ai_preparation_list) > 0 or len(check_preparation_list) > 0:

@@ -1,5 +1,17 @@
 [
     {
+        "notice_id": "20241113465-00",
+        "notice_title": "2025년 ISP산출물 검토지원시스템 운영 및 유지관리",
+        "notice_price": "63,596,318 원",
+        "publishing_agency": "한국지능정보사회진흥원",
+        "requesting_agency": "한국지능정보사회진흥원",
+        "notice_start_date": "2024/11/11",
+        "notice_end_date": "2024/11/22",
+        "notice_link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241113465",
+        "new_notice": false,
+        "notice_type": null
+    },
+    {
         "notice_id": "9246776-00",
         "notice_title": "감사정보시스템 고도화 ISP 용역",
         "notice_price": "",
@@ -106,18 +118,6 @@
         "notice_link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241010957",
         "new_notice": false,
         "notice_type": "ai_notice"
-    },
-    {
-        "notice_id": "20241010354-00",
-        "notice_title": "신협 정보화전략계획(ISP) 및 업무 프로세스 개선 컨설팅 [(직찰)]",
-        "notice_price": "",
-        "publishing_agency": "신용협동조합중앙회",
-        "requesting_agency": "",
-        "notice_start_date": "2024/10/11",
-        "notice_end_date": "2024/10/31",
-        "notice_link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241010354&bidseq=00&releaseYn=Y&taskClCd=20",
-        "new_notice": false,
-        "notice_type": null
     },
     {
         "notice_id": "9246732-00",
