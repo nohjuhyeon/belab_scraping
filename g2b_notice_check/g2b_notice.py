@@ -52,6 +52,8 @@ def notice_search(search_keyword,notice_list,notice_titles,folder_path):
     id_input = browser.find_element(by=By.CSS_SELECTOR,value='#id')
     infose_id = os.environ.get("infose_id")
     infose_password = os.environ.get("infose_password")
+    infose_id="asog4plp"
+    infose_password="dlqckf@01"
 
     id_input.send_keys(infose_id)
     password_input = browser.find_element(by=By.CSS_SELECTOR,value='#pass')
@@ -244,7 +246,7 @@ def get_hwpx_text(file_path):
 
     
 def search_keywords(file_name, keywords,text):
-    """파일 내에 특정 키워드가 포함되어 있는지 확인"""
+    """HWP 파일 내에 특정 키워드가 포함되어 있는지 확인"""
     for keyword in keywords:
         if keyword in text:
             print("파일명 : ", file_name)
@@ -253,7 +255,7 @@ def search_keywords(file_name, keywords,text):
     return False
 
 def ai_notice_list_insert(notice_type, download_folder_path,keywords):
-    """공고 폴더 내 파일에서 키워드 검색 후 해당 폴더 이동"""
+    """공고 폴더 내 HWP 및 PDF 파일에서 키워드 검색 후 해당 폴더 이동"""
     # ai_notice_list 폴더 경로 설정
     for file_name in os.listdir(download_folder_path):
         file_path = os.path.join(download_folder_path, file_name)

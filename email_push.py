@@ -4,6 +4,7 @@ from email.mime.multipart import MIMEMultipart
 import os 
 from g2b_notice_check.g2b_notice_second import g2b_notice_collection
 from g2b_notice_check.g2b_preparation import g2b_preparation_collection
+from g2b_notice_check.google_sheet_send import google_sheet_update
 from dotenv import load_dotenv
 import logging
 from datetime import datetime
@@ -141,6 +142,7 @@ try:
                         format='%(asctime)s - %(levelname)s - %(message)s')
     logging.info("----------------notice check started----------------") # 스케줄러 시작 로그 기록
     email_sending()
+    google_sheet_update()
 except (KeyboardInterrupt, SystemExit):
     print("notice check shut down.")
     logging.info("notice check shut down.") # 스케줄러 종료 로그 기록
