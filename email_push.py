@@ -93,7 +93,7 @@ def html_write(html_content, ai_list, check_list, notice_type, notice_type_eng):
 
 def email_sending():
     print('나라장터 공고를 찾습니다.')
-    # ai_notice_list, check_notice_list = g2b_notice_collection()
+    ai_notice_list, check_notice_list = g2b_notice_collection()
     ai_preparation_list, check_preparation_list = g2b_preparation_collection()
     gmail_user = 'jh.belab@gmail.com'
     gmail_password = os.environ.get("gmail_password")
@@ -101,7 +101,7 @@ def email_sending():
 
     sender_email = 'jh.belab@gmail.com'
     receiver_email_list = ['jh.noh@belab.co.kr']
-    # receiver_email = 'jh.noh@belab.co.kr'
+    receiver_email = 'jh.noh@belab.co.kr'
     subject = '나라장터에 새로운 ISP 공고가 올라왔습니다.'
     if len(ai_notice_list) > 0 or len(check_notice_list) > 0 or len(ai_preparation_list) > 0 or len(check_preparation_list) > 0:
         html_content = '<h2>나라장터에 새로 올라온 ISP공고가 있습니다. 확인 부탁드립니다.</h2>'

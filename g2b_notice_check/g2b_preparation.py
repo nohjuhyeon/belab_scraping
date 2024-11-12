@@ -7,7 +7,7 @@ import os
 import time
 import json
 from dotenv import load_dotenv
-
+import zipfile
 load_dotenv()
 
 def preparation_search(search_keyword,preparation_list,preparation_titles,folder_path):
@@ -120,7 +120,7 @@ def check_list_insert(preparation_type, download_folder_path):
         # 해당 폴더 안의 파일들 탐색
         has_hwp_file = False
         for file_name in os.listdir(folder_path):
-            if file_name.lower().endswith('.hwp'):
+            if file_name.lower().endswith('.hwp') or file_name.lower().endswith('.hwpx'):
                 has_hwp_file = True
                 break            
         # hwp 파일이 없으면 check_list로 이동
@@ -206,7 +206,7 @@ def ai_preparation_list_insert(preparation_type, download_folder_path,keywords):
     # ai_notice_list 폴더 경로 설정
     for file_name in os.listdir(download_folder_path):
         file_path = os.path.join(download_folder_path, file_name)
-        if file_name.lower().endswith('.hwp'):
+        if file_name.lower().endswith('.hwp') or file_name.lower().endswith('.hwpx'):
             if search_keywords_in_hwp(file_name,file_path, keywords):
                 preparation_type = 'ai_preparation'
                 time.sleep(1)

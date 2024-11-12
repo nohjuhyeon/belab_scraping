@@ -9,7 +9,7 @@
         "preparation_end_date": "2024/11/11",
         "preparation_link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1509517",
         "new_preparation": false,
-        "preparation_type": "check"
+        "preparation_type": null
     },
     {
         "preparation_id": "122483038000001",
@@ -93,7 +93,7 @@
         "preparation_end_date": "2024/10/19",
         "preparation_link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1499192",
         "new_preparation": false,
-        "preparation_type": "check"
+        "preparation_type": null
     },
     {
         "preparation_id": "(입찰)2024-70",
@@ -105,7 +105,7 @@
         "preparation_end_date": "2024/10/19",
         "preparation_link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1499002",
         "new_preparation": false,
-        "preparation_type": "check"
+        "preparation_type": "ai_preparation"
     },
     {
         "preparation_id": "RE240296AD",
@@ -116,7 +116,7 @@
         "preparation_start_date": "2024/11/11",
         "preparation_end_date": "2024/11/14",
         "preparation_link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1512036",
-        "new_preparation": true,
+        "new_preparation": false,
         "preparation_type": null
     },
     {
@@ -128,7 +128,7 @@
         "preparation_start_date": "2024/11/06",
         "preparation_end_date": "2024/11/11",
         "preparation_link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1509466",
-        "new_preparation": true,
+        "new_preparation": false,
         "preparation_type": "ai_preparation"
     },
     {
@@ -140,7 +140,7 @@
         "preparation_start_date": "2024/10/30",
         "preparation_end_date": "2024/11/04",
         "preparation_link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1506392",
-        "new_preparation": true,
+        "new_preparation": false,
         "preparation_type": "ai_preparation"
     },
     {
@@ -152,7 +152,7 @@
         "preparation_start_date": "2024/10/16",
         "preparation_end_date": "2024/10/19",
         "preparation_link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1500311",
-        "new_preparation": true,
+        "new_preparation": false,
         "preparation_type": "ai_preparation"
     },
     {
@@ -164,7 +164,7 @@
         "preparation_start_date": "2024/10/16",
         "preparation_end_date": "2024/10/25",
         "preparation_link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1500250",
-        "new_preparation": true,
+        "new_preparation": false,
         "preparation_type": "check"
     }
 ]
