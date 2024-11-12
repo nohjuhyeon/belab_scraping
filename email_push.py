@@ -100,7 +100,7 @@ def email_sending():
     print('이메일을 보내겠습니다.')
 
     sender_email = 'jh.belab@gmail.com'
-    receiver_email_list = ['sy.lee@belab.co.kr','jh.noh@belab.co.kr']
+    receiver_email_list = ['jh.noh@belab.co.kr']
     # receiver_email = 'jh.noh@belab.co.kr'
     subject = '나라장터에 새로운 ISP 공고가 올라왔습니다.'
     if len(ai_notice_list) > 0 or len(check_notice_list) > 0 or len(ai_preparation_list) > 0 or len(check_preparation_list) > 0:

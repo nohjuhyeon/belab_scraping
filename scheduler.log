@@ -794,3 +794,49 @@ TypeError: 'list' object cannot be interpreted as an integer
 2024-11-12 09:44:40,777 - INFO - Get LATEST chromedriver version for google-chrome
 2024-11-12 09:44:40,804 - INFO - Get LATEST chromedriver version for google-chrome
 2024-11-12 09:44:40,828 - INFO - Driver [/root/.wdm/drivers/chromedriver/linux64/130.0.6723.116/chromedriver-linux64/chromedriver] found in cache
+2024-11-12 10:40:15,840 - INFO - ----------------notice check started----------------
+2024-11-12 10:40:15,841 - INFO - ====== WebDriver manager ======
+2024-11-12 10:40:16,217 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-12 10:40:16,313 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-12 10:40:16,342 - INFO - There is no [linux64] chromedriver "130.0.6723.116" for browser google-chrome "130.0.6723" in cache
+2024-11-12 10:40:16,342 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-12 10:40:16,418 - INFO - WebDriver version 130.0.6723.116 selected
+2024-11-12 10:40:16,419 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/130.0.6723.116/linux64/chromedriver-linux64.zip
+2024-11-12 10:40:16,419 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/130.0.6723.116/linux64/chromedriver-linux64.zip
+2024-11-12 10:40:16,524 - INFO - Driver downloading response is 200
+2024-11-12 10:40:16,919 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-12 10:40:17,109 - INFO - Driver has been saved in cache [/root/.wdm/drivers/chromedriver/linux64/130.0.6723.116]
+2024-11-12 10:42:16,429 - INFO - ====== WebDriver manager ======
+2024-11-12 10:42:16,502 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-12 10:42:16,558 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-12 10:42:16,584 - INFO - Driver [/root/.wdm/drivers/chromedriver/linux64/130.0.6723.116/chromedriver-linux64/chromedriver] found in cache
+2024-11-12 10:43:10,291 - INFO - ====== WebDriver manager ======
+2024-11-12 10:43:10,351 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-12 10:43:10,432 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-12 10:43:10,464 - INFO - Driver [/root/.wdm/drivers/chromedriver/linux64/130.0.6723.116/chromedriver-linux64/chromedriver] found in cache
+2024-11-12 10:44:10,513 - INFO - ====== WebDriver manager ======
+2024-11-12 10:44:10,564 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-12 10:44:10,636 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-12 10:44:10,671 - INFO - Driver [/root/.wdm/drivers/chromedriver/linux64/130.0.6723.116/chromedriver-linux64/chromedriver] found in cache
+2024-11-12 10:45:31,053 - INFO - ----------------notice check started----------------
+2024-11-12 10:45:31,054 - INFO - ====== WebDriver manager ======
+2024-11-12 10:45:31,119 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-12 10:45:31,192 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-12 10:45:31,219 - INFO - Driver [/root/.wdm/drivers/chromedriver/linux64/130.0.6723.116/chromedriver-linux64/chromedriver] found in cache
+2024-11-12 10:47:35,371 - INFO - ====== WebDriver manager ======
+2024-11-12 10:47:35,436 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-12 10:47:35,460 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-12 10:47:35,487 - INFO - Driver [/root/.wdm/drivers/chromedriver/linux64/130.0.6723.116/chromedriver-linux64/chromedriver] found in cache
+2024-11-12 10:48:32,044 - INFO - ====== WebDriver manager ======
+2024-11-12 10:48:32,130 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-12 10:48:32,157 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-12 10:48:32,189 - INFO - Driver [/root/.wdm/drivers/chromedriver/linux64/130.0.6723.116/chromedriver-linux64/chromedriver] found in cache
+2024-11-12 10:49:34,868 - INFO - ====== WebDriver manager ======
+2024-11-12 10:49:34,937 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-12 10:49:34,961 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-12 10:49:34,987 - INFO - Driver [/root/.wdm/drivers/chromedriver/linux64/130.0.6723.116/chromedriver-linux64/chromedriver] found in cache
+2024-11-12 10:57:56,225 - INFO - ----------------news summarization started----------------
+2024-11-12 10:57:56,507 - INFO - ====== WebDriver manager ======
+2024-11-12 10:57:56,616 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-12 10:57:56,640 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-12 10:57:56,666 - INFO - Driver [/root/.wdm/drivers/chromedriver/linux64/130.0.6723.116/chromedriver-linux64/chromedriver] found in cache
