@@ -794,3 +794,15 @@ TypeError: 'list' object cannot be interpreted as an integer
 2024-11-12 09:44:40,777 - INFO - Get LATEST chromedriver version for google-chrome
 2024-11-12 09:44:40,804 - INFO - Get LATEST chromedriver version for google-chrome
 2024-11-12 09:44:40,828 - INFO - Driver [/root/.wdm/drivers/chromedriver/linux64/130.0.6723.116/chromedriver-linux64/chromedriver] found in cache
+2024-11-12 12:11:58,622 - INFO - ----------------notice check started----------------
+2024-11-12 12:11:58,623 - INFO - ====== WebDriver manager ======
+2024-11-12 12:11:58,886 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-12 12:11:58,990 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-12 12:11:59,014 - INFO - There is no [linux64] chromedriver "130.0.6723.116" for browser google-chrome "130.0.6723" in cache
+2024-11-12 12:11:59,015 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-12 12:11:59,086 - INFO - WebDriver version 130.0.6723.116 selected
+2024-11-12 12:11:59,087 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/130.0.6723.116/linux64/chromedriver-linux64.zip
+2024-11-12 12:11:59,087 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/130.0.6723.116/linux64/chromedriver-linux64.zip
+2024-11-12 12:11:59,159 - INFO - Driver downloading response is 200
+2024-11-12 12:11:59,458 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-12 12:11:59,666 - INFO - Driver has been saved in cache [/root/.wdm/drivers/chromedriver/linux64/130.0.6723.116]

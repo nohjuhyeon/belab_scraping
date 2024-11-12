@@ -82,6 +82,13 @@ def preparation_search(search_keyword,preparation_list,preparation_titles,folder
         except:
             pass
         preparation_type = None
+        for file_name in os.listdir(download_folder_path):
+            file_path = os.path.join(download_folder_path, file_name)
+            if file_name.lower().endswith('.zip'):
+                with zipfile.ZipFile(file_path, 'r') as zip_ref:
+                    # 압축 해제할 임시 폴더 경로
+                    extract_path = os.path.join(download_folder_path)
+                    zip_ref.extractall(extract_path)
         preparation_type = check_list_insert(preparation_type, download_folder_path)
         keywords = ['AI', '인공지능', 'LLM','생성형']
         preparation_type = ai_preparation_list_insert(preparation_type, download_folder_path,keywords)
