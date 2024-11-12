@@ -283,4 +283,3 @@ def g2b_preparation_collection():
             check_list.append(notice)
     time.sleep(1)
     return ai_preparation_list,check_list
-
