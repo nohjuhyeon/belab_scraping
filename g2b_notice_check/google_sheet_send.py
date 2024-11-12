@@ -15,8 +15,20 @@ def google_sheet_add(notice_type,data):
              'https://www.googleapis.com/auth/drive']
 
     # 개인에 따라 수정 필요 - 다운로드 받았던 키 값 경로
-    json_key_path = "C:/develops/belab_scraping/google_sheet_key.json"
-    json_key_dict = os.environ.get("google_sheet_key")
+    # json_key_path = "C:/develops/belab_scraping/google_sheet_key.json"
+    json_key_str = os.environ.get("google_sheet_key")
+    if json_key_str:
+        try:
+            json_key_dict = json.loads(json_key_str)  # 문자열을 딕셔너리로 변환
+            scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
+            credential = ServiceAccountCredentials.from_json_keyfile_dict(json_key_dict, scope)
+            # credential을 사용하여 Google API에 접근
+        except json.JSONDecodeError as e:
+            print(f"Error decoding JSON: {e}")
+        except Exception as e:
+            print(f"Error loading credentials: {e}")
+    else:
+        print("google_sheet_key environment variable not found.")    
     credential = ServiceAccountCredentials.from_json_keyfile_dict(json_key_dict, scope)
     gc = gspread.authorize(credential)
 
@@ -112,14 +124,17 @@ def notice_add(data,notice_type,sheet):
 
 # 사용 예시
 def google_sheet_update():
-    json_file_path = 'C:/develops/belab_scraping/notice_list.json'
+    folder_path = os.environ.get("folder_path")
+    json_file_path = folder_path+'notice_list.json'
+
     # JSON 파일에서 데이터 로드
     data = load_json(json_file_path)
     # 스프레드시트에 데이터 업데이트
     notice_type = '입찰 공고'
     new_notice_df = google_sheet_add(notice_type,data)
     
-    json_file_path = 'C:/develops/belab_scraping/preparation_list.json'
+    folder_path = os.environ.get("folder_path")
+    json_file_path = folder_path+'preparation_list.json'
     # JSON 파일에서 데이터 로드
     data = load_json(json_file_path)
     notice_type = '사전 규격'
