@@ -8,7 +8,7 @@ from summary_update import total_update
 import os
 # 로깅 설정
 folder_path = os.environ.get("folder_path")
-logging.basicConfig(filename=folder_path+'scheduler.log', level=logging.INFO, 
+logging.basicConfig(filename=folder_path+'scheduler.txt', level=logging.INFO, 
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 # 스케줄러 초기화
