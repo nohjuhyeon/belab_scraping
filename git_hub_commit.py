@@ -1,7 +1,7 @@
 import os
 import subprocess
 folder_path = os.environ.get("folder_path")
-script_path = folder_path+"/function_list/git_workflow.sh"
+script_path = folder_path+"function_list/git_workflow.sh"
 argument = "Auto Commit."
 
 try:

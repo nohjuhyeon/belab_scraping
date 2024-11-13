@@ -70,12 +70,11 @@ def preparation_collection():
     notice_list = []
     # 함수 호출
     folder_path = os.environ.get("folder_path")
-    folder_path = 'C:/develops/belab_scraping/'
 
-    notice_titles = load_notice_titles_from_json(folder_path+'preparation_list.json')
+    notice_titles = load_notice_titles_from_json(folder_path+'g2b_data/preparation_list.json')
     notice_list = preparation_search('isp',notice_list,notice_titles,folder_path)
     notice_list = preparation_search('ismp',notice_list,notice_titles,folder_path)
-    json_file_path = os.path.join(folder_path, 'preparation_list.json')
+    json_file_path = os.path.join(folder_path, 'g2b_data/preparation_list.json')
     save_notice_list_to_json(notice_list, json_file_path)
     ai_notice_list = []
     check_list = []

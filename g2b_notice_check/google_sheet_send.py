@@ -66,7 +66,7 @@ def notice_add(data,notice_type,sheet):
         # JSON 데이터를 데이터프레임으로 변환
         new_df = pd.DataFrame(data)
         new_df.dropna(subset=['new', 'type'], inplace=True)
-        new_df.drop(columns=['notice'], inplace=True)
+        new_df.drop(columns=['new'], inplace=True)
 
         # 컬럼 이름 변경
         new_df.rename(columns={
@@ -87,7 +87,8 @@ def notice_add(data,notice_type,sheet):
         # NaN 값을 빈 문자열로 대체
         combined_df.replace({np.nan: ''}, inplace=True)
         combined_df.drop_duplicates(subset='공고번호', keep='last', inplace=True)
-
+        combined_df['공고 가격'] = combined_df['공고 가격'].str.replace('₩', '').str.replace('(조달수수료 포함)', '').str.replace('원', '').str.replace(' ', '')
+        combined_df['공고 가격'] = combined_df['공고 가격'].apply(lambda x: x + '원' if x != '' else x)
         # 개시일 기준으로 데이터프레임 정렬
         combined_df.sort_values(by='개시일',ascending=False, inplace=True)
         # '비고' 열에서 'ai_preparation' 값을 '인공지능 관련 공고'로 변경
@@ -105,7 +106,7 @@ def notice_add(data,notice_type,sheet):
 # 사용 예시
 def google_sheet_update():
     folder_path = os.environ.get("folder_path")
-    json_file_path = folder_path+'notice_list.json'
+    json_file_path = folder_path+'/g2b_data/notice_list.json'
 
     # JSON 파일에서 데이터 로드
     data = load_json(json_file_path)
@@ -113,7 +114,7 @@ def google_sheet_update():
     notice_type = '입찰 공고'
     new_notice_df = google_sheet_add(notice_type,data)
     
-    json_file_path = folder_path+'preparation_list.json'
+    json_file_path = folder_path+'/g2b_data/preparation_list.json'
     # JSON 파일에서 데이터 로드
     data = load_json(json_file_path)
     notice_type = '사전 규격'

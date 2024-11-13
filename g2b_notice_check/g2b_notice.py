@@ -17,8 +17,6 @@ def notice_search(search_keyword,notice_list,notice_titles,folder_path):
     id_input = browser.find_element(by=By.CSS_SELECTOR,value='#id')
     infose_id = os.environ.get("infose_id")
     infose_password = os.environ.get("infose_password")
-    infose_id = 'asog4plp'
-    infose_password = 'dlqckf@01'
 
     id_input.send_keys(infose_id)
     password_input = browser.find_element(by=By.CSS_SELECTOR,value='#pass')
@@ -99,13 +97,12 @@ def notice_collection():
     notice_list = []
     # 함수 호출
     folder_path = os.environ.get("folder_path")
-    folder_path = 'C:/develops/belab_scraping/'
 
-    notice_titles = load_notice_titles_from_json(folder_path+'notice_list.json')
+    notice_titles = load_notice_titles_from_json(folder_path+'g2b_data/notice_list.json')
     
     notice_list = notice_search('isp',notice_list,notice_titles,folder_path)
     notice_list = notice_search('ismp',notice_list,notice_titles,folder_path)
-    json_file_path = os.path.join(folder_path, 'notice_list.json')
+    json_file_path = os.path.join(folder_path, 'g2b_data/notice_list.json')
     save_notice_list_to_json(notice_list, json_file_path)
     ai_notice_list = []
     check_list = []

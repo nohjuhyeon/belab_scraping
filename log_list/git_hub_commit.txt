@@ -54,3 +54,23 @@ Already up to date.
 stderr: To https://github.com/nohjuhyeon/belab_scraping.git
    eb69246..e569b88  main -> main
 
+Traceback (most recent call last):
+  File "/app/belab_scraping/git_hub_commit.py", line 9, in <module>
+    result = subprocess.run(
+  File "/usr/local/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/usr/local/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/app/belab_scraping//function_list/git_workflow.sh'
+Traceback (most recent call last):
+  File "/app/belab_scraping/git_hub_commit.py", line 9, in <module>
+    result = subprocess.run(
+  File "/usr/local/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/usr/local/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: '/app/belab_scraping/function_list/git_workflow.sh'

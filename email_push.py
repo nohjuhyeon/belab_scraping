@@ -65,7 +65,6 @@ def email_sending():
     ai_preparation_list, check_preparation_list = preparation_collection()
     gmail_user = 'jh.belab@gmail.com'
     gmail_password = os.environ.get("gmail_password")
-    gmail_password = 'pgqm dwob ejdy uaxq'
     print('이메일을 보내겠습니다.')
 
     sender_email = 'jh.belab@gmail.com'
@@ -107,12 +106,11 @@ try:
     print(datetime.now())
     load_dotenv()
     folder_path = os.environ.get("folder_path")
-    folder_path = 'C:/develops/belab_scraping/'
     logging.basicConfig(filename=folder_path+'/log_list/scheduler.txt', level=logging.INFO, 
                         format='%(asctime)s - %(levelname)s - %(message)s')
     logging.info("----------------notice check started----------------") # 스케줄러 시작 로그 기록
     email_sending()
-    # google_sheet_update()
+    google_sheet_update()
     # 스크립트 경로와 인자 설정
 except (KeyboardInterrupt, SystemExit):
     print("notice check shut down.")
