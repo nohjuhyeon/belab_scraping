@@ -93,9 +93,8 @@ def notice_search(search_keyword,notice_list,notice_titles,folder_path):
         requesting_agency = browser.find_element(by=By.CSS_SELECTOR,value='#basicInfo > table > tbody > tr:nth-child(4) > td:nth-child(2)').text.split('\n')[-1]
         try:
             notice_link = browser.find_element(by=By.CSS_SELECTOR,value='#contentBid > table > tbody > tr:nth-child(2) > td > span:nth-child(2)')
-            onclick_text = notice_link.get_attribute("onclick")
-            bid_id = onclick_text.split("g2bBidLink('")[1].split("'")[0]
-            notice_link = 'https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno='+bid_id
+            bid_id = notice_link.get_attribute("onclick").split("?")[-1].split("&")[0]
+            notice_link = 'https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?'+bid_id
         except:
             try:
                 notice_link = browser.find_element(by=By.CSS_SELECTOR,value='#contentBid > table > tbody > tr > td > button')
