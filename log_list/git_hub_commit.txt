@@ -74,3 +74,13 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.10/subprocess.py", line 1863, in _execute_child
     raise child_exception_type(errno_num, err_msg, err_filename)
 PermissionError: [Errno 13] Permission denied: '/app/belab_scraping/function_list/git_workflow.sh'
+stdout: 변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Already up to date.
+작업이 완료되었습니다!
+
+

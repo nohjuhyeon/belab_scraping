@@ -13,11 +13,7 @@ try:
         check=True            # 명령어 실패 시 예외 발생
     )
     # 실행 결과 출력
-    print("stdout:", result.stdout)
-    print("stderr:", result.stderr)
 
 except subprocess.CalledProcessError as e:
     # 오류 발생 시 출력
     print("An error occurred while executing the script.")
-    print("stdout:", e.stdout)
-    print("stderr:", e.stderr)
