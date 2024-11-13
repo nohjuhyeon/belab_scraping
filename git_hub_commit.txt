@@ -2,3 +2,14 @@ Traceback (most recent call last):
   File "/app/belab_scraping/git_hub_commit.py", line 1, in <module>
     folder_path = os.environ.get("folder_path")
 NameError: name 'os' is not defined
+stdout: 변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+[main c14822b] Auto Commit.
+ 16 files changed, 152 insertions(+), 42 deletions(-)
+ create mode 100644 git_hub_commit.py
+ create mode 100644 git_hub_commit.txt
+Already up to date.
+작업이 완료되었습니다!
+
+stderr: fatal: could not read Username for 'https://github.com': No such device or address
+
