@@ -6,7 +6,7 @@ from function_list.basic_options import selenium_setting,download_path_setting,i
 from function_list.g2b_func import notice_check,folder_clear,load_notice_titles_from_json,save_notice_list_to_json
 load_dotenv()
 
-def notice_search(search_keyword,notice_list,notice_titles,folder_path):
+def preparation_search(search_keyword,notice_list,notice_titles,folder_path):
     chrome_options = selenium_setting()
     chrome_options,download_folder_path = download_path_setting(folder_path,chrome_options)
     browser = init_browser(chrome_options)
