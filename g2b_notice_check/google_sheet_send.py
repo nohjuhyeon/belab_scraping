@@ -105,7 +105,7 @@ def notice_add(data,notice_type,sheet):
 
         # 기존 데이터와 새 데이터를 합침
         combined_df = pd.concat([existing_df, new_df], ignore_index=True)
-
+        combined_df['공고번호'] = combined_df['공고번호'].astype('str')
         # NaN 값을 빈 문자열로 대체
         combined_df.replace({np.nan: ''}, inplace=True)
         combined_df.drop_duplicates(subset='공고번호', keep='first', inplace=True)
