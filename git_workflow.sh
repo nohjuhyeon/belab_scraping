@@ -32,7 +32,7 @@ git commit -m "$COMMIT_MESSAGE"
 
 git pull 
 
-git push https://"$GITHUB_USERNAME":"$GITHUB_TOKEN"@github.com/<USERNAME>/<REPO>.git
+git push https://"$GITHUB_USERNAME":"$GITHUB_TOKEN"@github.com/nohjuhyeon/belab_scraping.git
 
 
 # 보안을 위해 토큰이 포함된 URL 제거 (선택 사항 - 방법 1)
