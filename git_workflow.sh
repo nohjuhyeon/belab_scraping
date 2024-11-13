@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # .env 파일 로드
-source .env
 
 # 사용법 출력
 if [ $# -eq 0 ]; then
@@ -28,10 +27,8 @@ echo "커밋을 생성합니다..."
 git commit -m "$COMMIT_MESSAGE"
 
 # 토큰을 사용하여 push - 수정된 URL 사용 및 브랜치 명시
-git remote add origin https://github.com/nohjuhyeon/belab_scraping.git
 
-git push https://${GITHUB_USERNAME}:${GITHUB_TOKEN}@github.com/nohjuhyeon/belab_scraping.git
-
+git push
 # 보안을 위해 토큰이 포함된 URL 제거 (선택 사항 - 방법 1)
 
 echo "작업이 완료되었습니다!"

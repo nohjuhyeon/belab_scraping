@@ -2,7 +2,7 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import os 
-from g2b_notice_check.g2b_notice_second import g2b_notice_collection
+from g2b_notice_check.g2b_notice import g2b_notice_collection
 from g2b_notice_check.g2b_preparation import g2b_preparation_collection
 from g2b_notice_check.google_sheet_send import google_sheet_update
 from dotenv import load_dotenv
