@@ -87,8 +87,8 @@ def notice_add(data,notice_type,sheet):
         # NaN 값을 빈 문자열로 대체
         combined_df.replace({np.nan: ''}, inplace=True)
         combined_df.drop_duplicates(subset='공고번호', keep='last', inplace=True)
-        combined_df['공고 가격'] = combined_df['공고 가격'].str.replace('₩', '').str.replace('(조달수수료 포함)', '').str.replace('원', '').str.replace(' ', '')
-        combined_df['공고 가격'] = combined_df['공고 가격'].apply(lambda x: x + '원' if x != '' else x)
+        # combined_df['공고 가격'] = combined_df['공고 가격'].str.replace('₩', '').str.replace('(조달수수료 포함)', '').str.replace('원', '').str.replace(' ', '')
+        # combined_df['공고 가격'] = combined_df['공고 가격'].apply(lambda x: x + '원' if x != '' else x)
         # 개시일 기준으로 데이터프레임 정렬
         combined_df.sort_values(by='개시일',ascending=False, inplace=True)
         # '비고' 열에서 'ai_preparation' 값을 '인공지능 관련 공고'로 변경

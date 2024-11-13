@@ -29,6 +29,10 @@ def preparation_search(search_keyword,notice_list,notice_titles,folder_path):
         time.sleep(1)
         preparation_id = browser.find_element(by=By.CSS_SELECTOR,value='#container > div.section > table > tbody > tr:nth-child(1) > td:nth-child(4) > div').text
         preparation_price = browser.find_element(by=By.CSS_SELECTOR,value='#container > div.section > table > tbody > tr:nth-child(3) > td:nth-child(2) > div').text
+        preparation_price = preparation_price.replace('₩', '').replace('(조달수수료 포함)', '').replace('원', '').replace(' ', '')
+        if preparation_price != '':
+            preparation_price = preparation_price + ' 원'
+
         preparation_start_date = browser.find_element(by=By.CSS_SELECTOR,value='#container > div.section > table > tbody > tr:nth-child(4) > td:nth-child(2) > div').text
         if preparation_start_date != '':
             preparation_start_date = preparation_start_date.split(' ')[0]

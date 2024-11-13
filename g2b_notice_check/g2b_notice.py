@@ -42,6 +42,9 @@ def notice_search(search_keyword,notice_list,notice_titles,folder_path):
         time.sleep(1)
         notice_id = browser.find_element(by=By.CSS_SELECTOR,value='#basicInfo > table > tbody > tr:nth-child(1) > td:nth-child(4)').text
         notice_price = browser.find_element(by=By.CSS_SELECTOR,value='#basicInfo > table > tbody > tr:nth-child(7) > td:nth-child(4) > b').text
+        notice_price = notice_price.replace('₩', '').replace('(조달수수료 포함)', '').replace('원', '').replace(' ', '')
+        if notice_price != '':
+            notice_price = notice_price + ' 원'
         notice_start_date = browser.find_element(by=By.CSS_SELECTOR,value='body > div > div > div.contents > div.left-content > table > tbody > tr:nth-child(2) > td:nth-child(4)').text
         if notice_start_date != '':
             notice_start_date = datetime.strptime(notice_start_date, "%Y년 %m월 %d일")
