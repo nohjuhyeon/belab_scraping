@@ -92,3 +92,57 @@ Error decoding JSON: Expecting property name enclosed in double quotes: line 1 c
 메일이 성공적으로 발송되었습니다.
 Error decoding JSON: Expecting property name enclosed in double quotes: line 1 column 3 (char 2)
 공고 확인 완료!
+Data updated and sorted successfully.
+Data updated and sorted successfully.
+Data updated and sorted successfully.
+----------------공고 확인 시작----------------
+2024-11-13 10:50:08.556438
+Data updated and sorted successfully.
+Data updated and sorted successfully.
+Data updated and sorted successfully.
+stdout: 변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+작업이 완료되었습니다!
+
+stderr: /app/belab_scraping/git_workflow.sh: line 4: .env: No such file or directory
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+
+공고 확인 완료!
+Data updated and sorted successfully.
+Data updated and sorted successfully.
+Data updated and sorted successfully.
+----------------공고 확인 시작----------------
+2024-11-13 10:53:09.581736
+Data updated and sorted successfully.
+Data updated and sorted successfully.
+Data updated and sorted successfully.
+stdout: 변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+작업이 완료되었습니다!
+
+stderr: fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+
+공고 확인 완료!
+Data updated and sorted successfully.
+Data updated and sorted successfully.
+Data updated and sorted successfully.
+----------------공고 확인 시작----------------
+2024-11-13 10:55:08.197830
+Data updated and sorted successfully.
+Data updated and sorted successfully.
+Data updated and sorted successfully.
+stdout: 변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+작업이 완료되었습니다!
+
+stderr: fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+
+공고 확인 완료!
