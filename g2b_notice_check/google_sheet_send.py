@@ -136,7 +136,6 @@ def google_sheet_update():
     notice_type = '입찰 공고'
     new_notice_df = google_sheet_add(notice_type,data)
     
-    folder_path = os.environ.get("folder_path")
     json_file_path = folder_path+'preparation_list.json'
     # JSON 파일에서 데이터 로드
     data = load_json(json_file_path)
