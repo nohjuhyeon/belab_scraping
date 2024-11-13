@@ -8,6 +8,7 @@ from g2b_notice_check.google_sheet_send import google_sheet_update
 from dotenv import load_dotenv
 import logging
 from datetime import datetime
+import subprocess
 
 def html_write(html_content, ai_list, check_list, notice_type, notice_type_eng):
     html_content += "<h3>{}: AI관련 공고 {}건, 확인이 필요한 공고 {}건이 올라왔습니다.</h3>".format(notice_type, len(ai_list), len(check_list))
@@ -143,9 +144,32 @@ try:
     logging.info("----------------notice check started----------------") # 스케줄러 시작 로그 기록
     email_sending()
     google_sheet_update()
+    # 스크립트 경로와 인자 설정
+    script_path = folder_path+"git_workflow.sh"
+    argument = "Auto Commit."
+
+    try:
+        # 스크립트 실행
+        result = subprocess.run(
+            [script_path, argument],
+            capture_output=True,  # 표준 출력과 표준 오류를 캡처
+            text=True,            # 출력을 문자열로 처리
+            check=True            # 명령어 실패 시 예외 발생
+        )
+        # 실행 결과 출력
+        print("stdout:", result.stdout)
+        print("stderr:", result.stderr)
+
+    except subprocess.CalledProcessError as e:
+        # 오류 발생 시 출력
+        print("An error occurred while executing the script.")
+        print("stdout:", e.stdout)
+        print("stderr:", e.stderr)
 except (KeyboardInterrupt, SystemExit):
     print("notice check shut down.")
     logging.info("notice check shut down.") # 스케줄러 종료 로그 기록
 finally:
     print("공고 확인 완료!")
+
+
 
