@@ -53,6 +53,14 @@ def preparation_search(search_keyword,preparation_list,preparation_titles,folder
     time.sleep(3)
     preparation_elements = browser.find_elements(by=By.CSS_SELECTOR, value='#container > div > table > tbody > tr > td:nth-child(4) > div > a')
     for i in range(len(preparation_elements)):
+        for filename in os.listdir(download_folder_path):
+            file_path = os.path.join(download_folder_path, filename)
+            try:
+                # 파일인지 확인하고 삭제
+                if os.path.isfile(file_path):
+                    os.remove(file_path)
+            except Exception as e:
+                print(f"Failed to delete {file_path}. Reason: {e}")
         preparation_elements = browser.find_elements(by=By.CSS_SELECTOR, value='#container > div > table > tbody > tr > td:nth-child(4) > div > a')
         preparation_title = preparation_elements[i].text
         preparation_link = preparation_elements[i].get_attribute('href')

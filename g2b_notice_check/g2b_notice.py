@@ -65,6 +65,14 @@ def notice_search(search_keyword,notice_list,notice_titles,folder_path):
     
     notice_elements = browser.find_elements(by=By.CSS_SELECTOR,value='#w0 > table > tbody > tr > td:nth-child(2) > a')
     for i in range(len(notice_elements)):
+        for filename in os.listdir(download_folder_path):
+            file_path = os.path.join(download_folder_path, filename)
+            try:
+                # 파일인지 확인하고 삭제
+                if os.path.isfile(file_path):
+                    os.remove(file_path)
+            except Exception as e:
+                print(f"Failed to delete {file_path}. Reason: {e}")
         notice_elements = browser.find_elements(by=By.CSS_SELECTOR,value='#w0 > table > tbody > tr > td:nth-child(2) > a')
         notice_title = notice_elements[i].text
         notice_elements[i].click()
@@ -136,6 +144,7 @@ def notice_search(search_keyword,notice_list,notice_titles,folder_path):
         
     browser.quit()
     return notice_list
+
 def check_list_insert(notice_type, download_folder_path):
     # check_list 폴더 경로 설정
     # 공고 폴더들 탐색

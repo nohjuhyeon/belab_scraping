@@ -9,18 +9,16 @@ def load_json(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
         return json.load(file)
 
-def google_sheet_add(notice_type,data):
-        # OAuth2 인증을 위한 서비스 계정 키 파일 경로
+def google_sheet_add(notice_type, data):
+    # OAuth2 인증을 위한 서비스 계정 키 파일 경로
     scope = ['https://spreadsheets.google.com/feeds',
              'https://www.googleapis.com/auth/drive']
 
     # 개인에 따라 수정 필요 - 다운로드 받았던 키 값 경로
-    # json_key_path = "C:/develops/belab_scraping/google_sheet_key.json"
     json_key_str = os.environ.get("google_sheet_key")
     if json_key_str:
         try:
             json_key_dict = json.loads(json_key_str)  # 문자열을 딕셔너리로 변환
-            scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
             credential = ServiceAccountCredentials.from_json_keyfile_dict(json_key_dict, scope)
             # credential을 사용하여 Google API에 접근
         except json.JSONDecodeError as e:
@@ -29,7 +27,8 @@ def google_sheet_add(notice_type,data):
             print(f"Error loading credentials: {e}")
     else:
         print("google_sheet_key environment variable not found.")    
-    credential = ServiceAccountCredentials.from_json_keyfile_dict(json_key_dict, scope)
+        return None
+
     gc = gspread.authorize(credential)
 
     # 개인에 따라 수정 필요 - 스프레드시트 URL 가져오기
@@ -38,22 +37,23 @@ def google_sheet_add(notice_type,data):
     doc = gc.open_by_url(spreadsheet_url)
     sheet = doc.worksheet(notice_type)
 
-    df,today_df = notice_add(data,notice_type,sheet)
+    df, today_df = notice_add(data, notice_type, sheet)
     sheet.clear()    
-    # 개인에 따라 수정 필요 - 시트 선택하기 (시트명을 그대로 입력해주면 된다.)
-    # 정렬된 데이터를 스프레드시트에 다시 씀
-    sheet.append_row(df.columns.tolist())  # 헤더 추가
-    for index, row in df.iterrows():
-        sheet.append_row(row.tolist())
+
+    # 데이터를 리스트의 리스트로 변환하여 한 번에 추가
+    data_to_append = [df.columns.tolist()] + df.values.tolist()
+    sheet.append_rows(data_to_append)
 
     print("Data updated and sorted successfully.")
     return today_df
 
 def notice_add(data,notice_type,sheet):
-    update_date = datetime.now() - timedelta(days=1)
+    yesterday = datetime.now() - timedelta(days=1)
+    today = datetime.now()
 
     # 어제 날짜를 원하는 형식으로 포맷팅
-    update_date = update_date.strftime('%Y/%m/%d')
+    yesterday = yesterday.strftime('%Y/%m/%d')
+    today = today.strftime('%Y/%m/%d')
     if notice_type == '새로 올라온 공고':
         data.drop_duplicates(subset='공고번호', keep='first', inplace=True)
         data.sort_values(by='공고 유형',ascending=False, inplace=True)
@@ -118,7 +118,7 @@ def notice_add(data,notice_type,sheet):
 
         # '비고' 열에서 'check' 값을 '검토가 필요한 공고'로 변경
         combined_df.loc[combined_df['비고'] == 'check', '비고'] = '검토 필요'
-        today_df=combined_df.loc[combined_df['개시일']==update_date]
+        today_df=combined_df.loc[(combined_df['개시일']==today)|(combined_df['개시일']==yesterday)]
         today_df['공고 유형']=notice_type
         columns = ['공고 유형'] + [col for col in today_df.columns if col != '공고 유형']
         today_df = today_df[columns]
@@ -148,3 +148,4 @@ def google_sheet_update():
     notice_type = '새로 올라온 공고'
     google_sheet_add(notice_type,new_df)
 
+google_sheet_update()

@@ -142,7 +142,7 @@ try:
     logging.basicConfig(filename=folder_path+'scheduler.txt', level=logging.INFO, 
                         format='%(asctime)s - %(levelname)s - %(message)s')
     logging.info("----------------notice check started----------------") # 스케줄러 시작 로그 기록
-    email_sending()
+    # email_sending()
     google_sheet_update()
     # 스크립트 경로와 인자 설정
     script_path = folder_path+"git_workflow.sh"
