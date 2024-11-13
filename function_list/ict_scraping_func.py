@@ -1,6 +1,5 @@
 
 from selenium.webdriver.common.by import By          # - 정보 획득
-
 import pandas as pd 
 import time
 from datetime import datetime, timedelta
@@ -238,7 +237,7 @@ def kookje(browser):
     news_date = pd.to_datetime(' '.join(news_date.split(' ')[-2:]))
     return news_date
 
-def chosun(url,collection,browser,news_topic):
+def chosun(browser):
     time.sleep(1)
     try:
         news_title = browser.find_element(by=By.CSS_SELECTOR,value='#v-left-scroll-in > div.article_head > div.article_info > span:nth-child(1)').text
@@ -262,53 +261,90 @@ def chosun(url,collection,browser,news_topic):
     except:
         news_date= browser.find_element(by=By.CSS_SELECTOR,value='#article-view > div > header > div > ul > li:nth-child(2)').text.replace('입력 ','')
     news_date = pd.to_datetime(news_date)
-    news_link = url
-    collection.insert_one({'news_title':news_title,
+    news_dict = {'news_title':news_title,
                                     'news_content':news_content,
-                                    'news_date': news_date,
-                                    'news_link':news_link,
-                                    'news_topic':news_topic})
+                                    'news_date': news_date}
+    return news_dict
     
-def kbs(url,collection,browser,news_topic):
+def kbs(browser):
     time.sleep(1)
     news_title = browser.find_element(by=By.CSS_SELECTOR,value='h4.headline-title').text
     news_content = browser.find_element(by=By.CSS_SELECTOR,value='div > #cont_newstext').text
     news_date = browser.find_element(by=By.CSS_SELECTOR,value='div.dates > em.input-date').text.split()[1]
     news_date = pd.to_datetime(news_date)
-    news_link = url
-    collection.insert_one({'news_title':news_title,
+    news_dict = {'news_title':news_title,
                                     'news_content':news_content,
-                                    'news_date': news_date,
-                                    'news_link':news_link,
-                                    'news_topic':news_topic})  
+                                    'news_date': news_date}
+    return news_dict
 
-def boannews(url,collection,browser,news_topic):
+def boannews(browser):
     time.sleep(1)
     news_title = browser.find_element(by=By.CSS_SELECTOR,value='#news_title02 > h1').text
     news_content = browser.find_element(by=By.CSS_SELECTOR,value='div#news_content').text
     news_date = browser.find_element(by=By.CSS_SELECTOR,value='#news_util01').text.replace('입력 : ','')
     news_date = pd.to_datetime(news_date)
-    news_link = url
-    collection.insert_one({'news_title':news_title,
+    news_dict = {'news_title':news_title,
                                     'news_content':news_content,
-                                    'news_date': news_date,
-                                    'news_link':news_link,
-                                    'news_topic':news_topic})  
+                                    'news_date': news_date}
+    return news_dict
 
-def sbs_biz(url,collection,browser,news_topic):
+def sbs_biz(browser):
     time.sleep(1)
     news_title = browser.find_element(by=By.CSS_SELECTOR,value='#cnbc-front-articleHeader-self > div > div > h3').text
     news_content = browser.find_element(by=By.CSS_SELECTOR,value='#cnbc-front-articleContent-area-font').text    
     news_date = browser.find_element(by=By.CSS_SELECTOR,value='#cnbc-front-articleHeader-self > div > div > div.ah_info > span.ahi_date').text.replace('입력 ','')
     news_date = pd.to_datetime(news_date)
-    news_link = url
-    collection.insert_one({'news_title':news_title,
+    news_dict = {'news_title':news_title,
                                     'news_content':news_content,
-                                    'news_date': news_date,
-                                    'news_link':news_link,
-                                    'news_topic':news_topic})  
+                                    'news_date': news_date}
+    return news_dict
 
-    return news_date
+def fetch_news_date(news_link, browser):
+    # 뉴스 날짜를 사이트에서 가져오는 함수
+    handlers = {
+        'n.news.naver': naver,
+        'www.busan': busan,
+        'www.hani': hani,
+        'www.dt': digital_times,
+        'www.kookje': kookje,
+        'www.munhwa': munhwa,
+        'm.news.nate': nate,
+        'ddaily.co.kr':ddaily,
+        'itworld.co.kr':itworld,
+        'news1.kr':news1,
+        'datanews.co.kr':datanews,
+        'ciokorea':ciokorea,
+        'dnews.co.kr':dnews,
+        'topdaily.kr': topdaily, 
+        'kukinews.com': kukinews, 
+        'economist.co.kr': economist,  
+        'asiatime.co.kr': asiatime, 
+        'metroseoul.co.kr': metroseoul,
+        'it.donga' : donga,
+        'skyedaily' : skyedaily,
+        'news.mtn' : mtn,
+        'dream.kotra' : kotra,
+        'newspim' : newspim,
+        'nocutnews' : nocut,
+        'newsprime' : newsprime,
+        'medipana.com' : medipana,
+        'marketinsight': marketinsight, 
+        'dailynk': dailynk, 
+        'kgnews': kgnews, 
+        'dailymedi': dailymedi, 
+        'kyeongin': kyeongin, 
+        'newstomato': newstomato, 
+        'esquirekorea': esquirekorea,
+        'lawtimes' : lawtimes,
+        'chosun.com': chosun,
+        'biz.sbs': sbs_biz,
+        'news.kbs': kbs,
+        'boannews.com': boannews
 
+    }
+    for key, handler in handlers.items():
+        if key in news_link:
+            return handler(browser)
+    return None
 # answer = itworld(browser)
 # print(answer)

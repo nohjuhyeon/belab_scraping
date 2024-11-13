@@ -1,65 +1,11 @@
 # * 웹 크롤링 동작
-from selenium import webdriver 
-from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.keys import Keys
-
-from webdriver_manager.chrome import ChromeDriverManager
-webdriver_manager_directory = ChromeDriverManager().install()
 import time
-# ChromeDriver 실행
 import pandas as pd 
-from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By          # - 정보 획득
+from function_list.basic_options import mongo_setting,selenium_setting,init_browser
 
-from pymongo import MongoClient  
-import os 
-
-def venture_doctors():
-        crawling_count = 0
-        mongo_url = os.environ.get("DATABASE_URL")
-        mongo_client = MongoClient(mongo_url)
-        # database 연결
-        database = mongo_client["news_scraping"]
-        # collection 작업
-        collection = database['venture_doctors']
-        # Chrome 브라우저 옵션 생성
-        chrome_options = Options()
-
-        # User-Agent 설정
-        chrome_options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36")
-
-        # 다운로드 폴더 설정
-
-        # 추가적인 Chrome 옵션 설정 (특히 Docker 환경에서 필요할 수 있음)
-        chrome_options.add_argument('--headless')  # GUI 없는 환경에서 실행
-        chrome_options.add_argument('--no-sandbox')
-        chrome_options.add_argument('--disable-dev-shm-usage')
-        chrome_options.add_argument('--disable-gpu')  # GPU 사용 안함
-
-        # WebDriver 생성
-        webdriver_manager_directory = ChromeDriverManager().install()
-        service = ChromeService(webdriver_manager_directory)
-
-        # User-Agent 설정
-
-        # WebDriver 생성
-    
-        browser = webdriver.Chrome(service=service, options=chrome_options)
-    
-        # Chrome WebDriver의 capabilities 속성 사용
-        capabilities = browser.capabilities
-
-        pass
-        browser.get("https://biz.chosun.com/nsearch/?query=%5B%EB%B2%A4%EC%B2%98%ED%95%98%EB%8A%94%20%EC%9D%98%EC%82%AC%EB%93%A4%5D&page=1&siteid=chosunbiz&sort=1&date_period=all&date_start=&date_end=&writer=&field=&emd_word=&expt_word=&opt_chk=true&app_check=0&website=chosunbiz&category=")                                     # - 주소 입력
-
-                                                        # - 가능 여부에 대한 OK 받음
-        pass
-        html = browser.page_source                          # - html 파일 받음(and 확인)
-        # print(html)
-
-        from selenium.webdriver.common.by import By          # - 정보 획득
-        # browser.save_screenshot('./formats.png')           
-        title_list = [i['news_title'] for i in collection.find({},{'news_title':1,'_id':0})]
-        time.sleep(3)
+def news_collection(browser,collection,title_list,crawling_count):
         news_list = browser.find_elements(by=By.CSS_SELECTOR,value='#main > div.search-feed > div > div > div.story-card.story-card--art-left.\|.flex.flex--wrap.box--hidden-sm > div.story-card-right.\|.grid__col--sm-8.grid__col--md-8.grid__col--lg-8.box--pad-left-xs > div.story-card__headline-container.\|.box--margin-bottom-xs > div > a')
         page_list = browser.find_elements(by=By.CSS_SELECTOR,value='#main > div.parent.\|.flex.flex--justify-center.flex--align-items-center > div.number > ul > li')
         for j in range(len(page_list)):
@@ -96,8 +42,19 @@ def venture_doctors():
                 time.sleep(2)
                 if scrapping_finsih == True:
                         break
-                                
-        browser.quit()                                      # - 브라우저 종료
+        browser.quit()                                      
+        return crawling_count
+
+def venture_doctors():
+        crawling_count = 0
+        collection = mongo_setting('news_scraping','venture_doctors')
+        chrome_options = selenium_setting()
+        browser = init_browser(chrome_options)
+        pass
+        browser.get("https://biz.chosun.com/nsearch/?query=%5B%EB%B2%A4%EC%B2%98%ED%95%98%EB%8A%94%20%EC%9D%98%EC%82%AC%EB%93%A4%5D&page=1&siteid=chosunbiz&sort=1&date_period=all&date_start=&date_end=&writer=&field=&emd_word=&expt_word=&opt_chk=true&app_check=0&website=chosunbiz&category=")                                     # - 주소 입력
+
+        title_list = [i['news_title'] for i in collection.find({},{'news_title':1,'_id':0})]
+        time.sleep(3)
+        crawling_count = news_collection(browser,collection,title_list,crawling_count)
         print('venture_doctors crawling finish')
         print('crawling count : ',crawling_count)
-# venture_doctors()

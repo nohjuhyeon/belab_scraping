@@ -1,49 +1,16 @@
-from selenium import webdriver 
-from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.by import By
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.chrome.options import Options
 import os 
 import time
-import json
 from dotenv import load_dotenv
-from datetime import datetime
-import zipfile
-import xml.etree.ElementTree as ET
-import olefile
-import zlib
-import struct
-
+from function_list.basic_options import selenium_setting,download_path_setting,init_browser
+from function_list.g2b_func import notice_check,folder_clear,load_notice_titles_from_json,save_notice_list_to_json
 load_dotenv()
 
-def preparation_search(search_keyword,preparation_list,preparation_titles,folder_path):
-    # Chrome 브라우저 옵션 생성
-    chrome_options = Options()
+def notice_search(search_keyword,notice_list,notice_titles,folder_path):
+    chrome_options = selenium_setting()
+    chrome_options,download_folder_path = download_path_setting(folder_path,chrome_options)
+    browser = init_browser(chrome_options)
 
-    # User-Agent 설정
-    chrome_options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36")
-
-    # 다운로드 폴더 설정
-    download_folder_path = os.path.abspath(folder_path + '/preparation_list')
-    if not os.path.exists(download_folder_path):
-        os.makedirs(download_folder_path)
-    prefs = {
-        'download.default_directory': download_folder_path,
-        'download.prompt_for_download': False,
-        'safebrowsing.enabled': True
-    }
-    chrome_options.add_experimental_option('prefs', prefs)
-
-    # 추가적인 Chrome 옵션 설정 (특히 Docker 환경에서 필요할 수 있음)
-    chrome_options.add_argument('--headless')  # GUI 없는 환경에서 실행
-    chrome_options.add_argument('--no-sandbox')
-    chrome_options.add_argument('--disable-dev-shm-usage')
-    chrome_options.add_argument('--disable-gpu')  # GPU 사용 안함
-
-    # WebDriver 생성
-    webdriver_manager_directory = ChromeDriverManager().install()
-    service = ChromeService(webdriver_manager_directory)
-    browser = webdriver.Chrome(service=service, options=chrome_options)
     browser.get("https://www.g2b.go.kr:8081/ep/preparation/prestd/preStdSrch.do?preStdRegNo=&referNo=&srchCl=&srchNo=&instCl=2&taskClCd=1&swbizTgYn=&instNm=&dminstCd=&listPageCount=&orderbyItem=1&instSearchRange=&myProdSearchYn=&searchDetailPrdnmNo=&searchDetailPrdnm=&pubYn=Y&taskClCds=A&recordCountPerPage=100")  # - 주소 입력
     time.sleep(1)
     keyword = browser.find_element(by=By.CSS_SELECTOR, value='#prodNm')
@@ -53,15 +20,7 @@ def preparation_search(search_keyword,preparation_list,preparation_titles,folder
     time.sleep(3)
     preparation_elements = browser.find_elements(by=By.CSS_SELECTOR, value='#container > div > table > tbody > tr > td:nth-child(4) > div > a')
     for i in range(len(preparation_elements)):
-        for filename in os.listdir(download_folder_path):
-            file_path = os.path.join(download_folder_path, filename)
-            try:
-                if os.path.isfile(file_path):
-                    os.remove(file_path)
-                elif os.path.isdir(file_path):
-                    shutil.rmtree(file_path)  # 디렉토리 삭제
-            except Exception as e:
-                print(f"Failed to delete {file_path}. Reason: {e}")
+        folder_clear(download_folder_path)        
         preparation_elements = browser.find_elements(by=By.CSS_SELECTOR, value='#container > div > table > tbody > tr > td:nth-child(4) > div > a')
         preparation_title = preparation_elements[i].text
         preparation_link = preparation_elements[i].get_attribute('href')
@@ -78,7 +37,7 @@ def preparation_search(search_keyword,preparation_list,preparation_titles,folder
             preparation_end_date = preparation_end_date.split(' ')[0]
         publishing_agency = browser.find_element(by=By.CSS_SELECTOR,value='#container > div.section > table > tbody > tr:nth-child(5) > td > div').text.split('\n')[0]
         requesting_agency = browser.find_element(by=By.CSS_SELECTOR,value='#container > div.section > table > tbody > tr:nth-child(6) > td > div').text
-        if preparation_title not in preparation_titles:
+        if preparation_title not in notice_titles:
             new_preparation=True
         else:
             new_preparation=False
@@ -97,199 +56,33 @@ def preparation_search(search_keyword,preparation_list,preparation_titles,folder
             browser.switch_to.default_content()
         except:
             pass
-        preparation_type = None
-        for file_name in os.listdir(download_folder_path):
-            file_path = os.path.join(download_folder_path, file_name)
-            if file_name.lower().endswith('.zip'):
-                with zipfile.ZipFile(file_path, 'r') as zip_ref:
-                    extract_path = os.path.join(download_folder_path)
-                    zip_ref.extractall(extract_path)
-        preparation_type = check_list_insert(preparation_type, download_folder_path)
-        keywords = ['AI', '인공지능', 'LLM','생성형']
-        preparation_type = ai_preparation_list_insert(preparation_type, download_folder_path,keywords)
-        dict_preparation = {'preparation_id':preparation_id,'preparation_title':preparation_title,'preparation_price':preparation_price,'publishing_agency':publishing_agency,'requesting_agency':requesting_agency,'preparation_start_date':preparation_start_date,'preparation_end_date':preparation_end_date,'preparation_link':preparation_link,'new_preparation':new_preparation,'preparation_type':preparation_type}
-        preparation_list.append(dict_preparation)
-        for filename in os.listdir(download_folder_path):
-            file_path = os.path.join(download_folder_path, filename)
-            try:
-                if os.path.isfile(file_path):
-                    os.remove(file_path)
-                elif os.path.isdir(file_path):
-                    shutil.rmtree(file_path)  # 디렉토리 삭제
-            except Exception as e:
-                print(f"Failed to delete {file_path}. Reason: {e}")
-
+        preparation_type = notice_check(download_folder_path)
+        dict_preparation = {'id':preparation_id,'title':preparation_title,'price':preparation_price,'publishing_agency':publishing_agency,'requesting_agency':requesting_agency,'start_date':preparation_start_date,'end_date':preparation_end_date,'link':preparation_link,'new':new_preparation,'type':preparation_type}
+        notice_list.append(dict_preparation)
+        folder_clear(download_folder_path)
         back_btn = browser.find_element(by=By.CSS_SELECTOR, value='#container > div.button_wrap > div > a')
         back_btn.click()
         time.sleep(1)
     browser.quit()
-    return preparation_list
+    return notice_list  
 
-def check_list_insert(preparation_type, download_folder_path):
-    # check_list 폴더 경로 설정
-    # 공고 폴더들 탐색
-    folder_path = os.path.join(download_folder_path)
-    
-    # 공고 폴더인지 확인 (check_list 폴더는 제외)
-    if os.path.isdir(folder_path):
-        # 해당 폴더 안의 파일들 탐색
-        has_hwp_file = False
-        for file_name in os.listdir(folder_path):
-            if file_name.lower().endswith('.hwp') or file_name.lower().endswith('.hwpx'):
-                has_hwp_file = True
-                break            
-        # hwp 파일이 없으면 check_list로 이동
-        if not has_hwp_file:
-            preparation_type = 'check'
-    return preparation_type
-
-def get_hwp_text(filename):
-    try:
-        with olefile.OleFileIO(filename) as f:
-            dirs = f.listdir()
-
-            # HWP 파일 검증
-            if ["FileHeader"] not in dirs or ["\x05HwpSummaryInformation"] not in dirs:
-                print("Not a valid HWP file.")
-                return None
-
-            # 문서 포맷 압축 여부 확인
-            header = f.openstream("FileHeader")
-            header_data = header.read()
-            is_compressed = (header_data[36] & 1) == 1
-
-            # Body Sections 불러오기
-            nums = []
-            for d in dirs:
-                if d[0] == "BodyText":
-                    nums.append(int(d[1][len("Section"):]))
-            sections = ["BodyText/Section" + str(x) for x in sorted(nums)]
-
-            # 전체 text 추출
-            text = ""
-            for section in sections:
-                bodytext = f.openstream(section)
-                data = bodytext.read()
-                if is_compressed:
-                    unpacked_data = zlib.decompress(data, -15)
-                else:
-                    unpacked_data = data
-
-                # 각 Section 내 text 추출    
-                section_text = ""
-                i = 0
-                size = len(unpacked_data)
-                while i < size:
-                    header = struct.unpack_from("<I", unpacked_data, i)[0]
-                    rec_type = header & 0x3ff
-                    rec_len = (header >> 20) & 0xfff
-
-                    if rec_type in [67]:
-                        rec_data = unpacked_data[i+4:i+4+rec_len]
-                        section_text += rec_data.decode('utf-16', errors='ignore')
-                        section_text += "\n"
-
-                    i += 4 + rec_len
-
-                text += section_text
-                text += "\n"
-
-            return text
-    except Exception as e:
-        return None
-
-def get_hwpx_text(file_path):
-    all_contents = ""  # 모든 파일의 내용을 저장할 변수
-    
-    with zipfile.ZipFile(file_path, 'r') as zf:
-        # 압축 파일 내의 모든 파일 목록을 가져옵니다.
-        all_files = zf.namelist()
-        
-        # 'Contents/' 폴더에 있는 파일들만 필터링합니다.
-        contents_files = [file for file in all_files if file.startswith('Contents/')]
-
-        # 각 파일의 내용을 읽어 변수에 저장합니다.
-        for file in contents_files:
-            with zf.open(file) as f:
-                content = f.read()
-                try:
-                    # 파일 내용을 문자열로 디코딩하고 XML로 파싱하여 읽기 쉽게 변환합니다.
-                    xml_content = content.decode('utf-8')
-                    root = ET.fromstring(xml_content)
-                    
-                    # XML 요소를 순회하며 텍스트를 추출합니다.
-                    for elem in root.iter():
-                        if elem.text:
-                            all_contents += elem.text.strip() + " "
-                except ET.ParseError:
-                    # XML 파싱에 실패한 경우 원본 텍스트를 추가합니다.
-                    all_contents += f"Contents of {file} could not be parsed as XML.\n"
-                    
-    return all_contents
-
-def search_keywords(file_name, keywords,text):
-    """HWP 파일 내에 특정 키워드가 포함되어 있는지 확인"""
-    for keyword in keywords:
-        if keyword in text:
-            print("파일명 : ", file_name)
-            print("키워드 : ", keyword)
-            return True
-    return False
-
-def ai_preparation_list_insert(preparation_type, download_folder_path,keywords):
-    """공고 폴더 내 HWP 및 PDF 파일에서 키워드 검색 후 해당 폴더 이동"""
-    for file_name in os.listdir(download_folder_path):
-        file_path = os.path.join(download_folder_path, file_name)
-        if file_name.lower().endswith('.hwp') :
-            text = get_hwp_text(file_path)
-            if search_keywords(file_name, keywords,text):
-                preparation_type = 'ai_preparation'
-                time.sleep(1)
-                break
-        elif file_name.lower().endswith('.hwpx'):
-            text = get_hwpx_text(file_path)
-            if search_keywords(file_name, keywords,text):
-                preparation_type = 'ai_preparation'
-                time.sleep(1)
-                break
-    return preparation_type
-                    
-def load_preparation_titles_from_json(file_path):
-    # JSON 파일에서 preparation_title만 추출하여 리스트로 반환
-    with open(file_path, 'r', encoding='utf-8') as json_file:
-        preparation_list = json.load(json_file)
-    
-    preparation_titles = [preparation['preparation_title'] for preparation in preparation_list]
-    return preparation_titles
-
-def save_preparation_list_to_json(preparation_list, file_path):
-    """
-    JSON 파일에 공지 목록을 저장합니다. 기존 내용이 있다면 추가합니다.
-
-    Args:
-        preparation_list: 저장할 공지 목록 (list)
-        file_path: 저장할 JSON 파일 경로 (str)
-    """
-
-    with open(file_path, 'w', encoding='utf-8') as json_file:
-        json.dump(preparation_list, json_file, ensure_ascii=False, indent=4)
-
-def g2b_preparation_collection():
-    preparation_list = []
+def preparation_collection():
+    notice_list = []
     # 함수 호출
     folder_path = os.environ.get("folder_path")
+    folder_path = 'C:/develops/belab_scraping/'
 
-    preparation_titles = load_preparation_titles_from_json(folder_path+'preparation_list.json')
-    preparation_list = preparation_search('isp',preparation_list,preparation_titles,folder_path)
-    preparation_list = preparation_search('ismp',preparation_list,preparation_titles,folder_path)
+    notice_titles = load_notice_titles_from_json(folder_path+'preparation_list.json')
+    notice_list = preparation_search('isp',notice_list,notice_titles,folder_path)
+    notice_list = preparation_search('ismp',notice_list,notice_titles,folder_path)
     json_file_path = os.path.join(folder_path, 'preparation_list.json')
-    save_preparation_list_to_json(preparation_list, json_file_path)
-    ai_preparation_list = []
+    save_notice_list_to_json(notice_list, json_file_path)
+    ai_notice_list = []
     check_list = []
-    for notice in preparation_list:
-        if notice['preparation_type'] == 'ai_preparation':
-            ai_preparation_list.append(notice)
-        elif notice['preparation_type'] == 'check':
+    for notice in notice_list:
+        if notice['type'] == 'ai':
+            ai_notice_list.append(notice)
+        elif notice['type'] == 'check':
             check_list.append(notice)
     time.sleep(1)
-    return ai_preparation_list,check_list
+    return ai_notice_list,check_list

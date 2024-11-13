@@ -59,49 +59,27 @@ def notice_add(data,notice_type,sheet):
         data.sort_values(by='공고 유형',ascending=False, inplace=True)
         return data,data
     else:
-        if notice_type == '입찰 공고':
-            # 기존 데이터를 읽어옴
-            existing_data = sheet.get_all_records()
-            existing_df = pd.DataFrame(existing_data)
+        # 기존 데이터를 읽어옴
+        existing_data = sheet.get_all_records()
+        existing_df = pd.DataFrame(existing_data)
 
-            # JSON 데이터를 데이터프레임으로 변환
-            new_df = pd.DataFrame(data)
-            new_df.dropna(subset=['new_notice', 'notice_type'], inplace=True)
-            new_df.drop(columns=['new_notice'], inplace=True)
+        # JSON 데이터를 데이터프레임으로 변환
+        new_df = pd.DataFrame(data)
+        new_df.dropna(subset=['new', 'type'], inplace=True)
+        new_df.drop(columns=['notice'], inplace=True)
 
-            # 컬럼 이름 변경
-            new_df.rename(columns={
-                'notice_id': '공고번호',
-                'notice_title': '공고명',
-                'notice_price': '공고 가격',
-                'publishing_agency': '공고 기관',
-                'requesting_agency': '수요 기관',
-                'notice_start_date': '개시일',
-                'notice_end_date': '마감일',
-                'notice_link': '링크',
-                'notice_type': '비고'
+        # 컬럼 이름 변경
+        new_df.rename(columns={
+            'id': '공고번호',
+            'title': '공고명',
+            'price': '공고 가격',
+            'publishing_agency': '공고 기관',
+            'requesting_agency': '수요 기관',
+            'start_date': '개시일',
+            'end_date': '마감일',
+            'link': '링크',
+            'type': '비고'
             }, inplace=True)
-        elif notice_type == '사전 규격':
-            existing_data = sheet.get_all_records()
-            existing_df = pd.DataFrame(existing_data)
-
-            # JSON 데이터를 데이터프레임으로 변환
-            new_df = pd.DataFrame(data)
-            new_df.dropna(subset=['new_preparation', 'preparation_type'], inplace=True)
-            new_df.drop(columns=['new_preparation'], inplace=True)
-            # 컬럼 이름 변경
-            new_df.rename(columns={
-                'preparation_id': '공고번호',
-                'preparation_title': '공고명',
-                'preparation_price': '공고 가격',
-                'publishing_agency': '공고 기관',
-                'requesting_agency': '수요 기관',
-                'preparation_start_date': '개시일',
-                'preparation_end_date': '마감일',
-                'preparation_link': '링크',
-                'preparation_type': '비고'
-            }, inplace=True)
-            # 개시일과 마감일을 datetime으로 변환
 
         # 기존 데이터와 새 데이터를 합침
         combined_df = pd.concat([existing_df, new_df], ignore_index=True)
@@ -113,8 +91,7 @@ def notice_add(data,notice_type,sheet):
         # 개시일 기준으로 데이터프레임 정렬
         combined_df.sort_values(by='개시일',ascending=False, inplace=True)
         # '비고' 열에서 'ai_preparation' 값을 '인공지능 관련 공고'로 변경
-        combined_df.loc[combined_df['비고'] == 'ai_preparation', '비고'] = '인공 지능'
-        combined_df.loc[combined_df['비고'] == 'ai_notice', '비고'] = '인공 지능'
+        combined_df.loc[combined_df['비고'] == 'ai', '비고'] = '인공 지능'
 
         # '비고' 열에서 'check' 값을 '검토가 필요한 공고'로 변경
         combined_df.loc[combined_df['비고'] == 'check', '비고'] = '검토 필요'

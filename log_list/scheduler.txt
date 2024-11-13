@@ -1370,3 +1370,47 @@ TypeError: 'list' object cannot be interpreted as an integer
 2024-11-13 13:26:03,188 - INFO - Get LATEST chromedriver version for google-chrome
 2024-11-13 13:26:03,210 - INFO - Get LATEST chromedriver version for google-chrome
 2024-11-13 13:26:03,232 - INFO - Driver [/root/.wdm/drivers/chromedriver/linux64/131.0.6778.69/chromedriver-linux64/chromedriver] found in cache
+2024-11-13 14:57:32,461 - INFO - ----------------notice check started----------------
+2024-11-13 14:58:21,456 - INFO - ----------------notice check started----------------
+2024-11-13 14:59:27,475 - INFO - ----------------notice check started----------------
+2024-11-13 15:06:38,812 - INFO - ----------------notice check started----------------
+2024-11-13 15:07:18,731 - INFO - ----------------notice check started----------------
+2024-11-13 15:08:49,621 - INFO - ----------------notice check started----------------
+2024-11-13 15:08:49,624 - INFO - ====== WebDriver manager ======
+2024-11-13 15:08:51,067 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-13 15:08:51,124 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-13 15:08:51,145 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-13 15:09:30,184 - INFO - ----------------notice check started----------------
+2024-11-13 15:09:30,188 - INFO - ====== WebDriver manager ======
+2024-11-13 15:09:31,433 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-13 15:09:31,480 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-13 15:09:31,497 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-13 15:11:36,899 - INFO - ====== WebDriver manager ======
+2024-11-13 15:11:38,369 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-13 15:11:38,391 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-13 15:11:38,415 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-13 15:13:01,592 - INFO - ====== WebDriver manager ======
+2024-11-13 15:13:02,756 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-13 15:13:02,780 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-13 15:13:02,798 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-13 15:14:30,819 - INFO - ====== WebDriver manager ======
+2024-11-13 15:14:31,872 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-13 15:14:31,890 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-13 15:14:31,907 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-13 15:16:39,176 - INFO - ----------------notice check started----------------
+2024-11-13 15:16:39,180 - INFO - ====== WebDriver manager ======
+2024-11-13 15:16:40,575 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-13 15:16:40,623 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-13 15:16:40,639 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-13 15:18:45,949 - INFO - ====== WebDriver manager ======
+2024-11-13 15:18:47,112 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-13 15:18:47,131 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-13 15:18:47,153 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-13 15:20:07,307 - INFO - ====== WebDriver manager ======
+2024-11-13 15:20:08,473 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-13 15:20:08,520 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-13 15:20:08,539 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-13 15:21:36,124 - INFO - ====== WebDriver manager ======
+2024-11-13 15:21:37,342 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-13 15:21:37,369 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-13 15:21:37,387 - INFO - Driver [C:\Users\JH\.wdm\drivers\chromedriver\win64\130.0.6723.116\chromedriver-win32/chromedriver.exe] found in cache

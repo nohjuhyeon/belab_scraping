@@ -1,52 +1,24 @@
-from selenium import webdriver 
-from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.by import By
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.chrome.options import Options
 import os 
 import time
-import json
 from dotenv import load_dotenv
-from datetime import datetime
-import zipfile
+from function_list.basic_options import selenium_setting,download_path_setting,init_browser
+from function_list.g2b_func import notice_check,folder_clear,load_notice_titles_from_json,save_notice_list_to_json
+
 load_dotenv()
 
 def notice_search(search_keyword,notice_list,notice_titles,folder_path):
-    # Chrome 브라우저 옵션 생성
-    chrome_options = Options()
-
-    # User-Agent 설정
-    chrome_options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36")
-
-    # 다운로드 폴더 설정
-    download_folder_path = os.path.abspath(folder_path + '/notice_list')
-    if not os.path.exists(download_folder_path):
-        os.makedirs(download_folder_path)
-    prefs = {
-        'download.default_directory': download_folder_path,
-        'download.prompt_for_download': False,
-        'safebrowsing.enabled': True
-    }
-    chrome_options.add_experimental_option('prefs', prefs)
-
-    # 추가적인 Chrome 옵션 설정 (특히 Docker 환경에서 필요할 수 있음)
-    chrome_options.add_argument('--headless')  # GUI 없는 환경에서 실행
-    chrome_options.add_argument('--no-sandbox')
-    chrome_options.add_argument('--disable-dev-shm-usage')
-    chrome_options.add_argument('--disable-gpu')  # GPU 사용 안함
-
-    # WebDriver 생성
-    webdriver_manager_directory = ChromeDriverManager().install()
-    service = ChromeService(webdriver_manager_directory)
-    browser = webdriver.Chrome(service=service, options=chrome_options)
-
-    browser = webdriver.Chrome(service=ChromeService(webdriver_manager_directory), options=chrome_options)
+    chrome_options = selenium_setting()
+    chrome_options,download_folder_path = download_path_setting(folder_path,chrome_options)
+    browser = init_browser(chrome_options)
     browser_url = "https://infose.info21c.net/info21c/bids/list/index?bidtype=ser&bid_suc=bid&division=1&mode=&searchtype=condition&page=1&pageSize=100&bid_kind=&conlevel=&searchWord=&word_type=&sort=-writedt&detailSearch=&search_code%5B%5D=&search_code%5B%5D=&search_code%5B%5D=&search_loc%5B%5D=&search_local%5B%5D=&search_loc%5B%5D=&search_local%5B%5D=&search_loc%5B%5D=&search_local%5B%5D=&date_column=writedt&from_date=2024-10-06&to_date=2024-11-06&price_column=basic&from_price=&to_price=&search_org=&word_column=constnm&word={}&apt_vw=N&sortList=-writedt".format(search_keyword)
     browser.get(browser_url)                                     # - 주소 입력
     time.sleep(1)
     id_input = browser.find_element(by=By.CSS_SELECTOR,value='#id')
     infose_id = os.environ.get("infose_id")
     infose_password = os.environ.get("infose_password")
+    infose_id = 'asog4plp'
+    infose_password = 'dlqckf@01'
 
     id_input.send_keys(infose_id)
     password_input = browser.find_element(by=By.CSS_SELECTOR,value='#pass')
@@ -65,16 +37,7 @@ def notice_search(search_keyword,notice_list,notice_titles,folder_path):
     
     notice_elements = browser.find_elements(by=By.CSS_SELECTOR,value='#w0 > table > tbody > tr > td:nth-child(2) > a')
     for i in range(len(notice_elements)):
-        for filename in os.listdir(download_folder_path):
-            file_path = os.path.join(download_folder_path, filename)
-            try:
-                # 파일인지 확인하고 삭제
-                if os.path.isfile(file_path):
-                    os.remove(file_path)
-                elif os.path.isdir(file_path):
-                    shutil.rmtree(file_path)  # 디렉토리 삭제
-            except Exception as e:
-                print(f"Failed to delete {file_path}. Reason: {e}")
+        folder_clear(download_folder_path)
         notice_elements = browser.find_elements(by=By.CSS_SELECTOR,value='#w0 > table > tbody > tr > td:nth-child(2) > a')
         notice_title = notice_elements[i].text
         notice_elements[i].click()
@@ -93,8 +56,12 @@ def notice_search(search_keyword,notice_list,notice_titles,folder_path):
         requesting_agency = browser.find_element(by=By.CSS_SELECTOR,value='#basicInfo > table > tbody > tr:nth-child(4) > td:nth-child(2)').text.split('\n')[-1]
         try:
             notice_link = browser.find_element(by=By.CSS_SELECTOR,value='#contentBid > table > tbody > tr:nth-child(2) > td > span:nth-child(2)')
-            bid_id = notice_link.get_attribute("onclick").split("?")[-1].split("&")[0]
-            notice_link = 'https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?'+bid_id
+            try:
+                bid_id = notice_link.get_attribute("onclick").split("g2bBidLink('")[1].split("'")[0]
+                notice_link = 'https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno='+bid_id
+            except:
+                bid_id = notice_link.get_attribute("onclick").split("?")[-1].split("&")[0]
+                notice_link = 'https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?'+bid_id
         except:
             try:
                 notice_link = browser.find_element(by=By.CSS_SELECTOR,value='#contentBid > table > tbody > tr > td > button')
@@ -118,171 +85,24 @@ def notice_search(search_keyword,notice_list,notice_titles,folder_path):
             time.sleep(1)
             file_list[j].click()
             time.sleep(2)
-        notice_type = None
-        for file_name in os.listdir(download_folder_path):
-            file_path = os.path.join(download_folder_path, file_name)
-            if file_name.lower().endswith('.zip'):
-                with zipfile.ZipFile(file_path, 'r') as zip_ref:
-                    # 압축 해제할 임시 폴더 경로
-                    extract_path = os.path.join(download_folder_path)
-                    zip_ref.extractall(extract_path)
-        notice_type = check_list_insert(notice_type, download_folder_path)
-        keywords = ['AI', '인공지능', 'LLM','생성형']
-        notice_type = ai_notice_list_insert(notice_type, download_folder_path,keywords)
-        dict_notice = {'notice_id':notice_id,'notice_title':notice_title,'notice_price':notice_price,'publishing_agency':publishing_agency,'requesting_agency':requesting_agency,'notice_start_date':notice_start_date,'notice_end_date':notice_end_date,'notice_link':notice_link,'new_notice':new_notice,'notice_type':notice_type}
+        notice_type = notice_check(download_folder_path)
+        dict_notice = {'id':notice_id,'title':notice_title,'price':notice_price,'publishing_agency':publishing_agency,'requesting_agency':requesting_agency,'start_date':notice_start_date,'end_date':notice_end_date,'link':notice_link,'new':new_notice,'type':notice_type}
         notice_list.append(dict_notice)
-        for filename in os.listdir(download_folder_path):
-            file_path = os.path.join(download_folder_path, filename)
-            try:
-                # 파일인지 확인하고 삭제
-                if os.path.isfile(file_path):
-                    os.remove(file_path)
-                elif os.path.isdir(file_path):
-                    shutil.rmtree(file_path)  # 디렉토리 삭제
-            except Exception as e:
-                print(f"Failed to delete {file_path}. Reason: {e}")
+        folder_clear(download_folder_path)
         back_btn = browser.find_element(by=By.CSS_SELECTOR, value='#top_wrap > div.top_btn > div.top-left_btn.pull-left > span')
         back_btn.click()
-        time.sleep(1)
-        
+        time.sleep(1)        
     browser.quit()
     return notice_list
 
-def check_list_insert(notice_type, download_folder_path):
-    # check_list 폴더 경로 설정
-    # 공고 폴더들 탐색
-    folder_path = os.path.join(download_folder_path)
-    
-    # 공고 폴더인지 확인 (check_list 폴더는 제외)
-    if os.path.isdir(folder_path):
-        # 해당 폴더 안의 파일들 탐색
-        has_hwp_file = False
-        for file_name in os.listdir(folder_path):
-            if file_name.lower().endswith('.hwp') or file_name.lower().endswith('.hwpx'):
-                has_hwp_file = True
-                break            
-        # hwp 파일이 없으면 check_list로 이동
-        if not has_hwp_file:
-            notice_type = 'check'
-    return notice_type
-import os
-import shutil
-import olefile
-import zlib
-import struct
-
-def get_hwp_text(filename):
-    try:
-        with olefile.OleFileIO(filename) as f:
-            dirs = f.listdir()
-
-            # HWP 파일 검증
-            if ["FileHeader"] not in dirs or ["\x05HwpSummaryInformation"] not in dirs:
-                print("Not a valid HWP file.")
-                return None
-
-            # 문서 포맷 압축 여부 확인
-            header = f.openstream("FileHeader")
-            header_data = header.read()
-            is_compressed = (header_data[36] & 1) == 1
-
-            # Body Sections 불러오기
-            nums = []
-            for d in dirs:
-                if d[0] == "BodyText":
-                    nums.append(int(d[1][len("Section"):]))
-            sections = ["BodyText/Section" + str(x) for x in sorted(nums)]
-
-            # 전체 text 추출
-            text = ""
-            for section in sections:
-                bodytext = f.openstream(section)
-                data = bodytext.read()
-                if is_compressed:
-                    unpacked_data = zlib.decompress(data, -15)
-                else:
-                    unpacked_data = data
-
-                # 각 Section 내 text 추출    
-                section_text = ""
-                i = 0
-                size = len(unpacked_data)
-                while i < size:
-                    header = struct.unpack_from("<I", unpacked_data, i)[0]
-                    rec_type = header & 0x3ff
-                    rec_len = (header >> 20) & 0xfff
-
-                    if rec_type in [67]:
-                        rec_data = unpacked_data[i+4:i+4+rec_len]
-                        section_text += rec_data.decode('utf-16', errors='ignore')
-                        section_text += "\n"
-
-                    i += 4 + rec_len
-
-                text += section_text
-                text += "\n"
-
-            return text
-    except Exception as e:
-        return None
-
-
-def search_keywords_in_hwp(file_name,file_path, keywords):
-    """HWP 파일 내에 특정 키워드가 포함되어 있는지 확인"""
-    text = get_hwp_text(file_path)
-    if text:
-        for keyword in keywords:
-            if keyword in text:
-                print("파일명 : ", file_name)
-                print("키워드 : ", keyword)
-                return True
-    return False
-
-def ai_notice_list_insert(notice_type, download_folder_path,keywords):
-    """공고 폴더 내 HWP 및 PDF 파일에서 키워드 검색 후 해당 폴더 이동"""
-    # ai_notice_list 폴더 경로 설정
-    for file_name in os.listdir(download_folder_path):
-        file_path = os.path.join(download_folder_path, file_name)
-        if file_name.lower().endswith('.hwp') or file_name.lower().endswith('.hwpx'):
-            if search_keywords_in_hwp(file_name,file_path, keywords):
-                notice_type = 'ai_notice'
-                time.sleep(1)
-                break
-    return notice_type
-                    
-import json
-
-def load_notice_titles_from_json(file_path):
-    # JSON 파일에서 notice_title만 추출하여 리스트로 반환
-    with open(file_path, 'r', encoding='utf-8') as json_file:
-        notice_list = json.load(json_file)
-    
-    notice_titles = [notice['notice_title'] for notice in notice_list]
-    return notice_titles
-
-
-import json
-import os
-
-def save_notice_list_to_json(notice_list, file_path):
-    """
-    JSON 파일에 공지 목록을 저장합니다. 기존 내용이 있다면 추가합니다.
-
-    Args:
-        notice_list: 저장할 공지 목록 (list)
-        file_path: 저장할 JSON 파일 경로 (str)
-    """
-
-    with open(file_path, 'w', encoding='utf-8') as json_file:
-        json.dump(notice_list, json_file, ensure_ascii=False, indent=4)
-
-
-def g2b_notice_collection():
+def notice_collection():
     notice_list = []
     # 함수 호출
     folder_path = os.environ.get("folder_path")
+    folder_path = 'C:/develops/belab_scraping/'
 
     notice_titles = load_notice_titles_from_json(folder_path+'notice_list.json')
+    
     notice_list = notice_search('isp',notice_list,notice_titles,folder_path)
     notice_list = notice_search('ismp',notice_list,notice_titles,folder_path)
     json_file_path = os.path.join(folder_path, 'notice_list.json')
@@ -290,9 +110,9 @@ def g2b_notice_collection():
     ai_notice_list = []
     check_list = []
     for notice in notice_list:
-        if notice['notice_type'] == 'ai_notice':
+        if notice['type'] == 'ai':
             ai_notice_list.append(notice)
-        elif notice['notice_type'] == 'check':
+        elif notice['type'] == 'check':
             check_list.append(notice)
     time.sleep(1)
     return ai_notice_list,check_list

@@ -131,7 +131,7 @@ try:
     print(datetime.now())
     load_dotenv()
     folder_path = os.environ.get("folder_path")
-    logging.basicConfig(filename=folder_path+'scheduler.txt', level=logging.INFO, 
+    logging.basicConfig(filename=folder_path+'/log_list/scheduler.txt', level=logging.INFO, 
                         format='%(asctime)s - %(levelname)s - %(message)s')
     logging.info("----------------news summarization started----------------") # 스케줄러 시작 로그 기록
     total_update()
