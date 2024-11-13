@@ -1213,3 +1213,4 @@ TypeError: 'list' object cannot be interpreted as an integer
 2024-11-13 09:52:53,831 - INFO - Get LATEST chromedriver version for google-chrome
 2024-11-13 09:52:53,852 - INFO - Driver [/root/.wdm/drivers/chromedriver/linux64/130.0.6723.116/chromedriver-linux64/chromedriver] found in cache
 2024-11-13 09:57:51,980 - INFO - ----------------notice check started----------------
+2024-11-13 09:58:52,131 - INFO - ----------------notice check started----------------
