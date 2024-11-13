@@ -1,5 +1,17 @@
 [
     {
+        "preparation_id": "1513096",
+        "preparation_title": "돌봄 통합지원정보시스템 구축을 위한 ISP 사업",
+        "preparation_price": "₩  327,049,640 (조달수수료 포함)",
+        "publishing_agency": "조달청",
+        "requesting_agency": "보건복지부",
+        "preparation_start_date": "2024/11/13",
+        "preparation_end_date": "2024/11/18",
+        "preparation_link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1513096",
+        "new_preparation": false,
+        "preparation_type": "ai_preparation"
+    },
+    {
         "preparation_id": "1509517",
         "preparation_title": "국립통일정보자료센터 정보시스템 ISP 수립",
         "preparation_price": "₩  132,305,600 (조달수수료 포함)",
@@ -9,7 +21,7 @@
         "preparation_end_date": "2024/11/11",
         "preparation_link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1509517",
         "new_preparation": false,
-        "preparation_type": "check"
+        "preparation_type": "ai_preparation"
     },
     {
         "preparation_id": "1506779",
