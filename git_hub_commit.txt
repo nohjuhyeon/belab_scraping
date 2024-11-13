@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/app/belab_scraping/git_hub_commit.py", line 1, in <module>
+    folder_path = os.environ.get("folder_path")
+NameError: name 'os' is not defined
