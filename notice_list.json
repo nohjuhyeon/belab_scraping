@@ -8,7 +8,7 @@
         "notice_start_date": "2024/11/12",
         "notice_end_date": "2024/11/28",
         "notice_link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241115095",
-        "new_notice": true,
+        "new_notice": false,
         "notice_type": "ai_notice"
     },
     {
@@ -140,7 +140,7 @@
         "notice_start_date": "2024/11/13",
         "notice_end_date": "2024/11/25",
         "notice_link": "http://www.g2b.go.kr/",
-        "new_notice": false,
+        "new_notice": true,
         "notice_type": "ai_notice"
     },
     {

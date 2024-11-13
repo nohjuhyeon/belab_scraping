@@ -71,6 +71,8 @@ def notice_search(search_keyword,notice_list,notice_titles,folder_path):
                 # 파일인지 확인하고 삭제
                 if os.path.isfile(file_path):
                     os.remove(file_path)
+                elif os.path.isdir(file_path):
+                    shutil.rmtree(file_path)  # 디렉토리 삭제
             except Exception as e:
                 print(f"Failed to delete {file_path}. Reason: {e}")
         notice_elements = browser.find_elements(by=By.CSS_SELECTOR,value='#w0 > table > tbody > tr > td:nth-child(2) > a')
@@ -136,6 +138,8 @@ def notice_search(search_keyword,notice_list,notice_titles,folder_path):
                 # 파일인지 확인하고 삭제
                 if os.path.isfile(file_path):
                     os.remove(file_path)
+                elif os.path.isdir(file_path):
+                    shutil.rmtree(file_path)  # 디렉토리 삭제
             except Exception as e:
                 print(f"Failed to delete {file_path}. Reason: {e}")
         back_btn = browser.find_element(by=By.CSS_SELECTOR, value='#top_wrap > div.top_btn > div.top-left_btn.pull-left > span')

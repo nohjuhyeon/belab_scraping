@@ -108,7 +108,7 @@ def notice_add(data,notice_type,sheet):
         combined_df['공고번호'] = combined_df['공고번호'].astype('str')
         # NaN 값을 빈 문자열로 대체
         combined_df.replace({np.nan: ''}, inplace=True)
-        combined_df.drop_duplicates(subset='공고번호', keep='first', inplace=True)
+        combined_df.drop_duplicates(subset='공고번호', keep='last', inplace=True)
 
         # 개시일 기준으로 데이터프레임 정렬
         combined_df.sort_values(by='개시일',ascending=False, inplace=True)
