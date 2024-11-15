@@ -1,5 +1,17 @@
 [
     {
+        "id": "20241102488-00",
+        "title": "2024년 중장기 정보화전략계획(ISP) 수립",
+        "price": "405,816,364 원",
+        "publishing_agency": "조달청 서울지방조달청",
+        "requesting_agency": "서울신용보증재단",
+        "start_date": "2024/11/14",
+        "end_date": "2024/11/28",
+        "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241102488",
+        "new": true,
+        "type": "ai"
+    },
+    {
         "id": "20241115095-00",
         "title": "한국광해광업공단 정보화전략계획(ISP) 수립 용역",
         "price": "462,586,364 원",
@@ -118,18 +130,6 @@
         "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241018756",
         "new": false,
         "type": null
-    },
-    {
-        "id": "20241010957-00",
-        "title": "대구형 서·논·구술형 평가 플랫폼 구축을 위한 정보화전략계획(ISP) 수립",
-        "price": "136,363,636 원",
-        "publishing_agency": "조달청 대구지방조달청",
-        "requesting_agency": "대구광역시교육청 대구미래교육연구원",
-        "start_date": "2024/10/14",
-        "end_date": "2024/10/29",
-        "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241010957",
-        "new": false,
-        "type": "ai"
     },
     {
         "id": "20241116262-00",

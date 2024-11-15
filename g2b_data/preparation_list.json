@@ -1,5 +1,17 @@
 [
     {
+        "id": "1513775",
+        "title": "DGIST 차세대 대학정보시스템 구축 BPR/ISP 용역",
+        "price": "600,000,000 원",
+        "publishing_agency": "대구경북과학기술원",
+        "requesting_agency": "대구경북과학기술원",
+        "start_date": "2024/11/14",
+        "end_date": "2024/11/19",
+        "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1513775",
+        "new": true,
+        "type": "ai"
+    },
+    {
         "id": "1513148",
         "title": "2024년 우주항공청 정보화 전략계획(ISP) 수립 용역",
         "price": "151,450,000 원",
@@ -68,18 +80,6 @@
         "start_date": "2024/10/18",
         "end_date": "2024/10/23",
         "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1501541",
-        "new": false,
-        "type": "ai"
-    },
-    {
-        "id": "1499137",
-        "title": "차세대 경영정보시스템 구축을 위한 정보화전략계획(ISP) 수립 용역",
-        "price": "242,347,400 원",
-        "publishing_agency": "조달청 광주지방조달청",
-        "requesting_agency": "한국인터넷진흥원",
-        "start_date": "2024/10/15",
-        "end_date": "2024/10/20",
-        "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1499137",
         "new": false,
         "type": "ai"
     },
