@@ -1,5 +1,17 @@
 [
     {
+        "id": "20241111371-00",
+        "title": "경영관리시스템 구축 ISP/BPR 수립 사업",
+        "price": "279,463,636 원",
+        "publishing_agency": "조달청 서울지방조달청",
+        "requesting_agency": "서울신용보증재단",
+        "start_date": "2024/11/16",
+        "end_date": "2024/12/06",
+        "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241111371",
+        "new": true,
+        "type": null
+    },
+    {
         "id": "20241102488-00",
         "title": "2024년 중장기 정보화전략계획(ISP) 수립",
         "price": "405,816,364 원",
@@ -8,7 +20,7 @@
         "start_date": "2024/11/14",
         "end_date": "2024/11/28",
         "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241102488",
-        "new": true,
+        "new": false,
         "type": "ai"
     },
     {
@@ -166,17 +178,5 @@
         "link": "http://ebid.korail.com/goods/printIn.do?zzbidinv=9246467-00&zzstnum=00",
         "new": false,
         "type": "check"
-    },
-    {
-        "id": "20241018440-00",
-        "title": "경기도 기업SOS넷 개편 정보화전략(ISMP) 수립 용역",
-        "price": "45,454,545 원",
-        "publishing_agency": "(재)경기도경제과학진흥원",
-        "requesting_agency": "(재)경기도경제과학진흥원",
-        "start_date": "2024/10/17",
-        "end_date": "2024/10/29",
-        "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241018440",
-        "new": false,
-        "type": "ai"
     }
 ]

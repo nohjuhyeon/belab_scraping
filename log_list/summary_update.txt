@@ -185,3 +185,26 @@ crawling count :  0
 venture_doctors crawling finish
 crawling count :  0
 뉴스 요약 업데이트 완료!
+----------------뉴스 요약 업데이트 시작----------------
+2024-11-18 09:10:09.485988
+ict news crawling finish
+crawling count :  5
+뉴스 67205a48d4bd69ea10462b35의 콘텐츠가 비어 있습니다.
+뉴스 67205a64d4bd69ea10462b36의 콘텐츠가 비어 있습니다.
+뉴스 673a85ec7e79c2511ab09ab3 요약 완료
+뉴스 673a85f17e79c2511ab09ab4 요약 완료
+뉴스 673a85f47e79c2511ab09ab5 요약 완료
+뉴스 673a85ff7e79c2511ab09ab6 요약 완료
+뉴스 673a86197e79c2511ab09ab7 요약 완료
+seoul institute crawling finish
+crawling count :  5
+뉴스 673a86a97e79c2511ab09ab9 요약 완료
+뉴스 673a86ac7e79c2511ab09aba 요약 완료
+뉴스 673a86af7e79c2511ab09abb 요약 완료
+뉴스 673a86b17e79c2511ab09abc 요약 완료
+뉴스 673a86b47e79c2511ab09abd 요약 완료
+statistic bank crawling finish
+crawling count :  0
+venture_doctors crawling finish
+crawling count :  0
+뉴스 요약 업데이트 완료!

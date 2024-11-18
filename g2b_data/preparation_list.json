@@ -8,7 +8,7 @@
         "start_date": "2024/11/14",
         "end_date": "2024/11/19",
         "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1513775",
-        "new": true,
+        "new": false,
         "type": "ai"
     },
     {
@@ -72,18 +72,6 @@
         "type": "ai"
     },
     {
-        "id": "1501541",
-        "title": "한국광해광업공단 정보화전략계획(ISP) 수립 용역",
-        "price": "508,845,000 원",
-        "publishing_agency": "한국광해광업공단",
-        "requesting_agency": "한국광해광업공단",
-        "start_date": "2024/10/18",
-        "end_date": "2024/10/23",
-        "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1501541",
-        "new": false,
-        "type": "ai"
-    },
-    {
         "id": "1512036",
         "title": "협약업무 사업관리 시스템 구축을 위한 ISMP 수립",
         "price": "459,725,598 원",
@@ -118,29 +106,5 @@
         "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1506392",
         "new": false,
         "type": "ai"
-    },
-    {
-        "id": "1500311",
-        "title": "경기형 AI 교원역량 통합지원시스템 정보시스템마스터플랜(ISMP) 수립 위탁 용역",
-        "price": "300,000,000 원",
-        "publishing_agency": "경기도교육청",
-        "requesting_agency": "경기도교육청",
-        "start_date": "2024/10/16",
-        "end_date": "2024/10/19",
-        "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1500311",
-        "new": false,
-        "type": "ai"
-    },
-    {
-        "id": "1500250",
-        "title": "철도시설 유지관리 분석시스템 정보화마스터플랜(ISMP) 수립 용역",
-        "price": "800,000,000 원",
-        "publishing_agency": "국가철도공단",
-        "requesting_agency": "국가철도공단",
-        "start_date": "2024/10/16",
-        "end_date": "2024/10/25",
-        "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1500250",
-        "new": false,
-        "type": "check"
     }
 ]
