@@ -65,7 +65,7 @@ def notice_add(data,notice_type,sheet):
 
         # JSON 데이터를 데이터프레임으로 변환
         new_df = pd.DataFrame(data)
-        new_df.dropna(subset=['new', 'type'], inplace=True)
+        new_df.dropna(subset=['new'], inplace=True)
         new_df.drop(columns=['new'], inplace=True)
 
         # 컬럼 이름 변경
@@ -125,4 +125,4 @@ def google_sheet_update():
     notice_type = '새로 올라온 공고'
     google_sheet_add(notice_type,new_df)
 
-# google_sheet_update()
+google_sheet_update()
