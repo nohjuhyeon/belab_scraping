@@ -208,3 +208,6 @@ crawling count :  0
 venture_doctors crawling finish
 crawling count :  0
 뉴스 요약 업데이트 완료!
+----------------뉴스 요약 업데이트 시작----------------
+2024-11-19 09:10:09.767566
+뉴스 요약 업데이트 완료!

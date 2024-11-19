@@ -583,3 +583,12 @@ Data updated and sorted successfully.
 Data updated and sorted successfully.
 Data updated and sorted successfully.
 공고 확인 완료!
+Data updated and sorted successfully.
+Data updated and sorted successfully.
+Data updated and sorted successfully.
+----------------공고 확인 시작----------------
+2024-11-19 09:00:11.313484
+Data updated and sorted successfully.
+Data updated and sorted successfully.
+Data updated and sorted successfully.
+공고 확인 완료!
