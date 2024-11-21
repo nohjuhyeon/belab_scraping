@@ -12,7 +12,7 @@ def load_json(file_path):
 
 def mongodb_add(notice_type, data):
     # MongoDB 연결
-    collection = mongo_setting('g2b_notices',notice_type)
+    collection = mongo_setting('news_scraping',notice_type)
 
     # 새로운 데이터를 DataFrame으로 변환
     new_df = pd.DataFrame(data)
