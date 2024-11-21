@@ -1,15 +1,51 @@
 [
     {
+        "id": "1516048",
+        "title": "서울대학교 차세대 네트워크 구축 정보화전략수립(ISP) 사업",
+        "price": "438,616,000 원",
+        "publishing_agency": "조달청 서울지방조달청",
+        "requesting_agency": "서울대학교 정보화본부",
+        "start_date": "2024/11/19",
+        "end_date": "2024/11/24",
+        "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1516048",
+        "new": false,
+        "type": "ai"
+    },
+    {
         "id": "1513775",
         "title": "DGIST 차세대 대학정보시스템 구축 BPR/ISP 용역",
         "price": "600,000,000 원",
         "publishing_agency": "대구경북과학기술원",
         "requesting_agency": "대구경북과학기술원",
-        "start_date": "2024/11/14",
+        "start_date": "2024/11/19",
         "end_date": "2024/11/19",
         "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1513775",
         "new": false,
         "type": "ai"
+    },
+    {
+        "id": "1515464",
+        "title": "선거기반체계 고도화 ISP",
+        "price": "216,715,270 원",
+        "publishing_agency": "조달청 서울지방조달청",
+        "requesting_agency": "중앙선거관리위원회",
+        "start_date": "2024/11/18",
+        "end_date": "2024/11/23",
+        "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1515464",
+        "new": false,
+        "type": "ai"
+    },
+    {
+        "id": "1514994",
+        "title": "인천공항 데이터플랫폼 통합 ISP 용역",
+        "price": "460,662,858 원",
+        "publishing_agency": "인천국제공항공사",
+        "requesting_agency": "인천국제공항공사",
+        "start_date": "2024/11/18",
+        "end_date": "2024/11/23",
+        "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1514994",
+        "new": false,
+        "type": "check"
     },
     {
         "id": "1513148",
