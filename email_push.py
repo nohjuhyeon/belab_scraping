@@ -112,7 +112,7 @@ try:
     logging.info("----------------notice check started----------------") # 스케줄러 시작 로그 기록
     email_sending()
     google_sheet_update()
-    # mongodb_update()
+    mongodb_update()
     # 스크립트 경로와 인자 설정
 except (KeyboardInterrupt, SystemExit):
     print("notice check shut down.")

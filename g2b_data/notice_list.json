@@ -1,5 +1,29 @@
 [
     {
+        "id": "20241129546-00",
+        "title": "DGIST 차세대 대학정보시스템 구축 BPR/ISP 용역",
+        "price": "545,454,545 원",
+        "publishing_agency": "대구경북과학기술원",
+        "requesting_agency": "대구경북과학기술원",
+        "start_date": "2024/11/21",
+        "end_date": "2024/12/04",
+        "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241129546",
+        "new": false,
+        "type": "ai"
+    },
+    {
+        "id": "20241127809-00",
+        "title": "경영관리시스템 구축 ISP/BPR 수립 사업",
+        "price": "279,463,636 원",
+        "publishing_agency": "조달청 서울지방조달청",
+        "requesting_agency": "서울신용보증재단",
+        "start_date": "2024/11/21",
+        "end_date": "2024/12/11",
+        "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241127809",
+        "new": false,
+        "type": null
+    },
+    {
         "id": "20241127175-00",
         "title": "2024년 우주항공청 정보화 전략계획(ISP) 수립 용역",
         "price": "136,363,636 원",
@@ -154,18 +178,6 @@
         "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241013040",
         "new": false,
         "type": "ai"
-    },
-    {
-        "id": "20241020484-00",
-        "title": "인천형 행정체제 개편을 위한 ISP",
-        "price": "716,959,091 원",
-        "publishing_agency": "조달청 서울지방조달청",
-        "requesting_agency": "한국지역정보개발원",
-        "start_date": "2024/10/21",
-        "end_date": "2024/11/20",
-        "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241020484",
-        "new": false,
-        "type": null
     },
     {
         "id": "20241128912-00",
