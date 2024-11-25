@@ -16,6 +16,8 @@ import sys
 import bareunpy as brn
 import google.protobuf.text_format as tf
 from dotenv import load_dotenv
+import os
+from bareunpy import Tagger
 
 # 환경변수에서 API 키 읽기
 load_dotenv()
@@ -31,8 +33,6 @@ def clean_korean_documents(documents):
     clean_words.extend(t.tags([documents]).nouns())  # 결과 저장
     documents = ' '.join(clean_words)
     return documents
-
-
 def load_stop_words(file_path):
     """파일에서 불용어를 읽어 리스트로 반환합니다."""
     with open(file_path, 'r', encoding='utf-8') as file:
@@ -62,7 +62,7 @@ def extract_keywords_frequency(text, num_keywords=5, stop_words=None):
 def keyword_update(collection):
   documents = collection.find()
   df = pd.DataFrame(list(documents))
-  # df = df.loc[df['news_keywords'].isnull()]
+  df = df.loc[df['news_keywords'].isnull()]
   stop_word_file = '/app/belab_scraping/news_preprocess/stop_word.txt'
 
   # 불용어 리스트 로드

@@ -353,3 +353,11 @@
 2024-11-25 15:23:13,565 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7efb6eca17b0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/7f43c59e1b6423f07888c0df7fce346e/window/handles
 2024-11-25 15:23:13,565 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7efb6ecf27a0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/7f43c59e1b6423f07888c0df7fce346e/window/handles
 2024-11-25 15:23:13,566 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7efb6ecf0040>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/7f43c59e1b6423f07888c0df7fce346e/window/handles
+2024-11-25 17:24:26,965 - INFO - ----------------news summarization started----------------
+2024-11-25 17:26:32,165 - INFO - ----------------news summarization started----------------
+2024-11-25 17:27:40,234 - INFO - ----------------news summarization started----------------
+2024-11-25 17:29:45,979 - INFO - ----------------news summarization started----------------
+2024-11-25 17:30:55,903 - INFO - ----------------news summarization started----------------
+2024-11-25 17:34:10,140 - INFO - ----------------news summarization started----------------
+2024-11-25 17:40:02,640 - INFO - summarization shut down.
+2024-11-25 17:40:12,652 - INFO - ----------------news summarization started----------------

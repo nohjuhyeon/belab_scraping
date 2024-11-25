@@ -118,19 +118,19 @@ def total_update():
     # database 연결
     database = mongo_client["news_scraping"]
     # collection 작업
-    ict_news()
+    # ict_news()
     update_news_summary(database['ict_news'])
     category_update(database['ict_news'])
     keyword_update(database['ict_news'])
-    seoul_institute()
+    # seoul_institute()
     update_news_summary(database['seoul_institute'])
     category_update(database['seoul_institute'])
     keyword_update(database['seoul_institute'])
-    statistic_bank()
+    # statistic_bank()
     update_news_summary(database['statistic_bank'])
     category_update(database['statistic_bank'])
     keyword_update(database['statistic_bank'])
-    venture_doctors()
+    # venture_doctors()
     update_news_summary(database['venture_doctors'])
     category_update(database['venture_doctors'])
     keyword_update(database['venture_doctors'])
