@@ -19,6 +19,30 @@ load_dotenv()
 
 # 또는 로컬 서버를 실행 중인 경우:
 # t = Tagger(API_KEY, "localhost", 5757)
+// ... existing code ...
+
+import gdown
+import os
+import tempfile
+
+def load_model_from_drive(device):
+    with tempfile.NamedTemporaryFile(suffix='.pt', delete=False) as tmp_file:
+        temp_model_path = tmp_file.name
+        
+        print("모델 다운로드 중...")
+        file_id = "1-3lWWtppGyMgnAPwZDr13e-3m0LpRBUO"
+        gdown.download(f"https://drive.google.com/uc?id={file_id}", temp_model_path, quiet=False)
+        
+        model = BertForSequenceClassification.from_pretrained('skt/kobert-base-v1', num_labels=len(class_list))
+        model.load_state_dict(torch.load(temp_model_path, map_location=device))
+        
+        os.unlink(temp_model_path)
+        
+        return model.to(device)
+
+# 기존 모델 로드 부분을 다음과 같이 변경
+
+
 
 def clean_korean_documents(documents):
     API_KEY = os.environ.get('BAREUN_KEY')
@@ -83,8 +107,7 @@ def category_update(collection):
     # 모델 로드
     model = BertForSequenceClassification.from_pretrained('skt/kobert-base-v1', num_labels=num_labels)
     classification_model_path = '/app/belab_scraping/news_preprocess/category_model.pt'
-    model.load_state_dict(torch.load(classification_model_path, map_location=device))
-    model = model.to(device)
+    model = load_model_from_drive(device)
     model.eval()
     for index, row in df.iterrows():
         text = row['news_content']
