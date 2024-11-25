@@ -7,11 +7,12 @@ from news_letter.ict_news import ict_news
 from news_letter.seoul_institute import seoul_institute
 from news_letter.statistic_bank import statistic_bank
 from news_letter.venture_doctors import venture_doctors
+from news_preprocess.category_classification import category_update
 import os
 from dotenv import load_dotenv
 import logging
 from datetime import datetime
-
+from news_preprocess.keyword import keyword_update
 
 # KoBART 모델과 토크나이저 불러오기
 tokenizer = PreTrainedTokenizerFast.from_pretrained("ainize/kobart-news")
@@ -119,12 +120,20 @@ def total_update():
     # collection 작업
     ict_news()
     update_news_summary(database['ict_news'])
+    category_update(database['ict_news'])
+    keyword_update(database['ict_news'])
     seoul_institute()
     update_news_summary(database['seoul_institute'])
+    category_update(database['seoul_institute'])
+    keyword_update(database['seoul_institute'])
     statistic_bank()
     update_news_summary(database['statistic_bank'])
+    category_update(database['statistic_bank'])
+    keyword_update(database['statistic_bank'])
     venture_doctors()
     update_news_summary(database['venture_doctors'])
+    category_update(database['venture_doctors'])
+    keyword_update(database['venture_doctors'])
 
 try:
     print("----------------뉴스 요약 업데이트 시작----------------")
