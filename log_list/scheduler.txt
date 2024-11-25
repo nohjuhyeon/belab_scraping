@@ -345,3 +345,11 @@
 2024-11-25 10:10:41,648 - INFO - Get LATEST chromedriver version for google-chrome
 2024-11-25 10:10:41,671 - INFO - Get LATEST chromedriver version for google-chrome
 2024-11-25 10:10:41,702 - INFO - Driver [/root/.wdm/drivers/chromedriver/linux64/131.0.6778.85/chromedriver-linux64/chromedriver] found in cache
+2024-11-25 15:22:51,424 - INFO - ----------------news summarization started----------------
+2024-11-25 15:22:51,668 - INFO - ====== WebDriver manager ======
+2024-11-25 15:22:52,218 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-25 15:22:52,283 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-25 15:22:52,333 - INFO - Driver [/root/.wdm/drivers/chromedriver/linux64/131.0.6778.85/chromedriver-linux64/chromedriver] found in cache
+2024-11-25 15:23:13,565 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7efb6eca17b0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/7f43c59e1b6423f07888c0df7fce346e/window/handles
+2024-11-25 15:23:13,565 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7efb6ecf27a0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/7f43c59e1b6423f07888c0df7fce346e/window/handles
+2024-11-25 15:23:13,566 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7efb6ecf0040>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/7f43c59e1b6423f07888c0df7fce346e/window/handles
