@@ -1,6 +1,30 @@
 [
     {
-        "id": "1516048",
+        "notice_id": "1518437",
+        "title": "국방전직교육원 스마트플랫폼 구축 ISP 용역",
+        "price": "264,000,000 원",
+        "publishing_agency": "국방전직교육원",
+        "requesting_agency": "국방전직교육원",
+        "start_date": "2024/11/22",
+        "end_date": "2024/11/27",
+        "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1518437",
+        "new": false,
+        "type": "ai"
+    },
+    {
+        "notice_id": "1518414",
+        "title": "맞춤형복지 통합시스템 구축을 위한 컨설팅(BPR/ISP)",
+        "price": "269,500,000 원",
+        "publishing_agency": "공무원연금공단",
+        "requesting_agency": "공무원연금공단",
+        "start_date": "2024/11/22",
+        "end_date": "2024/11/27",
+        "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1518414",
+        "new": false,
+        "type": "ai"
+    },
+    {
+        "notice_id": "1516048",
         "title": "서울대학교 차세대 네트워크 구축 정보화전략수립(ISP) 사업",
         "price": "438,616,000 원",
         "publishing_agency": "조달청 서울지방조달청",
@@ -12,7 +36,7 @@
         "type": "ai"
     },
     {
-        "id": "1513775",
+        "notice_id": "1513775",
         "title": "DGIST 차세대 대학정보시스템 구축 BPR/ISP 용역",
         "price": "600,000,000 원",
         "publishing_agency": "대구경북과학기술원",
@@ -24,7 +48,7 @@
         "type": "ai"
     },
     {
-        "id": "1515464",
+        "notice_id": "1515464",
         "title": "선거기반체계 고도화 ISP",
         "price": "216,715,270 원",
         "publishing_agency": "조달청 서울지방조달청",
@@ -36,7 +60,7 @@
         "type": "ai"
     },
     {
-        "id": "1514994",
+        "notice_id": "1514994",
         "title": "인천공항 데이터플랫폼 통합 ISP 용역",
         "price": "460,662,858 원",
         "publishing_agency": "인천국제공항공사",
@@ -48,7 +72,7 @@
         "type": "check"
     },
     {
-        "id": "1513148",
+        "notice_id": "1513148",
         "title": "2024년 우주항공청 정보화 전략계획(ISP) 수립 용역",
         "price": "151,450,000 원",
         "publishing_agency": "조달청 경남지방조달청",
@@ -60,7 +84,7 @@
         "type": null
     },
     {
-        "id": "1513096",
+        "notice_id": "1513096",
         "title": "돌봄 통합지원정보시스템 구축을 위한 ISP 사업",
         "price": "327,049,640 원",
         "publishing_agency": "조달청",
@@ -69,10 +93,10 @@
         "end_date": "2024/11/18",
         "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1513096",
         "new": false,
-        "type": null
+        "type": "check"
     },
     {
-        "id": "1509517",
+        "notice_id": "1509517",
         "title": "국립통일정보자료센터 정보시스템 ISP 수립",
         "price": "132,305,600 원",
         "publishing_agency": "조달청 서울지방조달청",
@@ -84,7 +108,7 @@
         "type": null
     },
     {
-        "id": "1506779",
+        "notice_id": "1506779",
         "title": "경영관리시스템 구축 ISP/BPR 수립 사업",
         "price": "310,320,940 원",
         "publishing_agency": "조달청 서울지방조달청",
@@ -96,7 +120,7 @@
         "type": null
     },
     {
-        "id": "1505287",
+        "notice_id": "1505287",
         "title": "2024년 중장기 정보화전략계획(ISP) 수립",
         "price": "450,470,880 원",
         "publishing_agency": "조달청 서울지방조달청",
@@ -108,7 +132,7 @@
         "type": "ai"
     },
     {
-        "id": "1517344",
+        "notice_id": "1517344",
         "title": "스마트 안전통합 관제시스템 ISMP 수립 사업",
         "price": "117,000,000 원",
         "publishing_agency": "국토안전관리원",
@@ -120,7 +144,7 @@
         "type": "ai"
     },
     {
-        "id": "1512036",
+        "notice_id": "1512036",
         "title": "협약업무 사업관리 시스템 구축을 위한 ISMP 수립",
         "price": "459,725,598 원",
         "publishing_agency": "국방과학연구소",
@@ -132,7 +156,7 @@
         "type": null
     },
     {
-        "id": "1509466",
+        "notice_id": "1509466",
         "title": "차세대 경주운영관리시스템 구축 컨설팅(BPR/ISMP)",
         "price": "587,000,000 원",
         "publishing_agency": "서울올림픽기념국민체육진흥공단 경륜경정총괄본부",
@@ -144,7 +168,7 @@
         "type": "ai"
     },
     {
-        "id": "1506392",
+        "notice_id": "1506392",
         "title": "데이터 기반 자원관리시스템 개발, 구축을 위한 정보시스템 마스터플랜(ISMP) 수립 용역",
         "price": "0 원",
         "publishing_agency": "분당서울대학교병원",

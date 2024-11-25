@@ -85,9 +85,15 @@ def notice_search(search_keyword,notice_list,notice_titles,folder_path):
             browser.execute_script("arguments[0].scrollIntoView();", file_list[j]) 
             time.sleep(1)
             file_list[j].click()
+            try:
+                alert = browser.switch_to.alert
+                alert.accept()
+                # 필요한 경우 페이지 새로고침
+            except:
+                pass
             time.sleep(2)
         notice_type = notice_check(download_folder_path)
-        dict_notice = {'id':notice_id,'title':notice_title,'price':notice_price,'publishing_agency':publishing_agency,'requesting_agency':requesting_agency,'start_date':notice_start_date,'end_date':notice_end_date,'link':notice_link,'new':new_notice,'type':notice_type}
+        dict_notice = {'notice_id':notice_id,'title':notice_title,'price':notice_price,'publishing_agency':publishing_agency,'requesting_agency':requesting_agency,'start_date':notice_start_date,'end_date':notice_end_date,'link':notice_link,'new':new_notice,'type':notice_type}
         notice_list.append(dict_notice)
         folder_clear(download_folder_path)
         back_btn = browser.find_element(by=By.CSS_SELECTOR, value='#top_wrap > div.top_btn > div.top-left_btn.pull-left > span')

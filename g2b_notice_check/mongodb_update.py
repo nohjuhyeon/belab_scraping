@@ -20,12 +20,12 @@ def mongodb_add(notice_type, data):
     new_df.drop(columns=['new'], inplace=True)
 
     # 기존 데이터의 id 목록 가져오기
-    existing_ids = set(doc['id'] for doc in collection.find({}, {'id': 1}))
+    existing_ids = set(doc['notice_id'] for doc in collection.find({}, {'notice_id': 1}))
 
     # 새로운 데이터에서 기존 id와 중복되지 않는 레코드만 필터링
     new_records = []
     for record in new_df.to_dict('records'):
-        if record['id'] not in existing_ids:
+        if record['notice_id'] not in existing_ids:
             new_records.append(record)
 
     # 새로운 데이터만 삽입

@@ -3,7 +3,7 @@ from function_list.basic_options import mongo_setting,selenium_setting,init_brow
 from selenium.webdriver.common.by import By
 from newspaper import Article
 import time
-
+from selenium.webdriver.common.keys import Keys
 
 def process_links(link_elements, collection, browser,news_topic,crawling_count):
     results = collection.find({},{'_id':0,'news_link':1})
@@ -69,13 +69,13 @@ def ict_news():
     browser = init_browser(chrome_options)
     pass
     browser.get("https://ictnewsclipping.stibee.com/")    
-    first_content = browser.find_element(by=By.CSS_SELECTOR,value='#__next > div.styles__NewsLettersLayout-sc-1081fac-0.lkUNZD > div.styles__NewsletterList-sc-1081fac-2.hNvBbS > div:nth-child(1) > a')
+    first_content = browser.find_element(by=By.CSS_SELECTOR,value='#__next > div > div > div:nth-child(1) > a')
     first_content.click()
     time.sleep(1)
     for j in range(5):
         time.sleep(1)
         content_list_first = browser.find_elements(by=By.CSS_SELECTOR,value='div.stb-left-cell > div.stb-text-box > table > tbody > tr > td')
-        content_title = browser.find_element(by=By.CSS_SELECTOR,value='#__next > div.styles__ContentLayout-sc-1gp3t1j-0.dsJnNu > div.styles__ContentTitleWrapper-sc-f7jtp3-0.jWHlht > div.styles__Title-sc-f7jtp3-1.edStrD').text
+        content_title = browser.find_element(by=By.CSS_SELECTOR,value='#__next > div:nth-child(1) > div > div > div.fOAJCs').text
         if '[ICT 뉴스' in content_title:
             for i in content_list_first:
                 try:
@@ -86,7 +86,16 @@ def ict_news():
                 crawling_count = process_links(contents_list, collection, browser,news_topic,crawling_count)
         else:
             j = j - 1
-        before_btn = browser.find_element(by=By.CSS_SELECTOR,value='#__next > div.styles__ContentLayout-sc-1gp3t1j-0.dsJnNu > div.styles__Layout-sc-1p30c38-0.gHNJKT > div > div.styles__PaginationButton-sc-1p30c38-2.dTIEOP.prev > div > div > div.title')
+        body = browser.find_element(by=By.TAG_NAME,value='body')
+        body.send_keys(Keys.END)
+        time.sleep(1)
+        try:
+            alarm_btn = browser.find_element(by=By.CSS_SELECTOR,value='button.no-subscription')
+            alarm_btn.click()
+        except:
+            pass
+        time.sleep(1)
+        before_btn = browser.find_element(by=By.CSS_SELECTOR,value='div.prev > div > div > div.title')
         before_btn.click()
     browser.quit()
     print('ict news crawling finish')

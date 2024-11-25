@@ -70,7 +70,7 @@ def notice_add(data,notice_type,sheet):
 
         # 컬럼 이름 변경
         new_df.rename(columns={
-            'id': '공고번호',
+            'notice_id': '공고번호',
             'title': '공고명',
             'price': '공고 가격',
             'publishing_agency': '공고 기관',

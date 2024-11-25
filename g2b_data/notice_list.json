@@ -1,6 +1,18 @@
 [
     {
-        "id": "20241129546-00",
+        "notice_id": "20241129546-01",
+        "title": "DGIST 차세대 대학정보시스템 구축 BPR/ISP 용역 [(취소)]",
+        "price": "545,454,545 원",
+        "publishing_agency": "대구경북과학기술원",
+        "requesting_agency": "대구경북과학기술원",
+        "start_date": "2024/11/21",
+        "end_date": "2024/12/04",
+        "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241129546",
+        "new": false,
+        "type": "check"
+    },
+    {
+        "notice_id": "20241129546-00",
         "title": "DGIST 차세대 대학정보시스템 구축 BPR/ISP 용역",
         "price": "545,454,545 원",
         "publishing_agency": "대구경북과학기술원",
@@ -12,7 +24,7 @@
         "type": "ai"
     },
     {
-        "id": "20241127809-00",
+        "notice_id": "20241127809-00",
         "title": "경영관리시스템 구축 ISP/BPR 수립 사업",
         "price": "279,463,636 원",
         "publishing_agency": "조달청 서울지방조달청",
@@ -24,7 +36,7 @@
         "type": null
     },
     {
-        "id": "20241127175-00",
+        "notice_id": "20241127175-00",
         "title": "2024년 우주항공청 정보화 전략계획(ISP) 수립 용역",
         "price": "136,363,636 원",
         "publishing_agency": "조달청 경남지방조달청",
@@ -36,7 +48,7 @@
         "type": null
     },
     {
-        "id": "20241125687-00",
+        "notice_id": "20241125687-00",
         "title": "돌봄 통합지원정보시스템 구축을 위한 ISP 사업",
         "price": "294,545,455 원",
         "publishing_agency": "조달청",
@@ -45,10 +57,10 @@
         "end_date": "2024/12/13",
         "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241125687",
         "new": false,
-        "type": null
+        "type": "check"
     },
     {
-        "id": "20241111371-01",
+        "notice_id": "20241111371-01",
         "title": "경영관리시스템 구축 ISP/BPR 수립 사업 [(취소)]",
         "price": "279,463,636 원",
         "publishing_agency": "조달청 서울지방조달청",
@@ -60,7 +72,7 @@
         "type": null
     },
     {
-        "id": "20241111371-00",
+        "notice_id": "20241111371-00",
         "title": "경영관리시스템 구축 ISP/BPR 수립 사업",
         "price": "279,463,636 원",
         "publishing_agency": "조달청 서울지방조달청",
@@ -72,7 +84,7 @@
         "type": null
     },
     {
-        "id": "20241102488-00",
+        "notice_id": "20241102488-00",
         "title": "2024년 중장기 정보화전략계획(ISP) 수립",
         "price": "405,816,364 원",
         "publishing_agency": "조달청 서울지방조달청",
@@ -81,10 +93,10 @@
         "end_date": "2024/11/28",
         "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241102488",
         "new": false,
-        "type": "ai"
+        "type": "check"
     },
     {
-        "id": "20241115095-00",
+        "notice_id": "20241115095-00",
         "title": "한국광해광업공단 정보화전략계획(ISP) 수립 용역",
         "price": "462,586,364 원",
         "publishing_agency": "한국광해광업공단",
@@ -96,7 +108,7 @@
         "type": "ai"
     },
     {
-        "id": "20241113465-00",
+        "notice_id": "20241113465-00",
         "title": "2025년 ISP산출물 검토지원시스템 운영 및 유지관리",
         "price": "63,596,318 원",
         "publishing_agency": "한국지능정보사회진흥원",
@@ -108,7 +120,7 @@
         "type": null
     },
     {
-        "id": "9246776-00",
+        "notice_id": "9246776-00",
         "title": "감사정보시스템 고도화 ISP 용역",
         "price": "",
         "publishing_agency": "한국철도공사 회계통합센터",
@@ -120,7 +132,7 @@
         "type": "check"
     },
     {
-        "id": "20241032171-00",
+        "notice_id": "20241032171-00",
         "title": "정보화전략계획(ISP) 수립 사업",
         "price": "449,090,909 원",
         "publishing_agency": "조달청 부산지방조달청",
@@ -132,55 +144,7 @@
         "type": null
     },
     {
-        "id": "B2024-000624-01",
-        "title": "출연(연) 기업통합지원 플랫폼 구축 정보화전략계획(ISP) 수립",
-        "price": "200,000,000 원",
-        "publishing_agency": "한국과학기술정보연구원",
-        "requesting_agency": "",
-        "start_date": "2024/10/23",
-        "end_date": "2024/11/11",
-        "link": "https://ebid.kisti.re.kr/kisti_bidding/outer/bidding/bidnotice/bidnoticeDetail.do?bidNo=B2024-000624&bidNoNext=01&search_page=&search_bidNo=&search_bidNoNext=&search_bidNotiNm=&search_bidNotiTp=&search_reqerDeptNm=&search_reqerNm=&search_contWay=&search_contChrgDeptNm=&search_contChrgNm=&search_sbiderSelWay=&search_notiBegDt=&search_mbidBegDt=&search_stat=",
-        "new": false,
-        "type": "check"
-    },
-    {
-        "id": "B2024-000624-00",
-        "title": "출연(연) 기업통합지원 플랫폼 구축 정보화전략계획(ISP) 수립",
-        "price": "200,000,000 원",
-        "publishing_agency": "한국과학기술정보연구원",
-        "requesting_agency": "",
-        "start_date": "2024/10/22",
-        "end_date": "2024/11/05",
-        "link": "https://ebid.kisti.re.kr/kisti_bidding/outer/bidding/bidnotice/bidnoticeDetail.do?bidNo=B2024-000624&bidNoNext=00&search_page=&search_bidNo=&search_bidNoNext=&search_bidNotiNm=&search_bidNotiTp=&search_reqerDeptNm=&search_reqerNm=&search_contWay=&search_contChrgDeptNm=&search_contChrgNm=&search_sbiderSelWay=&search_notiBegDt=&search_mbidBegDt=&search_stat=",
-        "new": false,
-        "type": "check"
-    },
-    {
-        "id": "20241020909-00",
-        "title": "차세대 NABIS시스템 클라우드 전환·구축 ISP 사업",
-        "price": "146,363,636 원",
-        "publishing_agency": "한국산업기술기획평가원",
-        "requesting_agency": "한국산업기술기획평가원",
-        "start_date": "2024/10/22",
-        "end_date": "2024/11/04",
-        "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241020909",
-        "new": false,
-        "type": "ai"
-    },
-    {
-        "id": "20241013040-00",
-        "title": "차세대 경영정보시스템 구축을 위한 정보화전략계획(ISP) 수립 용역",
-        "price": "218,181,818 원",
-        "publishing_agency": "조달청 광주지방조달청",
-        "requesting_agency": "한국인터넷진흥원",
-        "start_date": "2024/10/22",
-        "end_date": "2024/11/05",
-        "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241013040",
-        "new": false,
-        "type": "ai"
-    },
-    {
-        "id": "20241128912-00",
+        "notice_id": "20241128912-00",
         "title": "협약업무 사업관리 시스템 구축을 위한 ISMP 수립",
         "price": "403,727,273 원",
         "publishing_agency": "국방과학연구소",
@@ -192,7 +156,7 @@
         "type": null
     },
     {
-        "id": "20241116262-00",
+        "notice_id": "20241116262-00",
         "title": "데이터 기반 자원관리시스템 개발, 구축을 위한 정보시스템 마스터플랜(ISMP) 수립 용역 [(직찰)]",
         "price": "180,000,000 원",
         "publishing_agency": "분당서울대학교병원",
@@ -204,7 +168,7 @@
         "type": "ai"
     },
     {
-        "id": "9246732-00",
+        "notice_id": "9246732-00",
         "title": "디지털 안전관리 전환을 위한 ISMP 수립 용역(총체 및 1차)",
         "price": "",
         "publishing_agency": "한국철도공사 회계통합센터",
@@ -212,18 +176,6 @@
         "start_date": "2024/11/08",
         "end_date": "2024/11/19",
         "link": "http://ebid.korail.com/goods/printIn.do?zzbidinv=9246732-00&zzstnum=00",
-        "new": false,
-        "type": "check"
-    },
-    {
-        "id": "9246467-00",
-        "title": "디지털 안전관리 전환을 위한 ISMP 수립 용역(총체 및 1차) [(유찰)]",
-        "price": "",
-        "publishing_agency": "한국철도공사 회계통합센터",
-        "requesting_agency": "",
-        "start_date": "2024/10/24",
-        "end_date": "2024/11/07",
-        "link": "http://ebid.korail.com/goods/printIn.do?zzbidinv=9246467-00&zzstnum=00",
         "new": false,
         "type": "check"
     }

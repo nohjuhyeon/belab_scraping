@@ -61,7 +61,7 @@ def preparation_search(search_keyword,notice_list,notice_titles,folder_path):
         except:
             pass
         preparation_type = notice_check(download_folder_path)
-        dict_preparation = {'id':preparation_id,'title':preparation_title,'price':preparation_price,'publishing_agency':publishing_agency,'requesting_agency':requesting_agency,'start_date':preparation_start_date,'end_date':preparation_end_date,'link':preparation_link,'new':new_preparation,'type':preparation_type}
+        dict_preparation = {'notice_id':preparation_id,'title':preparation_title,'price':preparation_price,'publishing_agency':publishing_agency,'requesting_agency':requesting_agency,'start_date':preparation_start_date,'end_date':preparation_end_date,'link':preparation_link,'new':new_preparation,'type':preparation_type}
         notice_list.append(dict_preparation)
         folder_clear(download_folder_path)
         back_btn = browser.find_element(by=By.CSS_SELECTOR, value='#container > div.button_wrap > div > a')
