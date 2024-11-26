@@ -25,7 +25,11 @@ def mongodb_add(notice_type, data):
     # 새로운 데이터에서 기존 id와 중복되지 않는 레코드만 필터링
     new_records = []
     for record in new_df.to_dict('records'):
-        if record['notice_id'] not in existing_ids:
+        if record['id'] not in existing_ids:
+            if notice_type == 'notice_list':
+                record['notice_class'] = '입찰 공고'
+            elif notice_type == 'preparation_list':
+                record['notice_class'] = '사전 규격'
             new_records.append(record)
 
     # 새로운 데이터만 삽입

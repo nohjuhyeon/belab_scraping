@@ -10,8 +10,8 @@ from dotenv import load_dotenv
 import logging
 from datetime import datetime
 
-def html_content_write(html_content, sorted_notices):
-    html_content += "<h4>AI관련 공고 {}건</h4>".format(len(sorted_notices))
+def html_content_write(html_content, sorted_notices, notice_type):
+    html_content += "<h4>{} {}건</h4>".format(notice_type, len(sorted_notices))
     html_content += """
     <table border='1' style='border-collapse: collapse; width: 1220px; margin-bottom: 20px;'>
         <tr>
@@ -53,10 +53,10 @@ def html_create(html_content, ai_list, check_list, notice_type):
     html_content += "<h3>{}: AI관련 공고 {}건, 확인이 필요한 공고 {}건이 올라왔습니다.</h3>".format(notice_type, len(ai_list), len(check_list))
     if len(ai_list) > 0:
         sorted_notices = sorted(ai_list,key=lambda x: datetime.strptime(x["start_date"], "%Y/%m/%d"),reverse=True)
-        html_content = html_content_write(html_content, sorted_notices)
+        html_content = html_content_write(html_content, sorted_notices,'AI 관련 공고')
     if len(check_list) > 0:
         sorted_notices = sorted(check_list,key=lambda x: datetime.strptime(x["start_date"], "%Y/%m/%d"),reverse=True)
-        html_content = html_content_write(html_content, sorted_notices)
+        html_content = html_content_write(html_content, sorted_notices,'확인이 필요한 공고')
     return html_content
 
 
