@@ -93,7 +93,7 @@
         "end_date": "2024/11/18",
         "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1513096",
         "new": false,
-        "type": "check"
+        "type": null
     },
     {
         "notice_id": "1509517",

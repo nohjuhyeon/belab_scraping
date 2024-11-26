@@ -223,3 +223,24 @@ crawling count :  0
 ----------------뉴스 요약 업데이트 시작----------------
 2024-11-25 09:10:11.760586
 뉴스 요약 업데이트 완료!
+----------------뉴스 요약 업데이트 시작----------------
+2024-11-26 09:10:10.227632
+뉴스 67205a48d4bd69ea10462b35의 콘텐츠가 비어 있습니다.
+뉴스 67205a64d4bd69ea10462b36의 콘텐츠가 비어 있습니다.
+Using device: cpu
+모델 다운로드 중...
+MongoDB collection updated successfully.
+MongoDB collection updated successfully.
+Using device: cpu
+모델 다운로드 중...
+MongoDB collection updated successfully.
+MongoDB collection updated successfully.
+Using device: cpu
+모델 다운로드 중...
+MongoDB collection updated successfully.
+MongoDB collection updated successfully.
+Using device: cpu
+모델 다운로드 중...
+MongoDB collection updated successfully.
+MongoDB collection updated successfully.
+뉴스 요약 업데이트 완료!

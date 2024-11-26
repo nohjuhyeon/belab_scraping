@@ -1,5 +1,29 @@
 [
     {
+        "notice_id": "20241134937-00",
+        "title": "선거기반체계 고도화 ISP",
+        "price": "195,248,182 원",
+        "publishing_agency": "조달청 서울지방조달청",
+        "requesting_agency": "중앙선거관리위원회",
+        "start_date": "2024/11/25",
+        "end_date": "2024/12/13",
+        "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241134937",
+        "new": true,
+        "type": "ai"
+    },
+    {
+        "notice_id": "20241134670-00",
+        "title": "DGIST 차세대 대학정보시스템 구축 BPR/ISP 용역",
+        "price": "545,454,545 원",
+        "publishing_agency": "대구경북과학기술원",
+        "requesting_agency": "대구경북과학기술원",
+        "start_date": "2024/11/25",
+        "end_date": "2024/12/06",
+        "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241134670",
+        "new": false,
+        "type": "ai"
+    },
+    {
         "notice_id": "20241129546-01",
         "title": "DGIST 차세대 대학정보시스템 구축 BPR/ISP 용역 [(취소)]",
         "price": "545,454,545 원",
@@ -57,7 +81,7 @@
         "end_date": "2024/12/13",
         "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241125687",
         "new": false,
-        "type": "check"
+        "type": null
     },
     {
         "notice_id": "20241111371-01",
@@ -93,7 +117,7 @@
         "end_date": "2024/11/28",
         "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241102488",
         "new": false,
-        "type": "check"
+        "type": "ai"
     },
     {
         "notice_id": "20241115095-00",
