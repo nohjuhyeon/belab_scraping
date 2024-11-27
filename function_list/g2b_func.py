@@ -48,7 +48,7 @@ def check_list_insert(notice_type, download_folder_path):
                 break            
         # hwp 파일이 없으면 check_list로 이동
         if not has_hwp_file:
-            notice_type = 'check'
+            notice_type = '검토 필요'
     return notice_type
 
 def get_hwp_text(filename):
@@ -124,7 +124,7 @@ def ai_list_insert(notice_type, download_folder_path,keywords):
         file_path = os.path.join(download_folder_path, file_name)
         if file_name.lower().endswith('.hwp') or file_name.lower().endswith('.hwpx'):
             if search_keywords_in_hwp(file_name,file_path, keywords):
-                notice_type = 'ai'
+                notice_type = '인공 지능'
                 time.sleep(1)
                 break
     return notice_type

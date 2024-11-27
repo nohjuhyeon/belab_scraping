@@ -1,5 +1,29 @@
 [
     {
+        "notice_id": "1519738",
+        "title": "학생건강정보 플랫폼 전환을 위한 정보화전략계획(ISP) 수립",
+        "price": "50,000,000 원",
+        "publishing_agency": "재단법인한국교육환경보호원",
+        "requesting_agency": "재단법인한국교육환경보호원",
+        "start_date": "2024/11/26",
+        "end_date": "2024/12/01",
+        "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1519738",
+        "new": true,
+        "type": "인공 지능"
+    },
+    {
+        "notice_id": "1519482",
+        "title": "국립통일정보자료센터 정보시스템 ISP 수립",
+        "price": "132,305,600 원",
+        "publishing_agency": "조달청 서울지방조달청",
+        "requesting_agency": "통일부",
+        "start_date": "2024/11/26",
+        "end_date": "2024/11/29",
+        "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1519482",
+        "new": false,
+        "type": null
+    },
+    {
         "notice_id": "1518437",
         "title": "국방전직교육원 스마트플랫폼 구축 ISP 용역",
         "price": "264,000,000 원",
@@ -9,7 +33,7 @@
         "end_date": "2024/11/27",
         "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1518437",
         "new": false,
-        "type": "ai"
+        "type": "인공 지능"
     },
     {
         "notice_id": "1518414",
@@ -21,7 +45,7 @@
         "end_date": "2024/11/27",
         "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1518414",
         "new": false,
-        "type": "ai"
+        "type": "인공 지능"
     },
     {
         "notice_id": "1516048",
@@ -33,7 +57,7 @@
         "end_date": "2024/11/24",
         "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1516048",
         "new": false,
-        "type": "ai"
+        "type": "인공 지능"
     },
     {
         "notice_id": "1513775",
@@ -45,7 +69,7 @@
         "end_date": "2024/11/19",
         "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1513775",
         "new": false,
-        "type": "ai"
+        "type": "인공 지능"
     },
     {
         "notice_id": "1515464",
@@ -57,7 +81,7 @@
         "end_date": "2024/11/23",
         "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1515464",
         "new": false,
-        "type": "ai"
+        "type": "인공 지능"
     },
     {
         "notice_id": "1514994",
@@ -69,7 +93,7 @@
         "end_date": "2024/11/23",
         "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1514994",
         "new": false,
-        "type": "check"
+        "type": "검토 필요"
     },
     {
         "notice_id": "1513148",
@@ -129,7 +153,7 @@
         "end_date": "2024/11/02",
         "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1505287",
         "new": false,
-        "type": "ai"
+        "type": "인공 지능"
     },
     {
         "notice_id": "1517344",
@@ -141,7 +165,7 @@
         "end_date": "2024/11/26",
         "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1517344",
         "new": false,
-        "type": "ai"
+        "type": "인공 지능"
     },
     {
         "notice_id": "1512036",
@@ -165,7 +189,7 @@
         "end_date": "2024/11/11",
         "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1509466",
         "new": false,
-        "type": "ai"
+        "type": "인공 지능"
     },
     {
         "notice_id": "1506392",
@@ -177,6 +201,6 @@
         "end_date": "2024/11/04",
         "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1506392",
         "new": false,
-        "type": "ai"
+        "type": "인공 지능"
     }
 ]

@@ -20,6 +20,8 @@ def research_report(browser,link_list,collection,crawling_count):
             news_date = pd.to_datetime(news_date)
             news_content = browser.find_element(by=By.CSS_SELECTOR,value='div.content.clearfix > div.field.field-name-field-summary.field-type-text-with-summary.field-label-hidden > div > div').text
             keywords = browser.find_elements(by=By.CSS_SELECTOR,value='div.content.clearfix > div.field.field-name-field-tags.field-type-taxonomy-term-reference.field-label-inline.clearfix > div.field-items > div > a')
+            category = browser.find_element(by=By.CSS_SELECTOR,value='div.textformatter-list').text
+            category = category.split(', ')
             keywords_list = [i.text for i in keywords]
             if news_date.year >= 2023 and news_link not in link_list:
                 collection.insert_one({'news_title': news_title,
@@ -27,7 +29,9 @@ def research_report(browser,link_list,collection,crawling_count):
                                         'news_date': news_date,
                                         'news_link': news_link,
                                         'keywords':keywords_list,
-                                        'news_subject':'서울연구보고서'})
+                                        'category':category,
+                                        'news_subject':'서울연구보고서',
+                                        'news_reference':'seoul_institute'})
                 browser.back()
                 crawling_count += 1
                 time.sleep(1)
@@ -71,8 +75,9 @@ def world_trends(browser,link_list,collection,crawling_count):
                                             'news_content': news_content,
                                             'news_date': news_date,
                                             'news_link': news_link,
-                                            'news_subject':'세계도시동향'
-                                        })
+                                            'category':['세계도시동향'],
+                                            'news_subject':'세계도시동향',
+                                            'news_reference':'seoul_institute'})
                     browser.back()
                     crawling_count += 1
                     time.sleep(1)
@@ -93,7 +98,7 @@ def world_trends(browser,link_list,collection,crawling_count):
 
 def seoul_institute(): 
     crawling_count = 0
-    collection = mongo_setting('news_scraping','seoul_institute')
+    collection = mongo_setting('news_scraping','report_list')
 
     results = collection.find({},{'_id':0,'news_link':1})
     link_list = [i['news_link'] for i in results]

@@ -1,5 +1,17 @@
 [
     {
+        "notice_id": "20241137015-00",
+        "title": "국립수목원 국제식물감시네트워크(ISPN) 실무자 워크숍 운영",
+        "price": "17,272,727 원",
+        "publishing_agency": "산림청 국립수목원",
+        "requesting_agency": "산림청 국립수목원",
+        "start_date": "2024/11/26",
+        "end_date": "2024/11/26",
+        "link": "http://www.g2b.go.kr/",
+        "new": true,
+        "type": "검토 필요"
+    },
+    {
         "notice_id": "20241134937-00",
         "title": "선거기반체계 고도화 ISP",
         "price": "195,248,182 원",
@@ -8,8 +20,8 @@
         "start_date": "2024/11/25",
         "end_date": "2024/12/13",
         "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241134937",
-        "new": true,
-        "type": "ai"
+        "new": false,
+        "type": "인공 지능"
     },
     {
         "notice_id": "20241134670-00",
@@ -21,7 +33,7 @@
         "end_date": "2024/12/06",
         "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241134670",
         "new": false,
-        "type": "ai"
+        "type": "인공 지능"
     },
     {
         "notice_id": "20241129546-01",
@@ -33,7 +45,7 @@
         "end_date": "2024/12/04",
         "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241129546",
         "new": false,
-        "type": "check"
+        "type": "검토 필요"
     },
     {
         "notice_id": "20241129546-00",
@@ -45,7 +57,7 @@
         "end_date": "2024/12/04",
         "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241129546",
         "new": false,
-        "type": "ai"
+        "type": "인공 지능"
     },
     {
         "notice_id": "20241127809-00",
@@ -117,7 +129,7 @@
         "end_date": "2024/11/28",
         "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241102488",
         "new": false,
-        "type": "ai"
+        "type": "인공 지능"
     },
     {
         "notice_id": "20241115095-00",
@@ -129,7 +141,7 @@
         "end_date": "2024/11/28",
         "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241115095",
         "new": false,
-        "type": "ai"
+        "type": "인공 지능"
     },
     {
         "notice_id": "20241113465-00",
@@ -153,7 +165,7 @@
         "end_date": "2024/11/19",
         "link": "http://ebid.korail.com/goods/printIn.do?zzbidinv=9246776-00&zzstnum=00",
         "new": false,
-        "type": "check"
+        "type": "검토 필요"
     },
     {
         "notice_id": "20241032171-00",
@@ -166,6 +178,30 @@
         "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241032171",
         "new": false,
         "type": null
+    },
+    {
+        "notice_id": "20241136571-00",
+        "title": "데이터 기반 자원관리시스템 개발, 구축을 위한 정보시스템 마스터플랜(ISMP) 수립 용역(재공고) [(직찰)]",
+        "price": "180,000,000 원",
+        "publishing_agency": "분당서울대학교병원",
+        "requesting_agency": "분당서울대학교병원",
+        "start_date": "2024/11/26",
+        "end_date": "2024/12/09",
+        "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241136571",
+        "new": true,
+        "type": "인공 지능"
+    },
+    {
+        "notice_id": "2024-02-000669-00",
+        "title": "철도시설 유지관리 분석시스템 마스터플랜(ISMP) 수립 용역",
+        "price": "723,936,364 원",
+        "publishing_agency": "국가철도공단",
+        "requesting_agency": "",
+        "start_date": "2024/11/26",
+        "end_date": "2025/01/07",
+        "link": "http://ebid.kr.or.kr/bid/rpt/bidRptBidInfoS.do?gyErBeonho=2000011552&ggNyeondo=2024&ggGubun=02&ggIrBeonho=000669&ggChasu=00",
+        "new": true,
+        "type": "검토 필요"
     },
     {
         "notice_id": "20241128912-00",
@@ -189,7 +225,7 @@
         "end_date": "2024/11/25",
         "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241116262",
         "new": false,
-        "type": "ai"
+        "type": "인공 지능"
     },
     {
         "notice_id": "9246732-00",
@@ -201,6 +237,6 @@
         "end_date": "2024/11/19",
         "link": "http://ebid.korail.com/goods/printIn.do?zzbidinv=9246732-00&zzstnum=00",
         "new": false,
-        "type": "check"
+        "type": "검토 필요"
     }
 ]

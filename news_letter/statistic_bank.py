@@ -43,7 +43,8 @@ def process_links(link_elements, collection, browser,link_list,crawling_count):
                                 'news_title': title,
                                 'news_content': content,
                                 'news_date': date,
-                                'news_link': link
+                                'news_link': link,
+                                'news_reference':'statistic_bank'
                             }
                         collection.insert_one(news_dict)
                         crawling_count+=1
@@ -57,7 +58,7 @@ def statistic_bank():
     crawling_count = 0
     # MongoDB 클라이언트 및 컬렉션 설정
     crawling_count = 0
-    collection = mongo_setting('news_scraping','statistic_bank')
+    collection = mongo_setting('news_scraping','news_list')
     chrome_options = selenium_setting()
     browser = init_browser(chrome_options)
 

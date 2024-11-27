@@ -49,7 +49,8 @@ def process_links(link_elements, collection, browser,news_topic,crawling_count):
                             'news_content': content,
                             'news_date': date,
                             'news_link': link,
-                            'news_topic':news_topic
+                            'news_topic':news_topic,
+                            'news_reference':'ict_news'
                         }
                     collection.insert_one(news_dict)
                     crawling_count+=1
@@ -64,7 +65,7 @@ def process_links(link_elements, collection, browser,news_topic,crawling_count):
  
 def ict_news():
     crawling_count = 0
-    collection = mongo_setting('news_scraping','ict_news')
+    collection = mongo_setting('news_scraping','news_list')
     chrome_options = selenium_setting()
     browser = init_browser(chrome_options)
     pass
@@ -94,8 +95,8 @@ def ict_news():
             alarm_btn.click()
         except:
             pass
-        time.sleep(1)
-        before_btn = browser.find_element(by=By.CSS_SELECTOR,value='div.prev > div > div > div.title')
+        time.sleep(2)
+        before_btn = browser.find_element(by=By.CSS_SELECTOR,value='div.prev')
         before_btn.click()
     browser.quit()
     print('ict news crawling finish')

@@ -36,7 +36,8 @@ def news_collection(browser,collection,title_list,crawling_count):
                                 collection.insert_one({'news_title':news_title,
                                         'news_content':news_content,
                                         'news_date': news_date,
-                                        'news_link':news_link})
+                                        'news_link':news_link,
+                                        'news_reference':'venture_doctors'})
                                 crawling_count += 1
                                 browser.back()
                 time.sleep(2)
@@ -47,7 +48,7 @@ def news_collection(browser,collection,title_list,crawling_count):
 
 def venture_doctors():
         crawling_count = 0
-        collection = mongo_setting('news_scraping','venture_doctors')
+        collection = mongo_setting('news_scraping','news_list')
         chrome_options = selenium_setting()
         browser = init_browser(chrome_options)
         pass

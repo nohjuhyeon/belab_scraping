@@ -26,13 +26,20 @@ load_dotenv()
 # t = Tagger(API_KEY, "localhost", 5757)
 
 def clean_korean_documents(documents):
-    API_KEY = os.environ.get('BAREUN_KEY')
-    t = Tagger(API_KEY, "host.docker.internal", 5757)
+    #텍스트 정제 (특수기호 제거)
     documents = re.sub(r'[^ ㄱ-ㅣ가-힣]', '', documents) #특수기호 제거, 정규 표현식
+    #텍스트 정제 (형태소 분석)
     clean_words = []
-    clean_words.extend(t.tags([documents]).nouns())  # 결과 저장
+    for i in t.tags([documents]).pos():
+      if i[1] in ['NNG','NNP']:
+        if i[1] == '비트코':
+          clean_words.append('비트코인')
+        else:
+          clean_words.append(i[0])
     documents = ' '.join(clean_words)
     return documents
+
+
 def load_stop_words(file_path):
     """파일에서 불용어를 읽어 리스트로 반환합니다."""
     with open(file_path, 'r', encoding='utf-8') as file:
