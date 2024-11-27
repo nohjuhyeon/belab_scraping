@@ -16,7 +16,6 @@ def mongodb_add(notice_type, data):
 
     # 새로운 데이터를 DataFrame으로 변환
     new_df = pd.DataFrame(data)
-    new_df.dropna(subset=['new'], inplace=True)
     new_df.drop(columns=['new'], inplace=True)
 
     # 기존 데이터의 id 목록 가져오기
