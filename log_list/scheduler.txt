@@ -187,3 +187,11 @@
 2024-11-28 09:19:08,025 - INFO - Get LATEST chromedriver version for google-chrome
 2024-11-28 09:19:08,059 - INFO - Get LATEST chromedriver version for google-chrome
 2024-11-28 09:19:08,092 - INFO - Driver [/root/.wdm/drivers/chromedriver/linux64/131.0.6778.85/chromedriver-linux64/chromedriver] found in cache
+2024-11-28 09:21:14,477 - INFO - ====== WebDriver manager ======
+2024-11-28 09:21:14,590 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-28 09:21:14,625 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-28 09:21:14,658 - INFO - Driver [/root/.wdm/drivers/chromedriver/linux64/131.0.6778.85/chromedriver-linux64/chromedriver] found in cache
+2024-11-28 09:22:42,229 - INFO - ====== WebDriver manager ======
+2024-11-28 09:22:42,311 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-28 09:22:42,346 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-28 09:22:42,375 - INFO - Driver [/root/.wdm/drivers/chromedriver/linux64/131.0.6778.85/chromedriver-linux64/chromedriver] found in cache
