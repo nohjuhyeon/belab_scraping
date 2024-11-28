@@ -4,3 +4,27 @@ seoul institute crawling finish
 crawling count :  0
 MongoDB collection updated successfully.
 뉴스 요약 업데이트 완료!
+----------------뉴스 요약 업데이트 시작----------------
+2024-11-28 09:10:10.917916
+ict news crawling finish
+crawling count :  8
+seoul institute crawling finish
+crawling count :  0
+statistic bank crawling finish
+crawling count :  0
+venture_doctors crawling finish
+crawling count :  0
+뉴스 67205a48d4bd69ea10462b35의 콘텐츠가 비어 있습니다.
+뉴스 67205a64d4bd69ea10462b36의 콘텐츠가 비어 있습니다.
+뉴스 6747b4f362798ad904e98583 요약 완료
+뉴스 6747b4fb62798ad904e98584 요약 완료
+뉴스 6747b50262798ad904e98585 요약 완료
+뉴스 6747b51c62798ad904e98586 요약 완료
+뉴스 6747b52262798ad904e98587 요약 완료
+뉴스 6747b53b62798ad904e98588 요약 완료
+뉴스 6747b53f62798ad904e98589 요약 완료
+뉴스 6747b54462798ad904e9858a 요약 완료
+Using device: cpu
+모델 다운로드 중...
+MongoDB collection updated successfully.
+뉴스 요약 업데이트 완료!
