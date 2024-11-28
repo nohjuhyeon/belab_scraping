@@ -29,12 +29,11 @@ def load_model_from_drive(device):
         temp_model_path = tmp_file.name
         
         print("모델 다운로드 중...")
-        file_id = "1-3lWWtppGyMgnAPwZDr13e-3m0LpRBUO"
+        file_id = "1pGK7NuociQRSv9MLL-pUkrcR43eCxj7L"
         gdown.download(f"https://drive.google.com/uc?id={file_id}", temp_model_path, quiet=False)
-        class_list = ['IT_PC/기기', 'IT_게임', 'IT_과학', 'IT_모바일', 'IT_보안', 'IT_비즈니스/정책',
-        'IT_인터넷/SNS', 'IT_콘텐츠', '건강/의료', '경제', '경제/산업', '과학/테크놀로지', '교육',
-        '국제', '날씨', '노동', '동물', '문화', '미디어', '사건/사법', '사회', '사회_일반', '스포츠',
-        '여성', '오피니언/사설', '장애인', '정치', '환경']
+        class_list = ['IT_PC/기기','IT_게임','IT_과학','IT_모바일','IT_보안','IT_비즈니스/정책','IT_인터넷/SNS',
+        'IT_콘텐츠','건강/의료', '경제/산업','과학/테크놀로지','교육','노동','동물','문화','사건/사법','스포츠',
+        '오피니언/사설','정치','환경']
         model = BertForSequenceClassification.from_pretrained('skt/kobert-base-v1', num_labels=len(class_list))
         model.load_state_dict(torch.load(temp_model_path, map_location=device))
         
@@ -99,10 +98,9 @@ def category_update(collection):
 
     # KoBERT 로드
     tokenizer = KoBERTTokenizer.from_pretrained('skt/kobert-base-v1')
-    class_list = ['IT_PC/기기', 'IT_게임', 'IT_과학', 'IT_모바일', 'IT_보안', 'IT_비즈니스/정책',
-        'IT_인터넷/SNS', 'IT_콘텐츠', '건강/의료', '경제', '경제/산업', '과학/테크놀로지', '교육',
-        '국제', '날씨', '노동', '동물', '문화', '미디어', '사건/사법', '사회', '사회_일반', '스포츠',
-        '여성', '오피니언/사설', '장애인', '정치', '환경']
+    class_list = ['IT_PC/기기','IT_게임','IT_과학','IT_모바일','IT_보안','IT_비즈니스/정책','IT_인터넷/SNS',
+    'IT_콘텐츠','건강/의료', '경제/산업','과학/테크놀로지','교육','노동','동물','문화','사건/사법','스포츠',
+    '오피니언/사설','정치','환경']
     # 레이블의 수를 고유한 클래스 수로 설정 (이전 학습 시 사용한 것과 동일해야 함)
     num_labels = len(class_list)  # 예시로 5개로 설정, 실제 학습 시 사용한 클래스 수로 변경
 
