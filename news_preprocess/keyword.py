@@ -14,7 +14,7 @@ import nltk
 import numpy as np
 import sys
 import bareunpy as brn
-import google.protobuf.text_format as t
+import google.protobuf.text_format as tf
 from dotenv import load_dotenv
 import os
 from bareunpy import Tagger
@@ -27,6 +27,8 @@ load_dotenv()
 
 def clean_korean_documents(documents):
     #텍스트 정제 (특수기호 제거)
+    API_KEY = os.environ.get('BAREUN_KEY')
+    t = Tagger(API_KEY, "host.docker.internal", 5757)
     documents = re.sub(r'[^ ㄱ-ㅣ가-힣]', '', documents) #특수기호 제거, 정규 표현식
     #텍스트 정제 (형태소 분석)
     clean_words = []
