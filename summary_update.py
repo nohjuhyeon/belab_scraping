@@ -17,10 +17,36 @@ import torch
 from transformers import AutoModel, AutoTokenizer
 from sklearn.metrics.pairwise import cosine_similarity
 from kss import split_sentences
-
 import numpy as np
 import networkx as nx
+import zipfile
+import gdown
 
+# Google Drive에서 모델 다운로드 함수
+def load_model_from_drive(device):
+    # 임시 디렉토리 생성
+    temp_dir = '/tmp/kobart_model'
+    os.makedirs(temp_dir, exist_ok=True)
+
+    # Google Drive에서 모델 압축 파일 다운로드
+    print("모델 다운로드 중...")
+    file_id = "1cX2XexdPsL5ygqtHJT4ZQhHKvOZq0skQ"  # 주어진 Google Drive 파일 ID
+    zip_path = os.path.join(temp_dir, "kobart_model.zip")
+    gdown.download(f"https://drive.google.com/uc?id={file_id}", zip_path, quiet=False)
+
+    # 압축 해제
+    print("모델 압축 해제 중...")
+    with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+        zip_ref.extractall(temp_dir)
+
+    # 압축 파일 삭제
+    os.remove(zip_path)
+
+    # 모델 로드
+    model_path = os.path.join(temp_dir, "kobart_model")  # 압축 해제된 폴더 경로
+    model = BartForConditionalGeneration.from_pretrained(model_path)
+
+    return model.to(device)
 # 모델 및 토크나이저 로드
 
 def embed_sentences(sentences, tokenizer, model):
@@ -62,7 +88,7 @@ def news_summary_extraction(document):
     return summary
 
 def news_summary_abstraction(chunk):
-    model = BartForConditionalGeneration.from_pretrained('/app/belab_scraping/news_preprocess/summary_pretrained_model')
+    model = load_model_from_drive(device)
     tokenizer = PreTrainedTokenizerFast.from_pretrained('gogamza/kobart-base-v1')
     inputs = tokenizer(chunk, return_tensors='pt', max_length=1024, truncation=True)
     summary_ids = model.generate(
