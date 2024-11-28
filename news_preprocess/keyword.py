@@ -14,7 +14,7 @@ import nltk
 import numpy as np
 import sys
 import bareunpy as brn
-import google.protobuf.text_format as tf
+import google.protobuf.text_format as t
 from dotenv import load_dotenv
 import os
 from bareunpy import Tagger
