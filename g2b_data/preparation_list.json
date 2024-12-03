@@ -132,18 +132,6 @@
         "type": null
     },
     {
-        "notice_id": "1506779",
-        "title": "경영관리시스템 구축 ISP/BPR 수립 사업",
-        "price": "310,320,940 원",
-        "publishing_agency": "조달청 서울지방조달청",
-        "requesting_agency": "서울신용보증재단",
-        "start_date": "2024/10/30",
-        "end_date": "2024/11/04",
-        "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1506779",
-        "new": false,
-        "type": null
-    },
-    {
         "notice_id": "1520444",
         "title": "[긴급]괴산 스마트 유기농 혁신을 위한 ISMP 수립 용역",
         "price": "200,000,000 원",
@@ -188,18 +176,6 @@
         "start_date": "2024/11/06",
         "end_date": "2024/11/11",
         "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1509466",
-        "new": false,
-        "type": "인공 지능"
-    },
-    {
-        "notice_id": "1506392",
-        "title": "데이터 기반 자원관리시스템 개발, 구축을 위한 정보시스템 마스터플랜(ISMP) 수립 용역",
-        "price": "0 원",
-        "publishing_agency": "분당서울대학교병원",
-        "requesting_agency": "분당서울대학교병원",
-        "start_date": "2024/10/30",
-        "end_date": "2024/11/04",
-        "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1506392",
         "new": false,
         "type": "인공 지능"
     }

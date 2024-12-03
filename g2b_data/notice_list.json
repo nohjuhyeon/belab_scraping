@@ -1,5 +1,41 @@
 [
     {
+        "notice_id": "20241201309-00",
+        "title": "학생건강정보 플랫폼 전환을 위한 정보화전략계획(ISP) 수립",
+        "price": "45,454,545 원",
+        "publishing_agency": "재단법인한국교육환경보호원",
+        "requesting_agency": "재단법인한국교육환경보호원",
+        "start_date": "2024/12/02",
+        "end_date": "2024/12/13",
+        "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241201309",
+        "new": true,
+        "type": "인공 지능"
+    },
+    {
+        "notice_id": "2024-0424-00",
+        "title": "인천공항 데이터플랫폼 통합 ISP 용역",
+        "price": "460,662,858 원",
+        "publishing_agency": "인천국제공항공사",
+        "requesting_agency": "인천국제공항공사",
+        "start_date": "2024/11/29",
+        "end_date": "2025/01/09",
+        "link": "http://ebid.airport.kr/UserMain.dc",
+        "new": true,
+        "type": "검토 필요"
+    },
+    {
+        "notice_id": "20241143038-00",
+        "title": "국방전직교육원 스마트플랫폼 구축 ISP 용역",
+        "price": "240,000,000 원",
+        "publishing_agency": "국방전직교육원",
+        "requesting_agency": "국방전직교육원",
+        "start_date": "2024/11/28",
+        "end_date": "2024/12/12",
+        "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241143038",
+        "new": true,
+        "type": "인공 지능"
+    },
+    {
         "notice_id": "20241137015-00",
         "title": "국립수목원 국제식물감시네트워크(ISPN) 실무자 워크숍 운영",
         "price": "17,272,727 원",
@@ -168,16 +204,52 @@
         "type": "검토 필요"
     },
     {
-        "notice_id": "20241032171-00",
-        "title": "정보화전략계획(ISP) 수립 사업",
-        "price": "449,090,909 원",
-        "publishing_agency": "조달청 부산지방조달청",
-        "requesting_agency": "한국해양진흥공사",
-        "start_date": "2024/10/29",
-        "end_date": "2024/11/20",
-        "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241032171",
-        "new": false,
+        "notice_id": "9247136-00",
+        "title": "지능형 데이터 플랫폼 구축 ISMP 수립 용역",
+        "price": "",
+        "publishing_agency": "한국철도공사 회계통합센터",
+        "requesting_agency": "",
+        "start_date": "2024/12/02",
+        "end_date": "2024/12/13",
+        "link": "http://ebid.korail.com/goods/printIn.do?zzbidinv=9247136-00&zzstnum=00",
+        "new": true,
+        "type": "검토 필요"
+    },
+    {
+        "notice_id": "20241202417-00",
+        "title": "[긴급]괴산 스마트 유기농 혁신을 위한 ISMP 수립 용역 [(직찰)]",
+        "price": "181,818,182 원",
+        "publishing_agency": "괴산스마트유기농사업단",
+        "requesting_agency": "괴산스마트유기농사업단",
+        "start_date": "2024/12/02",
+        "end_date": "2024/12/09",
+        "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241202417",
+        "new": true,
         "type": null
+    },
+    {
+        "notice_id": "20241201696-00",
+        "title": "스마트 안전통합 관제시스템 ISMP 수립 사업",
+        "price": "106,363,636 원",
+        "publishing_agency": "국토안전관리원",
+        "requesting_agency": "국토안전관리원",
+        "start_date": "2024/12/02",
+        "end_date": "2024/12/13",
+        "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241201696",
+        "new": true,
+        "type": "인공 지능"
+    },
+    {
+        "notice_id": "9247106-00",
+        "title": "신축 철도IT센터 시스템 ISMP 용역",
+        "price": "",
+        "publishing_agency": "한국철도공사 회계통합센터",
+        "requesting_agency": "",
+        "start_date": "2024/11/29",
+        "end_date": "2024/12/10",
+        "link": "http://ebid.korail.com/goods/printIn.do?zzbidinv=9247106-00&zzstnum=00",
+        "new": true,
+        "type": "검토 필요"
     },
     {
         "notice_id": "20241137200-00",
