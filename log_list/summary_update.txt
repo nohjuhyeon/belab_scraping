@@ -72,3 +72,11 @@ MongoDB collection updated successfully.
 MongoDB collection updated successfully.
 MongoDB collection updated successfully.
 뉴스 요약 업데이트 완료!
+----------------뉴스 요약 업데이트 시작----------------
+2024-12-04 09:10:15.367664
+모델 다운로드 중...
+모델 압축 해제 중...
+모델 압축 해제 완료
+뉴스 67205a48d4bd69ea10462b35의 콘텐츠가 비어 있습니다.
+뉴스 67205a64d4bd69ea10462b36의 콘텐츠가 비어 있습니다.
+뉴스 요약 업데이트 완료!

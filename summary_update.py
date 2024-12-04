@@ -41,9 +41,10 @@ def load_model_from_drive(device):
 
     # 압축 파일 삭제
     os.remove(zip_path)
+    print("모델 압축 해제 완료")
 
     # 모델 로드
-    model_path = os.path.join(temp_dir, "kobart_model")  # 압축 해제된 폴더 경로
+    model_path = os.path.join(temp_dir, "kobart_summary_forth")  # 압축 해제된 폴더 경로
     model = BartForConditionalGeneration.from_pretrained(model_path)
 
     return model.to(device)
@@ -87,8 +88,7 @@ def news_summary_extraction(document):
     summary = extractive_summary(document_list, num_sentences=3)
     return summary
 
-def news_summary_abstraction(chunk):
-    model = load_model_from_drive(device)
+def news_summary_abstraction(chunk,model):
     tokenizer = PreTrainedTokenizerFast.from_pretrained('gogamza/kobart-base-v1')
     inputs = tokenizer(chunk, return_tensors='pt', max_length=1024, truncation=True)
     summary_ids = model.generate(
@@ -108,6 +108,8 @@ def update_news_summary(collection):
     # 요약되지 않은 뉴스 항목 가져오기
 
     news_data = collection.find({"abtraction": {"$exists": False}})
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    abtraction_model = load_model_from_drive(device)
 
     for news in news_data:
         news_id = news["_id"]
@@ -117,10 +119,10 @@ def update_news_summary(collection):
             continue
         try:
             extraction_summary = news_summary_extraction(content)
-            abtraction_summary = news_summary_abstraction(extraction_summary)
+            abtraction_summary = news_summary_abstraction(extraction_summary,abtraction_model)
 
             # MongoDB 문서 업데이트
-            collection.update_one({'_id': row['_id']}, {'$set': {'extraction': extraction_summary,'abtraction':abtraction_summary}})
+            collection.update_one({'_id': news_id}, {'$set': {'extraction': extraction_summary,'abtraction':abtraction_summary}})
         except Exception as e:
             print(f"Error occurred: {e}")
 
@@ -131,15 +133,15 @@ def total_update():
     # database 연결
     database = mongo_client["news_scraping"]
     # collection 작업
-    ict_news()
-    seoul_institute()
-    statistic_bank()
-    venture_doctors()
+    # ict_news()
+    # seoul_institute()
+    # statistic_bank()
+    # venture_doctors()
     update_news_summary(database['news_list'])
-    category_update(database['news_list'])
-    keyword_update(database['news_list'])
-    update_news_summary(database['report_list'])
-    keyword_update(database['report_list'])
+    # category_update(database['news_list'])
+    # keyword_update(database['news_list'])
+    # update_news_summary(database['report_list'])
+    # keyword_update(database['report_list'])
 
 try:
     print("----------------뉴스 요약 업데이트 시작----------------")
