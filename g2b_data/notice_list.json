@@ -8,7 +8,7 @@
         "start_date": "2024/12/03",
         "end_date": "2024/12/19",
         "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241201499",
-        "new": true,
+        "new": false,
         "type": null
     },
     {
@@ -132,6 +132,18 @@
         "type": null
     },
     {
+        "notice_id": "20241127175-00",
+        "title": "2024년 우주항공청 정보화 전략계획(ISP) 수립 용역",
+        "price": "136,363,636 원",
+        "publishing_agency": "조달청 경남지방조달청",
+        "requesting_agency": "우주항공청",
+        "start_date": "2024/11/20",
+        "end_date": "2024/12/05",
+        "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241127175",
+        "new": false,
+        "type": null
+    },
+    {
         "notice_id": "20241125687-00",
         "title": "돌봄 통합지원정보시스템 구축을 위한 ISP 사업",
         "price": "294,545,455 원",
@@ -202,18 +214,6 @@
         "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241113465",
         "new": false,
         "type": null
-    },
-    {
-        "notice_id": "9246776-00",
-        "title": "감사정보시스템 고도화 ISP 용역",
-        "price": "",
-        "publishing_agency": "한국철도공사 회계통합센터",
-        "requesting_agency": "",
-        "start_date": "2024/11/08",
-        "end_date": "2024/11/19",
-        "link": "http://ebid.korail.com/goods/printIn.do?zzbidinv=9246776-00&zzstnum=00",
-        "new": false,
-        "type": "검토 필요"
     },
     {
         "notice_id": "20241202417-01",
