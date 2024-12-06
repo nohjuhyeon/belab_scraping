@@ -88,3 +88,27 @@ MongoDB collection updated successfully.
 뉴스 67205a48d4bd69ea10462b35의 콘텐츠가 비어 있습니다.
 뉴스 67205a64d4bd69ea10462b36의 콘텐츠가 비어 있습니다.
 뉴스 요약 업데이트 완료!
+----------------뉴스 요약 업데이트 시작----------------
+2024-12-06 09:10:15.678747
+ict news crawling finish
+crawling count :  6
+seoul institute crawling finish
+crawling count :  0
+statistic bank crawling finish
+crawling count :  0
+venture_doctors crawling finish
+crawling count :  0
+모델 다운로드 중...
+모델 압축 해제 중...
+모델 압축 해제 완료
+뉴스 67205a48d4bd69ea10462b35의 콘텐츠가 비어 있습니다.
+뉴스 67205a64d4bd69ea10462b36의 콘텐츠가 비어 있습니다.
+Using device: cpu
+모델 다운로드 중...
+MongoDB collection updated successfully.
+MongoDB collection updated successfully.
+모델 다운로드 중...
+모델 압축 해제 중...
+모델 압축 해제 완료
+MongoDB collection updated successfully.
+뉴스 요약 업데이트 완료!
