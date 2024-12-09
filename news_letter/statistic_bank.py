@@ -1,4 +1,4 @@
-from function_list.ict_scraping_func import fetch_news_date
+from function_list.news_scraping_func import fetch_news_date
 from function_list.basic_options import mongo_setting,selenium_setting,init_browser
 from selenium.webdriver.common.by import By
 from newspaper import Article
@@ -19,7 +19,7 @@ def process_links(link_elements, collection, browser,link_list,crawling_count):
                         article.parse()
                         title, date, content = article.title, article.publish_date, article.text
                         
-                        if title is None or content is None:
+                        if title is None or content is None or 'news.naver' in link or 'newsis.com' in link :
                             link_element.click()
                             browser.switch_to.window(browser.window_handles[-1])
                             try:

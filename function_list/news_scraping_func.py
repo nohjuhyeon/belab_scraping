@@ -1,7 +1,8 @@
-from selenium.webdriver.common.by import By          # - 정보 획득
 
+from selenium.webdriver.common.by import By          # - 정보 획득
 import pandas as pd 
 import time
+from datetime import datetime, timedelta
 
 def marketinsight(browser):
     time.sleep(1)
@@ -180,6 +181,10 @@ def ciokorea(browser):
             news_date = browser.find_element(by=By.CSS_SELECTOR,value='body > div:nth-child(12) > div > div.col-lg-12.col-xl-9 > div > div.row > div:nth-child(2) > div.d-flex.justify-content-between.align-items-center.mt-5.py-2.border-bottom.border-3.mb-4 > div:nth-child(1) > small.font-color-primary-2.font-lato.d-flex.align-items-center.font-lato').text
         except:
             news_date = browser.find_elment(by=By.CSS_SELECTOR,value='body > div:nth-child(11) > div > div.col-lg-12.col-xl-9 > div > div.row > div.col-12 > div.d-flex.justify-content-between.align-items-center.mt-5.py-2.border-bottom.border-3.mb-4 > div:nth-child(1) > small.font-color-primary-2.font-lato.d-flex.align-items-center.font-lato').text
+    if '일 전' in news_date:
+        date_int = int(news_date.replace('일 전',''))
+        now = datetime.now()
+        news_date = (now - timedelta(days=date_int)).date()
     news_date = pd.to_datetime(news_date)
     return news_date
 
@@ -212,13 +217,6 @@ def munhwa(browser):
     news_date = pd.to_datetime(news_date)
     return news_date   
 
-def naver(browser):
-    time.sleep(1)
-    news_date = browser.find_elements(by=By.CSS_SELECTOR,value='#ct > div.media_end_head.go_trans > div.media_end_head_info.nv_notrans > div.media_end_head_info_datestamp > div')[0]
-    news_date = news_date.find_element(by=By.CSS_SELECTOR,value='span').text
-    news_date = pd.to_datetime(news_date.split(' ')[0])
-    return news_date
-
 def busan(browser):
     time.sleep(1)
     news_date = browser.find_element(by=By.CSS_SELECTOR,value='#container > div:nth-child(2) > div.section > div.article_view > div.article_head > div.byline').text
@@ -232,7 +230,34 @@ def kookje(browser):
     news_date = pd.to_datetime(' '.join(news_date.split(' ')[-2:]))
     return news_date
 
-def chosun(url,collection,browser):
+def naver(browser):
+    time.sleep(1)
+    news_contents = browser.find_element(by=By.CSS_SELECTOR,value='div.newsct_article').text
+    news_title = browser.find_element(by=By.CSS_SELECTOR,value='#title_area').text
+    date = browser.find_elements(by=By.CSS_SELECTOR,value='#ct > div.media_end_head.go_trans > div.media_end_head_info.nv_notrans > div.media_end_head_info_datestamp > div')[-1]
+    date = date.text.split(' ')[0].replace('입력','').replace('수정','')
+    date = pd.to_datetime(date)
+    news_dict = {
+        'news_title': news_title,
+        'news_content': news_contents,
+        'news_date': date,
+    }
+    return news_dict
+
+def newsis(browser):
+    news_contents = browser.find_element(by=By.CSS_SELECTOR,value='#content > div.articleView > div.view > div.viewer > article').text
+    news_title = browser.find_element(by=By.CSS_SELECTOR,value='#content > div.articleView > div.view > div.top > h1').text
+    date = browser.find_elements(by=By.CSS_SELECTOR,value='#content > div.articleView > div.view > div.infoLine > div.left > p')[-1]
+    date = date.text.split(' ')[1]
+    date = pd.to_datetime(date)
+    news_dict = {
+        'news_title': news_title,
+        'news_content': news_contents,
+        'news_date': date
+    }
+    return news_dict
+
+def chosun(browser):
     time.sleep(1)
     try:
         news_title = browser.find_element(by=By.CSS_SELECTOR,value='#v-left-scroll-in > div.article_head > div.article_info > span:nth-child(1)').text
@@ -256,53 +281,90 @@ def chosun(url,collection,browser):
     except:
         news_date= browser.find_element(by=By.CSS_SELECTOR,value='#article-view > div > header > div > ul > li:nth-child(2)').text.replace('입력 ','')
     news_date = pd.to_datetime(news_date)
-    news_link = url
-    collection.insert_one({'news_title':news_title,
+    news_dict = {'news_title':news_title,
                                     'news_content':news_content,
-                                    'news_date': news_date,
-                                    'news_link':news_link,
-                                    })
+                                    'news_date': news_date}
+    return news_dict
     
-def kbs(url,collection,browser):
+def kbs(browser):
     time.sleep(1)
     news_title = browser.find_element(by=By.CSS_SELECTOR,value='h4.headline-title').text
     news_content = browser.find_element(by=By.CSS_SELECTOR,value='div > #cont_newstext').text
     news_date = browser.find_element(by=By.CSS_SELECTOR,value='div.dates > em.input-date').text.split()[1]
     news_date = pd.to_datetime(news_date)
-    news_link = url
-    collection.insert_one({'news_title':news_title,
+    news_dict = {'news_title':news_title,
                                     'news_content':news_content,
-                                    'news_date': news_date,
-                                    'news_link':news_link,
-                                    })  
+                                    'news_date': news_date}
+    return news_dict
 
-def boannews(url,collection,browser):
+def boannews(browser):
     time.sleep(1)
     news_title = browser.find_element(by=By.CSS_SELECTOR,value='#news_title02 > h1').text
     news_content = browser.find_element(by=By.CSS_SELECTOR,value='div#news_content').text
     news_date = browser.find_element(by=By.CSS_SELECTOR,value='#news_util01').text.replace('입력 : ','')
     news_date = pd.to_datetime(news_date)
-    news_link = url
-    collection.insert_one({'news_title':news_title,
+    news_dict = {'news_title':news_title,
                                     'news_content':news_content,
-                                    'news_date': news_date,
-                                    'news_link':news_link,
-                                    })  
+                                    'news_date': news_date}
+    return news_dict
 
-def sbs_biz(url,collection,browser):
+def sbs_biz(browser):
     time.sleep(1)
     news_title = browser.find_element(by=By.CSS_SELECTOR,value='#cnbc-front-articleHeader-self > div > div > h3').text
     news_content = browser.find_element(by=By.CSS_SELECTOR,value='#cnbc-front-articleContent-area-font').text    
     news_date = browser.find_element(by=By.CSS_SELECTOR,value='#cnbc-front-articleHeader-self > div > div > div.ah_info > span.ahi_date').text.replace('입력 ','')
     news_date = pd.to_datetime(news_date)
-    news_link = url
-    collection.insert_one({'news_title':news_title,
+    news_dict = {'news_title':news_title,
                                     'news_content':news_content,
-                                    'news_date': news_date,
-                                    'news_link':news_link,
-                                    })  
+                                    'news_date': news_date}
+    return news_dict
 
-    return news_date
-
+def fetch_news_date(news_link, browser):
+    # 뉴스 날짜를 사이트에서 가져오는 함수
+    handlers = {
+        'n.news.naver': naver,
+        'www.busan': busan,
+        'www.hani': hani,
+        'www.dt': digital_times,
+        'www.kookje': kookje,
+        'www.munhwa': munhwa,
+        'm.news.nate': nate,
+        'ddaily.co.kr':ddaily,
+        'itworld.co.kr':itworld,
+        'news1.kr':news1,
+        'datanews.co.kr':datanews,
+        'ciokorea':ciokorea,
+        'dnews.co.kr':dnews,
+        'topdaily.kr': topdaily, 
+        'kukinews.com': kukinews, 
+        'economist.co.kr': economist,  
+        'asiatime.co.kr': asiatime, 
+        'metroseoul.co.kr': metroseoul,
+        'it.donga' : donga,
+        'skyedaily' : skyedaily,
+        'news.mtn' : mtn,
+        'dream.kotra' : kotra,
+        'newspim' : newspim,
+        'nocutnews' : nocut,
+        'newsprime' : newsprime,
+        'medipana.com' : medipana,
+        'marketinsight': marketinsight, 
+        'dailynk': dailynk, 
+        'kgnews': kgnews, 
+        'dailymedi': dailymedi, 
+        'kyeongin': kyeongin, 
+        'newstomato': newstomato, 
+        'esquirekorea': esquirekorea,
+        'lawtimes' : lawtimes,
+        'chosun.com': chosun,
+        'biz.sbs': sbs_biz,
+        'news.kbs': kbs,
+        'boannews.com': boannews,
+        'newsis.com': newsis
+    }
+    for key, handler in handlers.items():
+        if key in news_link:
+            return handler(browser)
+    return None
 # answer = itworld(browser)
 # print(answer)
