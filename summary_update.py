@@ -133,15 +133,15 @@ def total_update():
     # database 연결
     database = mongo_client["news_scraping"]
     # collection 작업
-    # ict_news()
-    # seoul_institute()
-    # statistic_bank()
-    # venture_doctors()
+    ict_news()
+    seoul_institute()
+    statistic_bank()
+    venture_doctors()
     update_news_summary(database['news_list'])
     category_update(database['news_list'])
     keyword_update(database['news_list'])
-    # update_news_summary(database['report_list'])
-    # keyword_update(database['report_list'])
+    update_news_summary(database['report_list'])
+    keyword_update(database['report_list'])
 
 try:
     print("----------------뉴스 요약 업데이트 시작----------------")

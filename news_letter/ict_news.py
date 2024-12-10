@@ -70,13 +70,14 @@ def ict_news():
     browser = init_browser(chrome_options)
     pass
     browser.get("https://ictnewsclipping.stibee.com/")    
+    time.sleep(1)
     first_content = browser.find_element(by=By.CSS_SELECTOR,value='#__next > div > div > div:nth-child(1) > a')
     first_content.click()
     time.sleep(1)
     for j in range(5):
         time.sleep(1)
         content_list_first = browser.find_elements(by=By.CSS_SELECTOR,value='div.stb-left-cell > div.stb-text-box > table > tbody > tr > td')
-        content_title = browser.find_element(by=By.CSS_SELECTOR,value='#__next > div:nth-child(1) > div > div > div.fOAJCs').text
+        content_title = browser.find_elements(by=By.CSS_SELECTOR,value='#__next > div:nth-child(1) > div > div > div')[0].text
         if '[ICT 뉴스' in content_title:
             for i in content_list_first:
                 try:
