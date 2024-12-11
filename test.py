@@ -10,7 +10,7 @@ import os
 from dotenv import load_dotenv
 from pymongo import MongoClient
 import pandas as pd
-
+import time
 
 
 def remove_proper_nouns_from_text(text, ner_results):
@@ -122,98 +122,77 @@ def extract_nng_sl_with_positions(text):
 
 
 def ner_remove_in_text(text,model,tokenizer):
-  text = text.replace('\n', '')  # 텍스트 전처리
-  sents = kss.split_sentences(text)  # 문장 단위로 분리
+  text = text.split('\n')  # 텍스트 전처리
+  sents = []
+  for i in text:
+    sents.extend(kss.split_sentences(i))  # 문장 단위로 분리
   text_list=[]
-  modified_text_list = []
   noun_list = []
   for i in sents:
-    text_dict = ner_predict(i,model,tokenizer)
-    del_label_list = ['CV_POSITION','DT_DURATION','DT_DAY','DT_WEEK','DT_MONTH','DT_YEAR','DT_SEASON','DT_GEOAGE','DT_DYNASTY','DT_OTHERS','TI_DURATION','TI_HOUR','TI_MINUTE','TI_SECOND','TI_OTHERS','QT_AGE','QT_SIZE','QT_LENGTH','QT_COUNT','QT_MAN_COUNT','QT_WEIGHT','QT_PERCENTAGE','QT_SPEED','QT_TEMPERATURE','QT_VOLUME','QT_ORDER','QT_PRICE','QT_PHONE','QT_SPORTS','QT_CHANNEL','QT_ALBUM','QT_ADDRESS','QT_OTHERS','TMI_SITE','TMI_EMAIL','TMI_MODEL']
+    text_dict = []
     sent_list = []
-    for j in text_dict:
-      word_list = []
-      if j['label'] not in del_label_list:
-        word_list.append(j)
-      sent_list.extend(word_list)
+    if len(i) <= 512:
+      text_dict = ner_predict(i,model,tokenizer)
+      del_label_list = ['CV_POSITION','DT_DURATION','DT_DAY','DT_WEEK','DT_MONTH','DT_YEAR','DT_SEASON','DT_GEOAGE','DT_DYNASTY','DT_OTHERS','TI_DURATION','TI_HOUR','TI_MINUTE','TI_SECOND','TI_OTHERS','QT_AGE','QT_SIZE','QT_LENGTH','QT_COUNT','QT_MAN_COUNT','QT_WEIGHT','QT_PERCENTAGE','QT_SPEED','QT_TEMPERATURE','QT_VOLUME','QT_ORDER','QT_PRICE','QT_PHONE','QT_SPORTS','QT_CHANNEL','QT_ALBUM','QT_ADDRESS','QT_OTHERS','TMI_SITE','TMI_EMAIL','TMI_MODEL']
+      for j in text_dict:
+        word_list = []
+        if j['label'] not in del_label_list:
+          word_list.append(j)
+        sent_list.extend(word_list)
     text_list.append(sent_list)
 
-    text_without_proper_nouns = remove_proper_nouns_from_text(i, sent_list)
+    text_without_proper_nouns = remove_proper_nouns_from_text(i, text_dict)
     nng_sl_results = extract_nng_sl_with_positions(text_without_proper_nouns)
     sent_list.extend(nng_sl_results)
     sent_list = sorted(sent_list, key=lambda x: x['start'])
     noun_list.append(' '.join([i['word'] for i in sent_list]))
-    modified_text_list.append(text_without_proper_nouns)
   return  ' '.join(noun_list)
+
 
 
 from konlpy.tag import Mecab
 
-mecab = Mecab()
 
-word_list = ['QR코드', '플랫폼','오버프로비저닝','딥페이크','머신러닝','딥러닝']
-
-for word in word_list:
-  print(mecab.pos(word))
 
 
 
 
 # Google Drive에서 모델 다운로드 함수    
-# def mongodb_update():
-#   load_dotenv()
-#   mongo_url = os.environ.get("DATABASE_URL")
-#   mongo_client = MongoClient(mongo_url)
-#   # database 연결
-#   database = mongo_client["news_scraping"]
-#   # collection 작업
-#   collection = database['news_list']
-#   documents = collection.find()
-#   df = pd.DataFrame(list(documents))
-#   tokenizer = AutoTokenizer.from_pretrained("KPF/KPF-bert-ner")
-#   model = AutoModelForTokenClassification.from_pretrained("KPF/KPF-bert-ner")
-
-#   for index, row in df.iterrows():
-#       text = row['news_content']
-#       print(text)
-#       noun_text = ner_remove_in_text(text,model,tokenizer)
-#       if noun_text != '':
-#         # MongoDB 문서 업데이트
-#         collection.update_one(
-#             {'_id': row['_id']},  # 업데이트할 문서의 조건 (예: 고유 ID)
-#             {'$set': {'noun_list': noun_text}}  # 업데이트할 필드
-#         )
-#       if index%100 == 0:
-#         print(index)
-#   print("MongoDB collection updated successfully.")
+def mongodb_update():
+  load_dotenv()
+  mongo_url = os.environ.get("DATABASE_URL")
+  mongo_client = MongoClient(mongo_url)
+  # database 연결
+  database = mongo_client["news_scraping"]
+  # collection 작업
+  collection = database['news_list']
+  documents = collection.find()
+  df = pd.DataFrame(list(documents))
+  tokenizer = AutoTokenizer.from_pretrained("KPF/KPF-bert-ner")
+  model = AutoModelForTokenClassification.from_pretrained("KPF/KPF-bert-ner")
+  start_time = time.time()
+  for index, row in df.iterrows():
+      text = row['news_content']
+      noun_text = ner_remove_in_text(text,model,tokenizer)
+      if noun_text != '':
+        # MongoDB 문서 업데이트
+        collection.update_one(
+            {'_id': row['_id']},  # 업데이트할 문서의 조건 (예: 고유 ID)
+            {'$set': {'noun_list': noun_text}}  # 업데이트할 필드
+        )
+      if index%100 == 0:
+        elapsed_time = time.time() - start_time
+        elapsed_time_formatted = time.strftime("%H:%M:%S", time.gmtime(elapsed_time))
+        print(f"Index: {index}, Elapsed Time: {elapsed_time_formatted}")
+  print("MongoDB collection updated successfully.")
   
-# if __name__ == "__main__":
-#   mongodb_update()
+if __name__ == "__main__":
+    mecab = Mecab()
 
+    word_list = ['QR코드', '플랫폼','오버프로비저닝','딥페이크','머신러닝','딥러닝','AI','GPT','LLM','챗봇']
 
-# text = """
-# 더불어민주당 이재명 대표가 이른바 '성남FC 후원금 의혹' 사건과 관련해 오는 10일 검찰에 출석해 조사를 받는다.
+    for word in word_list:
+        print(mecab.pos(word))  
 
-# 민주당 안호영 수석대변인은 6일 국회 브리핑을 통해 "이 대표가 10일 오전 10시 30분에 수원지검 성남지청에 출석하는 일정이 합의됐다"고 밝혔다.
+    mongodb_update()
 
-# 안 수석대변인은 "검찰과 변호인단이 출석 날짜를 조율했고, 그 날짜가 적당하다고 판단한 것"이라고 설명했다.
-
-# 공개적으로 출석하느냐는 질문에는 "이 대표는 당당히 출석해서 입장을 말씀하신다고 했다"며 "구체적으로 어떤 사람과 갈지, 어떻게 할지는 지켜봐야 한다"고 말했다.
-
-# 앞서 검찰은 이 사건과 관련해 이 대표에게 지난해 12월 28일 소환을 통보했으나, 이 대표는 미리 잡아 둔 일정이 있다며 출석을 거부했다.
-
-# 다만 이 대표는 "가능한 날짜와 조사 방식에 대해 변호인을 통해 협의해서 결정하겠다"며 조사에 응하겠다는 뜻을 밝혔고, 이후 검찰이 다시 요청한 10∼12일 중에서 출석 일자를 조율해 왔다.
-
-# 성남FC 후원금 의혹 사건은 이 대표가 성남시장 재직 시절 성남FC 구단주로 있으면서 2016∼2018년 네이버·두산건설 등 기업들로부터 160억여원의 후원금을 유치하고, 이들 기업은 건축 인허가나 토지 용도 변경 등 편의를 받았다는 내용이다.
-
-# 이 대표는 2018년 당시 바른미래당 등으로부터 이 의혹으로 고발당했다. 현재 제3자 뇌물공여 혐의를 받는 피의자 신분이다.
-
-# 이 대표가 취임 이후 검찰의 소환조사에 응하는 것은 처음이다.
-
-# 검찰은 앞서 지난 8월에도 대선 과정에서 허위 사실을 공표했다는 혐의로 이 대표에게 소환을 통보했으나, 당시 이 대표는 출석을 거부하고 서면 답변서만 제출한 바 있다.
-# """
-# tokenizer = AutoTokenizer.from_pretrained("KPF/KPF-bert-ner")
-# model = AutoModelForTokenClassification.from_pretrained("KPF/KPF-bert-ner")
-
-# noun_text = ner_remove_in_text(text,model,tokenizer)
-# print(noun_text)

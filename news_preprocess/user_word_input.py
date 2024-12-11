@@ -15,7 +15,7 @@ def main(entry):
 
     # user-nnp.csv 파일에 항목 추가
     try:
-        with open("/mecab-ko-dic-2.1.1-20180720/user-dic/user-nnp.csv", 'w', encoding='utf-8') as f:
+        with open(USER_DIC, "a", encoding="utf-8") as f:
             f.write(entry)
         print(f"Added entry to {USER_DIC}: {entry}")
     except Exception as e:
@@ -69,7 +69,7 @@ if __name__ == "__main__":
                 continue
 
             # 사전 항목 생성
-            line = f"{word},,,{score},{pos},*,*,{word},*,*,*,*,*\n"
+            line = f"{word},,,{score},{pos},*,F,{word},*,*,*,*\n"
             main(line)
             break  # 성공적으로 처리되면 루프 종료
         except KeyboardInterrupt:
