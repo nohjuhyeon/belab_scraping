@@ -174,6 +174,7 @@ def mongodb_update():
   for index, row in df.iterrows():
       text = row['news_content']
       noun_text = ner_remove_in_text(text,model,tokenizer)
+      noun_text.replace("과기정통부", "과학기술정보통신부").replace('AWS','아마존웹서비스')
       if noun_text != '':
         # MongoDB 문서 업데이트
         collection.update_one(
