@@ -1,5 +1,17 @@
 [
     {
+        "notice_id": "20241216369-00",
+        "title": "재공고[긴급]괴산 스마트 유기농 혁신을 위한 ISMP 수립 용역",
+        "price": "181,818,182 원",
+        "publishing_agency": "괴산스마트유기농사업단",
+        "requesting_agency": "괴산스마트유기농사업단",
+        "start_date": "2024/12/10",
+        "end_date": "2024/12/16",
+        "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241216369",
+        "new": true,
+        "type": null
+    },
+    {
         "notice_id": "20241212874-00",
         "title": "경기형 AI 교원역량 통합지원시스템 정보시스템마스터플랜(ISMP) 수립 위탁 용역",
         "price": "272,727,273 원",
@@ -8,7 +20,7 @@
         "start_date": "2024/12/06",
         "end_date": "2024/12/17",
         "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241212874",
-        "new": true,
+        "new": false,
         "type": "인공 지능"
     },
     {
