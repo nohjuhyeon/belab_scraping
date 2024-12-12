@@ -1,5 +1,29 @@
 [
     {
+        "notice_id": "1527148",
+        "title": "통합경영관리(ERP) 시스템 재구축을 위한 정보전략계획(ISP) 수립",
+        "price": "347,216,840 원",
+        "publishing_agency": "조달청 광주지방조달청",
+        "requesting_agency": "과학기술정보통신부 우정사업본부 우정사업정보센터",
+        "start_date": "2024/12/11",
+        "end_date": "2024/12/16",
+        "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1527148",
+        "new": true,
+        "type": null
+    },
+    {
+        "notice_id": "1526897",
+        "title": "맞춤형복지 통합시스템 구축을 위한 컨설팅(BPR/ISP)",
+        "price": "269,500,000 원",
+        "publishing_agency": "공무원연금공단",
+        "requesting_agency": "공무원연금공단",
+        "start_date": "2024/12/11",
+        "end_date": "2024/12/16",
+        "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1526897",
+        "new": false,
+        "type": "인공 지능"
+    },
+    {
         "notice_id": "1525592",
         "title": "중앙대학교 의과대학 융합 러닝 인프라 구축(대형LED Display 외 18종) 구매",
         "price": "371,184,000 원",
@@ -190,17 +214,5 @@
         "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1517344",
         "new": false,
         "type": "인공 지능"
-    },
-    {
-        "notice_id": "1512036",
-        "title": "협약업무 사업관리 시스템 구축을 위한 ISMP 수립",
-        "price": "459,725,598 원",
-        "publishing_agency": "국방과학연구소",
-        "requesting_agency": "국방과학연구소",
-        "start_date": "2024/11/11",
-        "end_date": "2024/11/14",
-        "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1512036",
-        "new": false,
-        "type": null
     }
 ]
