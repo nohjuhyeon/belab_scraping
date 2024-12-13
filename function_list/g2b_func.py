@@ -29,7 +29,7 @@ def notice_check(download_folder_path):
                 extract_path = os.path.join(download_folder_path)
                 zip_ref.extractall(extract_path)
     notice_type = check_list_insert(notice_type, download_folder_path)
-    keywords = ['AI', '인공지능', 'LLM','생성형']
+    keywords = ['AI', '인공지능', 'LLM','생성형','초거대']
     notice_type = ai_list_insert(notice_type, download_folder_path,keywords)
     return notice_type
 
