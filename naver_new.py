@@ -1,0 +1,86 @@
+from function_list.basic_options import mongo_setting,selenium_setting,init_browser
+from selenium.webdriver.common.by import By
+import time
+import pandas as pd
+def naver_news():
+    crawling_count = 0
+    collection = mongo_setting('news_scraping','naver_news')
+    chrome_options = selenium_setting()
+    browser = init_browser(chrome_options)
+    pass
+    browser.get("https://news.naver.com/section/105")    
+    section_list = browser.find_elements(by=By.CSS_SELECTOR,value='#ct_wrap > div.ct_scroll_wrapper > div.column0 > div > ul > li > a')
+    news_list = []
+    for j in range(len(section_list)):
+        section_list = browser.find_elements(by=By.CSS_SELECTOR,value='#ct_wrap > div.ct_scroll_wrapper > div.column0 > div > ul > li > a')
+        section_link = section_list[j].get_attribute('href')
+        browser.get(section_link)
+        section_name = browser.find_element(by=By.CSS_SELECTOR,value='h3.section_title_h').text
+        if section_name != '게임/리뷰':
+            link_list = []
+            finish_check =False
+            while True:
+                news_contents = browser.find_elements(by=By.CSS_SELECTOR,value='div.sa_text')
+                news_date = news_contents[-1].find_elements(by=By.CSS_SELECTOR,value='div')[1].text.split('\n')[1]
+                if news_date in ['3일전','4일전','5일전','6일전','7일전']:
+                    break
+                else:
+                    plus_btn = browser.find_elements(by=By.CSS_SELECTOR,value='#newsct > div.section_latest > div > div.section_more > a')
+                    if finish_check == True:
+                        break
+                    elif len(plus_btn) != 0:
+                        plus_btn[0].click()
+                        time.sleep(1)
+            news_contents = browser.find_elements(by=By.CSS_SELECTOR,value='div.sa_text')
+            for i in range(len(news_contents)):
+                news_title = news_contents[i].find_element(by=By.CSS_SELECTOR,value='a > strong').text
+                news_content = news_contents[i].find_elements(by=By.CSS_SELECTOR,value='div')[0].text
+                news_company = news_contents[i].find_elements(by=By.CSS_SELECTOR,value='div')[1].text.split('\n')[0]
+                news_date = news_contents[i].find_elements(by=By.CSS_SELECTOR,value='div')[1].text.split('\n')[1]
+                news_link = news_contents[i].find_element(by=By.CSS_SELECTOR,value='a')
+                news_link = news_link.get_attribute('href')
+
+                if news_date == '3일전':
+                    break
+                elif news_link in link_list:
+                    pass
+                else:
+                    link_list.append(news_link)
+                    dict_news = {'news_title':news_title,'news_content':news_content,'news_company':news_company,'news_date':news_date,'news_link':news_link,'section_type':section_name}
+                    collection.insert_one(dict_news)
+                    print(dict_news)
+                    news_list.append(dict_news)
+    browser.quit()
+    print('ict news crawling finish')
+    print('crawling count : ',crawling_count)
+
+# 크롤링 함수 실행
+def news_contents():
+    collection = mongo_setting('news_scraping','naver_news')
+    chrome_options = selenium_setting()
+    news_list = collection.find({},{'_id':1,'news_link':1})
+    browser = init_browser(chrome_options)
+    for i in news_list:
+        browser.get(i['news_link'])
+        news_date = browser.find_elements(by=By.CSS_SELECTOR,value='#ct > div.media_end_head.go_trans > div.media_end_head_info.nv_notrans > div.media_end_head_info_datestamp > div > span')[-1].text
+        news_date = news_date.replace('오후', 'PM').replace('오전', 'AM')
+        news_date = pd.to_datetime(news_date, format='%Y.%m.%d. %p %I:%M')
+
+        news_content_origin = browser.find_element(by=By.CSS_SELECTOR,value='#dic_area').text
+        try:
+            news_journalist = browser.find_element(by=By.CSS_SELECTOR,value='div.media_end_head_journalist > a').text.replace(' 기자','').split('\n')
+        except:
+            try:
+                news_journalist = browser.find_element(by=By.CSS_SELECTOR,value='div.media_end_head_journalist > button').text.replace(' 기자','').split('\n')
+            except:
+                news_journalist = []
+        news_journalist = ', '.join(news_journalist)
+        collection.update_one({'_id': i['_id']},  {'$set': {'news_date':news_date,'news_content_origin':news_content_origin,'news_journalist':news_journalist}})
+
+        pass
+    pass
+
+
+# naver_news()
+
+news_contents()
