@@ -5,6 +5,8 @@ import pandas as pd
 def naver_news():
     crawling_count = 0
     collection = mongo_setting('news_scraping','naver_news')
+    link_dict = collection.find({},{'_id':0,'news_link':1})
+    link_list = [i['news_link'] for i in link_dict]
     chrome_options = selenium_setting()
     browser = init_browser(chrome_options)
     pass
@@ -17,12 +19,13 @@ def naver_news():
         browser.get(section_link)
         section_name = browser.find_element(by=By.CSS_SELECTOR,value='h3.section_title_h').text
         if section_name != '게임/리뷰':
-            link_list = []
             finish_check =False
             while True:
                 news_contents = browser.find_elements(by=By.CSS_SELECTOR,value='div.sa_text')
                 news_date = news_contents[-1].find_elements(by=By.CSS_SELECTOR,value='div')[1].text.split('\n')[1]
-                if news_date in ['3일전','4일전','5일전','6일전','7일전']:
+                news_link = news_contents[-1].find_element(by=By.CSS_SELECTOR,value='a')
+                news_link = news_link.get_attribute('href')
+                if news_date in ['3일전','4일전','5일전','6일전','7일전'] or news_link in link_list:
                     break
                 else:
                     plus_btn = browser.find_elements(by=By.CSS_SELECTOR,value='#newsct > div.section_latest > div > div.section_more > a')
@@ -58,7 +61,7 @@ def naver_news():
 def news_contents():
     collection = mongo_setting('news_scraping','naver_news')
     chrome_options = selenium_setting()
-    news_list = collection.find({},{'_id':1,'news_link':1})
+    news_list = collection.find({'news_content_origin': {'$exists': False}},{'_id': 1, 'news_link': 1})
     browser = init_browser(chrome_options)
     for i in news_list:
         browser.get(i['news_link'])
@@ -81,6 +84,6 @@ def news_contents():
     pass
 
 
-# naver_news()
+naver_news()
 
 news_contents()
