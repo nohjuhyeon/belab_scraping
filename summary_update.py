@@ -7,12 +7,14 @@ from news_letter.ict_news import ict_news
 from news_letter.seoul_institute import seoul_institute
 from news_letter.statistic_bank import statistic_bank
 from news_letter.venture_doctors import venture_doctors
-from news_preprocess.category_classification import category_update
+from news_letter.naver_new import naver_news
+from news_preprocess.category_classification_second import category_update
+from news_preprocess.noun_extraction import noun_extraction
 import os
 from dotenv import load_dotenv
 import logging
 from datetime import datetime
-from news_preprocess.keyword import keyword_update
+from news_preprocess.keyword_second import keyword_update
 import torch
 from transformers import AutoModel, AutoTokenizer
 from sklearn.metrics.pairwise import cosine_similarity
@@ -137,9 +139,15 @@ def total_update():
     seoul_institute()
     statistic_bank()
     venture_doctors()
+    naver_news()
     update_news_summary(database['news_list'])
+    noun_extraction(database['news_list'])
     category_update(database['news_list'])
     keyword_update(database['news_list'])
+    noun_extraction(database['naver_news'])
+    update_news_summary(database['naver_news'])
+    category_update(database['naver_news'])
+    keyword_update(database['naver_news'])
     update_news_summary(database['report_list'])
     keyword_update(database['report_list'])
 

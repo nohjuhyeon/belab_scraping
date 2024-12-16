@@ -158,14 +158,8 @@ from konlpy.tag import Mecab
 
 
 # Google Drive에서 모델 다운로드 함수    
-def mongodb_update():
+def noun_extraction(collection):
   load_dotenv()
-  mongo_url = os.environ.get("DATABASE_URL")
-  mongo_client = MongoClient(mongo_url)
-  # database 연결
-  database = mongo_client["news_scraping"]
-  # collection 작업
-  collection = database['news_list']
   documents = collection.find()
   df = pd.DataFrame(list(documents))
   tokenizer = AutoTokenizer.from_pretrained("KPF/KPF-bert-ner")
@@ -194,6 +188,12 @@ if __name__ == "__main__":
 
     for word in word_list:
         print(mecab.pos(word))  
+    mongo_url = os.environ.get("DATABASE_URL")
+    mongo_client = MongoClient(mongo_url)
+    # database 연결
+    database = mongo_client["news_scraping"]
+    # collection 작업
+    collection = database['news_list']
 
-    mongodb_update()
+    noun_extraction(collection)
 

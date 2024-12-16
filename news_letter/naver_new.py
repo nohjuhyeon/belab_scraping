@@ -2,9 +2,7 @@ from function_list.basic_options import mongo_setting,selenium_setting,init_brow
 from selenium.webdriver.common.by import By
 import time
 import pandas as pd
-def naver_news():
-    crawling_count = 0
-    collection = mongo_setting('news_scraping','naver_news')
+def link_list(collection):
     link_dict = collection.find({},{'_id':0,'news_link':1})
     link_list = [i['news_link'] for i in link_dict]
     chrome_options = selenium_setting()
@@ -54,12 +52,8 @@ def naver_news():
                     print(dict_news)
                     news_list.append(dict_news)
     browser.quit()
-    print('ict news crawling finish')
-    print('crawling count : ',crawling_count)
-
 # 크롤링 함수 실행
-def news_contents():
-    collection = mongo_setting('news_scraping','naver_news')
+def news_contents(collection):
     chrome_options = selenium_setting()
     news_list = collection.find({'news_content_origin': {'$exists': False}},{'_id': 1, 'news_link': 1})
     browser = init_browser(chrome_options)
@@ -83,7 +77,8 @@ def news_contents():
         pass
     pass
 
+def naver_news():
+    collection = mongo_setting('news_scraping','naver_news')
 
-naver_news()
-
-news_contents()
+    link_list(collection)
+    news_contents(collection)
