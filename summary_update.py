@@ -1,6 +1,4 @@
-import re
 import torch
-from bson import ObjectId
 from pymongo import MongoClient
 from transformers import PreTrainedTokenizerFast, BartForConditionalGeneration
 from news_letter.ict_news import ict_news
@@ -8,18 +6,17 @@ from news_letter.seoul_institute import seoul_institute
 from news_letter.statistic_bank import statistic_bank
 from news_letter.venture_doctors import venture_doctors
 from news_letter.naver_new import naver_news
-from news_preprocess.category_classification_second import category_update
+from news_preprocess.category_classification import category_update
 from news_preprocess.noun_extraction import noun_extraction
 import os
 from dotenv import load_dotenv
 import logging
 from datetime import datetime
-from news_preprocess.keyword_second import keyword_update
+from news_preprocess.keyword import keyword_update
 import torch
 from transformers import AutoModel, AutoTokenizer
 from sklearn.metrics.pairwise import cosine_similarity
 from kss import split_sentences
-import numpy as np
 import networkx as nx
 import zipfile
 import gdown

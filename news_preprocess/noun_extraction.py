@@ -1,8 +1,7 @@
-from transformers import AutoTokenizer, BertForTokenClassification, logging, AutoModelForTokenClassification
+from transformers import AutoTokenizer, logging, AutoModelForTokenClassification
 logging.set_verbosity_error()
 from konlpy.tag import Mecab
-import sys, os, torch
-import numpy as np
+import os, torch
 import kss
 from news_preprocess import ner_label
 from pymongo import MongoClient

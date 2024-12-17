@@ -1,24 +1,11 @@
-from sklearn.datasets import load_files
 import pandas as pd
-from bs4 import BeautifulSoup
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.model_selection import train_test_split
-from sklearn.naive_bayes import MultinomialNB
-import pickle
-import re
-import nltk
 import numpy as np
-import sys
-from bareunpy import Tagger
-import google.protobuf.text_format as tf
 import os
 from dotenv import load_dotenv
 
 # 환경변수에서 API 키 읽기
 load_dotenv()
 
-# 또는 로컬 서버를 실행 중인 경우:
-# t = Tagger(API_KEY, "localhost", 5757)
 
 import gdown
 import os
@@ -41,28 +28,12 @@ def load_model_from_drive(device):
         
         return model.to(device)
 
-# 기존 모델 로드 부분을 다음과 같이 변경
-
-
-
-def clean_korean_documents(documents):
-    API_KEY = os.environ.get('BAREUN_KEY')
-    t = Tagger(API_KEY, "host.docker.internal", 5757)
-    documents = re.sub(r'[^ ㄱ-ㅣ가-힣]', '', documents) #특수기호 제거, 정규 표현식
-    clean_words = []
-    clean_words.extend(t.tags([documents]).nouns())  # 결과 저장
-    documents = ' '.join(clean_words)
-    return documents
-
-
-
 import torch
 from kobert_tokenizer import KoBERTTokenizer
 from transformers import BertForSequenceClassification
 import numpy as np
 
 # GPU 사용 설정
-
 
 def predict_single_text(text, model, tokenizer, device, max_len=128):
 
@@ -87,12 +58,12 @@ def predict_single_text(text, model, tokenizer, device, max_len=128):
 
     return preds
 
-from pymongo import MongoClient
 
 def category_update(collection):
     documents = collection.find()
     df = pd.DataFrame(list(documents))
     df = df.loc[df['category'].isnull()]
+    df = df.loc[~df['noun_list'].isnull()]
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Using device: {device}")
 
@@ -108,9 +79,8 @@ def category_update(collection):
     model = load_model_from_drive(device)
     model.eval()
     for index, row in df.iterrows():
-        text = row['news_content']
-        text_to_predict = clean_korean_documents(text)
-        predicted_label = predict_single_text(text_to_predict, model, tokenizer, device)
+        text = row['noun_list']
+        predicted_label = predict_single_text(text, model, tokenizer, device)
 
         indices_above_threshold = np.where(predicted_label > 0.5)[1]
         predicted_classes = [class_list[i] for i in indices_above_threshold]
