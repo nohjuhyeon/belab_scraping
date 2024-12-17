@@ -47,7 +47,7 @@ def link_list(collection):
                     pass
                 else:
                     link_list.append(news_link)
-                    dict_news = {'news_title':news_title,'news_content':news_content,'news_company':news_company,'news_date':news_date,'news_link':news_link,'section_type':section_name}
+                    dict_news = {'news_title':news_title,'news_part_content':news_content,'news_company':news_company,'news_date':news_date,'news_link':news_link,'section_type':section_name}
                     collection.insert_one(dict_news)
                     print(dict_news)
                     news_list.append(dict_news)
@@ -72,7 +72,7 @@ def news_contents(collection):
             except:
                 news_journalist = []
         news_journalist = ', '.join(news_journalist)
-        collection.update_one({'_id': i['_id']},  {'$set': {'news_date':news_date,'news_content_origin':news_content_origin,'news_journalist':news_journalist}})
+        collection.update_one({'_id': i['_id']},  {'$set': {'news_date':news_date,'news_content':news_content_origin,'news_journalist':news_journalist}})
         crawling_count += 1
         pass
     print('naver news crawling finish')

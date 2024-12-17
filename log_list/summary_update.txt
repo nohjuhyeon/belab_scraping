@@ -160,3 +160,11 @@ Index: 4500, Elapsed Time: 00:00:00
 Index: 4600, Elapsed Time: 00:00:00
 MongoDB collection updated successfully.
 모델 다운로드 중...
+모델 압축 해제 중...
+모델 압축 해제 완료
+뉴스 675bea1856ca246c3c02d2ce의 콘텐츠가 비어 있습니다.
+뉴스 675beaff56ca246c3c02d89a의 콘텐츠가 비어 있습니다.
+뉴스 675beb4156ca246c3c02daef의 콘텐츠가 비어 있습니다.
+뉴스 675beb4356ca246c3c02db00의 콘텐츠가 비어 있습니다.
+뉴스 675beb4656ca246c3c02db12의 콘텐츠가 비어 있습니다.
+뉴스 요약 업데이트 완료!
