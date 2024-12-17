@@ -135,11 +135,11 @@ def total_update():
     # database 연결
     database = mongo_client["news_scraping"]
     # collection 작업
-    ict_news()
-    seoul_institute()
-    statistic_bank()
-    venture_doctors()
-    naver_news()
+    # ict_news()
+    # seoul_institute()
+    # statistic_bank()
+    # venture_doctors()
+    # naver_news()
     update_news_summary(database['news_list'])
     noun_extraction(database['news_list'])
     category_update(database['news_list'])

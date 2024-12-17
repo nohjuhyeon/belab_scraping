@@ -56,11 +56,10 @@ def extract_keywords_frequency(text, num_keywords=5, stop_words=None):
 def keyword_update(collection):
   documents = collection.find()
   df = pd.DataFrame(list(documents))
-  # df = df.loc[df['news_keywords'].isnull()]
+  df = df.loc[df['news_keywords'].isnull()]
   df = df.loc[~df['noun_list'].isnull()]
 
   stop_word_file = '/app/belab_scraping/news_preprocess/stop_word.txt'
-  stop_word_file = '/Users/juhyeon/belab_scraping/news_preprocess/stop_word.txt'
   # 불용어 리스트 로드
   stop_words = load_stop_words(stop_word_file)
   for index, row in df.iterrows():

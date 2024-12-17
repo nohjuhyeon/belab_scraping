@@ -51,9 +51,9 @@ def link_list(collection):
                     collection.insert_one(dict_news)
                     print(dict_news)
                     news_list.append(dict_news)
-    browser.quit()
 # 크롤링 함수 실행
 def news_contents(collection):
+    crawling_count = 0
     chrome_options = selenium_setting()
     news_list = collection.find({'news_content_origin': {'$exists': False}},{'_id': 1, 'news_link': 1})
     browser = init_browser(chrome_options)
@@ -73,8 +73,10 @@ def news_contents(collection):
                 news_journalist = []
         news_journalist = ', '.join(news_journalist)
         collection.update_one({'_id': i['_id']},  {'$set': {'news_date':news_date,'news_content_origin':news_content_origin,'news_journalist':news_journalist}})
-
+        crawling_count += 1
         pass
+    print('naver news crawling finish')
+    print('crawling count : ',crawling_count)
     pass
 
 def naver_news():

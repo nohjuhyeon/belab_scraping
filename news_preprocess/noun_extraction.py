@@ -162,6 +162,7 @@ def noun_extraction(collection):
   load_dotenv()
   documents = collection.find()
   df = pd.DataFrame(list(documents))
+  df = df.loc[df['noun_list'].isnull()]
   tokenizer = AutoTokenizer.from_pretrained("KPF/KPF-bert-ner")
   model = AutoModelForTokenClassification.from_pretrained("KPF/KPF-bert-ner")
   start_time = time.time()

@@ -136,3 +136,27 @@ Using device: cpu
 MongoDB collection updated successfully.
 MongoDB collection updated successfully.
 뉴스 요약 업데이트 완료!
+----------------뉴스 요약 업데이트 시작----------------
+2024-12-17 09:10:14.100872
+모델 다운로드 중...
+모델 압축 해제 중...
+모델 압축 해제 완료
+뉴스 675f75070b27c59cc62ffebb의 콘텐츠가 비어 있습니다.
+뉴스 675f75910b27c59cc62ffec5의 콘텐츠가 비어 있습니다.
+MongoDB collection updated successfully.
+Using device: cpu
+모델 다운로드 중...
+MongoDB collection updated successfully.
+MongoDB collection updated successfully.
+Index: 3700, Elapsed Time: 00:00:00
+Index: 3800, Elapsed Time: 00:00:00
+Index: 3900, Elapsed Time: 00:00:00
+Index: 4000, Elapsed Time: 00:00:00
+Index: 4100, Elapsed Time: 00:00:00
+Index: 4200, Elapsed Time: 00:00:00
+Index: 4300, Elapsed Time: 00:00:00
+Index: 4400, Elapsed Time: 00:00:00
+Index: 4500, Elapsed Time: 00:00:00
+Index: 4600, Elapsed Time: 00:00:00
+MongoDB collection updated successfully.
+모델 다운로드 중...

@@ -8,7 +8,7 @@
         "start_date": "2024/12/12",
         "end_date": "2025/01/09",
         "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241222842",
-        "new": true,
+        "new": false,
         "type": "인공 지능"
     },
     {
@@ -142,17 +142,5 @@
         "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241128912",
         "new": false,
         "type": null
-    },
-    {
-        "notice_id": "20241116262-00",
-        "title": "데이터 기반 자원관리시스템 개발, 구축을 위한 정보시스템 마스터플랜(ISMP) 수립 용역 [(직찰)]",
-        "price": "180,000,000 원",
-        "publishing_agency": "분당서울대학교병원",
-        "requesting_agency": "분당서울대학교병원",
-        "start_date": "2024/11/13",
-        "end_date": "2024/11/25",
-        "link": "https://www.g2b.go.kr/pt/menu/selectSubFrame.do?framesrc=/pt/menu/frameTgong.do?url=https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno=20241116262",
-        "new": false,
-        "type": "인공 지능"
     }
 ]
