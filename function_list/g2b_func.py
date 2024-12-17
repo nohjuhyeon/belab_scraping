@@ -29,8 +29,7 @@ def notice_check(download_folder_path):
                 extract_path = os.path.join(download_folder_path)
                 zip_ref.extractall(extract_path)
     notice_type = check_list_insert(notice_type, download_folder_path)
-    keywords = ['AI', '인공지능', 'LLM','생성형','초거대']
-    notice_type = ai_list_insert(notice_type, download_folder_path,keywords)
+    notice_type = ai_list_insert(notice_type, download_folder_path)
     return notice_type
 
 def check_list_insert(notice_type, download_folder_path):
@@ -117,17 +116,22 @@ def search_keywords_in_hwp(file_name,file_path, keywords):
                 return True
     return False
 
-def ai_list_insert(notice_type, download_folder_path,keywords):
+def ai_list_insert(notice_type, download_folder_path):
+    ai_keywords = ['AI', '인공지능', 'LLM','생성형','초거대']
+    db_keywords = ['Database', '데이터 레이크', '빅데이터', '데이터 허브']
     """공고 폴더 내 HWP 및 PDF 파일에서 키워드 검색 후 해당 폴더 이동"""
+    notice_type = []
     # ai_notice_list 폴더 경로 설정
     for file_name in os.listdir(download_folder_path):
         file_path = os.path.join(download_folder_path, file_name)
         if file_name.lower().endswith('.hwp') or file_name.lower().endswith('.hwpx'):
-            if search_keywords_in_hwp(file_name,file_path, keywords):
-                notice_type = '인공 지능'
+            if search_keywords_in_hwp(file_name,file_path, ai_keywords) and '인공 지능' not in notice_type:
+                notice_type.append('인공 지능')
                 time.sleep(1)
-                break
-    return notice_type
+            if search_keywords_in_hwp(file_name,file_path, db_keywords) and '데이터베이스' not in notice_type:
+                notice_type.append('데이터베이스')
+                time.sleep(1)
+    return ', '.join(notice_type)
                     
 
 def load_notice_titles_from_json(file_path):

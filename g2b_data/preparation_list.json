@@ -9,7 +9,7 @@
         "end_date": "2024/12/16",
         "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1527148",
         "new": false,
-        "type": null
+        "type": ""
     },
     {
         "notice_id": "1526897",
@@ -21,7 +21,7 @@
         "end_date": "2024/12/16",
         "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1526897",
         "new": false,
-        "type": "인공 지능"
+        "type": "인공 지능, 데이터베이스"
     },
     {
         "notice_id": "1525592",
@@ -45,7 +45,7 @@
         "end_date": "2024/12/14",
         "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1525779",
         "new": false,
-        "type": null
+        "type": ""
     },
     {
         "notice_id": "1525759",
@@ -57,7 +57,7 @@
         "end_date": "2024/12/16",
         "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1525759",
         "new": false,
-        "type": null
+        "type": ""
     },
     {
         "notice_id": "1519738",
@@ -69,7 +69,7 @@
         "end_date": "2024/12/01",
         "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1519738",
         "new": false,
-        "type": "인공 지능"
+        "type": "인공 지능, 데이터베이스"
     },
     {
         "notice_id": "1519482",
@@ -81,7 +81,7 @@
         "end_date": "2024/11/29",
         "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1519482",
         "new": false,
-        "type": null
+        "type": ""
     },
     {
         "notice_id": "1518437",
@@ -93,7 +93,7 @@
         "end_date": "2024/11/27",
         "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1518437",
         "new": false,
-        "type": "인공 지능"
+        "type": "인공 지능, 데이터베이스"
     },
     {
         "notice_id": "1518414",
@@ -105,7 +105,7 @@
         "end_date": "2024/11/27",
         "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1518414",
         "new": false,
-        "type": "인공 지능"
+        "type": "인공 지능, 데이터베이스"
     },
     {
         "notice_id": "1516048",
@@ -117,7 +117,7 @@
         "end_date": "2024/11/24",
         "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1516048",
         "new": false,
-        "type": "인공 지능"
+        "type": "인공 지능, 데이터베이스"
     },
     {
         "notice_id": "1513775",
@@ -129,7 +129,7 @@
         "end_date": "2024/11/19",
         "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1513775",
         "new": false,
-        "type": "인공 지능"
+        "type": "인공 지능, 데이터베이스"
     },
     {
         "notice_id": "1515464",
@@ -153,7 +153,7 @@
         "end_date": "2024/11/23",
         "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1514994",
         "new": false,
-        "type": "검토 필요"
+        "type": ""
     },
     {
         "notice_id": "1525042",
@@ -177,7 +177,7 @@
         "end_date": "2024/12/01",
         "link": "https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo=1520444",
         "new": false,
-        "type": null
+        "type": ""
     },
     {
         "notice_id": "1517344",
