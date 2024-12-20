@@ -35,9 +35,9 @@ def link_list(collection):
             news_contents = browser.find_elements(by=By.CSS_SELECTOR,value='div.sa_text')
             for i in range(len(news_contents)):
                 news_title = news_contents[i].find_element(by=By.CSS_SELECTOR,value='a > strong').text
-                news_content = news_contents[i].find_elements(by=By.CSS_SELECTOR,value='div')[0].text
-                news_company = news_contents[i].find_elements(by=By.CSS_SELECTOR,value='div')[1].text.split('\n')[0]
-                news_date = news_contents[i].find_elements(by=By.CSS_SELECTOR,value='div')[1].text.split('\n')[1]
+                news_content = news_contents[i].find_element(by=By.CSS_SELECTOR,value='div.sa_text_lede').text
+                news_company = news_contents[i].find_element(by=By.CSS_SELECTOR,value='div.sa_text_info_left').text
+                news_date = news_contents[i].find_element(by=By.CSS_SELECTOR,value='div.sa_text_info_right').text
                 news_link = news_contents[i].find_element(by=By.CSS_SELECTOR,value='a')
                 news_link = news_link.get_attribute('href')
 
@@ -55,7 +55,7 @@ def link_list(collection):
 def news_contents(collection):
     crawling_count = 0
     chrome_options = selenium_setting()
-    news_list = collection.find({'news_content_origin': {'$exists': False}},{'_id': 1, 'news_link': 1})
+    news_list = collection.find({'news_content': {'$exists': False}},{'_id': 1, 'news_link': 1})
     browser = init_browser(chrome_options)
     for i in news_list:
         browser.get(i['news_link'])

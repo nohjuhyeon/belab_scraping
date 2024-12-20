@@ -11,7 +11,7 @@ def preparation_search(search_keyword,notice_list,notice_titles,folder_path):
     chrome_options,download_folder_path = download_path_setting(folder_path,chrome_options)
     browser = init_browser(chrome_options)
 
-    browser.get("https://www.g2b.go.kr:8081/ep/preparation/prestd/preStdSrch.do?preStdRegNo=&referNo=&srchCl=&srchNo=&instCl=2&taskClCd=1&swbizTgYn=&instNm=&dminstCd=&listPageCount=&orderbyItem=1&instSearchRange=&myProdSearchYn=&searchDetailPrdnmNo=&searchDetailPrdnm=&pubYn=Y&taskClCds=A&recordCountPerPage=100")  # - 주소 입력
+    browser.get("https://www.g2b.go.kr:8081/ep/preparation/prestd/preStdSrch.do?preStdRegNo=&referNo=&srchCl=&srchNo=&instCl=2&taskClCd=1&prodNm=&swbizTgYn=&instNm=&dminstCd=&fromRcptDt=2024%2F09%2F18&toRcptDt=2024%2F12%2F19&listPageCount=&orderbyItem=1&instSearchRange=&myProdSearchYn=&searchDetailPrdnmNo=&searchDetailPrdnm=&pubYn=Y&taskClCds=A&recordCountPerPage=100")  # - 주소 입력
     time.sleep(1)
     keyword = browser.find_element(by=By.CSS_SELECTOR, value='#prodNm')
     keyword.send_keys(search_keyword)
@@ -83,9 +83,11 @@ def preparation_collection():
     ai_notice_list = []
     check_list = []
     for notice in notice_list:
-        if notice['type'] == 'ai':
+        if '인공지능' in notice['type'] :
             ai_notice_list.append(notice)
-        elif notice['type'] == 'check':
+        if '데이터베이스' in notice['type']:
+            ai_notice_list.append(notice)
+        if 'check' in notice['type']:
             check_list.append(notice)
     time.sleep(1)
     return ai_notice_list,check_list
