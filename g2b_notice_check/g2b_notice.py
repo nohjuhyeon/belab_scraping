@@ -113,7 +113,7 @@ def notice_collection():
             ai_notice_list.append(notice)
         if '데이터베이스' in notice['type']:
             ai_notice_list.append(notice)
-        if 'check' in notice['type']:
+        if '검토 필요' in notice['type']:
             check_list.append(notice)
     time.sleep(1)
     return ai_notice_list,check_list
