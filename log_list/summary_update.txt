@@ -261,3 +261,18 @@ MongoDB collection updated successfully.
 MongoDB collection updated successfully.
 MongoDB collection updated successfully.
 모델 다운로드 중...
+모델 압축 해제 중...
+모델 압축 해제 완료
+뉴스 675beaff56ca246c3c02d89a의 콘텐츠가 비어 있습니다.
+뉴스 675beb4156ca246c3c02daef의 콘텐츠가 비어 있습니다.
+뉴스 675beb4356ca246c3c02db00의 콘텐츠가 비어 있습니다.
+뉴스 675beb4656ca246c3c02db12의 콘텐츠가 비어 있습니다.
+Using device: cpu
+모델 다운로드 중...
+MongoDB collection updated successfully.
+MongoDB collection updated successfully.
+모델 다운로드 중...
+모델 압축 해제 중...
+모델 압축 해제 완료
+MongoDB collection updated successfully.
+뉴스 요약 업데이트 완료!
