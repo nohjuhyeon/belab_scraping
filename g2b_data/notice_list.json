@@ -8,7 +8,7 @@
         "start_date": "2024/12/19",
         "end_date": "2025/01/10",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241234627&bidseq=00&releaseYn=Y&taskClCd=5",
-        "new": true,
+        "new": false,
         "type": "인공 지능, 데이터베이스"
     },
     {
@@ -20,7 +20,7 @@
         "start_date": "2024/12/18",
         "end_date": "2025/01/10",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241231985&bidseq=00&releaseYn=Y&taskClCd=1",
-        "new": true,
+        "new": false,
         "type": "인공 지능, 데이터베이스"
     },
     {
@@ -32,7 +32,7 @@
         "start_date": "2024/12/13",
         "end_date": "",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241224268&bidseq=00&releaseYn=Y&taskClCd=5",
-        "new": true,
+        "new": false,
         "type": ""
     },
     {
@@ -44,7 +44,7 @@
         "start_date": "2024/12/11",
         "end_date": "2024/12/23",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241221025&bidseq=00&releaseYn=Y&taskClCd=5",
-        "new": true,
+        "new": false,
         "type": "인공 지능, 데이터베이스"
     },
     {
@@ -56,7 +56,7 @@
         "start_date": "2024/12/11",
         "end_date": "2024/12/16",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241202293&bidseq=01&releaseYn=Y&taskClCd=5",
-        "new": true,
+        "new": false,
         "type": "인공 지능, 데이터베이스"
     },
     {
@@ -68,7 +68,7 @@
         "start_date": "2024/12/10",
         "end_date": "2024/12/12",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241217593&bidseq=00&releaseYn=Y&taskClCd=1",
-        "new": true,
+        "new": false,
         "type": ""
     },
     {
@@ -80,7 +80,7 @@
         "start_date": "2024/12/05",
         "end_date": "2024/12/06",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241208634&bidseq=00&releaseYn=Y&taskClCd=5",
-        "new": true,
+        "new": false,
         "type": ""
     },
     {
@@ -92,7 +92,7 @@
         "start_date": "2024/12/03",
         "end_date": "2024/12/19",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241201499&bidseq=00&releaseYn=Y&taskClCd=1",
-        "new": true,
+        "new": false,
         "type": "인공 지능, 데이터베이스"
     },
     {
@@ -104,7 +104,7 @@
         "start_date": "2024/12/02",
         "end_date": "2024/12/13",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241201309&bidseq=00&releaseYn=Y&taskClCd=5",
-        "new": true,
+        "new": false,
         "type": "인공 지능, 데이터베이스"
     },
     {
@@ -116,7 +116,7 @@
         "start_date": "2024/12/02",
         "end_date": "2024/12/13",
         "link": "https://www.g2b.go.kr:8101/ep/tbid/serviceBidDtl.do?tbidno=20241151480&bidseq=00",
-        "new": true,
+        "new": false,
         "type": ""
     },
     {
@@ -128,7 +128,7 @@
         "start_date": "2024/11/28",
         "end_date": "2024/12/12",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241143038&bidseq=00&releaseYn=Y&taskClCd=5",
-        "new": true,
+        "new": false,
         "type": "인공 지능, 데이터베이스"
     },
     {
@@ -140,7 +140,7 @@
         "start_date": "2024/11/26",
         "end_date": "2024/11/26",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241137015&bidseq=00&releaseYn=Y&taskClCd=5",
-        "new": true,
+        "new": false,
         "type": ""
     },
     {
@@ -152,7 +152,7 @@
         "start_date": "2024/11/25",
         "end_date": "2024/12/13",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241134937&bidseq=00&releaseYn=Y&taskClCd=1",
-        "new": true,
+        "new": false,
         "type": "인공 지능"
     },
     {
@@ -164,7 +164,7 @@
         "start_date": "2024/11/25",
         "end_date": "",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241134670&bidseq=00&releaseYn=Y&taskClCd=5",
-        "new": true,
+        "new": false,
         "type": "인공 지능, 데이터베이스"
     },
     {
@@ -176,7 +176,7 @@
         "start_date": "2024/11/22",
         "end_date": "",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241129546&bidseq=01&releaseYn=Y&taskClCd=5",
-        "new": true,
+        "new": false,
         "type": ""
     },
     {
@@ -188,7 +188,7 @@
         "start_date": "2024/11/21",
         "end_date": "2024/12/11",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241127809&bidseq=00&releaseYn=Y&taskClCd=1",
-        "new": true,
+        "new": false,
         "type": "데이터베이스"
     },
     {
@@ -200,7 +200,7 @@
         "start_date": "2024/11/20",
         "end_date": "2024/12/06",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241111371&bidseq=01&releaseYn=Y&taskClCd=1",
-        "new": true,
+        "new": false,
         "type": "데이터베이스"
     },
     {
@@ -212,7 +212,7 @@
         "start_date": "2024/11/20",
         "end_date": "2024/12/05",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241127175&bidseq=00&releaseYn=Y&taskClCd=1",
-        "new": true,
+        "new": false,
         "type": ""
     },
     {
@@ -224,7 +224,7 @@
         "start_date": "2024/11/19",
         "end_date": "2024/12/13",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241125687&bidseq=00&releaseYn=Y&taskClCd=1",
-        "new": true,
+        "new": false,
         "type": "인공 지능, 데이터베이스"
     },
     {
@@ -236,7 +236,7 @@
         "start_date": "2024/11/14",
         "end_date": "2024/11/28",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241102488&bidseq=00&releaseYn=Y&taskClCd=1",
-        "new": true,
+        "new": false,
         "type": "인공 지능, 데이터베이스"
     },
     {
@@ -248,7 +248,7 @@
         "start_date": "2024/11/12",
         "end_date": "2024/11/28",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241115095&bidseq=00&releaseYn=Y&taskClCd=5",
-        "new": true,
+        "new": false,
         "type": ""
     },
     {
@@ -260,7 +260,7 @@
         "start_date": "2024/11/11",
         "end_date": "2024/11/22",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241113465&bidseq=00&releaseYn=Y&taskClCd=5",
-        "new": true,
+        "new": false,
         "type": ""
     },
     {
@@ -272,7 +272,7 @@
         "start_date": "2024/11/11",
         "end_date": "2024/11/22",
         "link": "https://www.g2b.go.kr:8101/ep/tbid/serviceBidDtl.do?tbidno=20241113868&bidseq=00",
-        "new": true,
+        "new": false,
         "type": ""
     },
     {
@@ -284,7 +284,7 @@
         "start_date": "2024/10/29",
         "end_date": "2024/11/20",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241032171&bidseq=00&releaseYn=Y&taskClCd=1",
-        "new": true,
+        "new": false,
         "type": ""
     },
     {
@@ -296,7 +296,7 @@
         "start_date": "2024/10/22",
         "end_date": "2024/11/04",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241020909&bidseq=00&releaseYn=Y&taskClCd=5",
-        "new": true,
+        "new": false,
         "type": ""
     },
     {
@@ -308,7 +308,7 @@
         "start_date": "2024/10/22",
         "end_date": "2024/11/04",
         "link": "https://www.g2b.go.kr:8101/ep/tbid/serviceBidDtl.do?tbidno=20241027544&bidseq=01",
-        "new": true,
+        "new": false,
         "type": ""
     },
     {
@@ -320,7 +320,7 @@
         "start_date": "2024/10/22",
         "end_date": "2024/11/05",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241013040&bidseq=00&releaseYn=Y&taskClCd=1",
-        "new": true,
+        "new": false,
         "type": "인공 지능"
     },
     {
@@ -332,7 +332,7 @@
         "start_date": "2024/10/21",
         "end_date": "2024/11/20",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241020484&bidseq=00&releaseYn=Y&taskClCd=1",
-        "new": true,
+        "new": false,
         "type": ""
     },
     {
@@ -344,7 +344,7 @@
         "start_date": "2024/10/18",
         "end_date": "2024/10/29",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241018756&bidseq=00&releaseYn=Y&taskClCd=1",
-        "new": true,
+        "new": false,
         "type": "데이터베이스"
     },
     {
@@ -356,7 +356,7 @@
         "start_date": "2024/10/14",
         "end_date": "2024/10/29",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241010957&bidseq=00&releaseYn=Y&taskClCd=1",
-        "new": true,
+        "new": false,
         "type": "인공 지능, 데이터베이스"
     },
     {
@@ -368,7 +368,7 @@
         "start_date": "2024/10/10",
         "end_date": "2024/10/21",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241008905&bidseq=00&releaseYn=Y&taskClCd=5",
-        "new": true,
+        "new": false,
         "type": "인공 지능, 데이터베이스"
     },
     {
@@ -380,7 +380,7 @@
         "start_date": "2024/10/10",
         "end_date": "2024/10/21",
         "link": "https://www.g2b.go.kr:8101/ep/tbid/serviceBidDtl.do?tbidno=20241025394&bidseq=00",
-        "new": true,
+        "new": false,
         "type": ""
     },
     {
@@ -392,7 +392,7 @@
         "start_date": "2024/10/10",
         "end_date": "2024/10/21",
         "link": "https://www.g2b.go.kr:8101/ep/tbid/serviceBidDtl.do?tbidno=20241006011&bidseq=00",
-        "new": true,
+        "new": false,
         "type": ""
     },
     {
@@ -404,7 +404,7 @@
         "start_date": "2024/10/02",
         "end_date": "2024/10/14",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241001628&bidseq=00&releaseYn=Y&taskClCd=5",
-        "new": true,
+        "new": false,
         "type": "인공 지능, 데이터베이스"
     },
     {
@@ -416,7 +416,7 @@
         "start_date": "2024/09/24",
         "end_date": "2024/10/04",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20240921136&bidseq=00&releaseYn=Y&taskClCd=5",
-        "new": true,
+        "new": false,
         "type": "인공 지능, 데이터베이스"
     },
     {
@@ -428,20 +428,8 @@
         "start_date": "2024/09/23",
         "end_date": "2024/10/04",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20240920739&bidseq=00&releaseYn=Y&taskClCd=5",
-        "new": true,
+        "new": false,
         "type": ""
-    },
-    {
-        "notice_id": "20240918788 - 00",
-        "title": "스마트양식 빅데이터센터 구축 정보화전략계획(ISP) 수립 용역",
-        "price": "600,000,000 원",
-        "publishing_agency": "부산광역시",
-        "requesting_agency": "부산광역시",
-        "start_date": "2024/09/20",
-        "end_date": "2024/10/11",
-        "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20240918788&bidseq=00&releaseYn=Y&taskClCd=5",
-        "new": true,
-        "type": "인공 지능, 데이터베이스"
     },
     {
         "notice_id": "20241235873 - 00",
@@ -452,7 +440,7 @@
         "start_date": "2024/12/20",
         "end_date": "2024/12/20",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241235873&bidseq=00&releaseYn=Y&taskClCd=5",
-        "new": true,
+        "new": false,
         "type": ""
     },
     {
@@ -464,7 +452,7 @@
         "start_date": "2024/12/12",
         "end_date": "2025/01/09",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241222842&bidseq=00&releaseYn=Y&taskClCd=5",
-        "new": true,
+        "new": false,
         "type": "인공 지능"
     },
     {
@@ -476,7 +464,7 @@
         "start_date": "2024/12/10",
         "end_date": "2024/12/16",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241216369&bidseq=00&releaseYn=Y&taskClCd=5",
-        "new": true,
+        "new": false,
         "type": "인공 지능, 데이터베이스"
     },
     {
@@ -488,7 +476,7 @@
         "start_date": "2024/12/06",
         "end_date": "2024/12/17",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241212874&bidseq=00&releaseYn=Y&taskClCd=5",
-        "new": true,
+        "new": false,
         "type": "인공 지능, 데이터베이스"
     },
     {
@@ -500,7 +488,7 @@
         "start_date": "2024/12/03",
         "end_date": "",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241202417&bidseq=01&releaseYn=Y&taskClCd=5",
-        "new": true,
+        "new": false,
         "type": "인공 지능, 데이터베이스"
     },
     {
@@ -512,7 +500,7 @@
         "start_date": "2024/12/03",
         "end_date": "",
         "link": "https://www.g2b.go.kr:8101/ep/tbid/serviceBidDtl.do?tbidno=20241202724&bidseq=00",
-        "new": true,
+        "new": false,
         "type": ""
     },
     {
@@ -524,7 +512,7 @@
         "start_date": "2024/12/02",
         "end_date": "2024/12/13",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241201696&bidseq=00&releaseYn=Y&taskClCd=5",
-        "new": true,
+        "new": false,
         "type": ""
     },
     {
@@ -536,7 +524,7 @@
         "start_date": "2024/12/02",
         "end_date": "2024/12/13",
         "link": "https://www.g2b.go.kr:8101/ep/tbid/serviceBidDtl.do?tbidno=20241150693&bidseq=00",
-        "new": true,
+        "new": false,
         "type": ""
     },
     {
@@ -548,7 +536,7 @@
         "start_date": "2024/11/27",
         "end_date": "2024/12/11",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241137200&bidseq=00&releaseYn=Y&taskClCd=5",
-        "new": true,
+        "new": false,
         "type": "인공 지능, 데이터베이스"
     },
     {
@@ -560,7 +548,7 @@
         "start_date": "2024/11/27",
         "end_date": "2024/12/11",
         "link": "https://www.g2b.go.kr:8101/ep/tbid/serviceBidDtl.do?tbidno=20241143565&bidseq=00",
-        "new": true,
+        "new": false,
         "type": ""
     },
     {
@@ -572,7 +560,7 @@
         "start_date": "2024/11/26",
         "end_date": "",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241136571&bidseq=00&releaseYn=Y&taskClCd=5",
-        "new": true,
+        "new": false,
         "type": "인공 지능"
     },
     {
@@ -584,7 +572,7 @@
         "start_date": "2024/11/26",
         "end_date": "",
         "link": "https://www.g2b.go.kr:8101/ep/tbid/serviceBidDtl.do?tbidno=20241142603&bidseq=00",
-        "new": true,
+        "new": false,
         "type": ""
     },
     {
@@ -596,7 +584,7 @@
         "start_date": "2024/11/20",
         "end_date": "2024/12/18",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241128912&bidseq=00&releaseYn=Y&taskClCd=5",
-        "new": true,
+        "new": false,
         "type": ""
     },
     {
@@ -608,7 +596,7 @@
         "start_date": "2024/11/13",
         "end_date": "",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241116262&bidseq=00&releaseYn=Y&taskClCd=5",
-        "new": true,
+        "new": false,
         "type": "인공 지능"
     },
     {
@@ -620,7 +608,7 @@
         "start_date": "2024/11/13",
         "end_date": "",
         "link": "https://www.g2b.go.kr:8101/ep/tbid/serviceBidDtl.do?tbidno=20241112239&bidseq=00",
-        "new": true,
+        "new": false,
         "type": ""
     },
     {
@@ -632,7 +620,7 @@
         "start_date": "2024/11/13",
         "end_date": "",
         "link": "https://www.g2b.go.kr:8101/ep/tbid/serviceBidDtl.do?tbidno=20241032603&bidseq=00",
-        "new": true,
+        "new": false,
         "type": ""
     },
     {
@@ -644,7 +632,7 @@
         "start_date": "2024/10/17",
         "end_date": "2024/10/29",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241018440&bidseq=00&releaseYn=Y&taskClCd=5",
-        "new": true,
+        "new": false,
         "type": "인공 지능"
     },
     {
@@ -656,7 +644,7 @@
         "start_date": "2024/10/08",
         "end_date": "2024/10/22",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241006817&bidseq=00&releaseYn=Y&taskClCd=5",
-        "new": true,
+        "new": false,
         "type": "인공 지능"
     },
     {
@@ -668,7 +656,7 @@
         "start_date": "2024/09/26",
         "end_date": "2024/10/08",
         "link": "https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20240924152&bidseq=00&releaseYn=Y&taskClCd=5",
-        "new": true,
+        "new": false,
         "type": "인공 지능, 데이터베이스"
     },
     {
@@ -680,7 +668,7 @@
         "start_date": "2024/09/26",
         "end_date": "2024/10/08",
         "link": "https://www.g2b.go.kr:8101/ep/tbid/serviceBidDtl.do?tbidno=20240926616&bidseq=00",
-        "new": true,
+        "new": false,
         "type": ""
     }
 ]

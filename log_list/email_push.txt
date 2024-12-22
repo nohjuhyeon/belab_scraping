@@ -758,3 +758,222 @@ preparation_list: No new records to add.
 파일명 :  제안요청서.hwp
 키워드 :  AI
 {'notice_id': '20241013040 - 00', 'title': '차세대 경영정보시스템 구축을 위한 정보화전략계획(ISP) 수립 용역', 'price': '240,000,000 원', 'publishing_agency': '조달청 광주지방조달청', 'requesting_agency': '한국인터넷진흥원', 'start_date': '2024/10/22', 'end_date': '2024/11/05', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241013040&bidseq=00&releaseYn=Y&taskClCd=1', 'new': False, 'type': '인공 지능'}
+{'notice_id': '20241020484 - 00', 'title': '인천형 행정체제 개편을 위한 ISP', 'price': '788,655,000 원', 'publishing_agency': '조달청 서울지방조달청', 'requesting_agency': '한국지역정보개발원', 'start_date': '2024/10/21', 'end_date': '2024/11/20', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241020484&bidseq=00&releaseYn=Y&taskClCd=1', 'new': False, 'type': ''}
+파일명 :  제안요청서_최종(1018)).hwp
+키워드 :  빅데이터
+{'notice_id': '20241018756 - 00', 'title': '국립농업박물관 디지털아카이브시스템 정보화전략계획(ISP) 수립 용역', 'price': '150,000,000 원', 'publishing_agency': '조달청 인천지방조달청', 'requesting_agency': '국립농업박물관', 'start_date': '2024/10/18', 'end_date': '2024/10/29', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241018756&bidseq=00&releaseYn=Y&taskClCd=1', 'new': False, 'type': '데이터베이스'}
+파일명 :  제안요청서_대구형 ISP_최종.hwp
+키워드 :  AI
+파일명 :  제안요청서_대구형 ISP_최종.hwp
+키워드 :  빅데이터
+{'notice_id': '20241010957 - 00', 'title': '대구형 서·논·구술형 평가 플랫폼 구축을 위한 정보화전략계획(ISP) 수립', 'price': '150,000,000 원', 'publishing_agency': '조달청 대구지방조달청', 'requesting_agency': '대구광역시교육청 대구미래교육연구원', 'start_date': '2024/10/14', 'end_date': '2024/10/29', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241010957&bidseq=00&releaseYn=Y&taskClCd=1', 'new': False, 'type': '인공 지능, 데이터베이스'}
+파일명 :  20241008905-00_1728550641443_Á¦¾È¿äÃ»¼__±â·Ï°ü¸®½Ã½ºÅÛ_±¸ÃàÀ»_À§ÇÑ_Á¤º¸È_Àü·«°èÈ¹_¼ö¸³_¿ë¿ª_»ç¾÷_Á¦¾È¿äÃ»¼_(ÃÖÁ¾).hwp
+키워드 :  AI
+파일명 :  20241008905-00_1728550641443_Á¦¾È¿äÃ»¼__±â·Ï°ü¸®½Ã½ºÅÛ_±¸ÃàÀ»_À§ÇÑ_Á¤º¸È_Àü·«°èÈ¹_¼ö¸³_¿ë¿ª_»ç¾÷_Á¦¾È¿äÃ»¼_(ÃÖÁ¾).hwp
+키워드 :  빅데이터
+{'notice_id': '20241008905 - 00', 'title': '코레일유통(주) 기록관리시스템 구축을 위한 정보화전략계획(ISP) 수립 용역', 'price': '130,000,000 원', 'publishing_agency': '코레일유통(주)', 'requesting_agency': '코레일유통(주)', 'start_date': '2024/10/10', 'end_date': '2024/10/21', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241008905&bidseq=00&releaseYn=Y&taskClCd=5', 'new': False, 'type': '인공 지능, 데이터베이스'}
+{'notice_id': '20241008905 - 00', 'title': '에티오피아 양질의 일자리 창출을 위한 ICT 기반의 창업 및 중소기업 육성 지원사업 ISP수립 PC용역', 'price': '130,000,000 원', 'publishing_agency': '한국국제협력단', 'requesting_agency': '한국국제협력단', 'start_date': '2024/10/10', 'end_date': '2024/10/21', 'link': 'https://www.g2b.go.kr:8101/ep/tbid/serviceBidDtl.do?tbidno=20241025394&bidseq=00', 'new': False, 'type': ''}
+{'notice_id': '20241008905 - 00', 'title': '스마트 안전관리 ISP 수립 용역', 'price': '130,000,000 원', 'publishing_agency': '한전원자력연료주식회사', 'requesting_agency': '구매부', 'start_date': '2024/10/10', 'end_date': '2024/10/21', 'link': 'https://www.g2b.go.kr:8101/ep/tbid/serviceBidDtl.do?tbidno=20241006011&bidseq=00', 'new': False, 'type': ''}
+파일명 :  20241001628-00_1727856969437_04_Á¦¾È¿äÃ»¼__°æ±âµµ_°¨»çÁ¤º¸½Ã½ºÅÛ_Á¤º¸È_Àü·«°èÈ¹(ISP)_¼ö¸³_¿ë¿ª.hwpx
+키워드 :  AI
+파일명 :  20241001628-00_1727856969437_04_Á¦¾È¿äÃ»¼__°æ±âµµ_°¨»çÁ¤º¸½Ã½ºÅÛ_Á¤º¸È_Àü·«°èÈ¹(ISP)_¼ö¸³_¿ë¿ª.hwpx
+키워드 :  빅데이터
+{'notice_id': '20241001628 - 00', 'title': '(긴급)경기도 감사정보시스템 정보화전략계획(ISP) 수립 용역', 'price': '120,000,000 원', 'publishing_agency': '경기도', 'requesting_agency': '경기도', 'start_date': '2024/10/02', 'end_date': '2024/10/14', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241001628&bidseq=00&releaseYn=Y&taskClCd=5', 'new': False, 'type': '인공 지능, 데이터베이스'}
+파일명 :  20240921136-00_1727140226057_(ºÙÀÓ2)_Á¦¾È¿äÃ»¼_.hwp
+키워드 :  AI
+파일명 :  20240921136-00_1727140226057_(ºÙÀÓ2)_Á¦¾È¿äÃ»¼_.hwp
+키워드 :  빅데이터
+{'notice_id': '20240921136 - 00', 'title': '농작물 수확량 검증 서비스 구축 정보화 전략계획(ISP) 수립', 'price': '300,000,000 원', 'publishing_agency': '농업정책보험금융원', 'requesting_agency': '농업정책보험금융원', 'start_date': '2024/09/24', 'end_date': '2024/10/04', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20240921136&bidseq=00&releaseYn=Y&taskClCd=5', 'new': False, 'type': '인공 지능, 데이터베이스'}
+{'notice_id': '20240920739 - 00', 'title': 'K-드론 지원센터 장비 구축 정보화전략계획(ISP) 수립', 'price': '480,000,000 원', 'publishing_agency': '항공안전기술원', 'requesting_agency': '항공안전기술원', 'start_date': '2024/09/23', 'end_date': '2024/10/04', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20240920739&bidseq=00&releaseYn=Y&taskClCd=5', 'new': False, 'type': ''}
+{'notice_id': '20241235873 - 00', 'title': '스마트 안전통합 관제시스템 ISMP 수립 사업', 'price': '117,000,000 원', 'publishing_agency': '국토안전관리원', 'requesting_agency': '국토안전관리원', 'start_date': '2024/12/20', 'end_date': '2024/12/20', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241235873&bidseq=00&releaseYn=Y&taskClCd=5', 'new': False, 'type': ''}
+파일명 :  20241222842-00_1733985750370_ºÙÀÓ2._Á¦¾È¿äÃ»¼__ÃÖÁ¾º».hwp
+키워드 :  AI
+{'notice_id': '20241222842 - 00', 'title': '차세대 일자리플랫폼 구축 ISMP 수립 용역', 'price': '180,000,000 원', 'publishing_agency': '재단법인경기도일자리재단', 'requesting_agency': '재단법인경기도일자리재단', 'start_date': '2024/12/12', 'end_date': '2025/01/09', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241222842&bidseq=00&releaseYn=Y&taskClCd=5', 'new': False, 'type': '인공 지능'}
+파일명 :  20241216369-00_1733788826131_[±ä±Þ]Àç°ø°í(Á¦¾È¿äÃ»¼_)±«»ê_½º¸¶Æ®_À¯±â³ó_Çõ½ÅÀ»_À§ÇÑ_ISMP_¼ö¸³_¿ë¿ª_vF.hwpx
+키워드 :  AI
+파일명 :  20241216369-00_1733788826131_[±ä±Þ]Àç°ø°í(Á¦¾È¿äÃ»¼_)±«»ê_½º¸¶Æ®_À¯±â³ó_Çõ½ÅÀ»_À§ÇÑ_ISMP_¼ö¸³_¿ë¿ª_vF.hwpx
+키워드 :  빅데이터
+{'notice_id': '20241216369 - 00', 'title': '재공고[긴급]괴산 스마트 유기농 혁신을 위한 ISMP 수립 용역', 'price': '200,000,000 원', 'publishing_agency': '괴산스마트유기농사업단', 'requesting_agency': '괴산스마트유기농사업단', 'start_date': '2024/12/10', 'end_date': '2024/12/16', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241216369&bidseq=00&releaseYn=Y&taskClCd=5', 'new': False, 'type': '인공 지능, 데이터베이스'}
+파일명 :  20241212874-00_1733483676496_°ø°í¹®.hwp
+키워드 :  AI
+파일명 :  20241212874-00_1733483676499_Á¦¾È¿äÃ»¼_.hwp
+키워드 :  AI
+파일명 :  20241212874-00_1733483676499_Á¦¾È¿äÃ»¼_.hwp
+키워드 :  빅데이터
+{'notice_id': '20241212874 - 00', 'title': '경기형 AI 교원역량 통합지원시스템 정보시스템마스터플랜(ISMP) 수립 위탁 용역', 'price': '300,000,000 원', 'publishing_agency': '경기도교육청', 'requesting_agency': '경기도교육청', 'start_date': '2024/12/06', 'end_date': '2024/12/17', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241212874&bidseq=00&releaseYn=Y&taskClCd=5', 'new': False, 'type': '인공 지능, 데이터베이스'}
+파일명 :  20241202417-01_1733215671940_[±ä±Þ](Á¦¾È¿äÃ»¼_)±«»ê_½º¸¶Æ®_À¯±â³ó_Çõ½ÅÀ»_À§ÇÑ_ISMP_¼ö¸³_¿ë¿ª_vF(¼öÁ¤).hwpx
+키워드 :  AI
+파일명 :  20241202417-01_1733215671940_[±ä±Þ](Á¦¾È¿äÃ»¼_)±«»ê_½º¸¶Æ®_À¯±â³ó_Çõ½ÅÀ»_À§ÇÑ_ISMP_¼ö¸³_¿ë¿ª_vF(¼öÁ¤).hwpx
+키워드 :  빅데이터
+{'notice_id': '20241202417 - 01', 'title': '[긴급]괴산 스마트 유기농 혁신을 위한 ISMP 수립 용역', 'price': '200,000,000 원', 'publishing_agency': '괴산스마트유기농사업단', 'requesting_agency': '괴산스마트유기농사업단', 'start_date': '2024/12/03', 'end_date': '', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241202417&bidseq=01&releaseYn=Y&taskClCd=5', 'new': False, 'type': '인공 지능, 데이터베이스'}
+{'notice_id': '20241202417 - 01', 'title': '지능형 데이터 플랫폼 구축 ISMP 수립 용역', 'price': '200,000,000 원', 'publishing_agency': '한국철도공사', 'requesting_agency': '한국철도공사', 'start_date': '2024/12/03', 'end_date': '', 'link': 'https://www.g2b.go.kr:8101/ep/tbid/serviceBidDtl.do?tbidno=20241202724&bidseq=00', 'new': False, 'type': ''}
+{'notice_id': '20241201696 - 00', 'title': '스마트 안전통합 관제시스템 ISMP 수립 사업', 'price': '117,000,000 원', 'publishing_agency': '국토안전관리원', 'requesting_agency': '국토안전관리원', 'start_date': '2024/12/02', 'end_date': '2024/12/13', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241201696&bidseq=00&releaseYn=Y&taskClCd=5', 'new': False, 'type': ''}
+{'notice_id': '20241201696 - 00', 'title': '신축 철도IT센터 시스템 ISMP 용역', 'price': '117,000,000 원', 'publishing_agency': '한국철도공사', 'requesting_agency': '한국철도공사', 'start_date': '2024/12/02', 'end_date': '2024/12/13', 'link': 'https://www.g2b.go.kr:8101/ep/tbid/serviceBidDtl.do?tbidno=20241150693&bidseq=00', 'new': False, 'type': ''}
+파일명 :  20241137200-00_1732599340024_1._Á¦¾È¿äÃ»¼_(Â÷¼¼´ë_°æÁÖ¿î¿µ°ü¸®½Ã½ºÅÛ_±¸Ãà_ÄÁ¼³ÆÃ_BRP_ISMP).hwp
+키워드 :  AI
+파일명 :  20241137200-00_1732599340024_1._Á¦¾È¿äÃ»¼_(Â÷¼¼´ë_°æÁÖ¿î¿µ°ü¸®½Ã½ºÅÛ_±¸Ãà_ÄÁ¼³ÆÃ_BRP_ISMP).hwp
+키워드 :  빅데이터
+{'notice_id': '20241137200 - 00', 'title': '경주 다변화 대응을 위한 차세대 경주운영관리시스템 구축 컨설팅(BPR/ISMP)', 'price': '587,000,000 원', 'publishing_agency': '서울올림픽기념국민체육진흥공단 경륜경정총괄본부', 'requesting_agency': '서울올림픽기념국민체육진흥공단 경륜경정총괄본부', 'start_date': '2024/11/27', 'end_date': '2024/12/11', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241137200&bidseq=00&releaseYn=Y&taskClCd=5', 'new': False, 'type': '인공 지능, 데이터베이스'}
+{'notice_id': '20241137200 - 00', 'title': 'ODA 교육관리시스템 고도화를 위한 ISMP 수립 용역', 'price': '587,000,000 원', 'publishing_agency': '한국국제협력단', 'requesting_agency': '한국국제협력단', 'start_date': '2024/11/27', 'end_date': '2024/12/11', 'link': 'https://www.g2b.go.kr:8101/ep/tbid/serviceBidDtl.do?tbidno=20241143565&bidseq=00', 'new': False, 'type': ''}
+파일명 :  20241136571-00_1732585998470_3._°ú¾÷Áö½Ã¼_.hwp
+키워드 :  AI
+파일명 :  20241136571-00_1732585998422_1._Àç°ø°í(2024-0417).hwp
+키워드 :  인공지능
+파일명 :  20241136571-00_1732585998468_2._Á¦¾È¿äÃ»¼_.hwp
+키워드 :  인공지능
+{'notice_id': '20241136571 - 00', 'title': '데이터 기반 자원관리시스템 개발, 구축을 위한 정보시스템 마스터플랜(ISMP) 수립 용역(재공고)', 'price': '198,000,000 원', 'publishing_agency': '분당서울대학교병원', 'requesting_agency': '분당서울대학교병원', 'start_date': '2024/11/26', 'end_date': '', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241136571&bidseq=00&releaseYn=Y&taskClCd=5', 'new': False, 'type': '인공 지능'}
+{'notice_id': '20241136571 - 00', 'title': '철도시설 유지관리 분석시스템 마스터플랜(ISMP) 수립 용역', 'price': '198,000,000 원', 'publishing_agency': '국가철도공단', 'requesting_agency': '국가철도공단', 'start_date': '2024/11/26', 'end_date': '', 'link': 'https://www.g2b.go.kr:8101/ep/tbid/serviceBidDtl.do?tbidno=20241142603&bidseq=00', 'new': False, 'type': ''}
+{'notice_id': '20241128912 - 00', 'title': '협약업무 사업관리 시스템 구축을 위한 ISMP 수립', 'price': '444,100,000 원', 'publishing_agency': '국방과학연구소', 'requesting_agency': '국방과학연구소', 'start_date': '2024/11/20', 'end_date': '2024/12/18', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241128912&bidseq=00&releaseYn=Y&taskClCd=5', 'new': False, 'type': ''}
+파일명 :  20241116262-00_1731459851414_3._°ú¾÷Áö½Ã¼_.hwp
+키워드 :  AI
+파일명 :  20241116262-00_1731459851407_1._ÀÔÂû°ø°í(2024-0393).hwp
+키워드 :  인공지능
+파일명 :  20241116262-00_1731459851412_2._Á¦¾È¿äÃ»¼_.hwp
+키워드 :  인공지능
+{'notice_id': '20241116262 - 00', 'title': '데이터 기반 자원관리시스템 개발, 구축을 위한 정보시스템 마스터플랜(ISMP) 수립 용역', 'price': '198,000,000 원', 'publishing_agency': '분당서울대학교병원', 'requesting_agency': '분당서울대학교병원', 'start_date': '2024/11/13', 'end_date': '', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241116262&bidseq=00&releaseYn=Y&taskClCd=5', 'new': False, 'type': '인공 지능'}
+{'notice_id': '20241116262 - 00', 'title': '디지털 안전관리 전환을 위한 ISMP 수립 용역(총체 및 1차)', 'price': '198,000,000 원', 'publishing_agency': '한국철도공사', 'requesting_agency': '한국철도공사', 'start_date': '2024/11/13', 'end_date': '', 'link': 'https://www.g2b.go.kr:8101/ep/tbid/serviceBidDtl.do?tbidno=20241112239&bidseq=00', 'new': False, 'type': ''}
+{'notice_id': '20241116262 - 00', 'title': '디지털 안전관리 전환을 위한 ISMP 수립 용역(총체 및 1차)', 'price': '198,000,000 원', 'publishing_agency': '한국철도공사', 'requesting_agency': '한국철도공사', 'start_date': '2024/11/13', 'end_date': '', 'link': 'https://www.g2b.go.kr:8101/ep/tbid/serviceBidDtl.do?tbidno=20241032603&bidseq=00', 'new': False, 'type': ''}
+파일명 :  20241018440-00_1729151401999_2-3._2024_±â¾÷SOS³Ý_°³Æí(ISMP)_°ú¾÷ÀÌÇà¿äÃ»¼_.hwp
+키워드 :  AI
+파일명 :  20241018440-00_1729151401997_2-2._Á¦¾È¿äÃ»¼_(°æ±âµµ_±â¾÷¾Ö·Î_¿ø½ºÅé_ÇØ°á_ÇÃ·§Æû_±¸Ãà_ISMP_¼ö¸³).hwp
+키워드 :  AI
+{'notice_id': '20241018440 - 00', 'title': '경기도 기업SOS넷 개편 정보화전략(ISMP) 수립 용역', 'price': '50,000,000 원', 'publishing_agency': '(재)경기도경제과학진흥원', 'requesting_agency': '(재)경기도경제과학진흥원', 'start_date': '2024/10/17', 'end_date': '2024/10/29', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241018440&bidseq=00&releaseYn=Y&taskClCd=5', 'new': False, 'type': '인공 지능'}
+파일명 :  20241006817-00_1728373338264_WTA_Á¤º¸½Ã½ºÅÛ_¸¶½ºÅÍÇÃ·£(ISMP)_¼ö¸³_¹×_¾÷¹«Àç¼³°è(BPR)_Á¦¾È¿äÃ»¼_(ÃÖÁ¾).hwp
+키워드 :  AI
+{'notice_id': '20241006817 - 00', 'title': 'WTA 정보시스템 마스터플랜(ISMP) 수립 및 업무재설계(BPR)', 'price': '180,000,000 원', 'publishing_agency': '국기원', 'requesting_agency': '국기원', 'start_date': '2024/10/08', 'end_date': '2024/10/22', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241006817&bidseq=00&releaseYn=Y&taskClCd=5', 'new': False, 'type': '인공 지능'}
+파일명 :  20240924152-00_1727311916706_2.[Á¦¾È¿äÃ»¼_]°øÀå¼³¸³_ÀÎÇã°¡_»çÀüÁø´Ü_¼_ºñ½º_È®´ë±¸Ãà_ISMP_¿ë¿ª.hwp
+키워드 :  AI
+파일명 :  20240924152-00_1727311916706_2.[Á¦¾È¿äÃ»¼_]°øÀå¼³¸³_ÀÎÇã°¡_»çÀüÁø´Ü_¼_ºñ½º_È®´ë±¸Ãà_ISMP_¿ë¿ª.hwp
+키워드 :  빅데이터
+{'notice_id': '20240924152 - 00', 'title': '공장설립 인허가 사전진단 서비스 확대구축을 위한 ISMP 용역', 'price': '108,000,000 원', 'publishing_agency': '한국산업단지공단', 'requesting_agency': '한국산업단지공단', 'start_date': '2024/09/26', 'end_date': '2024/10/08', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20240924152&bidseq=00&releaseYn=Y&taskClCd=5', 'new': False, 'type': '인공 지능, 데이터베이스'}
+{'notice_id': '20240924152 - 00', 'title': '인도적지원 정보시스템 기본설계(ISMP) 용역', 'price': '108,000,000 원', 'publishing_agency': '한국국제협력단', 'requesting_agency': '한국국제협력단', 'start_date': '2024/09/26', 'end_date': '2024/10/08', 'link': 'https://www.g2b.go.kr:8101/ep/tbid/serviceBidDtl.do?tbidno=20240926616&bidseq=00', 'new': False, 'type': ''}
+파일명 :  [Á¦¾È¿äÃ»¼_]_ÇÑ±¹¹«¿ªº¸Çè°ø»ç_Á¤º¸°è½Ã½ºÅÛ_°íµµÈ__ISP_¼ö¸³_ÄÁ¼³ÆÃ.hwp
+키워드 :  AI
+파일명 :  [Á¦¾È¿äÃ»¼_]_ÇÑ±¹¹«¿ªº¸Çè°ø»ç_Á¤º¸°è½Ã½ºÅÛ_°íµµÈ__ISP_¼ö¸³_ÄÁ¼³ÆÃ.hwp
+키워드 :  빅데이터
+파일명 :  제안요청서(통합경영관리시스템(ERP) 재구축을 위한 정보전략계획(ISP) 수립).hwpx
+키워드 :  AI
+파일명 :  제안요청서(통합경영관리시스템(ERP) 재구축을 위한 정보전략계획(ISP) 수립).hwpx
+키워드 :  빅데이터
+파일명 :  Á¦¾È¿äÃ»¼_(¸ÂÃãÇüº¹Áö_ÅëÇÕ½Ã½ºÅÛ_±¸Ãà_ÄÁ¼³ÆÃ).hwp
+키워드 :  AI
+파일명 :  Á¦¾È¿äÃ»¼_(¸ÂÃãÇüº¹Áö_ÅëÇÕ½Ã½ºÅÛ_±¸Ãà_ÄÁ¼³ÆÃ).hwp
+키워드 :  빅데이터
+파일명 :  1-2._¹°Ç°±Ô°Ý¼__Áß¾Ó´ëÇÐ±³_ÀÇ°ú´ëÇÐ_À¶ÇÕ_·¯´×_ÀÎÇÁ¶ó_±¸Ãà(´ëÇüLED_Display_¿Ü_18Á¾)_±¸¸Å.hwp
+키워드 :  AI
+파일명 :  제안 요청서(최종 수정본).hwp
+키워드 :  AI
+파일명 :  제안 요청서(최종 수정본).hwp
+키워드 :  빅데이터
+파일명 :  Á¦¾È¿äÃ»¼__ÇÐ»ý°Ç°_Á¤º¸_ÇÃ·§Æû_ÀüÈ¯À»_À§ÇÑ_Á¤º¸È_Àü·«°èÈ¹(ISP)_¼ö¸³_241121.hwp
+키워드 :  AI
+파일명 :  Á¦¾È¿äÃ»¼__ÇÐ»ý°Ç°_Á¤º¸_ÇÃ·§Æû_ÀüÈ¯À»_À§ÇÑ_Á¤º¸È_Àü·«°èÈ¹(ISP)_¼ö¸³_241121.hwp
+키워드 :  빅데이터
+파일명 :  붙임1 제안요청서(국립통일정보자료센터 정보시스템 ISP).hwpx
+키워드 :  AI
+파일명 :  붙임1 제안요청서(국립통일정보자료센터 정보시스템 ISP).hwpx
+키워드 :  빅데이터
+파일명 :  2.±¹¹æÀüÁ÷±³À°¿ø_½º¸¶Æ®ÇÃ·§Æû_±¸Ãà_ISP¿ë¿ª_Á¦¾È¿äÃ»¼_.hwp
+키워드 :  AI
+파일명 :  2.±¹¹æÀüÁ÷±³À°¿ø_½º¸¶Æ®ÇÃ·§Æû_±¸Ãà_ISP¿ë¿ª_Á¦¾È¿äÃ»¼_.hwp
+키워드 :  빅데이터
+파일명 :  Á¦¾È¿äÃ»¼_(¸ÂÃãÇüº¹Áö_ÅëÇÕ½Ã½ºÅÛ_±¸Ãà_ÄÁ¼³ÆÃ).hwp
+키워드 :  AI
+파일명 :  Á¦¾È¿äÃ»¼_(¸ÂÃãÇüº¹Áö_ÅëÇÕ½Ã½ºÅÛ_±¸Ãà_ÄÁ¼³ÆÃ).hwp
+키워드 :  빅데이터
+파일명 :  [붙임3] 제안요청서_연락처.hwp
+키워드 :  AI
+파일명 :  [붙임3] 제안요청서_연락처.hwp
+키워드 :  빅데이터
+파일명 :  Á¦¾È¿äÃ»¼_.hwp
+키워드 :  AI
+파일명 :  Á¦¾È¿äÃ»¼_.hwp
+키워드 :  빅데이터
+파일명 :  ★제안요청서_V25.hwp
+키워드 :  AI
+파일명 :  2. 241030 돌봄 통합지원정보시스템 구축 ISP 수립_제안요청서◆_241106_최종.hwpx
+키워드 :  AI
+파일명 :  2. 241030 돌봄 통합지원정보시스템 구축 ISP 수립_제안요청서◆_241106_최종.hwpx
+키워드 :  빅데이터
+파일명 :  붙임1 제안요청서(국립통일정보자료센터 정보시스템 ISP)_수정.hwpx
+키워드 :  AI
+파일명 :  붙임1 제안요청서(국립통일정보자료센터 정보시스템 ISP)_수정.hwpx
+키워드 :  빅데이터
+파일명 :  붙임1. 경영관리시스템 구축 ISPBPR 수립 사업 제안요청서.hwp
+키워드 :  빅데이터
+파일명 :  붙임1. 제안요청서(2024년 중장기 정보화전략계획(ISP) 수립)_수정후.hwp
+키워드 :  AI
+파일명 :  붙임1. 제안요청서(2024년 중장기 정보화전략계획(ISP) 수립)_수정후.hwp
+키워드 :  빅데이터
+파일명 :  Á¦¾È¿äÃ»¼_(ÇÑ±¹±¤ÇØ±¤¾÷°ø´Ü_Á¤º¸È_Àü·«°èÈ¹(ISP)_¼ö¸³_¿ë¿ª).hwp
+키워드 :  AI
+파일명 :  Á¦¾È¿äÃ»¼_(ÇÑ±¹±¤ÇØ±¤¾÷°ø´Ü_Á¤º¸È_Àü·«°èÈ¹(ISP)_¼ö¸³_¿ë¿ª).hwp
+키워드 :  빅데이터
+파일명 :  3. [제안요청서]한국인터넷진흥원 차세대경영정보시스템 구축을 위한 ISP 사업_배점수정.hwp
+키워드 :  AI
+파일명 :  제안요청서_최종.hwp
+키워드 :  빅데이터
+파일명 :  Á¦¾È¿äÃ»¼_.hwp
+키워드 :  AI
+파일명 :  Á¦¾È¿äÃ»¼_.hwp
+키워드 :  빅데이터
+파일명 :  ┴ª╛╚┐Σ├╗╝¡.hwp
+키워드 :  AI
+파일명 :  ┴ª╛╚┐Σ├╗╝¡.hwp
+키워드 :  빅데이터
+파일명 :  Á¦¾È¿äÃ»¼__ÇÐ»ý°Ç°_Á¤º¸_ÇÃ·§Æû_ÀüÈ¯À»_À§ÇÑ_Á¤º¸È_Àü·«°èÈ¹(ISP)_¼ö¸³.hwp
+키워드 :  AI
+파일명 :  Á¦¾È¿äÃ»¼__ÇÐ»ý°Ç°_Á¤º¸_ÇÃ·§Æû_ÀüÈ¯À»_À§ÇÑ_Á¤º¸È_Àü·«°èÈ¹(ISP)_¼ö¸³.hwp
+키워드 :  빅데이터
+파일명 :  Á¦¾È¿äÃ»¼__ÄÚ·¹ÀÏÀ¯Åë(ÁÖ)_±â·Ï°ü¸®½Ã½ºÅÛ_±¸ÃàÀ»_À§ÇÑ_Á¤º¸È_Àü·«°èÈ¹(ISP)_¼ö¸³_¿ë¿ª(°Ô½Ã).hwp
+키워드 :  AI
+파일명 :  Á¦¾È¿äÃ»¼__ÄÚ·¹ÀÏÀ¯Åë(ÁÖ)_±â·Ï°ü¸®½Ã½ºÅÛ_±¸ÃàÀ»_À§ÇÑ_Á¤º¸È_Àü·«°èÈ¹(ISP)_¼ö¸³_¿ë¿ª(°Ô½Ã).hwp
+키워드 :  빅데이터
+파일명 :  04_Á¦¾È¿äÃ»¼__°æ±âµµ_°¨»çÁ¤º¸½Ã½ºÅÛ_Á¤º¸È_Àü·«°èÈ¹(ISP)_¼ö¸³_¿ë¿ª.hwpx
+키워드 :  AI
+파일명 :  04_Á¦¾È¿äÃ»¼__°æ±âµµ_°¨»çÁ¤º¸½Ã½ºÅÛ_Á¤º¸È_Àü·«°èÈ¹(ISP)_¼ö¸³_¿ë¿ª.hwpx
+키워드 :  빅데이터
+파일명 :  (ºÙÀÓ2)_Á¦¾È¿äÃ»¼_.hwp
+키워드 :  AI
+파일명 :  (ºÙÀÓ2)_Á¦¾È¿äÃ»¼_.hwp
+키워드 :  빅데이터
+파일명 :  제안요청서_로봇실증 데이터 저장 및 활용 인프라 구축 ISMP 용역.hwp
+키워드 :  빅데이터
+파일명 :  ºÙÀÓ2._Á¦¾È¿äÃ»¼__(4).hwp
+키워드 :  AI
+파일명 :  [±ä±Þ](Á¦¾È¿äÃ»¼_)±«»ê_½º¸¶Æ®_À¯±â³ó_Çõ½ÅÀ»_À§ÇÑ_ISMP_¼ö¸³_¿ë¿ª_»çÀü±Ô°Ý_vF.hwpx
+키워드 :  AI
+파일명 :  [±ä±Þ](Á¦¾È¿äÃ»¼_)±«»ê_½º¸¶Æ®_À¯±â³ó_Çõ½ÅÀ»_À§ÇÑ_ISMP_¼ö¸³_¿ë¿ª_»çÀü±Ô°Ý_vF.hwpx
+키워드 :  빅데이터
+파일명 :  3.과업내용서(ISMP).hwp
+키워드 :  AI
+파일명 :  2.제안요청서(ISMP).hwp
+키워드 :  AI
+파일명 :  [ºÙÀÓ]_Á¦¾È¿äÃ»¼_(Â÷¼¼´ë_°æÁÖ¿î¿µ°ü¸®½Ã½ºÅÛ_±¸Ãà_ÄÁ¼³ÆÃ_BPR_ISMP).hwp
+키워드 :  AI
+파일명 :  [ºÙÀÓ]_Á¦¾È¿äÃ»¼_(Â÷¼¼´ë_°æÁÖ¿î¿µ°ü¸®½Ã½ºÅÛ_±¸Ãà_ÄÁ¼³ÆÃ_BPR_ISMP).hwp
+키워드 :  빅데이터
+파일명 :  Á¦¾È¿äÃ»¼_(¾È).hwp
+키워드 :  인공지능
+파일명 :  °ú¾÷Áö½Ã¼_.hwp
+키워드 :  AI
+파일명 :  [Àç¹«°ü¸®°ú-31667_(Ã·ºÎ)_°æ±âµµ±³À°Ã»_±³À°¿ª·®Á¤Ã¥°ú]_Á¦¾È¿äÃ»¼_(°æ±âÇü_AI_±³¿ø¿ª·®_ÅëÇÕÁö¿ø½Ã½ºÅÛ_±¸ÃàÀ»_À§ÇÑ_ISMP_¼ö¸³).hwp
+키워드 :  AI
+파일명 :  [Àç¹«°ü¸®°ú-31667_(Ã·ºÎ)_°æ±âµµ±³À°Ã»_±³À°¿ª·®Á¤Ã¥°ú]_Á¦¾È¿äÃ»¼_(°æ±âÇü_AI_±³¿ø¿ª·®_ÅëÇÕÁö¿ø½Ã½ºÅÛ_±¸ÃàÀ»_À§ÇÑ_ISMP_¼ö¸³).hwp
+키워드 :  빅데이터
+파일명 :  WTA_Á¤º¸½Ã½ºÅÛ_¸¶½ºÅÍÇÃ·£(ISMP)_¼ö¸³_¹×_¾÷¹«Àç¼³°è(BPR)_Á¦¾È¿äÃ»¼_(ÃÖÁ¾).hwp
+키워드 :  AI
+파일명 :  2.[Á¦¾È¿äÃ»¼_]°øÀå¼³¸³_ÀÎÇã°¡_»çÀüÁø´Ü_¼_ºñ½º_È®´ë±¸Ãà_ISMP_¿ë¿ª.hwp
+키워드 :  AI
+파일명 :  2.[Á¦¾È¿äÃ»¼_]°øÀå¼³¸³_ÀÎÇã°¡_»çÀüÁø´Ü_¼_ºñ½º_È®´ë±¸Ãà_ISMP_¿ë¿ª.hwp
+키워드 :  빅데이터
+이메일을 보내겠습니다.
+메일이 성공적으로 발송되었습니다.
+notice_list: No new records to add.
+preparation_list: No new records to add.
+Data updated and sorted successfully.
+Data updated and sorted successfully.
+Data updated and sorted successfully.
+Data updated and sorted successfully.
+Data updated and sorted successfully.
+공고 확인 완료!
