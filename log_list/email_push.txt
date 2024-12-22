@@ -680,3 +680,81 @@ Data updated and sorted successfully.
 notice_list: No new records to add.
 preparation_list: No new records to add.
 공고 확인 완료!
+----------------공고 확인 시작----------------
+2024-12-22 09:00:02.765788
+나라장터 공고를 찾습니다.
+파일명 :  20241234627-00_1734590186290_Á¦¾È¿äÃ»¼_(¸ÂÃãÇüº¹Áö_ÅëÇÕ½Ã½ºÅÛ_±¸Ãà_ÄÁ¼³ÆÃ).hwp
+키워드 :  AI
+파일명 :  20241234627-00_1734590186290_Á¦¾È¿äÃ»¼_(¸ÂÃãÇüº¹Áö_ÅëÇÕ½Ã½ºÅÛ_±¸Ãà_ÄÁ¼³ÆÃ).hwp
+키워드 :  빅데이터
+{'notice_id': '20241234627 - 00', 'title': '맞춤형복지 통합시스템 구축을 위한 컨설팅(BPR/ISP)', 'price': '269,500,000 원', 'publishing_agency': '공무원연금공단', 'requesting_agency': '공무원연금공단', 'start_date': '2024/12/19', 'end_date': '2025/01/10', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241234627&bidseq=00&releaseYn=Y&taskClCd=5', 'new': False, 'type': '인공 지능, 데이터베이스'}
+파일명 :  제안 요청서(최종 수정본).hwp
+키워드 :  AI
+파일명 :  제안 요청서(최종 수정본).hwp
+키워드 :  빅데이터
+{'notice_id': '20241231985 - 00', 'title': '차세대 국립법무병원 통합의료정보시스템 구축 ISP', 'price': '129,000,000 원', 'publishing_agency': '조달청 대전지방조달청', 'requesting_agency': '법무부 국립법무병원', 'start_date': '2024/12/18', 'end_date': '2025/01/10', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241231985&bidseq=00&releaseYn=Y&taskClCd=1', 'new': False, 'type': '인공 지능, 데이터베이스'}
+{'notice_id': '20241224268 - 00', 'title': '한국무역보험공사 기업신용조회 서비스 구축 ISP 수립', 'price': '335,000,000 원', 'publishing_agency': '한국무역보험공사', 'requesting_agency': '한국무역보험공사', 'start_date': '2024/12/13', 'end_date': '', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241224268&bidseq=00&releaseYn=Y&taskClCd=5', 'new': False, 'type': ''}
+파일명 :  20241221025-00_1733909879179_[ºÙÀÓ2]_»ê¾÷Àç»êÁ¤º¸_ºÐ¼®½Ã½ºÅÛ_±¸Ãà_Á¤º¸È_Àü·«°èÈ¹(ISP)_¼ö¸³_»ç¾÷_Á¦¾È¿äÃ»¼__ÃÖÁ¾.hwpx
+키워드 :  AI
+파일명 :  20241221025-00_1733909879179_[ºÙÀÓ2]_»ê¾÷Àç»êÁ¤º¸_ºÐ¼®½Ã½ºÅÛ_±¸Ãà_Á¤º¸È_Àü·«°èÈ¹(ISP)_¼ö¸³_»ç¾÷_Á¦¾È¿äÃ»¼__ÃÖÁ¾.hwpx
+키워드 :  빅데이터
+{'notice_id': '20241221025 - 00', 'title': '산업재산정보 분석시스템 구축 정보화전략계획(ISP) 수립', 'price': '465,000,000 원', 'publishing_agency': '특허청', 'requesting_agency': '특허청', 'start_date': '2024/12/11', 'end_date': '2024/12/23', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241221025&bidseq=00&releaseYn=Y&taskClCd=5', 'new': False, 'type': '인공 지능, 데이터베이스'}
+파일명 :  20241202293-01_1733881613687_Á¦¾È¿äÃ»¼_(¸ÂÃãÇüº¹Áö_ÅëÇÕ½Ã½ºÅÛ_±¸Ãà_ÄÁ¼³ÆÃ).hwp
+키워드 :  AI
+파일명 :  20241202293-01_1733881613687_Á¦¾È¿äÃ»¼_(¸ÂÃãÇüº¹Áö_ÅëÇÕ½Ã½ºÅÛ_±¸Ãà_ÄÁ¼³ÆÃ).hwp
+키워드 :  빅데이터
+{'notice_id': '20241202293 - 01', 'title': '맞춤형복지 통합시스템 구축을 위한 컨설팅(BPR/ISP)', 'price': '269,500,000 원', 'publishing_agency': '공무원연금공단', 'requesting_agency': '공무원연금공단', 'start_date': '2024/12/11', 'end_date': '2024/12/16', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241202293&bidseq=01&releaseYn=Y&taskClCd=5', 'new': False, 'type': '인공 지능, 데이터베이스'}
+{'notice_id': '20241217593 - 00', 'title': '정보화전략계획(ISP) 수립 사업', 'price': '494,000,000 원', 'publishing_agency': '조달청 부산지방조달청', 'requesting_agency': '한국해양진흥공사', 'start_date': '2024/12/10', 'end_date': '2024/12/12', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241217593&bidseq=00&releaseYn=Y&taskClCd=1', 'new': False, 'type': ''}
+{'notice_id': '20241208634 - 00', 'title': '2025년 ISP산출물 검토지원시스템 운영 및 유지관리', 'price': '69,955,950 원', 'publishing_agency': '한국지능정보사회진흥원', 'requesting_agency': '한국지능정보사회진흥원', 'start_date': '2024/12/05', 'end_date': '2024/12/06', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241208634&bidseq=00&releaseYn=Y&taskClCd=5', 'new': False, 'type': ''}
+파일명 :  [붙임2] 제안요청서(국립통일정보자료센터 정보시스템 ISP) (수정).hwpx
+키워드 :  AI
+파일명 :  [붙임2] 제안요청서(국립통일정보자료센터 정보시스템 ISP) (수정).hwpx
+키워드 :  빅데이터
+{'notice_id': '20241201499 - 00', 'title': '국립통일정보자료센터 정보시스템 ISP 수립', 'price': '131,000,000 원', 'publishing_agency': '조달청 서울지방조달청', 'requesting_agency': '통일부', 'start_date': '2024/12/03', 'end_date': '2024/12/19', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241201499&bidseq=00&releaseYn=Y&taskClCd=1', 'new': False, 'type': '인공 지능, 데이터베이스'}
+파일명 :  20241201309-00_1733116780303_Á¦¾È¿äÃ»¼__ÇÐ»ý°Ç°_Á¤º¸_ÇÃ·§Æû_ÀüÈ¯À»_À§ÇÑ_Á¤º¸È_Àü·«°èÈ¹(ISP)_¼ö¸³_241121.hwp
+키워드 :  AI
+파일명 :  20241201309-00_1733116780303_Á¦¾È¿äÃ»¼__ÇÐ»ý°Ç°_Á¤º¸_ÇÃ·§Æû_ÀüÈ¯À»_À§ÇÑ_Á¤º¸È_Àü·«°èÈ¹(ISP)_¼ö¸³_241121.hwp
+키워드 :  빅데이터
+{'notice_id': '20241201309 - 00', 'title': '학생건강정보 플랫폼 전환을 위한 정보화전략계획(ISP) 수립', 'price': '50,000,000 원', 'publishing_agency': '재단법인한국교육환경보호원', 'requesting_agency': '재단법인한국교육환경보호원', 'start_date': '2024/12/02', 'end_date': '2024/12/13', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241201309&bidseq=00&releaseYn=Y&taskClCd=5', 'new': False, 'type': '인공 지능, 데이터베이스'}
+{'notice_id': '20241201309 - 00', 'title': '인천공항 데이터플랫폼 통합 ISP 용역', 'price': '50,000,000 원', 'publishing_agency': '인천국제공항공사', 'requesting_agency': '인천국제공항공사', 'start_date': '2024/12/02', 'end_date': '2024/12/13', 'link': 'https://www.g2b.go.kr:8101/ep/tbid/serviceBidDtl.do?tbidno=20241151480&bidseq=00', 'new': False, 'type': ''}
+파일명 :  20241143038-00_1732800578634_2.±¹¹æÀüÁ÷±³À°¿ø_½º¸¶Æ®ÇÃ·§Æû_±¸Ãà_ISP¿ë¿ª_Á¦¾È¿äÃ»¼_.hwp
+키워드 :  AI
+파일명 :  20241143038-00_1732800578634_2.±¹¹æÀüÁ÷±³À°¿ø_½º¸¶Æ®ÇÃ·§Æû_±¸Ãà_ISP¿ë¿ª_Á¦¾È¿äÃ»¼_.hwp
+키워드 :  빅데이터
+{'notice_id': '20241143038 - 00', 'title': '국방전직교육원 스마트플랫폼 구축 ISP 용역', 'price': '264,000,000 원', 'publishing_agency': '국방전직교육원', 'requesting_agency': '국방전직교육원', 'start_date': '2024/11/28', 'end_date': '2024/12/12', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241143038&bidseq=00&releaseYn=Y&taskClCd=5', 'new': False, 'type': '인공 지능, 데이터베이스'}
+{'notice_id': '20241137015 - 00', 'title': '국립수목원 국제식물감시네트워크(ISPN) 실무자 워크숍 운영', 'price': '19,000,000 원', 'publishing_agency': '산림청 국립수목원', 'requesting_agency': '산림청 국립수목원', 'start_date': '2024/11/26', 'end_date': '2024/11/26', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241137015&bidseq=00&releaseYn=Y&taskClCd=5', 'new': False, 'type': ''}
+파일명 :  제안요청서.hwp
+키워드 :  AI
+{'notice_id': '20241134937 - 00', 'title': '선거기반체계 고도화 ISP', 'price': '214,773,000 원', 'publishing_agency': '조달청 서울지방조달청', 'requesting_agency': '중앙선거관리위원회', 'start_date': '2024/11/25', 'end_date': '2024/12/13', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241134937&bidseq=00&releaseYn=Y&taskClCd=1', 'new': False, 'type': '인공 지능'}
+파일명 :  20241134670-00_1732510343169_Á¦¾È¿äÃ»¼_(¼öÁ¤).hwp
+키워드 :  AI
+파일명 :  20241134670-00_1732510343169_Á¦¾È¿äÃ»¼_(¼öÁ¤).hwp
+키워드 :  빅데이터
+{'notice_id': '20241134670 - 00', 'title': 'DGIST 차세대 대학정보시스템 구축 BPR/ISP 용역', 'price': '600,000,000 원', 'publishing_agency': '대구경북과학기술원', 'requesting_agency': '대구경북과학기술원', 'start_date': '2024/11/25', 'end_date': '', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241134670&bidseq=00&releaseYn=Y&taskClCd=5', 'new': False, 'type': '인공 지능, 데이터베이스'}
+{'notice_id': '20241129546 - 01', 'title': 'DGIST 차세대 대학정보시스템 구축 BPR/ISP 용역', 'price': '600,000,000 원', 'publishing_agency': '대구경북과학기술원', 'requesting_agency': '대구경북과학기술원', 'start_date': '2024/11/22', 'end_date': '', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241129546&bidseq=01&releaseYn=Y&taskClCd=5', 'new': False, 'type': ''}
+파일명 :  붙임. 경영관리시스템 구축 ISPBPR 수립 사업 제안요청서_수정.hwp
+키워드 :  빅데이터
+{'notice_id': '20241127809 - 00', 'title': '경영관리시스템 구축 ISP/BPR 수립 사업', 'price': '307,410,000 원', 'publishing_agency': '조달청 서울지방조달청', 'requesting_agency': '서울신용보증재단', 'start_date': '2024/11/21', 'end_date': '2024/12/11', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241127809&bidseq=00&releaseYn=Y&taskClCd=1', 'new': False, 'type': '데이터베이스'}
+파일명 :  붙임1. 경영관리시스템 구축 ISPBPR 수립 사업 제안요청서(241114수정).hwp
+키워드 :  빅데이터
+{'notice_id': '20241111371 - 01', 'title': '경영관리시스템 구축 ISP/BPR 수립 사업', 'price': '307,410,000 원', 'publishing_agency': '조달청 서울지방조달청', 'requesting_agency': '서울신용보증재단', 'start_date': '2024/11/20', 'end_date': '2024/12/06', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241111371&bidseq=01&releaseYn=Y&taskClCd=1', 'new': False, 'type': '데이터베이스'}
+{'notice_id': '20241127175 - 00', 'title': '2024년 우주항공청 정보화 전략계획(ISP) 수립 용역', 'price': '150,000,000 원', 'publishing_agency': '조달청 경남지방조달청', 'requesting_agency': '우주항공청', 'start_date': '2024/11/20', 'end_date': '2024/12/05', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241127175&bidseq=00&releaseYn=Y&taskClCd=1', 'new': False, 'type': ''}
+파일명 :  2. 241030 돌봄 통합지원정보시스템 구축 ISP 수립_제안요청서◆_241106_최종_구매업무협의(1 55 57 59 60 63 64 65 66 102p 수정).hwpx
+키워드 :  AI
+파일명 :  2. 241030 돌봄 통합지원정보시스템 구축 ISP 수립_제안요청서◆_241106_최종_구매업무협의(1 55 57 59 60 63 64 65 66 102p 수정).hwpx
+키워드 :  빅데이터
+{'notice_id': '20241125687 - 00', 'title': '돌봄 통합지원정보시스템 구축을 위한 ISP 사업', 'price': '324,000,000 원', 'publishing_agency': '조달청', 'requesting_agency': '보건복지부', 'start_date': '2024/11/19', 'end_date': '2024/12/13', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241125687&bidseq=00&releaseYn=Y&taskClCd=1', 'new': False, 'type': '인공 지능, 데이터베이스'}
+파일명 :  붙임1. 제안요청서(2024년 중장기 정보화전략계획(ISP) 수립)_최종.hwp
+키워드 :  AI
+파일명 :  붙임1. 제안요청서(2024년 중장기 정보화전략계획(ISP) 수립)_최종.hwp
+키워드 :  빅데이터
+{'notice_id': '20241102488 - 00', 'title': '2024년 중장기 정보화전략계획(ISP) 수립', 'price': '446,398,000 원', 'publishing_agency': '조달청 서울지방조달청', 'requesting_agency': '서울신용보증재단', 'start_date': '2024/11/14', 'end_date': '2024/11/28', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241102488&bidseq=00&releaseYn=Y&taskClCd=1', 'new': False, 'type': '인공 지능, 데이터베이스'}
+{'notice_id': '20241115095 - 00', 'title': '한국광해광업공단 정보화전략계획(ISP) 수립 용역', 'price': '508,845,000 원', 'publishing_agency': '한국광해광업공단', 'requesting_agency': '한국광해광업공단', 'start_date': '2024/11/12', 'end_date': '2024/11/28', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241115095&bidseq=00&releaseYn=Y&taskClCd=5', 'new': False, 'type': ''}
+{'notice_id': '20241113465 - 00', 'title': '2025년 ISP산출물 검토지원시스템 운영 및 유지관리', 'price': '69,955,950 원', 'publishing_agency': '한국지능정보사회진흥원', 'requesting_agency': '한국지능정보사회진흥원', 'start_date': '2024/11/11', 'end_date': '2024/11/22', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241113465&bidseq=00&releaseYn=Y&taskClCd=5', 'new': False, 'type': ''}
+{'notice_id': '20241113465 - 00', 'title': '감사정보시스템 고도화 ISP 용역', 'price': '69,955,950 원', 'publishing_agency': '한국철도공사', 'requesting_agency': '한국철도공사', 'start_date': '2024/11/11', 'end_date': '2024/11/22', 'link': 'https://www.g2b.go.kr:8101/ep/tbid/serviceBidDtl.do?tbidno=20241113868&bidseq=00', 'new': False, 'type': ''}
+{'notice_id': '20241032171 - 00', 'title': '정보화전략계획(ISP) 수립 사업', 'price': '494,000,000 원', 'publishing_agency': '조달청 부산지방조달청', 'requesting_agency': '한국해양진흥공사', 'start_date': '2024/10/29', 'end_date': '2024/11/20', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241032171&bidseq=00&releaseYn=Y&taskClCd=1', 'new': False, 'type': ''}
+{'notice_id': '20241020909 - 00', 'title': '차세대 NABIS시스템 클라우드 전환·구축 ISP 사업', 'price': '161,000,000 원', 'publishing_agency': '한국산업기술기획평가원', 'requesting_agency': '한국산업기술기획평가원', 'start_date': '2024/10/22', 'end_date': '2024/11/04', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241020909&bidseq=00&releaseYn=Y&taskClCd=5', 'new': False, 'type': ''}
+{'notice_id': '20241020909 - 00', 'title': '출연(연) 기업통합지원 플랫폼 구축 정보화전략계획(ISP) 수립', 'price': '161,000,000 원', 'publishing_agency': '한국과학기술정보연구원', 'requesting_agency': '한국과학기술정보연구원', 'start_date': '2024/10/22', 'end_date': '2024/11/04', 'link': 'https://www.g2b.go.kr:8101/ep/tbid/serviceBidDtl.do?tbidno=20241027544&bidseq=01', 'new': False, 'type': ''}
+파일명 :  제안요청서.hwp
+키워드 :  AI
+{'notice_id': '20241013040 - 00', 'title': '차세대 경영정보시스템 구축을 위한 정보화전략계획(ISP) 수립 용역', 'price': '240,000,000 원', 'publishing_agency': '조달청 광주지방조달청', 'requesting_agency': '한국인터넷진흥원', 'start_date': '2024/10/22', 'end_date': '2024/11/05', 'link': 'https://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20241013040&bidseq=00&releaseYn=Y&taskClCd=1', 'new': False, 'type': '인공 지능'}

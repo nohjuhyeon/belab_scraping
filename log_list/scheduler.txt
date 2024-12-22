@@ -586,3 +586,49 @@
 2024-12-21 15:55:07,599 - INFO - Get LATEST geckodriver version for None firefox
 2024-12-21 15:55:07,957 - INFO - Get LATEST geckodriver version for None firefox
 2024-12-21 15:55:08,017 - INFO - Driver has been saved in cache [/root/.wdm/drivers/geckodriver/linux64/v0.35.0]
+2024-12-21 18:04:48,541 - INFO - ----------------notice check started----------------
+2024-12-21 18:04:48,544 - INFO - ====== WebDriver manager ======
+2024-12-21 18:04:48,559 - INFO - Get LATEST chromedriver version for google-chrome
+2024-12-21 18:04:48,678 - INFO - About to download new driver from https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip
+2024-12-21 18:04:48,753 - INFO - Driver downloading response is 200
+2024-12-21 18:04:49,117 - INFO - Get LATEST chromedriver version for google-chrome
+2024-12-21 18:04:49,366 - INFO - Get LATEST chromedriver version for google-chrome
+2024-12-21 18:04:49,522 - INFO - Driver has been saved in cache [/root/.wdm/drivers/chromedriver/linux64/114.0.5735.90]
+2024-12-21 18:06:35,572 - INFO - ----------------notice check started----------------
+2024-12-21 18:06:35,573 - INFO - ====== WebDriver manager ======
+2024-12-21 18:06:35,792 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-21 18:06:36,169 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-21 18:06:36,223 - INFO - There is no [linux64] geckodriver "v0.35.0" for browser firefox "128.5" in cache
+2024-12-21 18:06:36,224 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-21 18:06:36,268 - INFO - Getting latest mozilla release info for v0.35.0
+2024-12-21 18:06:36,551 - INFO - About to download new driver from https://github.com/mozilla/geckodriver/releases/download/v0.35.0/geckodriver-v0.35.0-linux64.tar.gz
+2024-12-21 18:06:37,716 - INFO - Driver downloading response is 200
+2024-12-21 18:06:37,771 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-21 18:06:37,932 - INFO - Driver has been saved in cache [/root/.wdm/drivers/geckodriver/linux64/v0.35.0]
+2024-12-21 18:48:06,491 - INFO - ----------------notice check started----------------
+2024-12-21 18:48:06,493 - INFO - ====== WebDriver manager ======
+2024-12-21 18:48:06,764 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-21 18:48:07,182 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-21 18:48:07,223 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2024-12-21 19:04:31,165 - INFO - ====== WebDriver manager ======
+2024-12-21 19:04:31,238 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-21 19:04:31,533 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-21 19:04:31,586 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2024-12-21 19:12:24,602 - INFO - ====== WebDriver manager ======
+2024-12-21 19:12:24,716 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-21 19:12:25,201 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-21 19:12:25,248 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2024-12-21 19:20:46,850 - INFO - ====== WebDriver manager ======
+2024-12-21 19:20:46,938 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-21 19:20:47,232 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-21 19:20:47,285 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2024-12-22 09:00:02,766 - INFO - ----------------notice check started----------------
+2024-12-22 09:00:02,767 - INFO - ====== WebDriver manager ======
+2024-12-22 09:00:02,852 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-22 09:00:03,164 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-22 09:00:03,209 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-22 09:00:03,252 - INFO - Getting latest mozilla release info for v0.35.0
+2024-12-22 09:00:03,636 - INFO - About to download new driver from https://github.com/mozilla/geckodriver/releases/download/v0.35.0/geckodriver-v0.35.0-linux64.tar.gz
+2024-12-22 09:00:04,457 - INFO - Driver downloading response is 200
+2024-12-22 09:00:05,271 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-22 09:00:05,409 - INFO - Driver has been saved in cache [/root/.wdm/drivers/geckodriver/linux64/v0.35.0]

@@ -50,6 +50,36 @@ def check_list_insert(notice_type, download_folder_path):
             notice_type = '검토 필요'
     return notice_type
 
+import olefile
+import zlib
+import struct
+import zipfile
+import xml.etree.ElementTree as ET
+
+
+def detect_file_type(file_path):
+    try:
+        with open(file_path, 'rb') as f:
+            # 파일의 처음 8바이트 읽기
+            header = f.read(8)
+            
+            # HWP 파일 확인 (OLE2 매직 넘버)
+            if header.startswith(b'\xD0\xCF\x11\xE0\xA1\xB1\x1A\xE1'):
+                content = get_hwp_text(file_path)
+                return content
+            
+            # HWPX 파일 확인 (ZIP 매직 넘버)
+            elif header.startswith(b'\x50\x4B\x03\x04'):
+                content = get_hwpx_text(file_path)
+                return content
+            
+            # 기타 파일
+            else:
+                return "Unknown"
+    except Exception as e:
+        return f"Error detecting file type: {e}"
+
+
 def get_hwp_text(filename):
     try:
         with olefile.OleFileIO(filename) as f:
@@ -103,11 +133,39 @@ def get_hwp_text(filename):
 
             return text
     except Exception as e:
+        print(e)
         return None
+
+
+def get_hwpx_text(file_path):
+    try:
+        with zipfile.ZipFile(file_path, 'r') as zf:
+            # Contents 폴더 내의 섹션 파일 목록 찾기
+            section_files = [name for name in zf.namelist() if name.startswith('Contents/section') and name.endswith('.xml')]
+
+            # 모든 섹션 파일의 텍스트를 저장할 리스트
+            all_texts = []
+
+            for section_file in section_files:
+                with zf.open(section_file) as file:
+                    tree = ET.parse(file)
+                    root = tree.getroot()
+
+                    # 현재 섹션의 텍스트 추출
+                    for elem in root.iter():
+                        if elem.tag.endswith('t'):  # 텍스트 태그 확인
+                            if elem.text:
+                                all_texts.append(elem.text.strip())
+
+            # 모든 섹션 텍스트를 하나로 합치기
+            return ' '.join(all_texts)
+    except Exception as e:
+        return f"Error extracting text: {e}"
+
 
 def search_keywords_in_hwp(file_name,file_path, keywords):
     """HWP 파일 내에 특정 키워드가 포함되어 있는지 확인"""
-    text = get_hwp_text(file_path)
+    text = detect_file_type(file_path)
     if text:
         for keyword in keywords:
             if keyword in text:
