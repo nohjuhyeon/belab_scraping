@@ -45,63 +45,6 @@ def google_sheet_add(notice_type, df):
 
     print("Data updated and sorted successfully.")
 
-
-def notice_add(data,notice_type,sheet):
-    yesterday = datetime.now() - timedelta(days=1)
-    today = datetime.now()
-
-    # 어제 날짜를 원하는 형식으로 포맷팅
-    yesterday = yesterday.strftime('%Y/%m/%d')
-    today = today.strftime('%Y/%m/%d')
-    if notice_type == '새로 올라온 공고':
-        data.drop_duplicates(subset='공고번호', keep='first', inplace=True)
-        data.sort_values(by='공고 유형',ascending=False, inplace=True)
-        return data,data
-    else:
-        # 기존 데이터를 읽어옴
-        existing_data = sheet.get_all_records()
-        existing_df = pd.DataFrame(existing_data)
-
-        # JSON 데이터를 데이터프레임으로 변환
-        new_df = pd.DataFrame(data)
-        new_df.dropna(subset=['new'], inplace=True)
-        new_df.drop(columns=['new'], inplace=True)
-
-        # 컬럼 이름 변경
-        new_df.rename(columns={
-            'notice_id': '공고번호',
-            'title': '공고명',
-            'price': '공고 가격',
-            'publishing_agency': '공고 기관',
-            'requesting_agency': '수요 기관',
-            'start_date': '개시일',
-            'end_date': '마감일',
-            'link': '링크',
-            'type': '비고'
-            }, inplace=True)
-
-        # 기존 데이터와 새 데이터를 합침
-        combined_df = pd.concat([existing_df, new_df], ignore_index=True)
-        combined_df['공고번호'] = combined_df['공고번호'].astype('str')
-        # NaN 값을 빈 문자열로 대체
-        combined_df.replace({np.nan: ''}, inplace=True)
-        combined_df.drop_duplicates(subset='공고번호', keep='last', inplace=True)
-        # combined_df['공고 가격'] = combined_df['공고 가격'].str.replace('₩', '').str.replace('(조달수수료 포함)', '').str.replace('원', '').str.replace(' ', '')
-        # combined_df['공고 가격'] = combined_df['공고 가격'].apply(lambda x: x + '원' if x != '' else x)
-        # 개시일 기준으로 데이터프레임 정렬
-        combined_df.sort_values(by='개시일',ascending=False, inplace=True)
-        # '비고' 열에서 'ai_preparation' 값을 '인공지능 관련 공고'로 변경
-        combined_df.loc[combined_df['비고'] == 'ai', '비고'] = '인공 지능'
-
-        # '비고' 열에서 'check' 값을 '검토가 필요한 공고'로 변경
-        combined_df.loc[combined_df['비고'] == 'check', '비고'] = '검토 필요'
-        today_df=combined_df.loc[(combined_df['개시일']==today)|(combined_df['개시일']==yesterday)]
-        today_df['공고 유형']=notice_type
-        columns = ['공고 유형'] + [col for col in today_df.columns if col != '공고 유형']
-        today_df = today_df[columns]
-        # 기존 시트 데이터를 모두 삭제
-        return combined_df,today_df
-
 # 사용 예시
 def google_sheet_update():
     collection = mongo_setting('news_scraping','notice_list')

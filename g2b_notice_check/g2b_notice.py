@@ -1,6 +1,8 @@
 from selenium.webdriver.common.by import By
 import os 
 import time
+from function_list.basic_options import mongo_setting
+
 from dotenv import load_dotenv
 from function_list.basic_options import selenium_setting,download_path_setting,init_browser
 from function_list.g2b_func import notice_check,folder_clear,load_notice_titles_from_json,save_notice_list_to_json
@@ -34,7 +36,7 @@ def notice_search(search_keyword,notice_list,notice_titles,folder_path):
         browser.get(main_page)    
         notice_elements = browser.find_elements(by=By.CSS_SELECTOR, value='#resultForm > div.results > table > tbody > tr > td:nth-child(4) > div > a')
         notice_title = notice_elements[i].text
-        if 'ISP' in notice_title or 'ISMP' in notice_title:
+        if ('ISP' in notice_title or 'ISMP' in notice_title) and notice_title not in notice_titles:
             
             notice_link = notice_elements[i].get_attribute('href')
             notice_elements[i].click()
@@ -86,7 +88,7 @@ def notice_search(search_keyword,notice_list,notice_titles,folder_path):
                                 pass
                         time.sleep(3)
             notice_type = notice_check(download_folder_path)
-            dict_notice = {'notice_id':notice_id,'title':notice_title,'price':notice_price,'publishing_agency':publishing_agency,'requesting_agency':requesting_agency,'start_date':notice_start_date,'end_date':notice_end_date,'link':notice_link,'new':new_notice,'type':notice_type}
+            dict_notice = {'notice_id':notice_id,'title':notice_title,'price':notice_price,'publishing_agency':publishing_agency,'requesting_agency':requesting_agency,'start_date':notice_start_date,'end_date':notice_end_date,'link':notice_link,'type':notice_type,'notice_class':'입찰 공고'}
             notice_list.append(dict_notice)
             print(dict_notice)
             folder_clear(download_folder_path)
@@ -97,24 +99,14 @@ def notice_search(search_keyword,notice_list,notice_titles,folder_path):
 def notice_collection():
     notice_list = []
     # 함수 호출
+    collection = mongo_setting('news_scraping','notice_list')
+    results = collection.find({},{'_id':0,'title':1})
+    notice_titles = [i['title'] for i in results]
 
     folder_path = os.environ.get("folder_path")
-
-    notice_titles = load_notice_titles_from_json(folder_path+'g2b_data/notice_list.json')
     
     notice_list = notice_search('isp',notice_list,notice_titles,folder_path)
     notice_list = notice_search('ismp',notice_list,notice_titles,folder_path)
-    json_file_path = os.path.join(folder_path, 'g2b_data/notice_list.json')
-    save_notice_list_to_json(notice_list, json_file_path)
-    ai_notice_list = []
-    check_list = []
-    for notice in notice_list:
-        if '인공지능' in notice['type'] :
-            ai_notice_list.append(notice)
-        if '데이터베이스' in notice['type']:
-            ai_notice_list.append(notice)
-        if '검토 필요' in notice['type']:
-            check_list.append(notice)
-    time.sleep(1)
-    return ai_notice_list,check_list
-# notice_collection()
+    if len(notice_list)> 0:
+        collection.insert_many(notice_list)
+
