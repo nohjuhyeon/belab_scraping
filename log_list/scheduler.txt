@@ -896,3 +896,24 @@
 2024-12-24 09:00:57,435 - INFO - Get LATEST geckodriver version for 128.5 firefox
 2024-12-24 09:00:57,435 - INFO - GH_TOKEN will be used to perform requests
 2024-12-24 09:00:57,815 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2024-12-24 16:24:23,293 - INFO - ----------------notice check started----------------
+2024-12-24 16:24:23,589 - INFO - ====== WebDriver manager ======
+2024-12-24 16:24:23,762 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-24 16:24:23,762 - INFO - GH_TOKEN will be used to perform requests
+2024-12-24 16:24:24,129 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-24 16:24:24,129 - INFO - GH_TOKEN will be used to perform requests
+2024-12-24 16:24:24,461 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2024-12-24 17:59:18,299 - INFO - ----------------notice check started----------------
+2024-12-24 17:59:18,791 - INFO - ====== WebDriver manager ======
+2024-12-24 17:59:19,104 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-24 17:59:19,104 - INFO - GH_TOKEN will be used to perform requests
+2024-12-24 17:59:19,516 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-24 17:59:19,517 - INFO - GH_TOKEN will be used to perform requests
+2024-12-24 17:59:19,872 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2024-12-24 18:00:31,583 - INFO - ----------------notice check started----------------
+2024-12-24 18:00:31,880 - INFO - ====== WebDriver manager ======
+2024-12-24 18:00:31,980 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-24 18:00:31,980 - INFO - GH_TOKEN will be used to perform requests
+2024-12-24 18:00:32,369 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-24 18:00:32,369 - INFO - GH_TOKEN will be used to perform requests
+2024-12-24 18:00:32,709 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache

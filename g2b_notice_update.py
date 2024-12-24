@@ -16,7 +16,7 @@ try:
                         format='%(asctime)s - %(levelname)s - %(message)s')
     logging.info("----------------notice check started----------------") # 스케줄러 시작 로그 기록
     print('나라장터 공고를 찾습니다.')
-    notice_collection()
+    # notice_collection()
     preparation_collection()
     email_sending()
 
