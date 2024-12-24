@@ -49,7 +49,6 @@ def link_list(collection):
                     link_list.append(news_link)
                     dict_news = {'news_title':news_title,'news_part_content':news_content,'news_company':news_company,'news_date':news_date,'news_link':news_link,'section_type':section_name}
                     collection.insert_one(dict_news)
-                    print(dict_news)
                     news_list.append(dict_news)
 # 크롤링 함수 실행
 def news_contents(collection):
