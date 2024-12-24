@@ -72,8 +72,9 @@ def statistic_bank():
 
     for i in range(5):
         time.sleep(1)
-        contents_list[i].click()
-        browser.switch_to.window(browser.window_handles[-1])
+        link_element = contents_list[i].get_attribute('href')
+        browser.get(link_element)
+
         time.sleep(1)
 
         # 첫 번째 링크 리스트를 가져와 처리
@@ -84,8 +85,7 @@ def statistic_bank():
         # link_list_2nd = browser.find_elements(By.CSS_SELECTOR, 'body > div.public-email > div > table > tbody > tr > td > div > table > tbody > tr > td > table > tbody > tr > td > div > div > table > tbody > tr > td > table.stb-cell-wrap-cta > tbody > tr > td > a')
         # process_links(link_list_2nd, collection, browser)
 
-        browser.close()
-        browser.switch_to.window(browser.window_handles[0])
+        browser.back()
         
     # 브라우저 종료
     browser.quit()

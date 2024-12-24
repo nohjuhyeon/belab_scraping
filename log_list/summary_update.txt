@@ -1037,6 +1037,7 @@ MongoDB collection updated successfully.
 {'news_title': '`167개 우주부품 기술` 국산화…2030년 `6G 저궤도통신위성` 2기 발사', 'news_part_content': '우주청, 우주개발진흥실무위서 안건 검토 천리안위성 5호, 첫 민간기업 사업 추진 정부가 우주부품 기술 국산화를 위해 자력 확보가 필요한 167개 수출통제 기술 확보에 나서고, 2030년까지 6G 표준 기반의 저궤도통', 'news_company': '디지털타임스\n1일전', 'news_date': '', 'news_link': 'https://n.news.naver.com/mnews/article/029/0002924342', 'section_type': '과학 일반', '_id': ObjectId('6767594bcc2f7716d8828819')}
 뉴스 요약 업데이트 완료!
 ----------------뉴스 요약 업데이트 시작----------------
+<<<<<<< HEAD
 2024-12-23 10:18:19.452559
 {'news_title': "SK매직, 정보보호 국제인증 'ISO27001' 획득", 'news_part_content': 'SK매직은 국제표준화기구(ISO)가 제정한 ISO27001(정보보호 관리체계 표준 인증)을 획득해 ESG 보안 경쟁력을 강화했다고 23일 밝혔다. ISO 27001은 국제표준화기구(ISO) 및 국제전기기술위원회(IE', 'news_company': '지디넷코리아\n1분전', 'news_date': '', 'news_link': 'https://n.news.naver.com/mnews/article/092/0002357460', 'section_type': '모바일', '_id': ObjectId('6768ba62cca99163840003f2')}
 {'news_title': "세라젬, 전신 안마의자 '파우제 M8' 출시", 'news_part_content': "헬스케어 가전기업 세라젬은 26년간 쌓아 올린 헬스케어 노하우와 고유의 디자인 철학을 담은 전신 안마의자 '파우제 M8'를 출시했다고 23일 밝혔다. 파우제 M8는 ▲인체와 척추의 메커니즘에 대한 이해를 바탕으로 구", 'news_company': '지디넷코리아\n6분전', 'news_date': '', 'news_link': 'https://n.news.naver.com/mnews/article/092/0002357456', 'section_type': '모바일', '_id': ObjectId('6768ba62cca99163840003f3')}
@@ -1597,3 +1598,25 @@ MongoDB collection updated successfully.
 {'news_title': "'의대정원 조정' 법안 처리 속도전", 'news_part_content': '2026학년도 의대 정원을 조정할 수 있게 한 법안이 발의돼 2026학년도부터 의대 증원 규모가 크게 줄거나 원상 복귀될 가능성이 커졌다. 국회 보건복지위원회에 따르면 23일 법안심사소위원회와 전체회의를 열어 의대', 'news_company': '뉴스1\n19시간전', 'news_date': '', 'news_link': 'https://n.news.naver.com/mnews/article/421/0007982730', 'section_type': '과학 일반', '_id': ObjectId('6769fd71a8e947dbde651de3')}
 {'news_title': "野, '26년 의대 정원 감원법' 추진", 'news_part_content': '2026학년도 의대 정원을 조정할 수 있게 한 법안이 발의돼 2026학년도부터 의대 증원 규모가 크게 줄거나 원상 복귀될 가능성이 커졌다. 국회 보건복지위원회에 따르면 23일 법안심사소위원회와 전체회의를 열어 의대', 'news_company': '뉴스1\n19시간전', 'news_date': '', 'news_link': 'https://n.news.naver.com/mnews/article/421/0007982729', 'section_type': '과학 일반', '_id': ObjectId('6769fd71a8e947dbde651de4')}
 {'news_title': '대전혁신센터 ‘2024 딥테크 스튜디오’ 성료…창업기업 성장 지원', 'news_part_content': '대전창조경제혁신센터는 ‘2024 딥테크 스튜디오’ 사업을 통해 대전지역 대학과 정부출연연구기관의 유망사업화 기술을 활용, 기술경쟁력 확보와 투자유치 두 가지 주요 성과를 거뒀다고 23일 밝혔다. 딥테크 스튜디오 사업', 'news_company': '뉴스1\n19시간전', 'news_date': '', 'news_link': 'https://n.news.naver.com/mnews/article/421/0007982712', 'section_type': '과학 일반', '_id': ObjectId('6769fd71a8e947dbde651de5')}
+=======
+2024-12-24 09:10:14.872840
+ict news crawling finish
+crawling count :  0
+seoul institute crawling finish
+crawling count :  0
+statistic bank crawling finish
+crawling count :  0
+venture_doctors crawling finish
+crawling count :  0
+모델 다운로드 중...
+모델 압축 해제 중...
+모델 압축 해제 완료
+뉴스 675f75070b27c59cc62ffebb의 콘텐츠가 비어 있습니다.
+뉴스 675f75910b27c59cc62ffec5의 콘텐츠가 비어 있습니다.
+MongoDB collection updated successfully.
+Using device: cpu
+모델 다운로드 중...
+MongoDB collection updated successfully.
+MongoDB collection updated successfully.
+뉴스 요약 업데이트 완료!
+>>>>>>> 7957d0abf685964ff4aa1570f2687f1b58480eb6

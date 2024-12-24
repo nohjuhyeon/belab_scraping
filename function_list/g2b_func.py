@@ -19,7 +19,7 @@ def folder_clear(download_folder_path):
         except Exception as e:
             print(f"Failed to delete {file_path}. Reason: {e}")
 
-def notice_check(download_folder_path):
+def notice_file_check(download_folder_path):
     notice_type = None
     for file_name in os.listdir(download_folder_path):
         file_path = os.path.join(download_folder_path, file_name)
@@ -29,7 +29,7 @@ def notice_check(download_folder_path):
                 extract_path = os.path.join(download_folder_path)
                 zip_ref.extractall(extract_path)
     notice_type = check_list_insert(notice_type, download_folder_path)
-    notice_type = ai_list_insert(notice_type, download_folder_path)
+    notice_type = type_list_insert(notice_type, download_folder_path)
     return notice_type
 
 def check_list_insert(notice_type, download_folder_path):
@@ -47,7 +47,7 @@ def check_list_insert(notice_type, download_folder_path):
                 break            
         # hwp 파일이 없으면 check_list로 이동
         if not has_hwp_file:
-            notice_type = '검토 필요'
+            notice_type = ['검토 필요']
     return notice_type
 
 import olefile
@@ -174,9 +174,11 @@ def search_keywords_in_hwp(file_name,file_path, keywords):
                 return True
     return False
 
-def ai_list_insert(notice_type, download_folder_path):
+def type_list_insert(notice_type, download_folder_path):
     ai_keywords = ['AI', '인공지능', 'LLM','생성형','초거대']
-    db_keywords = ['Database', '데이터 레이크', '빅데이터', '데이터 허브']
+    db_keywords = ['Database', '데이터 레이크', '빅데이터', '데이터 허브','데이터베이스']
+    cloud_keywords = ['클라우드','cloud']
+    isp_keywords = ['ISP','ISMP']
     """공고 폴더 내 HWP 및 PDF 파일에서 키워드 검색 후 해당 폴더 이동"""
     notice_type = []
     # ai_notice_list 폴더 경로 설정
@@ -189,8 +191,40 @@ def ai_list_insert(notice_type, download_folder_path):
             if search_keywords_in_hwp(file_name,file_path, db_keywords) and '데이터베이스' not in notice_type:
                 notice_type.append('데이터베이스')
                 time.sleep(1)
-    return ', '.join(notice_type)
+            if search_keywords_in_hwp(file_name,file_path, cloud_keywords) and '클라우드' not in notice_type:
+                notice_type.append('클라우드')
+                time.sleep(1)
+            if search_keywords_in_hwp(file_name,file_path, isp_keywords) and 'ISP/ISMP' not in notice_type:
+                notice_type.append('ISP/ISMP')
+                time.sleep(1)
+    return notice_type
                     
+def search_keywords_in_title(notice_title, keywords):
+    """HWP 파일 내에 특정 키워드가 포함되어 있는지 확인"""
+    if notice_title:
+        for keyword in keywords:
+            if keyword in notice_title:
+                return True
+    return False
+
+def notice_title_check(notice_title):
+    ai_keywords = ['AI', '인공지능', 'LLM','생성형','초거대']
+    db_keywords = ['Database', '데이터 레이크', '빅데이터', '데이터 허브','데이터베이스']
+    cloud_keywords = ['클라우드','cloud']
+    isp_keywords = ['ISP','ISMP']
+    """공고 폴더 내 HWP 및 PDF 파일에서 키워드 검색 후 해당 폴더 이동"""
+    notice_type = []
+    # ai_notice_list 폴더 경로 설정
+    if search_keywords_in_title(notice_title, ai_keywords) and '인공 지능' not in notice_type:
+        notice_type.append('인공 지능')
+    if search_keywords_in_title(notice_title, db_keywords) and '데이터베이스' not in notice_type:
+        notice_type.append('데이터베이스')
+    if search_keywords_in_title(notice_title, cloud_keywords) and '클라우드' not in notice_type:
+        notice_type.append('클라우드')
+    if search_keywords_in_title(notice_title, isp_keywords) and 'ISP/ISMP' not in notice_type:
+        notice_type.append('ISP/ISMP')
+    return notice_type
+
 
 def load_notice_titles_from_json(file_path):
     # JSON 파일에서 notice_title만 추출하여 리스트로 반환

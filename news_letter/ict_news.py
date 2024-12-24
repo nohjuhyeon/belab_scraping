@@ -72,7 +72,9 @@ def ict_news():
     browser.get("https://ictnewsclipping.stibee.com/")    
     time.sleep(1)
     first_content = browser.find_element(by=By.CSS_SELECTOR,value='#__next > div > div > div:nth-child(1) > a')
-    first_content.click()
+    first_link = first_content.get_attribute('href')
+    browser.get(first_link)
+
     time.sleep(1)
     for j in range(5):
         time.sleep(1)
