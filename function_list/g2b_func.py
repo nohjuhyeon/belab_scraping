@@ -187,16 +187,10 @@ def type_list_insert(notice_type, download_folder_path):
         if file_name.lower().endswith('.hwp') or file_name.lower().endswith('.hwpx'):
             if search_keywords_in_hwp(file_name,file_path, ai_keywords) and '인공 지능' not in notice_type:
                 notice_type.append('인공 지능')
-                time.sleep(1)
             if search_keywords_in_hwp(file_name,file_path, db_keywords) and '데이터베이스' not in notice_type:
                 notice_type.append('데이터베이스')
-                time.sleep(1)
             if search_keywords_in_hwp(file_name,file_path, cloud_keywords) and '클라우드' not in notice_type:
                 notice_type.append('클라우드')
-                time.sleep(1)
-            if search_keywords_in_hwp(file_name,file_path, isp_keywords) and 'ISP/ISMP' not in notice_type:
-                notice_type.append('ISP/ISMP')
-                time.sleep(1)
     return notice_type
                     
 def search_keywords_in_title(notice_title, keywords):

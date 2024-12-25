@@ -9,7 +9,7 @@ from function_list.basic_options import selenium_setting,download_path_setting,i
 from function_list.g2b_func import notice_file_check,notice_title_check,folder_clear
 load_dotenv()
 
-def preparation_search(search_keyword,notice_list,notice_titles,folder_path):
+def preparation_search(search_keyword,notice_list,notice_ids,folder_path):
     collection = mongo_setting('news_scraping','new_notice_list')
     chrome_options = selenium_setting()
     chrome_options,download_folder_path = download_path_setting(folder_path,chrome_options)
@@ -22,7 +22,7 @@ def preparation_search(search_keyword,notice_list,notice_titles,folder_path):
     today_date = datetime.now().strftime("%Y/%m/%d")
     end_date.send_keys(today_date)
     
-    seven_days_ago = datetime.now() - timedelta(days=1)
+    seven_days_ago = datetime.now() - timedelta(days=2)
     seven_days_ago = seven_days_ago.strftime("%Y/%m/%d")
     start_date = browser.find_element(by=By.CSS_SELECTOR,value='#fromRcptDt')
     start_date.clear()
@@ -42,14 +42,14 @@ def preparation_search(search_keyword,notice_list,notice_titles,folder_path):
     time.sleep(1)
     current_page = browser.current_url
     while True:
-        preparation_elements = browser.find_elements(by=By.CSS_SELECTOR, value='#container > div > table > tbody > tr > td:nth-child(4) > div > a')
+        preparation_elements = browser.find_elements(by=By.CSS_SELECTOR, value='#container > div > table > tbody > tr > td:nth-child(2) > div > a')
         if len(preparation_elements)==0:
             break
         else:
             for preparation_element in preparation_elements:
-                preparation_elements = browser.find_elements(by=By.CSS_SELECTOR, value='#container > div > table > tbody > tr > td:nth-child(4) > div > a')
-                preparation_title = preparation_element.text
-                if preparation_title not in notice_titles:
+                preparation_elements = browser.find_elements(by=By.CSS_SELECTOR, value='#container > div > table > tbody > tr > td:nth-child(2) > div > a')
+                preparation_id = preparation_element.text
+                if preparation_id not in notice_ids:
                     preparation_link = preparation_element.get_attribute('href')
                     link_list.append(preparation_link)
             page_num += 1
@@ -58,7 +58,8 @@ def preparation_search(search_keyword,notice_list,notice_titles,folder_path):
             browser.get(new_page)
 
 
-    for preparation_link in link_list:
+    for k in range(len(link_list)):
+        preparation_link = link_list[k]
         folder_clear(download_folder_path)        
         preparation_link = 'https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo='+preparation_link.split('\'')[1]
         browser.get(preparation_link)
@@ -89,7 +90,6 @@ def preparation_search(search_keyword,notice_list,notice_titles,folder_path):
             for j in range(len(file_list)):
                 file_list = browser.find_elements(by=By.CSS_SELECTOR,value='span > a')
                 file_list[j].click()
-                time.sleep(3)
             browser.switch_to.default_content()
         except:
             pass
@@ -114,12 +114,12 @@ def preparation_collection():
     notice_list = []
     # 함수 호출
     collection = mongo_setting('news_scraping','new_notice_list')
-    results = collection.find({},{'_id':0,'title':1})
-    notice_titles = [i['title'] for i in results]
+    results = collection.find({},{'_id':0,'notice_id':1})
+    notice_ids = [i['notice_id'] for i in results]
 
     folder_path = os.environ.get("folder_path")
 
-    notice_list = preparation_search('ISP',notice_list,notice_titles,folder_path)
+    notice_list = preparation_search('ISP',notice_list,notice_ids,folder_path)
     # notice_list = preparation_search('ISMP',notice_list,notice_titles,folder_path)
     # notice_list = preparation_search('인공지능',notice_list,notice_titles,folder_path)
     # notice_list = preparation_search('데이터베이스',notice_list,notice_titles,folder_path)
