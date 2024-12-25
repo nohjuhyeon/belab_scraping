@@ -10,6 +10,7 @@ from function_list.g2b_func import notice_file_check,notice_title_check,folder_c
 load_dotenv()
 
 def preparation_search(search_keyword,notice_list,notice_titles,folder_path):
+    collection = mongo_setting('news_scraping','new_notice_list')
     chrome_options = selenium_setting()
     chrome_options,download_folder_path = download_path_setting(folder_path,chrome_options)
     browser = init_browser(chrome_options)
@@ -102,6 +103,7 @@ def preparation_search(search_keyword,notice_list,notice_titles,folder_path):
         preparation_type = ', '.join(preparation_type)
 
         dict_preparation = {'notice_id':preparation_id,'title':preparation_title,'price':preparation_price,'publishing_agency':publishing_agency,'requesting_agency':requesting_agency,'start_date':preparation_start_date,'end_date':preparation_end_date,'link':preparation_link,'type':preparation_type,'notice_class':'사전 규격'}
+        collection.insert_one(dict_preparation)
         notice_list.append(dict_preparation)
         folder_clear(download_folder_path)
     browser.quit()
@@ -121,6 +123,6 @@ def preparation_collection():
     # notice_list = preparation_search('ISMP',notice_list,notice_titles,folder_path)
     # notice_list = preparation_search('인공지능',notice_list,notice_titles,folder_path)
     # notice_list = preparation_search('데이터베이스',notice_list,notice_titles,folder_path)
-    if len(notice_list)> 0:
-        collection.insert_many(notice_list)
+    # if len(notice_list)> 0:
+    #     collection.insert_many(notice_list)
 

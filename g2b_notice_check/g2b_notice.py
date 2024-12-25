@@ -11,6 +11,7 @@ from function_list.g2b_func import notice_file_check,notice_title_check,folder_c
 load_dotenv()
 
 def notice_search(search_keyword,notice_list,notice_titles,folder_path):
+    collection = mongo_setting('news_scraping','new_notice_list')
     chrome_options = selenium_setting()
     chrome_options,download_folder_path = download_path_setting(folder_path,chrome_options)
     browser = init_browser(chrome_options)
@@ -69,25 +70,25 @@ def notice_search(search_keyword,notice_list,notice_titles,folder_path):
                         notice_start_date = notice_info_content[j].text
                         if notice_start_date != '':
                             notice_start_date = notice_start_date.split(' ')[0]
-                    elif '마감일시' in notice_info_title[j].text:
+                    if '입찰서접수 마감일시' in notice_info_title[j].text or '입찰마감일시' in notice_info_title[j].text:
                         notice_end_date = notice_info_content[j].text
                         if notice_end_date != '':
                             notice_end_date = notice_end_date.split(' ')[0]
-                    elif '입찰공고번호' in notice_info_title[j].text :
+                    if '입찰공고번호' in notice_info_title[j].text :
                         notice_id = notice_info_content[j].text
-                    elif '추정가격' in notice_info_title[j].text :
+                    if '추정가격' in notice_info_title[j].text :
                         notice_price = notice_info_content[j].text
                         notice_price = notice_price.replace('₩', '').replace('(조달수수료 포함)', '').replace('원', '').replace(' ', '')
                         if notice_price != '':
                             notice_price = notice_price + ' 원'
-                    elif '사업금액' in notice_info_title[j].text :
+                    if '사업금액' in notice_info_title[j].text :
                         notice_price = notice_info_content[j].text
                         notice_price = notice_price.replace('₩', '').replace('(조달수수료 포함)', '').replace('원', '').replace(' ', '')
                         if notice_price != '':
                             notice_price = notice_price + ' 원'
-                    elif notice_info_title[j].text == '수요기관':
+                    if notice_info_title[j].text == '수요기관':
                         requesting_agency = notice_info_content[j].text
-                    elif notice_info_title[j].text == '공고기관':
+                    if notice_info_title[j].text == '공고기관':
                         publishing_agency = notice_info_content[j].text
                 if notice_title not in notice_titles:
                     new_notice=True
@@ -112,6 +113,7 @@ def notice_search(search_keyword,notice_list,notice_titles,folder_path):
                         notice_type.append(j)                
                 notice_type = ', '.join(notice_type)
                 dict_notice = {'notice_id':notice_id,'title':notice_title,'price':notice_price,'publishing_agency':publishing_agency,'requesting_agency':requesting_agency,'start_date':notice_start_date,'end_date':notice_end_date,'link':notice_link,'type':notice_type,'notice_class':'입찰 공고'}
+                collection.insert_one(dict_notice)
                 notice_list.append(dict_notice)
                 print(dict_notice)
                 folder_clear(download_folder_path)
@@ -130,6 +132,6 @@ def notice_collection():
 
     notice_list = notice_search('ISP',notice_list,notice_titles,folder_path)
     # notice_list = notice_search('ISMP',notice_list,notice_titles,folder_path)
-    if len(notice_list)> 0:
-        collection.insert_many(notice_list)
+    # if len(notice_list)> 0:
+    #     collection.insert_many(notice_list)
 
