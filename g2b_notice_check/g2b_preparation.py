@@ -22,7 +22,7 @@ def preparation_search(search_keyword,notice_list,notice_ids,folder_path):
     today_date = datetime.now().strftime("%Y/%m/%d")
     end_date.send_keys(today_date)
     
-    seven_days_ago = datetime.now() - timedelta(days=2)
+    seven_days_ago = datetime.now() - timedelta(days=3)
     seven_days_ago = seven_days_ago.strftime("%Y/%m/%d")
     start_date = browser.find_element(by=By.CSS_SELECTOR,value='#fromRcptDt')
     start_date.clear()
@@ -57,13 +57,22 @@ def preparation_search(search_keyword,notice_list,notice_ids,folder_path):
             new_page = current_page + new_page_num
             browser.get(new_page)
 
-
+    print(len(link_list))
     for k in range(len(link_list)):
+        print(k)
         preparation_link = link_list[k]
         folder_clear(download_folder_path)        
         preparation_link = 'https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo='+preparation_link.split('\'')[1]
         browser.get(preparation_link)
         time.sleep(1)
+        preparation_id = ''
+        preparation_title = ''
+        preparation_price = ''
+        preparation_start_date =''
+        requesting_agency = ''
+        publishing_agency = ''
+        preparation_end_date = ''
+
         preparation_id = browser.find_element(by=By.CSS_SELECTOR,value='#container > div.section > table > tbody > tr:nth-child(1) > td:nth-child(4) > div').text
         preparation_title = browser.find_element(by=By.CSS_SELECTOR,value='.table_info > tbody:nth-child(3) > tr:nth-child(2) > td:nth-child(2) > div:nth-child(1)').text
         preparation_price = browser.find_element(by=By.CSS_SELECTOR,value='#container > div.section > table > tbody > tr:nth-child(3) > td:nth-child(2) > div').text
@@ -103,20 +112,20 @@ def preparation_search(search_keyword,notice_list,notice_ids,folder_path):
         preparation_type = ', '.join(preparation_type)
 
         dict_preparation = {'notice_id':preparation_id,'title':preparation_title,'price':preparation_price,'publishing_agency':publishing_agency,'requesting_agency':requesting_agency,'start_date':preparation_start_date,'end_date':preparation_end_date,'link':preparation_link,'type':preparation_type,'notice_class':'사전 규격'}
-        collection.insert_one(dict_preparation)
+        # collection.insert_one(dict_preparation)
         notice_list.append(dict_preparation)
         folder_clear(download_folder_path)
     browser.quit()
     return notice_list  
 
-def preparation_collection():
+def preparation_collection(existing_df):
     notice_list = []
     notice_list = []
     # 함수 호출
-    collection = mongo_setting('news_scraping','new_notice_list')
-    results = collection.find({},{'_id':0,'notice_id':1})
-    notice_ids = [i['notice_id'] for i in results]
-
+    # collection = mongo_setting('news_scraping','new_notice_list')
+    # results = collection.find({},{'_id':0,'notice_id':1})
+    # notice_ids = [i['notice_id'] for i in results]
+    notice_ids = existing_df.loc[existing_df['공고 유형']=='사전 규격','공고번호'].to_list()
     folder_path = os.environ.get("folder_path")
 
     notice_list = preparation_search('ISP',notice_list,notice_ids,folder_path)
@@ -126,3 +135,4 @@ def preparation_collection():
     # if len(notice_list)> 0:
     #     collection.insert_many(notice_list)
 
+    return notice_list

@@ -169,8 +169,8 @@ def search_keywords_in_hwp(file_name,file_path, keywords):
     if text:
         for keyword in keywords:
             if keyword in text:
-                print("파일명 : ", file_name)
-                print("키워드 : ", keyword)
+                # print("파일명 : ", file_name)
+                # print("키워드 : ", keyword)
                 return True
     return False
 
@@ -187,7 +187,7 @@ def type_list_insert(notice_type, download_folder_path):
             if search_keywords_in_hwp(file_name,file_path, ai_keywords) and '인공 지능' not in notice_type:
                 notice_type.append('인공 지능')
             if search_keywords_in_hwp(file_name,file_path, db_keywords) and '데이터베이스' not in notice_type:
-                notice_type.append('데이터베이스')
+                notice_type.append('데이터')
             if search_keywords_in_hwp(file_name,file_path, cloud_keywords) and '클라우드' not in notice_type:
                 notice_type.append('클라우드')
     return notice_type
@@ -211,7 +211,7 @@ def notice_title_check(notice_title):
     if search_keywords_in_title(notice_title, ai_keywords) and '인공 지능' not in notice_type:
         notice_type.append('인공 지능')
     if search_keywords_in_title(notice_title, db_keywords) and '데이터베이스' not in notice_type:
-        notice_type.append('데이터베이스')
+        notice_type.append('데이터')
     if search_keywords_in_title(notice_title, cloud_keywords) and '클라우드' not in notice_type:
         notice_type.append('클라우드')
     if search_keywords_in_title(notice_title, isp_keywords) and 'ISP/ISMP' not in notice_type:
