@@ -33,7 +33,7 @@ def google_sheet_add(notice_type, df):
 
     # 개인에 따라 수정 필요 - 스프레드시트 URL 가져오기
     spreadsheet_url = "https://docs.google.com/spreadsheets/d/1v61bDfjX0TKnZDKhttzyV9N_LJekA5TxGWCwXW0AXKk/edit?pli=1&gid=0#gid=0"
-
+    spreadsheet_url = "https://docs.google.com/spreadsheets/d/1DglQXgnMf4zuBDEG9StgRXgFmaAA7vIhHgAGtWI4TsQ/edit?gid=1463853477#gid=1463853477"
     doc = gc.open_by_url(spreadsheet_url)
     sheet = doc.worksheet(notice_type)
 
@@ -47,7 +47,7 @@ def google_sheet_add(notice_type, df):
 
 # 사용 예시
 def google_sheet_update():
-    collection = mongo_setting('news_scraping','notice_list')
+    collection = mongo_setting('news_scraping','new_notice_list')
     # 모든 문서 가져오기
     documents = collection.find()
 
@@ -66,7 +66,6 @@ def google_sheet_update():
         'notice_class':'공고 유형'
         }, inplace=True)
     df['개시일_sort'] = pd.to_datetime(df['개시일'], format='%Y/%m/%d')
-
     # 최신 순으로 정렬
     df = df.sort_values(by='개시일_sort', ascending=False).reset_index(drop=True)
 
@@ -81,6 +80,10 @@ def google_sheet_update():
     google_sheet_add('데이터베이스',notice_list)
     notice_list = df.loc[df['비고'].str.contains('인공 지능'),['공고번호','공고명','공고 가격','공고 기관','수요 기관','개시일','마감일','링크','비고']]
     google_sheet_add('인공 지능',notice_list)
+    notice_list = df.loc[df['비고'].str.contains('ISP/ISMP'),['공고번호','공고명','공고 가격','공고 기관','수요 기관','개시일','마감일','링크','비고']]
+    google_sheet_add('ISP/ISMP',notice_list)
+    notice_list = df.loc[df['비고'].str.contains('클라우드'),['공고번호','공고명','공고 가격','공고 기관','수요 기관','개시일','마감일','링크','비고']]
+    google_sheet_add('클라우드',notice_list)
 
 
     yesterday = datetime.now() - timedelta(days=1)

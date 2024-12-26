@@ -178,7 +178,6 @@ def type_list_insert(notice_type, download_folder_path):
     ai_keywords = ['AI', '인공지능', 'LLM','생성형','초거대']
     db_keywords = ['Database', '데이터 레이크', '빅데이터', '데이터 허브','데이터베이스']
     cloud_keywords = ['클라우드','cloud']
-    isp_keywords = ['ISP','ISMP']
     """공고 폴더 내 HWP 및 PDF 파일에서 키워드 검색 후 해당 폴더 이동"""
     notice_type = []
     # ai_notice_list 폴더 경로 설정

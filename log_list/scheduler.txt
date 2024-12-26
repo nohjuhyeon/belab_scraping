@@ -1080,3 +1080,5 @@
 2024-12-25 22:57:28,677 - INFO - Get LATEST geckodriver version for 128.5 firefox
 2024-12-25 22:57:29,027 - INFO - Get LATEST geckodriver version for 128.5 firefox
 2024-12-25 22:57:29,071 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2024-12-26 09:05:41,615 - INFO - ----------------notice check started----------------
+2024-12-26 09:06:23,388 - INFO - ----------------notice check started----------------
