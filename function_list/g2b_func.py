@@ -186,7 +186,7 @@ def type_list_insert(notice_type, download_folder_path):
         if file_name.lower().endswith('.hwp') or file_name.lower().endswith('.hwpx'):
             if search_keywords_in_hwp(file_name,file_path, ai_keywords) and '인공 지능' not in notice_type:
                 notice_type.append('인공 지능')
-            if search_keywords_in_hwp(file_name,file_path, db_keywords) and '데이터베이스' not in notice_type:
+            if search_keywords_in_hwp(file_name,file_path, db_keywords) and '데이터' not in notice_type:
                 notice_type.append('데이터')
             if search_keywords_in_hwp(file_name,file_path, cloud_keywords) and '클라우드' not in notice_type:
                 notice_type.append('클라우드')
@@ -210,7 +210,7 @@ def notice_title_check(notice_title):
     # ai_notice_list 폴더 경로 설정
     if search_keywords_in_title(notice_title, ai_keywords) and '인공 지능' not in notice_type:
         notice_type.append('인공 지능')
-    if search_keywords_in_title(notice_title, db_keywords) and '데이터베이스' not in notice_type:
+    if search_keywords_in_title(notice_title, db_keywords) and '데이터' not in notice_type:
         notice_type.append('데이터')
     if search_keywords_in_title(notice_title, cloud_keywords) and '클라우드' not in notice_type:
         notice_type.append('클라우드')
