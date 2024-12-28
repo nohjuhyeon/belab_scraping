@@ -10,7 +10,7 @@ from function_list.g2b_func import notice_file_check,notice_title_check,folder_c
 load_dotenv()
 
 def preparation_search(notice_list,notice_ids,folder_path):
-    collection = mongo_setting('news_scraping','new_notice_list')
+    # collection = mongo_setting('news_scraping','new_notice_list')
     chrome_options = selenium_setting()
     chrome_options,download_folder_path = download_path_setting(folder_path,chrome_options)
     browser = init_browser(chrome_options)
@@ -22,7 +22,7 @@ def preparation_search(notice_list,notice_ids,folder_path):
     today_date = datetime.now().strftime("%Y/%m/%d")
     end_date.send_keys(today_date)
     
-    seven_days_ago = datetime.now() - timedelta(days=4)
+    seven_days_ago = datetime.now() - timedelta(days=2)
     seven_days_ago = seven_days_ago.strftime("%Y/%m/%d")
     start_date = browser.find_element(by=By.CSS_SELECTOR,value='#fromRcptDt')
     start_date.clear()
@@ -112,7 +112,7 @@ def preparation_search(notice_list,notice_ids,folder_path):
         preparation_type = ', '.join(preparation_type)
 
         dict_preparation = {'notice_id':preparation_id,'title':preparation_title,'price':preparation_price,'publishing_agency':publishing_agency,'requesting_agency':requesting_agency,'start_date':preparation_start_date,'end_date':preparation_end_date,'link':preparation_link,'type':preparation_type,'notice_class':'사전 규격'}
-        collection.insert_one(dict_preparation)
+        # collection.insert_one(dict_preparation)
         notice_list.append(dict_preparation)
         folder_clear(download_folder_path)
     browser.quit()
@@ -122,13 +122,13 @@ def preparation_collection(existing_df):
     notice_list = []
     # 함수 호출
     collection = mongo_setting('news_scraping','new_notice_list')
-    results = collection.find({},{'_id':0,'notice_id':1})
-    notice_ids = [i['notice_id'] for i in results]
-    # notice_ids = existing_df.loc[existing_df['공고 유형']=='사전 규격','공고번호'].to_list()
+    # results = collection.find({},{'_id':0,'notice_id':1})
+    # notice_ids = [i['notice_id'] for i in results]
+    notice_ids = existing_df.loc[existing_df['공고 유형']=='사전 규격','공고번호'].to_list()
     folder_path = os.environ.get("folder_path")
 
     notice_list = preparation_search(notice_list,notice_ids,folder_path)
-    # if len(notice_list)> 0:
-    #     collection.insert_many(notice_list)
+    if len(notice_list)> 0:
+        collection.insert_many(notice_list)
 
     return notice_list

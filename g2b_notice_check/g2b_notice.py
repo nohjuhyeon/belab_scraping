@@ -11,7 +11,7 @@ from function_list.g2b_func import notice_file_check,notice_title_check,folder_c
 load_dotenv()
 
 def notice_search(notice_list,notice_links,folder_path):
-    collection = mongo_setting('news_scraping','new_notice_list')
+    # collection = mongo_setting('news_scraping','new_notice_list')
     chrome_options = selenium_setting()
     chrome_options,download_folder_path = download_path_setting(folder_path,chrome_options)
     browser = init_browser(chrome_options)
@@ -24,7 +24,7 @@ def notice_search(notice_list,notice_links,folder_path):
     today_date = datetime.now().strftime("%Y/%m/%d")
     end_date.send_keys(today_date)
     
-    seven_days_ago = datetime.now() - timedelta(days=4)
+    seven_days_ago = datetime.now() - timedelta(days=2)
     seven_days_ago = seven_days_ago.strftime("%Y/%m/%d")
     start_date = browser.find_element(by=By.CSS_SELECTOR,value='#fromBidDt')
     start_date.clear()
@@ -119,7 +119,7 @@ def notice_search(notice_list,notice_links,folder_path):
                     notice_type.append(j)                
             notice_type = ', '.join(notice_type)
             dict_notice = {'notice_id':notice_id,'title':notice_title,'price':notice_price,'publishing_agency':publishing_agency,'requesting_agency':requesting_agency,'start_date':notice_start_date,'end_date':notice_end_date,'link':notice_link,'type':notice_type,'notice_class':'입찰 공고'}
-            collection.insert_one(dict_notice)
+            # collection.insert_one(dict_notice)
             notice_list.append(dict_notice)
             # print(dict_notice)
             folder_clear(download_folder_path)
@@ -133,13 +133,13 @@ def notice_collection(existing_df):
     notice_list = []
     # 함수 호출
     collection = mongo_setting('news_scraping','new_notice_list')
-    results = collection.find({},{'_id':0,'link':1})
-    notice_links = [i['link'] for i in results]
-    # notice_links = existing_df.loc[existing_df['공고 유형']=='입찰 공고','링크'].to_list()
+    # results = collection.find({},{'_id':0,'link':1})
+    # notice_links = [i['link'] for i in results]
+    notice_links = existing_df.loc[existing_df['공고 유형']=='입찰 공고','링크'].to_list()
     folder_path = os.environ.get("folder_path")
 
     notice_list = notice_search(notice_list,notice_links,folder_path)
-    # if len(notice_list)> 0:
-    #     collection.insert_many(notice_list)
+    if len(notice_list)> 0:
+        collection.insert_many(notice_list)
 
     return notice_list

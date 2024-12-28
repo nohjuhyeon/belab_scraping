@@ -40,19 +40,18 @@ def google_sheet_add(notice_type, df,spreadsheet_url):
     data_to_append = [df.columns.tolist()] + df.values.tolist()
     sheet.append_rows(data_to_append)
 
-    print("Data updated and sorted successfully.")
 
 # 사용 예시
-def total_sheet_update():
+def total_sheet_update(existing_df, notice_list):
     spreadsheet_url = "https://docs.google.com/spreadsheets/d/1DglQXgnMf4zuBDEG9StgRXgFmaAA7vIhHgAGtWI4TsQ/edit?usp=drive_link"
 
-    collection = mongo_setting('news_scraping','new_notice_list')
+    # collection = mongo_setting('news_scraping','new_notice_list')
     # # # 모든 문서 가져오기
-    documents = collection.find()
+    # documents = collection.find()
 
     # # DataFrame으로 변환
-    new_df = pd.DataFrame(list(documents))
-    # new_df = pd.DataFrame(notice_list)
+    # new_df = pd.DataFrame(list(documents))
+    new_df = pd.DataFrame(notice_list)
     new_df.rename(columns={
         'notice_id': '공고번호',
         'title': '공고명',
@@ -66,10 +65,9 @@ def total_sheet_update():
         'notice_class':'공고 유형'
         }, inplace=True)
     # new_df = new_df.loc[new_df['게시일'].str.contains('/')]
-    new_df['게시일_sort'] = pd.to_datetime(new_df['게시일'], format='%Y/%m/%d')
     # 최신 순으로 정렬
-    existing_df = pd.DataFrame([])
     df = pd.concat([existing_df,new_df],ignore_index=True)
+    df.loc[:, '게시일_sort'] = pd.to_datetime(df['게시일'], format='%Y/%m/%d')
     df = df.sort_values(by='게시일_sort', ascending=False).reset_index(drop=True)
 
 
@@ -96,6 +94,7 @@ def total_sheet_update():
     today = today.strftime('%Y/%m/%d')
     notice_list=df.loc[(df['게시일']==today)|(df['게시일']==yesterday),['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','게시일','마감일','링크','비고']]
     google_sheet_add('새로 올라온 공고',notice_list,spreadsheet_url)
+    print("전체 공고 : Data updated and sorted successfully.")
 
 
 def total_sheet_get():
@@ -128,4 +127,34 @@ def total_sheet_get():
     existing_df = pd.DataFrame(existing_data[1:],columns = existing_data[0])
     return existing_df
 
-# google_sheet_update()
+def category_sheet_update(spreadsheet_url,notice_df,notice_category):
+
+    # collection = mongo_setting('news_scraping','new_notice_list')
+    # # # 모든 문서 가져오기
+    # documents = collection.find()
+
+    # # DataFrame으로 변환
+    # new_df = pd.DataFrame(list(documents))
+    notice_df.loc[:, '게시일_sort'] = pd.to_datetime(notice_df['게시일'], format='%Y/%m/%d')
+    # 최신 순으로 정렬
+    notice_df = notice_df.sort_values(by='게시일_sort', ascending=False).reset_index(drop=True)
+
+
+    notice_list = notice_df.loc[:,['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','게시일','마감일','링크','비고']]
+    google_sheet_add('전체 공고',notice_list,spreadsheet_url)
+    notice_list = notice_df.loc[notice_df['공고 유형']=='입찰 공고',['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','게시일','마감일','링크','비고']]
+    google_sheet_add('입찰 공고',notice_list,spreadsheet_url)
+    notice_list = notice_df.loc[notice_df['공고 유형']=='사전 규격',['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','게시일','마감일','링크','비고']]
+    google_sheet_add('사전 규격',notice_list,spreadsheet_url)
+
+
+
+    yesterday = datetime.now() - timedelta(days=1)
+    today = datetime.now()
+    yesterday = yesterday.strftime('%Y/%m/%d')
+    today = today.strftime('%Y/%m/%d')
+    notice_list=notice_df.loc[(notice_df['게시일']==today)|(notice_df['게시일']==yesterday),['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','게시일','마감일','링크','비고']]
+    google_sheet_add('새로 올라온 공고',notice_list,spreadsheet_url)
+    print("{} 공고 : Data updated and sorted successfully.".format(notice_category))
+
+
