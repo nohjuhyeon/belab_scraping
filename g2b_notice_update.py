@@ -21,7 +21,7 @@ try:
     preparation_list = preparation_collection(existing_df)
     notice_list.extend(preparation_list)
     # email_sending()
-    # total_sheet_update(existing_df,notice_list)
+    total_sheet_update()
     # 스크립트 경로와 인자 설정
 except (KeyboardInterrupt, SystemExit):
     print("notice check shut down.")

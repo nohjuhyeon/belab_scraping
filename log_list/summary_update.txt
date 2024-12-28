@@ -1655,3 +1655,10 @@ crawling count :  0
 seoul institute crawling finish
 crawling count :  0
 뉴스 요약 업데이트 완료!
+----------------뉴스 요약 업데이트 시작----------------
+2024-12-28 09:10:15.224733
+ict news crawling finish
+crawling count :  0
+seoul institute crawling finish
+crawling count :  1
+뉴스 요약 업데이트 완료!

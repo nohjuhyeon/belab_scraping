@@ -10,7 +10,7 @@ from function_list.basic_options import selenium_setting,download_path_setting,i
 from function_list.g2b_func import notice_file_check,notice_title_check,folder_clear
 load_dotenv()
 
-def notice_search(search_keyword,notice_list,notice_links,folder_path):
+def notice_search(notice_list,notice_links,folder_path):
     collection = mongo_setting('news_scraping','new_notice_list')
     chrome_options = selenium_setting()
     chrome_options,download_folder_path = download_path_setting(folder_path,chrome_options)
@@ -75,18 +75,12 @@ def notice_search(search_keyword,notice_list,notice_links,folder_path):
             for j in range(len(notice_info_title)):
                 if '공고명' in notice_info_title[j].text:
                     notice_title = notice_info_content[j].text
-                if '게시일시' in notice_info_title[j].text :
+                if '게시일시' in notice_info_title[j].text or '공고일시' in notice_info_title[j].text :
                     notice_start_date = notice_info_content[j].text
                     if notice_start_date != '':
                         notice_start_date = notice_start_date.split(' ')[0]
-                if '개시일시' in notice_info_title[j].text and notice_start_date == '':
-                    notice_start_date = notice_info_content[j].text
-                    if notice_start_date != '':
-                        notice_start_date = notice_start_date.split(' ')[0]
-                if '개찰(입찰)일시' in notice_info_title[j].text and notice_start_date == '':
-                    notice_start_date = notice_info_content[j].text
-                    if notice_start_date != '':
-                        notice_start_date = notice_start_date.split(' ')[0]
+                    if '/' not in notice_start_date:
+                        notice_start_date = ''
                 if '입찰서접수 마감일시' in notice_info_title[j].text or '입찰마감일시' in notice_info_title[j].text:
                     notice_end_date = notice_info_content[j].text
                     if notice_end_date != '':
@@ -144,8 +138,7 @@ def notice_collection(existing_df):
     # notice_links = existing_df.loc[existing_df['공고 유형']=='입찰 공고','링크'].to_list()
     folder_path = os.environ.get("folder_path")
 
-    notice_list = notice_search('ISP',notice_list,notice_links,folder_path)
-    # notice_list = notice_search('ISMP',notice_list,notice_titles,folder_path)
+    notice_list = notice_search(notice_list,notice_links,folder_path)
     # if len(notice_list)> 0:
     #     collection.insert_many(notice_list)
 

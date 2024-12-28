@@ -43,48 +43,50 @@ def google_sheet_add(notice_type, df,spreadsheet_url):
     print("Data updated and sorted successfully.")
 
 # 사용 예시
-def total_sheet_update(existing_df,notice_list):
+def total_sheet_update():
     spreadsheet_url = "https://docs.google.com/spreadsheets/d/1DglQXgnMf4zuBDEG9StgRXgFmaAA7vIhHgAGtWI4TsQ/edit?usp=drive_link"
 
-    # # collection = mongo_setting('news_scraping','new_notice_list')
+    collection = mongo_setting('news_scraping','new_notice_list')
     # # # 모든 문서 가져오기
-    # # documents = collection.find()
+    documents = collection.find()
 
     # # DataFrame으로 변환
-    # df = pd.DataFrame(list(documents))
-    new_df = pd.DataFrame(notice_list)
+    new_df = pd.DataFrame(list(documents))
+    # new_df = pd.DataFrame(notice_list)
     new_df.rename(columns={
         'notice_id': '공고번호',
         'title': '공고명',
         'price': '공고 가격',
         'publishing_agency': '공고 기관',
         'requesting_agency': '수요 기관',
-        'start_date': '개시일',
+        'start_date': '게시일',
         'end_date': '마감일',
         'link': '링크',
         'type': '비고',
         'notice_class':'공고 유형'
         }, inplace=True)
-    new_df['개시일_sort'] = pd.to_datetime(new_df['개시일'], format='%Y/%m/%d')
+    # new_df = new_df.loc[new_df['게시일'].str.contains('/')]
+    new_df['게시일_sort'] = pd.to_datetime(new_df['게시일'], format='%Y/%m/%d')
     # 최신 순으로 정렬
+    existing_df = pd.DataFrame([])
     df = pd.concat([existing_df,new_df],ignore_index=True)
-    df = df.sort_values(by='개시일_sort', ascending=False).reset_index(drop=True)
+    df = df.sort_values(by='게시일_sort', ascending=False).reset_index(drop=True)
 
 
-    notice_list = df.loc[:,['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','개시일','마감일','링크','비고']]
+    notice_list = df.loc[:,['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','게시일','마감일','링크','비고']]
     google_sheet_add('전체 공고',notice_list,spreadsheet_url)
-    notice_list = df.loc[df['공고 유형']=='입찰 공고',['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','개시일','마감일','링크','비고']]
+    notice_list = df.loc[df['공고 유형']=='입찰 공고',['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','게시일','마감일','링크','비고']]
     google_sheet_add('입찰 공고',notice_list,spreadsheet_url)
-    notice_list = df.loc[df['공고 유형']=='사전 규격',['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','개시일','마감일','링크','비고']]
+    notice_list = df.loc[df['공고 유형']=='사전 규격',['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','게시일','마감일','링크','비고']]
     google_sheet_add('사전 규격',notice_list,spreadsheet_url)
 
-    notice_list = df.loc[df['비고'].str.contains('데이터'),['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','개시일','마감일','링크','비고']]
+    notice_list = df.loc[df['비고'].str.contains('데이터'),['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','게시일','마감일','링크','비고']]
     google_sheet_add('데이터',notice_list,spreadsheet_url)
-    notice_list = df.loc[df['비고'].str.contains('인공 지능'),['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','개시일','마감일','링크','비고']]
+    notice_list = df.loc[df['비고'].str.contains('인공 지능'),['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','게시일','마감일','링크','비고']]
     google_sheet_add('인공 지능',notice_list,spreadsheet_url)
-    notice_list = df.loc[df['비고'].str.contains('ISP/ISMP'),['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','개시일','마감일','링크','비고']]
+    notice_list = df.loc[df['비고'].str.contains('ISP/ISMP'),['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','게시일','마감일','링크','비고']]
     google_sheet_add('ISP/ISMP',notice_list,spreadsheet_url)
-    notice_list = df.loc[df['비고'].str.contains('클라우드'),['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','개시일','마감일','링크','비고']]
+    notice_list = df.loc[df['비고'].str.contains('클라우드'),['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','게시일','마감일','링크','비고']]
     google_sheet_add('클라우드',notice_list,spreadsheet_url)
 
 
@@ -92,7 +94,7 @@ def total_sheet_update(existing_df,notice_list):
     today = datetime.now()
     yesterday = yesterday.strftime('%Y/%m/%d')
     today = today.strftime('%Y/%m/%d')
-    notice_list=df.loc[(df['개시일']==today)|(df['개시일']==yesterday),['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','개시일','마감일','링크','비고']]
+    notice_list=df.loc[(df['게시일']==today)|(df['게시일']==yesterday),['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','게시일','마감일','링크','비고']]
     google_sheet_add('새로 올라온 공고',notice_list,spreadsheet_url)
 
 

@@ -9,7 +9,7 @@ from function_list.basic_options import selenium_setting,download_path_setting,i
 from function_list.g2b_func import notice_file_check,notice_title_check,folder_clear
 load_dotenv()
 
-def preparation_search(search_keyword,notice_list,notice_ids,folder_path):
+def preparation_search(notice_list,notice_ids,folder_path):
     collection = mongo_setting('news_scraping','new_notice_list')
     chrome_options = selenium_setting()
     chrome_options,download_folder_path = download_path_setting(folder_path,chrome_options)
@@ -120,7 +120,6 @@ def preparation_search(search_keyword,notice_list,notice_ids,folder_path):
 
 def preparation_collection(existing_df):
     notice_list = []
-    notice_list = []
     # 함수 호출
     collection = mongo_setting('news_scraping','new_notice_list')
     results = collection.find({},{'_id':0,'notice_id':1})
@@ -128,10 +127,7 @@ def preparation_collection(existing_df):
     # notice_ids = existing_df.loc[existing_df['공고 유형']=='사전 규격','공고번호'].to_list()
     folder_path = os.environ.get("folder_path")
 
-    notice_list = preparation_search('ISP',notice_list,notice_ids,folder_path)
-    # notice_list = preparation_search('ISMP',notice_list,notice_titles,folder_path)
-    # notice_list = preparation_search('인공지능',notice_list,notice_titles,folder_path)
-    # notice_list = preparation_search('데이터베이스',notice_list,notice_titles,folder_path)
+    notice_list = preparation_search(notice_list,notice_ids,folder_path)
     # if len(notice_list)> 0:
     #     collection.insert_many(notice_list)
 

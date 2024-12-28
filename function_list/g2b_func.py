@@ -24,10 +24,13 @@ def notice_file_check(download_folder_path):
     for file_name in os.listdir(download_folder_path):
         file_path = os.path.join(download_folder_path, file_name)
         if file_name.lower().endswith('.zip'):
-            with zipfile.ZipFile(file_path, 'r') as zip_ref:
-                # 압축 해제할 임시 폴더 경로
-                extract_path = os.path.join(download_folder_path)
-                zip_ref.extractall(extract_path)
+            try:
+                with zipfile.ZipFile(file_path, 'r') as zip_ref:
+                    # 압축 해제할 임시 폴더 경로
+                    extract_path = os.path.join(download_folder_path)
+                    zip_ref.extractall(extract_path)
+            except:
+                pass
     notice_type = check_list_insert(notice_type, download_folder_path)
     notice_type = type_list_insert(notice_type, download_folder_path)
     return notice_type
