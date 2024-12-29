@@ -64,7 +64,6 @@ def total_sheet_update(existing_df, notice_list):
         'type': '비고',
         'notice_class':'공고 유형'
         }, inplace=True)
-    # new_df = new_df.loc[new_df['게시일'].str.contains('/')]
     # 최신 순으로 정렬
     df = pd.concat([existing_df,new_df],ignore_index=True)
     df.loc[:, '게시일_sort'] = pd.to_datetime(df['게시일'], format='%Y/%m/%d')
@@ -88,11 +87,37 @@ def total_sheet_update(existing_df, notice_list):
     google_sheet_add('클라우드',notice_list,spreadsheet_url)
 
 
-    yesterday = datetime.now() - timedelta(days=1)
     today = datetime.now()
-    yesterday = yesterday.strftime('%Y/%m/%d')
-    today = today.strftime('%Y/%m/%d')
-    notice_list=df.loc[(df['게시일']==today)|(df['게시일']==yesterday),['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','게시일','마감일','링크','비고']]
+
+    # 오늘의 요일 계산 (월=0, 화=1, ..., 일=6)
+    today_day_of_week = today.weekday()
+
+    # 금요일 날짜 계산
+    def get_friday(date):
+        day_of_week = date.weekday()  # 요일 계산
+        if day_of_week == 0:  # 월요일인 경우
+            return date - timedelta(days=3)  # 전주의 금요일로 이동
+        if day_of_week >= 5:  # 토(5), 일(6)
+            return date - timedelta(days=(day_of_week - 4))  # 금요일로 이동
+        return date  # 금요일이 아닌 경우 그대로 반환
+
+    # 필터링 조건 설정
+    if today_day_of_week in [5, 6, 0]:  # 토, 일, 월
+        start_date = get_friday(today)  # 금요일부터
+    else:  # 화, 수, 목, 금
+        start_date = today - timedelta(days=1)  # 전날부터
+
+    start_date = start_date.replace(hour=0, minute=0, second=0, microsecond=0)
+    end_date = today
+    end_date = end_date.replace(hour=0, minute=0, second=0, microsecond=0)
+
+    # 조건에 따라 데이터 필터링
+    notice_list = df.loc[
+        (df['게시일_sort'] >= start_date)&(df['게시일_sort'] <= end_date),
+        ['공고 유형', '공고번호', '공고명', '공고 가격', '공고 기관', '수요 기관', '게시일', '마감일', '링크', '비고']
+    ]
+
+    print('전체 공고 | 시작 날짜 : {} / 종료 날짜 : {}'.format(start_date,end_date))
     google_sheet_add('새로 올라온 공고',notice_list,spreadsheet_url)
     print("전체 공고 : Data updated and sorted successfully.")
 
@@ -149,17 +174,44 @@ def category_sheet_update(spreadsheet_url,notice_df,notice_category):
     google_sheet_add('사전 규격',notice_list,spreadsheet_url)
 
 
-
-    yesterday = datetime.now() - timedelta(days=1)
+    # 오늘 날짜 계산
     today = datetime.now()
-    yesterday = yesterday.strftime('%Y/%m/%d')
-    today = today.strftime('%Y/%m/%d')
-    notice_list=notice_df.loc[(notice_df['게시일']==today)|(notice_df['게시일']==yesterday),['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','게시일','마감일','링크','비고']]
+
+    # 오늘의 요일 계산 (월=0, 화=1, ..., 일=6)
+    today_day_of_week = today.weekday()
+
+    # 금요일 날짜 계산
+    def get_friday(date):
+        day_of_week = date.weekday()  # 요일 계산
+        if day_of_week == 0:  # 월요일인 경우
+            return date - timedelta(days=3)  # 전주의 금요일로 이동
+        if day_of_week >= 5:  # 토(5), 일(6)
+            return date - timedelta(days=(day_of_week - 4))  # 금요일로 이동
+        return date  # 금요일이 아닌 경우 그대로 반환
+
+    # 필터링 조건 설정
+    if today_day_of_week in [5, 6, 0]:  # 토, 일, 월
+        start_date = get_friday(today)  # 금요일부터
+    else:  # 화, 수, 목, 금
+        start_date = today - timedelta(days=1)  # 전날부터
+
+    start_date = start_date.replace(hour=0, minute=0, second=0, microsecond=0)
+    end_date = today
+    end_date = end_date.replace(hour=0, minute=0, second=0, microsecond=0)
+
+    # 조건에 따라 데이터 필터링
+    notice_list = notice_df.loc[
+        (notice_df['게시일_sort'] >= start_date)&(notice_df['게시일_sort'] <= end_date),
+        ['공고 유형', '공고번호', '공고명', '공고 가격', '공고 기관', '수요 기관', '게시일', '마감일', '링크', '비고']
+    ]
+
+    print('{}|시작 날짜 : {} / 종료 날짜 : {}'.format(notice_category, start_date,end_date))
+
     google_sheet_add('새로 올라온 공고',notice_list,spreadsheet_url)
     print("{} 공고 : Data updated and sorted successfully.".format(notice_category))
     return notice_list
 
-def category_new_data_get(spreadsheet_url):
+def category_new_data_get(spreadsheet_url,notice_type):
 
     scope = ['https://spreadsheets.google.com/feeds',
              'https://www.googleapis.com/auth/drive']
