@@ -11,7 +11,7 @@ from function_list.g2b_func import notice_file_check,notice_title_check,folder_c
 load_dotenv()
 
 def notice_search(notice_list,notice_links,folder_path):
-    # collection = mongo_setting('news_scraping','new_notice_list')
+    # collection = mongo_setting('news_scraping','notice_list')
     chrome_options = selenium_setting()
     chrome_options,download_folder_path = download_path_setting(folder_path,chrome_options)
     browser = init_browser(chrome_options)
@@ -132,7 +132,7 @@ def notice_search(notice_list,notice_links,folder_path):
 def notice_collection(existing_df):
     notice_list = []
     # 함수 호출
-    collection = mongo_setting('news_scraping','new_notice_list')
+    collection = mongo_setting('news_scraping','notice_list')
     # results = collection.find({},{'_id':0,'link':1})
     # notice_links = [i['link'] for i in results]
     notice_links = existing_df.loc[existing_df['공고 유형']=='입찰 공고','링크'].to_list()

@@ -1378,3 +1378,49 @@
 2024-12-28 14:48:13,327 - INFO - Get LATEST geckodriver version for 128.5 firefox
 2024-12-28 14:48:14,235 - INFO - Get LATEST geckodriver version for 128.5 firefox
 2024-12-28 14:48:15,356 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2024-12-28 15:15:15,865 - INFO - ----------------notice check started----------------
+2024-12-28 15:15:21,245 - INFO - ====== WebDriver manager ======
+2024-12-28 15:15:21,429 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-28 15:15:22,550 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-28 15:15:24,105 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2024-12-28 15:15:41,310 - INFO - ====== WebDriver manager ======
+2024-12-28 15:15:41,393 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-28 15:15:42,349 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-28 15:15:42,422 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2024-12-28 15:44:47,551 - INFO - ----------------notice check started----------------
+2024-12-28 15:44:52,715 - INFO - ====== WebDriver manager ======
+2024-12-28 15:44:53,081 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-28 15:44:55,407 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-28 15:44:55,517 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2024-12-28 15:45:14,554 - INFO - ====== WebDriver manager ======
+2024-12-28 15:45:14,653 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-28 15:45:15,149 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-28 15:45:15,278 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2024-12-28 16:03:33,752 - INFO - ----------------notice check started----------------
+2024-12-28 16:03:36,981 - INFO - ====== WebDriver manager ======
+2024-12-28 16:03:37,195 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-28 16:03:37,797 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-28 16:03:37,866 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2024-12-28 16:03:53,122 - INFO - ====== WebDriver manager ======
+2024-12-28 16:03:53,244 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-28 16:03:53,748 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-28 16:03:54,311 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2024-12-28 16:11:04,906 - INFO - ----------------notice check started----------------
+2024-12-28 16:11:08,813 - INFO - ====== WebDriver manager ======
+2024-12-28 16:11:09,037 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-28 16:11:09,841 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-28 16:11:09,898 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2024-12-28 16:11:47,589 - INFO - ====== WebDriver manager ======
+2024-12-28 16:11:47,781 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-28 16:11:48,043 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-28 16:11:48,103 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2024-12-28 16:15:23,596 - INFO - ----------------notice check started----------------
+2024-12-28 16:15:32,309 - INFO - ----------------notice check started----------------
+2024-12-28 16:16:40,708 - INFO - ----------------notice check started----------------
+2024-12-28 16:18:15,838 - INFO - ----------------notice check started----------------
+2024-12-28 16:24:11,543 - INFO - ----------------notice check started----------------
+2024-12-28 16:26:14,778 - INFO - ----------------notice check started----------------
+2024-12-28 16:27:59,570 - INFO - ----------------notice check started----------------
+2024-12-28 16:28:16,919 - INFO - ----------------notice check started----------------
+2024-12-28 16:30:48,810 - INFO - ----------------notice check started----------------
+2024-12-28 16:35:58,910 - INFO - ----------------notice check started----------------

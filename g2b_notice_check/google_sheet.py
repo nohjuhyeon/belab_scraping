@@ -45,7 +45,7 @@ def google_sheet_add(notice_type, df,spreadsheet_url):
 def total_sheet_update(existing_df, notice_list):
     spreadsheet_url = "https://docs.google.com/spreadsheets/d/1DglQXgnMf4zuBDEG9StgRXgFmaAA7vIhHgAGtWI4TsQ/edit?usp=drive_link"
 
-    # collection = mongo_setting('news_scraping','new_notice_list')
+    # collection = mongo_setting('news_scraping','notice_list')
     # # # 모든 문서 가져오기
     # documents = collection.find()
 
@@ -80,8 +80,8 @@ def total_sheet_update(existing_df, notice_list):
 
     notice_list = df.loc[df['비고'].str.contains('데이터'),['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','게시일','마감일','링크','비고']]
     google_sheet_add('데이터',notice_list,spreadsheet_url)
-    notice_list = df.loc[df['비고'].str.contains('인공 지능'),['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','게시일','마감일','링크','비고']]
-    google_sheet_add('인공 지능',notice_list,spreadsheet_url)
+    notice_list = df.loc[df['비고'].str.contains('인공지능'),['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','게시일','마감일','링크','비고']]
+    google_sheet_add('인공지능',notice_list,spreadsheet_url)
     notice_list = df.loc[df['비고'].str.contains('ISP/ISMP'),['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','게시일','마감일','링크','비고']]
     google_sheet_add('ISP/ISMP',notice_list,spreadsheet_url)
     notice_list = df.loc[df['비고'].str.contains('클라우드'),['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','게시일','마감일','링크','비고']]
@@ -129,12 +129,13 @@ def total_sheet_get():
 
 def category_sheet_update(spreadsheet_url,notice_df,notice_category):
 
-    # collection = mongo_setting('news_scraping','new_notice_list')
+    # collection = mongo_setting('news_scraping','notice_list')
     # # # 모든 문서 가져오기
     # documents = collection.find()
 
     # # DataFrame으로 변환
     # new_df = pd.DataFrame(list(documents))
+    notice_df = notice_df.copy()  # 복사본 생성
     notice_df.loc[:, '게시일_sort'] = pd.to_datetime(notice_df['게시일'], format='%Y/%m/%d')
     # 최신 순으로 정렬
     notice_df = notice_df.sort_values(by='게시일_sort', ascending=False).reset_index(drop=True)
@@ -156,5 +157,33 @@ def category_sheet_update(spreadsheet_url,notice_df,notice_category):
     notice_list=notice_df.loc[(notice_df['게시일']==today)|(notice_df['게시일']==yesterday),['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','게시일','마감일','링크','비고']]
     google_sheet_add('새로 올라온 공고',notice_list,spreadsheet_url)
     print("{} 공고 : Data updated and sorted successfully.".format(notice_category))
+    return notice_list
 
+def category_new_data_get(spreadsheet_url):
 
+    scope = ['https://spreadsheets.google.com/feeds',
+             'https://www.googleapis.com/auth/drive']
+
+    # 개인에 따라 수정 필요 - 다운로드 받았던 키 값 경로
+    json_key_str = os.environ.get("google_sheet_key")
+    if json_key_str:
+        try:
+            json_key_dict = json.loads(json_key_str)  # 문자열을 딕셔너리로 변환
+            credential = ServiceAccountCredentials.from_json_keyfile_dict(json_key_dict, scope)
+            # credential을 사용하여 Google API에 접근
+        except json.JSONDecodeError as e:
+            print(f"Error decoding JSON: {e}")
+        except Exception as e:
+            print(f"Error loading credentials: {e}")
+    else:
+        print("google_sheet_key environment variable not found.")    
+        return None
+
+    gc = gspread.authorize(credential)
+
+    # 개인에 따라 수정 필요 - 스프레드시트 URL 가져오기
+    doc = gc.open_by_url(spreadsheet_url)
+    sheet = doc.worksheet('새로 올라온 공고')
+    new_data = sheet.get_all_values()
+    new_df = pd.DataFrame(new_data[1:],columns = new_data[0])
+    return new_df
