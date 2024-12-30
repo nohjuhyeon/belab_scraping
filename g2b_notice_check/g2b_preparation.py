@@ -57,9 +57,8 @@ def preparation_search(notice_list,notice_ids,folder_path):
             new_page = current_page + new_page_num
             browser.get(new_page)
 
-    print(len(link_list))
+    print("새로 올라온 사전 규격: ",len(link_list))
     for k in range(len(link_list)):
-        print(k)
         preparation_link = link_list[k]
         folder_clear(download_folder_path)        
         preparation_link = 'https://www.g2b.go.kr:8082/ep/preparation/prestd/preStdDtl.do?preStdRegNo='+preparation_link.split('\'')[1]

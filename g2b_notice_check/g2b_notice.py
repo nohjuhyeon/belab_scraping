@@ -50,9 +50,8 @@ def notice_search(notice_list,notice_links,folder_path):
             next_page.click()
         except:
             break
-    print(len(link_list))
+    print("새로 올라온 입찰 공고: ",len(link_list))
     for k in range(len(link_list)):
-        print(k)
         notice_link = link_list[k]
         folder_clear(download_folder_path)    
         try:
