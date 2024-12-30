@@ -119,7 +119,7 @@ def total_sheet_update(existing_df, notice_list):
 
     print('전체 공고 | 시작 날짜 : {} / 종료 날짜 : {}'.format(start_date,end_date))
     google_sheet_add('새로 올라온 공고',notice_list,spreadsheet_url)
-    print("전체 공고 : Data updated and sorted successfully.")
+    print("전체 공고 | Data updated and sorted successfully.")
 
 
 def total_sheet_get():
@@ -205,10 +205,10 @@ def category_sheet_update(spreadsheet_url,notice_df,notice_category):
         ['공고 유형', '공고번호', '공고명', '공고 가격', '공고 기관', '수요 기관', '게시일', '마감일', '링크', '비고']
     ]
 
-    print('{}|시작 날짜 : {} / 종료 날짜 : {}'.format(notice_category, start_date,end_date))
+    print('{} | 시작 날짜 : {} / 종료 날짜 : {}'.format(notice_category, start_date,end_date))
 
     google_sheet_add('새로 올라온 공고',notice_list,spreadsheet_url)
-    print("{} 공고 : Data updated and sorted successfully.".format(notice_category))
+    print("{} | Data updated and sorted successfully.".format(notice_category))
     return notice_list
 
 def category_new_data_get(spreadsheet_url,notice_type):
