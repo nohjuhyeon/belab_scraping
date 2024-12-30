@@ -13,14 +13,14 @@ def html_content_write(html_content, notice_elements,notice_class):
     html_content += """
     <table border='1' style='border-collapse: collapse; width: 1220px; margin-bottom: 20px;'>
         <tr>
-            <th style='padding: 10px; width: 4%; text-align: center;'>번호</th>
+            <th style='padding: 10px; width: 5%; text-align: center;'>번호</th>
             <th style='padding: 10px; width: 22%; text-align: center;'>공고명</th>
             <th style='padding: 10px; width: 11%; text-align: center;'>추정 가격</th>
-            <th style='padding: 10px; width: 16%; text-align: center;'>공고 기관</th>
+            <th style='padding: 10px; width: 15%; text-align: center;'>공고 기관</th>
             <th style='padding: 10px; width: 14%; text-align: center;'>공고 기간</th>
-            <th style='padding: 10px; width: 16%; text-align: center;'>수요 기관</th>
+            <th style='padding: 10px; width: 15%; text-align: center;'>수요 기관</th>
             <th style='padding: 10px; width: 7%; text-align: center;'>링크</th>
-            <th style='padding: 10px; width: 10%; text-align: center;'>비고</th>
+            <th style='padding: 10px; width: 11%; text-align: center;'>비고</th>
         </tr>
     """
     list_count = 0 
