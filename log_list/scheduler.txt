@@ -1585,3 +1585,16 @@
 2024-12-31 15:10:59,690 - INFO - Get LATEST geckodriver version for 128.5 firefox
 2024-12-31 15:10:59,690 - INFO - GH_TOKEN will be used to perform requests
 2024-12-31 15:11:00,037 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2024-12-31 18:00:03,221 - INFO - ----------------notice check started----------------
+2024-12-31 18:00:09,138 - INFO - ====== WebDriver manager ======
+2024-12-31 18:00:09,398 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-31 18:00:09,398 - INFO - GH_TOKEN will be used to perform requests
+2024-12-31 18:00:09,863 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-31 18:00:09,863 - INFO - GH_TOKEN will be used to perform requests
+2024-12-31 18:00:10,191 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2024-12-31 18:16:25,962 - INFO - ====== WebDriver manager ======
+2024-12-31 18:16:26,015 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-31 18:16:26,015 - INFO - GH_TOKEN will be used to perform requests
+2024-12-31 18:16:26,438 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2024-12-31 18:16:26,438 - INFO - GH_TOKEN will be used to perform requests
+2024-12-31 18:16:26,755 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache

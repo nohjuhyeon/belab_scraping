@@ -195,3 +195,21 @@ ISP/ISMP | Data updated and sorted successfully.
 ISP/ISMP, 클라우드 | 시작 날짜 : 2024-12-30 00:00:00 / 종료 날짜 : 2024-12-31 00:00:00
 ISP/ISMP, 클라우드 | Data updated and sorted successfully.
 공고 확인 완료!
+----------------공고 확인 시작----------------
+2024-12-31 18:00:03.221174
+나라장터 공고를 찾습니다.
+새로 올라온 입찰 공고:  91
+새로 올라온 사전 규격:  30
+전체 공고 | 시작 날짜 : 2024-12-30 00:00:00 / 종료 날짜 : 2024-12-31 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 시작 날짜 : 2024-12-30 00:00:00 / 종료 날짜 : 2024-12-31 00:00:00
+인공지능 | Data updated and sorted successfully.
+데이터 | 시작 날짜 : 2024-12-30 00:00:00 / 종료 날짜 : 2024-12-31 00:00:00
+데이터 | Data updated and sorted successfully.
+클라우드 | 시작 날짜 : 2024-12-30 00:00:00 / 종료 날짜 : 2024-12-31 00:00:00
+클라우드 | Data updated and sorted successfully.
+ISP/ISMP | 시작 날짜 : 2024-12-30 00:00:00 / 종료 날짜 : 2024-12-31 00:00:00
+ISP/ISMP | Data updated and sorted successfully.
+ISP/ISMP, 클라우드 | 시작 날짜 : 2024-12-30 00:00:00 / 종료 날짜 : 2024-12-31 00:00:00
+ISP/ISMP, 클라우드 | Data updated and sorted successfully.
+공고 확인 완료!
