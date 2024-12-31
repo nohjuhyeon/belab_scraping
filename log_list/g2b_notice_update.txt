@@ -248,3 +248,7 @@ ISP/ISMP | Data updated and sorted successfully.
 ISP/ISMP, 클라우드 | 시작 날짜 : 2024-12-31 00:00:00 / 종료 날짜 : 2025-01-01 00:00:00
 ISP/ISMP, 클라우드 | Data updated and sorted successfully.
 공고 확인 완료!
+----------------공고 확인 시작----------------
+2025-01-01 03:00:03.108758
+나라장터 공고를 찾습니다.
+공고 확인 완료!
