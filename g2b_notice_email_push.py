@@ -35,7 +35,7 @@ try:
     ## isp/ismp 이메일 전송
     isp_url = "https://docs.google.com/spreadsheets/d/18F6jTsLgsHm1yia9ZOJXD3x_CrYNYnqJY528o09HtrI/edit?usp=drive_link"
     isp_list = category_new_data_get(isp_url, 'ISP/ISMP')
-    isp_user = ['jh.noh@belab.co.kr','jh.park@belab.co.kr','ch.kim@belab.co.kr']
+    isp_user = ['jh.noh@belab.co.kr','jh.park@belab.co.kr','chyunkim@naver.com']
     email_sending(isp_list, isp_user,isp_url, 'ISP/ISMP')
 
     ## isp/ismp, 클라우드 이메일 전송
