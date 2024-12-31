@@ -1611,3 +1611,24 @@
 2024-12-31 21:04:15,589 - INFO - Get LATEST geckodriver version for 128.5 firefox
 2024-12-31 21:04:15,589 - INFO - GH_TOKEN will be used to perform requests
 2024-12-31 21:04:15,922 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2025-01-01 00:00:03,700 - INFO - ----------------notice check started----------------
+2025-01-01 00:00:07,519 - INFO - ====== WebDriver manager ======
+2025-01-01 00:00:07,763 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-01 00:00:07,763 - INFO - GH_TOKEN will be used to perform requests
+2025-01-01 00:00:08,175 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-01 00:00:08,176 - INFO - GH_TOKEN will be used to perform requests
+2025-01-01 00:00:08,545 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-01 00:00:08,545 - INFO - GH_TOKEN will be used to perform requests
+2025-01-01 00:00:08,869 - INFO - Getting latest mozilla release info for v0.35.0
+2025-01-01 00:00:08,869 - INFO - GH_TOKEN will be used to perform requests
+2025-01-01 00:00:09,179 - INFO - About to download new driver from https://github.com/mozilla/geckodriver/releases/download/v0.35.0/geckodriver-v0.35.0-linux64.tar.gz
+2025-01-01 00:00:10,013 - INFO - Driver downloading response is 200
+2025-01-01 00:00:10,086 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-01 00:00:10,086 - INFO - GH_TOKEN will be used to perform requests
+2025-01-01 00:00:10,508 - INFO - Driver has been saved in cache [/root/.wdm/drivers/geckodriver/linux64/v0.35.0]
+2025-01-01 00:00:43,735 - INFO - ====== WebDriver manager ======
+2025-01-01 00:00:43,787 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-01 00:00:43,787 - INFO - GH_TOKEN will be used to perform requests
+2025-01-01 00:00:44,160 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-01 00:00:44,160 - INFO - GH_TOKEN will be used to perform requests
+2025-01-01 00:00:44,487 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
