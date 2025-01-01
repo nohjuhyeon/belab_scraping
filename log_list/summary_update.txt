@@ -1688,3 +1688,10 @@ Using device: cpu
 MongoDB collection updated successfully.
 MongoDB collection updated successfully.
 뉴스 요약 업데이트 완료!
+----------------뉴스 요약 업데이트 시작----------------
+2024-12-31 09:16:04.193446
+ict news crawling finish
+crawling count :  0
+seoul institute crawling finish
+crawling count :  0
+뉴스 요약 업데이트 완료!
