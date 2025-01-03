@@ -22,7 +22,7 @@ try:
     # notice_list.extend(preparation_list)
     notice_list = []
     # 전체 공고 업데이트
-    total_sheet_update(existing_df, notice_list)
+    # total_sheet_update(existing_df, notice_list)
 
     # 카테고리별 공고 업데이트
     notice_df = total_sheet_get()

@@ -55,7 +55,7 @@ def total_sheet_update(existing_df, notice_list):
     new_df.rename(columns={
         'notice_id': '공고번호',
         'title': '공고명',
-        'price': '공고 가격',
+        'price': '공고가격(단위: 원)',
         'publishing_agency': '공고 기관',
         'requesting_agency': '수요 기관',
         'start_date': '게시일',
@@ -68,8 +68,8 @@ def total_sheet_update(existing_df, notice_list):
     df = pd.concat([existing_df,new_df],ignore_index=True)
     df.loc[:, '게시일_sort'] = pd.to_datetime(df['게시일'], format='%Y/%m/%d')
     df = df.sort_values(by='게시일_sort', ascending=False).reset_index(drop=True)
-    df['공고 가격'] = (
-        df['공고 가격']
+    df['공고가격(단위: 원)'] = (
+        df['공고가격(단위: 원)']
         .fillna('')  # NaN 값을 빈 문자열로 대체
         .str.replace(',', '', regex=True)  # 쉼표 제거
         .str.replace('원', '', regex=True)  # '원' 제거
@@ -77,22 +77,22 @@ def total_sheet_update(existing_df, notice_list):
     )
 
     # 빈 문자열을 NaN으로 변환 후 숫자로 변환
-    df['공고 가격'] = pd.to_numeric(df['공고 가격'], errors='coerce')  # 숫자로 변환 불가능한 값은 NaN으로 처리
-    df['공고 가격'] = df['공고 가격'].fillna(0).astype(int)
-    notice_list = df.loc[:,['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','게시일','마감일','링크','비고']]
+    df['공고가격(단위: 원)'] = pd.to_numeric(df['공고가격(단위: 원)'], errors='coerce')  # 숫자로 변환 불가능한 값은 NaN으로 처리
+    df['공고가격(단위: 원)'] = df['공고가격(단위: 원)'].fillna(0).astype(int)
+    notice_list = df.loc[:,['공고 유형','공고번호','공고명','공고가격(단위: 원)','공고 기관','수요 기관','게시일','마감일','링크','비고']]
     google_sheet_add('전체 공고',notice_list,spreadsheet_url)
-    notice_list = df.loc[df['공고 유형']=='입찰 공고',['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','게시일','마감일','링크','비고']]
+    notice_list = df.loc[df['공고 유형']=='입찰 공고',['공고 유형','공고번호','공고명','공고가격(단위: 원)','공고 기관','수요 기관','게시일','마감일','링크','비고']]
     google_sheet_add('입찰 공고',notice_list,spreadsheet_url)
-    notice_list = df.loc[df['공고 유형']=='사전 규격',['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','게시일','마감일','링크','비고']]
+    notice_list = df.loc[df['공고 유형']=='사전 규격',['공고 유형','공고번호','공고명','공고가격(단위: 원)','공고 기관','수요 기관','게시일','마감일','링크','비고']]
     google_sheet_add('사전 규격',notice_list,spreadsheet_url)
 
-    notice_list = df.loc[df['비고'].str.contains('데이터'),['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','게시일','마감일','링크','비고']]
+    notice_list = df.loc[df['비고'].str.contains('데이터'),['공고 유형','공고번호','공고명','공고가격(단위: 원)','공고 기관','수요 기관','게시일','마감일','링크','비고']]
     google_sheet_add('데이터',notice_list,spreadsheet_url)
-    notice_list = df.loc[df['비고'].str.contains('인공지능'),['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','게시일','마감일','링크','비고']]
+    notice_list = df.loc[df['비고'].str.contains('인공지능'),['공고 유형','공고번호','공고명','공고가격(단위: 원)','공고 기관','수요 기관','게시일','마감일','링크','비고']]
     google_sheet_add('인공지능',notice_list,spreadsheet_url)
-    notice_list = df.loc[df['비고'].str.contains('ISP/ISMP'),['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','게시일','마감일','링크','비고']]
+    notice_list = df.loc[df['비고'].str.contains('ISP/ISMP'),['공고 유형','공고번호','공고명','공고가격(단위: 원)','공고 기관','수요 기관','게시일','마감일','링크','비고']]
     google_sheet_add('ISP/ISMP',notice_list,spreadsheet_url)
-    notice_list = df.loc[df['비고'].str.contains('클라우드'),['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','게시일','마감일','링크','비고']]
+    notice_list = df.loc[df['비고'].str.contains('클라우드'),['공고 유형','공고번호','공고명','공고가격(단위: 원)','공고 기관','수요 기관','게시일','마감일','링크','비고']]
     google_sheet_add('클라우드',notice_list,spreadsheet_url)
 
 
@@ -123,7 +123,7 @@ def total_sheet_update(existing_df, notice_list):
     # 조건에 따라 데이터 필터링
     notice_list = df.loc[
         (df['게시일_sort'] >= start_date)&(df['게시일_sort'] <= end_date),
-        ['공고 유형', '공고번호', '공고명', '공고 가격', '공고 기관', '수요 기관', '게시일', '마감일', '링크', '비고']
+        ['공고 유형', '공고번호', '공고명', '공고가격(단위: 원)', '공고 기관', '수요 기관', '게시일', '마감일', '링크', '비고']
     ]
 
     print('전체 공고 | 시작 날짜 : {} / 종료 날짜 : {}'.format(start_date,end_date))
@@ -173,13 +173,24 @@ def category_sheet_update(spreadsheet_url,notice_df,notice_category):
     notice_df.loc[:, '게시일_sort'] = pd.to_datetime(notice_df['게시일'], format='%Y/%m/%d')
     # 최신 순으로 정렬
     notice_df = notice_df.sort_values(by='게시일_sort', ascending=False).reset_index(drop=True)
+    notice_df['공고가격(단위: 원)'] = (
+        notice_df['공고가격(단위: 원)']
+        .fillna('')  # NaN 값을 빈 문자열로 대체
+        .str.replace(',', '', regex=True)  # 쉼표 제거
+        .str.replace('원', '', regex=True)  # '원' 제거
+        .str.strip()  # 앞뒤 공백 제거
+    )
+
+    # 빈 문자열을 NaN으로 변환 후 숫자로 변환
+    notice_df['공고가격(단위: 원)'] = pd.to_numeric(notice_df['공고가격(단위: 원)'], errors='coerce')  # 숫자로 변환 불가능한 값은 NaN으로 처리
+    notice_df['공고가격(단위: 원)'] = notice_df['공고가격(단위: 원)'].fillna(0).astype(int)
 
 
-    notice_list = notice_df.loc[:,['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','게시일','마감일','링크','비고']]
+    notice_list = notice_df.loc[:,['공고 유형','공고번호','공고명','공고가격(단위: 원)','공고 기관','수요 기관','게시일','마감일','링크','비고']]
     google_sheet_add('전체 공고',notice_list,spreadsheet_url)
-    notice_list = notice_df.loc[notice_df['공고 유형']=='입찰 공고',['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','게시일','마감일','링크','비고']]
+    notice_list = notice_df.loc[notice_df['공고 유형']=='입찰 공고',['공고 유형','공고번호','공고명','공고가격(단위: 원)','공고 기관','수요 기관','게시일','마감일','링크','비고']]
     google_sheet_add('입찰 공고',notice_list,spreadsheet_url)
-    notice_list = notice_df.loc[notice_df['공고 유형']=='사전 규격',['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','게시일','마감일','링크','비고']]
+    notice_list = notice_df.loc[notice_df['공고 유형']=='사전 규격',['공고 유형','공고번호','공고명','공고가격(단위: 원)','공고 기관','수요 기관','게시일','마감일','링크','비고']]
     google_sheet_add('사전 규격',notice_list,spreadsheet_url)
 
 
@@ -211,7 +222,7 @@ def category_sheet_update(spreadsheet_url,notice_df,notice_category):
     # 조건에 따라 데이터 필터링
     notice_list = notice_df.loc[
         (notice_df['게시일_sort'] >= start_date)&(notice_df['게시일_sort'] <= end_date),
-        ['공고 유형', '공고번호', '공고명', '공고 가격', '공고 기관', '수요 기관', '게시일', '마감일', '링크', '비고']
+        ['공고 유형', '공고번호', '공고명', '공고가격(단위: 원)', '공고 기관', '수요 기관', '게시일', '마감일', '링크', '비고']
     ]
 
     print('{} | 시작 날짜 : {} / 종료 날짜 : {}'.format(notice_category, start_date,end_date))
