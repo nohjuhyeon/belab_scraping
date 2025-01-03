@@ -1732,3 +1732,38 @@
 2025-01-02 15:00:08,077 - INFO - Get LATEST geckodriver version for 128.5 firefox
 2025-01-02 15:00:08,077 - INFO - GH_TOKEN will be used to perform requests
 2025-01-02 15:00:08,390 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2025-01-02 18:00:04,930 - INFO - ----------------notice check started----------------
+2025-01-02 18:00:08,921 - INFO - ====== WebDriver manager ======
+2025-01-02 18:00:09,203 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-02 18:00:09,204 - INFO - GH_TOKEN will be used to perform requests
+2025-01-02 18:00:09,618 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-02 18:00:09,618 - INFO - GH_TOKEN will be used to perform requests
+2025-01-02 18:00:09,986 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2025-01-03 11:52:06,729 - INFO - ----------------notice check started----------------
+2025-01-03 11:52:09,020 - INFO - ====== WebDriver manager ======
+2025-01-03 11:52:09,692 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-03 11:52:09,692 - INFO - GH_TOKEN will be used to perform requests
+2025-01-03 11:52:10,140 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-03 11:52:10,141 - INFO - GH_TOKEN will be used to perform requests
+2025-01-03 11:52:10,494 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-03 11:52:10,494 - INFO - GH_TOKEN will be used to perform requests
+2025-01-03 11:52:10,804 - INFO - Getting latest mozilla release info for v0.35.0
+2025-01-03 11:52:10,805 - INFO - GH_TOKEN will be used to perform requests
+2025-01-03 11:52:11,162 - INFO - About to download new driver from https://github.com/mozilla/geckodriver/releases/download/v0.35.0/geckodriver-v0.35.0-linux64.tar.gz
+2025-01-03 11:52:12,289 - INFO - Driver downloading response is 200
+2025-01-03 11:52:12,378 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-03 11:52:12,378 - INFO - GH_TOKEN will be used to perform requests
+2025-01-03 11:52:12,839 - INFO - Driver has been saved in cache [/root/.wdm/drivers/geckodriver/linux64/v0.35.0]
+2025-01-03 11:53:53,748 - INFO - ----------------notice check started----------------
+2025-01-03 11:54:43,044 - INFO - ----------------notice check started----------------
+2025-01-03 11:56:34,731 - INFO - ----------------notice check started----------------
+2025-01-03 11:56:58,375 - INFO - ----------------notice check started----------------
+2025-01-03 12:00:02,485 - INFO - ----------------notice check started----------------
+2025-01-03 12:11:23,196 - INFO - ----------------notice check started----------------
+2025-01-03 12:11:36,969 - INFO - ----------------notice check started----------------
+2025-01-03 12:12:39,153 - INFO - ----------------notice check started----------------
+2025-01-03 12:14:17,198 - INFO - ----------------notice check started----------------
+2025-01-03 12:16:06,545 - INFO - ----------------notice check started----------------
+2025-01-03 12:17:11,598 - INFO - ----------------notice check started----------------
+2025-01-03 12:25:02,867 - INFO - ----------------notice check started----------------
+2025-01-03 12:28:59,454 - INFO - ----------------notice check started----------------

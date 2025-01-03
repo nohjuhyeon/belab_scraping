@@ -68,8 +68,17 @@ def total_sheet_update(existing_df, notice_list):
     df = pd.concat([existing_df,new_df],ignore_index=True)
     df.loc[:, '게시일_sort'] = pd.to_datetime(df['게시일'], format='%Y/%m/%d')
     df = df.sort_values(by='게시일_sort', ascending=False).reset_index(drop=True)
+    df['공고 가격'] = (
+        df['공고 가격']
+        .fillna('')  # NaN 값을 빈 문자열로 대체
+        .str.replace(',', '', regex=True)  # 쉼표 제거
+        .str.replace('원', '', regex=True)  # '원' 제거
+        .str.strip()  # 앞뒤 공백 제거
+    )
 
-
+    # 빈 문자열을 NaN으로 변환 후 숫자로 변환
+    df['공고 가격'] = pd.to_numeric(df['공고 가격'], errors='coerce')  # 숫자로 변환 불가능한 값은 NaN으로 처리
+    df['공고 가격'] = df['공고 가격'].fillna(0).astype(int)
     notice_list = df.loc[:,['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','게시일','마감일','링크','비고']]
     google_sheet_add('전체 공고',notice_list,spreadsheet_url)
     notice_list = df.loc[df['공고 유형']=='입찰 공고',['공고 유형','공고번호','공고명','공고 가격','공고 기관','수요 기관','게시일','마감일','링크','비고']]

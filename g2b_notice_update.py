@@ -17,10 +17,10 @@ try:
     # 나라장터 데이터 수집
     print('나라장터 공고를 찾습니다.')
     existing_df = total_sheet_get()
-    notice_list = notice_collection(existing_df)
-    preparation_list = preparation_collection(existing_df)
-    notice_list.extend(preparation_list)
-
+    # notice_list = notice_collection(existing_df)
+    # preparation_list = preparation_collection(existing_df)
+    # notice_list.extend(preparation_list)
+    notice_list = []
     # 전체 공고 업데이트
     total_sheet_update(existing_df, notice_list)
 
