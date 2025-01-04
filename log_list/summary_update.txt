@@ -1716,3 +1716,10 @@ Using device: cpu
 MongoDB collection updated successfully.
 MongoDB collection updated successfully.
 뉴스 요약 업데이트 완료!
+----------------뉴스 요약 업데이트 시작----------------
+2025-01-03 09:50:27.140841
+ict news crawling finish
+crawling count :  0
+seoul institute crawling finish
+crawling count :  0
+뉴스 요약 업데이트 완료!
