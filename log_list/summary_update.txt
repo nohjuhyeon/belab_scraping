@@ -1730,3 +1730,6 @@ crawling count :  0
 seoul institute crawling finish
 crawling count :  0
 뉴스 요약 업데이트 완료!
+----------------뉴스 요약 업데이트 시작----------------
+2025-01-05 09:30:17.404636
+뉴스 요약 업데이트 완료!
