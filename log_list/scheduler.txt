@@ -1786,3 +1786,48 @@
 2025-01-06 15:00:07,532 - INFO - Get LATEST geckodriver version for 128.5 firefox
 2025-01-06 15:00:07,532 - INFO - GH_TOKEN will be used to perform requests
 2025-01-06 15:00:07,871 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2025-01-06 18:00:03,732 - INFO - ----------------notice check started----------------
+2025-01-06 18:00:07,874 - INFO - ====== WebDriver manager ======
+2025-01-06 18:00:08,220 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-06 18:00:08,220 - INFO - GH_TOKEN will be used to perform requests
+2025-01-06 18:00:08,677 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-06 18:00:08,677 - INFO - GH_TOKEN will be used to perform requests
+2025-01-06 18:00:09,066 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2025-01-07 20:59:50,072 - INFO - ----------------notice check started----------------
+2025-01-07 21:00:01,977 - INFO - ----------------notice check started----------------
+2025-01-07 21:00:53,609 - INFO - ----------------notice check started----------------
+2025-01-07 21:00:57,511 - INFO - ====== WebDriver manager ======
+2025-01-07 21:00:58,380 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-07 21:00:58,381 - INFO - GH_TOKEN will be used to perform requests
+2025-01-07 21:00:58,892 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-07 21:00:58,892 - INFO - GH_TOKEN will be used to perform requests
+2025-01-07 21:00:59,424 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-07 21:00:59,424 - INFO - GH_TOKEN will be used to perform requests
+2025-01-07 21:01:00,030 - INFO - Getting latest mozilla release info for v0.35.0
+2025-01-07 21:01:00,030 - INFO - GH_TOKEN will be used to perform requests
+2025-01-07 21:01:00,485 - INFO - About to download new driver from https://github.com/mozilla/geckodriver/releases/download/v0.35.0/geckodriver-v0.35.0-linux64.tar.gz
+2025-01-07 21:01:01,991 - INFO - Driver downloading response is 200
+2025-01-07 21:01:02,334 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-07 21:01:02,334 - INFO - GH_TOKEN will be used to perform requests
+2025-01-07 21:01:02,738 - INFO - Driver has been saved in cache [/root/.wdm/drivers/geckodriver/linux64/v0.35.0]
+2025-01-07 21:01:28,672 - INFO - ----------------notice check started----------------
+2025-01-07 21:01:33,123 - INFO - ====== WebDriver manager ======
+2025-01-07 21:01:33,173 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-07 21:01:33,173 - INFO - GH_TOKEN will be used to perform requests
+2025-01-07 21:01:33,515 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-07 21:01:33,516 - INFO - GH_TOKEN will be used to perform requests
+2025-01-07 21:01:33,833 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2025-01-07 21:06:22,810 - INFO - ----------------notice check started----------------
+2025-01-07 21:06:33,628 - INFO - ====== WebDriver manager ======
+2025-01-07 21:06:33,684 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-07 21:06:33,684 - INFO - GH_TOKEN will be used to perform requests
+2025-01-07 21:06:34,097 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-07 21:06:34,097 - INFO - GH_TOKEN will be used to perform requests
+2025-01-07 21:06:34,416 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2025-01-07 21:12:09,915 - INFO - ----------------notice check started----------------
+2025-01-07 21:12:13,122 - INFO - ====== WebDriver manager ======
+2025-01-07 21:12:13,222 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-07 21:12:13,223 - INFO - GH_TOKEN will be used to perform requests
+2025-01-07 21:12:13,635 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-07 21:12:13,636 - INFO - GH_TOKEN will be used to perform requests
+2025-01-07 21:12:14,040 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
