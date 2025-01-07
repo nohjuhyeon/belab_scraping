@@ -1831,3 +1831,82 @@
 2025-01-07 21:12:13,635 - INFO - Get LATEST geckodriver version for 128.5 firefox
 2025-01-07 21:12:13,636 - INFO - GH_TOKEN will be used to perform requests
 2025-01-07 21:12:14,040 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2025-01-07 22:18:48,811 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f23ea16dde0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/5f9bba53-3d62-4be6-bc9b-52f6c97aa76e/url
+2025-01-07 22:18:48,814 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f23ea16fe80>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/5f9bba53-3d62-4be6-bc9b-52f6c97aa76e/url
+2025-01-07 22:18:48,814 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f23ea16ee00>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/5f9bba53-3d62-4be6-bc9b-52f6c97aa76e/url
+2025-01-07 22:52:51,920 - INFO - ----------------notice check started----------------
+2025-01-07 22:52:54,663 - INFO - ====== WebDriver manager ======
+2025-01-07 22:52:55,763 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-07 22:52:55,763 - INFO - GH_TOKEN will be used to perform requests
+2025-01-07 22:52:56,124 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-07 22:52:56,124 - INFO - GH_TOKEN will be used to perform requests
+2025-01-07 22:52:56,466 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2025-01-07 22:54:57,041 - INFO - ----------------notice check started----------------
+2025-01-07 22:54:59,756 - INFO - ====== WebDriver manager ======
+2025-01-07 22:54:59,807 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-07 22:54:59,808 - INFO - GH_TOKEN will be used to perform requests
+2025-01-07 22:55:00,140 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-07 22:55:00,141 - INFO - GH_TOKEN will be used to perform requests
+2025-01-07 22:55:00,522 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2025-01-07 22:58:05,305 - INFO - ----------------notice check started----------------
+2025-01-07 22:58:07,323 - INFO - ====== WebDriver manager ======
+2025-01-07 22:58:07,382 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-07 22:58:07,383 - INFO - GH_TOKEN will be used to perform requests
+2025-01-07 22:58:07,726 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-07 22:58:07,726 - INFO - GH_TOKEN will be used to perform requests
+2025-01-07 22:58:08,054 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2025-01-07 22:58:11,349 - INFO - ----------------notice check started----------------
+2025-01-07 22:58:13,116 - INFO - ====== WebDriver manager ======
+2025-01-07 22:58:13,169 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-07 22:58:13,169 - INFO - GH_TOKEN will be used to perform requests
+2025-01-07 22:58:13,504 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-07 22:58:13,505 - INFO - GH_TOKEN will be used to perform requests
+2025-01-07 22:58:13,915 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2025-01-07 23:00:15,876 - INFO - ----------------notice check started----------------
+2025-01-07 23:00:20,043 - INFO - ====== WebDriver manager ======
+2025-01-07 23:00:20,094 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-07 23:00:20,095 - INFO - GH_TOKEN will be used to perform requests
+2025-01-07 23:00:20,424 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-07 23:00:20,424 - INFO - GH_TOKEN will be used to perform requests
+2025-01-07 23:00:20,766 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2025-01-07 23:01:27,817 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f4ed42fa470>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ad131bb3-cea1-4dd2-806d-62d3ec0d132a/url
+2025-01-07 23:01:27,819 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f4ed42f9690>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ad131bb3-cea1-4dd2-806d-62d3ec0d132a/url
+2025-01-07 23:01:27,820 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f4ed42f9d50>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ad131bb3-cea1-4dd2-806d-62d3ec0d132a/url
+2025-01-07 23:01:52,649 - INFO - ----------------notice check started----------------
+2025-01-07 23:01:55,347 - INFO - ====== WebDriver manager ======
+2025-01-07 23:01:55,404 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-07 23:01:55,404 - INFO - GH_TOKEN will be used to perform requests
+2025-01-07 23:01:55,751 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-07 23:01:55,751 - INFO - GH_TOKEN will be used to perform requests
+2025-01-07 23:01:56,211 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2025-01-07 23:02:54,932 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0e97820b50>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/8f96d7fe-a2a6-49fa-8b67-78bade9c5df7/url
+2025-01-07 23:02:54,934 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0e97820e50>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/8f96d7fe-a2a6-49fa-8b67-78bade9c5df7/url
+2025-01-07 23:02:54,935 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0e97820f40>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/8f96d7fe-a2a6-49fa-8b67-78bade9c5df7/url
+2025-01-07 23:03:54,167 - INFO - ----------------notice check started----------------
+2025-01-07 23:03:57,770 - INFO - ====== WebDriver manager ======
+2025-01-07 23:03:57,831 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-07 23:03:57,831 - INFO - GH_TOKEN will be used to perform requests
+2025-01-07 23:03:58,159 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-07 23:03:58,160 - INFO - GH_TOKEN will be used to perform requests
+2025-01-07 23:03:58,509 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2025-01-07 23:22:43,807 - INFO - ----------------notice check started----------------
+2025-01-07 23:22:47,340 - INFO - ====== WebDriver manager ======
+2025-01-07 23:22:47,391 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-07 23:22:47,392 - INFO - GH_TOKEN will be used to perform requests
+2025-01-07 23:22:47,721 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-07 23:22:47,721 - INFO - GH_TOKEN will be used to perform requests
+2025-01-07 23:22:48,051 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2025-01-08 00:00:02,959 - INFO - ----------------notice check started----------------
+2025-01-08 00:00:08,589 - INFO - ====== WebDriver manager ======
+2025-01-08 00:00:08,793 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-08 00:00:08,793 - INFO - GH_TOKEN will be used to perform requests
+2025-01-08 00:00:09,260 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-08 00:00:09,260 - INFO - GH_TOKEN will be used to perform requests
+2025-01-08 00:00:09,622 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-08 00:00:09,622 - INFO - GH_TOKEN will be used to perform requests
+2025-01-08 00:00:10,045 - INFO - Getting latest mozilla release info for v0.35.0
+2025-01-08 00:00:10,045 - INFO - GH_TOKEN will be used to perform requests
+2025-01-08 00:00:10,421 - INFO - About to download new driver from https://github.com/mozilla/geckodriver/releases/download/v0.35.0/geckodriver-v0.35.0-linux64.tar.gz
+2025-01-08 00:00:11,534 - INFO - Driver downloading response is 200
+2025-01-08 00:00:11,683 - INFO - Get LATEST geckodriver version for 128.5 firefox
+2025-01-08 00:00:11,683 - INFO - GH_TOKEN will be used to perform requests
