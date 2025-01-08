@@ -40,41 +40,43 @@ def wait_for_downloads(download_dir, timeout=30):
 
 
 def notice_search(notice_list,notice_ids,folder_path):
-    url = 'http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoServcPPSSrch?serviceKey=Qa6CXT4r6qEr%2BkQt%2FJx6wJr5MPx45hKNJwNTScoYryT2uGz7GozIqpjBw%2FRMk1uE8l92NU7h89m20sa%2FXHKuaQ%3D%3D&pageNo=1&numOfRows=500&inqryDiv=1&inqryBgnDt=202412230000&inqryEndDt=202501080000&type=json'
+    collection = mongo_setting('news_scraping','notice_list')
+    # url = 'http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoServcPPSSrch?serviceKey=Qa6CXT4r6qEr%2BkQt%2FJx6wJr5MPx45hKNJwNTScoYryT2uGz7GozIqpjBw%2FRMk1uE8l92NU7h89m20sa%2FXHKuaQ%3D%3D&pageNo=1&numOfRows=500&inqryDiv=1&inqryBgnDt=202412230000&inqryEndDt=202501080000&type=json'
+    # # url과 parameters를 response라는 변수로 받음 
+    # response = requests.get(url) 
+    # # json 파일을 dictionary 형태로 변환
+    # contents = json.loads(response.content)
 
-    # url과 parameters를 response라는 변수로 받음 
-    response = requests.get(url) 
+    # items = contents['response']['body']['items']
 
+    # totalCount = contents['response']['body']['totalCount']
+    # numOfRows = contents['response']['body']['numOfRows']
+    # pages = totalCount//numOfRows + 1
+    # item_list = []
+    # for i in range(pages):
+    #     pagenum = i + 1
+    #     url = 'http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoServcPPSSrch?serviceKey=Qa6CXT4r6qEr%2BkQt%2FJx6wJr5MPx45hKNJwNTScoYryT2uGz7GozIqpjBw%2FRMk1uE8l92NU7h89m20sa%2FXHKuaQ%3D%3D&pageNo={}&numOfRows=500&inqryDiv=1&inqryBgnDt=202412230000&inqryEndDt=202501080000&type=json'.format(pagenum)
+    #     response = requests.get(url) 
+    #     contents = json.loads(response.content)
+    #     items = contents['response']['body']['items']
+    #     item_list.extend(items)
+    # output_file = "item_list.json"  # 저장할 파일 이름
 
+    # try:
+    #     with open(output_file, "w", encoding="utf-8") as file:
+    #         json.dump(item_list, file, ensure_ascii=False, indent=4)  # JSON 저장
+    #     print(f"item_list가 '{output_file}'로 저장되었습니다.")
+    # except Exception as e:
+    #     print(f"JSON 저장 중 오류 발생: {e}")
 
-    # json 파일을 dictionary 형태로 변환
-    contents = json.loads(response.content)
+    file_path = 'item_list.json'
 
-    items = contents['response']['body']['items']
-
-    totalCount = contents['response']['body']['totalCount']
-    numOfRows = contents['response']['body']['numOfRows']
-    pages = totalCount//numOfRows + 1
+    # JSON 파일 읽기
+    with open(file_path, 'r', encoding='utf-8') as file:
+        item_list = json.load(file)
     chrome_options = selenium_setting()
     chrome_options,download_folder_path = download_path_setting(folder_path,chrome_options)
     browser = init_browser(chrome_options)
-    item_list = []
-    for i in range(pages):
-        pagenum = i + 1
-        url = 'http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoServcPPSSrch?serviceKey=Qa6CXT4r6qEr%2BkQt%2FJx6wJr5MPx45hKNJwNTScoYryT2uGz7GozIqpjBw%2FRMk1uE8l92NU7h89m20sa%2FXHKuaQ%3D%3D&pageNo={}&numOfRows=500&inqryDiv=1&inqryBgnDt=202412230000&inqryEndDt=202501080000&type=json'.format(pagenum)
-        response = requests.get(url) 
-        contents = json.loads(response.content)
-        items = contents['response']['body']['items']
-        item_list.extend(items)
-    output_file = "item_list.json"  # 저장할 파일 이름
-
-    try:
-        with open(output_file, "w", encoding="utf-8") as file:
-            json.dump(item_list, file, ensure_ascii=False, indent=4)  # JSON 저장
-        print(f"item_list가 '{output_file}'로 저장되었습니다.")
-    except Exception as e:
-        print(f"JSON 저장 중 오류 발생: {e}")
-
 
     notice_id_list  = []
     for item in item_list:
@@ -137,12 +139,12 @@ def notice_search(notice_list,notice_ids,folder_path):
                 if j not in notice_type:
                     notice_type.append(j)                
             notice_type = ', '.join(notice_type)
-            # collection.insert_one(dict_notice)
             folder_clear(download_folder_path)
             time.sleep(1)
             
             dict_notice = {'notice_id':notice_id,'title':notice_title,'price':notice_price,'publishing_agency':publishing_agency,'requesting_agency':requesting_agency,'start_date':notice_start_date,'end_date':notice_end_date,'link':notice_link,'type':notice_type,'notice_class':'입찰 공고'}
             notice_list.append(dict_notice)
+            collection.insert_one(dict_notice)
             print(dict_notice)
             pass
     browser.quit()
@@ -153,10 +155,9 @@ def notice_collection(existing_df):
     notice_list = []
     # 함수 호출
     collection = mongo_setting('news_scraping','notice_list')
-    # results = collection.find({},{'_id':0,'link':1})
-    # notice_links = [i['link'] for i in results]
+    results = collection.find({},{'_id':0,'notice_id':1})
+    notice_ids = [i['notice_id'] for i in results]
     # notice_links = existing_df.loc[existing_df['공고 유형']=='입찰 공고','링크'].to_list()
-    notice_ids = []
     folder_path = os.environ.get("folder_path")
 
     notice_list = notice_search(notice_list,notice_ids,folder_path)
