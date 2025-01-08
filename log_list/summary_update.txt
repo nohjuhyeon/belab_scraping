@@ -1755,3 +1755,6 @@ MongoDB collection updated successfully.
 MongoDB collection updated successfully.
 >>>>>>> 3ce262ef19047e816027c8063fb4be3ff736e850
 뉴스 요약 업데이트 완료!
+----------------뉴스 요약 업데이트 시작----------------
+2025-01-07 10:59:42.725269
+뉴스 요약 업데이트 완료!
