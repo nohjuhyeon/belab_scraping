@@ -66,7 +66,7 @@ def total_sheet_update(existing_df, notice_list):
         }, inplace=True)
     # 최신 순으로 정렬
     df = pd.concat([existing_df,new_df],ignore_index=True)
-    df.loc[:, '게시일_sort'] = pd.to_datetime(df['게시일'], format='%Y/%m/%d')
+    df.loc[:, '게시일_sort'] = pd.to_datetime(df['게시일'], format='%Y-%m-%d')
     df = df.sort_values(by='게시일_sort', ascending=False).reset_index(drop=True)
     df['공고가격(단위: 원)'] = (
         df['공고가격(단위: 원)']
@@ -170,7 +170,7 @@ def category_sheet_update(spreadsheet_url,notice_df,notice_category):
     # # DataFrame으로 변환
     # new_df = pd.DataFrame(list(documents))
     notice_df = notice_df.copy()  # 복사본 생성
-    notice_df.loc[:, '게시일_sort'] = pd.to_datetime(notice_df['게시일'], format='%Y/%m/%d')
+    notice_df.loc[:, '게시일_sort'] = pd.to_datetime(notice_df['게시일'], format='%Y-%m-%d')
     # 최신 순으로 정렬
     notice_df = notice_df.sort_values(by='게시일_sort', ascending=False).reset_index(drop=True)
     notice_df['공고가격(단위: 원)'] = (

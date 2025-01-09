@@ -13,6 +13,9 @@ from selenium.webdriver.support import expected_conditions as EC
 from dotenv import load_dotenv
 from function_list.basic_options import selenium_setting,download_path_setting,init_browser
 from function_list.g2b_func import notice_file_check,notice_title_check,folder_clear
+from datetime import datetime, timedelta
+
+
 # url 주소 변수 지정
 def wait_for_downloads(download_dir, timeout=30):
     """
@@ -41,7 +44,15 @@ def wait_for_downloads(download_dir, timeout=30):
 
 def notice_search(notice_list,notice_ids,folder_path):
     collection = mongo_setting('news_scraping','notice_list')
-    # url = 'http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoServcPPSSrch?serviceKey=Qa6CXT4r6qEr%2BkQt%2FJx6wJr5MPx45hKNJwNTScoYryT2uGz7GozIqpjBw%2FRMk1uE8l92NU7h89m20sa%2FXHKuaQ%3D%3D&pageNo=1&numOfRows=500&inqryDiv=1&inqryBgnDt=202412230000&inqryEndDt=202501080000&type=json'
+    
+    # 오늘 날짜를 가져와서 원하는 형식으로 변환
+    search_end_date = datetime.now().strftime('%Y%m%d')
+    search_start_date = datetime.now() - timedelta(days=2)
+    search_start_date = search_start_date.strftime('%Y%m%d')
+    search_end_date = search_end_date + '1159'
+    search_start_date = search_start_date + '0000'
+
+    # url = 'http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoServcPPSSrch?serviceKey=Qa6CXT4r6qEr%2BkQt%2FJx6wJr5MPx45hKNJwNTScoYryT2uGz7GozIqpjBw%2FRMk1uE8l92NU7h89m20sa%2FXHKuaQ%3D%3D&pageNo=1&numOfRows=500&inqryDiv=1&inqryBgnDt={}&inqryEndDt={}&type=json'.format(search_start_date, search_end_date)
     # # url과 parameters를 response라는 변수로 받음 
     # response = requests.get(url) 
     # # json 파일을 dictionary 형태로 변환
@@ -55,7 +66,7 @@ def notice_search(notice_list,notice_ids,folder_path):
     # item_list = []
     # for i in range(pages):
     #     pagenum = i + 1
-    #     url = 'http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoServcPPSSrch?serviceKey=Qa6CXT4r6qEr%2BkQt%2FJx6wJr5MPx45hKNJwNTScoYryT2uGz7GozIqpjBw%2FRMk1uE8l92NU7h89m20sa%2FXHKuaQ%3D%3D&pageNo={}&numOfRows=500&inqryDiv=1&inqryBgnDt=202412230000&inqryEndDt=202501080000&type=json'.format(pagenum)
+    #     url = 'http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoServcPPSSrch?serviceKey=Qa6CXT4r6qEr%2BkQt%2FJx6wJr5MPx45hKNJwNTScoYryT2uGz7GozIqpjBw%2FRMk1uE8l92NU7h89m20sa%2FXHKuaQ%3D%3D&pageNo={}&numOfRows=500&inqryDiv=1&inqryBgnDt={}&inqryEndDt={}&type=json'.format(pagenum,search_start_date, search_end_date)
     #     response = requests.get(url) 
     #     contents = json.loads(response.content)
     #     items = contents['response']['body']['items']
@@ -154,14 +165,12 @@ def notice_search(notice_list,notice_ids,folder_path):
 def notice_collection(existing_df):
     notice_list = []
     # 함수 호출
-    collection = mongo_setting('news_scraping','notice_list')
-    results = collection.find({},{'_id':0,'notice_id':1})
-    notice_ids = [i['notice_id'] for i in results]
-    # notice_links = existing_df.loc[existing_df['공고 유형']=='입찰 공고','링크'].to_list()
+    # collection = mongo_setting('news_scraping','notice_list')
+    notice_ids = existing_df.loc[existing_df['공고 유형']=='입찰 공고','공고번호'].to_list()
     folder_path = os.environ.get("folder_path")
 
     notice_list = notice_search(notice_list,notice_ids,folder_path)
-    if len(notice_list)> 0:
-        collection.insert_many(notice_list)
+    # if len(notice_list)> 0:
+    #     collection.insert_many(notice_list)
 
     return notice_list
