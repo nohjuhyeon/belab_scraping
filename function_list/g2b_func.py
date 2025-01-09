@@ -178,7 +178,7 @@ def search_keywords_in_hwp(file_name,file_path, keywords):
     return False
 
 def type_list_insert(notice_type, download_folder_path):
-    ai_keywords = ['AI', '인공지능', 'LLM','생성형','초거대']
+    ai_keywords = ['AI', '인공지능', 'LLM','생성형','초거대','언어 모델','언어모델','챗봇']
     db_keywords = ['Database', '데이터 레이크', '빅데이터', '데이터 허브','데이터베이스']
     cloud_keywords = ['클라우드','cloud']
     """공고 폴더 내 HWP 및 PDF 파일에서 키워드 검색 후 해당 폴더 이동"""
