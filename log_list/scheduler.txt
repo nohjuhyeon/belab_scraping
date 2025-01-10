@@ -2009,3 +2009,4 @@
 2025-01-09 18:09:38,070 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
 2025-01-10 08:55:33,966 - INFO - notice check shut down.
 2025-01-10 08:55:36,676 - INFO - ----------------notice check started----------------
+2025-01-10 09:10:42,039 - INFO - ----------------notice check started----------------
