@@ -1793,3 +1793,6 @@ Using device: cpu
 MongoDB collection updated successfully.
 MongoDB collection updated successfully.
 뉴스 요약 업데이트 완료!
+----------------뉴스 요약 업데이트 시작----------------
+2025-01-10 09:15:08.600459
+뉴스 요약 업데이트 완료!
