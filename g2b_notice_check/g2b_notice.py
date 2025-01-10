@@ -13,6 +13,9 @@ from selenium.webdriver.support import expected_conditions as EC
 from dotenv import load_dotenv
 from function_list.basic_options import selenium_setting,download_path_setting,init_browser
 from function_list.g2b_func import notice_file_check,notice_title_check,folder_clear
+from datetime import datetime, timedelta
+
+
 # url 주소 변수 지정
 def wait_for_downloads(download_dir, timeout=30):
     """
@@ -41,7 +44,15 @@ def wait_for_downloads(download_dir, timeout=30):
 
 def notice_search(notice_list,notice_ids,folder_path):
     collection = mongo_setting('news_scraping','notice_list')
-    # url = 'http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoServcPPSSrch?serviceKey=Qa6CXT4r6qEr%2BkQt%2FJx6wJr5MPx45hKNJwNTScoYryT2uGz7GozIqpjBw%2FRMk1uE8l92NU7h89m20sa%2FXHKuaQ%3D%3D&pageNo=1&numOfRows=500&inqryDiv=1&inqryBgnDt=202412230000&inqryEndDt=202501080000&type=json'
+    
+    # # 오늘 날짜를 가져와서 원하는 형식으로 변환
+    # search_end_date = datetime.now().strftime('%Y%m%d')
+    # search_start_date = datetime.now() - timedelta(days=2)
+    # search_start_date = search_start_date.strftime('%Y%m%d')
+    # search_end_date = search_end_date + '1159'
+    # search_start_date = search_start_date + '0000'
+
+    # url = 'http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoServcPPSSrch?serviceKey=Qa6CXT4r6qEr%2BkQt%2FJx6wJr5MPx45hKNJwNTScoYryT2uGz7GozIqpjBw%2FRMk1uE8l92NU7h89m20sa%2FXHKuaQ%3D%3D&pageNo=1&numOfRows=500&inqryDiv=1&inqryBgnDt={}&inqryEndDt={}&type=json'.format(search_start_date, search_end_date)
     # # url과 parameters를 response라는 변수로 받음 
     # response = requests.get(url) 
     # # json 파일을 dictionary 형태로 변환
@@ -55,7 +66,7 @@ def notice_search(notice_list,notice_ids,folder_path):
     # item_list = []
     # for i in range(pages):
     #     pagenum = i + 1
-    #     url = 'http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoServcPPSSrch?serviceKey=Qa6CXT4r6qEr%2BkQt%2FJx6wJr5MPx45hKNJwNTScoYryT2uGz7GozIqpjBw%2FRMk1uE8l92NU7h89m20sa%2FXHKuaQ%3D%3D&pageNo={}&numOfRows=500&inqryDiv=1&inqryBgnDt=202412230000&inqryEndDt=202501080000&type=json'.format(pagenum)
+    #     url = 'http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoServcPPSSrch?serviceKey=Qa6CXT4r6qEr%2BkQt%2FJx6wJr5MPx45hKNJwNTScoYryT2uGz7GozIqpjBw%2FRMk1uE8l92NU7h89m20sa%2FXHKuaQ%3D%3D&pageNo={}&numOfRows=500&inqryDiv=1&inqryBgnDt={}&inqryEndDt={}&type=json'.format(pagenum,search_start_date, search_end_date)
     #     response = requests.get(url) 
     #     contents = json.loads(response.content)
     #     items = contents['response']['body']['items']
@@ -104,7 +115,7 @@ def notice_search(notice_list,notice_ids,folder_path):
                 )
             except:
                 pass
-            while True:
+            for k in range(20):
                 try:
                     alarm_btn = browser.find_element(by=By.CSS_SELECTOR,value="input[value='확인']")
                     alarm_btn.click()
@@ -124,28 +135,29 @@ def notice_search(notice_list,notice_ids,folder_path):
                         alarm_btn.click()
                     except Exception as e:
                         pass
+                    try:
+                        rfp_btn = browser.find_element(by=By.CSS_SELECTOR,value='#mf_wfm_container_mainWframe_grdPrpsDmndInfoView_cell_0_2 > nobr:nth-child(1) > a:nth-child(1)')
+                        rfp_btn.click()
+                        time.sleep(2)
+                    except:
+                        pass
+                    file_keywords = notice_file_check(download_folder_path)
+                    notice_type = notice_title_check(notice_title)
+                    for j in file_keywords:
+                        if j not in notice_type:
+                            notice_type.append(j)                
+                    notice_type = ', '.join(notice_type)
+                    folder_clear(download_folder_path)
+                    time.sleep(1)
+                    
+                    dict_notice = {'notice_id':notice_id,'title':notice_title,'price':notice_price,'publishing_agency':publishing_agency,'requesting_agency':requesting_agency,'start_date':notice_start_date,'end_date':notice_end_date,'link':notice_link,'type':notice_type,'notice_class':'입찰 공고'}
+                    notice_list.append(dict_notice)
+                    collection.insert_one(dict_notice)
+                    print(dict_notice)
                     break
                 except Exception as e:
                     print("download_error")
-            try:
-                rfp_btn = browser.find_element(by=By.CSS_SELECTOR,value='#mf_wfm_container_mainWframe_grdPrpsDmndInfoView_cell_0_2 > nobr:nth-child(1) > a:nth-child(1)')
-                rfp_btn.click()
-                time.sleep(2)
-            except:
-                pass
-            file_keywords = notice_file_check(download_folder_path)
-            notice_type = notice_title_check(notice_title)
-            for j in file_keywords:
-                if j not in notice_type:
-                    notice_type.append(j)                
-            notice_type = ', '.join(notice_type)
-            folder_clear(download_folder_path)
-            time.sleep(1)
-            
-            dict_notice = {'notice_id':notice_id,'title':notice_title,'price':notice_price,'publishing_agency':publishing_agency,'requesting_agency':requesting_agency,'start_date':notice_start_date,'end_date':notice_end_date,'link':notice_link,'type':notice_type,'notice_class':'입찰 공고'}
-            notice_list.append(dict_notice)
-            collection.insert_one(dict_notice)
-            print(dict_notice)
+                    time.sleep(5)
             pass
     browser.quit()
     pass
@@ -154,14 +166,12 @@ def notice_search(notice_list,notice_ids,folder_path):
 def notice_collection(existing_df):
     notice_list = []
     # 함수 호출
-    collection = mongo_setting('news_scraping','notice_list')
-    results = collection.find({},{'_id':0,'notice_id':1})
-    notice_ids = [i['notice_id'] for i in results]
-    # notice_links = existing_df.loc[existing_df['공고 유형']=='입찰 공고','링크'].to_list()
+    # collection = mongo_setting('news_scraping','notice_list')
+    notice_ids = existing_df.loc[existing_df['공고 유형']=='입찰 공고','공고번호'].to_list()
     folder_path = os.environ.get("folder_path")
 
     notice_list = notice_search(notice_list,notice_ids,folder_path)
-    if len(notice_list)> 0:
-        collection.insert_many(notice_list)
+    # if len(notice_list)> 0:
+    #     collection.insert_many(notice_list)
 
     return notice_list
