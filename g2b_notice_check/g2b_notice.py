@@ -115,7 +115,7 @@ def notice_search(notice_list,notice_ids,folder_path):
                 )
             except:
                 pass
-            for k in range(20):
+            for k in range(10):
                 try:
                     alarm_btn = browser.find_element(by=By.CSS_SELECTOR,value="input[value='확인']")
                     alarm_btn.click()
@@ -157,7 +157,7 @@ def notice_search(notice_list,notice_ids,folder_path):
                     break
                 except Exception as e:
                     print("download_error")
-                    time.sleep(5)
+                    time.sleep(2)
             pass
     browser.quit()
     pass
