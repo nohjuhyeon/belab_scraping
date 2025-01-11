@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ----------------뉴스 요약 업데이트 시작----------------
 2024-11-27 09:10:14.749051
 seoul institute crawling finish
@@ -1800,3 +1801,5 @@ Using device: cpu
 MongoDB collection updated successfully.
 MongoDB collection updated successfully.
 뉴스 요약 업데이트 완료!
+=======
+>>>>>>> 1b8c855ed8c60c373260864997a9e8663231b3d9
