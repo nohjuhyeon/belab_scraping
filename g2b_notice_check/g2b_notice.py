@@ -46,54 +46,57 @@ def notice_search(notice_list,notice_ids,folder_path):
     collection = mongo_setting('news_scraping','notice_list')
     
     # 오늘 날짜를 가져와서 원하는 형식으로 변환
-    search_end_date = datetime.now().strftime('%Y%m%d')
-    search_start_date = datetime.now() - timedelta(days=2)
-    search_start_date = search_start_date.strftime('%Y%m%d')
-    search_end_date = search_end_date + '1159'
-    search_start_date = search_start_date + '0000'
+    # search_end_date = datetime.now().strftime('%Y%m%d')
+    # search_start_date = datetime.now() - timedelta(days=2)
+    # search_start_date = search_start_date.strftime('%Y%m%d')
+    # search_end_date = search_end_date + '1159'
+    # search_start_date = search_start_date + '0000'
 
-    url = 'http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoServcPPSSrch?serviceKey=Qa6CXT4r6qEr%2BkQt%2FJx6wJr5MPx45hKNJwNTScoYryT2uGz7GozIqpjBw%2FRMk1uE8l92NU7h89m20sa%2FXHKuaQ%3D%3D&pageNo=1&numOfRows=500&inqryDiv=1&inqryBgnDt={}&inqryEndDt={}&type=json'.format(search_start_date, search_end_date)
-    # url과 parameters를 response라는 변수로 받음 
-    response = requests.get(url) 
-    # json 파일을 dictionary 형태로 변환
-    contents = json.loads(response.content)
+    # url = 'http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoServcPPSSrch?serviceKey=Qa6CXT4r6qEr%2BkQt%2FJx6wJr5MPx45hKNJwNTScoYryT2uGz7GozIqpjBw%2FRMk1uE8l92NU7h89m20sa%2FXHKuaQ%3D%3D&pageNo=1&numOfRows=500&inqryDiv=1&inqryBgnDt={}&inqryEndDt={}&type=json'.format(search_start_date, search_end_date)
+    # # url과 parameters를 response라는 변수로 받음 
+    # response = requests.get(url) 
+    # # json 파일을 dictionary 형태로 변환
+    # contents = json.loads(response.content)
 
-    items = contents['response']['body']['items']
+    # items = contents['response']['body']['items']
 
-    totalCount = contents['response']['body']['totalCount']
-    numOfRows = contents['response']['body']['numOfRows']
-    pages = totalCount//numOfRows + 1
-    item_list = []
-    for i in range(pages):
-        pagenum = i + 1
-        url = 'http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoServcPPSSrch?serviceKey=Qa6CXT4r6qEr%2BkQt%2FJx6wJr5MPx45hKNJwNTScoYryT2uGz7GozIqpjBw%2FRMk1uE8l92NU7h89m20sa%2FXHKuaQ%3D%3D&pageNo={}&numOfRows=500&inqryDiv=1&inqryBgnDt={}&inqryEndDt={}&type=json'.format(pagenum,search_start_date, search_end_date)
-        response = requests.get(url) 
-        contents = json.loads(response.content)
-        items = contents['response']['body']['items']
-        item_list.extend(items)
-    output_file = "item_list.json"  # 저장할 파일 이름
+    # totalCount = contents['response']['body']['totalCount']
+    # numOfRows = contents['response']['body']['numOfRows']
+    # pages = totalCount//numOfRows + 1
+    # item_list = []
+    # for i in range(pages):
+    #     pagenum = i + 1
+    #     url = 'http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoServcPPSSrch?serviceKey=Qa6CXT4r6qEr%2BkQt%2FJx6wJr5MPx45hKNJwNTScoYryT2uGz7GozIqpjBw%2FRMk1uE8l92NU7h89m20sa%2FXHKuaQ%3D%3D&pageNo={}&numOfRows=500&inqryDiv=1&inqryBgnDt={}&inqryEndDt={}&type=json'.format(pagenum,search_start_date, search_end_date)
+    #     response = requests.get(url) 
+    #     contents = json.loads(response.content)
+    #     items = contents['response']['body']['items']
+    #     item_list.extend(items)
+    # output_file = "item_list.json"  # 저장할 파일 이름
 
-    try:
-        with open(output_file, "w", encoding="utf-8") as file:
-            json.dump(item_list, file, ensure_ascii=False, indent=4)  # JSON 저장
-        print(f"item_list가 '{output_file}'로 저장되었습니다.")
-    except Exception as e:
-        print(f"JSON 저장 중 오류 발생: {e}")
+    # try:
+    #     with open(output_file, "w", encoding="utf-8") as file:
+    #         json.dump(item_list, file, ensure_ascii=False, indent=4)  # JSON 저장
+    #     print(f"item_list가 '{output_file}'로 저장되었습니다.")
+    # except Exception as e:
+    #     print(f"JSON 저장 중 오류 발생: {e}")
 
-    # file_path = 'item_list.json'
+    file_path = 'item_list.json'
 
-    # # JSON 파일 읽기
-    # with open(file_path, 'r', encoding='utf-8') as file:
-    #     item_list = json.load(file)
+    # JSON 파일 읽기
+    with open(file_path, 'r', encoding='utf-8') as file:
+        item_list = json.load(file)
 
     chrome_options = selenium_setting()
     chrome_options,download_folder_path = download_path_setting(folder_path,chrome_options)
     browser = init_browser(chrome_options)
     notice_id_list  = []
+    item_num = 0
     for item in item_list:
         bidNtceNo = item['bidNtceNo']
         bidNtceOrd = item['bidNtceOrd']
         notice_id = bidNtceNo + '-' + bidNtceOrd
+        item_num += 1
+        print(item_num)
         if notice_id not in notice_ids and notice_id not in notice_id_list:
             notice_id_list.append(notice_id)
             notice_end_date = item['bidClseDt'].split(' ')[0]
@@ -153,7 +156,7 @@ def notice_search(notice_list,notice_ids,folder_path):
                     dict_notice = {'notice_id':notice_id,'title':notice_title,'price':notice_price,'publishing_agency':publishing_agency,'requesting_agency':requesting_agency,'start_date':notice_start_date,'end_date':notice_end_date,'link':notice_link,'type':notice_type,'notice_class':'입찰 공고'}
                     notice_list.append(dict_notice)
                     collection.insert_one(dict_notice)
-                    print(dict_notice)
+                    # print(dict_notice)
                     break
                 except Exception as e:
                     print("download_error")
