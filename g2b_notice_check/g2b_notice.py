@@ -90,10 +90,13 @@ def notice_search(notice_list,notice_ids,folder_path):
     chrome_options,download_folder_path = download_path_setting(folder_path,chrome_options)
     browser = init_browser(chrome_options)
     notice_id_list  = []
+    item_num = 0
     for item in item_list:
         bidNtceNo = item['bidNtceNo']
         bidNtceOrd = item['bidNtceOrd']
         notice_id = bidNtceNo + '-' + bidNtceOrd
+        item_num += 1
+        print(item_num)
         if notice_id not in notice_ids and notice_id not in notice_id_list:
             notice_id_list.append(notice_id)
             notice_end_date = item['bidClseDt'].split(' ')[0]
@@ -153,7 +156,7 @@ def notice_search(notice_list,notice_ids,folder_path):
                     dict_notice = {'notice_id':notice_id,'title':notice_title,'price':notice_price,'publishing_agency':publishing_agency,'requesting_agency':requesting_agency,'start_date':notice_start_date,'end_date':notice_end_date,'link':notice_link,'type':notice_type,'notice_class':'입찰 공고'}
                     notice_list.append(dict_notice)
                     collection.insert_one(dict_notice)
-                    print(dict_notice)
+                    # print(dict_notice)
                     break
                 except Exception as e:
                     print("download_error")
