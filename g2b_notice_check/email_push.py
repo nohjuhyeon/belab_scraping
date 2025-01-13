@@ -29,7 +29,7 @@ def html_content_write(html_content, notice_elements,notice_class):
         html_content += "<tr>"
         html_content += "<td style='padding: 10px; text-align: center;'>{}</td>".format(list_count)
         html_content += "<td style='padding: 10px; text-align: center;'>{}</td>".format(i['공고명'])
-        html_content += "<td style='padding: 10px; text-align: center;'>{}</td>".format(i['공고 가격'])
+        html_content += "<td style='padding: 10px; text-align: center;'>{}</td>".format(i['공고가격(단위: 원)'])
         html_content += "<td style='padding: 10px; text-align: center;'>{}</td>".format(i['공고 기관'])
         html_content += "<td style='padding: 10px; text-align: center;'>개시일 : {}<br>마감일 : {}</td>".format(i['게시일'], i['마감일'])
         html_content += "<td style='padding: 10px; text-align: center;'>{}</td>".format(i['수요 기관'])
@@ -60,7 +60,7 @@ def email_push(notice_list,email_list,notice_link,notice_type):
         for i in class_list:
             notice_elements = notice_list.loc[(notice_list['공고 유형']==i)]
             notice_elements = notice_elements.copy()  # 복사본 생성
-            notice_elements.loc[:, '게시일_sort'] = pd.to_datetime(notice_elements['게시일'], format='%Y/%m/%d')
+            notice_elements.loc[:, '게시일_sort'] = pd.to_datetime(notice_elements['게시일'], format='%Y-%m-%d')
             notice_elements = notice_elements.sort_values(by='게시일_sort', ascending=False).reset_index(drop=True)
 
             html_content = html_create(html_content, notice_elements, i)
