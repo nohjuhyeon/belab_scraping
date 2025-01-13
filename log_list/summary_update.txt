@@ -1828,3 +1828,6 @@ crawling count :  0
 MongoDB collection updated successfully.
 Using device: cpu
 모델 다운로드 중...
+MongoDB collection updated successfully.
+MongoDB collection updated successfully.
+뉴스 요약 업데이트 완료!
