@@ -11,7 +11,7 @@ def html_content_write(html_content, notice_elements,notice_class):
     html_content += '<hr>'
     html_content += "<h4>{}: {}건</h4>".format(notice_class, len(notice_elements))
     html_content += """
-    <table border='1' style='border-collapse: collapse; width: 1220px; margin-bottom: 20px;'>
+    <table border='1' style='border-collapse: collapse; width: 90%; margin-bottom: 20px;'>
         <tr>
             <th style='padding: 10px; width: 5%; text-align: center;'>번호</th>
             <th style='padding: 10px; width: 22%; text-align: center;'>공고명</th>
