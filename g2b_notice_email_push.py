@@ -8,7 +8,6 @@ from datetime import datetime
 try:
     print("----------------이메일 전송----------------")
     print(datetime.now())
-    load_dotenv()
     print(datetime.now())
     folder_path = os.environ.get("folder_path")
     print(folder_path)
