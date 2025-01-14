@@ -1,6 +1,5 @@
 import os 
 from g2b_notice_check.google_sheet import total_sheet_update,total_sheet_get, category_sheet_update
-from dotenv import load_dotenv
 import logging
 from datetime import datetime
 from g2b_notice_check.g2b_notice import notice_collection
