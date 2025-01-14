@@ -79,8 +79,8 @@ def notice_search(notice_list,notice_ids,folder_path):
         except Exception as e:
             print(f"JSON 저장 중 오류 발생: {e}")
     except:
-        file_path = 'item_list.json'
-
+        file_path = folder_path + 'item_list.json'
+        print(file_path)
         # JSON 파일 읽기
         with open(file_path, 'r', encoding='utf-8') as file:
             item_list = json.load(file)
@@ -90,6 +90,7 @@ def notice_search(notice_list,notice_ids,folder_path):
     browser = init_browser(chrome_options)
     notice_id_list  = []
     item_num = 0
+    print(len(item_list))
     for item in item_list:
         bidNtceNo = item['bidNtceNo']
         bidNtceOrd = item['bidNtceOrd']
