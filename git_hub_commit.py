@@ -1,8 +1,11 @@
 import os
 import subprocess
+from datetime import datetime
+
 folder_path = os.environ.get("folder_path")
 script_path = folder_path+"function_list/git_workflow.sh"
 argument = "Auto Commit."
+print(datetime.now())
 
 try:
     # 스크립트 실행
@@ -13,7 +16,7 @@ try:
         check=True            # 명령어 실패 시 예외 발생
     )
     # 실행 결과 출력
-
+    print("commit complete!")
 except subprocess.CalledProcessError as e:
     # 오류 발생 시 출력
     print("An error occurred while executing the script.")
