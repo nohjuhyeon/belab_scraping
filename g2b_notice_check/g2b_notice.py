@@ -90,13 +90,14 @@ def notice_search(notice_list,notice_ids,folder_path):
     browser = init_browser(chrome_options)
     notice_id_list  = []
     item_num = 0
-    print(len(item_list))
+    print("총 공고 수 : ", len(item_list))
     for item in item_list:
         bidNtceNo = item['bidNtceNo']
         bidNtceOrd = item['bidNtceOrd']
         notice_id = bidNtceNo + '-' + bidNtceOrd
         item_num += 1
-        print(item_num)
+        if item_num // 100:
+            print(item_num)
         if notice_id not in notice_ids and notice_id not in notice_id_list:
             notice_id_list.append(notice_id)
             notice_end_date = item['bidClseDt'].split(' ')[0]
@@ -170,10 +171,8 @@ def notice_collection(existing_df):
     notice_list = []
     # 함수 호출
     # collection = mongo_setting('news_scraping','notice_list')
-    print(len(existing_df))
     notice_ids = existing_df.loc[existing_df['공고 유형']=='입찰 공고','공고번호'].to_list()
     folder_path = os.environ.get("folder_path")
-    print(folder_path)
     notice_list = notice_search(notice_list,notice_ids,folder_path)
     # if len(notice_list)> 0:
     #     collection.insert_many(notice_list)
