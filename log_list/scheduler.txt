@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 2025-01-14 09:39:51,331 - INFO - ----------------notice check started----------------
 2025-01-14 09:39:52,109 - INFO - ====== WebDriver manager ======
 2025-01-14 09:39:52,344 - INFO - Get LATEST geckodriver version for 128.5 firefox
@@ -47,3 +48,5 @@
 2025-01-14 14:36:43,877 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
 >>>>>>> 331c8f504157ae764c19b8bb7fbf4fcebc1ddee1
 2025-01-14 15:02:22,079 - INFO - ----------------notice check started----------------
+=======
+>>>>>>> 5e5abbb6648a860fbdb4657d852084522be01f91

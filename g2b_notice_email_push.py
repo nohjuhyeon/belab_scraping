@@ -13,7 +13,7 @@ try:
     logging.basicConfig(filename=folder_path+'/log_list/scheduler.txt', level=logging.INFO, 
                         format='%(asctime)s - %(levelname)s - %(message)s')
     logging.info("----------------notice check started----------------") # 스케줄러 시작 로그 기록
-
+    print("----------------email push started----------------")
     ## 인공지능 이메일 전송
     ai_url = "https://docs.google.com/spreadsheets/d/15gZLOTcY-XxlGmkNNMllB4GaJynHiLqtlp6U5PhMMew/edit?usp=drive_link"
     ai_list = category_new_data_get(ai_url, '인공지능')
