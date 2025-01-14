@@ -10,6 +10,7 @@ try:
     print(datetime.now())
     load_dotenv()
     folder_path = os.environ.get("folder_path")
+    print(folder_path)
     logging.basicConfig(filename=folder_path+'/log_list/scheduler.txt', level=logging.INFO, 
                         format='%(asctime)s - %(levelname)s - %(message)s')
     logging.info("----------------notice check started----------------") # 스케줄러 시작 로그 기록
