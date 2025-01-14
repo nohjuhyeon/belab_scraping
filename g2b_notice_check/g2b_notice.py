@@ -169,9 +169,10 @@ def notice_collection(existing_df):
     notice_list = []
     # 함수 호출
     # collection = mongo_setting('news_scraping','notice_list')
+    print(len(existing_df))
     notice_ids = existing_df.loc[existing_df['공고 유형']=='입찰 공고','공고번호'].to_list()
     folder_path = os.environ.get("folder_path")
-
+    print(folder_path)
     notice_list = notice_search(notice_list,notice_ids,folder_path)
     # if len(notice_list)> 0:
     #     collection.insert_many(notice_list)
