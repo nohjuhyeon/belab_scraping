@@ -11,3 +11,4 @@
 2025-01-14 16:16:55,081 - INFO - GH_TOKEN will be used to perform requests
 2025-01-14 16:16:55,385 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
 2025-01-14 16:29:02,050 - INFO - ----------------notice check started----------------
+2025-01-14 16:31:02,124 - INFO - ----------------notice check started----------------
