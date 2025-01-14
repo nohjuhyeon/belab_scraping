@@ -6,3 +6,5 @@ Traceback (most recent call last):
   File "/app/belab_scraping/git_hub_commit.py", line 4, in <module>
     script_path = folder_path+"function_list/git_workflow.sh"
 TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+2025-01-14 16:57:01.419413
+commit complete!
