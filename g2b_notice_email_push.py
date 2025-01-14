@@ -1,13 +1,13 @@
 import os 
 from g2b_notice_check.google_sheet import category_new_data_get
 from g2b_notice_check.email_push import email_sending
-from dotenv import load_dotenv
 import logging
 from datetime import datetime
 
 try:
     print("----------------이메일 전송----------------")
     print(datetime.now())
+    load_dotenv()
     print(datetime.now())
     folder_path = os.environ.get("folder_path")
     print(folder_path)
