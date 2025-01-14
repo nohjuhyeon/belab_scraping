@@ -17,23 +17,23 @@ try:
     logging.info("----------------notice check started----------------") # 스케줄러 시작 로그 기록
     # 나라장터 데이터 수집
     print('나라장터 공고를 찾습니다.')
-    existing_df = total_sheet_get()
-    # collection = mongo_setting('news_scraping','notice_list')
-    # results = collection.find({},{'_id':0})
-    # existing_df = [i for i in results]
-    # existing_df = pd.DataFrame(existing_df)
-    # existing_df.rename(columns={
-    #     'notice_id': '공고번호',
-    #     'title': '공고명',
-    #     'price': '공고가격(단위: 원)',
-    #     'publishing_agency': '공고 기관',
-    #     'requesting_agency': '수요 기관',
-    #     'start_date': '게시일',
-    #     'end_date': '마감일',
-    #     'link': '링크',
-    #     'type': '비고',
-    #     'notice_class':'공고 유형'
-    #     }, inplace=True)
+    # existing_df = total_sheet_get()
+    collection = mongo_setting('news_scraping','notice_list')
+    results = collection.find({},{'_id':0})
+    existing_df = [i for i in results]
+    existing_df = pd.DataFrame(existing_df)
+    existing_df.rename(columns={
+        'notice_id': '공고번호',
+        'title': '공고명',
+        'price': '공고가격(단위: 원)',
+        'publishing_agency': '공고 기관',
+        'requesting_agency': '수요 기관',
+        'start_date': '게시일',
+        'end_date': '마감일',
+        'link': '링크',
+        'type': '비고',
+        'notice_class':'공고 유형'
+        }, inplace=True)
     notice_list = notice_collection(existing_df)
     # preparation_list = preparation_collection(existing_df)
     # notice_list.extend(preparation_list)

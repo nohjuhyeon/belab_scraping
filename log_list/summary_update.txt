@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 ----------------뉴스 요약 업데이트 시작----------------
+2025-01-12 09:15:38.613078
+=======
+<<<<<<< HEAD
+----------------뉴스 요약 업데이트 시작----------------
 2024-11-27 09:10:14.749051
 seoul institute crawling finish
 crawling count :  0
@@ -1601,6 +1605,7 @@ MongoDB collection updated successfully.
 {'news_title': '대전혁신센터 ‘2024 딥테크 스튜디오’ 성료…창업기업 성장 지원', 'news_part_content': '대전창조경제혁신센터는 ‘2024 딥테크 스튜디오’ 사업을 통해 대전지역 대학과 정부출연연구기관의 유망사업화 기술을 활용, 기술경쟁력 확보와 투자유치 두 가지 주요 성과를 거뒀다고 23일 밝혔다. 딥테크 스튜디오 사업', 'news_company': '뉴스1\n19시간전', 'news_date': '', 'news_link': 'https://n.news.naver.com/mnews/article/421/0007982712', 'section_type': '과학 일반', '_id': ObjectId('6769fd71a8e947dbde651de5')}
 =======
 2024-12-24 09:10:14.872840
+>>>>>>> eb682afaf4816a35bdb0084d4ddd7e5c0915423c
 ict news crawling finish
 crawling count :  0
 seoul institute crawling finish
@@ -1620,6 +1625,8 @@ Using device: cpu
 MongoDB collection updated successfully.
 MongoDB collection updated successfully.
 뉴스 요약 업데이트 완료!
+<<<<<<< HEAD
+=======
 >>>>>>> 7957d0abf685964ff4aa1570f2687f1b58480eb6
 ----------------뉴스 요약 업데이트 시작----------------
 2024-12-25 09:10:14.973859
@@ -1828,6 +1835,10 @@ crawling count :  0
 MongoDB collection updated successfully.
 Using device: cpu
 모델 다운로드 중...
+<<<<<<< HEAD
 MongoDB collection updated successfully.
 MongoDB collection updated successfully.
 뉴스 요약 업데이트 완료!
+=======
+>>>>>>> eb682afaf4816a35bdb0084d4ddd7e5c0915423c
+>>>>>>> ce97814ab8fd553b001a170071e58c7b2f0e5377
