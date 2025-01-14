@@ -34,6 +34,7 @@ try:
         'notice_class':'공고 유형'
         }, inplace=True)
     # notice_list = []
+    print('data_collection start')
     notice_list = notice_collection(existing_df)
     # preparation_list = preparation_collection(existing_df)
     # notice_list.extend(preparation_list)
