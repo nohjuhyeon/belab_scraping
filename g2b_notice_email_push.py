@@ -9,6 +9,7 @@ try:
     print("----------------이메일 전송----------------")
     print(datetime.now())
     load_dotenv()
+    print(datetime.now())
     folder_path = os.environ.get("folder_path")
     print(folder_path)
     logging.basicConfig(filename=folder_path+'/log_list/scheduler.txt', level=logging.INFO, 
