@@ -112,9 +112,9 @@ def notice_search(notice_list,notice_ids,folder_path):
             else:
                 notice_price = notice_price + ' 원'
             for k in range(10):
-                browser.get(notice_link)    
-                time.sleep(3)
                 try:
+                    browser.get(notice_link)    
+                    time.sleep(3)
                     WebDriverWait(browser, 10).until(
                         EC.invisibility_of_element_located((By.ID, "___processbar2"))  # 로딩 창의 ID를 사용
                     )
