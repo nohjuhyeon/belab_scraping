@@ -1,12 +1,10 @@
 from selenium.webdriver.firefox.options import Options
 import os
 from pymongo import MongoClient
-from dotenv import load_dotenv
 from selenium import webdriver
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from webdriver_manager.firefox import GeckoDriverManager  # GeckoDriverManager 사용
 
-load_dotenv()
 
 # 다운로드 폴더 설정
 def download_path_setting(folder_path, firefox_options):
