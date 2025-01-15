@@ -17,19 +17,19 @@ try:
     ## 인공지능 이메일 전송
     ai_url = "https://docs.google.com/spreadsheets/d/15gZLOTcY-XxlGmkNNMllB4GaJynHiLqtlp6U5PhMMew/edit?usp=drive_link"
     ai_list = category_new_data_get(ai_url, '인공지능')
-    ai_user = ['jh.noh@belab.co.kr','jh.park@belab.co.kr','sy.kim@belab.co.kr','ma.han@belab.co.kr']
+    ai_user = ['jh.noh@belab.co.kr','jh.park@belab.co.kr','sy.kim@belab.co.kr','ma.han@belab.co.kr','chyunkim@naver.com']
     email_sending(ai_list, ai_user,ai_url, '인공지능')
 
     ## 데이터 이메일 전송
     data_url = "https://docs.google.com/spreadsheets/d/10pMJpkFia91wtTROOQt3sje-iT3ztgYjtUjQYGU-xQ8/edit?usp=drive_link"
     data_list = category_new_data_get(data_url, '데이터')
-    data_user = ['jh.noh@belab.co.kr','jh.park@belab.co.kr','sh.jegal@belab.co.kr']
+    data_user = ['jh.noh@belab.co.kr','jh.park@belab.co.kr','sh.jegal@belab.co.kr','chyunkim@naver.com']
     email_sending(data_list, data_user,data_url, '데이터')
 
     ## 클라우드 이메일 전송
     cloud_url = "https://docs.google.com/spreadsheets/d/14CanIRInmQ2_z2uuNB2gVCjlJsgGRM7c44yOcTSI8eo/edit?usp=drive_link"
     cloud_list = category_new_data_get(cloud_url, '클라우드')
-    cloud_user = ['jh.noh@belab.co.kr','jh.park@belab.co.kr']
+    cloud_user = ['jh.noh@belab.co.kr','jh.park@belab.co.kr','chyunkim@naver.com']
     email_sending(cloud_list, cloud_user,cloud_url, '클라우드')
 
     ## isp/ismp 이메일 전송

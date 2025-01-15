@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ----------------뉴스 요약 업데이트 시작----------------
 2025-01-12 09:15:38.613078
 =======
@@ -1842,3 +1843,12 @@ MongoDB collection updated successfully.
 =======
 >>>>>>> eb682afaf4816a35bdb0084d4ddd7e5c0915423c
 >>>>>>> ce97814ab8fd553b001a170071e58c7b2f0e5377
+=======
+>>>>>>> 4e1924c18387e6bdd77e237b2bf7d8c4c88bcbe4
+----------------뉴스 요약 업데이트 시작----------------
+2025-01-15 09:10:17.461743
+ict news crawling finish
+crawling count :  0
+seoul institute crawling finish
+crawling count :  0
+뉴스 요약 업데이트 완료!
