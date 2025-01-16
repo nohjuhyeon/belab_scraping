@@ -46,6 +46,8 @@ def html_create(html_content, notice_elements, notice_class):
 
 
 def email_push(notice_list,email_list,notice_link,notice_type):
+    today_date = datetime.now().strftime('%Y년 %m월 %d일')
+
     gmail_user = 'jh.belab@gmail.com'
     gmail_password = os.environ.get("gmail_password")
 
@@ -54,7 +56,7 @@ def email_push(notice_list,email_list,notice_link,notice_type):
     subject = '나라장터에 새로운 {} 공고가 올라왔습니다.'.format(notice_type)
     class_list = ['입찰 공고','사전 규격']
     if len(notice_list)> 0:
-        html_content = '<h2>나라장터에 새로 올라온 {} 공고가 있습니다. 확인 부탁드립니다.</h2>'.format(notice_type)
+        html_content = '<h2>나라장터에 새로 올라온 {} 공고가 있습니다. 확인 부탁드립니다.({} 8:00 기준)</h2>'.format(notice_type,today_date)
         html_content += '<h4>더 많은 공고는 아래 링크를 참고해주세요.</h4>'
         html_content += '<ul style="list-style-type: disc; padding-left: 20px;"><li><a href="{0}" target="_blank">{0}</a></li></ul>'.format(notice_link)
         for i in class_list:

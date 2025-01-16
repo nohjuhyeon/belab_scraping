@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ----------------뉴스 요약 업데이트 시작----------------
 2025-01-12 09:15:38.613078
 =======
@@ -1607,6 +1608,10 @@ MongoDB collection updated successfully.
 =======
 2024-12-24 09:10:14.872840
 >>>>>>> eb682afaf4816a35bdb0084d4ddd7e5c0915423c
+=======
+----------------뉴스 요약 업데이트 시작----------------
+2025-01-15 09:15:13.744452
+>>>>>>> 901b81e9111e50a9731a6cfbfa62dfcb8f5123a2
 ict news crawling finish
 crawling count :  0
 seoul institute crawling finish
@@ -1626,6 +1631,7 @@ Using device: cpu
 MongoDB collection updated successfully.
 MongoDB collection updated successfully.
 뉴스 요약 업데이트 완료!
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 7957d0abf685964ff4aa1570f2687f1b58480eb6
@@ -1863,3 +1869,5 @@ crawling count :  0
 venture_doctors crawling finish
 crawling count :  0
 모델 다운로드 중...
+=======
+>>>>>>> 901b81e9111e50a9731a6cfbfa62dfcb8f5123a2
