@@ -72,7 +72,7 @@ except (KeyboardInterrupt, SystemExit):
     print("notice check shut down.")
     logging.info("notice check shut down.") # 스케줄러 종료 로그 기록
 finally:
-    git_commit
+    git_commit()
     print("공고 확인 완료!")
     
 
