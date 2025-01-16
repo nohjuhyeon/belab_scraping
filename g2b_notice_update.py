@@ -3,6 +3,7 @@ from g2b_notice_check.google_sheet import total_sheet_update,total_sheet_get, ca
 import logging
 from datetime import datetime
 from g2b_notice_check.g2b_notice import notice_collection
+from git_hub_commit import git_commit
 from g2b_notice_check.g2b_preparation import preparation_collection
 from function_list.basic_options import mongo_setting
 import pandas as pd
@@ -71,7 +72,9 @@ except (KeyboardInterrupt, SystemExit):
     print("notice check shut down.")
     logging.info("notice check shut down.") # 스케줄러 종료 로그 기록
 finally:
+    git_commit()
     print("공고 확인 완료!")
+    
 
 
 

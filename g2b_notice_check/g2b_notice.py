@@ -91,6 +91,7 @@ def notice_search(notice_list,notice_ids,folder_path):
     notice_id_list  = []
     item_num = 0
     print("총 공고 수 : ", len(item_list))
+    db_insert_count = 0
     for item in item_list:
         bidNtceNo = item['bidNtceNo']
         bidNtceOrd = item['bidNtceOrd']
@@ -157,13 +158,15 @@ def notice_search(notice_list,notice_ids,folder_path):
                     dict_notice = {'notice_id':notice_id,'title':notice_title,'price':notice_price,'publishing_agency':publishing_agency,'requesting_agency':requesting_agency,'start_date':notice_start_date,'end_date':notice_end_date,'link':notice_link,'type':notice_type,'notice_class':'입찰 공고'}
                     notice_list.append(dict_notice)
                     collection.insert_one(dict_notice)
+                    db_insert_count += 1
                     # print(dict_notice)
                     break
                 except Exception as e:
-                    print("download_error")
+                    # print("download_error")
                     time.sleep(2)
             pass
     browser.quit()
+    print("저장한 공고 수:", db_insert_count)
     pass
     return notice_list
 
