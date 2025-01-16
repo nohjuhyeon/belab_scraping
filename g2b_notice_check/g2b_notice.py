@@ -10,7 +10,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-from dotenv import load_dotenv
 from function_list.basic_options import selenium_setting,download_path_setting,init_browser
 from function_list.g2b_func import notice_file_check,notice_title_check,folder_clear
 from datetime import datetime, timedelta
@@ -80,8 +79,8 @@ def notice_search(notice_list,notice_ids,folder_path):
         except Exception as e:
             print(f"JSON 저장 중 오류 발생: {e}")
     except:
-        file_path = 'item_list.json'
-
+        file_path = folder_path + 'item_list.json'
+        print(file_path)
         # JSON 파일 읽기
         with open(file_path, 'r', encoding='utf-8') as file:
             item_list = json.load(file)
@@ -91,12 +90,14 @@ def notice_search(notice_list,notice_ids,folder_path):
     browser = init_browser(chrome_options)
     notice_id_list  = []
     item_num = 0
+    print("총 공고 수 : ", len(item_list))
     for item in item_list:
         bidNtceNo = item['bidNtceNo']
         bidNtceOrd = item['bidNtceOrd']
         notice_id = bidNtceNo + '-' + bidNtceOrd
         item_num += 1
-        print(item_num)
+        if item_num % 100 == 0:
+            print(item_num)
         if notice_id not in notice_ids and notice_id not in notice_id_list:
             notice_id_list.append(notice_id)
             notice_end_date = item['bidClseDt'].split(' ')[0]
@@ -111,9 +112,9 @@ def notice_search(notice_list,notice_ids,folder_path):
             else:
                 notice_price = notice_price + ' 원'
             for k in range(10):
-                browser.get(notice_link)    
-                time.sleep(3)
                 try:
+                    browser.get(notice_link)    
+                    time.sleep(3)
                     WebDriverWait(browser, 10).until(
                         EC.invisibility_of_element_located((By.ID, "___processbar2"))  # 로딩 창의 ID를 사용
                     )
@@ -172,7 +173,6 @@ def notice_collection(existing_df):
     # collection = mongo_setting('news_scraping','notice_list')
     notice_ids = existing_df.loc[existing_df['공고 유형']=='입찰 공고','공고번호'].to_list()
     folder_path = os.environ.get("folder_path")
-
     notice_list = notice_search(notice_list,notice_ids,folder_path)
     # if len(notice_list)> 0:
     #     collection.insert_many(notice_list)

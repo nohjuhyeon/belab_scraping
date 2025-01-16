@@ -4,10 +4,8 @@ import time
 from function_list.basic_options import mongo_setting
 from datetime import datetime, timedelta
 
-from dotenv import load_dotenv
 from function_list.basic_options import selenium_setting,download_path_setting,init_browser
 from function_list.g2b_func import notice_file_check,notice_title_check,folder_clear
-load_dotenv()
 
 def preparation_search(notice_list,notice_ids,folder_path):
     # collection = mongo_setting('news_scraping','notice_list')

@@ -1852,3 +1852,14 @@ crawling count :  0
 seoul institute crawling finish
 crawling count :  0
 뉴스 요약 업데이트 완료!
+----------------뉴스 요약 업데이트 시작----------------
+2025-01-16 09:10:19.392137
+ict news crawling finish
+crawling count :  0
+seoul institute crawling finish
+crawling count :  0
+statistic bank crawling finish
+crawling count :  0
+venture_doctors crawling finish
+crawling count :  0
+모델 다운로드 중...

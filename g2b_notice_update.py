@@ -1,6 +1,5 @@
 import os 
 from g2b_notice_check.google_sheet import total_sheet_update,total_sheet_get, category_sheet_update
-from dotenv import load_dotenv
 import logging
 from datetime import datetime
 from g2b_notice_check.g2b_notice import notice_collection
@@ -10,7 +9,6 @@ import pandas as pd
 try:
     print("----------------공고 확인 시작----------------")
     print(datetime.now())
-    load_dotenv()
     folder_path = os.environ.get("folder_path")
     logging.basicConfig(filename=folder_path+'/log_list/scheduler.txt', level=logging.INFO, 
                         format='%(asctime)s - %(levelname)s - %(message)s')
