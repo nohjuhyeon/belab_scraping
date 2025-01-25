@@ -3199,3 +3199,4 @@
 2025-01-25 08:00:19,135 - INFO - Get LATEST geckodriver version for 128.6 firefox
 2025-01-25 08:00:19,135 - INFO - GH_TOKEN will be used to perform requests
 2025-01-25 08:00:19,468 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
+2025-01-25 12:00:01,975 - INFO - ----------------notice check started----------------
