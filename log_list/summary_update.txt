@@ -2048,3 +2048,24 @@ Using device: cpu
 MongoDB collection updated successfully.
 MongoDB collection updated successfully.
 뉴스 요약 업데이트 완료!
+----------------뉴스 요약 업데이트 시작----------------
+2025-01-26 09:15:07.321880
+ict news crawling finish
+crawling count :  0
+seoul institute crawling finish
+crawling count :  0
+statistic bank crawling finish
+crawling count :  0
+venture_doctors crawling finish
+crawling count :  0
+모델 다운로드 중...
+모델 압축 해제 중...
+모델 압축 해제 완료
+뉴스 675f75070b27c59cc62ffebb의 콘텐츠가 비어 있습니다.
+뉴스 675f75910b27c59cc62ffec5의 콘텐츠가 비어 있습니다.
+MongoDB collection updated successfully.
+Using device: cpu
+모델 다운로드 중...
+MongoDB collection updated successfully.
+MongoDB collection updated successfully.
+뉴스 요약 업데이트 완료!
