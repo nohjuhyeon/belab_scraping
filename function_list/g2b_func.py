@@ -169,10 +169,10 @@ def get_hwpx_text(file_path):
 
 def search_keywords_in_hwp(file_name,file_path, keywords):
     """HWP 파일 내에 특정 키워드가 포함되어 있는지 확인"""
-    # text = detect_file_type(file_path)
-    loader = HWPLoader(file_path)
-    docs = loader.load()
-    text = docs[0].page_content
+    text = detect_file_type(file_path)
+    # loader = HWPLoader(file_path)
+    # docs = loader.load()
+    # text = docs[0].page_content
     if text:
         for keyword in keywords:
             if keyword in text:
