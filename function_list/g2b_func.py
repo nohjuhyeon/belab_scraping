@@ -7,6 +7,8 @@ import zlib
 import struct
 import os 
 from function_list.hwp_loader import HWPLoader
+import re
+import unicodedata
 
 def folder_clear(download_folder_path):
     for filename in os.listdir(download_folder_path):
@@ -165,14 +167,22 @@ def get_hwpx_text(file_path):
             return ' '.join(all_texts)
     except Exception as e:
         return f"Error extracting text: {e}"
+def remove_chinese_characters(s: str):
+    """중국어 문자를 제거합니다."""
+    return re.sub(r"[\u4e00-\u9fff]+", "", s)
 
+def remove_control_characters(s):
+    """깨지는 문자 제거"""
+    return "".join(ch for ch in s if unicodedata.category(ch)[0] != "C")
 
 def search_keywords_in_hwp(file_name,file_path, keywords):
     """HWP 파일 내에 특정 키워드가 포함되어 있는지 확인"""
     text = detect_file_type(file_path)
-    loader = HWPLoader(file_path)
-    docs = loader.load()
-    text = docs[0].page_content
+    text = remove_chinese_characters(text)
+    text = remove_control_characters(text)
+    # loader = HWPLoader(file_path)
+    # docs = loader.load()
+    # text = docs[0].page_content
     if text:
         for keyword in keywords:
             if keyword in text:
