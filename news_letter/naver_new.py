@@ -36,7 +36,7 @@ def link_list(collection):
             for i in range(len(news_contents)):
                 news_title = news_contents[i].find_element(by=By.CSS_SELECTOR,value='a > strong').text
                 news_content = news_contents[i].find_element(by=By.CSS_SELECTOR,value='div.sa_text_lede').text
-                news_company = news_contents[i].find_element(by=By.CSS_SELECTOR,value='div.sa_text_info_left').text
+                news_company = news_contents[i].find_element(by=By.CSS_SELECTOR,value='div.sa_text_info_left').text.split('\n')[0]
                 news_date = news_contents[i].find_element(by=By.CSS_SELECTOR,value='div.sa_text_info_right').text
                 news_link = news_contents[i].find_element(by=By.CSS_SELECTOR,value='a')
                 news_link = news_link.get_attribute('href')
@@ -58,18 +58,29 @@ def news_contents(collection):
     browser = init_browser(chrome_options)
     for i in news_list:
         browser.get(i['news_link'])
-        news_date = browser.find_elements(by=By.CSS_SELECTOR,value='#ct > div.media_end_head.go_trans > div.media_end_head_info.nv_notrans > div.media_end_head_info_datestamp > div > span')[-1].text
-        news_date = news_date.replace('오후', 'PM').replace('오전', 'AM')
-        news_date = pd.to_datetime(news_date, format='%Y.%m.%d. %p %I:%M')
-
-        news_content_origin = browser.find_element(by=By.CSS_SELECTOR,value='#dic_area').text
+        try:
+            news_date = browser.find_elements(by=By.CSS_SELECTOR,value='#ct > div.media_end_head.go_trans > div.media_end_head_info.nv_notrans > div.media_end_head_info_datestamp > div > span')[-1].text
+            news_date = news_date.replace('오후', 'PM').replace('오전', 'AM')
+            news_date = pd.to_datetime(news_date, format='%Y.%m.%d. %p %I:%M')
+        except:
+            news_date = browser.find_elements(by=By.CSS_SELECTOR,value='#content > div.NewsEnd_container__HcfWh > div > div.NewsEnd_main_group__d5k8S > div > div.NewsEndMain_comp_article_head__Uqd6M > div.article_head_info > div.NewsEndMain_article_head_date_info__jGlzH > div> em')[-1].text
+            news_date = news_date.replace('오후', 'PM').replace('오전', 'AM')
+            news_date = pd.to_datetime(news_date, format='%Y.%m.%d. %p %I:%M')
+        try:
+            news_content_origin = browser.find_element(by=By.CSS_SELECTOR,value='#dic_area').text
+        except:
+            news_content_origin = browser.find_element(by=By.CSS_SELECTOR,value='#comp_news_article').text
+            
         try:
             news_journalist = browser.find_element(by=By.CSS_SELECTOR,value='div.media_end_head_journalist > a').text.replace(' 기자','').split('\n')
         except:
             try:
                 news_journalist = browser.find_element(by=By.CSS_SELECTOR,value='div.media_end_head_journalist > button').text.replace(' 기자','').split('\n')
             except:
-                news_journalist = []
+                try:
+                    news_journalist = browser.find_element(by=By.CSS_SELECTOR,value='em.NewsEndMain_name__lNckc').text.replace(' 기자','').split('\n')
+                except:
+                    news_journalist = []
         news_journalist = ', '.join(news_journalist)
         collection.update_one({'_id': i['_id']},  {'$set': {'news_date':news_date,'news_content':news_content_origin,'news_journalist':news_journalist}})
         crawling_count += 1

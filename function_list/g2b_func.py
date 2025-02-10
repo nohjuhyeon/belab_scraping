@@ -6,7 +6,6 @@ import olefile
 import zlib
 import struct
 import os 
-from function_list.hwp_loader import HWPLoader
 import re
 import unicodedata
 
@@ -180,9 +179,6 @@ def search_keywords_in_hwp(file_name,file_path, keywords):
     text = detect_file_type(file_path)
     text = remove_chinese_characters(text)
     text = remove_control_characters(text)
-    # loader = HWPLoader(file_path)
-    # docs = loader.load()
-    # text = docs[0].page_content
     if text:
         for keyword in keywords:
             if keyword in text:
