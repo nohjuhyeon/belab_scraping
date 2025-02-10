@@ -2384,3 +2384,12 @@ Using device: cpu
 MongoDB collection updated successfully.
 MongoDB collection updated successfully.
 뉴스 요약 업데이트 완료!
+2025-02-10 18:00:09.629671
+commit complete!
+2025-02-10 18:00:10.678714
+commit complete!
+----------------뉴스 요약 업데이트 시작----------------
+2025-02-10 18:00:11.636257
+2025-02-10 18:00:41.046347
+commit complete!
+뉴스 요약 업데이트 완료!
