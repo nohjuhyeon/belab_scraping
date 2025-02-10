@@ -8,6 +8,7 @@ from g2b_notice_check.g2b_preparation import preparation_collection
 from function_list.basic_options import mongo_setting
 import pandas as pd
 try:
+    git_commit()
     print("----------------공고 확인 시작----------------")
     print(datetime.now())
     folder_path = os.environ.get("folder_path")
