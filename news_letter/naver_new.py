@@ -89,8 +89,42 @@ def news_contents(collection):
     print('crawling count : ',crawling_count)
     pass
 
+def duplicated_data_delete(collection):
+    # Step 1: Aggregation으로 중복된 데이터 중 가장 오래된 _id를 찾기
+    pipeline = [
+        {
+            "$group": {
+                "_id": "$news_content",  # news_content를 기준으로 그룹화
+                "oldestId": {"$min": "$_id"},  # 가장 오래된 _id를 찾기
+                "ids": {"$push": "$_id"}  # 모든 _id를 배열로 저장
+            }
+        },
+        {
+            "$project": {
+                "_id": 1,
+                "idsToDelete": {
+                    "$filter": {
+                        "input": "$ids",
+                        "as": "id",
+                        "cond": {"$ne": ["$$id", "$oldestId"]}  # oldestId를 제외한 나머지 _id
+                    }
+                }
+            }
+        }
+    ]
+
+    # Aggregation 실행
+    duplicates = list(collection.aggregate(pipeline))
+
+    # Step 2: 중복 데이터 삭제
+    for doc in duplicates:
+        if doc["idsToDelete"]:  # 삭제할 데이터가 있는 경우
+            collection.delete_many({"_id": {"$in": doc["idsToDelete"]}})
+
+
 def naver_news():
     collection = mongo_setting('news_scraping','naver_news')
 
     link_list(collection)
     news_contents(collection)
+    duplicated_data_delete(collection)
