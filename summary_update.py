@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 import logging
 from datetime import datetime
 from news_preprocess.keyword import keyword_update
+from git_hub_commit import git_commit
 import torch
 
 
@@ -29,6 +30,7 @@ def total_update():
     # keyword_update(database['report_list'])
 
 try:
+    git_commit()
     print("----------------뉴스 요약 업데이트 시작----------------")
     print(datetime.now())
     load_dotenv()
@@ -42,4 +44,5 @@ except (KeyboardInterrupt, SystemExit):
     print("summarization shut down.")
     logging.info("summarization shut down.") # 스케줄러 종료 로그 기록
 finally:
+    git_commit()
     print("뉴스 요약 업데이트 완료!")
