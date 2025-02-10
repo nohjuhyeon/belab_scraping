@@ -20,8 +20,8 @@ def total_update():
     database = mongo_client["news_scraping"]
     # collection 작업
     # seoul_institute()
-    # naver_news()
-    noun_extraction(database['naver_news'])
+    naver_news()
+    # noun_extraction(database['naver_news'])
     # update_news_summary(database['naver_news'])
     # category_update(database['naver_news'])
     # keyword_update(database['naver_news'])
