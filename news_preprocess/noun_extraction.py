@@ -10,6 +10,7 @@ from dotenv import load_dotenv
 from pymongo import MongoClient
 import pandas as pd
 import time
+from konlpy.tag import Mecab
 
 
 def remove_proper_nouns_from_text(text, ner_results):
@@ -149,7 +150,6 @@ def ner_remove_in_text(text,model,tokenizer):
 
 
 
-from konlpy.tag import Mecab
 
 
 
@@ -161,14 +161,14 @@ def noun_extraction(collection):
   load_dotenv()
   documents = collection.find()
   df = pd.DataFrame(list(documents))
-  df = df.loc[df['noun_list'].isnull()]
+#   df = df.loc[df['noun_list'].isnull()]
   tokenizer = AutoTokenizer.from_pretrained("KPF/KPF-bert-ner")
   model = AutoModelForTokenClassification.from_pretrained("KPF/KPF-bert-ner")
   start_time = time.time()
   for index, row in df.iterrows():
       text = row['news_content']
+      text = text.replace('\n',' ').replace("과기정통부", "과학기술정보통신부").replace('AWS','아마존웹서비스')
       noun_text = ner_remove_in_text(text,model,tokenizer)
-      noun_text.replace("과기정통부", "과학기술정보통신부").replace('AWS','아마존웹서비스')
       if noun_text != '':
         # MongoDB 문서 업데이트
         collection.update_one(
