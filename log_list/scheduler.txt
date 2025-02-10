@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 2024-11-26 14:59:08,149 - INFO - ----------------news summarization started----------------
 2024-11-26 14:59:08,442 - INFO - ====== WebDriver manager ======
 2024-11-26 14:59:08,762 - INFO - Get LATEST chromedriver version for google-chrome
@@ -4004,3 +4005,12 @@
 2025-02-10 08:00:06,867 - INFO - GH_TOKEN will be used to perform requests
 2025-02-10 08:00:07,182 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
 2025-02-10 09:30:02,413 - INFO - ----------------notice check started----------------
+=======
+>>>>>>> 7223563758cb7baa1950025e7dffe9c7a0f6e7ec
+2025-02-10 12:00:04,731 - INFO - ----------------notice check started----------------
+2025-02-10 12:00:08,038 - INFO - ====== WebDriver manager ======
+2025-02-10 12:00:08,231 - INFO - Get LATEST geckodriver version for 128.6 firefox
+2025-02-10 12:00:08,231 - INFO - GH_TOKEN will be used to perform requests
+2025-02-10 12:00:08,607 - INFO - Get LATEST geckodriver version for 128.6 firefox
+2025-02-10 12:00:08,607 - INFO - GH_TOKEN will be used to perform requests
+2025-02-10 12:00:08,937 - INFO - Driver [/root/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver] found in cache
