@@ -57,7 +57,7 @@ def link_list(collection):
 def news_contents(collection,tokenizer,model):
     crawling_count = 0
     chrome_options = selenium_setting()
-    news_list = collection.find({'news_content': {'$exists': False}},{'_id': 1, 'news_link': 1})
+    news_list = collection.find({'noun_list': {'$exists': False}},{'_id': 1, 'news_link': 1})
     browser = init_browser(chrome_options)
     for i in news_list:
         browser.get(i['news_link'])
@@ -82,7 +82,8 @@ def news_contents(collection,tokenizer,model):
 
         if news_content_origin != '':
             noun_text = ner_remove_in_text(news_content_origin,model,tokenizer)
-            
+        else:
+            noun_text = ''
         try:
             news_journalist = browser.find_element(by=By.CSS_SELECTOR,value='div.media_end_head_journalist > a').text.replace(' 기자','').split('\n')
         except:
@@ -94,8 +95,9 @@ def news_contents(collection,tokenizer,model):
                 except:
                     news_journalist = []
         news_journalist = ', '.join(news_journalist)
-        collection.update_one({'_id': i['_id']},  {'$set': {'news_date':news_date,'news_journalist':news_journalist,'noun_list':noun_text}})
-        # collection.update_one({'_id': i['_id']},  {'$set': {'news_date':news_date,'news_content':news_content_origin,'news_journalist':news_journalist,'noun_list':noun_text}})
+        if news_date == '' or noun_text == '':
+            collection.update_one({'_id': i['_id']},  {'$set': {'news_date':news_date,'news_journalist':news_journalist,'noun_list':noun_text}})
+            # collection.update_one({'_id': i['_id']},  {'$set': {'news_date':news_date,'news_content':news_content_origin,'news_journalist':news_journalist,'noun_list':noun_text}})
         crawling_count += 1
         pass
     print('naver news crawling finish')
