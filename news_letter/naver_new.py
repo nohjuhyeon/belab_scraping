@@ -141,6 +141,6 @@ def naver_news():
     collection = mongo_setting('news_scraping','naver_news')
     tokenizer = AutoTokenizer.from_pretrained("KPF/KPF-bert-ner")
     model = AutoModelForTokenClassification.from_pretrained("KPF/KPF-bert-ner")
-    # link_list(collection)
+    link_list(collection)
     news_contents(collection,tokenizer,model)
     duplicated_data_delete(collection)
