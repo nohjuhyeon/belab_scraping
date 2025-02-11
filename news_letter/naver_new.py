@@ -95,7 +95,7 @@ def news_contents(collection,tokenizer,model):
                 except:
                     news_journalist = []
         news_journalist = ', '.join(news_journalist)
-        if noun_text == '':
+        if noun_text != '':
             collection.update_one({'_id': i['_id']},  {'$set': {'news_date':news_date,'news_journalist':news_journalist,'noun_list':noun_text}})
             # collection.update_one({'_id': i['_id']},  {'$set': {'news_date':news_date,'news_content':news_content_origin,'news_journalist':news_journalist,'noun_list':noun_text}})
         crawling_count += 1
