@@ -15163,3 +15163,378 @@ ISP/ISMP, 클라우드 | Data updated and sorted successfully.
 2025-02-09 08:01:46.463281
 commit complete!
 공고 확인 완료!
+2025-02-09 12:00:03.330479
+commit complete!
+----------------공고 확인 시작----------------
+2025-02-09 12:00:05.458158
+나라장터 공고를 찾습니다.
+item_list가 'item_list.json'로 저장되었습니다.
+총 공고 수 :  1220
+100
+200
+300
+400
+500
+600
+700
+800
+900
+1000
+1100
+1200
+저장한 공고 수: 13
+전체 공고 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-09 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-09 00:00:00
+인공지능 | Data updated and sorted successfully.
+데이터 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-09 00:00:00
+데이터 | Data updated and sorted successfully.
+클라우드 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-09 00:00:00
+클라우드 | Data updated and sorted successfully.
+ISP/ISMP | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-09 00:00:00
+ISP/ISMP | Data updated and sorted successfully.
+ISP/ISMP, 클라우드 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-09 00:00:00
+ISP/ISMP, 클라우드 | Data updated and sorted successfully.
+2025-02-09 12:03:36.303696
+commit complete!
+공고 확인 완료!
+2025-02-09 16:00:03.026820
+commit complete!
+----------------공고 확인 시작----------------
+2025-02-09 16:00:04.231839
+나라장터 공고를 찾습니다.
+item_list가 'item_list.json'로 저장되었습니다.
+총 공고 수 :  1220
+100
+200
+300
+400
+500
+600
+700
+800
+900
+1000
+1100
+1200
+저장한 공고 수: 0
+전체 공고 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-09 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-09 00:00:00
+인공지능 | Data updated and sorted successfully.
+데이터 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-09 00:00:00
+데이터 | Data updated and sorted successfully.
+클라우드 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-09 00:00:00
+클라우드 | Data updated and sorted successfully.
+ISP/ISMP | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-09 00:00:00
+ISP/ISMP | Data updated and sorted successfully.
+ISP/ISMP, 클라우드 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-09 00:00:00
+ISP/ISMP, 클라우드 | Data updated and sorted successfully.
+2025-02-09 16:02:02.871895
+commit complete!
+공고 확인 완료!
+2025-02-09 20:00:02.694341
+commit complete!
+----------------공고 확인 시작----------------
+2025-02-09 20:00:03.896059
+나라장터 공고를 찾습니다.
+item_list가 'item_list.json'로 저장되었습니다.
+총 공고 수 :  1220
+100
+200
+300
+400
+500
+600
+700
+800
+900
+1000
+1100
+1200
+저장한 공고 수: 0
+전체 공고 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-09 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-09 00:00:00
+인공지능 | Data updated and sorted successfully.
+데이터 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-09 00:00:00
+데이터 | Data updated and sorted successfully.
+클라우드 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-09 00:00:00
+클라우드 | Data updated and sorted successfully.
+ISP/ISMP | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-09 00:00:00
+ISP/ISMP | Data updated and sorted successfully.
+ISP/ISMP, 클라우드 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-09 00:00:00
+ISP/ISMP, 클라우드 | Data updated and sorted successfully.
+2025-02-09 20:01:37.929842
+commit complete!
+공고 확인 완료!
+2025-02-10 00:00:02.573387
+commit complete!
+----------------공고 확인 시작----------------
+2025-02-10 00:00:03.761076
+나라장터 공고를 찾습니다.
+item_list가 'item_list.json'로 저장되었습니다.
+총 공고 수 :  48
+저장한 공고 수: 18
+전체 공고 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-10 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-10 00:00:00
+인공지능 | Data updated and sorted successfully.
+데이터 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-10 00:00:00
+데이터 | Data updated and sorted successfully.
+클라우드 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-10 00:00:00
+클라우드 | Data updated and sorted successfully.
+ISP/ISMP | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-10 00:00:00
+ISP/ISMP | Data updated and sorted successfully.
+ISP/ISMP, 클라우드 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-10 00:00:00
+ISP/ISMP, 클라우드 | Data updated and sorted successfully.
+2025-02-10 00:03:57.479249
+commit complete!
+공고 확인 완료!
+2025-02-10 04:00:02.337737
+commit complete!
+----------------공고 확인 시작----------------
+2025-02-10 04:00:03.551655
+나라장터 공고를 찾습니다.
+item_list가 'item_list.json'로 저장되었습니다.
+총 공고 수 :  48
+저장한 공고 수: 0
+전체 공고 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-10 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-10 00:00:00
+인공지능 | Data updated and sorted successfully.
+데이터 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-10 00:00:00
+데이터 | Data updated and sorted successfully.
+클라우드 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-10 00:00:00
+클라우드 | Data updated and sorted successfully.
+ISP/ISMP | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-10 00:00:00
+ISP/ISMP | Data updated and sorted successfully.
+ISP/ISMP, 클라우드 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-10 00:00:00
+ISP/ISMP, 클라우드 | Data updated and sorted successfully.
+2025-02-10 04:01:50.075463
+commit complete!
+공고 확인 완료!
+2025-02-10 08:00:02.730856
+commit complete!
+----------------공고 확인 시작----------------
+2025-02-10 08:00:03.905948
+나라장터 공고를 찾습니다.
+item_list가 'item_list.json'로 저장되었습니다.
+총 공고 수 :  51
+저장한 공고 수: 3
+전체 공고 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-10 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-10 00:00:00
+인공지능 | Data updated and sorted successfully.
+데이터 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-10 00:00:00
+데이터 | Data updated and sorted successfully.
+클라우드 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-10 00:00:00
+클라우드 | Data updated and sorted successfully.
+ISP/ISMP | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-10 00:00:00
+ISP/ISMP | Data updated and sorted successfully.
+ISP/ISMP, 클라우드 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-10 00:00:00
+ISP/ISMP, 클라우드 | Data updated and sorted successfully.
+2025-02-10 08:02:07.579015
+commit complete!
+공고 확인 완료!
+----------------이메일 전송----------------
+2025-02-10 09:30:02.413534
+----------------email push started----------------
+인공지능 메일이 성공적으로 발송되었습니다.
+인공지능 메일이 성공적으로 발송되었습니다.
+인공지능 메일이 성공적으로 발송되었습니다.
+인공지능 메일이 성공적으로 발송되었습니다.
+인공지능 메일이 성공적으로 발송되었습니다.
+데이터 메일이 성공적으로 발송되었습니다.
+데이터 메일이 성공적으로 발송되었습니다.
+데이터 메일이 성공적으로 발송되었습니다.
+데이터 메일이 성공적으로 발송되었습니다.
+클라우드 메일이 성공적으로 발송되었습니다.
+클라우드 메일이 성공적으로 발송되었습니다.
+클라우드 메일이 성공적으로 발송되었습니다.
+ISP/ISMP 메일이 성공적으로 발송되었습니다.
+ISP/ISMP 메일이 성공적으로 발송되었습니다.
+ISP/ISMP 메일이 성공적으로 발송되었습니다.
+ISP/ISMP, 클라우드 메일이 성공적으로 발송되었습니다.
+ISP/ISMP, 클라우드 메일이 성공적으로 발송되었습니다.
+ISP/ISMP, 클라우드 메일이 성공적으로 발송되었습니다.
+이메일 전송 완료!
+2025-02-10 16:00:03.230352
+commit complete!
+----------------공고 확인 시작----------------
+2025-02-10 16:00:04.265760
+나라장터 공고를 찾습니다.
+item_list가 'item_list.json'로 저장되었습니다.
+총 공고 수 :  449
+100
+200
+300
+400
+저장한 공고 수: 307
+전체 공고 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-10 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-10 00:00:00
+인공지능 | Data updated and sorted successfully.
+데이터 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-10 00:00:00
+데이터 | Data updated and sorted successfully.
+클라우드 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-10 00:00:00
+클라우드 | Data updated and sorted successfully.
+ISP/ISMP | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-10 00:00:00
+ISP/ISMP | Data updated and sorted successfully.
+ISP/ISMP, 클라우드 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-10 00:00:00
+ISP/ISMP, 클라우드 | Data updated and sorted successfully.
+2025-02-10 16:43:03.900265
+commit complete!
+공고 확인 완료!
+2025-02-10 20:00:02.299214
+commit complete!
+2025-02-10 20:00:03.572305
+commit complete!
+----------------공고 확인 시작----------------
+2025-02-10 20:00:04.565793
+나라장터 공고를 찾습니다.
+item_list가 'item_list.json'로 저장되었습니다.
+총 공고 수 :  449
+100
+200
+300
+400
+저장한 공고 수: 0
+전체 공고 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-10 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-10 00:00:00
+인공지능 | Data updated and sorted successfully.
+데이터 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-10 00:00:00
+데이터 | Data updated and sorted successfully.
+클라우드 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-10 00:00:00
+클라우드 | Data updated and sorted successfully.
+ISP/ISMP | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-10 00:00:00
+ISP/ISMP | Data updated and sorted successfully.
+ISP/ISMP, 클라우드 | 시작 날짜 : 2025-02-07 00:00:00 / 종료 날짜 : 2025-02-10 00:00:00
+ISP/ISMP, 클라우드 | Data updated and sorted successfully.
+2025-02-10 20:02:02.111756
+commit complete!
+공고 확인 완료!
+2025-02-11 00:00:02.241686
+commit complete!
+2025-02-11 00:00:03.261630
+commit complete!
+----------------공고 확인 시작----------------
+2025-02-11 00:00:04.248823
+나라장터 공고를 찾습니다.
+item_list가 'item_list.json'로 저장되었습니다.
+총 공고 수 :  1638
+100
+200
+300
+400
+500
+600
+700
+800
+900
+1000
+1100
+1200
+1300
+1400
+1500
+1600
+저장한 공고 수: 1206
+전체 공고 | 시작 날짜 : 2025-02-10 00:00:00 / 종료 날짜 : 2025-02-11 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 시작 날짜 : 2025-02-10 00:00:00 / 종료 날짜 : 2025-02-11 00:00:00
+인공지능 | Data updated and sorted successfully.
+데이터 | 시작 날짜 : 2025-02-10 00:00:00 / 종료 날짜 : 2025-02-11 00:00:00
+데이터 | Data updated and sorted successfully.
+클라우드 | 시작 날짜 : 2025-02-10 00:00:00 / 종료 날짜 : 2025-02-11 00:00:00
+클라우드 | Data updated and sorted successfully.
+ISP/ISMP | 시작 날짜 : 2025-02-10 00:00:00 / 종료 날짜 : 2025-02-11 00:00:00
+ISP/ISMP | Data updated and sorted successfully.
+ISP/ISMP, 클라우드 | 시작 날짜 : 2025-02-10 00:00:00 / 종료 날짜 : 2025-02-11 00:00:00
+ISP/ISMP, 클라우드 | Data updated and sorted successfully.
+2025-02-11 02:28:27.275570
+commit complete!
+공고 확인 완료!
+2025-02-11 04:00:02.450437
+commit complete!
+2025-02-11 04:00:03.497462
+commit complete!
+----------------공고 확인 시작----------------
+2025-02-11 04:00:04.512195
+나라장터 공고를 찾습니다.
+item_list가 'item_list.json'로 저장되었습니다.
+총 공고 수 :  1639
+100
+200
+300
+400
+500
+600
+700
+800
+900
+1000
+1100
+1200
+1300
+1400
+1500
+1600
+저장한 공고 수: 1
+전체 공고 | 시작 날짜 : 2025-02-10 00:00:00 / 종료 날짜 : 2025-02-11 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 시작 날짜 : 2025-02-10 00:00:00 / 종료 날짜 : 2025-02-11 00:00:00
+인공지능 | Data updated and sorted successfully.
+데이터 | 시작 날짜 : 2025-02-10 00:00:00 / 종료 날짜 : 2025-02-11 00:00:00
+데이터 | Data updated and sorted successfully.
+클라우드 | 시작 날짜 : 2025-02-10 00:00:00 / 종료 날짜 : 2025-02-11 00:00:00
+클라우드 | Data updated and sorted successfully.
+ISP/ISMP | 시작 날짜 : 2025-02-10 00:00:00 / 종료 날짜 : 2025-02-11 00:00:00
+ISP/ISMP | Data updated and sorted successfully.
+ISP/ISMP, 클라우드 | 시작 날짜 : 2025-02-10 00:00:00 / 종료 날짜 : 2025-02-11 00:00:00
+ISP/ISMP, 클라우드 | Data updated and sorted successfully.
+2025-02-11 04:02:05.303183
+commit complete!
+공고 확인 완료!
+2025-02-11 08:00:01.524405
+commit complete!
+2025-02-11 08:00:02.541023
+commit complete!
+----------------공고 확인 시작----------------
+2025-02-11 08:00:03.545388
+나라장터 공고를 찾습니다.
+item_list가 'item_list.json'로 저장되었습니다.
+총 공고 수 :  1657
+100
+200
+300
+400
+500
+600
+700
+800
+900
+1000
+1100
+1200
+1300
+1400
+1500
+1600
+저장한 공고 수: 18
+전체 공고 | 시작 날짜 : 2025-02-10 00:00:00 / 종료 날짜 : 2025-02-11 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 시작 날짜 : 2025-02-10 00:00:00 / 종료 날짜 : 2025-02-11 00:00:00
+인공지능 | Data updated and sorted successfully.
+데이터 | 시작 날짜 : 2025-02-10 00:00:00 / 종료 날짜 : 2025-02-11 00:00:00
+데이터 | Data updated and sorted successfully.
+클라우드 | 시작 날짜 : 2025-02-10 00:00:00 / 종료 날짜 : 2025-02-11 00:00:00
+클라우드 | Data updated and sorted successfully.
+ISP/ISMP | 시작 날짜 : 2025-02-10 00:00:00 / 종료 날짜 : 2025-02-11 00:00:00
+ISP/ISMP | Data updated and sorted successfully.
+ISP/ISMP, 클라우드 | 시작 날짜 : 2025-02-10 00:00:00 / 종료 날짜 : 2025-02-11 00:00:00
+ISP/ISMP, 클라우드 | Data updated and sorted successfully.
+2025-02-11 08:04:03.093191
+commit complete!
+공고 확인 완료!
