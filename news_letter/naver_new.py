@@ -66,13 +66,20 @@ def news_contents(collection,tokenizer,model):
             news_date = news_date.replace('오후', 'PM').replace('오전', 'AM')
             news_date = pd.to_datetime(news_date, format='%Y.%m.%d. %p %I:%M')
         except:
-            news_date = browser.find_elements(by=By.CSS_SELECTOR,value='#content > div.NewsEnd_container__HcfWh > div > div.NewsEnd_main_group__d5k8S > div > div.NewsEndMain_comp_article_head__Uqd6M > div.article_head_info > div.NewsEndMain_article_head_date_info__jGlzH > div> em')[-1].text
-            news_date = news_date.replace('오후', 'PM').replace('오전', 'AM')
-            news_date = pd.to_datetime(news_date, format='%Y.%m.%d. %p %I:%M')
+            try:
+                news_date = browser.find_elements(by=By.CSS_SELECTOR,value='#content > div.NewsEnd_container__HcfWh > div > div.NewsEnd_main_group__d5k8S > div > div.NewsEndMain_comp_article_head__Uqd6M > div.article_head_info > div.NewsEndMain_article_head_date_info__jGlzH > div> em')[-1].text
+                news_date = news_date.replace('오후', 'PM').replace('오전', 'AM')
+                news_date = pd.to_datetime(news_date, format='%Y.%m.%d. %p %I:%M')
+            except:
+                news_date = ''
         try:
             news_content_origin = browser.find_element(by=By.CSS_SELECTOR,value='#dic_area').text
         except:
-            news_content_origin = browser.find_element(by=By.CSS_SELECTOR,value='#comp_news_article').text
+            try:
+                news_content_origin = browser.find_element(by=By.CSS_SELECTOR,value='#comp_news_article').text
+            except:
+                news_content_origin = ''
+
         if news_content_origin != '':
             noun_text = ner_remove_in_text(news_content_origin,model,tokenizer)
             
