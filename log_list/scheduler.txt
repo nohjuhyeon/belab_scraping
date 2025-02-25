@@ -4178,3 +4178,4 @@
 2025-02-25 14:17:04,467 - INFO - Driver downloading response is 200
 2025-02-25 14:17:04,521 - INFO - Get LATEST geckodriver version for 128.6 firefox
 2025-02-25 14:17:04,521 - INFO - GH_TOKEN will be used to perform requests
+2025-02-25 14:17:04,920 - INFO - Driver has been saved in cache [/root/.wdm/drivers/geckodriver/linux64/v0.35.0]
