@@ -2543,3 +2543,14 @@ commit complete!
 2025-02-26 18:17:27.588416
 commit complete!
 뉴스 요약 업데이트 완료!
+2025-02-26 22:00:12.189060
+commit complete!
+2025-02-26 22:00:13.384870
+commit complete!
+----------------뉴스 요약 업데이트 시작----------------
+2025-02-26 22:00:14.540264
+naver news crawling finish
+crawling count :  776
+2025-02-26 23:01:13.835021
+commit complete!
+뉴스 요약 업데이트 완료!
