@@ -4360,3 +4360,4 @@
 2025-02-27 12:00:37,227 - INFO - Driver has been saved in cache [/root/.wdm/drivers/geckodriver/linux64/v0.36.0]
 2025-02-27 16:00:03,208 - INFO - ----------------notice check started----------------
 2025-02-27 20:00:02,476 - INFO - ----------------notice check started----------------
+2025-02-28 00:00:02,949 - INFO - ----------------notice check started----------------
