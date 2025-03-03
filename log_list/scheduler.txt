@@ -4385,3 +4385,7 @@
 2025-03-03 00:00:02,282 - INFO - ----------------notice check started----------------
 2025-03-03 04:00:02,186 - INFO - ----------------notice check started----------------
 2025-03-03 08:00:03,051 - INFO - ----------------notice check started----------------
+2025-03-03 09:30:02,361 - INFO - ----------------notice check started----------------
+2025-03-03 09:30:02,389 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7a128af14520>: Failed to resolve 'oauth2.googleapis.com' ([Errno -3] Temporary failure in name resolution)")': /token
+2025-03-03 09:30:02,394 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7a128af146d0>: Failed to resolve 'oauth2.googleapis.com' ([Errno -3] Temporary failure in name resolution)")': /token
+2025-03-03 09:30:02,399 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7a128af14880>: Failed to resolve 'oauth2.googleapis.com' ([Errno -3] Temporary failure in name resolution)")': /token
