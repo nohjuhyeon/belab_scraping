@@ -104,32 +104,48 @@ def notice_search(notice_list,notice_ids,folder_path):
             print(item_num)
         # if notice_id != '':
         if notice_id not in notice_ids and notice_id not in notice_id_list:
-            notice_id_list.append(notice_id)
-            notice_end_date = item['bidClseDt'].split(' ')[0]
-            notice_start_date = item['rgstDt'].split(' ')[0]
-            notice_title = item['bidNtceNm']
-            notice_link = item['bidNtceDtlUrl']
-            requesting_agency = item['dminsttNm']
-            publishing_agency = item['ntceInsttNm']
-            notice_price = item['asignBdgtAmt']
-            if notice_price == '':
-                notice_price = '0 원'
-            else:
-                notice_price = notice_price + ' 원'
-            for k in range(9):
-                if item['ntceSpecFileNm'+str(k+1)] != '':
-                    notice_file_name = re.sub(r'[^\w가-힣_.]', '_', item['ntceSpecFileNm'+str(k+1)]) 
-                    notice_file_link = 'ntceSpecDocUrl'+str(k+1)
-                    command = f'wget -O {download_folder_path}/{notice_file_name} "{item[notice_file_link]}"'
-                    subprocess.run(command, shell=True, check=True)
-                    pass
-            file_keywords = notice_file_check(download_folder_path)
-            notice_type = notice_title_check(notice_title)
-            for j in file_keywords:
-                if j not in notice_type:
-                    notice_type.append(j)                
-            notice_type = ', '.join(notice_type)
-            folder_clear(download_folder_path)
+            try:
+                notice_id_list.append(notice_id)
+                notice_end_date = item['bidClseDt'].split(' ')[0]
+                notice_start_date = item['rgstDt'].split(' ')[0]
+                notice_title = item['bidNtceNm']
+                notice_link = item['bidNtceDtlUrl']
+                requesting_agency = item['dminsttNm']
+                publishing_agency = item['ntceInsttNm']
+                notice_price = item['asignBdgtAmt']
+                if notice_price == '':
+                    notice_price = '0 원'
+                else:
+                    notice_price = notice_price + ' 원'
+                for k in range(9):
+                    if item['ntceSpecFileNm'+str(k+1)] != '':
+                        notice_file_name = re.sub(r'[^\w가-힣_.]', '_', item['ntceSpecFileNm'+str(k+1)]) 
+                        notice_file_link = 'ntceSpecDocUrl'+str(k+1)
+                        command = f'wget -O {download_folder_path}/{notice_file_name} "{item[notice_file_link]}"'
+                        subprocess.run(
+                            command,
+                            shell=True,  # 쉘 명령어 실행
+                            check=True,  # 오류 발생 시 예외 발생
+                            stdout=subprocess.DEVNULL,  # 표준 출력을 비활성화
+                            stderr=subprocess.DEVNULL   # 표준 에러를 비활성화
+                        )
+                        pass
+                file_keywords = notice_file_check(download_folder_path)
+                notice_type = notice_title_check(notice_title)
+                for j in file_keywords:
+                    if j not in notice_type:
+                        notice_type.append(j)                
+                notice_type = ', '.join(notice_type)
+                folder_clear(download_folder_path)
+                dict_notice = {'notice_id':notice_id,'title':notice_title,'price':notice_price,'publishing_agency':publishing_agency,'requesting_agency':requesting_agency,'start_date':notice_start_date,'end_date':notice_end_date,'link':notice_link,'type':notice_type,'notice_class':'입찰 공고'}
+                notice_list.append(dict_notice)
+                collection.insert_one(dict_notice)
+                db_insert_count += 1
+                # print(dict_notice)
+            except Exception as e:
+                print("notice update error")
+                time.sleep(2)
+
             # for k in range(10):
             #     try:
             #         browser.get(notice_link)    
@@ -179,9 +195,6 @@ def notice_search(notice_list,notice_ids,folder_path):
             #         db_insert_count += 1
             #         # print(dict_notice)
             #         break
-            #     except Exception as e:
-            #         # print("download_error")
-            #         time.sleep(2)
             pass
     browser.quit()
     print("저장한 공고 수:", db_insert_count)
