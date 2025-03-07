@@ -44,7 +44,9 @@ def selenium_setting():
 # WebDriver 생성
 def init_browser(firefox_options):
     # GeckoDriverManager를 사용하여 GeckoDriver 설치 및 서비스 설정
-
+    cache_path=os.path.expanduser("~/.wdm")
+    if os.path.exists(cache_path):
+        os.system(f"rm -rf {cache_path}")
     webdriver_manager_directory = GeckoDriverManager().install()
     service = FirefoxService(webdriver_manager_directory)
     browser = webdriver.Firefox(service=service, options=firefox_options)
