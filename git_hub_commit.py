@@ -21,4 +21,6 @@ def git_commit():
     except subprocess.CalledProcessError as e:
         # 오류 발생 시 출력
         print("An error occurred while executing the script.")
-git_commit()
+
+if __name__ == "__main__":
+    git_commit()
