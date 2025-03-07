@@ -7,6 +7,7 @@ import unicodedata
 from function_list.hwp_loader import HWPLoader
 from function_list.hwpx_loader import get_hwpx_text
 import zipfile
+from langchain_community.document_loaders import PyPDFLoader
 
 def folder_clear(download_folder_path):
     for filename in os.listdir(download_folder_path):
@@ -51,7 +52,7 @@ def check_list_insert(notice_type, download_folder_path):
         # 해당 폴더 안의 파일들 탐색
         has_hwp_file = False
         for file_name in os.listdir(folder_path):
-            if file_name.lower().endswith('.hwp') or file_name.lower().endswith('.hwpx'):
+            if file_name.lower().endswith('.hwp') or file_name.lower().endswith('.hwpx') or file_name.lower().endswith('.pdf'):
                 has_hwp_file = True
                 break            
         # hwp 파일이 없으면 check_list로 이동
@@ -71,7 +72,6 @@ def detect_file_type(file_path):
             if header.startswith(b'\xD0\xCF\x11\xE0\xA1\xB1\x1A\xE1'):
                 loader = HWPLoader(file_path)
                 docs = loader.load()
-
                 content = docs[0].page_content
                 return content
             
@@ -80,7 +80,17 @@ def detect_file_type(file_path):
                 content,metadata = get_hwpx_text(file_path)
                 content = ' '.join(content)
                 return content
-            
+
+            elif header.startswith(b'%PDF'):
+                loader = PyPDFLoader(file_path)
+                # PDF 로더 초기화
+                docs = loader.load()
+                content_list = []
+                for i in docs:
+                    content_list.append(i.page_content)
+                content = ' \n'.join(content_list)
+                return content
+
             # 기타 파일
             else:
                 return "Unknown"
@@ -96,16 +106,11 @@ def remove_control_characters(s):
     """깨지는 문자 제거"""
     return "".join(ch for ch in s if unicodedata.category(ch)[0] != "C")
 
-def search_keywords_in_hwp(file_name,file_path, keywords):
+def search_keywords_in_hwp(text, keywords):
     """HWP 파일 내에 특정 키워드가 포함되어 있는지 확인"""
-    text = detect_file_type(file_path)
-    text = remove_chinese_characters(text)
-    text = remove_control_characters(text)
     if text:
         for keyword in keywords:
             if keyword in text:
-                # print("파일명 : ", file_name)
-                # print("키워드 : ", keyword)
                 return True
     return False
 
@@ -115,18 +120,22 @@ def type_list_insert(notice_type, download_folder_path):
     cloud_keywords = ['클라우드','cloud']
     """공고 폴더 내 HWP 및 PDF 파일에서 키워드 검색 후 해당 폴더 이동"""
     notice_type = []
+
     # ai_notice_list 폴더 경로 설정
     for file_name in os.listdir(download_folder_path):
         file_path = os.path.join(download_folder_path, file_name)
-        if file_name.lower().endswith('.hwp') or file_name.lower().endswith('.hwpx'):
-            if search_keywords_in_hwp(file_name,file_path, ai_keywords) and '인공지능' not in notice_type:
+        if file_name.lower().endswith('.hwp') or file_name.lower().endswith('.hwpx') or file_name.lower().endswith('.pdf'):
+            text = detect_file_type(file_path)
+            text = remove_chinese_characters(text)
+            text = remove_control_characters(text)
+            if search_keywords_in_hwp(text, ai_keywords) and '인공지능' not in notice_type:
                 notice_type.append('인공지능')
-            if search_keywords_in_hwp(file_name,file_path, db_keywords) and '데이터' not in notice_type:
+            if search_keywords_in_hwp(text, db_keywords) and '데이터' not in notice_type:
                 notice_type.append('데이터')
-            if search_keywords_in_hwp(file_name,file_path, cloud_keywords) and '클라우드' not in notice_type:
+            if search_keywords_in_hwp(text, cloud_keywords) and '클라우드' not in notice_type:
                 notice_type.append('클라우드')
     return notice_type
-                    
+
 def search_keywords_in_title(notice_title, keywords):
     """HWP 파일 내에 특정 키워드가 포함되어 있는지 확인"""
     if notice_title:
@@ -170,6 +179,5 @@ def save_notice_list_to_json(notice_list, file_path):
         notice_list: 저장할 공지 목록 (list)
         file_path: 저장할 JSON 파일 경로 (str)
     """
-
     with open(file_path, 'w', encoding='utf-8') as json_file:
         json.dump(notice_list, json_file, ensure_ascii=False, indent=4)
