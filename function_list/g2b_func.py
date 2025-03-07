@@ -86,7 +86,8 @@ def detect_file_type(file_path):
                 content,metadata = get_hwpx_text(file_path)
                 content = ' '.join(content)
                 return content
-            
+            elif header.startswith(b'%PDF'):
+                pass
             # 기타 파일
             else:
                 return "Unknown"
