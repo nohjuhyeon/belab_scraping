@@ -72,7 +72,6 @@ def detect_file_type(file_path):
             if header.startswith(b'\xD0\xCF\x11\xE0\xA1\xB1\x1A\xE1'):
                 loader = HWPLoader(file_path)
                 docs = loader.load()
-
                 content = docs[0].page_content
                 return content
             
@@ -81,9 +80,9 @@ def detect_file_type(file_path):
                 content,metadata = get_hwpx_text(file_path)
                 content = ' '.join(content)
                 return content
+
             elif header.startswith(b'%PDF'):
                 loader = PyPDFLoader(file_path)
-
                 # PDF 로더 초기화
                 docs = loader.load()
                 content_list = []
@@ -91,6 +90,7 @@ def detect_file_type(file_path):
                     content_list.append(i.page_content)
                 content = ' \n'.join(content_list)
                 return content
+
             # 기타 파일
             else:
                 return "Unknown"
