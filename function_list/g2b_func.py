@@ -120,6 +120,7 @@ def type_list_insert(notice_type, download_folder_path):
     cloud_keywords = ['클라우드','cloud']
     """공고 폴더 내 HWP 및 PDF 파일에서 키워드 검색 후 해당 폴더 이동"""
     notice_type = []
+
     # ai_notice_list 폴더 경로 설정
     for file_name in os.listdir(download_folder_path):
         file_path = os.path.join(download_folder_path, file_name)
@@ -178,6 +179,5 @@ def save_notice_list_to_json(notice_list, file_path):
         notice_list: 저장할 공지 목록 (list)
         file_path: 저장할 JSON 파일 경로 (str)
     """
-
     with open(file_path, 'w', encoding='utf-8') as json_file:
         json.dump(notice_list, json_file, ensure_ascii=False, indent=4)
