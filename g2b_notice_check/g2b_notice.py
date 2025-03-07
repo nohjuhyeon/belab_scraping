@@ -4,11 +4,13 @@ import requests
 import json
 from selenium.webdriver.common.by import By
 import os 
+import re
 import time
 from function_list.basic_options import mongo_setting
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import subprocess
 
 from function_list.basic_options import selenium_setting,download_path_setting,init_browser
 from function_list.g2b_func import notice_file_check,notice_title_check,folder_clear
@@ -93,18 +95,20 @@ def notice_search(notice_list,notice_ids,folder_path):
     print("총 공고 수 : ", len(item_list))
     db_insert_count = 0
     for item in item_list:
+        folder_clear(download_folder_path)
         bidNtceNo = item['bidNtceNo']
         bidNtceOrd = item['bidNtceOrd']
         notice_id = bidNtceNo + '-' + bidNtceOrd
         item_num += 1
         if item_num % 100 == 0:
             print(item_num)
-        if notice_id not in notice_ids and notice_id not in notice_id_list:
+        if notice_id != '':
+        # if notice_id not in notice_ids and notice_id not in notice_id_list:
             notice_id_list.append(notice_id)
             notice_end_date = item['bidClseDt'].split(' ')[0]
             notice_start_date = item['rgstDt'].split(' ')[0]
             notice_title = item['bidNtceNm']
-            notice_link = 'https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo={}&bidPbancOrd={}'.format(bidNtceNo,bidNtceOrd)
+            notice_link = item['bidNtceDtlUrl']
             requesting_agency = item['dminsttNm']
             publishing_agency = item['ntceInsttNm']
             notice_price = item['asignBdgtAmt']
@@ -112,58 +116,72 @@ def notice_search(notice_list,notice_ids,folder_path):
                 notice_price = '0 원'
             else:
                 notice_price = notice_price + ' 원'
-            for k in range(10):
-                try:
-                    browser.get(notice_link)    
-                    time.sleep(3)
-                    WebDriverWait(browser, 10).until(
-                        EC.invisibility_of_element_located((By.ID, "___processbar2"))  # 로딩 창의 ID를 사용
-                    )
-                except:
+            for k in range(9):
+                if item['ntceSpecFileNm'+str(k+1)] != '':
+                    notice_file_name = re.sub(r'[^\w가-힣_.]', '_', item['ntceSpecFileNm'+str(k+1)]) 
+                    notice_file_link = 'ntceSpecDocUrl'+str(k+1)
+                    command = f'wget -O {download_folder_path}/{notice_file_name} "{item[notice_file_link]}"'
+                    subprocess.run(command, shell=True, check=True)
                     pass
-                try:
-                    alarm_btn = browser.find_element(by=By.CSS_SELECTOR,value="input[value='확인']")
-                    alarm_btn.click()
-                except:
-                    pass
-                try:
-                    entire_files = WebDriverWait(browser, 10).until(
-                            EC.presence_of_element_located((By.CSS_SELECTOR, 'table > thead > tr:nth-child(1) >th:nth-child(1)> div >input[title="전체선택"]'))
-                        )
-                    entire_files.click()
-                    download_btn = browser.find_elements(By.CSS_SELECTOR, "input[value='다운로드']")[0]
-                    download_btn.click()
-                    wait_for_downloads(download_folder_path)
-                    time.sleep(2)
-                    try:
-                        alarm_btn = browser.find_element(by=By.CSS_SELECTOR,value="input[value='확인']")
-                        alarm_btn.click()
-                    except Exception as e:
-                        pass
-                    try:
-                        rfp_btn = browser.find_element(by=By.CSS_SELECTOR,value='#mf_wfm_container_mainWframe_grdPrpsDmndInfoView_cell_0_2 > nobr:nth-child(1) > a:nth-child(1)')
-                        rfp_btn.click()
-                        time.sleep(2)
-                    except:
-                        pass
-                    file_keywords = notice_file_check(download_folder_path)
-                    notice_type = notice_title_check(notice_title)
-                    for j in file_keywords:
-                        if j not in notice_type:
-                            notice_type.append(j)                
-                    notice_type = ', '.join(notice_type)
-                    folder_clear(download_folder_path)
-                    time.sleep(1)
+            file_keywords = notice_file_check(download_folder_path)
+            notice_type = notice_title_check(notice_title)
+            for j in file_keywords:
+                if j not in notice_type:
+                    notice_type.append(j)                
+            notice_type = ', '.join(notice_type)
+            folder_clear(download_folder_path)
+            # for k in range(10):
+            #     try:
+            #         browser.get(notice_link)    
+            #         time.sleep(3)
+            #         WebDriverWait(browser, 10).until(
+            #             EC.invisibility_of_element_located((By.ID, "___processbar2"))  # 로딩 창의 ID를 사용
+            #         )
+            #     except:
+            #         pass
+            #     try:
+            #         alarm_btn = browser.find_element(by=By.CSS_SELECTOR,value="input[value='확인']")
+            #         alarm_btn.click()
+            #     except:
+            #         pass
+            #     try:
+            #         entire_files = WebDriverWait(browser, 10).until(
+            #                 EC.presence_of_element_located((By.CSS_SELECTOR, 'table > thead > tr:nth-child(1) >th:nth-child(1)> div >input[title="전체선택"]'))
+            #             )
+            #         entire_files.click()
+            #         download_btn = browser.find_elements(By.CSS_SELECTOR, "input[value='다운로드']")[0]
+            #         download_btn.click()
+            #         wait_for_downloads(download_folder_path)
+            #         time.sleep(2)
+            #         try:
+            #             alarm_btn = browser.find_element(by=By.CSS_SELECTOR,value="input[value='확인']")
+            #             alarm_btn.click()
+            #         except Exception as e:
+            #             pass
+            #         try:
+            #             rfp_btn = browser.find_element(by=By.CSS_SELECTOR,value='#mf_wfm_container_mainWframe_grdPrpsDmndInfoView_cell_0_2 > nobr:nth-child(1) > a:nth-child(1)')
+            #             rfp_btn.click()
+            #             time.sleep(2)
+            #         except:
+            #             pass
+            #         file_keywords = notice_file_check(download_folder_path)
+            #         notice_type = notice_title_check(notice_title)
+            #         for j in file_keywords:
+            #             if j not in notice_type:
+            #                 notice_type.append(j)                
+            #         notice_type = ', '.join(notice_type)
+            #         folder_clear(download_folder_path)
+            #         time.sleep(1)
                     
-                    dict_notice = {'notice_id':notice_id,'title':notice_title,'price':notice_price,'publishing_agency':publishing_agency,'requesting_agency':requesting_agency,'start_date':notice_start_date,'end_date':notice_end_date,'link':notice_link,'type':notice_type,'notice_class':'입찰 공고'}
-                    notice_list.append(dict_notice)
-                    collection.insert_one(dict_notice)
-                    db_insert_count += 1
-                    # print(dict_notice)
-                    break
-                except Exception as e:
-                    # print("download_error")
-                    time.sleep(2)
+            #         dict_notice = {'notice_id':notice_id,'title':notice_title,'price':notice_price,'publishing_agency':publishing_agency,'requesting_agency':requesting_agency,'start_date':notice_start_date,'end_date':notice_end_date,'link':notice_link,'type':notice_type,'notice_class':'입찰 공고'}
+            #         notice_list.append(dict_notice)
+            #         collection.insert_one(dict_notice)
+            #         db_insert_count += 1
+            #         # print(dict_notice)
+            #         break
+            #     except Exception as e:
+            #         # print("download_error")
+            #         time.sleep(2)
             pass
     browser.quit()
     print("저장한 공고 수:", db_insert_count)
