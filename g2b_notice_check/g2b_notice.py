@@ -102,8 +102,8 @@ def notice_search(notice_list,notice_ids,folder_path):
         item_num += 1
         if item_num % 100 == 0:
             print(item_num)
-        if notice_id != '':
-        # if notice_id not in notice_ids and notice_id not in notice_id_list:
+        # if notice_id != '':
+        if notice_id not in notice_ids and notice_id not in notice_id_list:
             notice_id_list.append(notice_id)
             notice_end_date = item['bidClseDt'].split(' ')[0]
             notice_start_date = item['rgstDt'].split(' ')[0]
