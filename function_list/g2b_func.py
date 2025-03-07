@@ -7,6 +7,7 @@ import unicodedata
 from function_list.hwp_loader import HWPLoader
 from function_list.hwpx_loader import get_hwpx_text
 import zipfile
+from langchain_community.document_loaders import PyPDFLoader
 
 def folder_clear(download_folder_path):
     for filename in os.listdir(download_folder_path):
@@ -63,12 +64,6 @@ def check_list_insert(notice_type, download_folder_path):
 
 def detect_file_type(file_path):
     try:
-        if 'pdf' in file_path:
-            with open(file_path, 'rb') as f:
-                # 파일의 처음 8바이트 읽기
-                header = f.read(8)
-                print(header)
-                pass
         with open(file_path, 'rb') as f:
             # 파일의 처음 8바이트 읽기
             header = f.read(8)
@@ -87,6 +82,10 @@ def detect_file_type(file_path):
                 content = ' '.join(content)
                 return content
             elif header.startswith(b'%PDF'):
+                loader = PyPDFLoader(file_path)
+
+                # PDF 로더 초기화
+                docs = loader.load()
                 pass
             # 기타 파일
             else:
