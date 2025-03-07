@@ -63,6 +63,8 @@ def check_list_insert(notice_type, download_folder_path):
 
 def detect_file_type(file_path):
     try:
+        if 'pdf' in file_path:
+            pass
         with open(file_path, 'rb') as f:
             # 파일의 처음 8바이트 읽기
             header = f.read(8)
