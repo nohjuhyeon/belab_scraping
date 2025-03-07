@@ -8,7 +8,7 @@ import struct
 import os 
 import re
 import unicodedata
-
+from function_list.hwp_loader import HWPLoader
 def folder_clear(download_folder_path):
     for filename in os.listdir(download_folder_path):
         file_path = os.path.join(download_folder_path, filename)
@@ -28,9 +28,14 @@ def notice_file_check(download_folder_path):
         if file_name.lower().endswith('.zip'):
             try:
                 with zipfile.ZipFile(file_path, 'r') as zip_ref:
-                    # 압축 해제할 임시 폴더 경로
-                    extract_path = os.path.join(download_folder_path)
-                    zip_ref.extractall(extract_path)
+                    for file_info in zip_ref.infolist():
+                        # 파일 이름을 CP949로 디코딩 후 UTF-8로 재인코딩
+                        decoded_name = file_info.filename.encode('cp437').decode('cp949')
+                        file_info.filename = decoded_name  # 파일 이름 수정
+                        # 압축 해제할 임시 폴더 경로
+                        extract_path = os.path.join(download_folder_path)
+                        zip_ref.extract(file_info, extract_path)
+                pass
             except:
                 pass
     notice_type = check_list_insert(notice_type, download_folder_path)
@@ -70,12 +75,16 @@ def detect_file_type(file_path):
             
             # HWP 파일 확인 (OLE2 매직 넘버)
             if header.startswith(b'\xD0\xCF\x11\xE0\xA1\xB1\x1A\xE1'):
-                content = get_hwp_text(file_path)
+                loader = HWPLoader(file_path)
+                docs = loader.load()
+
+                content = docs[0].page_content
                 return content
             
             # HWPX 파일 확인 (ZIP 매직 넘버)
             elif header.startswith(b'\x50\x4B\x03\x04'):
-                content = get_hwpx_text(file_path)
+                content,metadata = get_hwpx_text(file_path)
+                content = ' '.join(content)
                 return content
             
             # 기타 파일
@@ -84,64 +93,6 @@ def detect_file_type(file_path):
     except Exception as e:
         return f"Error detecting file type: {e}"
 
-
-def get_hwp_text(filename):
-    try:
-        with olefile.OleFileIO(filename) as f:
-            dirs = f.listdir()
-
-            # HWP 파일 검증
-            if ["FileHeader"] not in dirs or ["\x05HwpSummaryInformation"] not in dirs:
-                print("Not a valid HWP file.")
-                return None
-
-            # 문서 포맷 압축 여부 확인
-            header = f.openstream("FileHeader")
-            header_data = header.read()
-            is_compressed = (header_data[36] & 1) == 1
-
-            # Body Sections 불러오기
-            nums = []
-            for d in dirs:
-                if d[0] == "BodyText":
-                    nums.append(int(d[1][len("Section"):]))
-            sections = ["BodyText/Section" + str(x) for x in sorted(nums)]
-
-            # 전체 text 추출
-            text = ""
-            for section in sections:
-                bodytext = f.openstream(section)
-                data = bodytext.read()
-                if is_compressed:
-                    unpacked_data = zlib.decompress(data, -15)
-                else:
-                    unpacked_data = data
-
-                # 각 Section 내 text 추출    
-                section_text = ""
-                i = 0
-                size = len(unpacked_data)
-                while i < size:
-                    header = struct.unpack_from("<I", unpacked_data, i)[0]
-                    rec_type = header & 0x3ff
-                    rec_len = (header >> 20) & 0xfff
-
-                    if rec_type in [67]:
-                        rec_data = unpacked_data[i+4:i+4+rec_len]
-                        section_text += rec_data.decode('utf-16', errors='ignore')
-                        section_text += "\n"
-
-                    i += 4 + rec_len
-
-                text += section_text
-                text += "\n"
-
-            return text
-    except Exception as e:
-        print(e)
-        return None
-
-
 def get_hwpx_text(file_path):
     try:
         with zipfile.ZipFile(file_path, 'r') as zf:
@@ -149,23 +100,65 @@ def get_hwpx_text(file_path):
             section_files = [name for name in zf.namelist() if name.startswith('Contents/section') and name.endswith('.xml')]
 
             # 모든 섹션 파일의 텍스트를 저장할 리스트
-            all_texts = []
-
+            output_dir = "extracted_sections"
+            os.makedirs(output_dir, exist_ok=True)  # 디렉토리가 없으면 생성
+            metadata = {}
+            docs = []
             for section_file in section_files:
-                with zf.open(section_file) as file:
-                    tree = ET.parse(file)
-                    root = tree.getroot()
+                with zf.open(section_file) as section_file_content:
+                    # 파일 내용 읽기
+                    section_content = section_file_content.read().decode('utf-8')
 
-                    # 현재 섹션의 텍스트 추출
-                    for elem in root.iter():
-                        if elem.tag.endswith('t'):  # 텍스트 태그 확인
-                            if elem.text:
-                                all_texts.append(elem.text.strip())
+                    # # XML 파일로 저장
+                    # output_file_path = os.path.join(output_dir, os.path.basename(section_file))
+                    # with open(output_file_path, "w", encoding="utf-8") as output_file:
+                    #     output_file.write(section_content)
+
+                    # print(f"파일 저장됨: {output_file_path}")
+
+                root = ET.fromstring(section_content)           
+                # 네임스페이스 정의
+                pages = []
+                current_page = []
+
+                table_texts = []
+                for tbl in root.findall(".//hp:tbl", namespaces={"hp": "http://www.hancom.co.kr/hwpml/2011/paragraph"}):
+                    table_texts.extend(
+                        [t.text for t in tbl.findall(".//hp:t", namespaces={"hp": "http://www.hancom.co.kr/hwpml/2011/paragraph"}) if t.text]
+                    )
+
+                for p in root.findall(".//hp:p", namespaces={"hp": "http://www.hancom.co.kr/hwpml/2011/paragraph"}):
+                    # pageBreak 속성 확인
+                    page_break = p.attrib.get("pageBreak", "0")  # pageBreak 속성 가져오기
+                    text_elements = p.findall(".//hp:t", namespaces={"hp": "http://www.hancom.co.kr/hwpml/2011/paragraph"})
+                    text = " ".join([t.text for t in text_elements if t.text and t.text not in table_texts])  # 테이블 텍스트 제외
+
+                    if page_break == "1":  # 새로운 페이지 시작
+                        if current_page:
+                            pages.append(current_page)  # 이전 페이지 저장
+                        current_page = []  # 새로운 페이지 초기화
+
+                    if text:  # 텍스트가 있으면 추가
+                        current_page.append(text)
+
+                # 마지막 페이지 저장
+                if current_page:
+                    pages.append(current_page)
+
+                # 결과 출력
+                for i, page in enumerate(pages, start=1):
+                    text = "\n".join(page)
+                    docs.append(text)
+            for idx in range(len(docs)):
+                section_name = f"section{idx}"  # 섹션 이름 생성 (section1, section2, ...)
+                metadata[section_name] = docs[idx]  # 메타데이터에 저장
 
             # 모든 섹션 텍스트를 하나로 합치기
-            return ' '.join(all_texts)
+            return docs, metadata
     except Exception as e:
         return f"Error extracting text: {e}"
+
+
 def remove_chinese_characters(s: str):
     """중국어 문자를 제거합니다."""
     return re.sub(r"[\u4e00-\u9fff]+", "", s)
