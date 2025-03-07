@@ -66,7 +66,7 @@ def detect_file_type(file_path):
         with open(file_path, 'rb') as f:
             # 파일의 처음 8바이트 읽기
             header = f.read(8)
-            
+            pass
             # HWP 파일 확인 (OLE2 매직 넘버)
             if header.startswith(b'\xD0\xCF\x11\xE0\xA1\xB1\x1A\xE1'):
                 loader = HWPLoader(file_path)
