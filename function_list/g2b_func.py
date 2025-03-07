@@ -51,7 +51,7 @@ def check_list_insert(notice_type, download_folder_path):
         # 해당 폴더 안의 파일들 탐색
         has_hwp_file = False
         for file_name in os.listdir(folder_path):
-            if file_name.lower().endswith('.hwp') or file_name.lower().endswith('.hwpx'):
+            if file_name.lower().endswith('.hwp') or file_name.lower().endswith('.hwpx') or file_name.lower().endswith('.pdf'):
                 has_hwp_file = True
                 break            
         # hwp 파일이 없으면 check_list로 이동
