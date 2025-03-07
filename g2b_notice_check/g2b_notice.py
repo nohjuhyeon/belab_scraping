@@ -102,8 +102,8 @@ def notice_search(notice_list,notice_ids,folder_path):
         item_num += 1
         if item_num % 100 == 0:
             print(item_num)
-        if notice_id != '':
-        # if notice_id not in notice_ids and notice_id not in notice_id_list:
+        # if notice_id != '':
+        if notice_id not in notice_ids and notice_id not in notice_id_list:
             try:
                 notice_id_list.append(notice_id)
                 notice_end_date = item['bidClseDt'].split(' ')[0]
@@ -139,7 +139,7 @@ def notice_search(notice_list,notice_ids,folder_path):
                 folder_clear(download_folder_path)
                 dict_notice = {'notice_id':notice_id,'title':notice_title,'price':notice_price,'publishing_agency':publishing_agency,'requesting_agency':requesting_agency,'start_date':notice_start_date,'end_date':notice_end_date,'link':notice_link,'type':notice_type,'notice_class':'입찰 공고'}
                 notice_list.append(dict_notice)
-                # collection.insert_one(dict_notice)
+                collection.insert_one(dict_notice)
                 db_insert_count += 1
                 # print(dict_notice)
             except Exception as e:
