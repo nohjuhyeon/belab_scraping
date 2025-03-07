@@ -67,6 +67,7 @@ def detect_file_type(file_path):
             with open(file_path, 'rb') as f:
                 # 파일의 처음 8바이트 읽기
                 header = f.read(8)
+                print(header)
                 pass
         with open(file_path, 'rb') as f:
             # 파일의 처음 8바이트 읽기
