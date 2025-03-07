@@ -89,7 +89,7 @@ def detect_file_type(file_path):
                 content_list = []
                 for i in docs:
                     content_list.append(i.page_content)
-                content = '\n'.join(content_list)
+                content = '\n '.join(content_list)
                 pass
             # 기타 파일
             else:
