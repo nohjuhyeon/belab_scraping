@@ -1,16 +1,19 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.cluster import KMeans
 import numpy as np
-from test import HWPLoader
+from function_list.hwp_loader import HWPLoader
 from langchain_experimental.text_splitter import SemanticChunker
 from langchain_openai.embeddings import OpenAIEmbeddings
 from langchain_community.retrievers import BM25Retriever
 from langchain_community.vectorstores import FAISS
 from dotenv import load_dotenv
+from konlpy.tag import Mecab
+from kiwipiepy import Kiwi
 
+kiwi = Kiwi()
 # API 키 정보 로드
 load_dotenv()
-
+mecab = Mecab()
 loader = HWPLoader('test.hwp')
 documents = loader.load()
 long_text = documents[0].page_content
@@ -35,7 +38,7 @@ text_splitter = SemanticChunker(
     OpenAIEmbeddings(),
     # 분할 기준점 유형을 백분위수로 설정합니다.
     breakpoint_threshold_type="percentile",
-    breakpoint_threshold_amount=60,
+    breakpoint_threshold_amount=70,
 )
 
 def apply_overlap(chunks, overlap_size):
@@ -85,9 +88,15 @@ for i, doc in enumerate(overlapped_chunks):
 
 embeddings = OpenAIEmbeddings()
 
+def preprocess_text(text):
+    tokens = [word.form for word in kiwi.analyze(text)[0][0]]  # 형태소만 추출
+    return " ".join(tokens)
+    # return " ".join(mecab.morphs(text))    
 
-bm25_retriever  = BM25Retriever.from_documents(overlapped_chunks)
-db = FAISS.from_documents(overlapped_chunks, embeddings)
+tokenizer_docs = [preprocess_text(text.page_content) for text in overlapped_chunks]
+
+bm25_retriever  = BM25Retriever.from_texts(tokenizer_docs)
+# db = FAISS.from_documents(overlapped_chunks, embeddings)
 
 
 from langchain_core.runnables import ConfigurableField
@@ -109,21 +118,21 @@ from langchain_core.runnables import ConfigurableField
 #     ),
 # )
 
-retriever = db.as_retriever(
-    # 검색 유형을 "similarity_score_threshold 으로 설정
-    search_type="similarity_score_threshold",
-    # 임계값 설정
-    search_kwargs={"score_threshold": 0.7},
-)
+# retriever = db.as_retriever(
+#     # 검색 유형을 "similarity_score_threshold 으로 설정
+#     search_type="similarity_score_threshold",
+#     # 임계값 설정
+#     search_kwargs={"score_threshold": 0.7},
+# )
 
 
 # 검색 설정을 지정. Faiss 검색에서 k=3로 설정하여 가장 유사한 문서 3개를 반환
 config = {"configurable": {"search_kwargs": {"k": 3}}}
 
 # 관련 문서를 검색
-docs = retriever.invoke("과업 수행 목적과 과업 수행에 대해 설명해줘", config=config)
+docs = bm25_retriever.get_relevant_documents(preprocess_text("과업 수행 목적과 과업 수행에 대해 설명해줘"))
 
 # 관련 문서를 검색
 for doc in docs:
-    print(doc.page_content)
+    print(overlapped_chunks[tokenizer_docs.index(doc.page_content)].page_content)
     print("=========================================================")
