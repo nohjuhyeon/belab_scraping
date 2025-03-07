@@ -120,7 +120,7 @@ def type_list_insert(notice_type, download_folder_path):
     # ai_notice_list 폴더 경로 설정
     for file_name in os.listdir(download_folder_path):
         file_path = os.path.join(download_folder_path, file_name)
-        if file_name.lower().endswith('.hwp') or file_name.lower().endswith('.hwpx'):
+        if file_name.lower().endswith('.hwp') or file_name.lower().endswith('.hwpx') or file_name.lower().endswith('.pdf'):
             if search_keywords_in_hwp(file_name,file_path, ai_keywords) and '인공지능' not in notice_type:
                 notice_type.append('인공지능')
             if search_keywords_in_hwp(file_name,file_path, db_keywords) and '데이터' not in notice_type:
