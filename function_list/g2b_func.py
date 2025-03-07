@@ -86,9 +86,10 @@ def detect_file_type(file_path):
 
                 # PDF 로더 초기화
                 docs = loader.load()
-                content = ''
+                content_list = []
                 for i in docs:
-                    content += i.page_content
+                    content_list.append(i.page_content)
+                content = '\n'.join(content_list)
                 pass
             # 기타 파일
             else:
