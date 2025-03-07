@@ -86,6 +86,9 @@ def detect_file_type(file_path):
 
                 # PDF 로더 초기화
                 docs = loader.load()
+                content = ''
+                for i in docs:
+                    content += i.page_content
                 pass
             # 기타 파일
             else:
