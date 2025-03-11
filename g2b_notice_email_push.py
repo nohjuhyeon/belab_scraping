@@ -15,7 +15,7 @@ try:
     ## 인공지능 이메일 전송
     ai_url = "https://docs.google.com/spreadsheets/d/15gZLOTcY-XxlGmkNNMllB4GaJynHiLqtlp6U5PhMMew/edit?usp=drive_link"
     ai_list = category_new_data_get(ai_url, '인공지능')
-    ai_user = ['jh.noh@belab.co.kr','jh.park@belab.co.kr','sy.kim@belab.co.kr','ma.han@belab.co.kr','chyunkim@naver.com']
+    ai_user = ['jh.noh@belab.co.kr','jh.park@belab.co.kr','sy.kim@belab.co.kr','chyunkim@naver.com']
     # ai_user = ['njh0205@naver.com','njh2720@gmail.com','jh.noh@belab.co.kr']
     email_sending(ai_list, ai_user,ai_url, '인공지능')
 

@@ -96,9 +96,12 @@ class HWPLoader(BaseLoader):
                 text.append(rec_data.decode("utf-16"))
             i += 4 + rec_len
 
+        text = [self.remove_chinese_characters(line) for line in text]
+        text = [self.remove_control_characters(line) for line in text]
         text = "\n".join(text)
-        text = self.remove_chinese_characters(text)
-        text = self.remove_control_characters(text)
+    
+        # text = self.remove_chinese_characters(text)
+        # text = self.remove_control_characters(text)
         return text
 
     @staticmethod
