@@ -127,6 +127,16 @@ def notice_search(notice_list,notice_ids,folder_path):
                 except:
                     pass
                 try:
+                    download_elements = browser.find_elements(By.CSS_SELECTOR,value='td>nobr>a')
+                    # 찾은 요소 출력
+                    for element in download_elements:
+                        if '제안요청서' in element.text.replace(' ','') or '과업지시서' in element.text.replace(' ','') or '과업내용서' in element.text.replace(' ',''):
+                            element.click()
+                            wait_for_downloads(download_folder_path)
+                            time.sleep(2)
+                except:
+                    pass
+                try:
                     entire_files = WebDriverWait(browser, 10).until(
                             EC.presence_of_element_located((By.CSS_SELECTOR, 'table > thead > tr:nth-child(1) >th:nth-child(1)> div >input[title="전체선택"]'))
                         )
