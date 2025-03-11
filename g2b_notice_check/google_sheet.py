@@ -69,7 +69,7 @@ def total_sheet_update(existing_df, notice_list):
     df['게시일_sort'] = pd.to_datetime(df['게시일'], format='%Y-%m-%d %H:%M:%S', errors='coerce')
 
     # 시간 정보가 없는 경우 00:00:00으로 채우기
-    df['게시일_sort'] = df['게시일_sort'].fillna(pd.to_datetime(df['게시일'], format='%Y-%m-%d'))
+    df['게시일_sort'] = df['게시일_sort'].fillna(pd.to_datetime(df['게시일'], format='%Y-%m-%d').dt.floor('D'))
     df.loc[:, '게시일_sort'] = pd.to_datetime(df['게시일'], format='%Y-%m-%d')
     df = df.sort_values(by='게시일_sort', ascending=False).reset_index(drop=True)
     df['공고가격(단위: 원)'] = (
