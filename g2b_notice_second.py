@@ -9,7 +9,7 @@ from function_list.basic_options import mongo_setting
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
+import pandas as pd
 from function_list.basic_options import selenium_setting,download_path_setting,init_browser
 from function_list.g2b_func_test import notice_file_check,notice_title_check,folder_clear
 from datetime import datetime, timedelta
@@ -41,7 +41,7 @@ def wait_for_downloads(download_dir, timeout=30):
         time.sleep(0.5)
 
 
-def notice_search(notice_list,folder_path):
+def notice_search(notice_ids, notice_list,folder_path):
     collection = mongo_setting('news_scraping','notice_test')
     try:
         url = 'http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoServcPPSSrch?serviceKey=Qa6CXT4r6qEr%2BkQt%2FJx6wJr5MPx45hKNJwNTScoYryT2uGz7GozIqpjBw%2FRMk1uE8l92NU7h89m20sa%2FXHKuaQ%3D%3D&pageNo=1&numOfRows=500&inqryDiv=1&inqryBgnDt={}&inqryEndDt={}&type=json'.format('202503100000', '202503110000')
@@ -92,7 +92,7 @@ def notice_search(notice_list,folder_path):
         item_num += 1
         if item_num % 100 == 0:
             print(item_num)
-        if notice_id not in notice_id_list:
+        if notice_id not in notice_id_list and notice_id not in notice_ids:
             notice_id_list.append(notice_id)
             notice_end_date = item['bidClseDt']
             notice_start_date = item['rgstDt']
@@ -150,7 +150,7 @@ def notice_search(notice_list,folder_path):
                         time.sleep(2)
                     except:
                         pass
-                    file_keywords = notice_file_check(download_folder_path)
+                    file_keywords,category_dict,category_list = notice_file_check(download_folder_path)
                     notice_type = notice_title_check(notice_title)
                     for j in file_keywords:
                         if j not in notice_type:
@@ -158,8 +158,11 @@ def notice_search(notice_list,folder_path):
                     notice_type = ', '.join(notice_type)
                     folder_clear(download_folder_path)
                     time.sleep(1)
-                    
-                    dict_notice = {'notice_id':notice_id,'title':notice_title,'price':notice_price,'publishing_agency':publishing_agency,'requesting_agency':requesting_agency,'start_date':notice_start_date,'end_date':notice_end_date,'link':notice_link,'type':notice_type,'notice_class':'입찰 공고'}
+                    if len(category_list) != 0:
+                        pass                   
+                    else:
+                        pass
+                    dict_notice = {'notice_id':notice_id,'title':notice_title,'price':notice_price,'publishing_agency':publishing_agency,'requesting_agency':requesting_agency,'start_date':notice_start_date,'end_date':notice_end_date,'link':notice_link,'keyword_type':notice_type,'llm_cate_dict':category_dict,'llm_cate_list':category_list,'notice_class':'입찰 공고'}
                     notice_list.append(dict_notice)
                     collection.insert_one(dict_notice)
                     db_insert_count += 1
@@ -175,11 +178,29 @@ def notice_search(notice_list,folder_path):
     return notice_list
 
 def notice_collection():
+    collection = mongo_setting('news_scraping','notice_test')
+    results = collection.find({},{'_id':0})
+    existing_df = [i for i in results]
+    existing_df = pd.DataFrame(existing_df)
+    existing_df.rename(columns={
+        'notice_id': '공고번호',
+        'title': '공고명',
+        'price': '공고가격(단위: 원)',
+        'publishing_agency': '공고 기관',
+        'requesting_agency': '수요 기관',
+        'start_date': '게시일',
+        'end_date': '마감일',
+        'link': '링크',
+        'type': '비고',
+        'notice_class':'공고 유형'
+        }, inplace=True)
+    notice_ids = existing_df.loc[existing_df['공고 유형']=='입찰 공고','공고번호'].to_list()
+    # notice_ids = []
     notice_list = []
     # 함수 호출
     # collection = mongo_setting('news_scraping','notice_list')
     folder_path = os.environ.get("folder_path")
-    notice_list = notice_search(notice_list,folder_path)
+    notice_list = notice_search(notice_ids,notice_list,folder_path)
     # if len(notice_list)> 0:
     #     collection.insert_many(notice_list)
 
