@@ -3,6 +3,15 @@ import os
 import zipfile
 import xml.etree.ElementTree as ET
 
+def remove_chinese_characters(s: str):
+    """중국어 문자를 제거합니다."""
+    return re.sub(r"[\u4e00-\u9fff]+", "", s)
+
+def remove_control_characters(s):
+    """깨지는 문자 제거"""
+    return "".join(ch for ch in s if unicodedata.category(ch)[0] != "C")
+
+
 def get_hwpx_text(file_path):
     try:
         with zipfile.ZipFile(file_path, 'r') as zf:
@@ -57,6 +66,9 @@ def get_hwpx_text(file_path):
 
                 # 결과 출력
                 for i, page in enumerate(pages, start=1):
+                    page = [remove_chinese_characters(line) for line in page]
+                    page = [remove_control_characters(line) for line in page]
+
                     text = "\n".join(page)
                     docs.append(text)
             for idx in range(len(docs)):
