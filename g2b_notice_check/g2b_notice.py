@@ -101,10 +101,10 @@ def notice_search(notice_list,notice_ids,folder_path):
             print(item_num)
         if notice_id not in notice_ids and notice_id not in notice_id_list:
             notice_id_list.append(notice_id)
-            notice_end_date = item['bidClseDt'].split(' ')[0]
-            notice_start_date = item['rgstDt'].split(' ')[0]
+            notice_end_date = item['bidClseDt']
+            notice_start_date = item['rgstDt']
             notice_title = item['bidNtceNm']
-            notice_link = 'https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo={}&bidPbancOrd={}'.format(bidNtceNo,bidNtceOrd)
+            notice_link = item['bidNtceDtlUrl']
             requesting_agency = item['dminsttNm']
             publishing_agency = item['ntceInsttNm']
             notice_price = item['asignBdgtAmt']

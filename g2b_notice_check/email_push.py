@@ -64,8 +64,16 @@ def email_push(notice_list,email_list,notice_link,notice_type):
             notice_elements = notice_elements.copy()  # 복사본 생성
             notice_elements.loc[:, '게시일_sort'] = pd.to_datetime(notice_elements['게시일'], format='%Y-%m-%d')
             notice_elements = notice_elements.sort_values(by='게시일_sort', ascending=False).reset_index(drop=True)
+            notice_elements["공고번호_뒷자리"] = notice_elements["공고번호"].str.split("-").str[-1].astype(int)
+            notice_elements["공고번호_앞자리"] = notice_elements["공고번호"].str.split("-").str[0]
+            filtered_notice_elements = notice_elements.loc[
+                notice_elements.groupby("공고번호_앞자리")["공고번호_뒷자리"].idxmax()
+            ]
 
-            html_content = html_create(html_content, notice_elements, i)
+            # 뒷자리 컬럼 제거 (필요 시)
+            filtered_notice_elements = filtered_notice_elements.drop(columns=["공고번호_뒷자리","공고번호_앞자리"])
+
+            html_content = html_create(html_content, filtered_notice_elements, i)
 
         for receiver_email in email_list:
             message = MIMEMultipart('alternative')
