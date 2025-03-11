@@ -170,7 +170,10 @@ def category_sheet_update(spreadsheet_url,notice_df,notice_category):
     # # DataFrame으로 변환
     # new_df = pd.DataFrame(list(documents))
     notice_df = notice_df.copy()  # 복사본 생성
-    notice_df.loc[:, '게시일_sort'] = pd.to_datetime(notice_df['게시일'], format='%Y-%m-%d')
+    notice_df['게시일_sort'] = pd.to_datetime(notice_df['게시일'], format='%Y-%m-%d %H:%M:%S', errors='coerce')
+
+    # 시간 정보가 없는 경우 00:00:00으로 채우기
+    notice_df['게시일_sort'] = notice_df['게시일_sort'].fillna(pd.to_datetime(notice_df['게시일'], format='%Y-%m-%d').dt.floor('D'))
     # 최신 순으로 정렬
     notice_df = notice_df.sort_values(by='게시일_sort', ascending=False).reset_index(drop=True)
     notice_df['공고가격(단위: 원)'] = (
