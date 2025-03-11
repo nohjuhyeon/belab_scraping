@@ -23,7 +23,7 @@ def llm_category_classification(text):
     load_dotenv()
 
     # 프로젝트 이름을 입력합니다.
-    langsmith("g2b_notice_test_1")
+    langsmith("g2b_notice_test")
 
     text= text[:4000]
     text_list = text.split('\n')[:-1]
