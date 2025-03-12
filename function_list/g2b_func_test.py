@@ -23,6 +23,7 @@ def notice_file_check(download_folder_path):
     notice_type = []
     category_dict= []
     category_list= []
+    summary=''
     for file_name in os.listdir(download_folder_path):
         file_path = os.path.join(download_folder_path, file_name)
         if file_name.lower().endswith('.zip'):

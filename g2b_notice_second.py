@@ -178,7 +178,7 @@ def notice_search(notice_ids, notice_list,folder_path):
     return notice_list
 
 def notice_collection():
-    collection = mongo_setting('news_scraping','notice_test')
+    collection = mongo_setting('news_scraping','notice_test_2')
     results = collection.find({},{'_id':0})
     existing_df = [i for i in results]
     existing_df = pd.DataFrame(existing_df)
