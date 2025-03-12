@@ -42,7 +42,7 @@ def wait_for_downloads(download_dir, timeout=30):
 
 
 def notice_search(notice_ids, notice_list,folder_path):
-    collection = mongo_setting('news_scraping','notice_test')
+    collection = mongo_setting('news_scraping','notice_test_2')
     try:
         url = 'http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoServcPPSSrch?serviceKey=Qa6CXT4r6qEr%2BkQt%2FJx6wJr5MPx45hKNJwNTScoYryT2uGz7GozIqpjBw%2FRMk1uE8l92NU7h89m20sa%2FXHKuaQ%3D%3D&pageNo=1&numOfRows=500&inqryDiv=1&inqryBgnDt={}&inqryEndDt={}&type=json'.format('202503100000', '202503110000')
         # url과 parameters를 response라는 변수로 받음 
@@ -150,7 +150,7 @@ def notice_search(notice_ids, notice_list,folder_path):
                         time.sleep(2)
                     except:
                         pass
-                    file_keywords,category_dict,category_list = notice_file_check(download_folder_path)
+                    file_keywords,category_dict,category_list,summary = notice_file_check(download_folder_path)
                     notice_type = notice_title_check(notice_title)
                     for j in file_keywords:
                         if j not in notice_type:
@@ -162,7 +162,7 @@ def notice_search(notice_ids, notice_list,folder_path):
                         pass                   
                     else:
                         pass
-                    dict_notice = {'notice_id':notice_id,'title':notice_title,'price':notice_price,'publishing_agency':publishing_agency,'requesting_agency':requesting_agency,'start_date':notice_start_date,'end_date':notice_end_date,'link':notice_link,'keyword_type':notice_type,'llm_cate_dict':category_dict,'llm_cate_list':category_list,'notice_class':'입찰 공고'}
+                    dict_notice = {'notice_id':notice_id,'title':notice_title,'price':notice_price,'publishing_agency':publishing_agency,'requesting_agency':requesting_agency,'start_date':notice_start_date,'end_date':notice_end_date,'link':notice_link,'keyword_type':notice_type,'summary':summary,'llm_cate_dict':category_dict,'llm_cate_list':category_list,'notice_class':'입찰 공고'}
                     notice_list.append(dict_notice)
                     collection.insert_one(dict_notice)
                     db_insert_count += 1
@@ -194,8 +194,8 @@ def notice_collection():
         'type': '비고',
         'notice_class':'공고 유형'
         }, inplace=True)
-    notice_ids = existing_df.loc[existing_df['공고 유형']=='입찰 공고','공고번호'].to_list()
-    # notice_ids = []
+    # notice_ids = existing_df.loc[existing_df['공고 유형']=='입찰 공고','공고번호'].to_list()
+    notice_ids = []
     notice_list = []
     # 함수 호출
     # collection = mongo_setting('news_scraping','notice_list')

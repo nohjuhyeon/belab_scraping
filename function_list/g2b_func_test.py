@@ -48,8 +48,8 @@ def notice_file_check(download_folder_path):
         file_path = os.path.join(download_folder_path, keyword_file)        
         text = detect_file_type(file_path)
         notice_type = notice_keyword_search(text)
-        category_dict,category_list = llm_category_classification(text)
-    return notice_type,category_dict,category_list
+        category_dict,category_list,summary = llm_category_classification(text)
+    return notice_type,category_dict,category_list,summary
 
 
 def detect_file_type(file_path):

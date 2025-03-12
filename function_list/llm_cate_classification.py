@@ -23,7 +23,7 @@ def llm_category_classification(text):
     load_dotenv()
 
     # 프로젝트 이름을 입력합니다.
-    langsmith("g2b_notice_test")
+    langsmith("g2b_notice_test_2")
 
     text= text[:4000]
     text_list = text.split('\n')[:-1]
@@ -32,8 +32,49 @@ def llm_category_classification(text):
     # 문서에 포함되어 있는 정보를 검색하고 생성합니다.
     # 프롬프트를 생성합니다.
     prompt = PromptTemplate.from_template(
-            """
-            이 공고의 카테고리를 IT 관련 기술(예시: 인공지능, 클라우드, 데이터베이스)을 기준으로 분류해주세요. 카테고리가 '없음'일 경우, 빈 리스트로 남겨주세요.
+           """
+            이 공고의 추진 내용에 IT 관련 기술이 포함될 경우, 카테고리를 IT 관련 기술을 기준으로 분류해주세요. IT 관련 기술이 포함되지 않을 경우, 빈 리스트로 남겨주세요.
+            
+            ## IT 관련 기술: 
+                1. **인공지능**  
+                인간의 지능을 모방하여 학습, 추론, 문제 해결 등을 수행하는 기술.
+
+                2. **데이터베이스**  
+                데이터를 저장, 관리, 검색 및 최적화하기 위한 시스템과 기술.
+
+                3. **클라우드 컴퓨팅**  
+                인터넷을 통해 컴퓨팅 자원(서버, 스토리지 등)을 제공하고 관리하는 기술.
+
+                4. **소프트웨어 개발**  
+                소프트웨어를 설계, 구현, 테스트 및 유지보수하는 과정과 관련 기술.
+
+                5. **네트워크 및 보안**  
+                디지털 통신 네트워크의 설계, 운영, 최적화와 데이터 보호를 위한 보안 기술 및 솔루션.
+
+                6. **데이터 분석 및 데이터 과학**  
+                데이터를 수집, 처리, 분석하여 유의미한 통찰을 도출하는 기술과 방법론.
+
+                7. **IoT**  
+                인터넷에 연결된 물리적 디바이스와 센서를 통해 데이터를 수집하고 상호작용하는 기술.
+
+                8. **블록체인**  
+                거래 기록을 분산 원장에 저장하여 투명성과 보안을 강화하는 기술.
+
+                9. **가상화 및 컨테이너 기술**  
+                물리적 하드웨어를 가상화하거나 애플리케이션을 컨테이너로 격리하여 실행하는 기술.
+
+                10. **소프트웨어 테스트 및 품질 관리**  
+                    소프트웨어의 결함을 발견하고 품질을 보장하기 위한 테스트 및 관리 기술.
+
+                11. **AR/VR 및 메타버스**  
+                    증강현실과 가상현실 기술을 활용한 몰입형 가상 환경과 메타버스 플랫폼 기술.
+
+                12. **IT 운영 및 관리**  
+                    IT 시스템의 안정적 운영, 모니터링, 복구 및 서비스 관리 기술.
+
+                13. **기타 기술**  
+                    미래 기술(양자 컴퓨팅, 5G 등)과 특수 목적의 새로운 IT 기술.
+
             
             ### 제공된 공고 내용:
             {context}
@@ -41,12 +82,12 @@ def llm_category_classification(text):
             ### 출력 형식(JSON):
 
             ```
+            "summary": "공고의 사업(과업) 수행 내용을 5줄로 요약"
             “category": [
                 
                 “name": “[한국어로 된 카테고리 이름]”,
-                “참조_텍스트": “[발견된 관련 텍스트]
+                “참조_텍스트": “[발견된 관련 텍스트]"
             ```
-
             """)
 
 
@@ -58,6 +99,7 @@ def llm_category_classification(text):
     response = llm.invoke(prompt.format(context=context))
 
     parsed_output = parser.parse(response.content)
+    summary = parsed_output['summary']
     category_dict = parsed_output['category']
     category_list = [category['name'] for category in category_dict]
-    return category_dict,category_list
+    return category_dict,category_list,summary

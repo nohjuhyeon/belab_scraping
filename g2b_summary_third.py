@@ -1,34 +1,11 @@
-from function_list.hwpx_loader import get_hwpx_text
-from langchain_text_splitters import RecursiveCharacterTextSplitter, CharacterTextSplitter
-from langchain_community.document_loaders import PyMuPDFLoader
-from langchain_community.vectorstores import FAISS
-from langchain_core.output_parsers import StrOutputParser, JsonOutputParser
-from langchain_core.runnables import RunnablePassthrough
+from langchain_core.output_parsers import JsonOutputParser
+from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import PromptTemplate
-from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+from langchain_openai import ChatOpenAI
 from langchain.schema import Document  # Document 객체를 사용하기 위해 추가
-from langchain_teddynote import logging
+from function_list.langsmith_log import langsmith
 from dotenv import load_dotenv
 from function_list.hwp_loader import HWPLoader
-# from kss import split_sentences
-import tiktoken
-from langchain_text_splitters import RecursiveCharacterTextSplitter
-
-def count_tokens(text, model_name="gpt-4o-mini"):
-    """
-    텍스트의 토큰 수를 계산합니다.
-    :param text: 토큰 수를 계산할 텍스트
-    :param model_name: 사용할 모델 이름 (예: "gpt-4", "gpt-3.5-turbo")
-    :return: 토큰 수
-    """
-    # 모델에 맞는 토크나이저 로드
-    tokenizer = tiktoken.encoding_for_model(model_name)
-    
-    # 텍스트를 토큰화하고 토큰 수 계산
-    tokens = tokenizer.encode(text)
-    return len(tokens)
-
-
 def create_langchain_documents(docs):
     # LangChain Document 객체 리스트 생성
     documents = []
@@ -42,85 +19,173 @@ def create_langchain_documents(docs):
         documents.append(doc)
     return documents
 
-# API KEY 정보로드
-load_dotenv()
+def llm_prompt(text,prompt):
+    # API KEY 정보로드
+    load_dotenv()
 
-# 프로젝트 이름을 입력합니다.
-logging.langsmith("CH01-Basic")
+    # 프로젝트 이름을 입력합니다.
+    langsmith("g2b_notice_test_1")
 
-# extract_tag_ids('2. 2025년 한국전력공사 협업 광고대행사 선정 제안요청서(최종).hwp')
+    text= text[:4000]
+    text_list = text.split('\n')[:-1]
+    context='\n'.join(text_list)
 
-# # 단계 1: 파일 처리
-loader = HWPLoader('test2.hwp')
-documents = loader.load()
-long_text = documents[0].page_content[:4000]
+    # 문서에 포함되어 있는 정보를 검색하고 생성합니다.
 
-# pass
-# docs, metadata = get_hwpx_text('test3.hwpx')
-# # print(metadata)
-# long_text = '\n\n'.join(docs)[:4000]
-text_list = long_text.split('\n')[:-1]
-documents = create_langchain_documents(['\n'.join(text_list)])
-context='\n'.join(text_list)
-
-# 단계 2: 문서 분할(Split Documents)
-text_splitter = CharacterTextSplitter(chunk_size=200, chunk_overlap=50)
-split_documents = text_splitter.split_documents(documents)  # 여기서 []로 감싸야 함
-print(f"분할된 청크의 수: {len(split_documents)}")
+    # 프롬프트를 생성합니다.
 
 
-# OpenAI Embeddings 생성 시 API 키 전달
-embeddings = OpenAIEmbeddings()
+    # ChatOpenAI (LLM) 생성 시 API 키 전달
+    llm = ChatOpenAI(model_name="gpt-4o-mini", temperature=0)
+    # parser = StrOutputParser()
+    parser = JsonOutputParser()
+
+    # 체인 실행
+    response = llm.invoke(prompt.format(context=context))
+
+    parsed_output = parser.parse(response.content)
+    # category_dict = parsed_output['category']
+    # category_list = [category['name'] for category in category_dict]
+    return parsed_output
+
+if __name__ == "__main__":
+    loader = HWPLoader("과업지시서_제천시 스마트빌리지 보급 및 확산사업 감리용역.hwp")
+
+    # 문서 로드
+    docs = loader.load()
+    contents = docs[0].page_content
+    text = contents[:4000]
+    text_list = text.split('\n')[:-1]
+    context='\n'.join(text_list)
+    prompt = PromptTemplate.from_template(
+    """
+    주어진 공고 내용이 IT 기술과 관련이 있는지 확인하고, 관련이 있다면 다음과 같은 정보를 제공해주세요:
+
+    1. 공고의 사업(과업) 수행 내용을 5줄로 요약
+    2. 요약 내용을 토대로 관련 있는 IT 기술 리스트 작성
+    3. 관련 IT 기술을 분류한 카테고리의 출처가 된 문장을 공고 내용에서 추출
+
+    만약 공고가 IT 기술과 관련이 없다면, '관련 없음'으로 출력해주세요.
+
+    ### 카테고리 종류:
+    1. **인공지능 (Artificial Intelligence, AI)**  
+    인간의 지능을 모방하여 학습, 추론, 문제 해결 등을 수행하는 기술.
+
+    2. **데이터베이스 (Databases)**  
+    데이터를 저장, 관리, 검색 및 최적화하기 위한 시스템과 기술.
+
+    3. **클라우드 컴퓨팅 (Cloud Computing)**  
+    인터넷을 통해 컴퓨팅 자원(서버, 스토리지 등)을 제공하고 관리하는 기술.
+
+    4. **소프트웨어 개발 (Software Development)**  
+    소프트웨어를 설계, 구현, 테스트 및 유지보수하는 과정과 관련 기술.
+
+    5. **네트워크 및 보안 (Networking & Security)**  
+    디지털 통신 네트워크와 해당 네트워크의 보안을 유지하기 위한 기술.
+
+    6. **데이터 분석 및 데이터 과학 (Data Analytics & Data Science)**  
+    데이터를 수집, 처리, 분석하여 유의미한 통찰을 도출하는 기술과 방법론.
+
+    7. **IoT (Internet of Things)**  
+    인터넷에 연결된 물리적 디바이스와 센서를 통해 데이터를 수집하고 상호작용하는 기술.
+
+    8. **블록체인 (Blockchain)**  
+    거래 기록을 분산 원장에 저장하여 투명성과 보안을 강화하는 기술.
+
+    9. **가상화 및 컨테이너 기술 (Virtualization & Containers)**  
+    물리적 하드웨어를 가상화하거나 애플리케이션을 컨테이너로 격리하여 실행하는 기술.
+
+    10. **소프트웨어 테스트 및 품질 관리 (Software Testing & Quality Assurance)**  
+        소프트웨어의 결함을 발견하고 품질을 보장하기 위한 테스트 및 관리 기술.
+
+    11. **AR/VR 및 메타버스 (AR/VR & Metaverse)**  
+        증강현실과 가상현실 기술을 활용한 몰입형 가상 환경과 메타버스 플랫폼 기술.
+
+    12. **IT 운영 및 관리 (IT Operations & Management)**  
+        IT 시스템의 안정적 운영, 모니터링, 복구 및 서비스 관리 기술.
+
+    13. **기타 기술**  
+        미래 기술(양자 컴퓨팅, 5G 등)과 특수 목적의 새로운 IT 기술.
+
+    ### 제공된 공고 내용:
+    {context}
+
+    ### 출력 형식(JSON):
+        "it_notice": "IT 기술 관련 여부(관련 있음 or 관련 없음)",
+        "summarize": "공고의 요약 내용 (IT 기술과 관련 없으면 출력 안함)",
+        "category": "[요약 내용을 토대로 관련 있는 IT 기술 리스트] (IT 기술과 관련 없으면 출력 안함)",
+        "reference": "[분류한 카테고리에 대한 출처 문장] (IT 기술과 관련 없으면 출력 안함)"
+    """
+    )
+
+    prompt = PromptTemplate.from_template(
+            """
+            이 공고의 추진 내용에 IT 관련 기술이 포함될 경우, 카테고리를 IT 관련 기술을 기준으로 분류해주세요. IT 관련 기술이 포함되지 않을 경우, 빈 리스트로 남겨주세요.
+            
+            ## IT 관련 기술: 
+                1. **인공지능**  
+                인간의 지능을 모방하여 학습, 추론, 문제 해결 등을 수행하는 기술.
+
+                2. **데이터베이스**  
+                데이터를 저장, 관리, 검색 및 최적화하기 위한 시스템과 기술.
+
+                3. **클라우드 컴퓨팅**  
+                인터넷을 통해 컴퓨팅 자원(서버, 스토리지 등)을 제공하고 관리하는 기술.
+
+                4. **소프트웨어 개발**  
+                소프트웨어를 설계, 구현, 테스트 및 유지보수하는 과정과 관련 기술.
+
+                5. **네트워크 및 보안**  
+                디지털 통신 네트워크의 설계, 운영, 최적화와 데이터 보호를 위한 보안 기술 및 솔루션.
+
+                6. **데이터 분석 및 데이터 과학**  
+                데이터를 수집, 처리, 분석하여 유의미한 통찰을 도출하는 기술과 방법론.
+
+                7. **IoT**  
+                인터넷에 연결된 물리적 디바이스와 센서를 통해 데이터를 수집하고 상호작용하는 기술.
+
+                8. **블록체인**  
+                거래 기록을 분산 원장에 저장하여 투명성과 보안을 강화하는 기술.
+
+                9. **가상화 및 컨테이너 기술**  
+                물리적 하드웨어를 가상화하거나 애플리케이션을 컨테이너로 격리하여 실행하는 기술.
+
+                10. **소프트웨어 테스트 및 품질 관리**  
+                    소프트웨어의 결함을 발견하고 품질을 보장하기 위한 테스트 및 관리 기술.
+
+                11. **AR/VR 및 메타버스**  
+                    증강현실과 가상현실 기술을 활용한 몰입형 가상 환경과 메타버스 플랫폼 기술.
+
+                12. **IT 운영 및 관리**  
+                    IT 시스템의 안정적 운영, 모니터링, 복구 및 서비스 관리 기술.
+
+                13. **기타 기술**  
+                    미래 기술(양자 컴퓨팅, 5G 등)과 특수 목적의 새로운 IT 기술.
+
+            
+            ### 제공된 공고 내용:
+            {context}
+
+            ### 출력 형식(JSON):
+
+            ```
+            "summary": "공고의 사업(과업) 수행 내용을 5줄로 요약"
+            “category": [
+                
+                “name": “[한국어로 된 카테고리 이름]”,
+                “참조_텍스트": “[발견된 관련 텍스트]"
+            ```
+
+            """)
 
 
-# 벡터스토어를 생성합니다.
-vectorstore = FAISS.from_documents(documents=documents, embedding=embeddings)
-
-# 문서에 포함되어 있는 정보를 검색하고 생성합니다.
-retriever = vectorstore.as_retriever()
-# 검색기에 쿼리를 날려 검색된 chunk 결과를 확인합니다.
-retrieved_docs  = retriever.invoke("사업 목적과 사업 내용, 추진 배경, 참가 자격에 대해 설명해줘")
-
-# 프롬프트를 생성합니다.
-prompt = PromptTemplate.from_template(
+    notice_summarize = llm_prompt(context,prompt)
+    print(notice_summarize)
+    print('---------------------------------------')
+    prompt = PromptTemplate.from_template(
         """
-        이 공고의 카테고리를 IT 관련 기술(예시: 인공지능, 클라우드, 데이터베이스)을 기준으로 분류해주세요. 카테고리가 '없음'일 경우, 빈 리스트로 남겨주세요.
-        
+        이 사업(과업) 수행 내용과 관련있는 IT 기술 알려줘
         ### 제공된 공고 내용:
         {context}
 
-### 출력 형식(JSON):
-
-```
-  “category": [
-    
-      “name": “[한국어로 된 카테고리 이름]”,
-      “참조_텍스트": “[발견된 관련 텍스트]
-```
-
-""")
-
-
-
-# ChatOpenAI (LLM) 생성 시 API 키 전달
-llm = ChatOpenAI(model_name="gpt-4o-mini", temperature=0)
-
-chain = (
-    {"context": retriever}
-    | prompt
-    | llm
-    | JsonOutputParser()
-)
-# ChatOpenAI (LLM) 생성 시 API 키 전달
-llm = ChatOpenAI(model_name="gpt-4o-mini", temperature=0)
-
-# 체인 실행
-response = llm.invoke(prompt.format(context=context))
-
-print(response)
-
-print(response)
-print('----------------------------------------------------------------')
-# for i in retrieved_docs:
-#     print(i.page_content)
-#     print('----------------------------------------------------------------')
+    """)
