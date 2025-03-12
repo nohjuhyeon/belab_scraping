@@ -194,8 +194,8 @@ def notice_collection():
         'type': '비고',
         'notice_class':'공고 유형'
         }, inplace=True)
-    # notice_ids = existing_df.loc[existing_df['공고 유형']=='입찰 공고','공고번호'].to_list()
-    notice_ids = []
+    notice_ids = existing_df.loc[existing_df['공고 유형']=='입찰 공고','공고번호'].to_list()
+    # notice_ids = []
     notice_list = []
     # 함수 호출
     # collection = mongo_setting('news_scraping','notice_list')
