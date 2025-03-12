@@ -2,6 +2,8 @@ import zipfile
 import os
 import zipfile
 import xml.etree.ElementTree as ET
+import re
+import unicodedata
 
 def remove_chinese_characters(s: str):
     """중국어 문자를 제거합니다."""
