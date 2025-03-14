@@ -23,16 +23,21 @@ def llm_category_classification(text):
     load_dotenv()
 
     # 프로젝트 이름을 입력합니다.
-    langsmith("g2b_notice_test_3")
+    langsmith("g2b_notice_test_2")
+
+    text= text[:4000]
+    text_list = text.split('\n')[:-1]
+    context='\n'.join(text_list)
 
     # 문서에 포함되어 있는 정보를 검색하고 생성합니다.
     # 프롬프트를 생성합니다.
     prompt = PromptTemplate.from_template(
             """
-        다음은 공고의 요약문입니다.
-        이 요약문에서 요구하는 IT 관련 기술(예시: 인공지능, 클라우드, 데이터베이스)을 분류해주세요. 출력 양식은 아래를 참고해주세요. 없을 경우, 빈 리스트로 남겨주세요.
+            이 공고의 사업(과업) 추진 내용을 요약해주세요. 공고의 추진 내용에 IT 관련 기술이 포함될 경우, 카테고리를 IT 관련 기술을 기준으로 분류해주세요. IT 관련 기술이 포함되지 않을 경우, 빈 리스트로 남겨주세요.
 
-        ## **IT 관련 기술**:
+            ---
+
+            ## **IT 관련 기술**:
             1. **인공지능**  
             인간의 지능을 모방하여 학습, 추론, 문제 해결 등을 수행하는 기술.
 
@@ -72,18 +77,29 @@ def llm_category_classification(text):
             13. **기타 기술**  
                 미래 기술(양자 컴퓨팅, 5G 등)과 특수 목적의 새로운 IT 기술.
 
-        
-        ### 제공된 공고 요약문 내용:
-        {context}
+            ---
 
-        ### 출력 형식(JSON):
+            ### 제공된 공고 내용:
+            {context}
 
-        ```
-        “IT 관련 기술": [
-            
-            “name": “[한국어로 된 카테고리 이름]”,
-            “참조_텍스트": “[발견된 관련 텍스트]
-        ```
+            ---
+
+            ### **출력 형식(JSON)**:
+
+            ```json
+                "summary": "공고의 사업(과업) 수행 내용을 5줄로 요약한 내용입니다.",
+                "category": [
+                        "name": "[한국어로 된 카테고리 이름]",
+                        "참조_텍스트": "[발견된 관련 텍스트]"
+                ]
+            ```
+
+            ### **요약 작성 규칙**:
+            1. `"summary"` 필드는 항상 **5줄 이내**로 작성합니다.
+            2. 요약 내용은 반드시 **"~입니다."** 형식으로 끝납니다.
+            - 예시: "이 사업은 AI 기술을 활용하여 데이터를 분석하는 과업을 포함하고 있습니다."
+            3. 공고 내용에 IT 관련 기술이 포함되지 않을 경우, `"category"`는 빈 리스트로 작성합니다.
+
             """)
 
 
@@ -92,9 +108,10 @@ def llm_category_classification(text):
     parser = JsonOutputParser()
 
     # 체인 실행
-    response = llm.invoke(prompt.format(context=text))
+    response = llm.invoke(prompt.format(context=context))
 
     parsed_output = parser.parse(response.content)
-    category_dict = parsed_output['IT 관련 기술']
+    summary = parsed_output['summary']
+    category_dict = parsed_output['category']
     category_list = [category['name'] for category in category_dict]
-    return category_dict,category_list
+    return category_dict,category_list,summary
