@@ -1623,3 +1623,39 @@ ISP/ISMP, 클라우드 메일이 성공적으로 발송되었습니다.
 ISP/ISMP, 클라우드 메일이 성공적으로 발송되었습니다.
 ISP/ISMP, 클라우드 메일이 성공적으로 발송되었습니다.
 이메일 전송 완료!
+2025-03-14 12:00:02.871516
+commit complete!
+----------------공고 확인 시작----------------
+2025-03-14 12:00:03.992345
+나라장터 공고를 찾습니다.
+/app/belab_scraping/item_list.json
+총 공고 수 :  1360
+100
+200
+300
+400
+500
+600
+700
+800
+900
+1000
+1100
+1200
+1300
+저장한 공고 수: 0
+전체 공고 | 시작 날짜 : 2025-03-13 00:00:00 / 종료 날짜 : 2025-03-14 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 시작 날짜 : 2025-03-13 00:00:00 / 종료 날짜 : 2025-03-14 00:00:00
+인공지능 | Data updated and sorted successfully.
+데이터 | 시작 날짜 : 2025-03-13 00:00:00 / 종료 날짜 : 2025-03-14 00:00:00
+데이터 | Data updated and sorted successfully.
+클라우드 | 시작 날짜 : 2025-03-13 00:00:00 / 종료 날짜 : 2025-03-14 00:00:00
+클라우드 | Data updated and sorted successfully.
+ISP/ISMP | 시작 날짜 : 2025-03-13 00:00:00 / 종료 날짜 : 2025-03-14 00:00:00
+ISP/ISMP | Data updated and sorted successfully.
+ISP/ISMP, 클라우드 | 시작 날짜 : 2025-03-13 00:00:00 / 종료 날짜 : 2025-03-14 00:00:00
+ISP/ISMP, 클라우드 | Data updated and sorted successfully.
+2025-03-14 12:02:00.440175
+commit complete!
+공고 확인 완료!
