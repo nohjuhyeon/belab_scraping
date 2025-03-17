@@ -2341,3 +2341,30 @@ item_list가 'item_list.json'로 저장되었습니다.
 2025-03-17 20:08:40.043032
 commit complete!
 공고 확인 완료!
+2025-03-17 16:00:02.685707
+commit complete!
+----------------공고 확인 시작----------------
+2025-03-17 16:00:04.067633
+나라장터 공고를 찾습니다.
+item_list가 'item_list.json'로 저장되었습니다.
+총 공고 수 :  431
+100
+200
+300
+400
+저장한 공고 수: 211
+전체 공고 | 시작 날짜 : 2025-03-14 00:00:00 / 종료 날짜 : 2025-03-17 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 시작 날짜 : 2025-03-14 00:00:00 / 종료 날짜 : 2025-03-17 00:00:00
+인공지능 | Data updated and sorted successfully.
+데이터 | 시작 날짜 : 2025-03-14 00:00:00 / 종료 날짜 : 2025-03-17 00:00:00
+데이터 | Data updated and sorted successfully.
+클라우드 | 시작 날짜 : 2025-03-14 00:00:00 / 종료 날짜 : 2025-03-17 00:00:00
+클라우드 | Data updated and sorted successfully.
+ISP/ISMP | 시작 날짜 : 2025-03-14 00:00:00 / 종료 날짜 : 2025-03-17 00:00:00
+ISP/ISMP | Data updated and sorted successfully.
+ISP/ISMP, 클라우드 | 시작 날짜 : 2025-03-14 00:00:00 / 종료 날짜 : 2025-03-17 00:00:00
+ISP/ISMP, 클라우드 | Data updated and sorted successfully.
+2025-03-17 20:16:05.411282
+commit complete!
+공고 확인 완료!
