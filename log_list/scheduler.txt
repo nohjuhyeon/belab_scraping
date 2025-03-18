@@ -1474,3 +1474,4 @@
 2025-03-19 00:00:20,004 - INFO - GH_TOKEN will be used to perform requests
 2025-03-19 00:00:20,430 - INFO - Driver has been saved in cache [/root/.wdm/drivers/geckodriver/linux64/v0.36.0]
 2025-03-19 04:00:27,246 - INFO - ----------------notice check started----------------
+2025-03-19 08:00:26,926 - INFO - ----------------notice check started----------------
