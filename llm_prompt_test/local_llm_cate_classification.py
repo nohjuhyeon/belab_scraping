@@ -33,9 +33,9 @@ def create_langchain_documents(docs):
         documents.append(doc)
     return documents
 
-def llm_category_classification(text) -> List[str]:
+def llm_category_classification(text,llm_name) -> List[str]:
     load_dotenv()
-    langsmith("local_llm_test")
+    langsmith(llm_name)
 
     prompt_template = """
 제공된 공고 요약문에서 요구하는 IT 관련 기술을 Instructions에 맞게 분류해주세요.
@@ -71,7 +71,7 @@ def llm_category_classification(text) -> List[str]:
 """
 
     llm = ChatOllama(
-        model="EEVE-Korean-Instruct-10.8B:latest",
+        model=llm_name,
         format="json",  # 입출력 형식을 JSON으로 설정합니다.
         temperature=0
     )

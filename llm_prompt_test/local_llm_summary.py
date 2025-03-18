@@ -2,6 +2,7 @@ from langchain_core.output_parsers import JsonOutputParser,StrOutputParser
 from langchain_core.prompts import PromptTemplate,ChatPromptTemplate
 from langchain.schema import Document  # Document 객체를 사용하기 위해 추가
 from langchain_ollama import ChatOllama
+from function_list.langsmith_log import langsmith
 from dotenv import load_dotenv
 import json
 
@@ -19,7 +20,7 @@ def create_langchain_documents(docs):
     return [Document(page_content=text, metadata={}) for text in docs]
 
 
-def llm_summary(text):
+def llm_summary(text,llm_name):
     """
     공고 텍스트를 분석하여 JSON 형식으로 요약을 생성합니다.
 
@@ -31,6 +32,8 @@ def llm_summary(text):
     """
     # 환경 변수 로드
     load_dotenv()
+
+    langsmith(llm_name)
 
     # 프롬프트 템플릿 정의
     prompt_template = """이 공고의 **사업(과업) 수행 내용**을 요약해주세요.
@@ -51,7 +54,7 @@ def llm_summary(text):
 """
     # LLM 모델 초기화
     llm = ChatOllama(
-        model="EEVE-Korean-Instruct-10.8B:latest",
+        model=llm_name,
         format="json",  # 입출력 형식을 JSON으로 설정합니다.
         temperature=0
     )
