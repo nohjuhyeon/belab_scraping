@@ -1475,3 +1475,7 @@
 2025-03-19 00:00:20,430 - INFO - Driver has been saved in cache [/root/.wdm/drivers/geckodriver/linux64/v0.36.0]
 2025-03-19 04:00:27,246 - INFO - ----------------notice check started----------------
 2025-03-19 08:00:26,926 - INFO - ----------------notice check started----------------
+2025-03-19 09:30:01,601 - INFO - ----------------notice check started----------------
+2025-03-19 09:30:11,435 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x77c1fc2640d0>: Failed to resolve 'oauth2.googleapis.com' ([Errno -3] Temporary failure in name resolution)")': /token
+2025-03-19 09:30:23,724 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x77c1fc264280>: Failed to resolve 'oauth2.googleapis.com' ([Errno -3] Temporary failure in name resolution)")': /token
+2025-03-19 09:30:36,012 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x77c1fc264430>: Failed to resolve 'oauth2.googleapis.com' ([Errno -3] Temporary failure in name resolution)")': /token
