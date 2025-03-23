@@ -30,26 +30,32 @@ results = collection.find({}, {"_id": 0, "notice_id": 1})
 id_list = [i["notice_id"] for i in results]
 
 for i in data:
-    if i["notice_id"] not in id_list:
-        context = i["notice_text"]
-        # LLM 모델 초기화
-        # notice_type = notice_keyword_search(context)
-        summary = llm_summary(context)
-        print(summary)
-        category_dict, category_list = llm_category_classification(summary)
-        print(category_dict)
-        print("-" * 100)
-        i["llm_summary"] = summary
-        i["llm_category"] = category_dict
-        collection.insert_one(
-            {
-                "notice_id": i["notice_id"],
-                "notice_text": i["notice_text"],
-                "llm_summary": summary,
-                "llm_category": category_dict,
-            }
-        )
+    try:
+        if i["notice_id"] not in id_list:
+            context = i["notice_text"]
+            # LLM 모델 초기화
+            # notice_type = notice_keyword_search(context)
+            summary = llm_summary(context)
+            print(summary)
+            category_dict, category_list = llm_category_classification(summary)
+            print(category_dict)
+            print("-" * 100)
+            i["llm_summary"] = summary
+            i["llm_category"] = category_dict
+            collection.insert_one(
+                {
+                    "notice_id": i["notice_id"],
+                    "notice_text": i["notice_text"],
+                    "llm_summary": summary,
+                    "llm_category": category_dict,
+                }
+            )
+            pass
+        else:
+            pass
+    except:
         pass
+
 
 with open(file_path, "w", encoding="utf-8") as file:
     json.dump(data, file, ensure_ascii=False, indent=4)
