@@ -3,27 +3,53 @@ import pandas as pd
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
-from function_list.g2b_func_test_second import (
-    detect_file_type,
-    notice_keyword_search,
-    llm_category_classification,
-    llm_summary,
-)
+from function_list.g2b_func_test_second import detect_file_type, notice_keyword_search
+from function_list.llm_summary import llm_summary
+from function_list.llm_cate_classification import llm_category_classification
+from function_list.basic_options import mongo_setting
 import json
 
 # MongoDB 연결 설정
 load_dotenv()
 
-# file_path = 'test.hwpx'
-# text = detect_file_type(file_path)
-# text= text[:4000]
-# text_list = text.split('\n')[:-1]
-# context='\n'.join(text_list)
+import json
 
-# notice_type = notice_keyword_search(context)
-# summary = llm_summary(context)
-summary = "이 사업은 2025년까지 무인도서 정보관리시스템의 유지관리 및 데이터베이스 현행화를 목표로 합니다. 무인도서 실태조사 결과를 DB에 입력하고, 종합정보시스템의 운영 및 유지관리를 수행합니다. 사용자 편의를 위한 UI/UX 개선과 정보 표출 서비스 기능 추가도 포함됩니다. 또한, 해양관광 및 레저 개발을 위한 체계적 관리체계 구축이 필요합니다. 총 예산은 428,000,000원이며, 경쟁입찰 방식으로 진행됩니다."
-category_dict = llm_category_classification(summary)
-print(summary)
-print(category_dict)
-pass
+# JSON 파일 경로
+file_path = "notice_test.json"
+
+# JSON 파일을 딕셔너리로 불러오기
+with open(file_path, "r", encoding="utf-8") as file:
+    data = json.load(file)
+
+
+data
+new_dict = []
+
+collection = mongo_setting("news_scraping", "llm_notice")
+results = collection.find({}, {"_id": 0, "notice_id": 1})
+id_list = [i["notice_id"] for i in results]
+
+for i in data:
+    if i["notice_id"] not in id_list:
+        context = i["notice_text"]
+        # LLM 모델 초기화
+        # notice_type = notice_keyword_search(context)
+        summary = llm_summary(context)
+        print(summary)
+        category_dict, category_list = llm_category_classification(summary)
+        print(category_dict)
+        print("-" * 100)
+        i["llm_summary"] = summary
+        i["llm_category"] = category_dict
+        collection.insert_one(
+            {
+                "notice_id": i["notice_id"],
+                "notice_text": i["notice_text"],
+                "llm_summary": summary,
+                "llm_category": category_dict,
+            }
+        )
+        pass
+
+with open(file_path, "w", encoding="utf-8") as file:
+    json.dump(data, file, ensure_ascii=False, indent=4)
