@@ -1522,3 +1522,19 @@
 2025-03-24 09:30:26,860 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7db3a2b58100>: Failed to resolve 'oauth2.googleapis.com' ([Errno -3] Temporary failure in name resolution)")': /token
 2025-03-24 09:30:39,148 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7db3a2b582b0>: Failed to resolve 'oauth2.googleapis.com' ([Errno -3] Temporary failure in name resolution)")': /token
 2025-03-24 12:00:26,606 - INFO - ----------------notice check started----------------
+2025-03-24 16:00:04,320 - INFO - ----------------notice check started----------------
+2025-03-24 16:00:08,716 - INFO - ====== WebDriver manager ======
+2025-03-24 16:00:09,078 - INFO - Get LATEST geckodriver version for 128.6 firefox
+2025-03-24 16:00:09,078 - INFO - GH_TOKEN will be used to perform requests
+2025-03-24 16:00:09,589 - INFO - Get LATEST geckodriver version for 128.6 firefox
+2025-03-24 16:00:09,589 - INFO - GH_TOKEN will be used to perform requests
+2025-03-24 16:00:10,016 - INFO - There is no [linux64] geckodriver "v0.36.0" for browser firefox "128.6" in cache
+2025-03-24 16:00:10,016 - INFO - Get LATEST geckodriver version for 128.6 firefox
+2025-03-24 16:00:10,016 - INFO - GH_TOKEN will be used to perform requests
+2025-03-24 16:00:10,432 - INFO - Getting latest mozilla release info for v0.36.0
+2025-03-24 16:00:10,432 - INFO - GH_TOKEN will be used to perform requests
+2025-03-24 16:00:10,773 - INFO - About to download new driver from https://github.com/mozilla/geckodriver/releases/download/v0.36.0/geckodriver-v0.36.0-linux64.tar.gz
+2025-03-24 16:00:11,547 - INFO - Driver downloading response is 200
+2025-03-24 16:00:11,624 - INFO - Get LATEST geckodriver version for 128.6 firefox
+2025-03-24 16:00:11,624 - INFO - GH_TOKEN will be used to perform requests
+2025-03-24 16:00:11,998 - INFO - Driver has been saved in cache [/root/.wdm/drivers/geckodriver/linux64/v0.36.0]
