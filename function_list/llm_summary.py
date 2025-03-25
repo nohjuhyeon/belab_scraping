@@ -26,7 +26,7 @@ def llm_summary(text):
     load_dotenv()
 
     # 프로젝트 이름을 입력합니다.
-    langsmith("g2b_notice_test_3")
+    langsmith("gpt_4o_mini")
 
     # 문서에 포함되어 있는 정보를 검색하고 생성합니다.
     # 프롬프트를 생성합니다.
