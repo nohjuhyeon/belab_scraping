@@ -820,3 +820,12 @@ crawling count :  403
 2025-03-25 14:13:45.261679
 commit complete!
 뉴스 요약 업데이트 완료!
+2025-03-25 18:00:08.824734
+commit complete!
+----------------뉴스 요약 업데이트 시작----------------
+2025-03-25 18:00:09.845969
+naver news crawling finish
+crawling count :  261
+2025-03-25 18:11:33.121231
+commit complete!
+뉴스 요약 업데이트 완료!
