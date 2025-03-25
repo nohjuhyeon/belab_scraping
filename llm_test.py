@@ -25,13 +25,13 @@ with open(file_path, "r", encoding="utf-8") as file:
 data
 new_dict = []
 
-collection = mongo_setting("news_scraping", "llm_notice")
+collection = mongo_setting("news_scraping", "gpt_4o_mini")
 results = collection.find({}, {"_id": 0, "notice_id": 1})
 id_list = [i["notice_id"] for i in results]
 
 for i in data:
     try:
-        if i["notice_id"] not in id_list:
+        if i["notice_id"] not in id_list and i['notice_text'].replace('\n','').replace(' ','') != '':
             context = i["notice_text"]
             # LLM 모델 초기화
             # notice_type = notice_keyword_search(context)
