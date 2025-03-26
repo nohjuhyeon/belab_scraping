@@ -42,15 +42,17 @@ def llm_it_notice_check(text):
     # 프롬프트를 생성합니다.
     prompt = PromptTemplate.from_template(
         """
-            이 공고가 소프트웨어 기업업이 참여할 수 있는 사업인지 분류해주세요. 
-            참여할 수 있으면 True, 없으면 False로 응답해주세요.
+        이 공고가 소프트웨어 회사가 참여할 수 있는 프로젝트인지 분류해 주세요.  
+        IT와 관련된 경우라도, 영상 콘텐츠 개발, 행사 주최, 행사 운영, 교육 프로그램 개발과 같은 작업이 포함되어 있다면 참여할 수 없습니다.  
+        참여할 수 있는 경우 **반드시** "True"만 응답하고, 참여할 수 없는 경우 **반드시** "False"만 응답하세요.  
+        추가적인 설명은 포함하지 마세요.
 
-            ### 제공된 공고 내용:
-            {context}
-            
-            ### Instructions: 
-            {instructions}
-            """
+        ### 제공된 공고 내용:
+        {context}
+        
+        ### 지시 사항: 
+        {instructions}
+        """
     ).partial(instructions=parser.get_format_instructions())
 
     # ChatOpenAI (LLM) 생성 시 API 키 전달

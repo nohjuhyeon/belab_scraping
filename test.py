@@ -114,9 +114,9 @@ text = """
 
 it_notice_check,check_time,check_token = llm_it_notice_check(text)
 print(it_notice_check)
-print(check_time)
+print(round(check_time,2))
 print(check_token)
-if it_notice_check == 'True':
+if it_notice_check.lower() == 'true':
     summary,summary_time,summary_token = llm_summary(text)
     print(summary)
     print(summary_time)
