@@ -865,3 +865,12 @@ crawling count :  418
 2025-03-26 14:15:07.360435
 commit complete!
 뉴스 요약 업데이트 완료!
+2025-03-26 18:00:08.880639
+commit complete!
+----------------뉴스 요약 업데이트 시작----------------
+2025-03-26 18:00:09.894632
+naver news crawling finish
+crawling count :  367
+2025-03-26 18:13:39.387691
+commit complete!
+뉴스 요약 업데이트 완료!
