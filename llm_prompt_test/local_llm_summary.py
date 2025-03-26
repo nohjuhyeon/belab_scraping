@@ -4,6 +4,7 @@ from langchain.schema import Document  # Document 객체를 사용하기 위해 
 from langchain_ollama import ChatOllama
 from function_list.langsmith_log import langsmith
 from dotenv import load_dotenv
+from langchain_core.runnables import RunnableConfig
 import json
 
 
@@ -36,7 +37,8 @@ def llm_summary(text,llm_name):
     langsmith(llm_name)
 
     # 프롬프트 템플릿 정의
-    prompt_template = """이 공고의 **사업(과업) 수행 내용**을 요약해주세요.
+    prompt = PromptTemplate.from_template(
+ """이 공고의 **사업(과업) 수행 내용**을 요약해주세요.
 
 ### 제공된 공고 내용:
 {context}
@@ -51,26 +53,29 @@ def llm_summary(text,llm_name):
 2. 요약 내용은 반드시 "~입니다." 형식으로 끝납니다.
 - 예시: '이 사업은 AI 기술을 활용하여 데이터를 분석하는 과업을 포함하고 있습니다.'
 
-"""
+""")
     # LLM 모델 초기화
     llm = ChatOllama(
         model=llm_name,
         format="json",  # 입출력 형식을 JSON으로 설정합니다.
         temperature=0
     )
+    parser = JsonOutputParser()
+
 
     # JSON 파서 초기화
-    parser = JsonOutputParser()
 
     try:
         # 프롬프트 생성 및 LLM 호출
-        prompt = ChatPromptTemplate.from_template(prompt_template)
-        chain = prompt | llm | parser
-        response = chain.invoke({"context":text})
+        llm_tag = RunnableConfig(tags=["summarization", llm_name])
+        # 체인 실행
+        response = llm.invoke(prompt.format(context=text), config=llm_tag)
+
+        parsed_output = parser.parse(response.content)
 
         # 응답 파싱
         # parsed_output = parser.parse(response.content)
-        return response['summary']
+        return parsed_output['summary']
 
     except Exception as e:
         print(f"[오류] LLM 호출 실패: {e}")
