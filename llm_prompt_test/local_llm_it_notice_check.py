@@ -37,16 +37,16 @@ def llm_it_notice_check(text,llm_name):
     prompt = PromptTemplate.from_template(
         """
         Please classify whether this notice is a project that software companies can participate in. 
-        If it is not related to software, they cannot participate. 
+        Even if it is related to IT, if it includes tasks such as video content development, event hosting, event management, or educational program development, they cannot participate. 
         If they can participate, respond with **only** "True". If they cannot participate, respond with **only** "False".
         Do not include any additional explanation.
-
+        
         ### Provided Notice Content:
         {context}
         
         ### Output Format (JSON):
         ```json
-        {{"it_notice": "Output True if it is related to IT, otherwise output False."}}
+        {{"it_notice": "Output True if it is related to IT and does not involve video content development, event hosting, event management, or educational program development. Otherwise, output False."}}
         ```      
         """
     )
