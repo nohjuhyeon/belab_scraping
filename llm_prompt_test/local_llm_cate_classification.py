@@ -8,7 +8,7 @@ from typing import List
 from langchain_core.prompts import PromptTemplate,ChatPromptTemplate
 from langchain.output_parsers.enum import EnumOutputParser
 from langchain_core.runnables import RunnableConfig
-
+import time
 class it_tech(Enum):
     AI = "인공지능(학습, 추론, 문제 해결 수행 기술)과 관련된 기술"
     database = "데이터베이스(데이터 저장, 관리, 검색 시스템)와 관련된 기술"
@@ -117,8 +117,6 @@ def llm_category_classification(text,llm_name) -> List[str]:
         format="json",  # 입출력 형식을 JSON으로 설정합니다.
         temperature=0
     )
-
-    parser = EnumOutputParser(enum=it_tech)
     try:
         # response = llm.invoke(prompt.format(context=text))
         # prompt = ChatPromptTemplate.from_template(prompt_template)
@@ -126,6 +124,7 @@ def llm_category_classification(text,llm_name) -> List[str]:
 
         llm_tag = RunnableConfig(tags=["classification", llm_name])
         # 체인 실행
+        start_time = time.time()  # 시작 시간 기록
         response = llm.invoke(prompt.format(context=text), config=llm_tag)
 
         parsed_output = parser.parse(response.content)
@@ -139,7 +138,10 @@ def llm_category_classification(text,llm_name) -> List[str]:
             if i['참조_텍스트'] != '' and i['참조_텍스트'] is not None:
                 category_dict.append(i)
         category_list = [category["name"] for category in category_dict]
-        return category_dict,category_list
+        end_time = time.time()  # 종료 시간 기록
+        execution_time = end_time - start_time
+
+        return category_dict,category_list,execution_time,response.usage_metadata['total_tokens']
             
     except Exception as e:
         print(f"Error processing response: {e}")

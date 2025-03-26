@@ -5,7 +5,7 @@ from langchain.schema import Document  # Document 객체를 사용하기 위해 
 from function_list.langsmith_log import langsmith
 from langchain_core.runnables import RunnableConfig
 from dotenv import load_dotenv
-
+import time
 
 def create_langchain_documents(docs):
     # LangChain Document 객체 리스트 생성
@@ -57,9 +57,16 @@ def llm_summary(text):
     parser = JsonOutputParser()
 
     llm_tag = RunnableConfig(tags=["summarization", "gpt-4o-mini"])
+
+    start_time = time.time()  # 시작 시간 기록
+
     # 체인 실행
     response = llm.invoke(prompt.format(context=text), config=llm_tag)
 
     parsed_output = parser.parse(response.content)
     summary = parsed_output["summary"]
-    return summary
+    
+    end_time = time.time()  # 종료 시간 기록
+    execution_time = end_time - start_time
+
+    return summary,execution_time,response.usage_metadata['total_tokens']

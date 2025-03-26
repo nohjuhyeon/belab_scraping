@@ -6,7 +6,7 @@ from function_list.langsmith_log import langsmith
 from dotenv import load_dotenv
 from langchain_core.runnables import RunnableConfig
 import json
-
+import time
 
 def create_langchain_documents(docs):
     """
@@ -68,14 +68,17 @@ def llm_summary(text,llm_name):
     try:
         # 프롬프트 생성 및 LLM 호출
         llm_tag = RunnableConfig(tags=["summarization", llm_name])
+        start_time = time.time()  # 시작 시간 기록
         # 체인 실행
         response = llm.invoke(prompt.format(context=text), config=llm_tag)
 
         parsed_output = parser.parse(response.content)
+        end_time = time.time()  # 종료 시간 기록
+        execution_time = end_time - start_time
 
         # 응답 파싱
         # parsed_output = parser.parse(response.content)
-        return parsed_output['summary']
+        return parsed_output['summary'],execution_time,response.usage_metadata['total_tokens']
 
     except Exception as e:
         print(f"[오류] LLM 호출 실패: {e}")

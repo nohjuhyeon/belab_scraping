@@ -8,13 +8,7 @@ from dotenv import load_dotenv
 from langchain_ollama import ChatOllama
 from langchain.output_parsers.enum import EnumOutputParser
 from enum import Enum
-
-class it_notice(Enum):
-    TRUE = "True"
-    FALSE = "False"
-    
-# EnumOutputParser 인스턴스 생성
-parser = EnumOutputParser(enum=it_notice)
+import time
 
 
 def create_langchain_documents(docs):
@@ -31,35 +25,42 @@ def create_langchain_documents(docs):
     return documents
 
 
-def llm_it_notice_check(text):
+def llm_it_notice_check(text,llm_name):
     # API KEY 정보로드
     load_dotenv()
 
     # 프로젝트 이름을 입력합니다.
-    langsmith("gpt_4o_mini")
+    langsmith(llm_name)
 
     # 문서에 포함되어 있는 정보를 검색하고 생성합니다.
     # 프롬프트를 생성합니다.
     prompt = PromptTemplate.from_template(
         """
-            이 공고가 소프트웨어 기업업이 참여할 수 있는 사업인지 분류해주세요. 
-            참여할 수 있으면 True, 없으면 False로 응답해주세요.
+        Please classify whether this notice is a project that software companies can participate in. 
+        If it is not related to software, they cannot participate. 
+        If they can participate, respond with **only** "True". If they cannot participate, respond with **only** "False".
+        Do not include any additional explanation.
 
-            ### 제공된 공고 내용:
-            {context}
-            
-            ### Instructions: 
-            {instructions}
-            """
-    ).partial(instructions=parser.get_format_instructions())
+        ### Provided Notice Content:
+        {context}
+        
+        ### Output Format (JSON):
+        ```json
+        {{"it_notice": "Output True if it is related to IT, otherwise output False."}}
+        ```      
+        """
+    )
 
+    parser = JsonOutputParser()
     llm = ChatOllama(
         model=llm_name,
         format="json",  # 입출력 형식을 JSON으로 설정합니다.
         temperature=0
     )
     # parser = StrOutputParser()
-    chain = prompt | llm | parser
-    response = chain.invoke({"context":text})    
-
-    return response.value
+    start_time = time.time()  # 시작 시간 기록
+    response = llm.invoke(prompt.format(context=text))
+    parsed_output = parser.parse(response.content)
+    end_time = time.time()  # 종료 시간 기록
+    execution_time = end_time - start_time
+    return parsed_output['it_notice'],execution_time,response.usage_metadata ['total_tokens']

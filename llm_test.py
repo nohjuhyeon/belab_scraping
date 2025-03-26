@@ -15,7 +15,7 @@ load_dotenv()
 import json
 
 # JSON 파일 경로
-file_path = "notice_test.json"
+file_path = "gpt_llm_output.json"
 
 # JSON 파일을 딕셔너리로 불러오기
 with open(file_path, "r", encoding="utf-8") as file:
@@ -25,7 +25,7 @@ with open(file_path, "r", encoding="utf-8") as file:
 data
 new_dict = []
 
-collection = mongo_setting("news_scraping", "llm_notice")
+collection = mongo_setting("llm_notice_test", "llm_notice")
 results = collection.find({}, {"_id": 0, "notice_id": 1})
 id_list = [i["notice_id"] for i in results]
 

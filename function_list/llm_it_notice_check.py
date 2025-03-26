@@ -7,6 +7,7 @@ from langchain_core.runnables import RunnableConfig
 from dotenv import load_dotenv
 from langchain.output_parsers.enum import EnumOutputParser
 from enum import Enum
+import time
 
 class it_notice(Enum):
     TRUE = "True"
@@ -55,7 +56,13 @@ def llm_it_notice_check(text):
     # ChatOpenAI (LLM) 생성 시 API 키 전달
     llm = ChatOpenAI(model_name="gpt-4o-mini", temperature=0)
     # parser = StrOutputParser()
-    chain = prompt | llm | parser
-    response = chain.invoke({"context":text})    
+    start_time = time.time()  # 시작 시간 기록
 
-    return response.value
+    response = llm.invoke(prompt.format(context=text))    
+
+    parsed_output = parser.parse(response.content)
+
+    end_time = time.time()  # 종료 시간 기록
+    execution_time = end_time - start_time
+
+    return parsed_output.value,execution_time,response.usage_metadata['total_tokens']
