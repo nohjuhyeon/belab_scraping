@@ -936,3 +936,12 @@ commit complete!
 2025-03-28 02:13:16.431269
 commit complete!
 뉴스 요약 업데이트 완료!
+2025-03-28 06:00:08.547579
+commit complete!
+----------------뉴스 요약 업데이트 시작----------------
+2025-03-28 06:00:09.542065
+naver news crawling finish
+crawling count :  76
+2025-03-28 06:03:12.317526
+commit complete!
+뉴스 요약 업데이트 완료!
