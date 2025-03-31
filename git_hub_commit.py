@@ -2,7 +2,7 @@ import os
 import subprocess
 from datetime import datetime
 
-def git_commit():
+def git_commit_and_push():
     # 환경 변수에서 폴더 경로 가져오기
     folder_path = os.environ.get("folder_path")
     if not folder_path:
@@ -19,6 +19,10 @@ def git_commit():
     print(f"현재 시간: {datetime.now()}")
 
     try:
+        # Git Pull
+        print("Pulling latest changes from the remote repository...")
+        subprocess.run(["git", "pull"], check=True)
+
         # Git Add
         print("Staging changes...")
         subprocess.run(["git", "add", "."], check=True)
@@ -31,7 +35,7 @@ def git_commit():
         print("Pushing changes to the remote repository...")
         subprocess.run(["git", "push"], check=True)
 
-        print("Commit and push complete!")
+        print("Pull, commit, and push complete!")
     except subprocess.CalledProcessError as e:
         # Git 명령 실행 중 오류 발생 시 메시지 출력
         print(f"An error occurred: {e}")
@@ -39,4 +43,4 @@ def git_commit():
 
 # 스크립트를 직접 실행할 경우 git_commit_and_push() 함수 호출
 if __name__ == "__main__":
-    git_commit()
+    git_commit_and_push()
