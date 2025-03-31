@@ -201,11 +201,26 @@ def category_sheet_update(spreadsheet_url, notice_df, notice_category):
     notice_list = notice_df.loc[:, ['공고 유형', '공고번호', '공고명', '공고가격(단위: 원)', '공고 기관', '수요 기관', '게시일', '마감일', '링크', '비고']]
     google_sheet_add('전체 공고', notice_list, spreadsheet_url)
 
-    # 특정 날짜 범위 공고 필터링 및 추가
+    # 새로 올라온 공고 필터링 및 추가
     today = datetime.now()
-    start_date = today - timedelta(days=1)
+    # 오늘의 요일 계산 (월=0, 화=1, ..., 일=6)
+    today_day_of_week = today.weekday()
+
+    day_of_week = today.weekday()  # 요일 계산
+    if today_day_of_week in [5, 6, 0]:  # 토, 일, 월
+        if day_of_week == 0:  # 월요일인 경우
+            start_date =  today - timedelta(days=3)  # 전주의 금요일로 이동
+        elif day_of_week >= 5:  # 토(5), 일(6)
+            start_date =  today - timedelta(days=(day_of_week - 4))  # 금요일로 이동
+        else:
+            start_date = today
+    else:  # 화, 수, 목, 금
+        start_date = today - timedelta(days=1)  # 전날부터
+
     start_date = start_date.replace(hour=0, minute=0, second=0, microsecond=0)
-    end_date = today.replace(hour=0, minute=0, second=0, microsecond=0)
+    end_date = today + timedelta(days=1)
+    end_date = end_date.replace(hour=0, minute=0, second=0, microsecond=0)
+
     filtered_list = notice_df.loc[
         (notice_df['게시일_sort'] >= start_date) & (notice_df['게시일_sort'] <= end_date),
         ['공고 유형', '공고번호', '공고명', '공고가격(단위: 원)', '공고 기관', '수요 기관', '게시일', '마감일', '링크', '비고']
