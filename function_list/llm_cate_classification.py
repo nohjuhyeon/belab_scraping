@@ -1,44 +1,29 @@
-from langchain.schema import Document
-from function_list.langsmith_log import langsmith
-from dotenv import load_dotenv
-from langchain_openai import ChatOpenAI
-from langchain_core.output_parsers import JsonOutputParser
-from enum import Enum
-from typing import List
-from langchain_core.prompts import PromptTemplate,ChatPromptTemplate
-from langchain.output_parsers.enum import EnumOutputParser
-from langchain_core.runnables import RunnableConfig
-import time
-class it_tech(Enum):
-    AI = "인공지능(학습, 추론, 문제 해결 수행 기술)과 관련된 기술"
-    database = "데이터베이스(데이터 저장, 관리, 검색 시스템)와 관련된 기술"
-    cloud = "클라우드 컴퓨팅(인터넷 기반 컴퓨팅 자원 관리)과 관련된 기술"
-    software_develop = "소프트웨어 개발(소프트웨어 설계, 구현, 테스트)와 관련된 기술"
-    network_security = "네트워크/보안(통신 네트워크, 데이터 보호 기술)와 관련된 기술"
-    data_analysis = "데이터 분석/과학(데이터 수집, 처리, 분석 기술)와 관련된 기술"
-    IoT = "IoT(인터넷 연결 디바이스, 센서 기술)와 관련된 기술"
-    blockchain = "블록체인(분산 원장 기술)와 관련된 기술"
-    virtualization = "가상화/컨테이너(하드웨어 가상화, 컨테이너 기술)와 관련된 기술"
-    sw_test = "SW 테스트/품질(소프트웨어 테스트, 품질 관리)와 관련된 기술"
-    vr_ar = "AR/VR/메타버스(증강현실, 가상현실 기술)와 관련된 기술"
-    it_management = "IT 운영/관리(시스템 운영, 모니터링, 관리)와 관련된 기술"
-    others = "기타(양자 컴퓨팅, 5G 등 신기술)와 관련된 기술"
-
-def create_langchain_documents(docs):
-    documents = []
-    for text in docs:
-        doc = Document(
-            page_content=text,
-            metadata={}
-        )
-        documents.append(doc)
-    return documents
+from dotenv import load_dotenv  
+from langchain_openai import ChatOpenAI  
+from langchain_core.output_parsers import JsonOutputParser  
+from typing import List  
+from langchain_core.prompts import PromptTemplate  
+import time  
 
 def llm_category_classification(text) -> List[str]:
+    """
+    주어진 텍스트에서 IT 관련 기술을 분류하는 함수.
+
+    Args:
+        text (str): 공고 요약문 텍스트
+
+    Returns:
+        tuple:
+            - category_dict(List[dict]): 추출된 IT 기술 정보
+            - category_list(List[str]): 기술 카테고리 리스트
+            - execution_time(float): 분석 실행 시간
+            - token_usage(dict): LLM 응답 메타데이터
+    """
+    # 환경 변수 로드 (예: API 키)
     load_dotenv()
 
-    # 문서에 포함되어 있는 정보를 검색하고 생성합니다.
-    # 프롬프트를 생성합니다.
+    # LLM에 전달할 프롬프트 생성
+    # IT 관련 기술 분류 조건과 출력 형식(JSON)을 명시
     prompt = PromptTemplate.from_template(
         """
         다음은 공고의 요약문입니다.  
@@ -112,33 +97,49 @@ def llm_category_classification(text) -> List[str]:
             """
     )
 
-
+    # LLM 초기화
     llm = ChatOpenAI(model_name="gpt-4o-mini", temperature=0)
+
+    # IT 관련 기술 카테고리 리스트 정의
+    it_tech_list = [
+        '인공지능', '데이터베이스', '클라우드 컴퓨팅', '소프트웨어 개발 및 관리',
+        '네트워크 및 보안', 'IoT', '블록체인', 'AR/VR 및 메타버스'
+    ]
+
     try:
-        # response = llm.invoke(prompt.format(context=text))
-        # prompt = ChatPromptTemplate.from_template(prompt_template)
+        # 출력 파서를 JSON 형식으로 설정
         parser = JsonOutputParser()
 
-        # 체인 실행
-        start_time = time.time()  # 시작 시간 기록
+        # LLM 실행 전 시간 기록
+        start_time = time.time()
+
+        # LLM에 프롬프트 전달 및 응답 수신
         response = llm.invoke(prompt.format(context=text))
 
+        # 응답을 JSON 형식으로 파싱
         parsed_output = parser.parse(response.content)
-        # selector_list = ['AI','cloud','data_analysis','software_develop','database','network_security','IoT','blockchain','virtualization','sw_test','vr_ar','it_management','others']
-        # categories =[]
-        # for selector_element in selector_list:
-        #     if selector_element in response.content:
-        #         categories.append(selector_element)
-        category_dict = []
-        for i in parsed_output['IT 관련 기술']:
-            if i['참조_텍스트'] != '' and i['참조_텍스트'] is not None:
-                category_dict.append(i)
-        category_list = [category["name"] for category in category_dict]
-        end_time = time.time()  # 종료 시간 기록
-        execution_time = end_time - start_time
 
-        return category_dict,category_list,execution_time,response.usage_metadata['total_tokens']
-            
+        # 결과 저장을 위한 변수 초기화
+        category_dict = []  # IT 관련 기술과 참조 텍스트를 저장
+        category_list = []  # 중복되지 않은 기술 이름 리스트
+
+        # 파싱된 출력에서 IT 관련 기술 필터링
+        for i in parsed_output['IT 관련 기술']:
+            # 참조 텍스트가 존재하고, 기술 이름이 사전 정의된 리스트에 포함된 경우만 처리
+            if i['참조_텍스트'] != '' and i['참조_텍스트'] is not None and i['name'] in it_tech_list:
+                category_dict.append(i)  # 기술 정보 추가
+                if i['name'] not in category_list:  # 중복 방지
+                    category_list.append(i['name'])
+
+        # LLM 실행 후 시간 기록
+        end_time = time.time()
+        execution_time = end_time - start_time  # 실행 시간 계산
+        token_usage = response.usage_metadata
+
+        # 결과 반환 (IT 기술 딕셔너리, 기술 리스트, 실행 시간, 응답 메타데이터)
+        return category_dict, category_list, execution_time, token_usage
+
     except Exception as e:
+        # 오류 발생 시 메시지 출력 및 기본값 반환
         print(f"Error processing response: {e}")
-        return [], []
+        return [], [], None, None
