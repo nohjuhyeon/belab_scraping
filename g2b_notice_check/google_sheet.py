@@ -80,6 +80,8 @@ def total_sheet_update(existing_df, notice_list):
     df = pd.concat([existing_df, new_df], ignore_index=True)
     df['게시일_sort'] = df['게시일'].apply(notice_date_modify)
     df = df.sort_values(by='게시일_sort', ascending=False).reset_index(drop=True)
+    df['게시일'] = df['게시일'].apply(lambda x: x.split(' ')[0])
+    df['마감일'] = df['마감일'].apply(lambda x: x.split(' ')[0])
 
     # 공고 가격 처리
     df['공고가격(단위: 원)'] = (
@@ -131,7 +133,6 @@ def total_sheet_update(existing_df, notice_list):
         (df['게시일_sort'] >= start_date)&(df['게시일_sort'] <= end_date),
         ['공고 유형', '공고번호', '공고명', '공고가격(단위: 원)', '공고 기관', '수요 기관', '게시일', '마감일', '링크', '비고']
     ]
-
     print('전체 공고 | 시작 날짜 : {} / 종료 날짜 : {}'.format(start_date,end_date))
     google_sheet_add('새로 올라온 공고',notice_list,spreadsheet_url)
     print("전체 공고 | Data updated and sorted successfully.")
@@ -186,6 +187,8 @@ def category_sheet_update(spreadsheet_url, notice_df, notice_category):
     notice_df = notice_df.copy()
     notice_df['게시일_sort'] = notice_df['게시일'].apply(notice_date_modify)
     notice_df = notice_df.sort_values(by='게시일_sort', ascending=False).reset_index(drop=True)
+    notice_df['게시일'] = notice_df['게시일'].apply(lambda x: x.split(' ')[0])
+    notice_df['마감일'] = notice_df['마감일'].apply(lambda x: x.split(' ')[0])
 
     # 공고 가격 처리
     notice_df['공고가격(단위: 원)'] = (
