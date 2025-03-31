@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # .env 파일 로드
+# .env 파일이 있다면 여기에 추가로 로드하는 코드를 작성할 수 있습니다.
 
 # 사용법 출력
 if [ $# -eq 0 ]; then
@@ -11,9 +12,14 @@ fi
 # 커밋 메시지
 COMMIT_MESSAGE="$1"
 
-cd ${folder_path} || exit
+# 로그 파일 경로 설정
+FILE_PATH=${folder_path}
+LOG_FILE="$LOG_DIR/log_list/git_commit.txt"
 
-# .env 파일에서 GitHub 사용자 정보 가져오기
+# 로그 디렉토리가 없으면 생성
+mkdir -p "$LOG_DIR"
+
+# GitHub 사용자 정보 (환경 변수에서 가져오기)
 GITHUB_USERNAME=${GITHUB_USERNAME}
 GITHUB_EMAIL=${GITHUB_EMAIL}
 GITHUB_TOKEN=${GITHUB_TOKEN}
@@ -22,19 +28,28 @@ GITHUB_TOKEN=${GITHUB_TOKEN}
 git config --global user.email "njh2720@gmail.com"
 git config --global user.name "nohjuhyeon"
 
-echo "변경 사항을 스테이지에 추가합니다..."
-git add .
+# 작업 디렉토리로 이동
+cd "${folder_path}" || { echo "폴더 경로를 찾을 수 없습니다: ${folder_path}" | tee -a "$LOG_FILE"; exit 1; }
 
-echo "커밋을 생성합니다..."
-git commit -m "$COMMIT_MESSAGE"
+# 로그 기록 시작
+echo "=== Git 작업 시작: $(date) ===" | tee -a "$LOG_FILE"
 
-# 토큰을 사용하여 push - 수정된 URL 사용 및 브랜치 명시
+# 변경 사항 스테이징
+echo "변경 사항을 스테이지에 추가합니다..." | tee -a "$LOG_FILE"
+git add . 2>&1 | tee -a "$LOG_FILE"
 
-git pull 
+# 커밋 생성
+echo "커밋을 생성합니다..." | tee -a "$LOG_FILE"
+git commit -m "$COMMIT_MESSAGE" 2>&1 | tee -a "$LOG_FILE"
 
-git push https://"$GITHUB_USERNAME":"$GITHUB_TOKEN"@github.com/nohjuhyeon/belab_scraping.git
+# 원격 저장소에서 최신 변경 사항 가져오기
+echo "원격 저장소에서 변경 사항을 가져옵니다..." | tee -a "$LOG_FILE"
+git pull 2>&1 | tee -a "$LOG_FILE"
 
+# 변경 사항 푸쉬
+echo "변경 사항을 원격 저장소에 푸쉬합니다..." | tee -a "$LOG_FILE"
+git push https://"$GITHUB_USERNAME":"$GITHUB_TOKEN"@github.com/nohjuhyeon/belab_scraping.git 2>&1 | tee -a "$LOG_FILE"
 
-# 보안을 위해 토큰이 포함된 URL 제거 (선택 사항 - 방법 1)
-
-echo "작업이 완료되었습니다!"
+# 로그에 완료 메시지 추가
+echo "작업이 완료되었습니다!" | tee -a "$LOG_FILE"
+echo "=== Git 작업 종료: $(date) ===" | tee -a "$LOG_FILE"
