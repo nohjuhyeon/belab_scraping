@@ -45,7 +45,7 @@ git pull 2>&1 | tee -a "$LOG_FILE"
 
 # 변경 사항 푸쉬
 echo "변경 사항을 원격 저장소에 푸쉬합니다..." | tee -a "$LOG_FILE"
-git push https://"$GITHUB_USERNAME":"$GITHUB_TOKEN"@github.com/nohjuhyeon/belab_scraping.git 2>&1 | tee -a "$LOG_FILE"
+git push https://"$GITHUB_USERNAME":"$GH_TOKEN"@github.com/nohjuhyeon/belab_scraping.git 2>&1 | tee -a "$LOG_FILE"
 
 # 로그에 완료 메시지 추가
 echo "작업이 완료되었습니다!" | tee -a "$LOG_FILE"
