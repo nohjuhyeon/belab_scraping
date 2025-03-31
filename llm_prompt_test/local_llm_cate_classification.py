@@ -36,7 +36,6 @@ def create_langchain_documents(docs):
 
 def llm_category_classification(text,llm_name) -> List[str]:
     load_dotenv()
-    langsmith(llm_name)
 
     prompt = PromptTemplate.from_template(
         """
@@ -44,23 +43,10 @@ def llm_category_classification(text,llm_name) -> List[str]:
         이 요약문에서 요구하는 **IT 관련 기술**(예시: 인공지능, 클라우드, 데이터베이스)을 분류해주세요.  
         단, 아래 조건을 반드시 준수하여 IT 관련 기술을 정확히 분류하세요:  
 
-
-        ## **분류 조건**  
-
-        1. **IT 관련 기술로 인정되는 경우**  
-        - 기술이 명확히 언급되거나, 기술의 구현 또는 활용이 구체적으로 요구되는 경우.  
-        - 예를 들어, "데이터베이스 구축 및 유지보수", "클라우드 기반 시스템 설계"와 같이 특정 IT 기술의 적용이 필요한 과업.  
-
-        2. **IT 관련 기술로 인정되지 않는 경우**  
-        - 단순히 **데이터 입력**, **데이터 점검**, **기초 통계 분석**과 같은 비기술적 작업.  
-        - **IT 교육 커리큘럼 개발**이나 **IT 관련 교육 제공**, **IT 관련 전문 인력 개발**과 같은 간접적인 활동.  
-        - **시설 점검**, **공사 관리**, **단순 모니터링** 등 IT 기술의 활용이 아닌 일반 업무.  
-
-        3. **기술이 포함될 수 있는 경우**  
-        - 기술의 구체적인 활용이 언급되었거나, 기술적 작업이 암시되는 경우만 포함.  
-        - 예: "클라우드 환경에서 데이터 관리 시스템 구축"은 포함되지만, "데이터 관리"만 언급된 경우 제외.  
-
-
+        ## **주의사항**  
+        - IT 관련 기술이 언급되지 않은 경우, 빈 리스트로 남겨주세요.  
+        - 공사, 점검, 데이터 입력, 교육 커리큘럼 개발과 같은 활동은 IT 관련 기술로 포함하지 마세요.  
+        - 기술의 이름이 명확히 언급되지 않았더라도, 기술적 활용이 구체적으로 암시된 경우에만 포함하세요.  
 
         ## **IT 관련 기술**:
             1. **인공지능**  
@@ -91,22 +77,20 @@ def llm_category_classification(text,llm_name) -> List[str]:
                 미래 기술(양자 컴퓨팅, 5G 등)과 특수 목적의 새로운 IT 기술.
 
         
-        ### 제공된 공고 요약문 내용:
+        ## 제공된 공고 요약문 내용:
         {context}
 
-        ### 출력 형식(JSON):
+        ## 출력 형식(JSON):
 
         ```
-        “IT 관련 기술": [
+        {{“IT 관련 기술": [
             
-            “name": “[한국어로 된 카테고리 이름]”,
-            “참조_텍스트": “[발견된 관련 텍스트]
+            {{“name": “[한국어로 된 카테고리 이름]”,
+            “참조_텍스트": “[발견된 관련 텍스트]"}}
+            ]
+        }}
         ```
 
-        ### **주의사항**  
-        - IT 관련 기술이 언급되지 않은 경우, 빈 리스트로 남겨주세요.  
-        - 공사, 점검, 데이터 입력, 교육 커리큘럼 개발과 같은 활동은 IT 관련 기술로 포함하지 마세요.  
-        - 기술의 이름이 명확히 언급되지 않았더라도, 기술적 활용이 구체적으로 암시된 경우에만 포함하세요.  
 
             """
     )
@@ -140,9 +124,13 @@ def llm_category_classification(text,llm_name) -> List[str]:
         category_list = [category["name"] for category in category_dict]
         end_time = time.time()  # 종료 시간 기록
         execution_time = end_time - start_time
+        try:
+            total_tokens = response.usage_metadata['total_tokens']
+        except:
+            total_tokens = None
 
-        return category_dict,category_list,execution_time,response.usage_metadata['total_tokens']
+        return category_dict,category_list,execution_time,total_tokens
             
     except Exception as e:
         print(f"Error processing response: {e}")
-        return [], []
+        return [], [],None,None

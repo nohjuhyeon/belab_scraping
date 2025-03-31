@@ -34,8 +34,6 @@ def llm_summary(text,llm_name):
     # 환경 변수 로드
     load_dotenv()
 
-    langsmith(llm_name)
-
     # 프롬프트 템플릿 정의
     prompt = PromptTemplate.from_template(
  """이 공고의 **사업(과업) 수행 내용**을 요약해주세요.
@@ -75,14 +73,18 @@ def llm_summary(text,llm_name):
         parsed_output = parser.parse(response.content)
         end_time = time.time()  # 종료 시간 기록
         execution_time = end_time - start_time
+        try:
+            total_tokens = response.usage_metadata['total_tokens']
+        except:
+            total_tokens = None
 
         # 응답 파싱
         # parsed_output = parser.parse(response.content)
-        return parsed_output['summary'],execution_time,response.usage_metadata['total_tokens']
+        return parsed_output['summary'],execution_time,total_tokens
 
     except Exception as e:
         print(f"[오류] LLM 호출 실패: {e}")
-        return {"error": "LLM 호출 중 오류가 발생했습니다."}
+        return text, execution_time, total_tokens
 
 
 # # 사용 예시

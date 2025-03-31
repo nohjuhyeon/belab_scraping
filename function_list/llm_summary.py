@@ -69,4 +69,4 @@ def llm_summary(text):
     end_time = time.time()  # 종료 시간 기록
     execution_time = end_time - start_time
 
-    return summary,execution_time,response.usage_metadata['total_tokens']
+    return summary,execution_time,response.usage_metadata

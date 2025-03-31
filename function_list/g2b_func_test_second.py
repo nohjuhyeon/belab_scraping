@@ -55,9 +55,13 @@ def notice_file_check(download_folder_path):
         context='\n'.join(text_list)
 
         notice_type = notice_keyword_search(context)
-        summary = llm_summary(context)
-        category_dict,category_list = llm_category_classification(summary)
-    return notice_type,category_dict,category_list,summary,context
+        # it_notice_check,check_time,check_token = llm_it_notice_check(context)
+        # if it_notice_check.lower() == 'true':
+        #     summary,summary_time,summary_token = llm_summary(context)
+        #     category_dict, category_list,category_time,category_token = llm_category_classification(summary)
+    return notice_type
+    # return notice_type,category_dict,category_list,summary
+
 
 
 def detect_file_type(file_path):

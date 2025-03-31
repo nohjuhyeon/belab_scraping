@@ -5,7 +5,9 @@ from function_list.hwp_loader import HWPLoader
 from function_list.hwpx_loader import get_hwpx_text
 import zipfile
 from langchain_community.document_loaders import PyPDFLoader
-from function_list.llm_cate_classification_summary import llm_category_classification
+from function_list.llm_cate_classification import llm_category_classification
+from function_list.llm_it_notice_check import llm_it_notice_check
+from function_list.llm_summary import llm_summary
 
 def folder_clear(download_folder_path):
     for filename in os.listdir(download_folder_path):
@@ -49,8 +51,12 @@ def notice_file_check(download_folder_path):
         file_path = os.path.join(download_folder_path, keyword_file)        
         text = detect_file_type(file_path)
         notice_type = notice_keyword_search(text)
-        category_dict,category_list,summary = llm_category_classification(text)
-    return notice_type,category_dict,category_list,summary
+        # it_notice_check,check_time,check_token = llm_it_notice_check(text)
+        # if it_notice_check.lower() == 'true':
+        #     summary,summary_time,summary_token = llm_summary(text)
+        #     category_dict, category_list,category_time,category_token = llm_category_classification(summary)
+    return notice_type
+    # return notice_type,category_dict,category_list,summary
 
 
 def detect_file_type(file_path):

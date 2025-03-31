@@ -11,7 +11,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 from function_list.basic_options import selenium_setting,download_path_setting,init_browser
-from function_list.g2b_func import notice_file_check,notice_title_check,folder_clear
+from function_list.g2b_func_test_second import notice_file_check,notice_title_check,folder_clear
 from datetime import datetime, timedelta
 
 

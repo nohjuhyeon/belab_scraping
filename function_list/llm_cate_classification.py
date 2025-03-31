@@ -137,7 +137,7 @@ def llm_category_classification(text) -> List[str]:
         end_time = time.time()  # 종료 시간 기록
         execution_time = end_time - start_time
 
-        return category_dict,category_list,execution_time,response.usage_metadata['total_tokens']
+        return category_dict,category_list,execution_time,response.usage_metadata
             
     except Exception as e:
         print(f"Error processing response: {e}")

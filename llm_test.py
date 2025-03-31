@@ -26,7 +26,7 @@ with open(file_path, "r", encoding="utf-8") as file:
 data
 new_dict = []
 
-collection = mongo_setting("llm_notice_test", "gpt-4o-mini")
+collection = mongo_setting("llm_notice_test", "gpt-4o-mini-test")
 results = collection.find({}, {"_id": 0, "notice_id": 1})
 id_list = [i["notice_id"] for i in results]
 

@@ -29,9 +29,6 @@ def llm_it_notice_check(text,llm_name):
     # API KEY 정보로드
     load_dotenv()
 
-    # 프로젝트 이름을 입력합니다.
-    langsmith(llm_name)
-
     # 문서에 포함되어 있는 정보를 검색하고 생성합니다.
     # 프롬프트를 생성합니다.
     prompt = PromptTemplate.from_template(
@@ -40,13 +37,13 @@ def llm_it_notice_check(text,llm_name):
         Even if it is related to IT, if it includes tasks such as video content development, event hosting, event management, or educational program development, they cannot participate. 
         If they can participate, respond with **only** "True". If they cannot participate, respond with **only** "False".
         Do not include any additional explanation.
-        
+
         ### Provided Notice Content:
         {context}
         
         ### Output Format (JSON):
         ```json
-        {{"it_notice": "Output True if it is related to IT and does not involve video content development, event hosting, event management, or educational program development. Otherwise, output False."}}
+        {{"it_notice": "Output True if it is related to IT, otherwise output False."}}
         ```      
         """
     )
@@ -63,4 +60,8 @@ def llm_it_notice_check(text,llm_name):
     parsed_output = parser.parse(response.content)
     end_time = time.time()  # 종료 시간 기록
     execution_time = end_time - start_time
-    return parsed_output['it_notice'],execution_time,response.usage_metadata ['total_tokens']
+    try:
+        total_tokens = response.usage_metadata['total_tokens']
+    except:
+        total_tokens = None
+    return parsed_output['it_notice'],execution_time,total_tokens
