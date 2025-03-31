@@ -123,7 +123,7 @@ def total_sheet_update(existing_df, notice_list):
         start_date = today - timedelta(days=1)  # 전날부터
 
     start_date = start_date.replace(hour=0, minute=0, second=0, microsecond=0)
-    end_date = today
+    end_date = today + timedelta(days=1)
     end_date = end_date.replace(hour=0, minute=0, second=0, microsecond=0)
 
     # 조건에 따라 데이터 필터링
