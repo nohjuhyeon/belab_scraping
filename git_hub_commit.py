@@ -11,10 +11,7 @@ def git_commit_and_push():
 
     # Git 작업을 수행하는 디렉토리로 이동
     os.chdir(folder_path)
-
-    # Git 커밋 메시지
-    commit_message = "Auto Commit."
-
+    
     # 현재 시간 출력
     print(f"현재 시간: {datetime.now()}")
 
