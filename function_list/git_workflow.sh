@@ -14,10 +14,7 @@ COMMIT_MESSAGE="$1"
 
 # 로그 파일 경로 설정
 FILE_PATH=${folder_path}
-LOG_FILE="$LOG_DIR/log_list/git_commit.txt"
-
-# 로그 디렉토리가 없으면 생성
-mkdir -p "$LOG_DIR"
+LOG_FILE="$FILE_PATH/log_list/git_commit.txt"
 
 # GitHub 사용자 정보 (환경 변수에서 가져오기)
 GITHUB_USERNAME=${GITHUB_USERNAME}
