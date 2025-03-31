@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/app/belab_scraping/git_hub_commit.py", line 26, in <module>
+    git_commit()
+  File "/app/belab_scraping/git_hub_commit.py", line 7, in git_commit
+    script_path = folder_path+"function_list/git_workflow.sh"
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
