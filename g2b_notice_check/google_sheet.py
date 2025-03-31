@@ -115,7 +115,7 @@ def total_sheet_update(existing_df, notice_list):
     if today_day_of_week in [5, 6, 0]:  # 토, 일, 월
         if day_of_week == 0:  # 월요일인 경우
             start_date =  today - timedelta(days=3)  # 전주의 금요일로 이동
-        if day_of_week >= 5:  # 토(5), 일(6)
+        elif day_of_week >= 5:  # 토(5), 일(6)
             start_date =  today - timedelta(days=(day_of_week - 4))  # 금요일로 이동
         else:
             start_date = today
