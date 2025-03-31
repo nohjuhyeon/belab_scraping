@@ -26,7 +26,7 @@ def git_commit_and_push():
 
         # Git Commit
         print("Committing changes...")
-        subprocess.run(["git", "commit", "-m", "Auto Commit."], check=True)
+        subprocess.run(["git", "commit", "-m", "Auto_Commit."], check=True)
 
         # Git Push
         print("Pushing changes to the remote repository...")
