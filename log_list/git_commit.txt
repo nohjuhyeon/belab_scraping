@@ -23,3 +23,5 @@ remote: Permission to nohjuhyeon/belab_scraping.git denied to nohjuhyeon.
 fatal: unable to access 'https://github.com/nohjuhyeon/belab_scraping.git/': The requested URL returned error: 403
 작업이 완료되었습니다!
 === Git 작업 종료: Mon Mar 31 17:34:03 KST 2025 ===
+=== Git 작업 시작: Mon Mar 31 17:35:41 KST 2025 ===
+변경 사항을 스테이지에 추가합니다...
