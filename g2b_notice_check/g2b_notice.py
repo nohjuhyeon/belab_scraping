@@ -53,8 +53,10 @@ def notice_search(notice_list, notice_ids, folder_path):
     collection = mongo_setting('news_scraping', 'notice_list')
     try:
         # 오늘 날짜와 2일 전 날짜를 가져와서 원하는 형식으로 변환
-        search_end_date = datetime.now().strftime('%Y%m%d') + '1159'
-        search_start_date = (datetime.now() - timedelta(days=2)).strftime('%Y%m%d') + '0000'
+        # search_end_date = datetime.now().strftime('%Y%m%d') + '1159'
+        # search_start_date = (datetime.now() - timedelta(days=2)).strftime('%Y%m%d') + '0000'
+        search_start_date = '202503010000'
+        search_end_date = '202503312359'
 
         # API 요청 URL 생성
         url = f'http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoServcPPSSrch?serviceKey=Qa6CXT4r6qEr%2BkQt%2FJx6wJr5MPx45hKNJwNTScoYryT2uGz7GozIqpjBw%2FRMk1uE8l92NU7h89m20sa%2FXHKuaQ%3D%3D&pageNo=1&numOfRows=500&inqryDiv=1&inqryBgnDt={search_start_date}&inqryEndDt={search_end_date}&type=json'
