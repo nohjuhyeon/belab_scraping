@@ -91,7 +91,7 @@ def notice_file_check(download_folder_path):
             summary, summary_time, summary_token = llm_summary(context)
             # 카테고리 분류
             category_dict, category_list, category_time, category_token = llm_category_classification(summary)
-    return notice_type, category_dict, category_list, summary,text
+    return it_notice_check,notice_type, category_dict, category_list, summary,text
     # return notice_type
 
 # 파일 유형 감지 및 텍스트 추출 함수
