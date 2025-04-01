@@ -83,15 +83,15 @@ def notice_file_check(download_folder_path):
         # 공고 키워드 검색
         notice_type = notice_keyword_search(context)
 
-    #     # IT 공고 여부 확인
-    #     it_notice_check, check_time, check_token = llm_it_notice_check(context)
-    #     if it_notice_check.lower() == 'true':
-    #         # 요약 생성
-    #         summary, summary_time, summary_token = llm_summary(context)
-    #         # 카테고리 분류
-    #         category_dict, category_list, category_time, category_token = llm_category_classification(summary)
-    # return notice_type, category_dict, category_list, summary
-    return notice_type
+        # IT 공고 여부 확인
+        it_notice_check, check_time, check_token = llm_it_notice_check(context)
+        if it_notice_check.lower() == 'true':
+            # 요약 생성
+            summary, summary_time, summary_token = llm_summary(context)
+            # 카테고리 분류
+            category_dict, category_list, category_time, category_token = llm_category_classification(summary)
+    return notice_type, category_dict, category_list, summary
+    # return notice_type
 
 # 파일 유형 감지 및 텍스트 추출 함수
 def detect_file_type(file_path):
