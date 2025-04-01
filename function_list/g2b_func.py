@@ -83,7 +83,7 @@ def notice_file_check(download_folder_path):
         context = '\n'.join(text_list)
 
         # 공고 키워드 검색
-        notice_type = notice_keyword_search(context)
+        # notice_type = notice_keyword_search(context)
 
         # IT 공고 여부 확인
         it_notice_check, check_time, check_token = llm_it_notice_check(context)
