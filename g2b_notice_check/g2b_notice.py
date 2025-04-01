@@ -214,7 +214,7 @@ def notice_collection(existing_df):
         notice_list(List[dict]): 업데이트된 공고 리스트
     """
     notice_list = []
-    notice_ids = existing_df.loc[existing_df['공고 유형'] == '입찰 공고', '공고번호'].to_list()
+    # notice_ids = existing_df.loc[existing_df['공고 유형'] == '입찰 공고', '공고번호'].to_list()
     notice_ids = []
     folder_path = os.environ.get("folder_path")
     notice_list = notice_search(notice_list, notice_ids, folder_path)
