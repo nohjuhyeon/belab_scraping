@@ -88,10 +88,13 @@ def notice_search(notice_list, notice_ids, folder_path):
         # except Exception as e:
         #     print(f"JSON 저장 중 오류 발생: {e}")
 
-        input_file = "item_list.json"
-        with open(input_file, "r", encoding="utf-8") as file:
-            item_list = json.load(file)
-
+        item_list = []
+        file_name_list = ['item_list_first.json','item_list_second.json','item_list_third.json']
+        for file_name_element in file_name_list:
+            file_path = folder_path + file_name_element
+            with open(file_path, "r", encoding="utf-8") as file:
+                item_element = json.load(file)
+            item_list.append(item_element)
 
 
     except:
