@@ -94,7 +94,7 @@ def notice_search(notice_list, notice_ids, folder_path):
             file_path = folder_path + file_name_element
             with open(file_path, "r", encoding="utf-8") as file:
                 item_element = json.load(file)
-            item_list.append(item_element)
+            item_list.extend(item_element)
 
 
     except:
