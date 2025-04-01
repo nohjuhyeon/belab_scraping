@@ -210,19 +210,19 @@ def notice_title_check(notice_title):
     Returns:
         notice_type(List[str]): 공고 유형 리스트.
     """
-    ai_keywords = ['AI', '인공지능', 'LLM', '생성형', '초거대']
-    db_keywords = ['Database', '데이터 레이크', '빅데이터', '데이터 허브', '데이터베이스']
-    cloud_keywords = ['클라우드', 'cloud']
+    # ai_keywords = ['AI', '인공지능', 'LLM', '생성형', '초거대']
+    # db_keywords = ['Database', '데이터 레이크', '빅데이터', '데이터 허브', '데이터베이스']
+    # cloud_keywords = ['클라우드', 'cloud']
     isp_keywords = ['ISP', 'ISMP']
     notice_type = []
 
     # 키워드 검색 및 유형 추가
-    if search_keywords_in_text(notice_title, ai_keywords) and '인공지능' not in notice_type:
-        notice_type.append('인공지능')
-    if search_keywords_in_text(notice_title, db_keywords) and '데이터' not in notice_type:
-        notice_type.append('데이터')
-    if search_keywords_in_text(notice_title, cloud_keywords) and '클라우드' not in notice_type:
-        notice_type.append('클라우드')
+    # if search_keywords_in_text(notice_title, ai_keywords) and '인공지능' not in notice_type:
+    #     notice_type.append('인공지능')
+    # if search_keywords_in_text(notice_title, db_keywords) and '데이터' not in notice_type:
+    #     notice_type.append('데이터')
+    # if search_keywords_in_text(notice_title, cloud_keywords) and '클라우드' not in notice_type:
+    #     notice_type.append('클라우드')
     if search_keywords_in_text(notice_title, isp_keywords) and 'ISP/ISMP' not in notice_type:
         notice_type.append('ISP/ISMP')
 
