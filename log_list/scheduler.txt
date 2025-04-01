@@ -150,3 +150,19 @@
 2025-04-01 10:10:45,160 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7728e3c2f4c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/4b89f68d-eb5d-4bc4-a8cd-2fd36e936d3c/element
 2025-04-01 10:10:45,160 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7728e3c2f520>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/4b89f68d-eb5d-4bc4-a8cd-2fd36e936d3c/element
 2025-04-01 10:10:45,467 - INFO - notice check shut down.
+2025-04-01 10:12:43,858 - INFO - ----------------notice check started----------------
+2025-04-01 10:12:54,417 - INFO - ====== WebDriver manager ======
+2025-04-01 10:12:56,155 - INFO - Get LATEST geckodriver version for 128.7 firefox
+2025-04-01 10:12:56,155 - INFO - GH_TOKEN will be used to perform requests
+2025-04-01 10:12:56,757 - INFO - Get LATEST geckodriver version for 128.7 firefox
+2025-04-01 10:12:56,757 - INFO - GH_TOKEN will be used to perform requests
+2025-04-01 10:12:57,174 - INFO - There is no [linux64] geckodriver "v0.36.0" for browser firefox "128.7" in cache
+2025-04-01 10:12:57,175 - INFO - Get LATEST geckodriver version for 128.7 firefox
+2025-04-01 10:12:57,175 - INFO - GH_TOKEN will be used to perform requests
+2025-04-01 10:12:57,567 - INFO - Getting latest mozilla release info for v0.36.0
+2025-04-01 10:12:57,568 - INFO - GH_TOKEN will be used to perform requests
+2025-04-01 10:12:57,907 - INFO - About to download new driver from https://github.com/mozilla/geckodriver/releases/download/v0.36.0/geckodriver-v0.36.0-linux64.tar.gz
+2025-04-01 10:12:58,807 - INFO - Driver downloading response is 200
+2025-04-01 10:12:58,924 - INFO - Get LATEST geckodriver version for 128.7 firefox
+2025-04-01 10:12:58,924 - INFO - GH_TOKEN will be used to perform requests
+2025-04-01 10:12:59,548 - INFO - Driver has been saved in cache [/root/.wdm/drivers/geckodriver/linux64/v0.36.0]
