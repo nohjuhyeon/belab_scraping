@@ -164,7 +164,7 @@ def notice_search(notice_list, notice_ids, folder_path):
                     time.sleep(2)
 
                     # 파일 내용 확인 및 분류
-                    file_keywords, category_dict, category_list, summary = notice_file_check(download_folder_path)
+                    file_keywords, category_dict, category_list, summary,context = notice_file_check(download_folder_path)
                     file_keywords = notice_file_check(download_folder_path)
                     notice_type = notice_title_check(notice_title)
                     for j in file_keywords:
@@ -189,7 +189,8 @@ def notice_search(notice_list, notice_ids, folder_path):
                         'link': notice_link,
                         'summary': summary,
                         'type': notice_type,
-                        'notice_class': '입찰 공고'
+                        'notice_class': '입찰 공고',
+                        'notice_content':context
                     }
                     notice_list.append(dict_notice)
                     collection.insert_one(dict_notice)
