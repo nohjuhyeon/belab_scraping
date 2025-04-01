@@ -74,7 +74,7 @@ def notice_file_check(download_folder_path):
 
     # 키워드 파일 선택
     keyword_file = notice_file_select(download_folder_path)
-    if keyword_file != '':
+    if keyword_file.replace('/n','').replace(' ','') != '':
         file_path = os.path.join(download_folder_path, keyword_file)
         # 파일 유형 감지 및 텍스트 추출
         text = detect_file_type(file_path)
