@@ -122,3 +122,5 @@
 2025-04-01 10:05:37,562 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7a37f86fb790>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/a52a6d14-1b49-4a16-a442-562ec5312167/element
 2025-04-01 10:05:37,562 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7a37fc9bba30>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/a52a6d14-1b49-4a16-a442-562ec5312167/element
 2025-04-01 10:05:38,601 - INFO - notice check shut down.
+2025-04-01 10:05:52,102 - INFO - ----------------notice check started----------------
+2025-04-01 10:06:08,771 - INFO - notice check shut down.
