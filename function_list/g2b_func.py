@@ -41,6 +41,7 @@ def notice_file_check(download_folder_path):
             - category_dict(dict): 키워드 기반으로 분류된 공고 정보.
             - category_list(List[str]): 공고가 속하는 카테고리 리스트.
             - summary(str): 공고 내용을 요약한 텍스트.
+            - text(str): 공고 본문
     """
     
     notice_type = []  # 공고 유형 저장
@@ -76,8 +77,8 @@ def notice_file_check(download_folder_path):
         file_path = os.path.join(download_folder_path, keyword_file)
         # 파일 유형 감지 및 텍스트 추출
         text = detect_file_type(file_path)
-        text = text[:4000]  # 텍스트 길이 제한
-        text_list = text.split('\n')[:-1]
+        text_4000 = text[:4000]  # 텍스트 길이 제한
+        text_list = text_4000.split('\n')[:-1]
         context = '\n'.join(text_list)
 
         # 공고 키워드 검색
@@ -90,7 +91,7 @@ def notice_file_check(download_folder_path):
             summary, summary_time, summary_token = llm_summary(context)
             # 카테고리 분류
             category_dict, category_list, category_time, category_token = llm_category_classification(summary)
-    return notice_type, category_dict, category_list, summary,context
+    return notice_type, category_dict, category_list, summary,text
     # return notice_type
 
 # 파일 유형 감지 및 텍스트 추출 함수
