@@ -49,7 +49,8 @@ def notice_file_check(download_folder_path):
     category_list = []  # 분류된 카테고리 리스트
     summary = ''  # 요약 저장
     context = ''  # 텍스트 컨텍스트 저장
-
+    text=''
+    it_notice_check=''
     for file_name in os.listdir(download_folder_path):
         file_path = os.path.join(download_folder_path, file_name)
         # ZIP 파일 처리
