@@ -18674,3 +18674,29 @@
 2025-04-03 08:29:30,809 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7a6164323b20>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/20182fd1-395b-4880-97b4-84a3fda82660/element
 2025-04-03 08:29:30,809 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7a6164320370>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/20182fd1-395b-4880-97b4-84a3fda82660/element
 2025-04-03 08:29:30,813 - INFO - notice check shut down.
+2025-04-03 08:30:01,175 - INFO - ----------------notice check started----------------
+2025-04-03 08:30:10,013 - INFO - ====== WebDriver manager ======
+2025-04-03 08:30:10,115 - INFO - Get LATEST geckodriver version for 128.6 firefox
+2025-04-03 08:30:10,115 - INFO - GH_TOKEN will be used to perform requests
+2025-04-03 08:30:10,517 - INFO - Get LATEST geckodriver version for 128.6 firefox
+2025-04-03 08:30:10,517 - INFO - GH_TOKEN will be used to perform requests
+2025-04-03 08:30:10,831 - INFO - There is no [linux64] geckodriver "v0.36.0" for browser firefox "128.6" in cache
+2025-04-03 08:30:10,832 - INFO - Get LATEST geckodriver version for 128.6 firefox
+2025-04-03 08:30:10,832 - INFO - GH_TOKEN will be used to perform requests
+2025-04-03 08:30:11,152 - INFO - Getting latest mozilla release info for v0.36.0
+2025-04-03 08:30:11,152 - INFO - GH_TOKEN will be used to perform requests
+2025-04-03 08:30:11,490 - INFO - About to download new driver from https://github.com/mozilla/geckodriver/releases/download/v0.36.0/geckodriver-v0.36.0-linux64.tar.gz
+2025-04-03 08:30:12,277 - INFO - Driver downloading response is 200
+2025-04-03 08:30:12,308 - INFO - Get LATEST geckodriver version for 128.6 firefox
+2025-04-03 08:30:12,308 - INFO - GH_TOKEN will be used to perform requests
+2025-04-03 08:30:12,695 - INFO - Driver has been saved in cache [/root/.wdm/drivers/geckodriver/linux64/v0.36.0]
+2025-04-03 08:31:41,612 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x77578e305ab0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2f47d6a7-f0b5-4f12-a66d-95213aa86203/element
+2025-04-03 08:31:41,612 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x77578e307250>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2f47d6a7-f0b5-4f12-a66d-95213aa86203/element
+2025-04-03 08:31:41,613 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x77578e307550>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2f47d6a7-f0b5-4f12-a66d-95213aa86203/element
+2025-04-03 08:31:41,614 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x77578e306e00>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2f47d6a7-f0b5-4f12-a66d-95213aa86203/elements
+2025-04-03 08:31:41,614 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x77578e306aa0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2f47d6a7-f0b5-4f12-a66d-95213aa86203/elements
+2025-04-03 08:31:41,614 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x77578e3060e0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2f47d6a7-f0b5-4f12-a66d-95213aa86203/elements
+2025-04-03 08:31:41,615 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x77578e306080>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2f47d6a7-f0b5-4f12-a66d-95213aa86203/element
+2025-04-03 08:31:41,615 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x77578e306020>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2f47d6a7-f0b5-4f12-a66d-95213aa86203/element
+2025-04-03 08:31:41,617 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x77578e305d50>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2f47d6a7-f0b5-4f12-a66d-95213aa86203/element
+2025-04-03 08:31:42,852 - INFO - notice check shut down.
