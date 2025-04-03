@@ -18700,3 +18700,15 @@
 2025-04-03 08:31:41,615 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x77578e306020>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2f47d6a7-f0b5-4f12-a66d-95213aa86203/element
 2025-04-03 08:31:41,617 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x77578e305d50>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2f47d6a7-f0b5-4f12-a66d-95213aa86203/element
 2025-04-03 08:31:42,852 - INFO - notice check shut down.
+2025-04-03 09:28:21,566 - INFO - ----------------notice check started----------------
+2025-04-03 09:28:23,011 - INFO - ====== WebDriver manager ======
+2025-04-03 09:28:23,071 - INFO - Get LATEST geckodriver version for 128.6 firefox
+2025-04-03 09:28:23,071 - INFO - GH_TOKEN will be used to perform requests
+2025-04-03 09:28:23,414 - INFO - Get LATEST geckodriver version for 128.6 firefox
+2025-04-03 09:28:23,414 - INFO - GH_TOKEN will be used to perform requests
+2025-04-03 09:28:23,734 - INFO - There is no [linux64] geckodriver "v0.36.0" for browser firefox "128.6" in cache
+2025-04-03 09:28:23,734 - INFO - Get LATEST geckodriver version for 128.6 firefox
+2025-04-03 09:28:23,734 - INFO - GH_TOKEN will be used to perform requests
+2025-04-03 09:28:24,081 - INFO - Getting latest mozilla release info for v0.36.0
+2025-04-03 09:28:24,081 - INFO - GH_TOKEN will be used to perform requests
+2025-04-03 09:28:24,241 - INFO - notice check shut down.
