@@ -200,7 +200,7 @@ def notice_search(notice_list, notice_ids, folder_path):
                         'summary': summary,
                         'type': notice_type,
                         'notice_class': '입찰 공고',
-                        'notice_content':context
+                        # 'notice_content':context
                     }
                     notice_list.append(dict_notice)
                     collection.insert_one(dict_notice)
