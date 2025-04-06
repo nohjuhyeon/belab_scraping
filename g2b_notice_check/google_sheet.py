@@ -94,10 +94,10 @@ def total_sheet_update(existing_df, notice_list):
     df["마감일"] = df["마감일"].apply(lambda x: x.split(" ")[0])
     # 조건에 따라 데이터 필터링
     today = datetime.now()
-    end_date = today + timedelta(days=1)
+    end_date = today
     end_date = end_date.replace(hour=0, minute=0, second=0, microsecond=0)
     df = df.loc[
-        (df["마감일_sort"] <= end_date)]
+        (df["마감일_sort"] >= end_date)]
 
     # 공고 가격 처리
     df["공고가격(단위: 원)"] = (
