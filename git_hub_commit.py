@@ -5,7 +5,6 @@ from datetime import datetime
 
 def git_commit():
     folder_path = os.environ.get("folder_path")
-    folder_path = "/Users/juhyeon/belab_scraping/"
     script_path = folder_path + "function_list/git_workflow.sh"
     argument = "Auto Commit."
     print(datetime.now())
