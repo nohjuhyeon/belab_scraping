@@ -88,9 +88,16 @@ def total_sheet_update(existing_df, notice_list):
     )
     df = pd.concat([existing_df, new_df], ignore_index=True)
     df["게시일_sort"] = df["게시일"].apply(notice_date_modify)
+    df["마감일_sort"] = df["마감일"].apply(notice_date_modify)
     df = df.sort_values(by="게시일_sort", ascending=False).reset_index(drop=True)
     df["게시일"] = df["게시일"].apply(lambda x: x.split(" ")[0])
     df["마감일"] = df["마감일"].apply(lambda x: x.split(" ")[0])
+    end_date = today + timedelta(days=1)
+    end_date = end_date.replace(hour=0, minute=0, second=0, microsecond=0)
+
+    # 조건에 따라 데이터 필터링
+    df = df.loc[
+        (df["마감일_sort"] <= end_date)]
 
     # 공고 가격 처리
     df["공고가격(단위: 원)"] = (
