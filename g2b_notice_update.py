@@ -22,7 +22,6 @@ try:
 
     # 로그 파일 설정
     folder_path = os.environ.get("folder_path")  # 환경 변수에서 폴더 경로 가져오기
-    folder_path = "/Users/juhyeon/belab_scraping/"
     logging.basicConfig(
         filename=folder_path + "/log_list/scheduler.txt",
         level=logging.INFO,

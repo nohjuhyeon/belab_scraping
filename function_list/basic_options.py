@@ -5,6 +5,7 @@ from selenium import webdriver
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from webdriver_manager.firefox import GeckoDriverManager  # GeckoDriverManager 사용
 
+
 # 다운로드 폴더 설정 함수
 def download_path_setting(folder_path, firefox_options):
     """
@@ -20,7 +21,7 @@ def download_path_setting(folder_path, firefox_options):
             - download_folder_path (str): 생성된 다운로드 폴더의 절대 경로.
     """
     # 다운로드 폴더 경로 생성
-    download_folder_path = os.path.abspath(folder_path + '/notice_list')
+    download_folder_path = os.path.abspath(folder_path + "/notice_list")
     if not os.path.exists(download_folder_path):
         os.makedirs(download_folder_path)  # 폴더가 없으면 생성
 
@@ -38,6 +39,7 @@ def download_path_setting(folder_path, firefox_options):
 
     return firefox_options, download_folder_path  # 업데이트된 옵션과 다운로드 경로 반환
 
+
 # Selenium 설정 함수
 def selenium_setting():
     """
@@ -52,16 +54,17 @@ def selenium_setting():
     # User-Agent 설정 (웹사이트에서 요청을 특정 브라우저로 인식하도록 설정)
     firefox_options.set_preference(
         "general.useragent.override",
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0"
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0",
     )
 
     # Docker 환경 등 GUI가 없는 환경에서 실행하기 위한 추가 옵션
-    firefox_options.add_argument('--headless')  # 브라우저를 숨김 모드로 실행
-    firefox_options.add_argument('--no-sandbox')  # 샌드박스 기능 비활성화
-    firefox_options.add_argument('--disable-dev-shm-usage')  # 공유 메모리 사용 제한
-    firefox_options.add_argument('--disable-gpu')  # GPU 사용 비활성화 (선택 사항)
+    firefox_options.add_argument("--headless")  # 브라우저를 숨김 모드로 실행
+    firefox_options.add_argument("--no-sandbox")  # 샌드박스 기능 비활성화
+    firefox_options.add_argument("--disable-dev-shm-usage")  # 공유 메모리 사용 제한
+    firefox_options.add_argument("--disable-gpu")  # GPU 사용 비활성화 (선택 사항)
 
     return firefox_options  # 설정된 Firefox 옵션 반환
+
 
 # WebDriver 초기화 함수
 def init_browser(firefox_options):
@@ -87,6 +90,7 @@ def init_browser(firefox_options):
     browser = webdriver.Firefox(service=service, options=firefox_options)
 
     return browser  # 초기화된 WebDriver 반환
+
 
 # MongoDB 설정 함수
 def mongo_setting(database_name, collection_name):
