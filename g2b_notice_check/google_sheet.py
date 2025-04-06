@@ -92,10 +92,10 @@ def total_sheet_update(existing_df, notice_list):
     df = df.sort_values(by="게시일_sort", ascending=False).reset_index(drop=True)
     df["게시일"] = df["게시일"].apply(lambda x: x.split(" ")[0])
     df["마감일"] = df["마감일"].apply(lambda x: x.split(" ")[0])
+    # 조건에 따라 데이터 필터링
+    today = datetime.now()
     end_date = today + timedelta(days=1)
     end_date = end_date.replace(hour=0, minute=0, second=0, microsecond=0)
-
-    # 조건에 따라 데이터 필터링
     df = df.loc[
         (df["마감일_sort"] <= end_date)]
 
@@ -169,7 +169,6 @@ def total_sheet_update(existing_df, notice_list):
         google_sheet_add(keyword, filtered_list, spreadsheet_url)
 
     # 새로 올라온 공고 필터링 및 추가
-    today = datetime.now()
     # 오늘의 요일 계산 (월=0, 화=1, ..., 일=6)
     today_day_of_week = today.weekday()
 
