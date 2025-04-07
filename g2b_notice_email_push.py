@@ -30,13 +30,13 @@ try:
     data_url = "https://docs.google.com/spreadsheets/d/10pMJpkFia91wtTROOQt3sje-iT3ztgYjtUjQYGU-xQ8/edit?usp=drive_link"
     data_list = category_new_data_get(data_url)
     data_user = ['jh.noh@belab.co.kr', 'jh.park@belab.co.kr', 'sh.jegal@belab.co.kr', 'chyunkim@naver.com']
-    email_sending(data_list, data_user, data_url)
+    email_sending(data_list, data_user, data_url,"데이터")
 
     # 3. 클라우드 관련 이메일 전송
     cloud_url = "https://docs.google.com/spreadsheets/d/14CanIRInmQ2_z2uuNB2gVCjlJsgGRM7c44yOcTSI8eo/edit?usp=drive_link"
     cloud_list = category_new_data_get(cloud_url)
     cloud_user = ['jh.noh@belab.co.kr', 'jh.park@belab.co.kr', 'chyunkim@naver.com']
-    email_sending(cloud_list, cloud_user, cloud_url)
+    email_sending(cloud_list, cloud_user, cloud_url,"클라우드")
 
     # 4. ISP/ISMP 관련 이메일 전송
     isp_url = "https://docs.google.com/spreadsheets/d/18F6jTsLgsHm1yia9ZOJXD3x_CrYNYnqJY528o09HtrI/edit?usp=drive_link"
