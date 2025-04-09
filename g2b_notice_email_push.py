@@ -11,6 +11,9 @@ try:
 
     # 로그 파일 설정
     folder_path = os.environ.get("folder_path")  # 환경 변수에서 폴더 경로 가져오기
+    print(folder_path)
+    if folder_path is None:
+        print('folder_path is None')
     logging.basicConfig(
         filename=folder_path + '/log_list/scheduler.txt', 
         level=logging.INFO, 
