@@ -1,6 +1,8 @@
 import os
 import subprocess
 from datetime import datetime
+from dotenv import load_dotenv
+loaded = load_dotenv(dotenv_path='/app/belab_scraping/.env')
 
 
 def git_commit():

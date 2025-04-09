@@ -3,6 +3,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 import gspread
 import json
 from datetime import datetime, timedelta
+from dotenv import load_dotenv
 import os
 import pandas as pd
 
@@ -222,6 +223,7 @@ def total_sheet_get():
         "https://spreadsheets.google.com/feeds",
         "https://www.googleapis.com/auth/drive",
     ]
+    load_dotenv(dotenv_path='/app/belab_scraping/.env')
     json_key_str = os.environ.get("google_sheet_key")
     if json_key_str:
         try:
@@ -352,6 +354,7 @@ def category_new_data_get(spreadsheet_url):
         "https://spreadsheets.google.com/feeds",
         "https://www.googleapis.com/auth/drive",
     ]
+    load_dotenv(dotenv_path='/app/belab_scraping/.env')
     json_key_str = os.environ.get("google_sheet_key")
     if json_key_str:
         try:

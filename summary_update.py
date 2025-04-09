@@ -1,13 +1,13 @@
 from news_letter.naver_new import naver_news
 import os
-from dotenv import load_dotenv
 import logging
 from datetime import datetime
 from git_hub_commit import git_commit
+from dotenv import load_dotenv
 
 def total_update():
     # 환경 변수 로드
-    load_dotenv()
+    loaded = load_dotenv(dotenv_path='/app/belab_scraping/.env')
     # 네이버 뉴스 데이터 수집 및 업데이트
     naver_news()
 

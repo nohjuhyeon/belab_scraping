@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 import os 
 import time
 from function_list.basic_options import mongo_setting
+from dotenv import load_dotenv
 from datetime import datetime, timedelta
 from function_list.basic_options import selenium_setting, download_path_setting, init_browser
 from function_list.g2b_func import notice_file_check, notice_title_check, folder_clear
@@ -168,6 +169,7 @@ def preparation_collection(existing_df):
     notice_list = []
     collection = mongo_setting('news_scraping', 'notice_list')
     notice_ids = existing_df.loc[existing_df['공고 유형'] == '사전 규격', '공고번호'].to_list()
+    load_dotenv(dotenv_path='/app/belab_scraping/.env')
     folder_path = os.environ.get("folder_path")
 
     # 사전 규격 검색 및 수집

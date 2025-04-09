@@ -4,6 +4,7 @@ from pymongo import MongoClient
 from selenium import webdriver
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from webdriver_manager.firefox import GeckoDriverManager  # GeckoDriverManager 사용
+from dotenv import load_dotenv
 
 
 # 다운로드 폴더 설정 함수
@@ -105,6 +106,7 @@ def mongo_setting(database_name, collection_name):
         Collection(MongoDB Collection): 설정된 MongoDB 컬렉션 객체.
     """
     # 환경 변수에서 MongoDB 연결 URL 가져오기
+    load_dotenv(dotenv_path='/app/belab_scraping/.env')
     mongo_url = os.environ.get("DATABASE_URL")
     mongo_client = MongoClient(mongo_url)  # MongoDB 클라이언트 생성
 

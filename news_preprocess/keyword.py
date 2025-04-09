@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import os
 
 # 환경변수에서 API 키 로드
-load_dotenv()
+loaded = load_dotenv(dotenv_path='/app/belab_scraping/.env')
 
 def extract_keywords_frequency(text, num_keywords=5, stop_words=None):
     """

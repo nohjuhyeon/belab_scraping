@@ -6,14 +6,12 @@ from datetime import datetime
 import subprocess
 from dotenv import load_dotenv
 loaded = load_dotenv(dotenv_path='/app/belab_scraping/.env')
-print(f"✅ .env loaded? {loaded}")
 try:
     # 이메일 전송 프로세스 시작 로그
     print("----------------이메일 전송----------------")
     print(datetime.now())
     # 로그 파일 설정
     folder_path = os.environ.get("folder_path")  # 환경 변수에서 폴더 경로 가져오기
-    print(folder_path)
 
     if folder_path is None:
         print('folder_path is None')

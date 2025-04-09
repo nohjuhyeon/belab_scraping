@@ -3,6 +3,7 @@ import json
 from selenium.webdriver.common.by import By
 import os
 import time
+from dotenv import load_dotenv
 from function_list.basic_options import mongo_setting
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -246,6 +247,7 @@ def notice_collection(existing_df):
     notice_ids = existing_df.loc[
         existing_df["공고 유형"] == "입찰 공고", "공고번호"
     ].to_list()
+    load_dotenv(dotenv_path='/app/belab_scraping/.env')
     folder_path = os.environ.get("folder_path")
     notice_list = notice_search(notice_list, notice_ids, folder_path)
     return notice_list

@@ -7,9 +7,7 @@ import tempfile
 import torch
 from kobert_tokenizer import KoBERTTokenizer
 from transformers import BertForSequenceClassification
-
-# 환경변수에서 API 키 로드
-load_dotenv()
+loaded = load_dotenv(dotenv_path='/app/belab_scraping/.env')
 
 # GPU 사용 여부 설정
 # GPU가 사용 가능하면 "cuda", 그렇지 않으면 "cpu"를 사용

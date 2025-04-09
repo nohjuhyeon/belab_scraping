@@ -181,7 +181,7 @@ def noun_extraction(collection):
     Args:
         collection (MongoDB Collection): MongoDB 컬렉션 객체.
     """
-    load_dotenv()
+    load_dotenv(dotenv_path='/app/belab_scraping/.env')
     documents = collection.find()
     df = pd.DataFrame(list(documents))
 
