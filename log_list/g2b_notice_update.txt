@@ -252,3 +252,21 @@ Traceback (most recent call last):
   File "/app/belab_scraping/g2b_notice_email_push.py", line 26, in <module>
     filename=folder_path + '/log_list/scheduler.txt', 
 TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+✅ .env loaded? True
+----------------이메일 전송----------------
+2025-04-09 14:46:01.816185
+/app/belab_scraping/
+/app/belab_scraping/
+/app/belab_scraping/
+----------------email push started----------------
+인공지능 메일이 성공적으로 발송되었습니다.
+이메일 전송 완료!
+✅ .env loaded? True
+----------------이메일 전송----------------
+2025-04-09 14:46:01.734170
+/app/belab_scraping/
+/app/belab_scraping/
+/app/belab_scraping/
+----------------email push started----------------
+인공지능 메일이 성공적으로 발송되었습니다.
+이메일 전송 완료!
