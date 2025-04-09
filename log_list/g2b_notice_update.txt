@@ -144,3 +144,23 @@ Traceback (most recent call last):
   File "/app/belab_scraping/g2b_notice_email_push.py", line 18, in <module>
     filename=folder_path + '/log_list/scheduler.txt', 
 TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+----------------이메일 전송----------------
+2025-04-09 14:09:01.457562
+None
+
+folder_path is None
+이메일 전송 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_email_push.py", line 25, in <module>
+    filename=folder_path + '/log_list/scheduler.txt', 
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+----------------이메일 전송----------------
+2025-04-09 14:09:01.465374
+None
+
+folder_path is None
+이메일 전송 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_email_push.py", line 25, in <module>
+    filename=folder_path + '/log_list/scheduler.txt', 
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
