@@ -1,0 +1,30 @@
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 16, in <module>
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 16, in <module>
+    git_commit()
+  File "/app/belab_scraping/git_hub_commit.py", line 8, in git_commit
+    git_commit()
+  File "/app/belab_scraping/git_hub_commit.py", line 8, in git_commit
+    script_path = folder_path + "function_list/git_workflow.sh"
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 45, in <module>
+    script_path = folder_path + "function_list/git_workflow.sh"
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 45, in <module>
+    git_commit()
+  File "/app/belab_scraping/git_hub_commit.py", line 8, in git_commit
+    git_commit()
+  File "/app/belab_scraping/git_hub_commit.py", line 8, in git_commit
+    script_path = folder_path + "function_list/git_workflow.sh"
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+    script_path = folder_path + "function_list/git_workflow.sh"
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'

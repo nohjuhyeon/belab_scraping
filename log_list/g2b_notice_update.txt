@@ -60,3 +60,87 @@ Traceback (most recent call last):
   File "/app/belab_scraping/git_hub_commit.py", line 8, in git_commit
     script_path = folder_path + "function_list/git_workflow.sh"
 TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+----------------이메일 전송----------------
+2025-04-09 13:48:01.968578
+None
+folder_path is None
+이메일 전송 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_email_push.py", line 18, in <module>
+    filename=folder_path + '/log_list/scheduler.txt', 
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+----------------이메일 전송----------------
+2025-04-09 13:48:02.039165
+None
+folder_path is None
+이메일 전송 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_email_push.py", line 18, in <module>
+    filename=folder_path + '/log_list/scheduler.txt', 
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 17, in <module>
+    git_commit()
+  File "/app/belab_scraping/git_hub_commit.py", line 8, in git_commit
+    script_path = folder_path + "function_list/git_workflow.sh"
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 101, in <module>
+    git_commit()
+  File "/app/belab_scraping/git_hub_commit.py", line 8, in git_commit
+    script_path = folder_path + "function_list/git_workflow.sh"
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 17, in <module>
+    git_commit()
+  File "/app/belab_scraping/git_hub_commit.py", line 8, in git_commit
+    script_path = folder_path + "function_list/git_workflow.sh"
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 101, in <module>
+    git_commit()
+  File "/app/belab_scraping/git_hub_commit.py", line 8, in git_commit
+    script_path = folder_path + "function_list/git_workflow.sh"
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+----------------이메일 전송----------------
+2025-04-09 13:53:01.632123
+None
+folder_path is None
+이메일 전송 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_email_push.py", line 18, in <module>
+    filename=folder_path + '/log_list/scheduler.txt', 
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+----------------이메일 전송----------------
+2025-04-09 13:53:01.739352
+None
+folder_path is None
+이메일 전송 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_email_push.py", line 18, in <module>
+    filename=folder_path + '/log_list/scheduler.txt', 
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+----------------이메일 전송----------------
+2025-04-09 14:02:01.994719
+None
+folder_path is None
+이메일 전송 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_email_push.py", line 18, in <module>
+    filename=folder_path + '/log_list/scheduler.txt', 
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+----------------이메일 전송----------------
+2025-04-09 14:02:02.003776
+None
+folder_path is None
+이메일 전송 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_email_push.py", line 18, in <module>
+    filename=folder_path + '/log_list/scheduler.txt', 
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
