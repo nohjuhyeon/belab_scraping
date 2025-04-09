@@ -5,12 +5,11 @@ import logging
 from datetime import datetime
 import subprocess
 from dotenv import load_dotenv
-
+load_dotenv(dotenv_path='/app/belab_scraping/.env')
 try:
     # 이메일 전송 프로세스 시작 로그
     print("----------------이메일 전송----------------")
     print(datetime.now())
-    load_dotenv('/etc/environment')  # .env 파일처럼 불러올 수 있음
     print(os.getenv("folder_path"))
     # 로그 파일 설정
     folder_path = os.environ.get("folder_path")  # 환경 변수에서 폴더 경로 가져오기
