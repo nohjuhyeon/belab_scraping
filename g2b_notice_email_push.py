@@ -5,7 +5,7 @@ import logging
 from datetime import datetime
 import subprocess
 from dotenv import load_dotenv
-load_dotenv(dotenv_path='/app/belab_scraping/.env')
+load_dotenv(dotenv_path='.env')
 try:
     # 이메일 전송 프로세스 시작 로그
     print("----------------이메일 전송----------------")
