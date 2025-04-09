@@ -11,15 +11,9 @@ try:
     # 이메일 전송 프로세스 시작 로그
     print("----------------이메일 전송----------------")
     print(datetime.now())
-    print(os.getenv("folder_path"))
     # 로그 파일 설정
     folder_path = os.environ.get("folder_path")  # 환경 변수에서 폴더 경로 가져오기
     print(folder_path)
-    # echo $folder_path 실행
-    result = subprocess.run('echo $folder_path', shell=True, capture_output=True, text=True)
-
-    # 결과 출력
-    print(result.stdout.strip())
 
     if folder_path is None:
         print('folder_path is None')

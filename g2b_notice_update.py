@@ -11,6 +11,8 @@ from git_hub_commit import git_commit
 from g2b_notice_check.g2b_preparation import preparation_collection
 from function_list.basic_options import mongo_setting
 import pandas as pd
+from dotenv import load_dotenv
+loaded = load_dotenv(dotenv_path='/app/belab_scraping/.env')
 
 try:
     # GitHub 커밋 실행
