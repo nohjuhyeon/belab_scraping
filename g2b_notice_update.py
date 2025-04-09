@@ -12,25 +12,6 @@ from g2b_notice_check.g2b_preparation import preparation_collection
 from function_list.basic_options import mongo_setting
 import pandas as pd
 
-
-def log_start_time():
-    # Define the file path
-    file_path = "log_list/scheduler.txt"
-    
-    # Get the current time
-    start_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    
-    # Write the start time to the file
-    try:
-        with open(file_path, "a") as file:  # Use "a" mode to append to the file
-            file.write(f"Start Time: {start_time}\n")
-        print(f"Start time logged: {start_time}")
-    except Exception as e:
-        print(f"Error writing to file: {e}")
-
-# Call the function
-
-
 try:
     # GitHub 커밋 실행
     git_commit()
@@ -41,7 +22,6 @@ try:
 
     # 로그 파일 설정
     folder_path = os.environ.get("folder_path")  # 환경 변수에서 폴더 경로 가져오기
-    log_start_time()
 
     # 나라장터 데이터 수집 시작
     print("나라장터 공고를 찾습니다.")
