@@ -11,7 +11,7 @@ def git_commit():
     commit_message = "Auto Commit."
     github_username=os.environ.get("GITHUB_USERNAME")
     github_email=os.environ.get("GITHUB_EMAIL")
-    github_token=os.environ.get("GITHUB_TOKEN")
+    github_token=os.environ.get("GH_TOKEN")
     print(datetime.now())
 
     try:
