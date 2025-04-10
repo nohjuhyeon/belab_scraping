@@ -3,7 +3,7 @@
 # .env 파일 로드
 if [ -f .env ]; then
     echo ".env 파일을 로드합니다..."
-    export $(grep -v '^#' .env | xargs)
+    export $(grep -v '^#' /app/belab_scraping/.env | xargs)
 else
     echo ".env 파일을 찾을 수 없습니다. 스크립트를 종료합니다."
     exit 1
