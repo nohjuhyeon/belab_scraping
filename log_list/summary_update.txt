@@ -28,3 +28,320 @@ Traceback (most recent call last):
 TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
     script_path = folder_path + "function_list/git_workflow.sh"
 TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+/usr/local/lib/python3.10/site-packages/huggingface_hub/file_download.py:795: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/usr/local/lib/python3.10/site-packages/huggingface_hub/file_download.py:795: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/usr/local/lib/python3.10/site-packages/huggingface_hub/file_download.py:795: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/usr/local/lib/python3.10/site-packages/huggingface_hub/file_download.py:795: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/usr/local/lib/python3.10/site-packages/transformers/modeling_utils.py:460: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(checkpoint_file, map_location="cpu")
+/usr/local/lib/python3.10/site-packages/transformers/modeling_utils.py:460: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(checkpoint_file, map_location="cpu")
+2025-04-09 18:00:07.045567
+commit complete!
+----------------뉴스 요약 업데이트 시작----------------
+2025-04-09 18:00:07.060201
+2025-04-09 18:00:24.388305
+commit complete!
+뉴스 요약 업데이트 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 36, in <module>
+    total_update()
+  File "/app/belab_scraping/summary_update.py", line 12, in total_update
+    naver_news()
+  File "/app/belab_scraping/news_letter/naver_new.py", line 190, in naver_news
+    link_list(collection)  # 뉴스 링크 수집
+  File "/app/belab_scraping/news_letter/naver_new.py", line 21, in link_list
+    browser = init_browser(chrome_options)
+  File "/app/belab_scraping/function_list/basic_options.py", line 87, in init_browser
+    webdriver_manager_directory = GeckoDriverManager().install()
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/firefox.py", line 39, in install
+    driver_path = self._get_driver_binary_path(self.driver)
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/core/manager.py", line 41, in _get_driver_binary_path
+    binary_path = self._cache_manager.save_file_to_cache(driver, file)
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/core/driver_cache.py", line 54, in save_file_to_cache
+    files = self.unpack_archive(archive, path)
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/core/driver_cache.py", line 49, in unpack_archive
+    return self._file_manager.unpack_archive(archive, path)
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/core/file_manager.py", line 59, in unpack_archive
+    return self.__extract_tar_file(archive_file, target_dir)
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/core/file_manager.py", line 92, in __extract_tar_file
+    tar.extractall(to_directory)
+  File "/usr/local/lib/python3.10/tarfile.py", line 2293, in extractall
+    self._extract_one(tarinfo, path, set_attrs=not tarinfo.isdir(),
+  File "/usr/local/lib/python3.10/tarfile.py", line 2356, in _extract_one
+    self._extract_member(tarinfo, os.path.join(path, tarinfo.name),
+  File "/usr/local/lib/python3.10/tarfile.py", line 2439, in _extract_member
+    self.makefile(tarinfo, targetpath)
+  File "/usr/local/lib/python3.10/tarfile.py", line 2492, in makefile
+    copyfileobj(source, target, tarinfo.size, ReadError, bufsize)
+  File "/usr/local/lib/python3.10/tarfile.py", line 252, in copyfileobj
+    buf = src.read(bufsize)
+  File "/usr/local/lib/python3.10/gzip.py", line 301, in read
+    return self._buffer.read(size)
+  File "/usr/local/lib/python3.10/_compression.py", line 68, in readinto
+    data = self.read(len(byte_view))
+  File "/usr/local/lib/python3.10/gzip.py", line 507, in read
+    raise EOFError("Compressed file ended before the "
+EOFError: Compressed file ended before the end-of-stream marker was reached
+[Kss]: Oh! You have mecab in your environment. Kss will take this as a backend! :D
+
+2025-04-09 18:00:07.770712
+commit complete!
+----------------뉴스 요약 업데이트 시작----------------
+2025-04-09 18:00:07.786032
+2025-04-09 19:31:40.530798
+commit complete!
+뉴스 요약 업데이트 완료!
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 516, in getresponse
+    httplib_response = super().getresponse()
+  File "/usr/local/lib/python3.10/http/client.py", line 1375, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.10/http/client.py", line 318, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.10/http/client.py", line 279, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/local/lib/python3.10/socket.py", line 717, in readinto
+    return self._sock.recv_into(b)
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 36, in <module>
+    total_update()
+  File "/app/belab_scraping/summary_update.py", line 12, in total_update
+    naver_news()
+  File "/app/belab_scraping/news_letter/naver_new.py", line 191, in naver_news
+    news_contents(collection, tokenizer, model)  # 뉴스 상세 데이터 수집
+  File "/app/belab_scraping/news_letter/naver_new.py", line 100, in news_contents
+    browser.get(i['news_link'])
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 393, in get
+    self.execute(Command.GET, {"url": url})
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 382, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 404, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 428, in _request
+    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/_request_methods.py", line 143, in request
+    return self.request_encode_body(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/_request_methods.py", line 278, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/poolmanager.py", line 443, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 536, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=41321): Read timed out. (read timeout=120)
+/usr/local/lib/python3.10/site-packages/huggingface_hub/file_download.py:795: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/usr/local/lib/python3.10/site-packages/huggingface_hub/file_download.py:795: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/usr/local/lib/python3.10/site-packages/transformers/modeling_utils.py:460: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(checkpoint_file, map_location="cpu")
+/usr/local/lib/python3.10/site-packages/transformers/modeling_utils.py:460: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(checkpoint_file, map_location="cpu")
+2025-04-09 22:00:08.706092
+commit complete!
+----------------뉴스 요약 업데이트 시작----------------
+2025-04-09 22:00:08.720073
+2025-04-09 22:00:13.873219
+commit complete!
+뉴스 요약 업데이트 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 36, in <module>
+    total_update()
+  File "/app/belab_scraping/summary_update.py", line 12, in total_update
+    naver_news()
+  File "/app/belab_scraping/news_letter/naver_new.py", line 190, in naver_news
+    link_list(collection)  # 뉴스 링크 수집
+  File "/app/belab_scraping/news_letter/naver_new.py", line 21, in link_list
+    browser = init_browser(chrome_options)
+  File "/app/belab_scraping/function_list/basic_options.py", line 87, in init_browser
+    webdriver_manager_directory = GeckoDriverManager().install()
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/firefox.py", line 39, in install
+    driver_path = self._get_driver_binary_path(self.driver)
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/core/manager.py", line 41, in _get_driver_binary_path
+    binary_path = self._cache_manager.save_file_to_cache(driver, file)
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/core/driver_cache.py", line 54, in save_file_to_cache
+    files = self.unpack_archive(archive, path)
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/core/driver_cache.py", line 49, in unpack_archive
+    return self._file_manager.unpack_archive(archive, path)
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/core/file_manager.py", line 59, in unpack_archive
+    return self.__extract_tar_file(archive_file, target_dir)
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/core/file_manager.py", line 91, in __extract_tar_file
+    members = tar.getmembers()
+  File "/usr/local/lib/python3.10/tarfile.py", line 2023, in getmembers
+    self._load()        # all members, we first have to
+  File "/usr/local/lib/python3.10/tarfile.py", line 2718, in _load
+    tarinfo = self.next()
+  File "/usr/local/lib/python3.10/tarfile.py", line 2623, in next
+    self.fileobj.seek(self.offset - 1)
+  File "/usr/local/lib/python3.10/gzip.py", line 393, in seek
+    return self._buffer.seek(offset, whence)
+  File "/usr/local/lib/python3.10/_compression.py", line 153, in seek
+    data = self.read(min(io.DEFAULT_BUFFER_SIZE, offset))
+  File "/usr/local/lib/python3.10/gzip.py", line 507, in read
+    raise EOFError("Compressed file ended before the "
+EOFError: Compressed file ended before the end-of-stream marker was reached
+[Kss]: Oh! You have mecab in your environment. Kss will take this as a backend! :D
+
+2025-04-09 22:00:08.720028
+commit complete!
+----------------뉴스 요약 업데이트 시작----------------
+2025-04-09 22:00:08.734061
+naver news crawling finish
+crawling count :  572
+2025-04-09 22:20:35.778494
+commit complete!
+뉴스 요약 업데이트 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 36, in <module>
+    total_update()
+  File "/app/belab_scraping/summary_update.py", line 12, in total_update
+    naver_news()
+  File "/app/belab_scraping/news_letter/naver_new.py", line 192, in naver_news
+    duplicated_data_delete(collection)  # 중복 데이터 삭제
+  File "/app/belab_scraping/news_letter/naver_new.py", line 177, in duplicated_data_delete
+    duplicates = list(collection.aggregate(pipeline))
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/collection.py", line 2958, in aggregate
+    return self._aggregate(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/collection.py", line 2866, in _aggregate
+    return self._database.client._retryable_read(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1863, in _retryable_read
+    return self._retry_internal(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1830, in _retry_internal
+    ).run()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2554, in run
+    return self._read() if self._is_read else self._write()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2697, in _read
+    return self._func(self._session, self._server, conn, read_pref)  # type: ignore
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/aggregation.py", line 164, in get_cursor
+    result = conn.command(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/helpers.py", line 45, in inner
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/pool.py", line 538, in command
+    return command(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/network.py", line 218, in command
+    helpers_shared._check_command_response(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/helpers_shared.py", line 247, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: PlanExecutor error during aggregation :: caused by :: Exceeded memory limit for $group, but didn't allow external spilling; pass allowDiskUse:true to opt in, full error: {'ok': 0.0, 'errmsg': "PlanExecutor error during aggregation :: caused by :: Exceeded memory limit for $group, but didn't allow external spilling; pass allowDiskUse:true to opt in", 'code': 292, 'codeName': 'QueryExceededMemoryLimitNoDiskUseAllowed', '$clusterTime': {'clusterTime': Timestamp(1744204835, 79), 'signature': {'hash': b'\x13\x08\xb1\x99\xfe\x1b\x8c\xb8$\x8bC3\xfb\xe4U\xeb-\x1e\xf9f', 'keyId': 7438508406027059201}}, 'operationTime': Timestamp(1744204835, 79)}
+/usr/local/lib/python3.10/site-packages/huggingface_hub/file_download.py:795: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/usr/local/lib/python3.10/site-packages/huggingface_hub/file_download.py:795: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/usr/local/lib/python3.10/site-packages/transformers/modeling_utils.py:460: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(checkpoint_file, map_location="cpu")
+/usr/local/lib/python3.10/site-packages/transformers/modeling_utils.py:460: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(checkpoint_file, map_location="cpu")
+2025-04-10 02:00:07.451969
+commit complete!
+----------------뉴스 요약 업데이트 시작----------------
+2025-04-10 02:00:07.467437
+2025-04-10 02:00:12.608034
+commit complete!
+뉴스 요약 업데이트 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 36, in <module>
+    total_update()
+  File "/app/belab_scraping/summary_update.py", line 12, in total_update
+    naver_news()
+  File "/app/belab_scraping/news_letter/naver_new.py", line 190, in naver_news
+    link_list(collection)  # 뉴스 링크 수집
+  File "/app/belab_scraping/news_letter/naver_new.py", line 21, in link_list
+    browser = init_browser(chrome_options)
+  File "/app/belab_scraping/function_list/basic_options.py", line 87, in init_browser
+    webdriver_manager_directory = GeckoDriverManager().install()
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/firefox.py", line 39, in install
+    driver_path = self._get_driver_binary_path(self.driver)
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/core/manager.py", line 41, in _get_driver_binary_path
+    binary_path = self._cache_manager.save_file_to_cache(driver, file)
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/core/driver_cache.py", line 54, in save_file_to_cache
+    files = self.unpack_archive(archive, path)
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/core/driver_cache.py", line 49, in unpack_archive
+    return self._file_manager.unpack_archive(archive, path)
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/core/file_manager.py", line 59, in unpack_archive
+    return self.__extract_tar_file(archive_file, target_dir)
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/core/file_manager.py", line 91, in __extract_tar_file
+    members = tar.getmembers()
+  File "/usr/local/lib/python3.10/tarfile.py", line 2023, in getmembers
+    self._load()        # all members, we first have to
+  File "/usr/local/lib/python3.10/tarfile.py", line 2718, in _load
+    tarinfo = self.next()
+  File "/usr/local/lib/python3.10/tarfile.py", line 2623, in next
+    self.fileobj.seek(self.offset - 1)
+  File "/usr/local/lib/python3.10/gzip.py", line 393, in seek
+    return self._buffer.seek(offset, whence)
+  File "/usr/local/lib/python3.10/_compression.py", line 153, in seek
+    data = self.read(min(io.DEFAULT_BUFFER_SIZE, offset))
+  File "/usr/local/lib/python3.10/gzip.py", line 507, in read
+    raise EOFError("Compressed file ended before the "
+EOFError: Compressed file ended before the end-of-stream marker was reached
+[Kss]: Oh! You have mecab in your environment. Kss will take this as a backend! :D
+
+2025-04-10 02:00:07.483090
+commit complete!
+----------------뉴스 요약 업데이트 시작----------------
+2025-04-10 02:00:07.496492
+naver news crawling finish
+crawling count :  44
+2025-04-10 02:01:52.667104
+commit complete!
+뉴스 요약 업데이트 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 36, in <module>
+    total_update()
+  File "/app/belab_scraping/summary_update.py", line 12, in total_update
+    naver_news()
+  File "/app/belab_scraping/news_letter/naver_new.py", line 192, in naver_news
+    duplicated_data_delete(collection)  # 중복 데이터 삭제
+  File "/app/belab_scraping/news_letter/naver_new.py", line 177, in duplicated_data_delete
+    duplicates = list(collection.aggregate(pipeline))
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/collection.py", line 2958, in aggregate
+    return self._aggregate(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/collection.py", line 2866, in _aggregate
+    return self._database.client._retryable_read(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1863, in _retryable_read
+    return self._retry_internal(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1830, in _retry_internal
+    ).run()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2554, in run
+    return self._read() if self._is_read else self._write()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2697, in _read
+    return self._func(self._session, self._server, conn, read_pref)  # type: ignore
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/aggregation.py", line 164, in get_cursor
+    result = conn.command(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/helpers.py", line 45, in inner
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/pool.py", line 538, in command
+    return command(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/network.py", line 218, in command
+    helpers_shared._check_command_response(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/helpers_shared.py", line 247, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: PlanExecutor error during aggregation :: caused by :: Exceeded memory limit for $group, but didn't allow external spilling; pass allowDiskUse:true to opt in, full error: {'ok': 0.0, 'errmsg': "PlanExecutor error during aggregation :: caused by :: Exceeded memory limit for $group, but didn't allow external spilling; pass allowDiskUse:true to opt in", 'code': 292, 'codeName': 'QueryExceededMemoryLimitNoDiskUseAllowed', '$clusterTime': {'clusterTime': Timestamp(1744218112, 11), 'signature': {'hash': b'\x1f\x9b\xa7\xc0ox\xf9\x1f\x89\xe3NUVM\xf8\xa6(5\x9b\x84', 'keyId': 7438508406027059201}}, 'operationTime': Timestamp(1744218112, 11)}

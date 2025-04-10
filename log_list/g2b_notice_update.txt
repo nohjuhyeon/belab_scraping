@@ -294,3 +294,253 @@ TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
 ----------------email push started----------------
 인공지능 메일이 성공적으로 발송되었습니다.
 이메일 전송 완료!
+2025-04-09 16:00:02.963302
+commit complete!
+----------------공고 확인 시작----------------
+2025-04-09 16:00:02.975890
+나라장터 공고를 찾습니다.
+item_list가 'item_list.json'로 저장되었습니다.
+총 공고 수 :  2595
+100
+200
+300
+400
+500
+600
+700
+800
+900
+1000
+1100
+1200
+1300
+1400
+1500
+Failed to delete /app/belab_scraping/notice_list/제안요청서(문해력 수리력 성취기준 개발 관련 정책연구).hwp. Reason: [Errno 2] No such file or directory: '/app/belab_scraping/notice_list/제안요청서(문해력 수리력 성취기준 개발 관련 정책연구).hwp'
+1600
+1700
+1800
+1900
+2000
+2100
+2200
+2300
+2400
+2500
+저장한 공고 수: 1210
+전체 공고 | 시작 날짜 : 2025-04-08 00:00:00 / 종료 날짜 : 2025-04-10 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터 | 데이터 업데이트 및 정렬 완료.
+클라우드 | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP, 클라우드 | 데이터 업데이트 및 정렬 완료.
+2025-04-09 19:39:18.774919
+commit complete!
+공고 확인 완료!
+2025-04-09 16:00:02.783959
+commit complete!
+----------------공고 확인 시작----------------
+2025-04-09 16:00:02.797297
+나라장터 공고를 찾습니다.
+item_list가 'item_list.json'로 저장되었습니다.
+총 공고 수 :  2595
+100
+200
+300
+400
+500
+600
+700
+800
+900
+1000
+1100
+1200
+1300
+1400
+1500
+1600
+1700
+1800
+1900
+2000
+2100
+2200
+2300
+2400
+2500
+저장한 공고 수: 1105
+전체 공고 | 시작 날짜 : 2025-04-08 00:00:00 / 종료 날짜 : 2025-04-10 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터 | 데이터 업데이트 및 정렬 완료.
+클라우드 | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP, 클라우드 | 데이터 업데이트 및 정렬 완료.
+2025-04-09 19:55:30.832199
+commit complete!
+공고 확인 완료!
+2025-04-09 20:00:03.792154
+commit complete!
+----------------공고 확인 시작----------------
+2025-04-09 20:00:03.804406
+나라장터 공고를 찾습니다.
+item_list가 'item_list.json'로 저장되었습니다.
+2025-04-09 20:00:18.880954
+commit complete!
+공고 확인 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 53, in <module>
+    notice_list = notice_collection(existing_df)
+  File "/app/belab_scraping/g2b_notice_check/g2b_notice.py", line 252, in notice_collection
+    notice_list = notice_search(notice_list, notice_ids, folder_path)
+  File "/app/belab_scraping/g2b_notice_check/g2b_notice.py", line 107, in notice_search
+    browser = init_browser(chrome_options)
+  File "/app/belab_scraping/function_list/basic_options.py", line 87, in init_browser
+    webdriver_manager_directory = GeckoDriverManager().install()
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/firefox.py", line 39, in install
+    driver_path = self._get_driver_binary_path(self.driver)
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/core/manager.py", line 41, in _get_driver_binary_path
+    binary_path = self._cache_manager.save_file_to_cache(driver, file)
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/core/driver_cache.py", line 54, in save_file_to_cache
+    files = self.unpack_archive(archive, path)
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/core/driver_cache.py", line 49, in unpack_archive
+    return self._file_manager.unpack_archive(archive, path)
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/core/file_manager.py", line 59, in unpack_archive
+    return self.__extract_tar_file(archive_file, target_dir)
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/core/file_manager.py", line 92, in __extract_tar_file
+    tar.extractall(to_directory)
+  File "/usr/local/lib/python3.10/tarfile.py", line 2293, in extractall
+    self._extract_one(tarinfo, path, set_attrs=not tarinfo.isdir(),
+  File "/usr/local/lib/python3.10/tarfile.py", line 2360, in _extract_one
+    self._handle_fatal_error(e)
+  File "/usr/local/lib/python3.10/tarfile.py", line 2356, in _extract_one
+    self._extract_member(tarinfo, os.path.join(path, tarinfo.name),
+  File "/usr/local/lib/python3.10/tarfile.py", line 2439, in _extract_member
+    self.makefile(tarinfo, targetpath)
+  File "/usr/local/lib/python3.10/tarfile.py", line 2484, in makefile
+    with bltn_open(targetpath, "wb") as target:
+OSError: [Errno 26] Text file busy: '/root/.wdm/drivers/geckodriver/linux64/v0.36.0/geckodriver'
+2025-04-09 20:00:03.792211
+commit complete!
+----------------공고 확인 시작----------------
+2025-04-09 20:00:03.804775
+나라장터 공고를 찾습니다.
+item_list가 'item_list.json'로 저장되었습니다.
+총 공고 수 :  2595
+100
+200
+300
+400
+500
+600
+700
+800
+900
+1000
+1100
+1200
+1300
+1400
+1500
+1600
+1700
+1800
+1900
+2000
+2100
+2200
+2300
+2400
+2500
+저장한 공고 수: 91
+전체 공고 | 시작 날짜 : 2025-04-08 00:00:00 / 종료 날짜 : 2025-04-10 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터 | 데이터 업데이트 및 정렬 완료.
+클라우드 | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP, 클라우드 | 데이터 업데이트 및 정렬 완료.
+2025-04-09 20:13:05.662005
+commit complete!
+공고 확인 완료!
+2025-04-10 00:00:02.918734
+commit complete!
+----------------공고 확인 시작----------------
+2025-04-10 00:00:02.931519
+나라장터 공고를 찾습니다.
+item_list가 'item_list.json'로 저장되었습니다.
+2025-04-10 00:00:17.359049
+commit complete!
+공고 확인 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 53, in <module>
+    notice_list = notice_collection(existing_df)
+  File "/app/belab_scraping/g2b_notice_check/g2b_notice.py", line 252, in notice_collection
+    notice_list = notice_search(notice_list, notice_ids, folder_path)
+  File "/app/belab_scraping/g2b_notice_check/g2b_notice.py", line 107, in notice_search
+    browser = init_browser(chrome_options)
+  File "/app/belab_scraping/function_list/basic_options.py", line 87, in init_browser
+    webdriver_manager_directory = GeckoDriverManager().install()
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/firefox.py", line 39, in install
+    driver_path = self._get_driver_binary_path(self.driver)
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/core/manager.py", line 41, in _get_driver_binary_path
+    binary_path = self._cache_manager.save_file_to_cache(driver, file)
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/core/driver_cache.py", line 54, in save_file_to_cache
+    files = self.unpack_archive(archive, path)
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/core/driver_cache.py", line 49, in unpack_archive
+    return self._file_manager.unpack_archive(archive, path)
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/core/file_manager.py", line 59, in unpack_archive
+    return self.__extract_tar_file(archive_file, target_dir)
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/core/file_manager.py", line 92, in __extract_tar_file
+    tar.extractall(to_directory)
+  File "/usr/local/lib/python3.10/tarfile.py", line 2293, in extractall
+    self._extract_one(tarinfo, path, set_attrs=not tarinfo.isdir(),
+  File "/usr/local/lib/python3.10/tarfile.py", line 2360, in _extract_one
+    self._handle_fatal_error(e)
+  File "/usr/local/lib/python3.10/tarfile.py", line 2356, in _extract_one
+    self._extract_member(tarinfo, os.path.join(path, tarinfo.name),
+  File "/usr/local/lib/python3.10/tarfile.py", line 2439, in _extract_member
+    self.makefile(tarinfo, targetpath)
+  File "/usr/local/lib/python3.10/tarfile.py", line 2484, in makefile
+    with bltn_open(targetpath, "wb") as target:
+OSError: [Errno 26] Text file busy: '/root/.wdm/drivers/geckodriver/linux64/v0.36.0/geckodriver'
+2025-04-10 00:00:02.918697
+commit complete!
+----------------공고 확인 시작----------------
+2025-04-10 00:00:02.931826
+나라장터 공고를 찾습니다.
+item_list가 'item_list.json'로 저장되었습니다.
+총 공고 수 :  2076
+100
+200
+300
+400
+500
+600
+700
+800
+900
+1000
+1100
+1200
+1300
+1400
+1500
+1600
+1700
+1800
+1900
+2000
+저장한 공고 수: 673
+전체 공고 | 시작 날짜 : 2025-04-09 00:00:00 / 종료 날짜 : 2025-04-11 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터 | 데이터 업데이트 및 정렬 완료.
+클라우드 | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP, 클라우드 | 데이터 업데이트 및 정렬 완료.
+2025-04-10 01:33:30.439575
+commit complete!
+공고 확인 완료!
