@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# .env 파일 로드
+# .env 파일 로드 (선택 사항)
 if [ -f .env ]; then
     echo ".env 파일을 로드합니다..."
     export $(grep -v '^#' /app/belab_scraping/.env | xargs)
@@ -10,22 +10,20 @@ else
 fi
 
 # 사용법 출력
-if [ $# -eq 0 ]; then
+if [ $# -lt 4 ]; then
     echo "사용법: $0 '커밋 메시지'"
     exit 1
 fi
 
-# 커밋 메시지
+# 인자로 받은 값 저장
 COMMIT_MESSAGE="$1"
+FOLDER_PATH="$2"
+GITHUB_USERNAME="$3"
+GITHUB_EMAIL="$4"
+GITHUB_TOKEN="$5"
 
 # 로그 파일 경로 설정
-FILE_PATH=${folder_path}
-LOG_FILE="$FILE_PATH/log_list/git_commit.txt"
-
-# GitHub 사용자 정보 (환경 변수에서 가져오기)
-GITHUB_USERNAME=${GITHUB_USERNAME}
-GITHUB_EMAIL=${GITHUB_EMAIL}
-GITHUB_TOKEN=${GITHUB_TOKEN}
+LOG_FILE="$FOLDER_PATH/log_list/git_commit.txt"
 
 # Git 사용자 정보 설정
 git config --global user.email "$GITHUB_EMAIL"
