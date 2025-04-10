@@ -24,6 +24,12 @@ try:
 
     # 로그 파일 설정
     folder_path = os.environ.get("folder_path")  # 환경 변수에서 폴더 경로 가져오기
+    logging.basicConfig(
+        filename=folder_path + '/log_list/scheduler.txt', 
+        level=logging.INFO, 
+        format='%(asctime)s - %(levelname)s - %(message)s'
+    )
+    logging.info("----------------notice check started----------------")  # 스케줄러 시작 로그 기록
 
     # 나라장터 데이터 수집 시작
     print("나라장터 공고를 찾습니다.")
@@ -96,9 +102,10 @@ try:
 
 except (KeyboardInterrupt, SystemExit):
     # 사용자 중단 또는 시스템 종료 시 로그 기록
-    print("notice check shut down.")
+    print("The notice check cannot be finished due to an error.")
 
 finally:
     # GitHub 커밋 실행 및 공고 확인 완료 메시지 출력
     git_commit()
+    logging.info("notice check shut down.")  # 스케줄러 종료 로그 기록
     print("공고 확인 완료!")

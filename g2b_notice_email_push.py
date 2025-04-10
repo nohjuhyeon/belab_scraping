@@ -57,8 +57,8 @@ try:
 except (KeyboardInterrupt, SystemExit):
     # 사용자 중단 또는 시스템 종료 시 로그 기록
     print("notice check shut down.")
-    logging.info("notice check shut down.")  # 스케줄러 종료 로그 기록
 
 finally:
     # 이메일 전송 완료 메시지 출력
+    logging.info("notice check shut down.")  # 스케줄러 종료 로그 기록
     print("이메일 전송 완료!")
