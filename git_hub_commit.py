@@ -2,32 +2,53 @@ import os
 import subprocess
 from datetime import datetime
 from dotenv import load_dotenv
-loaded = load_dotenv(dotenv_path='/app/belab_scraping/.env')
 
+# .env 파일 로드
+load_dotenv(dotenv_path='/app/belab_scraping/.env')
 
 def git_commit():
+    # 환경 변수에서 필요한 값 가져오기
     folder_path = os.environ.get("folder_path")
-    script_path = folder_path + "function_list/git_workflow.sh"
     commit_message = "Auto Commit."
-    github_username=os.environ.get("GITHUB_USERNAME")
-    github_email=os.environ.get("GITHUB_EMAIL")
-    github_token=os.environ.get("GH_TOKEN")
-    print(datetime.now())
+    github_username = os.environ.get("GITHUB_USERNAME")
+    github_email = os.environ.get("GITHUB_EMAIL")
+    github_token = os.environ.get("GH_TOKEN")
+    log_file_path = os.path.join(folder_path, "log_list/git_commit.txt")
+
+    print(f"현재 시간: {datetime.now()}")
 
     try:
-        # 스크립트 실행
-        result = subprocess.run(
-            [script_path, commit_message,folder_path, github_username,github_email,github_token],
-            capture_output=True,  # 표준 출력과 표준 오류를 캡처
-            text=True,  # 출력을 문자열로 처리
-            check=True,  # 명령어 실패 시 예외 발생
-        )
-        # 실행 결과 출력
-        print("commit complete!")
-    except subprocess.CalledProcessError as e:
-        # 오류 발생 시 출력
-        print("An error occurred while executing the script.")
+        # Git 사용자 정보 설정
+        subprocess.run(['git', 'config', '--global', 'user.email', github_email], check=True)
+        subprocess.run(['git', 'config', '--global', 'user.name', github_username], check=True)
 
+        # 변경 사항 스테이징
+        print("변경 사항을 스테이지에 추가합니다...")
+        subprocess.run(['git', 'add', '.'], check=True)
+
+        # 커밋 생성
+        print("커밋을 생성합니다...")
+        subprocess.run(['git', 'commit', '-m', commit_message], check=True)
+
+        # 원격 저장소에서 최신 변경 사항 가져오기
+        print("원격 저장소에서 변경 사항을 가져옵니다...")
+        subprocess.run(['git', 'pull', '--rebase'], check=True)
+
+        # 변경 사항 푸쉬
+        print("변경 사항을 원격 저장소에 푸쉬합니다...")
+        remote_url = f"https://{github_username}:{github_token}@github.com/{github_username}/belab_scraping.git"
+        subprocess.run(['git', 'push', remote_url], check=True)
+
+        # 로그에 완료 메시지 추가
+        with open(log_file_path, "a") as log_file:
+            log_file.write(f"=== Git 작업 종료: {datetime.now()} ===\n")
+
+        print("작업이 완료되었습니다!")
+
+    except subprocess.CalledProcessError as e:
+        print("작업 중 오류가 발생했습니다.")
+        with open(log_file_path, "a") as log_file:
+            log_file.write(f"=== Git 작업 실패: {datetime.now()} ===\n")
 
 if __name__ == "__main__":
     git_commit()
