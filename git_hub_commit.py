@@ -17,7 +17,7 @@ def git_commit():
     try:
         # 스크립트 실행
         result = subprocess.run(
-            [script_path, commit_message,github_username,github_email,github_token],
+            [script_path, commit_message,folder_path, github_username,github_email,github_token],
             capture_output=True,  # 표준 출력과 표준 오류를 캡처
             text=True,  # 출력을 문자열로 처리
             check=True,  # 명령어 실패 시 예외 발생
