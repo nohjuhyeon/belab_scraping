@@ -1,0 +1,257 @@
+/usr/local/lib/python3.10/site-packages/huggingface_hub/file_download.py:795: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/usr/local/lib/python3.10/site-packages/transformers/modeling_utils.py:460: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(checkpoint_file, map_location="cpu")
+[Kss]: Oh! You have mecab in your environment. Kss will take this as a backend! :D
+
+2025-04-10 18:00:08.057173
+An error occurred while executing the script.
+----------------뉴스 요약 업데이트 시작----------------
+2025-04-10 18:00:08.059085
+naver news crawling finish
+crawling count :  408
+2025-04-10 18:13:18.643171
+An error occurred while executing the script.
+뉴스 요약 업데이트 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 36, in <module>
+    total_update()
+  File "/app/belab_scraping/summary_update.py", line 12, in total_update
+    naver_news()
+  File "/app/belab_scraping/news_letter/naver_new.py", line 192, in naver_news
+    duplicated_data_delete(collection)  # 중복 데이터 삭제
+  File "/app/belab_scraping/news_letter/naver_new.py", line 177, in duplicated_data_delete
+    duplicates = list(collection.aggregate(pipeline))
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/collection.py", line 2958, in aggregate
+    return self._aggregate(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/collection.py", line 2866, in _aggregate
+    return self._database.client._retryable_read(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1863, in _retryable_read
+    return self._retry_internal(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1830, in _retry_internal
+    ).run()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2554, in run
+    return self._read() if self._is_read else self._write()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2697, in _read
+    return self._func(self._session, self._server, conn, read_pref)  # type: ignore
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/aggregation.py", line 164, in get_cursor
+    result = conn.command(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/helpers.py", line 45, in inner
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/pool.py", line 538, in command
+    return command(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/network.py", line 218, in command
+    helpers_shared._check_command_response(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/helpers_shared.py", line 247, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: PlanExecutor error during aggregation :: caused by :: Exceeded memory limit for $group, but didn't allow external spilling; pass allowDiskUse:true to opt in, full error: {'ok': 0.0, 'errmsg': "PlanExecutor error during aggregation :: caused by :: Exceeded memory limit for $group, but didn't allow external spilling; pass allowDiskUse:true to opt in", 'code': 292, 'codeName': 'QueryExceededMemoryLimitNoDiskUseAllowed', '$clusterTime': {'clusterTime': Timestamp(1744276398, 8), 'signature': {'hash': b'B\x9d\xae\xe3\xa6\xe7\xecf\x1dK\x01\xe5\xbeF\xddOT\r\rV', 'keyId': 7438508406027059201}}, 'operationTime': Timestamp(1744276398, 8)}
+/usr/local/lib/python3.10/site-packages/huggingface_hub/file_download.py:795: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/usr/local/lib/python3.10/site-packages/transformers/modeling_utils.py:460: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(checkpoint_file, map_location="cpu")
+[Kss]: Oh! You have mecab in your environment. Kss will take this as a backend! :D
+
+2025-04-10 22:00:07.199144
+An error occurred while executing the script.
+----------------뉴스 요약 업데이트 시작----------------
+2025-04-10 22:00:07.201432
+naver news crawling finish
+crawling count :  76
+2025-04-10 22:02:47.985316
+An error occurred while executing the script.
+뉴스 요약 업데이트 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 36, in <module>
+    total_update()
+  File "/app/belab_scraping/summary_update.py", line 12, in total_update
+    naver_news()
+  File "/app/belab_scraping/news_letter/naver_new.py", line 192, in naver_news
+    duplicated_data_delete(collection)  # 중복 데이터 삭제
+  File "/app/belab_scraping/news_letter/naver_new.py", line 177, in duplicated_data_delete
+    duplicates = list(collection.aggregate(pipeline))
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/collection.py", line 2958, in aggregate
+    return self._aggregate(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/collection.py", line 2866, in _aggregate
+    return self._database.client._retryable_read(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1863, in _retryable_read
+    return self._retry_internal(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1830, in _retry_internal
+    ).run()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2554, in run
+    return self._read() if self._is_read else self._write()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2697, in _read
+    return self._func(self._session, self._server, conn, read_pref)  # type: ignore
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/aggregation.py", line 164, in get_cursor
+    result = conn.command(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/helpers.py", line 45, in inner
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/pool.py", line 538, in command
+    return command(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/network.py", line 218, in command
+    helpers_shared._check_command_response(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/helpers_shared.py", line 247, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: PlanExecutor error during aggregation :: caused by :: Exceeded memory limit for $group, but didn't allow external spilling; pass allowDiskUse:true to opt in, full error: {'ok': 0.0, 'errmsg': "PlanExecutor error during aggregation :: caused by :: Exceeded memory limit for $group, but didn't allow external spilling; pass allowDiskUse:true to opt in", 'code': 292, 'codeName': 'QueryExceededMemoryLimitNoDiskUseAllowed', '$clusterTime': {'clusterTime': Timestamp(1744290167, 10), 'signature': {'hash': b',\x9cD+G\xaa\r\x1eQSm{k\x9bv\xe0\xe8Q\x96,', 'keyId': 7438508406027059201}}, 'operationTime': Timestamp(1744290167, 10)}
+/usr/local/lib/python3.10/site-packages/huggingface_hub/file_download.py:795: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/usr/local/lib/python3.10/site-packages/transformers/modeling_utils.py:460: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(checkpoint_file, map_location="cpu")
+[Kss]: Oh! You have mecab in your environment. Kss will take this as a backend! :D
+
+2025-04-11 02:00:07.079179
+An error occurred while executing the script.
+----------------뉴스 요약 업데이트 시작----------------
+2025-04-11 02:00:07.081124
+naver news crawling finish
+crawling count :  27
+2025-04-11 02:01:09.942636
+An error occurred while executing the script.
+뉴스 요약 업데이트 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 36, in <module>
+    total_update()
+  File "/app/belab_scraping/summary_update.py", line 12, in total_update
+    naver_news()
+  File "/app/belab_scraping/news_letter/naver_new.py", line 192, in naver_news
+    duplicated_data_delete(collection)  # 중복 데이터 삭제
+  File "/app/belab_scraping/news_letter/naver_new.py", line 177, in duplicated_data_delete
+    duplicates = list(collection.aggregate(pipeline))
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/collection.py", line 2958, in aggregate
+    return self._aggregate(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/collection.py", line 2866, in _aggregate
+    return self._database.client._retryable_read(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1863, in _retryable_read
+    return self._retry_internal(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1830, in _retry_internal
+    ).run()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2554, in run
+    return self._read() if self._is_read else self._write()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2697, in _read
+    return self._func(self._session, self._server, conn, read_pref)  # type: ignore
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/aggregation.py", line 164, in get_cursor
+    result = conn.command(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/helpers.py", line 45, in inner
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/pool.py", line 538, in command
+    return command(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/network.py", line 218, in command
+    helpers_shared._check_command_response(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/helpers_shared.py", line 247, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: PlanExecutor error during aggregation :: caused by :: Exceeded memory limit for $group, but didn't allow external spilling; pass allowDiskUse:true to opt in, full error: {'ok': 0.0, 'errmsg': "PlanExecutor error during aggregation :: caused by :: Exceeded memory limit for $group, but didn't allow external spilling; pass allowDiskUse:true to opt in", 'code': 292, 'codeName': 'QueryExceededMemoryLimitNoDiskUseAllowed', '$clusterTime': {'clusterTime': Timestamp(1744304469, 11), 'signature': {'hash': b'\r\x86\xdb\xd2}5\x02 \xbb\xb9\xae\xfc\xb1\x95\xe0\xcdal1/', 'keyId': 7438508406027059201}}, 'operationTime': Timestamp(1744304469, 11)}
+/usr/local/lib/python3.10/site-packages/huggingface_hub/file_download.py:795: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/usr/local/lib/python3.10/site-packages/transformers/modeling_utils.py:460: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(checkpoint_file, map_location="cpu")
+[Kss]: Oh! You have mecab in your environment. Kss will take this as a backend! :D
+
+2025-04-11 06:00:07.480082
+An error occurred while executing the script.
+----------------뉴스 요약 업데이트 시작----------------
+2025-04-11 06:00:07.482044
+naver news crawling finish
+crawling count :  32
+2025-04-11 06:01:21.811246
+An error occurred while executing the script.
+뉴스 요약 업데이트 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 36, in <module>
+    total_update()
+  File "/app/belab_scraping/summary_update.py", line 12, in total_update
+    naver_news()
+  File "/app/belab_scraping/news_letter/naver_new.py", line 192, in naver_news
+    duplicated_data_delete(collection)  # 중복 데이터 삭제
+  File "/app/belab_scraping/news_letter/naver_new.py", line 177, in duplicated_data_delete
+    duplicates = list(collection.aggregate(pipeline))
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/collection.py", line 2958, in aggregate
+    return self._aggregate(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/collection.py", line 2866, in _aggregate
+    return self._database.client._retryable_read(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1863, in _retryable_read
+    return self._retry_internal(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1830, in _retry_internal
+    ).run()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2554, in run
+    return self._read() if self._is_read else self._write()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2697, in _read
+    return self._func(self._session, self._server, conn, read_pref)  # type: ignore
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/aggregation.py", line 164, in get_cursor
+    result = conn.command(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/helpers.py", line 45, in inner
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/pool.py", line 538, in command
+    return command(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/network.py", line 218, in command
+    helpers_shared._check_command_response(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/helpers_shared.py", line 247, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: PlanExecutor error during aggregation :: caused by :: Exceeded memory limit for $group, but didn't allow external spilling; pass allowDiskUse:true to opt in, full error: {'ok': 0.0, 'errmsg': "PlanExecutor error during aggregation :: caused by :: Exceeded memory limit for $group, but didn't allow external spilling; pass allowDiskUse:true to opt in", 'code': 292, 'codeName': 'QueryExceededMemoryLimitNoDiskUseAllowed', '$clusterTime': {'clusterTime': Timestamp(1744318881, 10), 'signature': {'hash': b'|\xb4\xc3;\xb1\x9aLv\x93\xfe\xec\xbf\x8c\xe7.\xe7\xf1C\xe5L', 'keyId': 7438508406027059201}}, 'operationTime': Timestamp(1744318881, 10)}
+/usr/local/lib/python3.10/site-packages/huggingface_hub/file_download.py:795: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/usr/local/lib/python3.10/site-packages/transformers/modeling_utils.py:460: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(checkpoint_file, map_location="cpu")
+[Kss]: Oh! You have mecab in your environment. Kss will take this as a backend! :D
+
+2025-04-11 10:00:07.686089
+An error occurred while executing the script.
+----------------뉴스 요약 업데이트 시작----------------
+2025-04-11 10:00:07.688091
+2025-04-11 11:34:45.078429
+An error occurred while executing the script.
+뉴스 요약 업데이트 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 36, in <module>
+    total_update()
+  File "/app/belab_scraping/summary_update.py", line 12, in total_update
+    naver_news()
+  File "/app/belab_scraping/news_letter/naver_new.py", line 191, in naver_news
+    news_contents(collection, tokenizer, model)  # 뉴스 상세 데이터 수집
+  File "/app/belab_scraping/news_letter/naver_new.py", line 99, in news_contents
+    for i in news_list:
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/cursor.py", line 1281, in __next__
+    return self.next()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/cursor.py", line 1257, in next
+    if len(self._data) or self._refresh():
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/cursor.py", line 1228, in _refresh
+    self._send_message(g)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/cursor.py", line 1100, in _send_message
+    response = client._run_operation(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1754, in _run_operation
+    return self._retryable_read(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1863, in _retryable_read
+    return self._retry_internal(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1830, in _retry_internal
+    ).run()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2554, in run
+    return self._read() if self._is_read else self._write()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2697, in _read
+    return self._func(self._session, self._server, conn, read_pref)  # type: ignore
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1745, in _cmd
+    return server.run_operation(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/helpers.py", line 45, in inner
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/server.py", line 227, in run_operation
+    _check_command_response(first, conn.max_wire_version)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/helpers_shared.py", line 245, in _check_command_response
+    raise CursorNotFound(errmsg, code, response, max_wire_version)
+pymongo.errors.CursorNotFound: cursor id 399018718635209314 not found, full error: {'ok': 0.0, 'errmsg': 'cursor id 399018718635209314 not found', 'code': 43, 'codeName': 'CursorNotFound', '$clusterTime': {'clusterTime': Timestamp(1744338885, 2), 'signature': {'hash': b'\xc3\xa2\x9e\x18u\xf4,~\x8e\x91Z!\x13N\xcb\xf2\xc0\xd8\xa1\x03', 'keyId': 7438508406027059201}}, 'operationTime': Timestamp(1744338885, 2)}
