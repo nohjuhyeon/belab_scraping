@@ -255,3 +255,694 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.10/site-packages/pymongo/helpers_shared.py", line 245, in _check_command_response
     raise CursorNotFound(errmsg, code, response, max_wire_version)
 pymongo.errors.CursorNotFound: cursor id 399018718635209314 not found, full error: {'ok': 0.0, 'errmsg': 'cursor id 399018718635209314 not found', 'code': 43, 'codeName': 'CursorNotFound', '$clusterTime': {'clusterTime': Timestamp(1744338885, 2), 'signature': {'hash': b'\xc3\xa2\x9e\x18u\xf4,~\x8e\x91Z!\x13N\xcb\xf2\xc0\xd8\xa1\x03', 'keyId': 7438508406027059201}}, 'operationTime': Timestamp(1744338885, 2)}
+fatal: not a git repository (or any of the parent directories): .git
+/usr/local/lib/python3.10/site-packages/huggingface_hub/file_download.py:795: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/usr/local/lib/python3.10/site-packages/transformers/modeling_utils.py:460: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(checkpoint_file, map_location="cpu")
+[Kss]: Oh! You have mecab in your environment. Kss will take this as a backend! :D
+
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-11 14:00:07.510100
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------뉴스 요약 업데이트 시작----------------
+2025-04-11 14:00:07.517264
+현재 시간: 2025-04-11 14:03:11.240115
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+뉴스 요약 업데이트 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 36, in <module>
+    total_update()
+  File "/app/belab_scraping/summary_update.py", line 12, in total_update
+    naver_news()
+  File "/app/belab_scraping/news_letter/naver_new.py", line 191, in naver_news
+    news_contents(collection, tokenizer, model)  # 뉴스 상세 데이터 수집
+  File "/app/belab_scraping/news_letter/naver_new.py", line 100, in news_contents
+    browser.get(i['news_link'])
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 393, in get
+    self.execute(Command.GET, {"url": url})
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 384, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: Tried to run command without establishing a connection
+
+fatal: not a git repository (or any of the parent directories): .git
+/usr/local/lib/python3.10/site-packages/huggingface_hub/file_download.py:795: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/usr/local/lib/python3.10/site-packages/transformers/modeling_utils.py:460: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(checkpoint_file, map_location="cpu")
+[Kss]: Oh! You have mecab in your environment. Kss will take this as a backend! :D
+
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-11 18:00:08.146857
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------뉴스 요약 업데이트 시작----------------
+2025-04-11 18:00:08.153901
+현재 시간: 2025-04-11 20:08:30.794855
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+뉴스 요약 업데이트 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 36, in <module>
+    total_update()
+  File "/app/belab_scraping/summary_update.py", line 12, in total_update
+    naver_news()
+  File "/app/belab_scraping/news_letter/naver_new.py", line 191, in naver_news
+    news_contents(collection, tokenizer, model)  # 뉴스 상세 데이터 수집
+  File "/app/belab_scraping/news_letter/naver_new.py", line 99, in news_contents
+    for i in news_list:
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/cursor.py", line 1281, in __next__
+    return self.next()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/cursor.py", line 1257, in next
+    if len(self._data) or self._refresh():
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/cursor.py", line 1228, in _refresh
+    self._send_message(g)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/cursor.py", line 1100, in _send_message
+    response = client._run_operation(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1754, in _run_operation
+    return self._retryable_read(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1863, in _retryable_read
+    return self._retry_internal(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1830, in _retry_internal
+    ).run()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2554, in run
+    return self._read() if self._is_read else self._write()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2697, in _read
+    return self._func(self._session, self._server, conn, read_pref)  # type: ignore
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1745, in _cmd
+    return server.run_operation(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/helpers.py", line 45, in inner
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/server.py", line 227, in run_operation
+    _check_command_response(first, conn.max_wire_version)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/helpers_shared.py", line 245, in _check_command_response
+    raise CursorNotFound(errmsg, code, response, max_wire_version)
+pymongo.errors.CursorNotFound: cursor id 934498060559988578 not found, full error: {'ok': 0.0, 'errmsg': 'cursor id 934498060559988578 not found', 'code': 43, 'codeName': 'CursorNotFound', '$clusterTime': {'clusterTime': Timestamp(1744369710, 6), 'signature': {'hash': b'\x91\xfd\xd1\xe0\xe7"\x89,\xde\x0c\x1b\xa8aZ\xdc`A\xb5\x96p', 'keyId': 7438508406027059201}}, 'operationTime': Timestamp(1744369710, 6)}
+fatal: not a git repository (or any of the parent directories): .git
+/usr/local/lib/python3.10/site-packages/huggingface_hub/file_download.py:795: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/usr/local/lib/python3.10/site-packages/transformers/modeling_utils.py:460: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(checkpoint_file, map_location="cpu")
+[Kss]: Oh! You have mecab in your environment. Kss will take this as a backend! :D
+
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-11 22:00:08.205268
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------뉴스 요약 업데이트 시작----------------
+2025-04-11 22:00:08.211529
+naver news crawling finish
+crawling count :  320
+현재 시간: 2025-04-11 22:11:39.033029
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+뉴스 요약 업데이트 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 36, in <module>
+    total_update()
+  File "/app/belab_scraping/summary_update.py", line 12, in total_update
+    naver_news()
+  File "/app/belab_scraping/news_letter/naver_new.py", line 192, in naver_news
+    duplicated_data_delete(collection)  # 중복 데이터 삭제
+  File "/app/belab_scraping/news_letter/naver_new.py", line 177, in duplicated_data_delete
+    duplicates = list(collection.aggregate(pipeline))
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/collection.py", line 2958, in aggregate
+    return self._aggregate(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/collection.py", line 2866, in _aggregate
+    return self._database.client._retryable_read(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1863, in _retryable_read
+    return self._retry_internal(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1830, in _retry_internal
+    ).run()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2554, in run
+    return self._read() if self._is_read else self._write()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2697, in _read
+    return self._func(self._session, self._server, conn, read_pref)  # type: ignore
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/aggregation.py", line 164, in get_cursor
+    result = conn.command(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/helpers.py", line 45, in inner
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/pool.py", line 538, in command
+    return command(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/network.py", line 218, in command
+    helpers_shared._check_command_response(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/helpers_shared.py", line 247, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: PlanExecutor error during aggregation :: caused by :: Exceeded memory limit for $group, but didn't allow external spilling; pass allowDiskUse:true to opt in, full error: {'ok': 0.0, 'errmsg': "PlanExecutor error during aggregation :: caused by :: Exceeded memory limit for $group, but didn't allow external spilling; pass allowDiskUse:true to opt in", 'code': 292, 'codeName': 'QueryExceededMemoryLimitNoDiskUseAllowed', '$clusterTime': {'clusterTime': Timestamp(1744377098, 12), 'signature': {'hash': b'6\n\x19\xb3"\xfb\xe60\x88\xd5<^+\xc3\xb0\x99MO\xa1\xd4', 'keyId': 7438508406027059201}}, 'operationTime': Timestamp(1744377098, 12)}
+fatal: not a git repository (or any of the parent directories): .git
+/usr/local/lib/python3.10/site-packages/huggingface_hub/file_download.py:795: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/usr/local/lib/python3.10/site-packages/transformers/modeling_utils.py:460: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(checkpoint_file, map_location="cpu")
+[Kss]: Oh! You have mecab in your environment. Kss will take this as a backend! :D
+
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-12 02:00:07.387051
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------뉴스 요약 업데이트 시작----------------
+2025-04-12 02:00:07.393908
+현재 시간: 2025-04-12 02:02:44.733760
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+뉴스 요약 업데이트 완료!
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 516, in getresponse
+    httplib_response = super().getresponse()
+  File "/usr/local/lib/python3.10/http/client.py", line 1375, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.10/http/client.py", line 318, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.10/http/client.py", line 279, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/local/lib/python3.10/socket.py", line 717, in readinto
+    return self._sock.recv_into(b)
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 36, in <module>
+    total_update()
+  File "/app/belab_scraping/summary_update.py", line 12, in total_update
+    naver_news()
+  File "/app/belab_scraping/news_letter/naver_new.py", line 191, in naver_news
+    news_contents(collection, tokenizer, model)  # 뉴스 상세 데이터 수집
+  File "/app/belab_scraping/news_letter/naver_new.py", line 100, in news_contents
+    browser.get(i['news_link'])
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 393, in get
+    self.execute(Command.GET, {"url": url})
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 382, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 404, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 428, in _request
+    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/_request_methods.py", line 143, in request
+    return self.request_encode_body(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/_request_methods.py", line 278, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/poolmanager.py", line 443, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 536, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=47307): Read timed out. (read timeout=120)
+fatal: not a git repository (or any of the parent directories): .git
+/usr/local/lib/python3.10/site-packages/huggingface_hub/file_download.py:795: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/usr/local/lib/python3.10/site-packages/transformers/modeling_utils.py:460: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(checkpoint_file, map_location="cpu")
+[Kss]: Oh! You have mecab in your environment. Kss will take this as a backend! :D
+
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-12 06:00:07.517449
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------뉴스 요약 업데이트 시작----------------
+2025-04-12 06:00:07.524831
+naver news crawling finish
+crawling count :  25
+현재 시간: 2025-04-12 06:01:17.173522
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+뉴스 요약 업데이트 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 36, in <module>
+    total_update()
+  File "/app/belab_scraping/summary_update.py", line 12, in total_update
+    naver_news()
+  File "/app/belab_scraping/news_letter/naver_new.py", line 192, in naver_news
+    duplicated_data_delete(collection)  # 중복 데이터 삭제
+  File "/app/belab_scraping/news_letter/naver_new.py", line 177, in duplicated_data_delete
+    duplicates = list(collection.aggregate(pipeline))
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/collection.py", line 2958, in aggregate
+    return self._aggregate(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/collection.py", line 2866, in _aggregate
+    return self._database.client._retryable_read(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1863, in _retryable_read
+    return self._retry_internal(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1830, in _retry_internal
+    ).run()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2554, in run
+    return self._read() if self._is_read else self._write()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2697, in _read
+    return self._func(self._session, self._server, conn, read_pref)  # type: ignore
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/aggregation.py", line 164, in get_cursor
+    result = conn.command(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/helpers.py", line 45, in inner
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/pool.py", line 538, in command
+    return command(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/network.py", line 218, in command
+    helpers_shared._check_command_response(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/helpers_shared.py", line 247, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: PlanExecutor error during aggregation :: caused by :: Exceeded memory limit for $group, but didn't allow external spilling; pass allowDiskUse:true to opt in, full error: {'ok': 0.0, 'errmsg': "PlanExecutor error during aggregation :: caused by :: Exceeded memory limit for $group, but didn't allow external spilling; pass allowDiskUse:true to opt in", 'code': 292, 'codeName': 'QueryExceededMemoryLimitNoDiskUseAllowed', '$clusterTime': {'clusterTime': Timestamp(1744405277, 3), 'signature': {'hash': b'\x0b-\xd8Io\x17\x1ap\xd8\xa7\x15\xa1\x84\xd4D\xf8n\xd4t\x17', 'keyId': 7438508406027059201}}, 'operationTime': Timestamp(1744405277, 3)}
+fatal: not a git repository (or any of the parent directories): .git
+/usr/local/lib/python3.10/site-packages/huggingface_hub/file_download.py:795: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/usr/local/lib/python3.10/site-packages/transformers/modeling_utils.py:460: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(checkpoint_file, map_location="cpu")
+[Kss]: Oh! You have mecab in your environment. Kss will take this as a backend! :D
+
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-12 10:00:07.026004
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------뉴스 요약 업데이트 시작----------------
+2025-04-12 10:00:07.032973
+naver news crawling finish
+crawling count :  70
+현재 시간: 2025-04-12 10:03:41.091921
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+뉴스 요약 업데이트 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 36, in <module>
+    total_update()
+  File "/app/belab_scraping/summary_update.py", line 12, in total_update
+    naver_news()
+  File "/app/belab_scraping/news_letter/naver_new.py", line 192, in naver_news
+    duplicated_data_delete(collection)  # 중복 데이터 삭제
+  File "/app/belab_scraping/news_letter/naver_new.py", line 177, in duplicated_data_delete
+    duplicates = list(collection.aggregate(pipeline))
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/collection.py", line 2958, in aggregate
+    return self._aggregate(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/collection.py", line 2866, in _aggregate
+    return self._database.client._retryable_read(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1863, in _retryable_read
+    return self._retry_internal(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1830, in _retry_internal
+    ).run()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2554, in run
+    return self._read() if self._is_read else self._write()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2697, in _read
+    return self._func(self._session, self._server, conn, read_pref)  # type: ignore
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/aggregation.py", line 164, in get_cursor
+    result = conn.command(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/helpers.py", line 45, in inner
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/pool.py", line 538, in command
+    return command(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/network.py", line 218, in command
+    helpers_shared._check_command_response(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/helpers_shared.py", line 247, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: PlanExecutor error during aggregation :: caused by :: Exceeded memory limit for $group, but didn't allow external spilling; pass allowDiskUse:true to opt in, full error: {'ok': 0.0, 'errmsg': "PlanExecutor error during aggregation :: caused by :: Exceeded memory limit for $group, but didn't allow external spilling; pass allowDiskUse:true to opt in", 'code': 292, 'codeName': 'QueryExceededMemoryLimitNoDiskUseAllowed', '$clusterTime': {'clusterTime': Timestamp(1744419821, 1), 'signature': {'hash': b'c\xe1-\xddP=\xf0\x9c\xfb\x8c(/\xc4\xcd\xd8f\xf8[r\xf7', 'keyId': 7438508406027059201}}, 'operationTime': Timestamp(1744419821, 1)}
+fatal: not a git repository (or any of the parent directories): .git
+/usr/local/lib/python3.10/site-packages/huggingface_hub/file_download.py:795: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/usr/local/lib/python3.10/site-packages/transformers/modeling_utils.py:460: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(checkpoint_file, map_location="cpu")
+[Kss]: Oh! You have mecab in your environment. Kss will take this as a backend! :D
+
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-12 14:00:07.389554
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------뉴스 요약 업데이트 시작----------------
+2025-04-12 14:00:07.396121
+naver news crawling finish
+crawling count :  35
+현재 시간: 2025-04-12 16:23:20.248836
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+뉴스 요약 업데이트 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 36, in <module>
+    total_update()
+  File "/app/belab_scraping/summary_update.py", line 12, in total_update
+    naver_news()
+  File "/app/belab_scraping/news_letter/naver_new.py", line 192, in naver_news
+    duplicated_data_delete(collection)  # 중복 데이터 삭제
+  File "/app/belab_scraping/news_letter/naver_new.py", line 177, in duplicated_data_delete
+    duplicates = list(collection.aggregate(pipeline))
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/collection.py", line 2958, in aggregate
+    return self._aggregate(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/collection.py", line 2866, in _aggregate
+    return self._database.client._retryable_read(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1863, in _retryable_read
+    return self._retry_internal(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1830, in _retry_internal
+    ).run()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2554, in run
+    return self._read() if self._is_read else self._write()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2697, in _read
+    return self._func(self._session, self._server, conn, read_pref)  # type: ignore
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/aggregation.py", line 164, in get_cursor
+    result = conn.command(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/helpers.py", line 45, in inner
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/pool.py", line 538, in command
+    return command(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/network.py", line 218, in command
+    helpers_shared._check_command_response(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/helpers_shared.py", line 247, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: PlanExecutor error during aggregation :: caused by :: Exceeded memory limit for $group, but didn't allow external spilling; pass allowDiskUse:true to opt in, full error: {'ok': 0.0, 'errmsg': "PlanExecutor error during aggregation :: caused by :: Exceeded memory limit for $group, but didn't allow external spilling; pass allowDiskUse:true to opt in", 'code': 292, 'codeName': 'QueryExceededMemoryLimitNoDiskUseAllowed', '$clusterTime': {'clusterTime': Timestamp(1744442600, 3), 'signature': {'hash': b'\x13>\xb0\x90\x17\xd1\xd9S_2\xee\xa7\x04\x964\xe4\xde\x7f\x92A', 'keyId': 7438508406027059201}}, 'operationTime': Timestamp(1744442600, 3)}
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-12 18:00:11.928882
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------뉴스 요약 업데이트 시작----------------
+2025-04-12 18:00:11.939974
+현재 시간: 2025-04-12 18:00:18.094402
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+뉴스 요약 업데이트 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 36, in <module>
+    total_update()
+  File "/app/belab_scraping/summary_update.py", line 12, in total_update
+    naver_news()
+  File "/app/belab_scraping/news_letter/naver_new.py", line 187, in naver_news
+    collection = mongo_setting('news_scraping', 'naver_news')
+  File "/app/belab_scraping/function_list/basic_options.py", line 111, in mongo_setting
+    mongo_client = MongoClient(mongo_url)  # MongoDB 클라이언트 생성
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 780, in __init__
+    res = uri_parser.parse_uri(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/uri_parser.py", line 558, in parse_uri
+    nodes = dns_resolver.get_hosts()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 140, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 120, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 114, in _resolve_uri
+    raise ConfigurationError(str(exc)) from None
+pymongo.errors.ConfigurationError: All nameservers failed to answer the query _mongodb._tcp.news_scraping.8a8461o.mongodb.net. IN SRV: Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered SERVFAIL
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-12 22:00:07.621690
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------뉴스 요약 업데이트 시작----------------
+2025-04-12 22:00:07.628899
+현재 시간: 2025-04-12 22:00:13.806248
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+뉴스 요약 업데이트 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 36, in <module>
+    total_update()
+  File "/app/belab_scraping/summary_update.py", line 12, in total_update
+    naver_news()
+  File "/app/belab_scraping/news_letter/naver_new.py", line 187, in naver_news
+    collection = mongo_setting('news_scraping', 'naver_news')
+  File "/app/belab_scraping/function_list/basic_options.py", line 111, in mongo_setting
+    mongo_client = MongoClient(mongo_url)  # MongoDB 클라이언트 생성
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 780, in __init__
+    res = uri_parser.parse_uri(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/uri_parser.py", line 558, in parse_uri
+    nodes = dns_resolver.get_hosts()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 140, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 120, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 114, in _resolve_uri
+    raise ConfigurationError(str(exc)) from None
+pymongo.errors.ConfigurationError: All nameservers failed to answer the query _mongodb._tcp.news_scraping.8a8461o.mongodb.net. IN SRV: Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered SERVFAIL
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-13 02:00:07.945379
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------뉴스 요약 업데이트 시작----------------
+2025-04-13 02:00:07.953464
+현재 시간: 2025-04-13 02:00:14.126335
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+뉴스 요약 업데이트 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 36, in <module>
+    total_update()
+  File "/app/belab_scraping/summary_update.py", line 12, in total_update
+    naver_news()
+  File "/app/belab_scraping/news_letter/naver_new.py", line 187, in naver_news
+    collection = mongo_setting('news_scraping', 'naver_news')
+  File "/app/belab_scraping/function_list/basic_options.py", line 111, in mongo_setting
+    mongo_client = MongoClient(mongo_url)  # MongoDB 클라이언트 생성
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 780, in __init__
+    res = uri_parser.parse_uri(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/uri_parser.py", line 558, in parse_uri
+    nodes = dns_resolver.get_hosts()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 140, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 120, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 114, in _resolve_uri
+    raise ConfigurationError(str(exc)) from None
+pymongo.errors.ConfigurationError: All nameservers failed to answer the query _mongodb._tcp.news_scraping.8a8461o.mongodb.net. IN SRV: Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered SERVFAIL
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-13 06:00:07.671947
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------뉴스 요약 업데이트 시작----------------
+2025-04-13 06:00:07.679425
+현재 시간: 2025-04-13 06:00:13.870657
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+뉴스 요약 업데이트 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 36, in <module>
+    total_update()
+  File "/app/belab_scraping/summary_update.py", line 12, in total_update
+    naver_news()
+  File "/app/belab_scraping/news_letter/naver_new.py", line 187, in naver_news
+    collection = mongo_setting('news_scraping', 'naver_news')
+  File "/app/belab_scraping/function_list/basic_options.py", line 111, in mongo_setting
+    mongo_client = MongoClient(mongo_url)  # MongoDB 클라이언트 생성
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 780, in __init__
+    res = uri_parser.parse_uri(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/uri_parser.py", line 558, in parse_uri
+    nodes = dns_resolver.get_hosts()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 140, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 120, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 114, in _resolve_uri
+    raise ConfigurationError(str(exc)) from None
+pymongo.errors.ConfigurationError: All nameservers failed to answer the query _mongodb._tcp.news_scraping.8a8461o.mongodb.net. IN SRV: Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered SERVFAIL
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-13 10:00:07.852895
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------뉴스 요약 업데이트 시작----------------
+2025-04-13 10:00:07.861021
+현재 시간: 2025-04-13 10:00:14.062270
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+뉴스 요약 업데이트 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 36, in <module>
+    total_update()
+  File "/app/belab_scraping/summary_update.py", line 12, in total_update
+    naver_news()
+  File "/app/belab_scraping/news_letter/naver_new.py", line 187, in naver_news
+    collection = mongo_setting('news_scraping', 'naver_news')
+  File "/app/belab_scraping/function_list/basic_options.py", line 111, in mongo_setting
+    mongo_client = MongoClient(mongo_url)  # MongoDB 클라이언트 생성
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 780, in __init__
+    res = uri_parser.parse_uri(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/uri_parser.py", line 558, in parse_uri
+    nodes = dns_resolver.get_hosts()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 140, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 120, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 114, in _resolve_uri
+    raise ConfigurationError(str(exc)) from None
+pymongo.errors.ConfigurationError: All nameservers failed to answer the query _mongodb._tcp.news_scraping.8a8461o.mongodb.net. IN SRV: Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered SERVFAIL
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-13 14:00:07.322363
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------뉴스 요약 업데이트 시작----------------
+2025-04-13 14:00:07.329559
+현재 시간: 2025-04-13 14:00:13.486849
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+뉴스 요약 업데이트 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 36, in <module>
+    total_update()
+  File "/app/belab_scraping/summary_update.py", line 12, in total_update
+    naver_news()
+  File "/app/belab_scraping/news_letter/naver_new.py", line 187, in naver_news
+    collection = mongo_setting('news_scraping', 'naver_news')
+  File "/app/belab_scraping/function_list/basic_options.py", line 111, in mongo_setting
+    mongo_client = MongoClient(mongo_url)  # MongoDB 클라이언트 생성
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 780, in __init__
+    res = uri_parser.parse_uri(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/uri_parser.py", line 558, in parse_uri
+    nodes = dns_resolver.get_hosts()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 140, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 120, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 114, in _resolve_uri
+    raise ConfigurationError(str(exc)) from None
+pymongo.errors.ConfigurationError: All nameservers failed to answer the query _mongodb._tcp.news_scraping.8a8461o.mongodb.net. IN SRV: Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered SERVFAIL
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-13 18:00:08.531368
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------뉴스 요약 업데이트 시작----------------
+2025-04-13 18:00:08.537921
+현재 시간: 2025-04-13 18:00:14.702707
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+뉴스 요약 업데이트 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 36, in <module>
+    total_update()
+  File "/app/belab_scraping/summary_update.py", line 12, in total_update
+    naver_news()
+  File "/app/belab_scraping/news_letter/naver_new.py", line 187, in naver_news
+    collection = mongo_setting('news_scraping', 'naver_news')
+  File "/app/belab_scraping/function_list/basic_options.py", line 111, in mongo_setting
+    mongo_client = MongoClient(mongo_url)  # MongoDB 클라이언트 생성
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 780, in __init__
+    res = uri_parser.parse_uri(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/uri_parser.py", line 558, in parse_uri
+    nodes = dns_resolver.get_hosts()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 140, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 120, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 114, in _resolve_uri
+    raise ConfigurationError(str(exc)) from None
+pymongo.errors.ConfigurationError: All nameservers failed to answer the query _mongodb._tcp.news_scraping.8a8461o.mongodb.net. IN SRV: Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered SERVFAIL
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-13 22:00:07.005574
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------뉴스 요약 업데이트 시작----------------
+2025-04-13 22:00:07.013701
+현재 시간: 2025-04-13 22:00:13.166859
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+뉴스 요약 업데이트 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 36, in <module>
+    total_update()
+  File "/app/belab_scraping/summary_update.py", line 12, in total_update
+    naver_news()
+  File "/app/belab_scraping/news_letter/naver_new.py", line 187, in naver_news
+    collection = mongo_setting('news_scraping', 'naver_news')
+  File "/app/belab_scraping/function_list/basic_options.py", line 111, in mongo_setting
+    mongo_client = MongoClient(mongo_url)  # MongoDB 클라이언트 생성
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 780, in __init__
+    res = uri_parser.parse_uri(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/uri_parser.py", line 558, in parse_uri
+    nodes = dns_resolver.get_hosts()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 140, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 120, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 114, in _resolve_uri
+    raise ConfigurationError(str(exc)) from None
+pymongo.errors.ConfigurationError: All nameservers failed to answer the query _mongodb._tcp.news_scraping.8a8461o.mongodb.net. IN SRV: Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered SERVFAIL
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-14 02:00:07.232385
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------뉴스 요약 업데이트 시작----------------
+2025-04-14 02:00:07.240059
+현재 시간: 2025-04-14 02:00:13.422140
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+뉴스 요약 업데이트 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 36, in <module>
+    total_update()
+  File "/app/belab_scraping/summary_update.py", line 12, in total_update
+    naver_news()
+  File "/app/belab_scraping/news_letter/naver_new.py", line 187, in naver_news
+    collection = mongo_setting('news_scraping', 'naver_news')
+  File "/app/belab_scraping/function_list/basic_options.py", line 111, in mongo_setting
+    mongo_client = MongoClient(mongo_url)  # MongoDB 클라이언트 생성
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 780, in __init__
+    res = uri_parser.parse_uri(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/uri_parser.py", line 558, in parse_uri
+    nodes = dns_resolver.get_hosts()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 140, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 120, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 114, in _resolve_uri
+    raise ConfigurationError(str(exc)) from None
+pymongo.errors.ConfigurationError: All nameservers failed to answer the query _mongodb._tcp.news_scraping.8a8461o.mongodb.net. IN SRV: Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered SERVFAIL
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-14 06:00:07.461814
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------뉴스 요약 업데이트 시작----------------
+2025-04-14 06:00:07.469984
+현재 시간: 2025-04-14 06:00:13.614424
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+뉴스 요약 업데이트 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 36, in <module>
+    total_update()
+  File "/app/belab_scraping/summary_update.py", line 12, in total_update
+    naver_news()
+  File "/app/belab_scraping/news_letter/naver_new.py", line 187, in naver_news
+    collection = mongo_setting('news_scraping', 'naver_news')
+  File "/app/belab_scraping/function_list/basic_options.py", line 111, in mongo_setting
+    mongo_client = MongoClient(mongo_url)  # MongoDB 클라이언트 생성
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 780, in __init__
+    res = uri_parser.parse_uri(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/uri_parser.py", line 558, in parse_uri
+    nodes = dns_resolver.get_hosts()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 140, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 120, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 114, in _resolve_uri
+    raise ConfigurationError(str(exc)) from None
+pymongo.errors.ConfigurationError: All nameservers failed to answer the query _mongodb._tcp.news_scraping.8a8461o.mongodb.net. IN SRV: Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered SERVFAIL

@@ -279,3 +279,694 @@ ISP/ISMP, 클라우드 | 데이터 업데이트 및 정렬 완료.
 2025-04-11 12:35:54.833033
 An error occurred while executing the script.
 공고 확인 완료!
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-11 14:17:03.491347
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-04-11 14:17:03.497748
+나라장터 공고를 찾습니다.
+item_list가 'item_list.json'로 저장되었습니다.
+총 공고 수 :  2269
+100
+200
+300
+400
+500
+600
+700
+800
+900
+1000
+1100
+1200
+1300
+1400
+1500
+1600
+1700
+1800
+1900
+2000
+2100
+2200
+저장한 공고 수: 0
+전체 공고 | 시작 날짜 : 2025-04-10 00:00:00 / 종료 날짜 : 2025-04-12 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터 | 데이터 업데이트 및 정렬 완료.
+클라우드 | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP, 클라우드 | 데이터 업데이트 및 정렬 완료.
+현재 시간: 2025-04-11 14:18:15.525791
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-11 16:00:02.129330
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-04-11 16:00:02.136331
+나라장터 공고를 찾습니다.
+item_list가 'item_list.json'로 저장되었습니다.
+총 공고 수 :  2269
+100
+200
+300
+400
+500
+600
+700
+800
+900
+1000
+1100
+1200
+1300
+1400
+1500
+1600
+1700
+1800
+1900
+2000
+2100
+2200
+저장한 공고 수: 0
+전체 공고 | 시작 날짜 : 2025-04-10 00:00:00 / 종료 날짜 : 2025-04-12 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터 | 데이터 업데이트 및 정렬 완료.
+클라우드 | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP, 클라우드 | 데이터 업데이트 및 정렬 완료.
+현재 시간: 2025-04-11 16:01:13.211241
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-11 20:06:30.430683
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-04-11 20:06:30.483122
+나라장터 공고를 찾습니다.
+item_list가 'item_list.json'로 저장되었습니다.
+총 공고 수 :  2269
+100
+200
+300
+400
+500
+600
+700
+800
+900
+1000
+1100
+1200
+1300
+1400
+1500
+1600
+1700
+1800
+1900
+2000
+2100
+2200
+저장한 공고 수: 0
+전체 공고 | 시작 날짜 : 2025-04-10 00:00:00 / 종료 날짜 : 2025-04-12 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터 | 데이터 업데이트 및 정렬 완료.
+클라우드 | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP, 클라우드 | 데이터 업데이트 및 정렬 완료.
+현재 시간: 2025-04-11 20:07:37.468904
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-12 00:00:02.644589
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-04-12 00:00:02.650580
+나라장터 공고를 찾습니다.
+item_list가 'item_list.json'로 저장되었습니다.
+총 공고 수 :  1806
+100
+200
+300
+400
+500
+600
+700
+800
+900
+1000
+1100
+1200
+1300
+1400
+1500
+1600
+1700
+1800
+저장한 공고 수: 532
+전체 공고 | 시작 날짜 : 2025-04-11 00:00:00 / 종료 날짜 : 2025-04-13 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터 | 데이터 업데이트 및 정렬 완료.
+클라우드 | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP, 클라우드 | 데이터 업데이트 및 정렬 완료.
+현재 시간: 2025-04-12 01:13:28.439914
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-12 04:00:02.776603
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-04-12 04:00:02.783664
+나라장터 공고를 찾습니다.
+item_list가 'item_list.json'로 저장되었습니다.
+총 공고 수 :  1806
+100
+200
+300
+400
+500
+600
+700
+800
+900
+1000
+1100
+1200
+1300
+1400
+1500
+1600
+1700
+1800
+저장한 공고 수: 0
+전체 공고 | 시작 날짜 : 2025-04-11 00:00:00 / 종료 날짜 : 2025-04-13 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터 | 데이터 업데이트 및 정렬 완료.
+클라우드 | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP, 클라우드 | 데이터 업데이트 및 정렬 완료.
+현재 시간: 2025-04-12 04:01:09.947769
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-12 08:00:03.111766
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-04-12 08:00:03.119530
+나라장터 공고를 찾습니다.
+item_list가 'item_list.json'로 저장되었습니다.
+총 공고 수 :  1806
+100
+200
+300
+400
+500
+600
+700
+800
+900
+1000
+1100
+1200
+1300
+1400
+1500
+1600
+1700
+1800
+저장한 공고 수: 0
+전체 공고 | 시작 날짜 : 2025-04-11 00:00:00 / 종료 날짜 : 2025-04-13 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터 | 데이터 업데이트 및 정렬 완료.
+클라우드 | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP, 클라우드 | 데이터 업데이트 및 정렬 완료.
+현재 시간: 2025-04-12 08:01:11.465937
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-12 12:00:03.735897
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-04-12 12:00:03.743769
+나라장터 공고를 찾습니다.
+item_list가 'item_list.json'로 저장되었습니다.
+총 공고 수 :  1809
+100
+200
+300
+400
+500
+600
+700
+800
+900
+1000
+1100
+1200
+1300
+1400
+1500
+1600
+1700
+1800
+저장한 공고 수: 3
+전체 공고 | 시작 날짜 : 2025-04-11 00:00:00 / 종료 날짜 : 2025-04-13 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터 | 데이터 업데이트 및 정렬 완료.
+클라우드 | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP, 클라우드 | 데이터 업데이트 및 정렬 완료.
+현재 시간: 2025-04-12 12:01:42.273447
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-12 16:22:42.940874
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-04-12 16:22:42.953437
+나라장터 공고를 찾습니다.
+item_list가 'item_list.json'로 저장되었습니다.
+현재 시간: 2025-04-12 16:22:52.915684
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 59, in <module>
+    notice_list = notice_collection(existing_df)
+  File "/app/belab_scraping/g2b_notice_check/g2b_notice.py", line 252, in notice_collection
+    notice_list = notice_search(notice_list, notice_ids, folder_path)
+  File "/app/belab_scraping/g2b_notice_check/g2b_notice.py", line 107, in notice_search
+    browser = init_browser(chrome_options)
+  File "/app/belab_scraping/function_list/basic_options.py", line 87, in init_browser
+    webdriver_manager_directory = GeckoDriverManager().install()
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/firefox.py", line 39, in install
+    driver_path = self._get_driver_binary_path(self.driver)
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/core/manager.py", line 41, in _get_driver_binary_path
+    binary_path = self._cache_manager.save_file_to_cache(driver, file)
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/core/driver_cache.py", line 54, in save_file_to_cache
+    files = self.unpack_archive(archive, path)
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/core/driver_cache.py", line 49, in unpack_archive
+    return self._file_manager.unpack_archive(archive, path)
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/core/file_manager.py", line 59, in unpack_archive
+    return self.__extract_tar_file(archive_file, target_dir)
+  File "/usr/local/lib/python3.10/site-packages/webdriver_manager/core/file_manager.py", line 91, in __extract_tar_file
+    members = tar.getmembers()
+  File "/usr/local/lib/python3.10/tarfile.py", line 2023, in getmembers
+    self._load()        # all members, we first have to
+  File "/usr/local/lib/python3.10/tarfile.py", line 2718, in _load
+    tarinfo = self.next()
+  File "/usr/local/lib/python3.10/tarfile.py", line 2623, in next
+    self.fileobj.seek(self.offset - 1)
+  File "/usr/local/lib/python3.10/gzip.py", line 393, in seek
+    return self._buffer.seek(offset, whence)
+  File "/usr/local/lib/python3.10/_compression.py", line 153, in seek
+    data = self.read(min(io.DEFAULT_BUFFER_SIZE, offset))
+  File "/usr/local/lib/python3.10/gzip.py", line 507, in read
+    raise EOFError("Compressed file ended before the "
+EOFError: Compressed file ended before the end-of-stream marker was reached
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-12 16:22:42.818937
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-04-12 16:22:42.852478
+나라장터 공고를 찾습니다.
+item_list가 'item_list.json'로 저장되었습니다.
+총 공고 수 :  1809
+100
+200
+300
+400
+500
+600
+700
+800
+900
+1000
+1100
+1200
+1300
+1400
+1500
+1600
+1700
+1800
+저장한 공고 수: 0
+전체 공고 | 시작 날짜 : 2025-04-11 00:00:00 / 종료 날짜 : 2025-04-13 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터 | 데이터 업데이트 및 정렬 완료.
+클라우드 | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP, 클라우드 | 데이터 업데이트 및 정렬 완료.
+현재 시간: 2025-04-12 16:23:54.993347
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-12 20:00:02.268130
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-04-12 20:00:02.274790
+나라장터 공고를 찾습니다.
+현재 시간: 2025-04-12 20:00:08.430354
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 36, in <module>
+    collection = mongo_setting("news_scraping", "notice_list")  # MongoDB 설정
+  File "/app/belab_scraping/function_list/basic_options.py", line 111, in mongo_setting
+    mongo_client = MongoClient(mongo_url)  # MongoDB 클라이언트 생성
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 780, in __init__
+    res = uri_parser.parse_uri(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/uri_parser.py", line 558, in parse_uri
+    nodes = dns_resolver.get_hosts()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 140, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 120, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 114, in _resolve_uri
+    raise ConfigurationError(str(exc)) from None
+pymongo.errors.ConfigurationError: All nameservers failed to answer the query _mongodb._tcp.news_scraping.8a8461o.mongodb.net. IN SRV: Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered SERVFAIL
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-13 00:00:02.827511
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-04-13 00:00:02.834330
+나라장터 공고를 찾습니다.
+현재 시간: 2025-04-13 00:00:07.406441
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 36, in <module>
+    collection = mongo_setting("news_scraping", "notice_list")  # MongoDB 설정
+  File "/app/belab_scraping/function_list/basic_options.py", line 111, in mongo_setting
+    mongo_client = MongoClient(mongo_url)  # MongoDB 클라이언트 생성
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 780, in __init__
+    res = uri_parser.parse_uri(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/uri_parser.py", line 558, in parse_uri
+    nodes = dns_resolver.get_hosts()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 140, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 120, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 114, in _resolve_uri
+    raise ConfigurationError(str(exc)) from None
+pymongo.errors.ConfigurationError: All nameservers failed to answer the query _mongodb._tcp.news_scraping.8a8461o.mongodb.net. IN SRV: Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered SERVFAIL
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-13 04:00:02.140279
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-04-13 04:00:02.146950
+나라장터 공고를 찾습니다.
+현재 시간: 2025-04-13 04:00:08.302377
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 36, in <module>
+    collection = mongo_setting("news_scraping", "notice_list")  # MongoDB 설정
+  File "/app/belab_scraping/function_list/basic_options.py", line 111, in mongo_setting
+    mongo_client = MongoClient(mongo_url)  # MongoDB 클라이언트 생성
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 780, in __init__
+    res = uri_parser.parse_uri(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/uri_parser.py", line 558, in parse_uri
+    nodes = dns_resolver.get_hosts()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 140, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 120, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 114, in _resolve_uri
+    raise ConfigurationError(str(exc)) from None
+pymongo.errors.ConfigurationError: All nameservers failed to answer the query _mongodb._tcp.news_scraping.8a8461o.mongodb.net. IN SRV: Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered SERVFAIL
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-13 08:00:02.468106
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-04-13 08:00:02.475334
+나라장터 공고를 찾습니다.
+현재 시간: 2025-04-13 08:00:08.622285
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 36, in <module>
+    collection = mongo_setting("news_scraping", "notice_list")  # MongoDB 설정
+  File "/app/belab_scraping/function_list/basic_options.py", line 111, in mongo_setting
+    mongo_client = MongoClient(mongo_url)  # MongoDB 클라이언트 생성
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 780, in __init__
+    res = uri_parser.parse_uri(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/uri_parser.py", line 558, in parse_uri
+    nodes = dns_resolver.get_hosts()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 140, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 120, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 114, in _resolve_uri
+    raise ConfigurationError(str(exc)) from None
+pymongo.errors.ConfigurationError: All nameservers failed to answer the query _mongodb._tcp.news_scraping.8a8461o.mongodb.net. IN SRV: Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered SERVFAIL
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-13 12:00:02.152836
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-04-13 12:00:02.159811
+나라장터 공고를 찾습니다.
+현재 시간: 2025-04-13 12:00:08.303516
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 36, in <module>
+    collection = mongo_setting("news_scraping", "notice_list")  # MongoDB 설정
+  File "/app/belab_scraping/function_list/basic_options.py", line 111, in mongo_setting
+    mongo_client = MongoClient(mongo_url)  # MongoDB 클라이언트 생성
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 780, in __init__
+    res = uri_parser.parse_uri(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/uri_parser.py", line 558, in parse_uri
+    nodes = dns_resolver.get_hosts()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 140, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 120, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 114, in _resolve_uri
+    raise ConfigurationError(str(exc)) from None
+pymongo.errors.ConfigurationError: All nameservers failed to answer the query _mongodb._tcp.news_scraping.8a8461o.mongodb.net. IN SRV: Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered SERVFAIL
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-13 14:17:02.432308
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-04-13 14:17:02.439319
+나라장터 공고를 찾습니다.
+현재 시간: 2025-04-13 14:17:08.590916
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 36, in <module>
+    collection = mongo_setting("news_scraping", "notice_list")  # MongoDB 설정
+  File "/app/belab_scraping/function_list/basic_options.py", line 111, in mongo_setting
+    mongo_client = MongoClient(mongo_url)  # MongoDB 클라이언트 생성
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 780, in __init__
+    res = uri_parser.parse_uri(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/uri_parser.py", line 558, in parse_uri
+    nodes = dns_resolver.get_hosts()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 140, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 120, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 114, in _resolve_uri
+    raise ConfigurationError(str(exc)) from None
+pymongo.errors.ConfigurationError: All nameservers failed to answer the query _mongodb._tcp.news_scraping.8a8461o.mongodb.net. IN SRV: Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered SERVFAIL
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-13 16:00:02.820238
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-04-13 16:00:02.828208
+나라장터 공고를 찾습니다.
+현재 시간: 2025-04-13 16:00:09.006544
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 36, in <module>
+    collection = mongo_setting("news_scraping", "notice_list")  # MongoDB 설정
+  File "/app/belab_scraping/function_list/basic_options.py", line 111, in mongo_setting
+    mongo_client = MongoClient(mongo_url)  # MongoDB 클라이언트 생성
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 780, in __init__
+    res = uri_parser.parse_uri(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/uri_parser.py", line 558, in parse_uri
+    nodes = dns_resolver.get_hosts()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 140, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 120, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 114, in _resolve_uri
+    raise ConfigurationError(str(exc)) from None
+pymongo.errors.ConfigurationError: All nameservers failed to answer the query _mongodb._tcp.news_scraping.8a8461o.mongodb.net. IN SRV: Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered SERVFAIL
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-13 20:00:02.814094
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-04-13 20:00:02.821239
+나라장터 공고를 찾습니다.
+현재 시간: 2025-04-13 20:00:09.006508
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 36, in <module>
+    collection = mongo_setting("news_scraping", "notice_list")  # MongoDB 설정
+  File "/app/belab_scraping/function_list/basic_options.py", line 111, in mongo_setting
+    mongo_client = MongoClient(mongo_url)  # MongoDB 클라이언트 생성
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 780, in __init__
+    res = uri_parser.parse_uri(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/uri_parser.py", line 558, in parse_uri
+    nodes = dns_resolver.get_hosts()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 140, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 120, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 114, in _resolve_uri
+    raise ConfigurationError(str(exc)) from None
+pymongo.errors.ConfigurationError: All nameservers failed to answer the query _mongodb._tcp.news_scraping.8a8461o.mongodb.net. IN SRV: Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered SERVFAIL
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-14 00:00:02.188118
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-04-14 00:00:02.196029
+나라장터 공고를 찾습니다.
+현재 시간: 2025-04-14 00:00:07.278847
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 36, in <module>
+    collection = mongo_setting("news_scraping", "notice_list")  # MongoDB 설정
+  File "/app/belab_scraping/function_list/basic_options.py", line 111, in mongo_setting
+    mongo_client = MongoClient(mongo_url)  # MongoDB 클라이언트 생성
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 780, in __init__
+    res = uri_parser.parse_uri(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/uri_parser.py", line 558, in parse_uri
+    nodes = dns_resolver.get_hosts()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 140, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 120, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 114, in _resolve_uri
+    raise ConfigurationError(str(exc)) from None
+pymongo.errors.ConfigurationError: All nameservers failed to answer the query _mongodb._tcp.news_scraping.8a8461o.mongodb.net. IN SRV: Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered SERVFAIL
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-14 04:00:02.402600
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-04-14 04:00:02.409994
+나라장터 공고를 찾습니다.
+현재 시간: 2025-04-14 04:00:08.558385
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 36, in <module>
+    collection = mongo_setting("news_scraping", "notice_list")  # MongoDB 설정
+  File "/app/belab_scraping/function_list/basic_options.py", line 111, in mongo_setting
+    mongo_client = MongoClient(mongo_url)  # MongoDB 클라이언트 생성
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 780, in __init__
+    res = uri_parser.parse_uri(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/uri_parser.py", line 558, in parse_uri
+    nodes = dns_resolver.get_hosts()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 140, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 120, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 114, in _resolve_uri
+    raise ConfigurationError(str(exc)) from None
+pymongo.errors.ConfigurationError: All nameservers failed to answer the query _mongodb._tcp.news_scraping.8a8461o.mongodb.net. IN SRV: Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered SERVFAIL
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+현재 시간: 2025-04-14 08:00:02.142678
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-04-14 08:00:02.149480
+나라장터 공고를 찾습니다.
+현재 시간: 2025-04-14 08:00:08.302942
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 36, in <module>
+    collection = mongo_setting("news_scraping", "notice_list")  # MongoDB 설정
+  File "/app/belab_scraping/function_list/basic_options.py", line 111, in mongo_setting
+    mongo_client = MongoClient(mongo_url)  # MongoDB 클라이언트 생성
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 780, in __init__
+    res = uri_parser.parse_uri(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/uri_parser.py", line 558, in parse_uri
+    nodes = dns_resolver.get_hosts()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 140, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 120, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/srv_resolver.py", line 114, in _resolve_uri
+    raise ConfigurationError(str(exc)) from None
+pymongo.errors.ConfigurationError: All nameservers failed to answer the query _mongodb._tcp.news_scraping.8a8461o.mongodb.net. IN SRV: Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered SERVFAIL
+----------------이메일 전송----------------
+2025-04-14 09:30:01.926053
+----------------email push started----------------
+이메일 전송 완료!
