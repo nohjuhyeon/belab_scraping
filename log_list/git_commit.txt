@@ -268,3 +268,13 @@ error: please commit or stash them.
 원격 저장소에서 변경 사항을 가져옵니다...
 작업 중 오류가 발생했습니다.
 === Git 작업 종료: 2025-04-18 09:18:03.306224 ===
+[main eff85c7] Auto Commit.
+ 1 file changed, 1 insertion(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+=== Git 작업 실패: 2025-04-18 09:19:01.476252 ===
+현재 시간: 2025-04-18 09:19:01.457842
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
