@@ -22,7 +22,7 @@ def git_commit():
 
     # .git 디렉토리 확인
     if '.git' not in os.listdir(folder_path):
-        print(".git 디렉토리가 없습니다. Git 저장소가 아닙니다.")
+        # print(".git 디렉토리가 없습니다. Git 저장소가 아닙니다.")
         return
 
     try:
@@ -31,19 +31,19 @@ def git_commit():
         subprocess.run(['git', 'config', '--global', 'user.name', github_username], check=True)
 
         # 변경 사항 스테이징
-        print("변경 사항을 스테이지에 추가합니다...")
+        # print("변경 사항을 스테이지에 추가합니다...")
         subprocess.run(['git', 'add', '.'], check=True)
 
         # 커밋 생성
-        print("커밋을 생성합니다...")
+        # print("커밋을 생성합니다...")
         subprocess.run(['git', 'commit', '-m', commit_message], check=True)
 
         # 원격 저장소에서 최신 변경 사항 가져오기
-        print("원격 저장소에서 변경 사항을 가져옵니다...")
+        # print("원격 저장소에서 변경 사항을 가져옵니다...")
         subprocess.run(['git', 'pull', '--rebase'], check=True)
 
         # 변경 사항 푸쉬
-        print("변경 사항을 원격 저장소에 푸쉬합니다...")
+        # print("변경 사항을 원격 저장소에 푸쉬합니다...")
         remote_url = f"https://{github_username}:{github_token}@github.com/{github_username}/belab_scraping.git"
         subprocess.run(['git', 'push', remote_url], check=True)
 
