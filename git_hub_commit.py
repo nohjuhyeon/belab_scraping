@@ -22,7 +22,7 @@ def git_commit():
 
     # .git 디렉토리 확인
     if '.git' not in os.listdir(folder_path):
-        # print(".git 디렉토리가 없습니다. Git 저장소가 아닙니다.")
+        print(".git 디렉토리가 없습니다. Git 저장소가 아닙니다.")
         return
 
     try:
@@ -30,20 +30,33 @@ def git_commit():
         subprocess.run(['git', 'config', '--global', 'user.email', github_email], check=True)
         subprocess.run(['git', 'config', '--global', 'user.name', github_username], check=True)
 
+        # Git 상태 확인
+        print("현재 Git 상태를 확인합니다...")
+        status_result = subprocess.run(['git', 'status'], capture_output=True, text=True)
+        print(status_result.stdout)
+
         # 변경 사항 스테이징
-        # print("변경 사항을 스테이지에 추가합니다...")
+        print("변경 사항을 스테이지에 추가합니다...")
         subprocess.run(['git', 'add', '.'], check=True)
 
         # 커밋 생성
-        # print("커밋을 생성합니다...")
+        print("커밋을 생성합니다...")
         subprocess.run(['git', 'commit', '-m', commit_message], check=True)
 
+        # 스테이지되지 않은 변경 사항을 스태시로 저장
+        print("스태시로 변경 사항을 저장합니다...")
+        subprocess.run(['git', 'stash'], check=True)
+
         # 원격 저장소에서 최신 변경 사항 가져오기
-        # print("원격 저장소에서 변경 사항을 가져옵니다...")
+        print("원격 저장소에서 변경 사항을 가져옵니다...")
         subprocess.run(['git', 'pull', '--rebase'], check=True)
 
+        # 스태시된 변경 사항 다시 적용
+        print("스태시된 변경 사항을 다시 적용합니다...")
+        subprocess.run(['git', 'stash', 'pop'], check=True)
+
         # 변경 사항 푸쉬
-        # print("변경 사항을 원격 저장소에 푸쉬합니다...")
+        print("변경 사항을 원격 저장소에 푸쉬합니다...")
         remote_url = f"https://{github_username}:{github_token}@github.com/{github_username}/belab_scraping.git"
         subprocess.run(['git', 'push', remote_url], check=True)
 
