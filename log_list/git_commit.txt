@@ -230,3 +230,30 @@ To https://github.com/nohjuhyeon/belab_scraping.git
 === Git 작업 실패: 2025-04-18 06:08:58.215816 ===
 === Git 작업 실패: 2025-04-18 08:00:02.984163 ===
 === Git 작업 실패: 2025-04-18 08:01:45.411269 ===
+=== Git 작업 종료: 2025-04-18 09:04:48.214016 ===
+현재 시간: 2025-04-18 09:11:01.244703
+Traceback (most recent call last):
+  File "/app/belab_scraping/git_hub_commit.py", line 59, in <module>
+    git_commit()
+  File "/app/belab_scraping/git_hub_commit.py", line 19, in git_commit
+    log_file.write(os.listdir(folder))
+UnboundLocalError: local variable 'log_file' referenced before assignment
+현재 시간: 2025-04-18 09:13:01.280755
+Traceback (most recent call last):
+  File "/app/belab_scraping/git_hub_commit.py", line 60, in <module>
+    git_commit()
+  File "/app/belab_scraping/git_hub_commit.py", line 20, in git_commit
+    log_file.write(os.listdir(folder))
+NameError: name 'folder' is not defined. Did you mean: 'filter'?
+현재 시간: 2025-04-18 09:14:01.316713
+Traceback (most recent call last):
+  File "/app/belab_scraping/git_hub_commit.py", line 60, in <module>
+    git_commit()
+  File "/app/belab_scraping/git_hub_commit.py", line 20, in git_commit
+    log_file.write(os.listdir(folder_path))
+TypeError: write() argument must be str, not list
+g2b_notice_update.py,.git,item_list.json,news_modeling,log_list,requeirments.txt,summary_update.py,news_preprocess,news_letter,g2b_notice_check,__pycache__,g2b_notice_email_push.py,function_list,git_hub_commit.py,.gitignore,models,item_list_first.json,notice_list,item_list_second.json,.env,item_list_third.json,extracted_sectionsfatal: not a git repository (or any of the parent directories): .git
+=== Git 작업 실패: 2025-04-18 09:15:01.362186 ===
+현재 시간: 2025-04-18 09:15:01.354673
+변경 사항을 스테이지에 추가합니다...
+작업 중 오류가 발생했습니다.

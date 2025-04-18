@@ -17,6 +17,14 @@ def git_commit():
 
     print(f"현재 시간: {datetime.now()}")
 
+    # 작업 디렉토리 변경
+    os.chdir(folder_path)
+
+    # .git 디렉토리 확인
+    if '.git' not in os.listdir(folder_path):
+        print(".git 디렉토리가 없습니다. Git 저장소가 아닙니다.")
+        return
+
     try:
         # Git 사용자 정보 설정
         subprocess.run(['git', 'config', '--global', 'user.email', github_email], check=True)
@@ -52,3 +60,4 @@ def git_commit():
 
 if __name__ == "__main__":
     git_commit()
+
