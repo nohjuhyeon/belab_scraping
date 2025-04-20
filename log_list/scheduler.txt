@@ -5963,3 +5963,19 @@
 2025-04-20 08:00:09,061 - INFO - GH_TOKEN will be used to perform requests
 2025-04-20 08:00:09,438 - INFO - Driver has been saved in cache [/root/.wdm/drivers/geckodriver/linux64/v0.36.0]
 2025-04-20 08:01:00,224 - INFO - notice check shut down.
+2025-04-20 12:00:05,026 - INFO - ----------------notice check started----------------
+2025-04-20 12:00:06,771 - INFO - ====== WebDriver manager ======
+2025-04-20 12:00:06,853 - INFO - Get LATEST geckodriver version for 128.6 firefox
+2025-04-20 12:00:06,854 - INFO - GH_TOKEN will be used to perform requests
+2025-04-20 12:00:07,167 - INFO - Get LATEST geckodriver version for 128.6 firefox
+2025-04-20 12:00:07,168 - INFO - GH_TOKEN will be used to perform requests
+2025-04-20 12:00:07,475 - INFO - There is no [linux64] geckodriver "v0.36.0" for browser firefox "128.6" in cache
+2025-04-20 12:00:07,475 - INFO - Get LATEST geckodriver version for 128.6 firefox
+2025-04-20 12:00:07,475 - INFO - GH_TOKEN will be used to perform requests
+2025-04-20 12:00:07,794 - INFO - Getting latest mozilla release info for v0.36.0
+2025-04-20 12:00:07,794 - INFO - GH_TOKEN will be used to perform requests
+2025-04-20 12:00:08,124 - INFO - About to download new driver from https://github.com/mozilla/geckodriver/releases/download/v0.36.0/geckodriver-v0.36.0-linux64.tar.gz
+2025-04-20 12:00:08,906 - INFO - Driver downloading response is 200
+2025-04-20 12:00:08,968 - INFO - Get LATEST geckodriver version for 128.6 firefox
+2025-04-20 12:00:08,968 - INFO - GH_TOKEN will be used to perform requests
+2025-04-20 12:00:09,339 - INFO - Driver has been saved in cache [/root/.wdm/drivers/geckodriver/linux64/v0.36.0]
