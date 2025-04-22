@@ -7048,3 +7048,6 @@
 2025-04-22 08:00:15,506 - INFO - Driver has been saved in cache [/root/.wdm/drivers/geckodriver/linux64/v0.36.0]
 2025-04-22 08:00:25,586 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 2025-04-22 08:01:02,913 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-22 08:02:07,523 - INFO - notice check shut down.
+2025-04-22 09:30:01,719 - INFO - ----------------notice check started----------------
+2025-04-22 09:30:01,719 - INFO - notice check shut down.

@@ -2075,3 +2075,7 @@ ISP/ISMP, 클라우드 | 데이터 업데이트 및 정렬 완료.
  1 file changed, 1 insertion(+)
 [main 6f53cbd] Auto Commit.
  1 file changed, 1 insertion(+)
+----------------이메일 전송----------------
+2025-04-22 09:30:01.719087
+----------------email push started----------------
+이메일 전송 완료!
