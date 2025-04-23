@@ -7937,3 +7937,30 @@
 2025-04-23 08:02:58,151 - INFO - notice check shut down.
 2025-04-23 09:30:02,339 - INFO - ----------------notice check started----------------
 2025-04-23 09:30:02,339 - INFO - notice check shut down.
+2025-04-23 12:58:19,285 - INFO - ----------------notice check started----------------
+2025-04-23 12:58:30,279 - INFO - ====== WebDriver manager ======
+2025-04-23 12:58:30,430 - INFO - Get LATEST geckodriver version for 128.6 firefox
+2025-04-23 12:58:30,430 - INFO - GH_TOKEN will be used to perform requests
+2025-04-23 12:58:30,766 - INFO - Get LATEST geckodriver version for 128.6 firefox
+2025-04-23 12:58:30,766 - INFO - GH_TOKEN will be used to perform requests
+2025-04-23 12:58:31,099 - INFO - There is no [linux64] geckodriver "v0.36.0" for browser firefox "128.6" in cache
+2025-04-23 12:58:31,099 - INFO - Get LATEST geckodriver version for 128.6 firefox
+2025-04-23 12:58:31,099 - INFO - GH_TOKEN will be used to perform requests
+2025-04-23 12:58:31,459 - INFO - Getting latest mozilla release info for v0.36.0
+2025-04-23 12:58:31,459 - INFO - GH_TOKEN will be used to perform requests
+2025-04-23 12:58:31,798 - INFO - About to download new driver from https://github.com/mozilla/geckodriver/releases/download/v0.36.0/geckodriver-v0.36.0-linux64.tar.gz
+2025-04-23 12:58:32,814 - INFO - Driver downloading response is 200
+2025-04-23 12:58:32,843 - INFO - Get LATEST geckodriver version for 128.6 firefox
+2025-04-23 12:58:32,843 - INFO - GH_TOKEN will be used to perform requests
+2025-04-23 12:58:33,209 - INFO - Driver has been saved in cache [/root/.wdm/drivers/geckodriver/linux64/v0.36.0]
+2025-04-23 12:58:51,985 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-23 12:59:00,490 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-23 12:59:22,727 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-23 12:59:33,653 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-23 12:59:41,515 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-23 12:59:49,422 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-23 12:59:57,616 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-23 13:00:12,778 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-23 13:00:23,016 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-23 13:00:25,962 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-23 13:00:27,621 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
