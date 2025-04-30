@@ -65,40 +65,67 @@ try:
     notice_df = total_sheet_get()
 
     # 1. 인공지능 카테고리 공고 업데이트
-    ai_url = "https://docs.google.com/spreadsheets/d/15gZLOTcY-XxlGmkNNMllB4GaJynHiLqtlp6U5PhMMew/edit?usp=drive_link"
+    ai_url = "https://docs.google.com/spreadsheets/d/1Rd6o2rBays25jvcz6SGf03Pvr3ci5epfzlI2TmvWTQI/edit?usp=sharing"
     ai_df = notice_df.loc[
         notice_df["비고"].str.contains("인공지능")
     ]  # '비고' 컬럼에서 '인공지능' 포함 데이터 필터링
     category_sheet_update(ai_url, ai_df, "인공지능")
 
     # 2. 데이터 카테고리 공고 업데이트
-    data_url = "https://docs.google.com/spreadsheets/d/10pMJpkFia91wtTROOQt3sje-iT3ztgYjtUjQYGU-xQ8/edit?usp=drive_link"
+    data_url = "https://docs.google.com/spreadsheets/d/1tTaqo_BPZvHEKx_OcFOj3RoFr-e_9i5-ftPW4hS4Qq0/edit?usp=sharing"
     data_df = notice_df.loc[
-        notice_df["비고"].str.contains("데이터")
+        notice_df["비고"].str.contains("데이터베이스")
     ]  # '비고' 컬럼에서 '데이터' 포함 데이터 필터링
-    category_sheet_update(data_url, data_df, "데이터")
+    category_sheet_update(data_url, data_df, "데이터베이스")
 
     # 3. 클라우드 카테고리 공고 업데이트
-    cloud_url = "https://docs.google.com/spreadsheets/d/14CanIRInmQ2_z2uuNB2gVCjlJsgGRM7c44yOcTSI8eo/edit?usp=drive_link"
+    cloud_url = "https://docs.google.com/spreadsheets/d/1YJI1NrcLaHiTtyjhK071MiIYQ36G0LWJ4QSfgE67paU/edit?usp=sharing"
     cloud_df = notice_df.loc[
-        notice_df["비고"].str.contains("클라우드")
+        notice_df["비고"].str.contains("클라우드 컴퓨팅")
     ]  # '비고' 컬럼에서 '클라우드' 포함 데이터 필터링
-    category_sheet_update(cloud_url, cloud_df, "클라우드")
+    category_sheet_update(cloud_url, cloud_df, "클라우드 컴퓨팅")
 
-    # 4. ISP/ISMP 카테고리 공고 업데이트
-    isp_url = "https://docs.google.com/spreadsheets/d/18F6jTsLgsHm1yia9ZOJXD3x_CrYNYnqJY528o09HtrI/edit?usp=drive_link"
+    # 4. 네트워크/보안 카테고리 공고 업데이트
+    network_security_url = "https://docs.google.com/spreadsheets/d/12aoE7vXB7JNICh93q0NaabCdF8wsLiBEX8WN8fiZDxI/edit?usp=sharing"
+    network_security_df = notice_df.loc[
+        notice_df["비고"].str.contains("네트워크 및 보안")
+    ]  # '비고' 컬럼에서 '클라우드' 포함 데이터 필터링
+    category_sheet_update(network_security_url, network_security_df, "네트워크 및 보안")
+
+    # 5. AR/VR 및 메타버스 카테고리 공고 업데이트
+    cloud_url = "https://docs.google.com/spreadsheets/d/1X5i6DflM_ZBE_SK4uEe2hhw-f6F1ZGr_4akRDcrGW4Q/edit?usp=sharing"
+    cloud_df = notice_df.loc[
+        notice_df["비고"].str.contains("AR/VR 및 메타버스")
+    ]  # '비고' 컬럼에서 '클라우드' 포함 데이터 필터링
+    category_sheet_update(cloud_url, cloud_df, "AR/VR 및 메타버스")
+
+    # 6. 소프트웨어 개발 및 관리 카테고리 공고 업데이트
+    cloud_url = "https://docs.google.com/spreadsheets/d/1jL5PAmWhI5Uv3Va5oW6zhbumfemHQzCqoOGUZnfujf8/edit?usp=sharing"
+    cloud_df = notice_df.loc[
+        notice_df["비고"].str.contains("소프트웨어 개발 및 관리")
+    ]  # '비고' 컬럼에서 '클라우드' 포함 데이터 필터링
+    category_sheet_update(cloud_url, cloud_df, "소프트웨어 개발 및 관리")
+
+    # 7. 블록체인 카테고리 공고 업데이트
+    cloud_url = "https://docs.google.com/spreadsheets/d/1V4LvEm_nI8iOy0784WMDERB-ENLbMJeQ1U3uTvgmEcU/edit?usp=sharing"
+    cloud_df = notice_df.loc[
+        notice_df["비고"].str.contains("블록체인")
+    ]  # '비고' 컬럼에서 '클라우드' 포함 데이터 필터링
+    category_sheet_update(cloud_url, cloud_df, "블록체인")
+
+    # 8. IoT 카테고리 공고 업데이트
+    cloud_url = "https://docs.google.com/spreadsheets/d/19aYGVI6FIbyfQf9zyEqqpi8EeITo2WCVWNRT-o1V3o4/edit?usp=sharing"
+    cloud_df = notice_df.loc[
+        notice_df["비고"].str.contains("IoT")
+    ]  # '비고' 컬럼에서 '클라우드' 포함 데이터 필터링
+    category_sheet_update(cloud_url, cloud_df, "IoT")
+
+    # 9. ISP/ISMP 카테고리 공고 업데이트
+    isp_url = "https://docs.google.com/spreadsheets/d/1aI9VKVjoLQ2g6-yOnq4VCozswvzQchVJD1VrHP4wKdw/edit?usp=sharing"
     isp_df = notice_df.loc[
         notice_df["비고"].str.contains("ISP/ISMP")
     ]  # '비고' 컬럼에서 'ISP/ISMP' 포함 데이터 필터링
     category_sheet_update(isp_url, isp_df, "ISP/ISMP")
-
-    # 5. ISP/ISMP 및 클라우드 카테고리 공고 업데이트
-    isp_cloud_url = "https://docs.google.com/spreadsheets/d/11lE8ciUVqdN97HJ__ZCRB2RV6IvNwouDv3TkuLFnyUY/edit?usp=drive_link"
-    isp_cloud_df = notice_df.loc[
-        (notice_df["비고"].str.contains("ISP/ISMP"))
-        | (notice_df["비고"].str.contains("클라우드"))
-    ]  # '비고' 컬럼에서 'ISP/ISMP' 또는 '클라우드' 포함 데이터 필터링
-    category_sheet_update(isp_cloud_url, isp_cloud_df, "ISP/ISMP, 클라우드")
 
 except (KeyboardInterrupt, SystemExit):
     # 사용자 중단 또는 시스템 종료 시 로그 기록
