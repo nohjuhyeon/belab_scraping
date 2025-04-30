@@ -112,3 +112,5 @@
 2025-04-30 10:43:09,660 - INFO - notice check shut down.
 2025-04-30 10:46:44,698 - INFO - ----------------notice check started----------------
 2025-04-30 10:47:01,345 - INFO - notice check shut down.
+2025-04-30 10:55:04,187 - INFO - ----------------notice check started----------------
+2025-04-30 10:55:20,683 - INFO - notice check shut down.
