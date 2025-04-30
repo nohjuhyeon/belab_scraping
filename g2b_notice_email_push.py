@@ -24,35 +24,70 @@ try:
 
     print("----------------email push started----------------")
 
-    # # 1. 인공지능 관련 이메일 전송
-    # ai_url = "https://docs.google.com/spreadsheets/d/15gZLOTcY-XxlGmkNNMllB4GaJynHiLqtlp6U5PhMMew/edit?usp=drive_link"
-    # ai_list = category_new_data_get(ai_url)  # 구글 스프레드시트에서 데이터 가져오기
-    # ai_user = ['jh.noh@belab.co.kr', 'jh.park@belab.co.kr', 'sy.kim@belab.co.kr', 'chyunkim@naver.com']
-    # email_sending(ai_list, ai_user, ai_url, '인공지능')  # 이메일 전송
+    # 1. 인공지능 관련 이메일 전송
+    ai_url = "https://docs.google.com/spreadsheets/d/1Rd6o2rBays25jvcz6SGf03Pvr3ci5epfzlI2TmvWTQI/edit?usp=sharing"
+    ai_list = category_new_data_get(ai_url)  # 구글 스프레드시트에서 데이터 가져오기
+    # ai_user = ['jh.park@belab.co.kr']
+    ai_user = ['jh.noh@belab.co.kr']
+    email_sending(ai_list, ai_user, ai_url, '인공지능')  # 이메일 전송
 
-    # # 2. 데이터 관련 이메일 전송
-    # data_url = "https://docs.google.com/spreadsheets/d/10pMJpkFia91wtTROOQt3sje-iT3ztgYjtUjQYGU-xQ8/edit?usp=drive_link"
-    # data_list = category_new_data_get(data_url)
-    # data_user = ['jh.noh@belab.co.kr', 'jh.park@belab.co.kr', 'sh.jegal@belab.co.kr', 'chyunkim@naver.com']
-    # email_sending(data_list, data_user, data_url,"데이터")
+    # 2. 데이터 관련 이메일 전송
+    data_url = "https://docs.google.com/spreadsheets/d/1tTaqo_BPZvHEKx_OcFOj3RoFr-e_9i5-ftPW4hS4Qq0/edit?usp=sharing"
+    data_list = category_new_data_get(data_url)
+    # data_user = ['jh.park@belab.co.kr']
+    data_user = ['jh.noh@belab.co.kr']
+    email_sending(data_list, data_user, data_url,"데이터")
 
-    # # 3. 클라우드 관련 이메일 전송
-    # cloud_url = "https://docs.google.com/spreadsheets/d/14CanIRInmQ2_z2uuNB2gVCjlJsgGRM7c44yOcTSI8eo/edit?usp=drive_link"
-    # cloud_list = category_new_data_get(cloud_url)
-    # cloud_user = ['jh.noh@belab.co.kr', 'jh.park@belab.co.kr', 'chyunkim@naver.com']
-    # email_sending(cloud_list, cloud_user, cloud_url,"클라우드")
+    # 3. 클라우드 관련 이메일 전송
+    cloud_url = "https://docs.google.com/spreadsheets/d/1YJI1NrcLaHiTtyjhK071MiIYQ36G0LWJ4QSfgE67paU/edit?usp=sharing"
+    cloud_list = category_new_data_get(cloud_url)
+    # cloud_user = ['jh.park@belab.co.kr']
+    cloud_user = ['jh.noh@belab.co.kr']
+    email_sending(cloud_list, cloud_user, cloud_url,"클라우드")
 
-    # # 4. ISP/ISMP 관련 이메일 전송
-    # isp_url = "https://docs.google.com/spreadsheets/d/18F6jTsLgsHm1yia9ZOJXD3x_CrYNYnqJY528o09HtrI/edit?usp=drive_link"
-    # isp_list = category_new_data_get(isp_url)
-    # isp_user = ['jh.noh@belab.co.kr', 'jh.park@belab.co.kr', 'chyunkim@naver.com']
-    # email_sending(isp_list, isp_user, isp_url, 'ISP/ISMP')
+    # 4. 네트워크/보안 관련 이메일 전송
+    network_security_url = "https://docs.google.com/spreadsheets/d/12aoE7vXB7JNICh93q0NaabCdF8wsLiBEX8WN8fiZDxI/edit?usp=sharing"
+    network_security_list = category_new_data_get(network_security_url)
+    # network_security_user = ['jh.park@belab.co.kr']
+    network_security_user = ['jh.noh@belab.co.kr']
+    email_sending(network_security_list, network_security_user, network_security_url,"네트워크 및 보안")
 
-    # # 5. ISP/ISMP 및 클라우드 관련 이메일 전송
-    # isp_cloud_url = "https://docs.google.com/spreadsheets/d/11lE8ciUVqdN97HJ__ZCRB2RV6IvNwouDv3TkuLFnyUY/edit?usp=drive_link"
-    # isp_cloud_list = category_new_data_get(isp_cloud_url)
-    # isp_cloud_user = ['jh.noh@belab.co.kr', 'jh.park@belab.co.kr', 'sy.lee@belab.co.kr']
-    # email_sending(isp_cloud_list, isp_cloud_user, isp_cloud_url, 'ISP/ISMP, 클라우드')
+    # 5. AR/VR 및 메타버스 관련 이메일 전송
+    metaverse_url = "https://docs.google.com/spreadsheets/d/1X5i6DflM_ZBE_SK4uEe2hhw-f6F1ZGr_4akRDcrGW4Q/edit?usp=sharing"
+    metaverse_list = category_new_data_get(metaverse_url)
+    # metaverse_user = ['jh.park@belab.co.kr']
+    metaverse_user = ['jh.noh@belab.co.kr']
+    email_sending(metaverse_list, metaverse_user, metaverse_url,"AR/VR 및 메타버스")
+
+    # 6. 소프트웨어 개발 및 관리 관련 이메일 전송
+    software_url = "https://docs.google.com/spreadsheets/d/1jL5PAmWhI5Uv3Va5oW6zhbumfemHQzCqoOGUZnfujf8/edit?usp=sharing"
+    software_list = category_new_data_get(software_url)
+    # software_user = ['jh.park@belab.co.kr']
+    software_user = ['jh.noh@belab.co.kr']
+    email_sending(software_list, software_user, software_url,"소프트웨어 개발 및 관리")
+
+    # 7. 블록체인 관련 이메일 전송
+    blockchain_url = "https://docs.google.com/spreadsheets/d/1V4LvEm_nI8iOy0784WMDERB-ENLbMJeQ1U3uTvgmEcU/edit?usp=sharing"
+    blockchain_list = category_new_data_get(blockchain_url)
+    # blockchain_user = ['jh.park@belab.co.kr']
+    blockchain_user = ['jh.noh@belab.co.kr']
+    email_sending(blockchain_list, blockchain_user, blockchain_url,"블록체인")
+
+    # 8. IoT 관련 이메일 전송
+    IoT_url = "https://docs.google.com/spreadsheets/d/19aYGVI6FIbyfQf9zyEqqpi8EeITo2WCVWNRT-o1V3o4/edit?usp=sharing"
+    IoT_list = category_new_data_get(IoT_url)
+    # IoT_user = ['jh.park@belab.co.kr']
+    IoT_user = ['jh.noh@belab.co.kr']
+    email_sending(IoT_list, IoT_user, IoT_url,"IoT")
+
+
+    # 9. ISP/ISMP 관련 이메일 전송
+    isp_url = "https://docs.google.com/spreadsheets/d/18F6jTsLgsHm1yia9ZOJXD3x_CrYNYnqJY528o09HtrI/edit?usp=drive_link"
+    isp_list = category_new_data_get(isp_url)
+    # isp_user = ['jh.park@belab.co.kr']
+    isp_user = ['jh.noh@belab.co.kr']
+    email_sending(isp_list, isp_user, isp_url, 'ISP/ISMP')
+
 
 except (KeyboardInterrupt, SystemExit):
     # 사용자 중단 또는 시스템 종료 시 로그 기록

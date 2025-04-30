@@ -93,32 +93,32 @@ try:
     category_sheet_update(network_security_url, network_security_df, "네트워크 및 보안")
 
     # 5. AR/VR 및 메타버스 카테고리 공고 업데이트
-    cloud_url = "https://docs.google.com/spreadsheets/d/1X5i6DflM_ZBE_SK4uEe2hhw-f6F1ZGr_4akRDcrGW4Q/edit?usp=sharing"
-    cloud_df = notice_df.loc[
+    metaverse_url = "https://docs.google.com/spreadsheets/d/1X5i6DflM_ZBE_SK4uEe2hhw-f6F1ZGr_4akRDcrGW4Q/edit?usp=sharing"
+    metaverse_df = notice_df.loc[
         notice_df["비고"].str.contains("AR/VR 및 메타버스")
     ]  # '비고' 컬럼에서 '클라우드' 포함 데이터 필터링
-    category_sheet_update(cloud_url, cloud_df, "AR/VR 및 메타버스")
+    category_sheet_update(metaverse_url, metaverse_df, "AR/VR 및 메타버스")
 
     # 6. 소프트웨어 개발 및 관리 카테고리 공고 업데이트
-    cloud_url = "https://docs.google.com/spreadsheets/d/1jL5PAmWhI5Uv3Va5oW6zhbumfemHQzCqoOGUZnfujf8/edit?usp=sharing"
-    cloud_df = notice_df.loc[
+    software_url = "https://docs.google.com/spreadsheets/d/1jL5PAmWhI5Uv3Va5oW6zhbumfemHQzCqoOGUZnfujf8/edit?usp=sharing"
+    software_df = notice_df.loc[
         notice_df["비고"].str.contains("소프트웨어 개발 및 관리")
     ]  # '비고' 컬럼에서 '클라우드' 포함 데이터 필터링
-    category_sheet_update(cloud_url, cloud_df, "소프트웨어 개발 및 관리")
+    category_sheet_update(software_url, software_df, "소프트웨어 개발 및 관리")
 
     # 7. 블록체인 카테고리 공고 업데이트
-    cloud_url = "https://docs.google.com/spreadsheets/d/1V4LvEm_nI8iOy0784WMDERB-ENLbMJeQ1U3uTvgmEcU/edit?usp=sharing"
-    cloud_df = notice_df.loc[
+    blockchain_url = "https://docs.google.com/spreadsheets/d/1V4LvEm_nI8iOy0784WMDERB-ENLbMJeQ1U3uTvgmEcU/edit?usp=sharing"
+    blockchain_df = notice_df.loc[
         notice_df["비고"].str.contains("블록체인")
     ]  # '비고' 컬럼에서 '클라우드' 포함 데이터 필터링
-    category_sheet_update(cloud_url, cloud_df, "블록체인")
+    category_sheet_update(blockchain_url, blockchain_df, "블록체인")
 
     # 8. IoT 카테고리 공고 업데이트
-    cloud_url = "https://docs.google.com/spreadsheets/d/19aYGVI6FIbyfQf9zyEqqpi8EeITo2WCVWNRT-o1V3o4/edit?usp=sharing"
-    cloud_df = notice_df.loc[
+    IoT_url = "https://docs.google.com/spreadsheets/d/19aYGVI6FIbyfQf9zyEqqpi8EeITo2WCVWNRT-o1V3o4/edit?usp=sharing"
+    IoT_df = notice_df.loc[
         notice_df["비고"].str.contains("IoT")
     ]  # '비고' 컬럼에서 '클라우드' 포함 데이터 필터링
-    category_sheet_update(cloud_url, cloud_df, "IoT")
+    category_sheet_update(IoT_url, IoT_df, "IoT")
 
     # 9. ISP/ISMP 카테고리 공고 업데이트
     isp_url = "https://docs.google.com/spreadsheets/d/1aI9VKVjoLQ2g6-yOnq4VCozswvzQchVJD1VrHP4wKdw/edit?usp=sharing"
