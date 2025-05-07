@@ -3582,3 +3582,23 @@
 2025-05-08 04:00:25,749 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 2025-05-08 04:00:33,581 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 2025-05-08 04:01:53,511 - INFO - notice check shut down.
+2025-05-08 08:00:04,946 - INFO - ----------------notice check started----------------
+2025-05-08 08:00:13,017 - INFO - ====== WebDriver manager ======
+2025-05-08 08:00:13,131 - INFO - Get LATEST geckodriver version for 128.6 firefox
+2025-05-08 08:00:13,131 - INFO - GH_TOKEN will be used to perform requests
+2025-05-08 08:00:13,468 - INFO - Get LATEST geckodriver version for 128.6 firefox
+2025-05-08 08:00:13,468 - INFO - GH_TOKEN will be used to perform requests
+2025-05-08 08:00:13,786 - INFO - There is no [linux64] geckodriver "v0.36.0" for browser firefox "128.6" in cache
+2025-05-08 08:00:13,787 - INFO - Get LATEST geckodriver version for 128.6 firefox
+2025-05-08 08:00:13,787 - INFO - GH_TOKEN will be used to perform requests
+2025-05-08 08:00:14,125 - INFO - Getting latest mozilla release info for v0.36.0
+2025-05-08 08:00:14,125 - INFO - GH_TOKEN will be used to perform requests
+2025-05-08 08:00:14,454 - INFO - About to download new driver from https://github.com/mozilla/geckodriver/releases/download/v0.36.0/geckodriver-v0.36.0-linux64.tar.gz
+2025-05-08 08:00:15,249 - INFO - Driver downloading response is 200
+2025-05-08 08:00:15,446 - INFO - Get LATEST geckodriver version for 128.6 firefox
+2025-05-08 08:00:15,447 - INFO - GH_TOKEN will be used to perform requests
+2025-05-08 08:00:15,948 - INFO - Driver has been saved in cache [/root/.wdm/drivers/geckodriver/linux64/v0.36.0]
+2025-05-08 08:00:26,311 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-08 08:00:34,713 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-08 08:00:50,025 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-08 08:00:58,405 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
