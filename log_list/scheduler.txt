@@ -6266,3 +6266,22 @@
 2025-05-12 04:00:11,666 - INFO - Driver has been saved in cache [/root/.wdm/drivers/geckodriver/linux64/v0.36.0]
 2025-05-12 04:00:22,787 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 2025-05-12 04:01:32,995 - INFO - notice check shut down.
+2025-05-12 08:00:04,615 - INFO - ----------------notice check started----------------
+2025-05-12 08:00:08,984 - INFO - ====== WebDriver manager ======
+2025-05-12 08:00:09,068 - INFO - Get LATEST geckodriver version for 128.6 firefox
+2025-05-12 08:00:09,068 - INFO - GH_TOKEN will be used to perform requests
+2025-05-12 08:00:09,434 - INFO - Get LATEST geckodriver version for 128.6 firefox
+2025-05-12 08:00:09,434 - INFO - GH_TOKEN will be used to perform requests
+2025-05-12 08:00:09,738 - INFO - There is no [linux64] geckodriver "v0.36.0" for browser firefox "128.6" in cache
+2025-05-12 08:00:09,739 - INFO - Get LATEST geckodriver version for 128.6 firefox
+2025-05-12 08:00:09,739 - INFO - GH_TOKEN will be used to perform requests
+2025-05-12 08:00:10,064 - INFO - Getting latest mozilla release info for v0.36.0
+2025-05-12 08:00:10,065 - INFO - GH_TOKEN will be used to perform requests
+2025-05-12 08:00:10,477 - INFO - About to download new driver from https://github.com/mozilla/geckodriver/releases/download/v0.36.0/geckodriver-v0.36.0-linux64.tar.gz
+2025-05-12 08:00:11,249 - INFO - Driver downloading response is 200
+2025-05-12 08:00:11,446 - INFO - Get LATEST geckodriver version for 128.6 firefox
+2025-05-12 08:00:11,446 - INFO - GH_TOKEN will be used to perform requests
+2025-05-12 08:00:11,869 - INFO - Driver has been saved in cache [/root/.wdm/drivers/geckodriver/linux64/v0.36.0]
+2025-05-12 08:00:21,596 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-12 08:00:30,342 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-12 08:00:45,380 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
