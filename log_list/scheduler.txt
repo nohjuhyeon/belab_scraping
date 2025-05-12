@@ -6285,3 +6285,6 @@
 2025-05-12 08:00:21,596 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 2025-05-12 08:00:30,342 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 2025-05-12 08:00:45,380 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-12 08:01:59,042 - INFO - notice check shut down.
+2025-05-12 09:30:02,192 - INFO - ----------------notice check started----------------
+2025-05-12 09:30:24,960 - INFO - notice check shut down.
