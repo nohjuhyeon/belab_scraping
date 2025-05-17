@@ -14551,3 +14551,21 @@
 2025-05-17 08:05:02,562 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 2025-05-17 08:05:10,862 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 2025-05-17 08:06:55,513 - INFO - notice check shut down.
+2025-05-17 12:00:09,023 - INFO - ----------------notice check started----------------
+2025-05-17 12:00:18,633 - INFO - ====== WebDriver manager ======
+2025-05-17 12:00:18,852 - INFO - Get LATEST geckodriver version for 128.6 firefox
+2025-05-17 12:00:18,853 - INFO - GH_TOKEN will be used to perform requests
+2025-05-17 12:00:19,182 - INFO - Get LATEST geckodriver version for 128.6 firefox
+2025-05-17 12:00:19,182 - INFO - GH_TOKEN will be used to perform requests
+2025-05-17 12:00:19,519 - INFO - There is no [linux64] geckodriver "v0.36.0" for browser firefox "128.6" in cache
+2025-05-17 12:00:19,519 - INFO - Get LATEST geckodriver version for 128.6 firefox
+2025-05-17 12:00:19,519 - INFO - GH_TOKEN will be used to perform requests
+2025-05-17 12:00:19,838 - INFO - Getting latest mozilla release info for v0.36.0
+2025-05-17 12:00:19,839 - INFO - GH_TOKEN will be used to perform requests
+2025-05-17 12:00:20,159 - INFO - About to download new driver from https://github.com/mozilla/geckodriver/releases/download/v0.36.0/geckodriver-v0.36.0-linux64.tar.gz
+2025-05-17 12:00:21,254 - INFO - Driver downloading response is 200
+2025-05-17 12:00:21,452 - INFO - Get LATEST geckodriver version for 128.6 firefox
+2025-05-17 12:00:21,453 - INFO - GH_TOKEN will be used to perform requests
+2025-05-17 12:00:21,867 - INFO - Driver has been saved in cache [/root/.wdm/drivers/geckodriver/linux64/v0.36.0]
+2025-05-17 12:00:44,930 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-17 12:00:53,853 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
