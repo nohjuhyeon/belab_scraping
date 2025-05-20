@@ -15661,3 +15661,6 @@
 2025-05-20 08:00:15,310 - INFO - GH_TOKEN will be used to perform requests
 2025-05-20 08:00:15,695 - INFO - Driver has been saved in cache [/root/.wdm/drivers/geckodriver/linux64/v0.36.0]
 2025-05-20 08:00:25,931 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-20 08:01:41,097 - INFO - notice check shut down.
+2025-05-20 09:30:02,234 - INFO - ----------------notice check started----------------
+2025-05-20 09:30:29,315 - INFO - notice check shut down.
