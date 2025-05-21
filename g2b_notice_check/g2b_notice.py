@@ -138,10 +138,12 @@ def notice_search(notice_list, notice_ids, folder_path):
                 if "제안요청서" in file_name or "과업요청서" in file_name or "과업내용서" in file_name:
                     download_link_key = 'ntceSpecDocUrl'+ str(file_name_num+1)
                     download_link = item[download_link_key]
+                    file_path = os.path.join(download_folder_path, file_name)
+
                     try:
                         response = requests.get(download_link, stream=True)
                         response.raise_for_status()  # HTTP 에러가 발생하면 예외를 발생시킴
-                        with open(file_name, 'wb') as file:
+                        with open(file_path, 'wb') as file:
                             for chunk in response.iter_content(chunk_size=8192):  # 대용량 파일 처리
                                 file.write(chunk)
                         print(f"파일이 성공적으로 다운로드되었습니다: {file_name}")
