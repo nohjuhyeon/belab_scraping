@@ -4,16 +4,16 @@ from selenium.webdriver.common.by import By
 import os
 import time
 from dotenv import load_dotenv
-# from function_list.basic_options import mongo_setting
+from function_list.basic_options import mongo_setting
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-# from function_list.basic_options import (
-#     selenium_setting,
-#     download_path_setting,
-#     init_browser,
-# )
-# from function_list.g2b_func import notice_file_check, notice_title_check, folder_clear
+from function_list.basic_options import (
+    selenium_setting,
+    download_path_setting,
+    init_browser,
+)
+from function_list.g2b_func import notice_file_check, notice_title_check, folder_clear
 from datetime import datetime, timedelta
 
 import shutil
@@ -74,7 +74,7 @@ def notice_search(notice_list, notice_ids, folder_path):
     """
 
     # MongoDB 컬렉션 설정
-    # collection = mongo_setting("news_scraping", "notice_list")
+    collection = mongo_setting("news_scraping", "notice_list")
     try:
         # 다운로드 폴더 경로 생성
         download_folder_path = os.path.abspath(folder_path + "/notice_list")
@@ -146,6 +146,7 @@ def notice_search(notice_list, notice_ids, folder_path):
         if notice_id not in notice_ids and notice_id not in notice_id_list:
             folder_clear(download_folder_path)
             notice_id_list.append(notice_id)
+            notice_open_date = item['opengDt']
             notice_end_date = item["bidClseDt"]
             notice_start_date = item["rgstDt"]
             notice_title = item["bidNtceNm"]
@@ -153,66 +154,22 @@ def notice_search(notice_list, notice_ids, folder_path):
             requesting_agency = item["dminsttNm"]
             publishing_agency = item["ntceInsttNm"]
             notice_price = item["asignBdgtAmt"] or "0 원"
-            for file_name_num in range(10):
-                file_name_key = 'ntceSpecFileNm' + str(file_name_num+1)
-                file_name = item[file_name_key].replace(" ", "")
-                if "제안요청서" in file_name or "과업요청서" in file_name or "과업내용서" in file_name:
-                    download_link_key = 'ntceSpecDocUrl'+ str(file_name_num+1)
-                    download_link = item[download_link_key]
-                    file_path = os.path.join(download_folder_path, file_name)
-                    try:
-                        response = requests.get(download_link, stream=True)
-                        response.raise_for_status()  # HTTP 에러가 발생하면 예외를 발생시킴
-                        with open(file_path, 'wb') as file:
-                            for chunk in response.iter_content(chunk_size=8192):  # 대용량 파일 처리
-                                file.write(chunk)
-                        wait_for_downloads(download_folder_path)
-                        print(f"파일이 성공적으로 다운로드되었습니다: {file_name}")
-                    except requests.exceptions.RequestException as e:
-                        print(f"파일 다운로드 중 오류가 발생했습니다: {e}")
-                file_url = f"http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoEorderAtchFileInfo?serviceKey={service_key}&pageNo={pagenum}&numOfRows=500&inqryDiv=1&inqryBgnDt={search_start_date}&inqryEndDt={search_end_date}&bidNtceNo={bidNtceNo}&type=json"
-                file_response = requests.get(file_url)
-                file_contents = json.loads(file_response.content)
-                file_items = file_contents["response"]["body"]["items"]
-                for file_item in file_items:
-                    if file_item['bidNtceNo'] == bidNtceNo:
-                        pass
-                # try:
-                #     # 파일 내용 확인 및 분류
-                #     it_notice_check,file_keywords,category_dict,category_list,summary,context = notice_file_check(download_folder_path)
-                #     notice_type = notice_title_check(notice_title)
-                #     for j in file_keywords:
-                #         if j not in notice_type:
-                #             notice_type.append(j)
-                #     for j in category_list:
-                #         if j not in notice_type:
-                #             notice_type.append(j)
-                #     notice_type = ", ".join(notice_type)
-                #     folder_clear(download_folder_path)
-                #     time.sleep(1)
+            dict_notice = {
+                "notice_id": notice_id,
+                "title": notice_title,
+                "price": notice_price,
+                "publishing_agency": publishing_agency,
+                "requesting_agency": requesting_agency,
+                "start_date": notice_start_date,
+                "end_date": notice_end_date,
+                "open_date": notice_open_date,
+                "link": notice_link,
+                "notice_class": "입찰 공고",
+                # 'notice_content':context
+            }
+            notice_list.append(dict_notice)
+            collection.insert_one(dict_notice)
 
-                #     # 공고 데이터를 MongoDB에 저장
-                #     dict_notice = {
-                #         "notice_id": notice_id,
-                #         "title": notice_title,
-                #         "price": notice_price,
-                #         "publishing_agency": publishing_agency,
-                #         "requesting_agency": requesting_agency,
-                #         "start_date": notice_start_date,
-                #         "end_date": notice_end_date,
-                #         "link": notice_link,
-                #         "it_notice_check": it_notice_check,
-                #         "summary": summary,
-                #         "type": notice_type,
-                #         "notice_class": "입찰 공고",
-                #         # 'notice_content':context
-                #     }
-                #     notice_list.append(dict_notice)
-                #     collection.insert_one(dict_notice)
-                #     db_insert_count += 1
-                #     break
-                # except Exception as e:
-                #     time.sleep(2)
     print("저장한 공고 수:", db_insert_count)
     return notice_list
 

@@ -130,6 +130,7 @@ def notice_search(notice_list, notice_ids, folder_path):
         if notice_id not in notice_ids and notice_id not in notice_id_list:
             folder_clear(download_folder_path)
             notice_id_list.append(notice_id)
+            notice_open_date = item["opengDt"]
             notice_end_date = item["bidClseDt"]
             notice_start_date = item["rgstDt"]
             notice_title = item["bidNtceNm"]
@@ -178,6 +179,7 @@ def notice_search(notice_list, notice_ids, folder_path):
                         "requesting_agency": requesting_agency,
                         "start_date": notice_start_date,
                         "end_date": notice_end_date,
+                        "open_date": notice_open_date,
                         "link": notice_link,
                         "it_notice_check": it_notice_check,
                         "summary": summary,
