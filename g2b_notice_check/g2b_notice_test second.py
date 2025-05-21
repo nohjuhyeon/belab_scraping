@@ -4,9 +4,36 @@ from selenium.webdriver.common.by import By
 import os
 import time
 from dotenv import load_dotenv
-from function_list.basic_options import mongo_setting
-from function_list.g2b_func import notice_file_check, notice_title_check, folder_clear
+# from function_list.basic_options import mongo_setting
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+# from function_list.basic_options import (
+#     selenium_setting,
+#     download_path_setting,
+#     init_browser,
+# )
+# from function_list.g2b_func import notice_file_check, notice_title_check, folder_clear
 from datetime import datetime, timedelta
+
+import shutil
+def folder_clear(download_folder_path):
+    """
+    지정된 폴더 내 모든 파일 및 디렉토리를 삭제합니다.
+
+    Args:
+        download_folder_path (str): 삭제할 폴더 경로.
+    """
+    for filename in os.listdir(download_folder_path):
+        file_path = os.path.join(download_folder_path, filename)
+        try:
+            # 파일인지 확인하고 삭제
+            if os.path.isfile(file_path):
+                os.remove(file_path)
+            elif os.path.isdir(file_path):
+                shutil.rmtree(file_path)  # 디렉토리 삭제
+        except Exception as e:
+            print(f"Failed to delete {file_path}. Reason: {e}")
 
 
 def wait_for_downloads(download_dir, timeout=30):
@@ -32,19 +59,6 @@ def wait_for_downloads(download_dir, timeout=30):
         # 0.5초 대기 후 다시 확인
         time.sleep(0.5)
 
-def file_download(download_folder_path, file_name,download_link):
-    file_path = os.path.join(download_folder_path, file_name)
-    try:
-        response = requests.get(download_link, stream=True)
-        response.raise_for_status()  # HTTP 에러가 발생하면 예외를 발생시킴
-        with open(file_path, 'wb') as file:
-            for chunk in response.iter_content(chunk_size=8192):  # 대용량 파일 처리
-                file.write(chunk)
-        wait_for_downloads(download_folder_path)
-        print(f"파일이 성공적으로 다운로드되었습니다: {file_name}")
-    except requests.exceptions.RequestException as e:
-        print(f"파일 다운로드 중 오류가 발생했습니다: {e}")
-
 
 def notice_search(notice_list, notice_ids, folder_path):
     """
@@ -60,7 +74,7 @@ def notice_search(notice_list, notice_ids, folder_path):
     """
 
     # MongoDB 컬렉션 설정
-    collection = mongo_setting("news_scraping", "notice_list")
+    # collection = mongo_setting("news_scraping", "notice_list")
     try:
         # 다운로드 폴더 경로 생성
         download_folder_path = os.path.abspath(folder_path + "/notice_list")
@@ -145,54 +159,60 @@ def notice_search(notice_list, notice_ids, folder_path):
                 if "제안요청서" in file_name or "과업요청서" in file_name or "과업내용서" in file_name:
                     download_link_key = 'ntceSpecDocUrl'+ str(file_name_num+1)
                     download_link = item[download_link_key]
-                    file_download(download_folder_path, file_name,download_link)
+                    file_path = os.path.join(download_folder_path, file_name)
+                    try:
+                        response = requests.get(download_link, stream=True)
+                        response.raise_for_status()  # HTTP 에러가 발생하면 예외를 발생시킴
+                        with open(file_path, 'wb') as file:
+                            for chunk in response.iter_content(chunk_size=8192):  # 대용량 파일 처리
+                                file.write(chunk)
+                        wait_for_downloads(download_folder_path)
+                        print(f"파일이 성공적으로 다운로드되었습니다: {file_name}")
+                    except requests.exceptions.RequestException as e:
+                        print(f"파일 다운로드 중 오류가 발생했습니다: {e}")
                 file_url = f"http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoEorderAtchFileInfo?serviceKey={service_key}&pageNo={pagenum}&numOfRows=500&inqryDiv=1&inqryBgnDt={search_start_date}&inqryEndDt={search_end_date}&bidNtceNo={bidNtceNo}&type=json"
                 file_response = requests.get(file_url)
                 file_contents = json.loads(file_response.content)
                 file_items = file_contents["response"]["body"]["items"]
                 for file_item in file_items:
-                    file_name = file_item['eorderAtchFileNm']
-                    if file_item['bidNtceNo'] == bidNtceNo and ("제안요청서" in file_name or "과업요청서" in file_name or "과업내용서" in file_name):
-                        download_link = file_item['eorderAtchFileUrl']
-                        file_download(download_folder_path, file_name,download_link)
+                    if file_item['bidNtceNo'] == bidNtceNo:
                         pass
-                pass
-                try:
-                    # 파일 내용 확인 및 분류
-                    it_notice_check,file_keywords,category_dict,category_list,summary,context = notice_file_check(download_folder_path)
-                    notice_type = notice_title_check(notice_title)
-                    for j in file_keywords:
-                        if j not in notice_type:
-                            notice_type.append(j)
-                    for j in category_list:
-                        if j not in notice_type:
-                            notice_type.append(j)
-                    notice_type = ", ".join(notice_type)
-                    folder_clear(download_folder_path)
-                    time.sleep(1)
+                # try:
+                #     # 파일 내용 확인 및 분류
+                #     it_notice_check,file_keywords,category_dict,category_list,summary,context = notice_file_check(download_folder_path)
+                #     notice_type = notice_title_check(notice_title)
+                #     for j in file_keywords:
+                #         if j not in notice_type:
+                #             notice_type.append(j)
+                #     for j in category_list:
+                #         if j not in notice_type:
+                #             notice_type.append(j)
+                #     notice_type = ", ".join(notice_type)
+                #     folder_clear(download_folder_path)
+                #     time.sleep(1)
 
-                    # 공고 데이터를 MongoDB에 저장
-                    dict_notice = {
-                        "notice_id": notice_id,
-                        "title": notice_title,
-                        "price": notice_price,
-                        "publishing_agency": publishing_agency,
-                        "requesting_agency": requesting_agency,
-                        "start_date": notice_start_date,
-                        "end_date": notice_end_date,
-                        "link": notice_link,
-                        "it_notice_check": it_notice_check,
-                        "summary": summary,
-                        "type": notice_type,
-                        "notice_class": "입찰 공고",
-                        # 'notice_content':context
-                    }
-                    notice_list.append(dict_notice)
-                    collection.insert_one(dict_notice)
-                    db_insert_count += 1
-                    break
-                except Exception as e:
-                    time.sleep(2)
+                #     # 공고 데이터를 MongoDB에 저장
+                #     dict_notice = {
+                #         "notice_id": notice_id,
+                #         "title": notice_title,
+                #         "price": notice_price,
+                #         "publishing_agency": publishing_agency,
+                #         "requesting_agency": requesting_agency,
+                #         "start_date": notice_start_date,
+                #         "end_date": notice_end_date,
+                #         "link": notice_link,
+                #         "it_notice_check": it_notice_check,
+                #         "summary": summary,
+                #         "type": notice_type,
+                #         "notice_class": "입찰 공고",
+                #         # 'notice_content':context
+                #     }
+                #     notice_list.append(dict_notice)
+                #     collection.insert_one(dict_notice)
+                #     db_insert_count += 1
+                #     break
+                # except Exception as e:
+                #     time.sleep(2)
     print("저장한 공고 수:", db_insert_count)
     return notice_list
 
@@ -208,10 +228,9 @@ def notice_collection(existing_df):
         notice_list(List[dict]): 업데이트된 공고 리스트
     """
     notice_list = []
-    notice_ids = []
-    # notice_ids = existing_df.loc[
-    #     existing_df["공고 유형"] == "입찰 공고", "공고번호"
-    # ].to_list()
+    notice_ids = existing_df.loc[
+        existing_df["공고 유형"] == "입찰 공고", "공고번호"
+    ].to_list()
     load_dotenv(dotenv_path='/app/belab_scraping/.env')
     folder_path = os.environ.get("folder_path")
     notice_list = notice_search(notice_list, notice_ids, folder_path)
