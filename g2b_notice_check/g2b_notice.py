@@ -132,6 +132,20 @@ def notice_search(notice_list, notice_ids, folder_path):
             requesting_agency = item["dminsttNm"]
             publishing_agency = item["ntceInsttNm"]
             notice_price = item["asignBdgtAmt"] or "0 원"
+            for file_name_num in range(10):
+                file_name_key = 'ntceSpecFileNm1' + str(file_name_num+1)
+                file_name = item[file_name_key].replace(" ", "")
+                if "제안요청서" in file_name or "과업요청서" in file_name or "과업내용서" in file_name:
+                    download_link = 'ntceSpecDocUrl'+ str(file_name_num+1)
+                    try:
+                        response = requests.get(download_link, stream=True)
+                        response.raise_for_status()  # HTTP 에러가 발생하면 예외를 발생시킴
+                        with open(file_name, 'wb') as file:
+                            for chunk in response.iter_content(chunk_size=8192):  # 대용량 파일 처리
+                                file.write(chunk)
+                        print(f"파일이 성공적으로 다운로드되었습니다: {file_name}")
+                    except requests.exceptions.RequestException as e:
+                        print(f"파일 다운로드 중 오류가 발생했습니다: {e}")
 
             # 브라우저에서 공고 상세 페이지 열기 및 파일 다운로드
             for _ in range(10):
