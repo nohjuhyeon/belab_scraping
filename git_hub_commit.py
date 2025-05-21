@@ -35,30 +35,22 @@ def git_commit():
         status_result = subprocess.run(['git', 'status'], capture_output=True, text=True)
         print(status_result.stdout)
 
-        # 변경 사항 스테이징
-        print("변경 사항을 스테이지에 추가합니다...")
-        subprocess.run(['git', 'add', '.'], check=True)
+        # 변경 사항이 없으면 커밋 단계를 생략
+        if "nothing to commit, working tree clean" in status_result.stdout:
+            print("변경 사항이 없으므로 커밋 단계를 건너뜁니다.")
+        else:
+            # 변경 사항 스테이징
+            print("변경 사항을 스테이지에 추가합니다...")
+            subprocess.run(['git', 'add', '.'], check=True)
 
-        # 커밋 생성
-        print("커밋을 생성합니다...")
-        subprocess.run(['git', 'commit', '-m', commit_message], check=True)
-
-        # 스테이지되지 않은 변경 사항을 스태시로 저장
-        print("스태시로 변경 사항을 저장합니다...")
-        subprocess.run(['git', 'stash'], check=True)
+            # 커밋 생성
+            print("커밋을 생성합니다...")
+            commit_message = f"자동 커밋: {datetime.now()}"
+            subprocess.run(['git', 'commit', '-m', commit_message], check=True)
 
         # 원격 저장소에서 최신 변경 사항 가져오기
         print("원격 저장소에서 변경 사항을 가져옵니다...")
         subprocess.run(['git', 'pull', '--rebase'], check=True)
-
-        # 스태시 상태 확인
-        stash_list = subprocess.run(['git', 'stash', 'list'], check=True, capture_output=True, text=True).stdout.strip()
-
-        if stash_list:
-            print("스태시된 변경 사항을 다시 적용합니다...")
-            subprocess.run(['git', 'stash', 'pop'], check=True)
-        else:
-            print("스태시된 변경 사항이 없습니다. 스태시 적용 단계를 건너뜁니다.")
 
         # 변경 사항 푸쉬
         print("변경 사항을 원격 저장소에 푸쉬합니다...")
@@ -78,4 +70,3 @@ def git_commit():
 
 if __name__ == "__main__":
     git_commit()
-

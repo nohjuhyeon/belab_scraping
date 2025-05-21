@@ -72,7 +72,8 @@ def notice_search(notice_list, notice_ids, folder_path):
         search_start_date = (datetime.now() - timedelta(days=2)).strftime(
             "%Y%m%d"
         ) + "0000"
-        service_key = "Qa6CXT4r6qEr%2BkQt%2FJx6wJr5MPx45hKNJwNTScoYryT2uGz7GozIqpjBw%2FRMk1uE8l92NU7h89m20sa%2FXHKuaQ%3D%3D"
+        service_key = os.environ.get("API_SERVICE_KEY")
+
         # API 요청 URL 생성
         url = f"http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoServcPPSSrch?serviceKey={service_key}&pageNo=1&numOfRows=500&inqryDiv=1&inqryBgnDt={search_start_date}&inqryEndDt={search_end_date}&type=json"
 
