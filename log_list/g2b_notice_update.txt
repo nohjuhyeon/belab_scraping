@@ -982,3 +982,7 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.10/site-packages/gspread/http_client.py", line 128, in request
     raise APIError(response)
 gspread.exceptions.APIError: APIError: [500]: Internal error encountered.
+[main 3ae8dac] 자동 커밋: 2025-05-22 08:00:04.014672
+ 2 files changed, 1 insertion(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
