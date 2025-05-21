@@ -133,7 +133,7 @@ def notice_search(notice_list, notice_ids, folder_path):
             publishing_agency = item["ntceInsttNm"]
             notice_price = item["asignBdgtAmt"] or "0 원"
             for file_name_num in range(10):
-                file_name_key = 'ntceSpecFileNm1' + str(file_name_num+1)
+                file_name_key = 'ntceSpecFileNm' + str(file_name_num+1)
                 file_name = item[file_name_key].replace(" ", "")
                 if "제안요청서" in file_name or "과업요청서" in file_name or "과업내용서" in file_name:
                     download_link = 'ntceSpecDocUrl'+ str(file_name_num+1)
