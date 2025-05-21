@@ -51,9 +51,14 @@ def git_commit():
         print("원격 저장소에서 변경 사항을 가져옵니다...")
         subprocess.run(['git', 'pull', '--rebase'], check=True)
 
-        # 스태시된 변경 사항 다시 적용
-        print("스태시된 변경 사항을 다시 적용합니다...")
-        subprocess.run(['git', 'stash', 'pop'], check=True)
+        # 스태시 상태 확인
+        stash_list = subprocess.run(['git', 'stash', 'list'], check=True, capture_output=True, text=True).stdout.strip()
+
+        if stash_list:
+            print("스태시된 변경 사항을 다시 적용합니다...")
+            subprocess.run(['git', 'stash', 'pop'], check=True)
+        else:
+            print("스태시된 변경 사항이 없습니다. 스태시 적용 단계를 건너뜁니다.")
 
         # 변경 사항 푸쉬
         print("변경 사항을 원격 저장소에 푸쉬합니다...")
