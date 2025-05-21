@@ -796,3 +796,80 @@ no changes added to commit (use "git add" and/or "git commit -a")
  2 files changed, 62 insertions(+)
 error: cannot pull with rebase: You have unstaged changes.
 error: please commit or stash them.
+[main d99a5b0] 자동 커밋: 2025-05-22 00:07:16.178758
+ 4 files changed, 74888 insertions(+), 121827 deletions(-)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+현재 시간: 2025-05-22 00:00:03.728923
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 11 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/git_commit.txt
+	modified:   log_list/summary_update.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-05-22 00:00:03.761705
+나라장터 공고를 찾습니다.
+총 공고 수 :  1635
+100
+200
+300
+400
+500
+600
+700
+800
+파일이 성공적으로 다운로드되었습니다: 제안요청서.hwpx
+900
+파일이 성공적으로 다운로드되었습니다: 국립한밭대학교입학전형관리시스템재구축사업제안요청서_재공고_최종.hwp
+파일이 성공적으로 다운로드되었습니다: 과업내용서(농지이용증진사업).hwp
+파일이 성공적으로 다운로드되었습니다: 정비과업내용서.hwp
+1000
+파일이 성공적으로 다운로드되었습니다: 1.제안요청서_영업비밀침해사건손해,침해액산정제도개선연구.hwpx
+파일이 성공적으로 다운로드되었습니다: 1.과업내용서(환경서비스지원부).hwp
+현재 시간: 2025-05-22 00:07:16.105430
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 12 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   item_list.json
+	modified:   log_list/g2b_notice_update.txt
+	modified:   log_list/git_commit.txt
+	modified:   log_list/scheduler.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 59, in <module>
+    notice_list = notice_collection(existing_df)
+  File "/app/belab_scraping/g2b_notice_check/g2b_notice.py", line 214, in notice_collection
+    notice_list = notice_search(notice_list, notice_ids, folder_path)
+  File "/app/belab_scraping/g2b_notice_check/g2b_notice.py", line 149, in notice_search
+    file_contents = json.loads(file_response.content)
+  File "/usr/local/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
