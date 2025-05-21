@@ -136,7 +136,8 @@ def notice_search(notice_list, notice_ids, folder_path):
                 file_name_key = 'ntceSpecFileNm' + str(file_name_num+1)
                 file_name = item[file_name_key].replace(" ", "")
                 if "제안요청서" in file_name or "과업요청서" in file_name or "과업내용서" in file_name:
-                    download_link = 'ntceSpecDocUrl'+ str(file_name_num+1)
+                    download_link_key = 'ntceSpecDocUrl'+ str(file_name_num+1)
+                    download_link = item[download_link_key]
                     try:
                         response = requests.get(download_link, stream=True)
                         response.raise_for_status()  # HTTP 에러가 발생하면 예외를 발생시킴
