@@ -99,7 +99,6 @@ def notice_search(notice_list, notice_ids, folder_path):
         try:
             with open(output_file, "w", encoding="utf-8") as file:
                 json.dump(item_list, file, ensure_ascii=False, indent=4)
-            print(f"item_list가 '{output_file}'로 저장되었습니다.")
         except Exception as e:
             print(f"JSON 저장 중 오류 발생: {e}")
 
