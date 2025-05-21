@@ -57,13 +57,19 @@ def notice_search(notice_list, notice_ids, folder_path):
     # MongoDB 컬렉션 설정
     collection = mongo_setting("news_scraping", "notice_list")
     try:
+        # 다운로드 폴더 경로 생성
+        download_folder_path = os.path.abspath(folder_path + "/notice_list")
+        if not os.path.exists(download_folder_path):
+            # 폴더가 없으면 생성
+            os.makedirs(download_folder_path)  
         # 오늘 날짜와 2일 전 날짜를 가져와서 원하는 형식으로 변환
         search_end_date = datetime.now().strftime("%Y%m%d") + "1159"
         search_start_date = (datetime.now() - timedelta(days=2)).strftime(
             "%Y%m%d"
         ) + "0000"
+        service_key = "Qa6CXT4r6qEr%2BkQt%2FJx6wJr5MPx45hKNJwNTScoYryT2uGz7GozIqpjBw%2FRMk1uE8l92NU7h89m20sa%2FXHKuaQ%3D%3D"
         # API 요청 URL 생성
-        url = f"http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoServcPPSSrch?serviceKey=Qa6CXT4r6qEr%2BkQt%2FJx6wJr5MPx45hKNJwNTScoYryT2uGz7GozIqpjBw%2FRMk1uE8l92NU7h89m20sa%2FXHKuaQ%3D%3D&pageNo=1&numOfRows=500&inqryDiv=1&inqryBgnDt={search_start_date}&inqryEndDt={search_end_date}&type=json"
+        url = f"http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoServcPPSSrch?serviceKey={service_key}&pageNo=1&numOfRows=500&inqryDiv=1&inqryBgnDt={search_start_date}&inqryEndDt={search_end_date}&type=json"
 
         # API 요청 및 응답 처리
         response = requests.get(url)
@@ -77,7 +83,7 @@ def notice_search(notice_list, notice_ids, folder_path):
         item_list = []
         for i in range(pages):
             pagenum = i + 1
-            url = f"http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoServcPPSSrch?serviceKey=Qa6CXT4r6qEr%2BkQt%2FJx6wJr5MPx45hKNJwNTScoYryT2uGz7GozIqpjBw%2FRMk1uE8l92NU7h89m20sa%2FXHKuaQ%3D%3D&pageNo={pagenum}&numOfRows=500&inqryDiv=1&inqryBgnDt={search_start_date}&inqryEndDt={search_end_date}&type=json"
+            url = f"http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoServcPPSSrch?serviceKey={service_key}&pageNo={pagenum}&numOfRows=500&inqryDiv=1&inqryBgnDt={search_start_date}&inqryEndDt={search_end_date}&type=json"
             response = requests.get(url)
             contents = json.loads(response.content)
             items = contents["response"]["body"]["items"]
@@ -98,13 +104,6 @@ def notice_search(notice_list, notice_ids, folder_path):
         print(file_path)
         with open(file_path, "r", encoding="utf-8") as file:
             item_list = json.load(file)
-
-    # Selenium 설정 및 브라우저 초기화
-    chrome_options = selenium_setting()
-    chrome_options, download_folder_path = download_path_setting(
-        folder_path, chrome_options
-    )
-    browser = init_browser(chrome_options)
 
     notice_id_list = []
     item_num = 0
@@ -146,71 +145,20 @@ def notice_search(notice_list, notice_ids, folder_path):
                         with open(file_path, 'wb') as file:
                             for chunk in response.iter_content(chunk_size=8192):  # 대용량 파일 처리
                                 file.write(chunk)
+                        wait_for_downloads(download_folder_path)
                         print(f"파일이 성공적으로 다운로드되었습니다: {file_name}")
                     except requests.exceptions.RequestException as e:
                         print(f"파일 다운로드 중 오류가 발생했습니다: {e}")
-
-            # 브라우저에서 공고 상세 페이지 열기 및 파일 다운로드
-            for _ in range(10):
+                file_url = f"http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoEorderAtchFileInfo?serviceKey={service_key}&pageNo={pagenum}&numOfRows=500&inqryDiv=1&inqryBgnDt={search_start_date}&inqryEndDt={search_end_date}&bidNtceNo={bidNtceNo}&type=json"
+                file_response = requests.get(file_url)
+                file_contents = json.loads(file_response.content)
+                file_items = file_contents["response"]["body"]["items"]
+                for file_item in file_items:
+                    if file_item['bidNtceNo'] == bidNtceNo:
+                        pass
                 try:
-                    browser.get(notice_link)
-                    time.sleep(3)
-                    WebDriverWait(browser, 10).until(
-                        EC.invisibility_of_element_located((By.ID, "___processbar2"))
-                    )
-                except:
-                    pass
-
-                try:
-                    alarm_btn = browser.find_element(
-                        by=By.CSS_SELECTOR, value="input[value='확인']"
-                    )
-                    alarm_btn.click()
-                except:
-                    pass
-
-                try:
-                    download_elements = browser.find_elements(
-                        By.CSS_SELECTOR, value="td>nobr>a"
-                    )
-                    for element in download_elements:
-                        if (
-                            "제안요청서" in element.text.replace(" ", "")
-                            or "과업지시서" in element.text.replace(" ", "")
-                            or "과업내용서" in element.text.replace(" ", "")
-                        ):
-                            element.click()
-                            wait_for_downloads(download_folder_path)
-                            time.sleep(2)
-                except:
-                    pass
-
-                try:
-                    entire_files = WebDriverWait(browser, 10).until(
-                        EC.presence_of_element_located(
-                            (
-                                By.CSS_SELECTOR,
-                                'table > thead > tr:nth-child(1) >th:nth-child(1)> div >input[title="전체선택"]',
-                            )
-                        )
-                    )
-                    entire_files.click()
-                    download_btn = browser.find_elements(
-                        By.CSS_SELECTOR, "input[value='다운로드']"
-                    )[0]
-                    download_btn.click()
-                    wait_for_downloads(download_folder_path)
-                    time.sleep(2)
-
                     # 파일 내용 확인 및 분류
-                    (
-                        it_notice_check,
-                        file_keywords,
-                        category_dict,
-                        category_list,
-                        summary,
-                        context,
-                    ) = notice_file_check(download_folder_path)
+                    it_notice_check,file_keywords,category_dict,category_list,summary,context = notice_file_check(download_folder_path)
                     notice_type = notice_title_check(notice_title)
                     for j in file_keywords:
                         if j not in notice_type:
@@ -244,8 +192,6 @@ def notice_search(notice_list, notice_ids, folder_path):
                     break
                 except Exception as e:
                     time.sleep(2)
-
-    browser.quit()
     print("저장한 공고 수:", db_insert_count)
     return notice_list
 
