@@ -72,8 +72,6 @@ def notice_search(notice_list, notice_ids, folder_path):
         search_start_date = (datetime.now() - timedelta(days=2)).strftime(
             "%Y%m%d"
         ) + "0000"
-        search_start_date = "202505210900"
-        search_end_date = "202505211000"
         service_key = "Qa6CXT4r6qEr%2BkQt%2FJx6wJr5MPx45hKNJwNTScoYryT2uGz7GozIqpjBw%2FRMk1uE8l92NU7h89m20sa%2FXHKuaQ%3D%3D"
         # API 요청 URL 생성
         url = f"http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoServcPPSSrch?serviceKey={service_key}&pageNo=1&numOfRows=500&inqryDiv=1&inqryBgnDt={search_start_date}&inqryEndDt={search_end_date}&type=json"
@@ -208,10 +206,9 @@ def notice_collection(existing_df):
         notice_list(List[dict]): 업데이트된 공고 리스트
     """
     notice_list = []
-    notice_ids = []
-    # notice_ids = existing_df.loc[
-    #     existing_df["공고 유형"] == "입찰 공고", "공고번호"
-    # ].to_list()
+    notice_ids = existing_df.loc[
+        existing_df["공고 유형"] == "입찰 공고", "공고번호"
+    ].to_list()
     load_dotenv(dotenv_path='/app/belab_scraping/.env')
     folder_path = os.environ.get("folder_path")
     notice_list = notice_search(notice_list, notice_ids, folder_path)
