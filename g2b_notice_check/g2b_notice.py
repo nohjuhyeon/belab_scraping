@@ -138,7 +138,6 @@ def notice_search(notice_list, notice_ids, folder_path):
                     download_link_key = 'ntceSpecDocUrl'+ str(file_name_num+1)
                     download_link = item[download_link_key]
                     file_path = os.path.join(download_folder_path, file_name)
-
                     try:
                         response = requests.get(download_link, stream=True)
                         response.raise_for_status()  # HTTP 에러가 발생하면 예외를 발생시킴
