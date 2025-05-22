@@ -250,3 +250,380 @@
  2 files changed, 2 insertions(+)
 [main bd7a908] Auto Commit.
  3 files changed, 40 insertions(+)
+[main b189d05] 자동 커밋: 2025-05-21 14:00:08.156262
+ 2 files changed, 2 insertions(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+/usr/local/lib/python3.10/site-packages/huggingface_hub/file_download.py:795: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/usr/local/lib/python3.10/site-packages/transformers/modeling_utils.py:460: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(checkpoint_file, map_location="cpu")
+[Kss]: Oh! You have mecab in your environment. Kss will take this as a backend! :D
+
+[main 0121ea9] 자동 커밋: 2025-05-21 14:07:52.712826
+ 2 files changed, 11 insertions(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+현재 시간: 2025-05-21 14:00:08.133549
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/git_commit.txt
+	modified:   log_list/scheduler.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+----------------뉴스 요약 업데이트 시작----------------
+2025-05-21 14:00:08.172770
+현재 시간: 2025-05-21 14:07:52.645121
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/git_commit.txt
+	modified:   log_list/summary_update.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+뉴스 요약 업데이트 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 36, in <module>
+    total_update()
+  File "/app/belab_scraping/summary_update.py", line 12, in total_update
+    naver_news()
+  File "/app/belab_scraping/news_letter/naver_new.py", line 191, in naver_news
+    news_contents(collection, tokenizer, model)  # 뉴스 상세 데이터 수집
+  File "/app/belab_scraping/news_letter/naver_new.py", line 100, in news_contents
+    browser.get(i['news_link'])
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 393, in get
+    self.execute(Command.GET, {"url": url})
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 384, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: Tried to run command without establishing a connection
+
+[main dd39c83] 자동 커밋: 2025-05-21 18:00:09.225709
+ 3 files changed, 81 insertions(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+/usr/local/lib/python3.10/site-packages/huggingface_hub/file_download.py:795: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/usr/local/lib/python3.10/site-packages/transformers/modeling_utils.py:460: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(checkpoint_file, map_location="cpu")
+[Kss]: Oh! You have mecab in your environment. Kss will take this as a backend! :D
+
+[main cd5f36e] 자동 커밋: 2025-05-21 18:41:50.468298
+ 2 files changed, 11 insertions(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+현재 시간: 2025-05-21 18:00:09.199170
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 5 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/g2b_notice_update.txt
+	modified:   log_list/git_commit.txt
+	modified:   log_list/scheduler.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+----------------뉴스 요약 업데이트 시작----------------
+2025-05-21 18:00:09.245731
+현재 시간: 2025-05-21 18:41:50.380692
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 6 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/git_commit.txt
+	modified:   log_list/summary_update.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+뉴스 요약 업데이트 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 36, in <module>
+    total_update()
+  File "/app/belab_scraping/summary_update.py", line 12, in total_update
+    naver_news()
+  File "/app/belab_scraping/news_letter/naver_new.py", line 191, in naver_news
+    news_contents(collection, tokenizer, model)  # 뉴스 상세 데이터 수집
+  File "/app/belab_scraping/news_letter/naver_new.py", line 100, in news_contents
+    browser.get(i['news_link'])
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 393, in get
+    self.execute(Command.GET, {"url": url})
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 384, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: Tried to run command without establishing a connection
+
+[main bd35f3f] 자동 커밋: 2025-05-21 22:00:08.632657
+ 3 files changed, 81 insertions(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+/usr/local/lib/python3.10/site-packages/huggingface_hub/file_download.py:795: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/usr/local/lib/python3.10/site-packages/transformers/modeling_utils.py:460: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(checkpoint_file, map_location="cpu")
+[Kss]: Oh! You have mecab in your environment. Kss will take this as a backend! :D
+
+[main a0e5c2a] 자동 커밋: 2025-05-21 22:03:13.179144
+ 2 files changed, 11 insertions(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+현재 시간: 2025-05-21 22:00:08.604719
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 9 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/g2b_notice_update.txt
+	modified:   log_list/git_commit.txt
+	modified:   log_list/scheduler.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+----------------뉴스 요약 업데이트 시작----------------
+2025-05-21 22:00:08.651334
+현재 시간: 2025-05-21 22:03:13.085381
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 10 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/git_commit.txt
+	modified:   log_list/summary_update.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+뉴스 요약 업데이트 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 36, in <module>
+    total_update()
+  File "/app/belab_scraping/summary_update.py", line 12, in total_update
+    naver_news()
+  File "/app/belab_scraping/news_letter/naver_new.py", line 191, in naver_news
+    news_contents(collection, tokenizer, model)  # 뉴스 상세 데이터 수집
+  File "/app/belab_scraping/news_letter/naver_new.py", line 100, in news_contents
+    browser.get(i['news_link'])
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 393, in get
+    self.execute(Command.GET, {"url": url})
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 384, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: Tried to run command without establishing a connection
+
+[main c9b3252] 자동 커밋: 2025-05-22 02:00:08.873036
+ 3 files changed, 79 insertions(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+/usr/local/lib/python3.10/site-packages/huggingface_hub/file_download.py:795: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/usr/local/lib/python3.10/site-packages/transformers/modeling_utils.py:460: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(checkpoint_file, map_location="cpu")
+[Kss]: Oh! You have mecab in your environment. Kss will take this as a backend! :D
+
+[main c71f818] 자동 커밋: 2025-05-22 02:07:35.736323
+ 2 files changed, 11 insertions(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+현재 시간: 2025-05-22 02:00:08.848252
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 13 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/g2b_notice_update.txt
+	modified:   log_list/git_commit.txt
+	modified:   log_list/scheduler.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+----------------뉴스 요약 업데이트 시작----------------
+2025-05-22 02:00:08.892006
+현재 시간: 2025-05-22 02:07:35.644575
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 14 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/git_commit.txt
+	modified:   log_list/summary_update.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+뉴스 요약 업데이트 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 36, in <module>
+    total_update()
+  File "/app/belab_scraping/summary_update.py", line 12, in total_update
+    naver_news()
+  File "/app/belab_scraping/news_letter/naver_new.py", line 191, in naver_news
+    news_contents(collection, tokenizer, model)  # 뉴스 상세 데이터 수집
+  File "/app/belab_scraping/news_letter/naver_new.py", line 100, in news_contents
+    browser.get(i['news_link'])
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 393, in get
+    self.execute(Command.GET, {"url": url})
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 384, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: Tried to run command without establishing a connection
+
+[main d9c8a41] 자동 커밋: 2025-05-22 06:00:08.958606
+ 3 files changed, 107 insertions(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+/usr/local/lib/python3.10/site-packages/huggingface_hub/file_download.py:795: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/usr/local/lib/python3.10/site-packages/transformers/modeling_utils.py:460: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(checkpoint_file, map_location="cpu")
+[Kss]: Oh! You have mecab in your environment. Kss will take this as a backend! :D
+
+[main 844d737] 자동 커밋: 2025-05-22 07:50:03.973071
+ 2 files changed, 11 insertions(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+현재 시간: 2025-05-22 06:00:08.933942
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 17 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/g2b_notice_update.txt
+	modified:   log_list/git_commit.txt
+	modified:   log_list/scheduler.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+----------------뉴스 요약 업데이트 시작----------------
+2025-05-22 06:00:08.977981
+현재 시간: 2025-05-22 07:50:03.902613
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 18 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/git_commit.txt
+	modified:   log_list/summary_update.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+뉴스 요약 업데이트 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 36, in <module>
+    total_update()
+  File "/app/belab_scraping/summary_update.py", line 12, in total_update
+    naver_news()
+  File "/app/belab_scraping/news_letter/naver_new.py", line 191, in naver_news
+    news_contents(collection, tokenizer, model)  # 뉴스 상세 데이터 수집
+  File "/app/belab_scraping/news_letter/naver_new.py", line 99, in news_contents
+    for i in news_list:
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/cursor.py", line 1281, in __next__
+    return self.next()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/cursor.py", line 1257, in next
+    if len(self._data) or self._refresh():
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/cursor.py", line 1228, in _refresh
+    self._send_message(g)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/cursor.py", line 1100, in _send_message
+    response = client._run_operation(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1754, in _run_operation
+    return self._retryable_read(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1863, in _retryable_read
+    return self._retry_internal(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1830, in _retry_internal
+    ).run()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2554, in run
+    return self._read() if self._is_read else self._write()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2697, in _read
+    return self._func(self._session, self._server, conn, read_pref)  # type: ignore
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1745, in _cmd
+    return server.run_operation(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/helpers.py", line 45, in inner
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/server.py", line 227, in run_operation
+    _check_command_response(first, conn.max_wire_version)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/helpers_shared.py", line 245, in _check_command_response
+    raise CursorNotFound(errmsg, code, response, max_wire_version)
+pymongo.errors.CursorNotFound: cursor id 6118682382978710094 not found, full error: {'ok': 0.0, 'errmsg': 'cursor id 6118682382978710094 not found', 'code': 43, 'codeName': 'CursorNotFound', '$clusterTime': {'clusterTime': Timestamp(1747867803, 10), 'signature': {'hash': b'\x06\r\xf7/]\xc9z\xdd\x9f\xe9\xc8\xeaG\x81rf\xeeK\xfc\xae', 'keyId': 7470201656899010565}}, 'operationTime': Timestamp(1747867803, 10)}

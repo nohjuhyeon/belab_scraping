@@ -626,3 +626,438 @@ ISP/ISMP 메일이 성공적으로 발송되었습니다.
 이메일 전송 완료!
 [main 4bbf54d] Auto Commit.
  12 files changed, 1 insertion(+)
+[main 2e7f097] 자동 커밋: 2025-05-21 16:00:03.787552
+ 2 files changed, 61 insertions(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+[main e91ad8c] 자동 커밋: 2025-05-21 16:01:31.844360
+ 4 files changed, 16 insertions(+), 10 deletions(-)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+현재 시간: 2025-05-21 16:00:03.773673
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/git_commit.txt
+	modified:   log_list/summary_update.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-05-21 16:00:03.799759
+나라장터 공고를 찾습니다.
+총 공고 수 :  2058
+100
+200
+300
+400
+500
+600
+700
+800
+900
+1000
+1100
+1200
+1300
+1400
+1500
+1600
+1700
+1800
+1900
+2000
+저장한 공고 수: 0
+전체 공고 | 시작 날짜 : 2025-05-20 00:00:00 / 종료 날짜 : 2025-05-22 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터베이스 | 데이터 업데이트 및 정렬 완료.
+클라우드 컴퓨팅 | 데이터 업데이트 및 정렬 완료.
+네트워크 및 보안 | 데이터 업데이트 및 정렬 완료.
+AR/VR 및 메타버스 | 데이터 업데이트 및 정렬 완료.
+소프트웨어 개발 및 관리 | 데이터 업데이트 및 정렬 완료.
+블록체인 | 데이터 업데이트 및 정렬 완료.
+IoT | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP | 데이터 업데이트 및 정렬 완료.
+현재 시간: 2025-05-21 16:01:31.761789
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   item_list.json
+	modified:   log_list/g2b_notice_update.txt
+	modified:   log_list/git_commit.txt
+	modified:   log_list/scheduler.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
+[main 00e6a55] 자동 커밋: 2025-05-21 20:00:03.849369
+ 2 files changed, 62 insertions(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+[main 1f81f23] 자동 커밋: 2025-05-21 20:01:32.439277
+ 4 files changed, 14 insertions(+), 8 deletions(-)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+현재 시간: 2025-05-21 20:00:03.831851
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 7 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/git_commit.txt
+	modified:   log_list/summary_update.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-05-21 20:00:03.862784
+나라장터 공고를 찾습니다.
+총 공고 수 :  2058
+100
+200
+300
+400
+500
+600
+700
+800
+900
+1000
+1100
+1200
+1300
+1400
+1500
+1600
+1700
+1800
+1900
+2000
+저장한 공고 수: 0
+전체 공고 | 시작 날짜 : 2025-05-20 00:00:00 / 종료 날짜 : 2025-05-22 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터베이스 | 데이터 업데이트 및 정렬 완료.
+클라우드 컴퓨팅 | 데이터 업데이트 및 정렬 완료.
+네트워크 및 보안 | 데이터 업데이트 및 정렬 완료.
+AR/VR 및 메타버스 | 데이터 업데이트 및 정렬 완료.
+소프트웨어 개발 및 관리 | 데이터 업데이트 및 정렬 완료.
+블록체인 | 데이터 업데이트 및 정렬 완료.
+IoT | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP | 데이터 업데이트 및 정렬 완료.
+현재 시간: 2025-05-21 20:01:32.355318
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 8 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   item_list.json
+	modified:   log_list/g2b_notice_update.txt
+	modified:   log_list/git_commit.txt
+	modified:   log_list/scheduler.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
+[main dbe00de] 자동 커밋: 2025-05-22 00:00:03.747456
+ 2 files changed, 62 insertions(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+[main d99a5b0] 자동 커밋: 2025-05-22 00:07:16.178758
+ 4 files changed, 74888 insertions(+), 121827 deletions(-)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+현재 시간: 2025-05-22 00:00:03.728923
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 11 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/git_commit.txt
+	modified:   log_list/summary_update.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-05-22 00:00:03.761705
+나라장터 공고를 찾습니다.
+총 공고 수 :  1635
+100
+200
+300
+400
+500
+600
+700
+800
+파일이 성공적으로 다운로드되었습니다: 제안요청서.hwpx
+900
+파일이 성공적으로 다운로드되었습니다: 국립한밭대학교입학전형관리시스템재구축사업제안요청서_재공고_최종.hwp
+파일이 성공적으로 다운로드되었습니다: 과업내용서(농지이용증진사업).hwp
+파일이 성공적으로 다운로드되었습니다: 정비과업내용서.hwp
+1000
+파일이 성공적으로 다운로드되었습니다: 1.제안요청서_영업비밀침해사건손해,침해액산정제도개선연구.hwpx
+파일이 성공적으로 다운로드되었습니다: 1.과업내용서(환경서비스지원부).hwp
+현재 시간: 2025-05-22 00:07:16.105430
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 12 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   item_list.json
+	modified:   log_list/g2b_notice_update.txt
+	modified:   log_list/git_commit.txt
+	modified:   log_list/scheduler.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 59, in <module>
+    notice_list = notice_collection(existing_df)
+  File "/app/belab_scraping/g2b_notice_check/g2b_notice.py", line 214, in notice_collection
+    notice_list = notice_search(notice_list, notice_ids, folder_path)
+  File "/app/belab_scraping/g2b_notice_check/g2b_notice.py", line 149, in notice_search
+    file_contents = json.loads(file_response.content)
+  File "/usr/local/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[main 49c6883] 자동 커밋: 2025-05-22 04:00:03.439921
+ 2 files changed, 62 insertions(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+[main eb66794] 자동 커밋: 2025-05-22 04:14:50.756292
+ 3 files changed, 26 insertions(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+현재 시간: 2025-05-22 04:00:03.420849
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 15 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/git_commit.txt
+	modified:   log_list/summary_update.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-05-22 04:00:03.451846
+나라장터 공고를 찾습니다.
+총 공고 수 :  1635
+100
+200
+300
+400
+500
+600
+700
+800
+900
+1000
+파일이 성공적으로 다운로드되었습니다: 2.과업내용서.hwp
+1100
+파일이 성공적으로 다운로드되었습니다: 2.제안요청서(과업지시서통합본).hwpx
+파일이 성공적으로 다운로드되었습니다: (붙임1)과업내용서(한국환경공단본사총무부업무용차량(1대)임차).hwp
+파일이 성공적으로 다운로드되었습니다: 붙임1.[제안요청서]2025년서울대학교중앙도서관수원보존도서관장서점검사업.hwp
+파일이 성공적으로 다운로드되었습니다: 3.(제안요청서)생성AI감리용역.hwp
+파일이 성공적으로 다운로드되었습니다: (제안요청서)인공지능(AI)산업분류체계개선연구용역.hwp
+파일이 성공적으로 다운로드되었습니다: (제안요청서)2025년공공부문AI도입현황조사.hwp
+파일이 성공적으로 다운로드되었습니다: (제안요청서)미래형자동차소프트웨어인력실태조사.hwp
+파일이 성공적으로 다운로드되었습니다: 1.제안요청서(2025.5.)_방학캠프_0521(최종수정본).hwp
+1200
+파일이 성공적으로 다운로드되었습니다: 1.제안요청서(2025.5.)_방학캠프_0521(최종수정본).hwp
+파일이 성공적으로 다운로드되었습니다: (제안요청서)_2025_월드스마트시티엑스포_목포시_단독관_전시_대행_용역.pdf
+파일이 성공적으로 다운로드되었습니다: 과업내용서.hwpx
+1300
+1400
+1500
+1600
+저장한 공고 수: 322
+전체 공고 | 시작 날짜 : 2025-05-21 00:00:00 / 종료 날짜 : 2025-05-23 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터베이스 | 데이터 업데이트 및 정렬 완료.
+클라우드 컴퓨팅 | 데이터 업데이트 및 정렬 완료.
+네트워크 및 보안 | 데이터 업데이트 및 정렬 완료.
+AR/VR 및 메타버스 | 데이터 업데이트 및 정렬 완료.
+소프트웨어 개발 및 관리 | 데이터 업데이트 및 정렬 완료.
+현재 시간: 2025-05-22 04:14:50.714690
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 16 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/g2b_notice_update.txt
+	modified:   log_list/git_commit.txt
+	modified:   log_list/scheduler.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 114, in <module>
+    category_sheet_update(blockchain_url, blockchain_df, "블록체인")
+  File "/app/belab_scraping/g2b_notice_check/google_sheet.py", line 300, in category_sheet_update
+    google_sheet_add("전체 공고", notice_list, spreadsheet_url)
+  File "/app/belab_scraping/g2b_notice_check/google_sheet.py", line 55, in google_sheet_add
+    doc = gc.open_by_url(spreadsheet_url)
+  File "/usr/local/lib/python3.10/site-packages/gspread/client.py", line 176, in open_by_url
+    return self.open_by_key(extract_id_from_url(url))
+  File "/usr/local/lib/python3.10/site-packages/gspread/client.py", line 161, in open_by_key
+    raise ex
+  File "/usr/local/lib/python3.10/site-packages/gspread/client.py", line 155, in open_by_key
+    spreadsheet = Spreadsheet(self.http_client, {"id": key})
+  File "/usr/local/lib/python3.10/site-packages/gspread/spreadsheet.py", line 29, in __init__
+    metadata = self.fetch_sheet_metadata()
+  File "/usr/local/lib/python3.10/site-packages/gspread/spreadsheet.py", line 230, in fetch_sheet_metadata
+    return self.client.fetch_sheet_metadata(self.id, params=params)
+  File "/usr/local/lib/python3.10/site-packages/gspread/http_client.py", line 305, in fetch_sheet_metadata
+    r = self.request("get", url, params=params)
+  File "/usr/local/lib/python3.10/site-packages/gspread/http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [500]: Internal error encountered.
+[main 3ae8dac] 자동 커밋: 2025-05-22 08:00:04.014672
+ 2 files changed, 1 insertion(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+[main 7d31db2] 자동 커밋: 2025-05-22 08:01:37.771657
+ 4 files changed, 561 insertions(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+현재 시간: 2025-05-22 08:00:03.981493
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 19 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   g2b_notice_check/__pycache__/g2b_notice.cpython-310.pyc
+	modified:   log_list/git_commit.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-05-22 08:00:04.026214
+나라장터 공고를 찾습니다.
+총 공고 수 :  1640
+100
+200
+300
+400
+500
+600
+700
+800
+900
+1000
+1100
+1200
+1300
+1400
+1500
+1600
+저장한 공고 수: 5
+전체 공고 | 시작 날짜 : 2025-05-21 00:00:00 / 종료 날짜 : 2025-05-23 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터베이스 | 데이터 업데이트 및 정렬 완료.
+클라우드 컴퓨팅 | 데이터 업데이트 및 정렬 완료.
+네트워크 및 보안 | 데이터 업데이트 및 정렬 완료.
+AR/VR 및 메타버스 | 데이터 업데이트 및 정렬 완료.
+소프트웨어 개발 및 관리 | 데이터 업데이트 및 정렬 완료.
+블록체인 | 데이터 업데이트 및 정렬 완료.
+IoT | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP | 데이터 업데이트 및 정렬 완료.
+현재 시간: 2025-05-22 08:01:37.702145
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 20 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   item_list.json
+	modified:   log_list/g2b_notice_update.txt
+	modified:   log_list/git_commit.txt
+	modified:   log_list/scheduler.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
