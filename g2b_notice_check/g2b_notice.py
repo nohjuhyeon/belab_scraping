@@ -166,7 +166,10 @@ def notice_search(notice_list, notice_ids, folder_path):
                     for j in category_list:
                         if j not in notice_type:
                             notice_type.append(j)
-                    notice_type = ", ".join(notice_type)
+                    if len(notice_type) > 0:
+                        notice_type = ", ".join(notice_type)
+                    else:
+                        notice_type = "기타"
                     folder_clear(download_folder_path)
                     time.sleep(1)
 

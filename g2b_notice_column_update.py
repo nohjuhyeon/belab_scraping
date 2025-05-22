@@ -187,6 +187,7 @@ if __name__ == "__main__":
             "start_date": "게시일",
             "end_date": "마감일",
             "open_date":"개찰일",
+            "file_list":"개찰일",
             "link": "링크",
             "type": "비고",
             "notice_class": "공고 유형",
