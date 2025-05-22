@@ -148,7 +148,7 @@ def notice_search(notice_list, notice_ids, folder_path):
                 download_link = item[download_link_key]
                 if file_name != "" and download_link != "":
                     file_list.append({'file_name':file_name,'download_link':download_link})    
-            file_url = f"http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoEorderAtchFileInfo?serviceKey={service_key}&numOfRows=500&inqryDiv=1&inqryBgnDt={search_start_date}&inqryEndDt={search_end_date}&bidNtceNo={bidNtceNo}&type=json"
+            file_url = f"http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoEorderAtchFileInfo?serviceKey={service_key}&pageNo=1&numOfRows=500&inqryDiv=1&inqryBgnDt={search_start_date}&inqryEndDt={search_end_date}&bidNtceNo={bidNtceNo}&type=json"
             file_response = requests.get(file_url)
             file_contents = json.loads(file_response.content)
             file_items = file_contents["response"]["body"]["items"]
