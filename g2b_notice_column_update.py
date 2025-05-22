@@ -78,8 +78,8 @@ def notice_search(notice_list, notice_ids, folder_path):
             # 폴더가 없으면 생성
             os.makedirs(download_folder_path)  
         # 오늘 날짜와 2일 전 날짜를 가져와서 원하는 형식으로 변환
-        search_start_date = "202503010000"
-        search_end_date = "202504010000"
+        search_start_date = "202505010000"
+        search_end_date = "202506010000"
         print(search_start_date)
         print(search_end_date)
         service_key = "Qa6CXT4r6qEr%2BkQt%2FJx6wJr5MPx45hKNJwNTScoYryT2uGz7GozIqpjBw%2FRMk1uE8l92NU7h89m20sa%2FXHKuaQ%3D%3D"
@@ -140,12 +140,22 @@ def notice_search(notice_list, notice_ids, folder_path):
         if notice_id in notice_ids and notice_id not in notice_id_list:
             folder_clear(download_folder_path)
             notice_id_list.append(notice_id)
-            notice_open_date = item['opengDt']
-            dict_notice = {
-                "open_date": notice_open_date,
-            }
-            notice_list.append(dict_notice)
-            collection.update_one({'notice_id':notice_id},{"$set":dict_notice})
+            file_list = []
+            for file_name_num in range(10):
+                file_name_key = 'ntceSpecFileNm' + str(file_name_num+1)
+                file_name = item[file_name_key].replace(" ", "")
+                download_link_key = 'ntceSpecDocUrl'+ str(file_name_num+1)
+                download_link = item[download_link_key]
+                if file_name != "" and download_link != "":
+                    file_list.append({'file_name':file_name,'download_link':download_link})    
+            file_url = f"http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoEorderAtchFileInfo?serviceKey={service_key}&numOfRows=500&inqryDiv=1&inqryBgnDt={search_start_date}&inqryEndDt={search_end_date}&bidNtceNo={bidNtceNo}&type=json"
+            file_response = requests.get(file_url)
+            file_contents = json.loads(file_response.content)
+            file_items = file_contents["response"]["body"]["items"]
+            for file_item in file_items:
+                if file_item['bidNtceNo'] == bidNtceNo and file_item['eorderAtchFileNm'] != "" and file_item['eorderAtchFileUrl'] != "":
+                    file_list.append({'file_name':file_item['eorderAtchFileNm'],'download_link':file_item['eorderAtchFileUrl']})    
+            collection.update_one({'notice_id':notice_id},{"$set":{'file_list':file_list}})
 
     print("저장한 공고 수:", db_insert_count)
     return notice_list
@@ -187,13 +197,13 @@ if __name__ == "__main__":
             "start_date": "게시일",
             "end_date": "마감일",
             "open_date":"개찰일",
-            "file_list":"개찰일",
+            "file_list":"파일 목록",
             "link": "링크",
             "type": "비고",
             "notice_class": "공고 유형",
         },
         inplace=True,
     )
-    existing_df = existing_df.loc[existing_df['개찰일'].isnull()]
+    existing_df = existing_df.loc[existing_df['파일 목록'].isnull()]
 
     notice_collection(existing_df)
