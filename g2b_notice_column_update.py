@@ -78,8 +78,8 @@ def notice_search(notice_list, notice_ids, folder_path):
             # 폴더가 없으면 생성
             os.makedirs(download_folder_path)  
         # 오늘 날짜와 2일 전 날짜를 가져와서 원하는 형식으로 변환
-        search_start_date = "202504010000"
-        search_end_date = "202505010000"
+        search_start_date = "202503010000"
+        search_end_date = "202504010000"
         print(search_start_date)
         print(search_end_date)
         service_key = "Qa6CXT4r6qEr%2BkQt%2FJx6wJr5MPx45hKNJwNTScoYryT2uGz7GozIqpjBw%2FRMk1uE8l92NU7h89m20sa%2FXHKuaQ%3D%3D"
@@ -215,6 +215,6 @@ if __name__ == "__main__":
         },
         inplace=True,
     )
-    # existing_df = existing_df.loc[existing_df['파일 목록'].isnull()]
+    existing_df = existing_df.loc[existing_df['파일 목록'].isnull()]
 
     notice_collection(existing_df)

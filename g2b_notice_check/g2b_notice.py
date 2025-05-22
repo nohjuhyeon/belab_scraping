@@ -117,7 +117,7 @@ def notice_search(notice_list, notice_ids, folder_path):
     file_totalCount = file_contents["response"]["body"]["totalCount"]
     file_numOfRows = file_contents["response"]["body"]["numOfRows"]
     file_pages = file_totalCount // file_numOfRows + 1
-    file_elements = file_items
+    file_elements = []
     for i in range(file_pages):
         file_pagenum = i + 1
         file_url = f"http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoEorderAtchFileInfo?serviceKey={service_key}&pageNo={file_pagenum}&numOfRows=500&inqryDiv=1&inqryBgnDt={search_start_date}&inqryEndDt={search_end_date}&type=json"
