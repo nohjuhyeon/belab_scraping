@@ -78,8 +78,8 @@ def notice_search(notice_list, notice_ids, folder_path):
             # 폴더가 없으면 생성
             os.makedirs(download_folder_path)  
         # 오늘 날짜와 2일 전 날짜를 가져와서 원하는 형식으로 변환
-        search_start_date = "202505010000"
-        search_end_date = "202506010000"
+        search_start_date = "202504010000"
+        search_end_date = "202505010000"
         print(search_start_date)
         print(search_end_date)
         service_key = "Qa6CXT4r6qEr%2BkQt%2FJx6wJr5MPx45hKNJwNTScoYryT2uGz7GozIqpjBw%2FRMk1uE8l92NU7h89m20sa%2FXHKuaQ%3D%3D"
@@ -95,7 +95,7 @@ def notice_search(notice_list, notice_ids, folder_path):
         pages = totalCount // numOfRows + 1
 
         # 모든 페이지의 데이터를 가져오기
-        item_list = []
+        item_list = items
         for i in range(pages):
             pagenum = i + 1
             url = f"http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoServcPPSSrch?serviceKey={service_key}&pageNo={pagenum}&numOfRows=500&inqryDiv=1&inqryBgnDt={search_start_date}&inqryEndDt={search_end_date}&type=json"
@@ -112,13 +112,28 @@ def notice_search(notice_list, notice_ids, folder_path):
             print(f"item_list가 '{output_file}'로 저장되었습니다.")
         except Exception as e:
             print(f"JSON 저장 중 오류 발생: {e}")
-
     except:
         # JSON 파일 읽기
         file_path = folder_path + "item_list.json"
         print(file_path)
         with open(file_path, "r", encoding="utf-8") as file:
             item_list = json.load(file)
+
+    file_url = f"http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoEorderAtchFileInfo?serviceKey={service_key}&pageNo=1&numOfRows=500&inqryDiv=1&inqryBgnDt={search_start_date}&inqryEndDt={search_end_date}&type=json"
+    file_response = requests.get(file_url)
+    file_contents = json.loads(file_response.content)
+    file_items = file_contents["response"]["body"]["items"]
+    file_totalCount = file_contents["response"]["body"]["totalCount"]
+    file_numOfRows = file_contents["response"]["body"]["numOfRows"]
+    file_pages = file_totalCount // file_numOfRows + 1
+    file_elements = file_items
+    for i in range(file_pages):
+        file_pagenum = i + 1
+        file_url = f"http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoEorderAtchFileInfo?serviceKey={service_key}&pageNo={file_pagenum}&numOfRows=500&inqryDiv=1&inqryBgnDt={search_start_date}&inqryEndDt={search_end_date}&type=json"
+        file_response = requests.get(file_url)
+        file_contents = json.loads(file_response.content)
+        file_items = file_contents["response"]["body"]["items"]
+        file_elements.extend(file_items)
 
     notice_id_list = []
     item_num = 0
@@ -148,13 +163,9 @@ def notice_search(notice_list, notice_ids, folder_path):
                 download_link = item[download_link_key]
                 if file_name != "" and download_link != "":
                     file_list.append({'file_name':file_name,'download_link':download_link})    
-            file_url = f"http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoEorderAtchFileInfo?serviceKey={service_key}&pageNo=1&numOfRows=500&inqryDiv=1&inqryBgnDt={search_start_date}&inqryEndDt={search_end_date}&bidNtceNo={bidNtceNo}&type=json"
-            file_response = requests.get(file_url)
-            file_contents = json.loads(file_response.content)
-            file_items = file_contents["response"]["body"]["items"]
-            for file_item in file_items:
-                if file_item['bidNtceNo'] == bidNtceNo and file_item['eorderAtchFileNm'] != "" and file_item['eorderAtchFileUrl'] != "":
-                    file_list.append({'file_name':file_item['eorderAtchFileNm'],'download_link':file_item['eorderAtchFileUrl']})    
+            for file_element in file_elements:
+                if file_element['bidNtceNo'] == bidNtceNo and file_element['eorderAtchFileNm'] != "" and file_element['eorderAtchFileUrl'] != "":
+                    file_list.append({'file_name':file_element['eorderAtchFileNm'],'download_link':file_element['eorderAtchFileUrl']})    
             collection.update_one({'notice_id':notice_id},{"$set":{'file_list':file_list}})
 
     print("저장한 공고 수:", db_insert_count)
@@ -204,6 +215,6 @@ if __name__ == "__main__":
         },
         inplace=True,
     )
-    existing_df = existing_df.loc[existing_df['파일 목록'].isnull()]
+    # existing_df = existing_df.loc[existing_df['파일 목록'].isnull()]
 
     notice_collection(existing_df)

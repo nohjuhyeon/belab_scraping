@@ -110,6 +110,24 @@ def notice_search(notice_list, notice_ids, folder_path):
         with open(file_path, "r", encoding="utf-8") as file:
             item_list = json.load(file)
 
+    file_url = f"http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoEorderAtchFileInfo?serviceKey={service_key}&pageNo=1&numOfRows=500&inqryDiv=1&inqryBgnDt={search_start_date}&inqryEndDt={search_end_date}&type=json"
+    file_response = requests.get(file_url)
+    file_contents = json.loads(file_response.content)
+    file_items = file_contents["response"]["body"]["items"]
+    file_totalCount = file_contents["response"]["body"]["totalCount"]
+    file_numOfRows = file_contents["response"]["body"]["numOfRows"]
+    file_pages = file_totalCount // file_numOfRows + 1
+    file_elements = file_items
+    for i in range(file_pages):
+        file_pagenum = i + 1
+        file_url = f"http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoEorderAtchFileInfo?serviceKey={service_key}&pageNo={file_pagenum}&numOfRows=500&inqryDiv=1&inqryBgnDt={search_start_date}&inqryEndDt={search_end_date}&type=json"
+        file_response = requests.get(file_url)
+        file_contents = json.loads(file_response.content)
+        file_items = file_contents["response"]["body"]["items"]
+        file_elements.extend(file_items)
+
+
+
     notice_id_list = []
     item_num = 0
     db_insert_count = 0
@@ -137,7 +155,7 @@ def notice_search(notice_list, notice_ids, folder_path):
             notice_link = item["bidNtceDtlUrl"]
             requesting_agency = item["dminsttNm"]
             publishing_agency = item["ntceInsttNm"]
-            notice_price = item["asignBdgtAmt"] or "0 원"
+            notice_price = item["presmptPrce"] or 0
             file_list = []
             for file_name_num in range(10):
                 file_name_key = 'ntceSpecFileNm' + str(file_name_num+1)
@@ -146,13 +164,10 @@ def notice_search(notice_list, notice_ids, folder_path):
                 download_link = item[download_link_key]
                 if file_name != "" and download_link != "":
                     file_list.append({'file_name':file_name,'download_link':download_link})    
-            file_url = f"http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfoEorderAtchFileInfo?serviceKey={service_key}&pageNo=1&numOfRows=500&inqryDiv=1&inqryBgnDt={search_start_date}&inqryEndDt={search_end_date}&bidNtceNo={bidNtceNo}&type=json"
-            file_response = requests.get(file_url)
-            file_contents = json.loads(file_response.content)
-            file_items = file_contents["response"]["body"]["items"]
-            for file_item in file_items:
-                if file_item['bidNtceNo'] == bidNtceNo and file_item['eorderAtchFileNm'] != "" and file_item['eorderAtchFileUrl'] != "":
-                    file_list.append({'file_name':file_item['eorderAtchFileNm'],'download_link':file_item['eorderAtchFileUrl']})    
+
+            for file_element in file_elements:
+                if file_element['bidNtceNo'] == bidNtceNo and file_element['eorderAtchFileNm'] != "" and file_element['eorderAtchFileUrl'] != "":
+                    file_list.append({'file_name':file_element['eorderAtchFileNm'],'download_link':file_element['eorderAtchFileUrl']})    
         
             for file_element in file_list:
                 if "제안요청서" in file_element['file_name'] or "과업요청서" in file_element['file_name'] or "과업내용서" in file_element['file_name']:
