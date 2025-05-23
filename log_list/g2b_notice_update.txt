@@ -2012,3 +2012,82 @@ json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
  2 files changed, 62 insertions(+)
 error: cannot pull with rebase: You have unstaged changes.
 error: please commit or stash them.
+[main e662542] 자동 커밋: 2025-05-24 04:14:07.033353
+ 3 files changed, 13 insertions(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+현재 시간: 2025-05-24 04:00:03.726836
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 43 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/git_commit.txt
+	modified:   log_list/summary_update.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-05-24 04:00:03.757758
+나라장터 공고를 찾습니다.
+총 공고 수 :  1459
+100
+200
+300
+400
+500
+600
+700
+800
+900
+파일이 성공적으로 다운로드되었습니다: 5.과업내용서(빙축열냉동기세관및정비).hwp
+파일이 성공적으로 다운로드되었습니다: ★제안요청서_최종.hwpx
+파일이 성공적으로 다운로드되었습니다: 2.[제안요청서]2025미술분야유통매개인력교육기획및운영대행.hwp
+파일이 성공적으로 다운로드되었습니다: [재공고]2025KeSPA익스펜션컵대회방송제작및운영대행사선정입찰공고문(제안요청서포함).pdf
+1000
+파일이 성공적으로 다운로드되었습니다: 1.제안요청서_2025전통한복개발종합운영대행.hwp
+파일이 성공적으로 다운로드되었습니다: 2.제안요청서_대학입시홍보광고(고교대학안내게시판등).hwp
+파일이 성공적으로 다운로드되었습니다: 2.제안요청서등.zip
+1100
+1200
+1300
+1400
+저장한 공고 수: 267
+전체 공고 | 시작 날짜 : 2025-05-23 00:00:00 / 종료 날짜 : 2025-05-25 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터베이스 | 데이터 업데이트 및 정렬 완료.
+클라우드 컴퓨팅 | 데이터 업데이트 및 정렬 완료.
+네트워크 및 보안 | 데이터 업데이트 및 정렬 완료.
+AR/VR 및 메타버스 | 데이터 업데이트 및 정렬 완료.
+소프트웨어 개발 및 관리 | 데이터 업데이트 및 정렬 완료.
+블록체인 | 데이터 업데이트 및 정렬 완료.
+IoT | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP | 데이터 업데이트 및 정렬 완료.
+현재 시간: 2025-05-24 04:14:06.992024
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 44 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/g2b_notice_update.txt
+	modified:   log_list/git_commit.txt
+	modified:   log_list/scheduler.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
