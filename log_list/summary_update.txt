@@ -2262,3 +2262,85 @@ error: please commit or stash them.
   return torch.load(checkpoint_file, map_location="cpu")
 [Kss]: Oh! You have mecab in your environment. Kss will take this as a backend! :D
 
+[main d37fde4] 자동 커밋: 2025-05-25 22:40:29.280827
+ 2 files changed, 11 insertions(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+현재 시간: 2025-05-25 22:00:08.212832
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 85 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/g2b_notice_update.txt
+	modified:   log_list/git_commit.txt
+	modified:   log_list/scheduler.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+----------------뉴스 요약 업데이트 시작----------------
+2025-05-25 22:00:08.257218
+naver news crawling finish
+crawling count :  951
+현재 시간: 2025-05-25 22:40:29.207573
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 86 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/git_commit.txt
+	modified:   log_list/summary_update.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+뉴스 요약 업데이트 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/summary_update.py", line 36, in <module>
+    total_update()
+  File "/app/belab_scraping/summary_update.py", line 12, in total_update
+    naver_news()
+  File "/app/belab_scraping/news_letter/naver_new.py", line 192, in naver_news
+    duplicated_data_delete(collection)  # 중복 데이터 삭제
+  File "/app/belab_scraping/news_letter/naver_new.py", line 177, in duplicated_data_delete
+    duplicates = list(collection.aggregate(pipeline))
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/collection.py", line 2958, in aggregate
+    return self._aggregate(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/collection.py", line 2866, in _aggregate
+    return self._database.client._retryable_read(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1863, in _retryable_read
+    return self._retry_internal(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1830, in _retry_internal
+    ).run()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2554, in run
+    return self._read() if self._is_read else self._write()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2697, in _read
+    return self._func(self._session, self._server, conn, read_pref)  # type: ignore
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/aggregation.py", line 164, in get_cursor
+    result = conn.command(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/helpers.py", line 45, in inner
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/pool.py", line 538, in command
+    return command(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/network.py", line 218, in command
+    helpers_shared._check_command_response(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/helpers_shared.py", line 247, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: PlanExecutor error during aggregation :: caused by :: Exceeded memory limit for $group, but didn't allow external spilling; pass allowDiskUse:true to opt in, full error: {'ok': 0.0, 'errmsg': "PlanExecutor error during aggregation :: caused by :: Exceeded memory limit for $group, but didn't allow external spilling; pass allowDiskUse:true to opt in", 'code': 292, 'codeName': 'QueryExceededMemoryLimitNoDiskUseAllowed', '$clusterTime': {'clusterTime': Timestamp(1748180429, 4), 'signature': {'hash': b'\xb4\\\xa7\xec\xf1\xb6\xfb\xfe\xbc\x99\x9d\x90\xe6_\x7f\xfeL\xd8\xaa\xea', 'keyId': 7470201656899010565}}, 'operationTime': Timestamp(1748180429, 4)}
