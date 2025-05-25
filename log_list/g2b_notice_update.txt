@@ -2737,3 +2737,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 원격 저장소에서 변경 사항을 가져옵니다...
 작업 중 오류가 발생했습니다.
 공고 확인 완료!
+[main 2aee457] 자동 커밋: 2025-05-25 20:00:03.710544
+ 2 files changed, 85 insertions(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
