@@ -3303,3 +3303,74 @@ gspread.exceptions.APIError: APIError: [503]: The service is currently unavailab
  2 files changed, 98 insertions(+)
 error: cannot pull with rebase: You have unstaged changes.
 error: please commit or stash them.
+[main d483eaf] 자동 커밋: 2025-05-27 00:07:15.535525
+ 4 files changed, 84060 insertions(+), 12341 deletions(-)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+현재 시간: 2025-05-27 00:00:04.641630
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 111 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/git_commit.txt
+	modified:   log_list/summary_update.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-05-27 00:00:04.709207
+나라장터 공고를 찾습니다.
+총 공고 수 :  895
+100
+200
+파일이 성공적으로 다운로드되었습니다: 붙임2.[과업내용서]_세계유산해석포용성지표개발.pdf
+300
+파일이 성공적으로 다운로드되었습니다: [동서기공]제안요청서_산업전환공동훈련센터_로드맵.hwp
+파일이 성공적으로 다운로드되었습니다: 제안요청서(제5회여주선비장터축제).hwp
+파일이 성공적으로 다운로드되었습니다: 3.제안요청서(국가성인지예결산서종합분석연구)(최종).hwpx
+파일이 성공적으로 다운로드되었습니다: 3.제안요청서(2025년지방성인지예산서종합분석연구)(최종).hwpx
+파일이 성공적으로 다운로드되었습니다: 20250421제안요청서.hwpx
+파일이 성공적으로 다운로드되었습니다: 2025년경상남도수도권투자유치설명회제안요청서(수정).hwp
+현재 시간: 2025-05-27 00:07:15.477092
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 112 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   item_list.json
+	modified:   log_list/g2b_notice_update.txt
+	modified:   log_list/git_commit.txt
+	modified:   log_list/scheduler.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 59, in <module>
+    notice_list = notice_collection(existing_df)
+  File "/app/belab_scraping/g2b_notice_check/g2b_notice.py", line 216, in notice_collection
+    notice_list = notice_search(notice_list, notice_ids, folder_path)
+  File "/app/belab_scraping/g2b_notice_check/g2b_notice.py", line 150, in notice_search
+    file_contents = json.loads(file_response.content)
+  File "/usr/local/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
