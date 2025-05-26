@@ -3021,3 +3021,124 @@ ISP/ISMP 메일이 성공적으로 발송되었습니다.
  2 files changed, 62 insertions(+)
 error: cannot pull with rebase: You have unstaged changes.
 error: please commit or stash them.
+[main 46ac82b] 자동 커밋: 2025-05-26 12:03:33.339430
+ 4 files changed, 25409 insertions(+), 76 deletions(-)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+현재 시간: 2025-05-26 12:00:03.673943
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 99 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/git_commit.txt
+	modified:   log_list/summary_update.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-05-26 12:00:03.704183
+나라장터 공고를 찾습니다.
+총 공고 수 :  249
+파일이 성공적으로 다운로드되었습니다: (붙임1) 제안요청서(과제2_바코드 기반의 모바일 물품관리 효율성개선방안 연구)_3.0.hwpx
+파일이 성공적으로 다운로드되었습니다: 2025년국민건강보험공단상병수당제도홍보영상제작협력사선정제안요청서최종.hwp
+파일이 성공적으로 다운로드되었습니다: (제안요청서) 관세행정 및 관세청 정보시스템 미래 발전방향 연구.hwpx
+파일이 성공적으로 다운로드되었습니다: [입찰]제안요청서.hwp
+파일이 성공적으로 다운로드되었습니다: (붙임1) 제안요청서(과제3_재난관리물품 공급망 위험관리 및 민간 물류체계 활용전략 연구)_3.0.hwpx
+파일이 성공적으로 다운로드되었습니다: 붙임3.제안요청서.hwp
+파일이 성공적으로 다운로드되었습니다: 2. [제안요청서] 2025 미술저작권 인식개선 교육 영상콘텐츠 제작 용역.hwp
+파일이 성공적으로 다운로드되었습니다: (붙임1) 제안요청서(과제4_재난현장의 민간단체 간 역할 조정 및 협력체계 강화 방안 연구)_3.0.hwpx
+파일이 성공적으로 다운로드되었습니다: 2.과업내용서(역사문화권법적기반구축마련연구).hwpx
+파일이 성공적으로 다운로드되었습니다: (붙임1) 제안요청서(과제1_맞춤형 재난관리물품 개발 연구)_3.0.hwpx
+파일이 성공적으로 다운로드되었습니다: 광복 80주년 및 여의도 국회 50주년 등 국회방송 채널 ID 제작 용역 제안요청서.hwp
+파일이 성공적으로 다운로드되었습니다: 1. [제안요청서] 2025 공연예술행사 온라인 통합 홍보 대행.hwp
+파일이 성공적으로 다운로드되었습니다: 제안요청서(상주시)_최종본.hwp
+현재 시간: 2025-05-26 12:03:33.301912
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 100 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   item_list.json
+	modified:   log_list/g2b_notice_update.txt
+	modified:   log_list/git_commit.txt
+	modified:   log_list/scheduler.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 445, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 276, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7ab69b434220>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='apis.data.go.kr', port=80): Max retries exceeded with url: /1230000/ad/BidPublicInfoService/getBidPblancListInfoEorderAtchFileInfo?serviceKey=Qa6CXT4r6qEr%2BkQt%2FJx6wJr5MPx45hKNJwNTScoYryT2uGz7GozIqpjBw%2FRMk1uE8l92NU7h89m20sa%2FXHKuaQ%3D%3D&pageNo=1&numOfRows=500&inqryDiv=1&inqryBgnDt=202505240000&inqryEndDt=202505261159&bidNtceNo=R25BK00865523&type=json (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ab69b434220>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 59, in <module>
+    notice_list = notice_collection(existing_df)
+  File "/app/belab_scraping/g2b_notice_check/g2b_notice.py", line 216, in notice_collection
+    notice_list = notice_search(notice_list, notice_ids, folder_path)
+  File "/app/belab_scraping/g2b_notice_check/g2b_notice.py", line 149, in notice_search
+    file_response = requests.get(file_url)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='apis.data.go.kr', port=80): Max retries exceeded with url: /1230000/ad/BidPublicInfoService/getBidPblancListInfoEorderAtchFileInfo?serviceKey=Qa6CXT4r6qEr%2BkQt%2FJx6wJr5MPx45hKNJwNTScoYryT2uGz7GozIqpjBw%2FRMk1uE8l92NU7h89m20sa%2FXHKuaQ%3D%3D&pageNo=1&numOfRows=500&inqryDiv=1&inqryBgnDt=202505240000&inqryEndDt=202505261159&bidNtceNo=R25BK00865523&type=json (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ab69b434220>: Failed to establish a new connection: [Errno 111] Connection refused'))
