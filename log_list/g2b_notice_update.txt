@@ -3228,3 +3228,74 @@ no changes added to commit (use "git add" and/or "git commit -a")
  2 files changed, 62 insertions(+)
 error: cannot pull with rebase: You have unstaged changes.
 error: please commit or stash them.
+[main 4536fd4] 자동 커밋: 2025-05-26 20:00:18.755515
+ 3 files changed, 6 insertions(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+현재 시간: 2025-05-26 20:00:04.122543
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 107 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/git_commit.txt
+	modified:   log_list/summary_update.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-05-26 20:00:04.155069
+나라장터 공고를 찾습니다.
+총 공고 수 :  249
+100
+200
+저장한 공고 수: 0
+현재 시간: 2025-05-26 20:00:18.720387
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 108 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/g2b_notice_update.txt
+	modified:   log_list/git_commit.txt
+	modified:   log_list/scheduler.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 62, in <module>
+    total_sheet_update(existing_df, notice_list)
+  File "/app/belab_scraping/g2b_notice_check/google_sheet.py", line 131, in total_sheet_update
+    google_sheet_add("전체 공고", notice_list, spreadsheet_url)
+  File "/app/belab_scraping/g2b_notice_check/google_sheet.py", line 55, in google_sheet_add
+    doc = gc.open_by_url(spreadsheet_url)
+  File "/usr/local/lib/python3.10/site-packages/gspread/client.py", line 176, in open_by_url
+    return self.open_by_key(extract_id_from_url(url))
+  File "/usr/local/lib/python3.10/site-packages/gspread/client.py", line 161, in open_by_key
+    raise ex
+  File "/usr/local/lib/python3.10/site-packages/gspread/client.py", line 155, in open_by_key
+    spreadsheet = Spreadsheet(self.http_client, {"id": key})
+  File "/usr/local/lib/python3.10/site-packages/gspread/spreadsheet.py", line 29, in __init__
+    metadata = self.fetch_sheet_metadata()
+  File "/usr/local/lib/python3.10/site-packages/gspread/spreadsheet.py", line 230, in fetch_sheet_metadata
+    return self.client.fetch_sheet_metadata(self.id, params=params)
+  File "/usr/local/lib/python3.10/site-packages/gspread/http_client.py", line 305, in fetch_sheet_metadata
+    r = self.request("get", url, params=params)
+  File "/usr/local/lib/python3.10/site-packages/gspread/http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [503]: The service is currently unavailable.
