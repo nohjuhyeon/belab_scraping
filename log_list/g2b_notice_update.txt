@@ -3142,3 +3142,7 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 700, in send
     raise ConnectionError(e, request=request)
 requests.exceptions.ConnectionError: HTTPConnectionPool(host='apis.data.go.kr', port=80): Max retries exceeded with url: /1230000/ad/BidPublicInfoService/getBidPblancListInfoEorderAtchFileInfo?serviceKey=Qa6CXT4r6qEr%2BkQt%2FJx6wJr5MPx45hKNJwNTScoYryT2uGz7GozIqpjBw%2FRMk1uE8l92NU7h89m20sa%2FXHKuaQ%3D%3D&pageNo=1&numOfRows=500&inqryDiv=1&inqryBgnDt=202505240000&inqryEndDt=202505261159&bidNtceNo=R25BK00865523&type=json (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ab69b434220>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[main 2072aed] 자동 커밋: 2025-05-26 16:00:03.849485
+ 2 files changed, 62 insertions(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
