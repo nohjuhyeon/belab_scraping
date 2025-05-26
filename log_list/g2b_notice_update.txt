@@ -3146,3 +3146,81 @@ requests.exceptions.ConnectionError: HTTPConnectionPool(host='apis.data.go.kr', 
  2 files changed, 62 insertions(+)
 error: cannot pull with rebase: You have unstaged changes.
 error: please commit or stash them.
+[main 55352df] 자동 커밋: 2025-05-26 16:08:20.079065
+ 3 files changed, 30 insertions(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+현재 시간: 2025-05-26 16:00:03.830334
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 103 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/git_commit.txt
+	modified:   log_list/summary_update.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-05-26 16:00:03.860911
+나라장터 공고를 찾습니다.
+총 공고 수 :  249
+파일이 성공적으로 다운로드되었습니다: 2.제안요청서(푸드테크 연구지원센터 착공식 행사대행 용역).hwp
+100
+파일이 성공적으로 다운로드되었습니다: 2.제안요청서(과업지시서통합본).hwpx
+파일이 성공적으로 다운로드되었습니다: 1.제안요청서_2025년충북대학교취업박람회용역사업.hwp
+파일이 성공적으로 다운로드되었습니다: 제안요청서_생성형AI 플랫폼 및 업무서비스 구축 사업_최종.hwp
+파일이 성공적으로 다운로드되었습니다: 제안요청서(해외이주법령 개정 및 제도 개선 연구용역)_최종.hwpx
+파일이 성공적으로 다운로드되었습니다: (제안요청서) 지역 디지털 기업 네트워킹 운영 용역.hwp
+파일이 성공적으로 다운로드되었습니다: 고양시거점형스마트시티조성사업자율주행버스구축제안요청서.hwp
+파일이 성공적으로 다운로드되었습니다: 2. 제안요청서_2025년 공연안전지원센터 사이버아카데미 유지보수 및 위탁운영용역 수정.hwp
+파일이 성공적으로 다운로드되었습니다: 제안요청서(2025년 금연서비스 통합정보시스템 위탁운영)_수정.hwpx
+파일이 성공적으로 다운로드되었습니다: 2025년 에너지바우처 패널조사 연구용역 제안요청서.hwp
+파일이 성공적으로 다운로드되었습니다: 1. 제안요청서_산업발전부문 목표관리제 제도개편에 따른 적용 감축률 연구.hwp
+파일이 성공적으로 다운로드되었습니다: ★제안요청서_건설현장기능인배치기준마련등기능등급제활용방안연구.hwp
+파일이 성공적으로 다운로드되었습니다: 2.과업내용서(명승옛길유람활용콘텐츠제작).hwpx
+파일이 성공적으로 다운로드되었습니다: 최종_제안요청서(2025년 디지털재정본부 감리사업 통합발주).hwp
+파일이 성공적으로 다운로드되었습니다: 2.[과업내용서]2025년한성백제박물관어린이문화행사용역.hwpx
+파일이 성공적으로 다운로드되었습니다: ICT폴리텍대학 홍보 동영상 제작 용역 제안요청서.hwp
+파일이 성공적으로 다운로드되었습니다: 과업지시서및제안요청서.hwp
+200
+파일이 성공적으로 다운로드되었습니다: 과업지시서및제안요청서.hwp
+저장한 공고 수: 159
+전체 공고 | 시작 날짜 : 2025-05-23 00:00:00 / 종료 날짜 : 2025-05-27 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터베이스 | 데이터 업데이트 및 정렬 완료.
+클라우드 컴퓨팅 | 데이터 업데이트 및 정렬 완료.
+네트워크 및 보안 | 데이터 업데이트 및 정렬 완료.
+AR/VR 및 메타버스 | 데이터 업데이트 및 정렬 완료.
+소프트웨어 개발 및 관리 | 데이터 업데이트 및 정렬 완료.
+블록체인 | 데이터 업데이트 및 정렬 완료.
+IoT | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP | 데이터 업데이트 및 정렬 완료.
+현재 시간: 2025-05-26 16:08:20.045643
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 104 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/g2b_notice_update.txt
+	modified:   log_list/git_commit.txt
+	modified:   log_list/scheduler.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
