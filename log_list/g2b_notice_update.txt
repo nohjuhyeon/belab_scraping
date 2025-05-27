@@ -3566,3 +3566,7 @@ ISP/ISMP 메일이 성공적으로 발송되었습니다.
 ISP/ISMP 메일이 성공적으로 발송되었습니다.
 ISP/ISMP 메일이 성공적으로 발송되었습니다.
 이메일 전송 완료!
+[main 9ce6a23] 자동 커밋: 2025-05-27 12:00:04.478572
+ 2 files changed, 105 insertions(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
