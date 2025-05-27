@@ -3645,3 +3645,7 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.10/json/decoder.py", line 355, in raw_decode
     raise JSONDecodeError("Expecting value", s, err.value) from None
 json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[main 3669817] 자동 커밋: 2025-05-27 16:00:03.733955
+ 2 files changed, 62 insertions(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
