@@ -3570,3 +3570,78 @@ ISP/ISMP 메일이 성공적으로 발송되었습니다.
  2 files changed, 105 insertions(+)
 error: cannot pull with rebase: You have unstaged changes.
 error: please commit or stash them.
+[main 1bdb1f5] 자동 커밋: 2025-05-27 12:07:17.943925
+ 4 files changed, 39295 insertions(+), 10863 deletions(-)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+현재 시간: 2025-05-27 12:00:04.344656
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 123 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/git_commit.txt
+	modified:   log_list/summary_update.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-05-27 12:00:04.510232
+나라장터 공고를 찾습니다.
+총 공고 수 :  1163
+100
+200
+300
+400
+500
+600
+파일이 성공적으로 다운로드되었습니다: 제안요청서.hwpx
+700
+파일이 성공적으로 다운로드되었습니다: 3.과업내용서.hwp
+파일이 성공적으로 다운로드되었습니다: 제안요청서[통합환경관리체계전환을위한허가배출기준설정방법표준화방안마련연구].hwpx
+파일이 성공적으로 다운로드되었습니다: 2.제안요청서.hwp
+800
+파일이 성공적으로 다운로드되었습니다: 과업내용서(건설기준고도화).hwp
+파일이 성공적으로 다운로드되었습니다: 제안요청서(과기정통부데이터품질관리및이용활성화컨설팅).hwp
+현재 시간: 2025-05-27 12:07:17.879209
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 124 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   item_list.json
+	modified:   log_list/g2b_notice_update.txt
+	modified:   log_list/git_commit.txt
+	modified:   log_list/scheduler.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 59, in <module>
+    notice_list = notice_collection(existing_df)
+  File "/app/belab_scraping/g2b_notice_check/g2b_notice.py", line 216, in notice_collection
+    notice_list = notice_search(notice_list, notice_ids, folder_path)
+  File "/app/belab_scraping/g2b_notice_check/g2b_notice.py", line 150, in notice_search
+    file_contents = json.loads(file_response.content)
+  File "/usr/local/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
