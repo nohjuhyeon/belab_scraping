@@ -4344,3 +4344,7 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.10/site-packages/gspread/http_client.py", line 128, in request
     raise APIError(response)
 gspread.exceptions.APIError: APIError: [503]: The service is currently unavailable.
+[main df1c6af] 자동 커밋: 2025-05-29 00:00:04.503299
+ 2 files changed, 98 insertions(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
