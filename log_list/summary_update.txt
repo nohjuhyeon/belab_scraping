@@ -4306,3 +4306,13 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 367, in _raise_timeout
     raise ReadTimeoutError(
 urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=35499): Read timed out. (read timeout=120)
+[main ee0b29c] 자동 커밋: 2025-05-29 22:00:09.748859
+ 3 files changed, 80 insertions(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+/usr/local/lib/python3.10/site-packages/huggingface_hub/file_download.py:795: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/usr/local/lib/python3.10/site-packages/transformers/modeling_utils.py:460: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(checkpoint_file, map_location="cpu")
+[Kss]: Oh! You have mecab in your environment. Kss will take this as a backend! :D
+
