@@ -5175,3 +5175,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 메일 발송 중 오류 발생: Connection unexpectedly closed
 메일 발송 중 오류 발생: Connection unexpectedly closed
 이메일 전송 완료!
+[main 50f8968] 자동 커밋: 2025-05-30 12:00:04.420435
+ 2 files changed, 62 insertions(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
