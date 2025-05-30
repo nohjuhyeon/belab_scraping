@@ -5179,3 +5179,86 @@ no changes added to commit (use "git add" and/or "git commit -a")
  2 files changed, 62 insertions(+)
 error: cannot pull with rebase: You have unstaged changes.
 error: please commit or stash them.
+[main 33310cf] 자동 커밋: 2025-05-30 12:07:17.209318
+ 4 files changed, 45414 insertions(+), 20533 deletions(-)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+현재 시간: 2025-05-30 12:00:04.398998
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 195 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/git_commit.txt
+	modified:   log_list/summary_update.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-05-30 12:00:04.435137
+나라장터 공고를 찾습니다.
+총 공고 수 :  1867
+100
+200
+300
+400
+500
+600
+700
+800
+900
+1000
+1100
+파일이 성공적으로 다운로드되었습니다: 2.과업내용서(아쿠아포닉스).hwp
+1200
+파일이 성공적으로 다운로드되었습니다: 제안요청서.hwpx
+파일이 성공적으로 다운로드되었습니다: 2.제안요청서.hwp
+파일이 성공적으로 다운로드되었습니다: 제안요청서및과업지시서(태백지청).hwp
+파일이 성공적으로 다운로드되었습니다: 제안요청서_국가어도정보시스템유지관리용역.hwp
+파일이 성공적으로 다운로드되었습니다: 붙임_제안요청서(2025년버추얼새만금운영홍보용역).hwpx
+파일이 성공적으로 다운로드되었습니다: 붙임2.자동차렌트서비스표준제안요청서(자원순환지원부).hwp
+1300
+파일이 성공적으로 다운로드되었습니다: 과업지시서및제안요청서.hwp
+파일이 성공적으로 다운로드되었습니다: 제안요청서.hwp
+현재 시간: 2025-05-30 12:07:17.109706
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 196 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   item_list.json
+	modified:   log_list/g2b_notice_update.txt
+	modified:   log_list/git_commit.txt
+	modified:   log_list/scheduler.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 59, in <module>
+    notice_list = notice_collection(existing_df)
+  File "/app/belab_scraping/g2b_notice_check/g2b_notice.py", line 216, in notice_collection
+    notice_list = notice_search(notice_list, notice_ids, folder_path)
+  File "/app/belab_scraping/g2b_notice_check/g2b_notice.py", line 150, in notice_search
+    file_contents = json.loads(file_response.content)
+  File "/usr/local/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
