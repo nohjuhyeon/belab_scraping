@@ -17149,3 +17149,4 @@
 2025-06-01 08:00:04,219 - INFO - ----------------notice check started----------------
 2025-06-01 08:01:17,451 - INFO - notice check shut down.
 2025-06-01 12:00:04,126 - INFO - ----------------notice check started----------------
+2025-06-01 12:01:19,835 - INFO - notice check shut down.
