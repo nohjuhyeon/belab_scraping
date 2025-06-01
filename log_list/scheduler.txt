@@ -17154,3 +17154,4 @@
 2025-06-01 16:01:15,921 - INFO - notice check shut down.
 2025-06-01 20:00:03,438 - INFO - ----------------notice check started----------------
 2025-06-01 20:01:25,684 - INFO - notice check shut down.
+2025-06-02 00:00:03,978 - INFO - ----------------notice check started----------------
