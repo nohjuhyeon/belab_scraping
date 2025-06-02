@@ -6717,3 +6717,73 @@ json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
  2 files changed, 101 insertions(+)
 error: cannot pull with rebase: You have unstaged changes.
 error: please commit or stash them.
+[main 5abb1c1] 자동 커밋: 2025-06-02 16:07:42.287399
+ 3 files changed, 24 insertions(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+현재 시간: 2025-06-02 16:00:03.862677
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 271 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/git_commit.txt
+	modified:   log_list/summary_update.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-06-02 16:00:04.051653
+나라장터 공고를 찾습니다.
+총 공고 수 :  283
+100
+파일이 성공적으로 다운로드되었습니다: 제안요청서.hwp
+파일이 성공적으로 다운로드되었습니다: 대불산단 고중량 블록 물류운송 안전관리 시스템 고도화 및 확산 용역 제안요청서.hwp
+파일이 성공적으로 다운로드되었습니다: 3. 제안요청서_수정.hwp
+파일이 성공적으로 다운로드되었습니다: 2.과업내용서(안).pdf
+파일이 성공적으로 다운로드되었습니다: 2.과업내용서(경주학마스터플랜).hwp
+파일이 성공적으로 다운로드되었습니다: 제안요청서_안티드론시스템정합표준API개발및통합환경구축.hwp
+파일이 성공적으로 다운로드되었습니다: [제안요청서]한양사이버대학교캐릭터2차개발.hwp
+파일이 성공적으로 다운로드되었습니다: 25년체납차량유지관리제안요청서(최종).hwp
+200
+파일이 성공적으로 다운로드되었습니다: 2.과업내용서(2025전주생명과학고등학교교육과정재구조화연구용역).hwp
+파일이 성공적으로 다운로드되었습니다: 과업내용서-내곡가압장수배전반교체공사감리용역.hwpx
+저장한 공고 수: 136
+전체 공고 | 시작 날짜 : 2025-05-30 00:00:00 / 종료 날짜 : 2025-06-03 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터베이스 | 데이터 업데이트 및 정렬 완료.
+클라우드 컴퓨팅 | 데이터 업데이트 및 정렬 완료.
+네트워크 및 보안 | 데이터 업데이트 및 정렬 완료.
+AR/VR 및 메타버스 | 데이터 업데이트 및 정렬 완료.
+소프트웨어 개발 및 관리 | 데이터 업데이트 및 정렬 완료.
+블록체인 | 데이터 업데이트 및 정렬 완료.
+IoT | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP | 데이터 업데이트 및 정렬 완료.
+현재 시간: 2025-06-02 16:07:42.244677
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 272 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/g2b_notice_update.txt
+	modified:   log_list/git_commit.txt
+	modified:   log_list/scheduler.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
