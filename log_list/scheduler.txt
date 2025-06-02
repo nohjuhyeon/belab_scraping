@@ -17159,3 +17159,6 @@
 2025-06-02 04:00:03,562 - INFO - ----------------notice check started----------------
 2025-06-02 04:02:18,360 - INFO - notice check shut down.
 2025-06-02 08:00:03,497 - INFO - ----------------notice check started----------------
+2025-06-02 08:01:23,666 - INFO - notice check shut down.
+2025-06-02 09:30:01,855 - INFO - ----------------notice check started----------------
+2025-06-02 09:32:03,239 - INFO - notice check shut down.
