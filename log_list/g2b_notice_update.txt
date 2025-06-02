@@ -6624,3 +6624,7 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.10/site-packages/gspread/client.py", line 158, in open_by_key
     raise SpreadsheetNotFound(ex.response) from ex
 gspread.exceptions.SpreadsheetNotFound: <Response [404]>
+[main aa57e7c] 자동 커밋: 2025-06-02 12:00:03.905636
+ 2 files changed, 101 insertions(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
