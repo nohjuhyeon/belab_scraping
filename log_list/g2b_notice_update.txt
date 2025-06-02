@@ -6628,3 +6628,88 @@ gspread.exceptions.SpreadsheetNotFound: <Response [404]>
  2 files changed, 101 insertions(+)
 error: cannot pull with rebase: You have unstaged changes.
 error: please commit or stash them.
+[main bdc43f3] 자동 커밋: 2025-06-02 12:07:16.101844
+ 4 files changed, 13198 insertions(+), 139253 deletions(-)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+현재 시간: 2025-06-02 12:00:03.740530
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 267 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/git_commit.txt
+	modified:   log_list/summary_update.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-06-02 12:00:03.931780
+나라장터 공고를 찾습니다.
+총 공고 수 :  283
+파일이 성공적으로 다운로드되었습니다: 해외현장체험학습위탁용역과업내용서(군산영광여고).hwp
+파일이 성공적으로 다운로드되었습니다: (제안요청서) 2025년 초·중등 SW·AI 코딩 로봇 경진대회 운영 용역.hwp
+파일이 성공적으로 다운로드되었습니다: 과업내용서(강원디지털행정서비스플랫폼기능고도화).hwp
+파일이 성공적으로 다운로드되었습니다: 02.2025경남창업기업역량강화경진대회프로그램운영위탁용역제안요청서.hwp
+파일이 성공적으로 다운로드되었습니다: (제안요청서) 지역문화재단 사업 조사 연구.hwp
+파일이 성공적으로 다운로드되었습니다: [제안요청서]2025에코업인도네시아글로벌프로그램.hwp
+파일이 성공적으로 다운로드되었습니다: 제안요청서(미래교육환경변화에따른학급당적정학생수방향및과제).hwpx
+파일이 성공적으로 다운로드되었습니다: 과업 및 제안요청서.hwp
+파일이 성공적으로 다운로드되었습니다: 제안요청서(교육정책-사회정책연계를통한복합문제해결방안연구).hwpx
+파일이 성공적으로 다운로드되었습니다: 제안요청서.hwpx
+파일이 성공적으로 다운로드되었습니다: 제안요청서.hwpx
+파일이 성공적으로 다운로드되었습니다: 제안요청서(주요국의교육재정결정및배분구조연구).hwpx
+파일이 성공적으로 다운로드되었습니다: (제안요청서) 2025년 월드스마트시티 엑스포 전시 대행 용역.hwp
+100
+파일이 성공적으로 다운로드되었습니다: ★제안요청서_2025년 외국어 역량강화 교육 운영계획(안).hwpx
+파일이 성공적으로 다운로드되었습니다: 제안요청서_보완.hwpx
+파일이 성공적으로 다운로드되었습니다: 1.위탁연구과업내용서_수정.hwp
+파일이 성공적으로 다운로드되었습니다: 1.위탁연구과업내용서_기여도해석.hwp
+파일이 성공적으로 다운로드되었습니다: 250530 제안요청서(2025년 사회서비스 바우처 시스템 기능개선).hwpx
+파일이 성공적으로 다운로드되었습니다: [붙임2] 250601 2025년 해양수산과학기술주간 행사 대행용역 제안요청서_구매업무 협의 의견 반영.hwp
+파일이 성공적으로 다운로드되었습니다: (제안요청서)IBK기업부동산자문서비스운영사업자선정_소기업소상공인(2025).hwp
+파일이 성공적으로 다운로드되었습니다: 제안요청서(2025년 학교 네트워크 점검 및 개선).hwpx
+파일이 성공적으로 다운로드되었습니다: 1.위탁연구과업내용서_인벤토리구축.hwp
+파일이 성공적으로 다운로드되었습니다: 제안요청서.hwp
+현재 시간: 2025-06-02 12:07:16.052107
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 268 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   item_list.json
+	modified:   log_list/g2b_notice_update.txt
+	modified:   log_list/git_commit.txt
+	modified:   log_list/scheduler.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 59, in <module>
+    notice_list = notice_collection(existing_df)
+  File "/app/belab_scraping/g2b_notice_check/g2b_notice.py", line 216, in notice_collection
+    notice_list = notice_search(notice_list, notice_ids, folder_path)
+  File "/app/belab_scraping/g2b_notice_check/g2b_notice.py", line 150, in notice_search
+    file_contents = json.loads(file_response.content)
+  File "/usr/local/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
