@@ -6929,3 +6929,90 @@ json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
  2 files changed, 62 insertions(+)
 error: cannot pull with rebase: You have unstaged changes.
 error: please commit or stash them.
+[main 7cf3a52] 자동 커밋: 2025-06-03 04:19:40.136976
+ 4 files changed, 143 insertions(+)
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+현재 시간: 2025-06-03 04:00:03.904331
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 283 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/git_commit.txt
+	modified:   log_list/summary_update.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-06-03 04:00:03.938996
+나라장터 공고를 찾습니다.
+총 공고 수 :  912
+100
+200
+300
+400
+파일이 성공적으로 다운로드되었습니다: 3.제안요청서.hwp
+파일이 성공적으로 다운로드되었습니다: 제안요청서.hwp
+파일이 성공적으로 다운로드되었습니다: 붙임4.제안요청서.hwp
+파일이 성공적으로 다운로드되었습니다: ★특허청공고제2025-132_제안요청서_연구중심대학의지재권교육과정설계.hwpx
+파일이 성공적으로 다운로드되었습니다: 제안요청서_(주)나인투식스_유럽·미주권해외진출용홈페이지제작.hwp
+파일이 성공적으로 다운로드되었습니다: 2025학년도신창중학교2학년수학여행위탁용역과업내용서.hwpx
+파일이 성공적으로 다운로드되었습니다: 1.농업환경데이터수집장치[RTU]개발제안요청서_v9.hwpx
+파일이 성공적으로 다운로드되었습니다: (제안요청서)2025대한민국정원식물전시·품평회및제31회우리꽃전시회홍보·모집·품평운영제안요청서.hwp
+파일이 성공적으로 다운로드되었습니다: 제안요청서_(주)파워풀엑스_스피큘을함유한해외진출용스포츠크림개발.hwp
+500
+파일이 성공적으로 다운로드되었습니다: 과업내용서.hwp
+파일이 성공적으로 다운로드되었습니다: 2.과업지시서-2025학년도이일여자고등학교국제교류수업학교해외현장체험학습위탁용역과업내용서.hwp
+파일이 성공적으로 다운로드되었습니다: 제안요청서_(주)파워풀엑스_올포라글로벌홈페이지및앱제작.hwp
+파일이 성공적으로 다운로드되었습니다: 3.용역과업내용서.hwp
+600
+파일이 성공적으로 다운로드되었습니다: 제안요청서.hwp
+파일이 성공적으로 다운로드되었습니다: 1.2025년전문대학혁신지원사업가자세계속으로-필리핀단기연수(제안요청서).hwp
+파일이 성공적으로 다운로드되었습니다: 제안요청서_(주)아이로바_신제품소개및기능설명영상제작.hwp
+파일이 성공적으로 다운로드되었습니다: 1.제안요청서_첨단재생의료혁신인재양성전략수립연구용역.hwp
+700
+파일이 성공적으로 다운로드되었습니다: [과업내용서]동물대체시험시설구축사업설계의도규현.hwp
+800
+파일이 성공적으로 다운로드되었습니다: 과업요청서(용산지구).hwp
+900
+저장한 공고 수: 451
+전체 공고 | 시작 날짜 : 2025-06-02 00:00:00 / 종료 날짜 : 2025-06-04 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터베이스 | 데이터 업데이트 및 정렬 완료.
+클라우드 컴퓨팅 | 데이터 업데이트 및 정렬 완료.
+네트워크 및 보안 | 데이터 업데이트 및 정렬 완료.
+AR/VR 및 메타버스 | 데이터 업데이트 및 정렬 완료.
+소프트웨어 개발 및 관리 | 데이터 업데이트 및 정렬 완료.
+블록체인 | 데이터 업데이트 및 정렬 완료.
+IoT | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP | 데이터 업데이트 및 정렬 완료.
+현재 시간: 2025-06-03 04:19:40.075600
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 284 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   item_list.json
+	modified:   log_list/g2b_notice_update.txt
+	modified:   log_list/git_commit.txt
+	modified:   log_list/scheduler.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+작업 중 오류가 발생했습니다.
+공고 확인 완료!
