@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 from dotenv import load_dotenv
 import os
 import pandas as pd
-
+from function_list.basic_options import mongo_setting
 
 def notice_date_modify(date_time):
     """
@@ -339,7 +339,48 @@ def category_sheet_update(spreadsheet_url, notice_df, notice_category):
     print(f"{notice_category} | 데이터 업데이트 및 정렬 완료.")
 
 
-def category_new_data_get(spreadsheet_url):
+# def category_new_data_get(spreadsheet_url):
+#     """
+#     Google Sheet에서 새로 올라온 공고 데이터를 가져옴.
+
+#     Args:
+#         spreadsheet_url(str): Google Sheet URL
+
+#     Returns:
+#         - new_df(DataFrame): 새 공고 데이터
+#     """
+
+#     scope = [
+#         "https://spreadsheets.google.com/feeds",
+#         "https://www.googleapis.com/auth/drive",
+#     ]
+#     load_dotenv(dotenv_path='/app/belab_scraping/.env')
+#     json_key_str = os.environ.get("google_sheet_key")
+#     if json_key_str:
+#         try:
+#             json_key_dict = json.loads(json_key_str)
+#             credential = ServiceAccountCredentials.from_json_keyfile_dict(
+#                 json_key_dict, scope
+#             )
+#         except json.JSONDecodeError as e:
+#             print(f"JSON 디코딩 오류: {e}")
+#             return None
+#         except Exception as e:
+#             print(f"인증 정보 로드 오류: {e}")
+#             return None
+#     else:
+#         print("환경 변수 google_sheet_key를 찾을 수 없음.")
+#         return None
+#     # Google Sheet에서 데이터 가져오기
+#     gc = gspread.authorize(credential)
+#     doc = gc.open_by_url(spreadsheet_url)
+#     sheet = doc.worksheet("새로 올라온 공고")
+#     new_data = sheet.get_all_values()
+#     new_df = pd.DataFrame(new_data[1:], columns=new_data[0])
+#     return new_df
+
+
+def category_new_data_get(keyword):
     """
     Google Sheet에서 새로 올라온 공고 데이터를 가져옴.
 
@@ -349,32 +390,55 @@ def category_new_data_get(spreadsheet_url):
     Returns:
         - new_df(DataFrame): 새 공고 데이터
     """
+    today = datetime.now()
+    # 오늘의 요일 계산 (월=0, 화=1, ..., 일=6)
+    today_day_of_week = today.weekday()
 
-    scope = [
-        "https://spreadsheets.google.com/feeds",
-        "https://www.googleapis.com/auth/drive",
-    ]
-    load_dotenv(dotenv_path='/app/belab_scraping/.env')
-    json_key_str = os.environ.get("google_sheet_key")
-    if json_key_str:
-        try:
-            json_key_dict = json.loads(json_key_str)
-            credential = ServiceAccountCredentials.from_json_keyfile_dict(
-                json_key_dict, scope
-            )
-        except json.JSONDecodeError as e:
-            print(f"JSON 디코딩 오류: {e}")
-            return None
-        except Exception as e:
-            print(f"인증 정보 로드 오류: {e}")
-            return None
-    else:
-        print("환경 변수 google_sheet_key를 찾을 수 없음.")
-        return None
+    day_of_week = today.weekday()  # 요일 계산
+    if today_day_of_week in [5, 6, 0]:  # 토, 일, 월
+        if day_of_week == 0:  # 월요일인 경우
+            start_date = today - timedelta(days=3)  # 전주의 금요일로 이동
+        elif day_of_week >= 5:  # 토(5), 일(6)
+            start_date = today - timedelta(days=(day_of_week - 4))  # 금요일로 이동
+    else:  # 화, 수, 목, 금
+        start_date = today - timedelta(days=1)  # 전날부터
+
+    start_date = start_date.replace(hour=0, minute=0, second=0, microsecond=0)
+    end_date = today + timedelta(days=1)
+    end_date = end_date.replace(hour=0, minute=0, second=0, microsecond=0)
+
+    # start_date와 end_date 사이의 날짜 리스트 생성
+    date_list = []
+    current_date = start_date
+    while current_date < end_date:
+        date_list.append(current_date.strftime("%Y-%m-%d"))  # 날짜를 문자열로 변환
+        current_date += timedelta(days=1)
+    query = {
+        "type": {"$regex": ".*{}.*".format(keyword)},  # 'type' 필드에 '인공지능' 포함
+        "$or": [  # date_list의 값 중 하나라도 포함되면 조건 만족
+            {"start_date": {"$regex": f"^{date}.*"}} for date in date_list
+        ]
+    }
+
+    collection = mongo_setting("news_scraping", "notice_list")  # MongoDB 설정
+    results = collection.find(query, {"_id": 0}) # '_id' 필드 제외
+    new_df = [i for i in results]  # 결과를 리스트로 변환
+    new_df = pd.DataFrame(new_df)  # DataFrame으로 변환
+    new_df.rename(
+        columns={
+            "notice_id": "공고번호",
+            "title": "공고명",
+            "price": "공고가격(단위: 원)",
+            "publishing_agency": "공고 기관",
+            "requesting_agency": "수요 기관",
+            "start_date": "게시일",
+            "end_date": "마감일",
+            "link": "링크",
+            "type": "비고",
+            "notice_class": "공고 유형",
+        },
+        inplace=True,
+    )
+
     # Google Sheet에서 데이터 가져오기
-    gc = gspread.authorize(credential)
-    doc = gc.open_by_url(spreadsheet_url)
-    sheet = doc.worksheet("새로 올라온 공고")
-    new_data = sheet.get_all_values()
-    new_df = pd.DataFrame(new_data[1:], columns=new_data[0])
     return new_df
