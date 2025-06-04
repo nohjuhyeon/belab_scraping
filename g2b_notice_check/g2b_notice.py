@@ -41,7 +41,7 @@ def file_download(download_folder_path, file_name,download_link):
             for chunk in response.iter_content(chunk_size=8192):  # 대용량 파일 처리
                 file.write(chunk)
         wait_for_downloads(download_folder_path)
-        print(f"파일이 성공적으로 다운로드되었습니다: {file_name}")
+        # print(f"파일이 성공적으로 다운로드되었습니다: {file_name}")
     except requests.exceptions.RequestException as e:
         print(f"파일 다운로드 중 오류가 발생했습니다: {e}")
 
