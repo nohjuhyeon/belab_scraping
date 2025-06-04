@@ -27,7 +27,6 @@ try:
     # 1. 인공지능 관련 이메일 전송
     ai_url = "https://docs.google.com/spreadsheets/d/1Rd6o2rBays25jvcz6SGf03Pvr3ci5epfzlI2TmvWTQI/edit?usp=sharing"
     ai_list = category_new_data_get(ai_url)  # 구글 스프레드시트에서 데이터 가져오기
-    ai_user = ['jh.noh@belab.co.kr']
     # ai_user = ['jh.park@belab.co.kr','jh.noh@belab.co.kr','jh.park@beyondata.co.kr','cekim@aiworkx.ai','sh.kim@aiworkx.ai']
     email_sending(ai_list, ai_user, ai_url, '인공지능')  # 이메일 전송
 
@@ -55,11 +54,12 @@ try:
     # metaverse_user = ['jh.park@belab.co.kr','jh.noh@belab.co.kr','jh.park@beyondata.co.kr','cekim@aiworkx.ai','sh.kim@aiworkx.ai']
     # email_sending(metaverse_list, metaverse_user, metaverse_url,"AR/VR 및 메타버스")
 
-    # # 6. 소프트웨어 개발 및 관리 관련 이메일 전송
-    # software_url = "https://docs.google.com/spreadsheets/d/1jL5PAmWhI5Uv3Va5oW6zhbumfemHQzCqoOGUZnfujf8/edit?usp=sharing"
-    # software_list = category_new_data_get(software_url)
+    # 6. 소프트웨어 개발 및 관리 관련 이메일 전송
+    software_url = "https://docs.google.com/spreadsheets/d/1jL5PAmWhI5Uv3Va5oW6zhbumfemHQzCqoOGUZnfujf8/edit?usp=sharing"
+    software_list = category_new_data_get(software_url)
+    software_user = ['jh.noh@belab.co.kr']
     # software_user = ['jh.park@belab.co.kr','jh.noh@belab.co.kr','jh.park@beyondata.co.kr','cekim@aiworkx.ai','sh.kim@aiworkx.ai']
-    # email_sending(software_list, software_user, software_url,"소프트웨어 개발 및 관리")
+    email_sending(software_list, software_user, software_url,"소프트웨어 개발 및 관리")
 
     # # 7. 블록체인 관련 이메일 전송
     # blockchain_url = "https://docs.google.com/spreadsheets/d/1V4LvEm_nI8iOy0784WMDERB-ENLbMJeQ1U3uTvgmEcU/edit?usp=sharing"
