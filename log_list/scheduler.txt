@@ -17275,3 +17275,6 @@
 2025-06-04 04:00:04,028 - INFO - ----------------notice check started----------------
 2025-06-04 04:01:27,393 - INFO - notice check shut down.
 2025-06-04 08:00:03,407 - INFO - ----------------notice check started----------------
+2025-06-04 08:01:35,467 - INFO - notice check shut down.
+2025-06-04 09:30:01,813 - INFO - ----------------notice check started----------------
+2025-06-04 09:30:15,893 - INFO - notice check shut down.
