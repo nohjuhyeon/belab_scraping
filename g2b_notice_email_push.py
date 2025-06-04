@@ -15,14 +15,6 @@ try:
 
     if folder_path is None:
         print('folder_path is None')
-    logging.basicConfig(
-        filename=folder_path + '/log_list/scheduler.txt', 
-        level=logging.INFO, 
-        format='%(asctime)s - %(levelname)s - %(message)s'
-    )
-    logging.info("----------------notice check started----------------")  # 스케줄러 시작 로그 기록
-
-    print("----------------email push started----------------")
 
     # 1. 인공지능 관련 이메일 전송
     ai_url = "https://docs.google.com/spreadsheets/d/1Rd6o2rBays25jvcz6SGf03Pvr3ci5epfzlI2TmvWTQI/edit?usp=sharing"
@@ -95,5 +87,4 @@ except (KeyboardInterrupt, SystemExit):
 
 finally:
     # 이메일 전송 완료 메시지 출력
-    logging.info("notice check shut down.")  # 스케줄러 종료 로그 기록
     print("이메일 전송 완료!")

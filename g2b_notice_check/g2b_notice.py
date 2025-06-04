@@ -106,7 +106,6 @@ def notice_search(notice_list, notice_ids, folder_path):
     except:
         # JSON 파일 읽기
         file_path = folder_path + "item_list.json"
-        print(file_path)
         with open(file_path, "r", encoding="utf-8") as file:
             item_list = json.load(file)
 
@@ -131,7 +130,7 @@ def notice_search(notice_list, notice_ids, folder_path):
     notice_id_list = []
     item_num = 0
     db_insert_count = 0
-    print("총 공고 수 : ", len(item_list))
+    # print("총 공고 수 : ", len(item_list))
 
     # 공고 데이터 처리
     for item in item_list:
@@ -140,9 +139,9 @@ def notice_search(notice_list, notice_ids, folder_path):
         notice_id = f"{bidNtceNo}-{bidNtceOrd}"
         item_num += 1
 
-        # 진행 상황 출력
-        if item_num % 100 == 0:
-            print(item_num)
+        # # 진행 상황 출력
+        # if item_num % 100 == 0:
+        #     print(item_num)
 
         # 중복 공고 ID 확인
         if notice_id not in notice_ids and notice_id not in notice_id_list:
