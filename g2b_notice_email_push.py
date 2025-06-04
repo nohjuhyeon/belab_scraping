@@ -25,10 +25,10 @@ try:
     print("----------------email push started----------------")
 
     # 1. 인공지능 관련 이메일 전송
-    ai_url = "https://docs.google.com/spreadsheets/d/1Rd6o2rBays25jvcz6SGf03Pvr3ci5epfzlI2TmvWTQI/edit?usp=sharing"
-    ai_list = category_new_data_get(ai_url)  # 구글 스프레드시트에서 데이터 가져오기
+    # ai_url = "https://docs.google.com/spreadsheets/d/1Rd6o2rBays25jvcz6SGf03Pvr3ci5epfzlI2TmvWTQI/edit?usp=sharing"
+    # ai_list = category_new_data_get(ai_url)  # 구글 스프레드시트에서 데이터 가져오기
     # ai_user = ['jh.park@belab.co.kr','jh.noh@belab.co.kr','jh.park@beyondata.co.kr','cekim@aiworkx.ai','sh.kim@aiworkx.ai']
-    email_sending(ai_list, ai_user, ai_url, '인공지능')  # 이메일 전송
+    # email_sending(ai_list, ai_user, ai_url, '인공지능')  # 이메일 전송
 
     # # 2. 데이터 관련 이메일 전송
     # data_url = "https://docs.google.com/spreadsheets/d/1tTaqo_BPZvHEKx_OcFOj3RoFr-e_9i5-ftPW4hS4Qq0/edit?usp=sharing"
