@@ -1,3 +1,4 @@
 # Ignore environment variable files
 .env
 log_list/git_commit.txt
+item_list.json
