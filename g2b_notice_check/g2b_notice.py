@@ -204,6 +204,7 @@ def notice_search(notice_list, notice_ids, folder_path):
                 db_insert_count += 1
                 break
             except Exception as e:
+                print("저장 실패: {}".format(notice_id))
                 time.sleep(2)
     print("저장한 공고 수:", db_insert_count)
     return notice_list
