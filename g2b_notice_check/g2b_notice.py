@@ -173,17 +173,10 @@ def notice_search(notice_list, notice_ids, folder_path):
                     file_download(download_folder_path, file_element['file_name'],file_element['download_link'])
             try:
                 # 파일 내용 확인 및 분류
-                it_notice_check,file_keywords,category_dict,category_list,summary,context = notice_file_check(download_folder_path)
-                notice_type = notice_title_check(notice_title)
-                for j in file_keywords:
-                    if j not in notice_type:
-                        notice_type.append(j)
-                for j in category_list:
-                    if j not in notice_type:
-                        notice_type.append(j)
-                if len(notice_type) > 0:
-                    notice_type = ", ".join(notice_type)
-                else:
+                it_notice_check,category_dict,category_list,summary,context = notice_file_check(download_folder_path)
+                category_list = notice_title_check(notice_title,category_list)
+                notice_type = ", ".join(category_list)
+                if notice_type == '':
                     notice_type = "기타"
                 folder_clear(download_folder_path)
                 time.sleep(1)

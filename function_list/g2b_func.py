@@ -44,7 +44,6 @@ def notice_file_check(download_folder_path):
             - text(str): 공고 본문
     """
     
-    notice_type = []  # 공고 유형 저장
     category_dict = []  # 분류 결과 저장
     category_list = []  # 분류된 카테고리 리스트
     summary = ''  # 요약 저장
@@ -82,9 +81,6 @@ def notice_file_check(download_folder_path):
         text_list = text_4000.split('\n')[:-1]
         context = '\n'.join(text_list)
 
-        # 공고 키워드 검색
-        # notice_type = notice_keyword_search(context)
-
         # IT 공고 여부 확인
         it_notice_check, check_time, check_token = llm_it_notice_check(context)
         if it_notice_check.lower() == 'true':
@@ -92,8 +88,7 @@ def notice_file_check(download_folder_path):
             summary, summary_time, summary_token = llm_summary(context)
             # 카테고리 분류
             category_dict, category_list, category_time, category_token = llm_category_classification(summary)
-    return it_notice_check,notice_type, category_dict, category_list, summary,text
-    # return notice_type
+    return it_notice_check, category_dict, category_list, summary,text
 
 # 파일 유형 감지 및 텍스트 추출 함수
 def detect_file_type(file_path):
@@ -202,7 +197,7 @@ def notice_keyword_search(text):
     return notice_type
 
 # 공고 제목에서 키워드 검색 함수
-def notice_title_check(notice_title):
+def notice_title_check(notice_title,category_list):
     """
     공고 제목에서 키워드를 검색하여 유형을 분류합니다.
 
@@ -212,20 +207,11 @@ def notice_title_check(notice_title):
     Returns:
         notice_type(List[str]): 공고 유형 리스트.
     """
-    # ai_keywords = ['AI', '인공지능', 'LLM', '생성형', '초거대']
-    # db_keywords = ['Database', '데이터 레이크', '빅데이터', '데이터 허브', '데이터베이스']
-    # cloud_keywords = ['클라우드', 'cloud']
+
     isp_keywords = ['ISP', 'ISMP']
-    notice_type = []
 
     # 키워드 검색 및 유형 추가
-    # if search_keywords_in_text(notice_title, ai_keywords) and '인공지능' not in notice_type:
-    #     notice_type.append('인공지능')
-    # if search_keywords_in_text(notice_title, db_keywords) and '데이터' not in notice_type:
-    #     notice_type.append('데이터')
-    # if search_keywords_in_text(notice_title, cloud_keywords) and '클라우드' not in notice_type:
-    #     notice_type.append('클라우드')
-    if search_keywords_in_text(notice_title, isp_keywords) and 'ISP/ISMP' not in notice_type:
-        notice_type.append('ISP/ISMP')
+    if search_keywords_in_text(notice_title, isp_keywords) and 'ISP/ISMP' not in category_list:
+        category_list.append('ISP/ISMP')
 
-    return notice_type
+    return category_list
