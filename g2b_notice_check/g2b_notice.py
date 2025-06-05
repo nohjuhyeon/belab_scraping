@@ -176,7 +176,7 @@ def notice_search(notice_list, notice_ids, folder_path):
                 it_notice_check,category_dict,category_list,summary,context = notice_file_check(download_folder_path)
                 category_list = notice_title_check(notice_title,category_list)
                 notice_type = ", ".join(category_list)
-                if notice_type == '':
+                if notice_type == '' and it_notice_check == 'True':
                     notice_type = "기타"
                 folder_clear(download_folder_path)
                 time.sleep(1)

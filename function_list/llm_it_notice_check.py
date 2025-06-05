@@ -63,4 +63,6 @@ def llm_it_notice_check(text):
     it_notice_check = parsed_output.value
     token_usage = response.usage_metadata
     # 판단 결과(Enum 값), 실행 시간, 응답 메타데이터 반환
+    if it_notice_check == '':
+        it_notice_check = 'False'
     return it_notice_check, execution_time, token_usage
