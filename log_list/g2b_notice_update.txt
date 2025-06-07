@@ -408,3 +408,5 @@ ISP/ISMP | 데이터 업데이트 및 정렬 완료.
 공고 확인 완료!
 [main da5a16b] 자동 커밋: 2025-06-08 04:00:02.708792
  1 file changed, 20 insertions(+)
+[main 0cb2927] 자동 커밋: 2025-06-08 08:00:02.607356
+ 1 file changed, 2 insertions(+)
