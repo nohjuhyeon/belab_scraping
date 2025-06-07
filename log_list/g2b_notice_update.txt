@@ -362,3 +362,5 @@ ISP/ISMP | 데이터 업데이트 및 정렬 완료.
 전체 공고 | Data updated and sorted successfully.
 2025-06-07 16:03:43.947586 : 작업 중 오류가 발생했습니다.
 공고 확인 완료!
+[main 367dbb7] 자동 커밋: 2025-06-07 20:00:02.266683
+ 1 file changed, 11 insertions(+)
