@@ -130,7 +130,7 @@ def notice_search(notice_list, notice_ids, folder_path):
     notice_id_list = []
     item_num = 0
     db_insert_count = 0
-    # print("총 공고 수 : ", len(item_list))
+    print("총 공고 수 : ", len(item_list))
 
     # 공고 데이터 처리
     for item in item_list:
