@@ -202,7 +202,6 @@ def notice_search(notice_list, notice_ids, folder_path):
                 notice_list.append(dict_notice)
                 collection.insert_one(dict_notice)
                 db_insert_count += 1
-                break
             except Exception as e:
                 print("저장 실패: {}".format(notice_id))
                 time.sleep(2)
