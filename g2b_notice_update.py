@@ -24,6 +24,7 @@ try:
 
     # 로그 파일 설정
     folder_path = os.environ.get("folder_path")  # 환경 변수에서 폴더 경로 가져오기
+    print(folder_path)
 
     # 나라장터 데이터 수집 시작
     print("나라장터 공고를 찾습니다.")
