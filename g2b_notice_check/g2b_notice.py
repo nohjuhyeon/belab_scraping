@@ -59,8 +59,6 @@ def notice_search(notice_list, notice_ids, folder_path):
         notice_list(List[dict]): 업데이트된 공고 리스트
     """
 
-    # MongoDB 컬렉션 설정
-    mongo_client,collection = mongo_setting("news_scraping", "notice_list")
     try:
         # 다운로드 폴더 경로 생성
         download_folder_path = os.path.abspath(folder_path + "/notice_list")
@@ -200,13 +198,14 @@ def notice_search(notice_list, notice_ids, folder_path):
                     # 'notice_content':context
                 }
                 notice_list.append(dict_notice)
+                mongo_client,collection = mongo_setting("news_scraping", "notice_list")
                 collection.insert_one(dict_notice)
+                mongo_client.close()
                 db_insert_count += 1
             except Exception as e:
                 print("저장 실패: {}".format(notice_id))
                 time.sleep(2)
     print("저장한 공고 수:", db_insert_count)
-    mongo_client.close()
     return notice_list
 
 
