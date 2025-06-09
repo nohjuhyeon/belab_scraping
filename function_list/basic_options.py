@@ -109,6 +109,7 @@ def mongo_setting(database_name, collection_name):
     load_dotenv(dotenv_path='/app/belab_scraping/.env')
     mongo_url = os.environ.get("DATABASE_URL")
     mongo_client = MongoClient(mongo_url)  # MongoDB 클라이언트 생성
+    # mongo_client = MongoClient(mongo_url,maxPoolSize=5,waitQueueTimeoutMS=5000)  # MongoDB 클라이언트 생성
 
     # 데이터베이스 및 컬렉션 연결
     database = mongo_client[database_name]  # 데이터베이스 선택

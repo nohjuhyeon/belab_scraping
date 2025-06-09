@@ -46,7 +46,7 @@ def file_download(download_folder_path, file_name,download_link):
         print(f"파일 다운로드 중 오류가 발생했습니다: {e}")
 
 
-def notice_search(notice_list, notice_ids, folder_path):
+def notice_search(collection,notice_list, notice_ids, folder_path):
     """
     공고 데이터를 검색하고 저장하는 함수.
 
@@ -137,9 +137,9 @@ def notice_search(notice_list, notice_ids, folder_path):
         notice_id = f"{bidNtceNo}-{bidNtceOrd}"
         item_num += 1
 
-        # # 진행 상황 출력
-        # if item_num % 100 == 0:
-        #     print(item_num)
+        # 진행 상황 출력
+        if item_num % 100 == 0:
+            print(item_num)
 
         # 중복 공고 ID 확인
         if notice_id not in notice_ids and notice_id not in notice_id_list:
@@ -198,9 +198,7 @@ def notice_search(notice_list, notice_ids, folder_path):
                     # 'notice_content':context
                 }
                 notice_list.append(dict_notice)
-                mongo_client,collection = mongo_setting("news_scraping", "notice_list")
                 collection.insert_one(dict_notice)
-                mongo_client.close()
                 db_insert_count += 1
             except Exception as e:
                 print("저장 실패: {}".format(notice_id))
@@ -209,7 +207,7 @@ def notice_search(notice_list, notice_ids, folder_path):
     return notice_list
 
 
-def notice_collection(existing_df):
+def notice_collection(collection,existing_df):
     """
     기존 공고 데이터를 기반으로 새로운 공고를 수집합니다.
 
@@ -225,7 +223,7 @@ def notice_collection(existing_df):
     ].to_list()
     load_dotenv(dotenv_path='/app/belab_scraping/.env')
     folder_path = os.environ.get("folder_path")
-    notice_list = notice_search(notice_list, notice_ids, folder_path)
+    notice_list = notice_search(collection,notice_list, notice_ids, folder_path)
     return notice_list
 
 
