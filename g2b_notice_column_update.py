@@ -70,7 +70,7 @@ def notice_search(notice_list, notice_ids, folder_path):
     """
 
     # MongoDB 컬렉션 설정
-    collection = mongo_setting("news_scraping", "notice_list")
+    mongo_client,collection = mongo_setting("news_scraping", "notice_list")
     try:
         # 다운로드 폴더 경로 생성
         download_folder_path = os.path.abspath(folder_path + "/notice_list")
@@ -171,6 +171,8 @@ def notice_search(notice_list, notice_ids, folder_path):
             collection.update_one({'notice_id':notice_id},{"$set":{'price':notice_price}})
 
     print("저장한 공고 수:", db_insert_count)
+    mongo_client.close()
+
     return notice_list
 
 
@@ -195,7 +197,7 @@ def notice_collection(existing_df):
 
 
 if __name__ == "__main__":
-    collection = mongo_setting("news_scraping", "notice_list")  # MongoDB 설정
+    mongo_client,collection = mongo_setting("news_scraping", "notice_list")  # MongoDB 설정
     results = collection.find({}, {"_id": 0})  # MongoDB에서 기존 공고 데이터 가져오기
     existing_df = [i for i in results]  # 결과를 리스트로 변환
     existing_df = pd.DataFrame(existing_df)  # DataFrame으로 변환
@@ -218,5 +220,5 @@ if __name__ == "__main__":
         inplace=True,
     )
     # existing_df = existing_df.loc[existing_df['파일 목록'].isnull()]
-
+    mongo_client.close()
     notice_collection(existing_df)

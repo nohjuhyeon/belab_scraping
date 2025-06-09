@@ -60,7 +60,7 @@ def notice_search(notice_list, notice_ids, folder_path):
     """
 
     # MongoDB 컬렉션 설정
-    collection = mongo_setting("news_scraping", "notice_list")
+    mongo_client,collection = mongo_setting("news_scraping", "notice_list")
     try:
         # 다운로드 폴더 경로 생성
         download_folder_path = os.path.abspath(folder_path + "/notice_list")
@@ -206,6 +206,7 @@ def notice_search(notice_list, notice_ids, folder_path):
                 print("저장 실패: {}".format(notice_id))
                 time.sleep(2)
     print("저장한 공고 수:", db_insert_count)
+    mongo_client.close()
     return notice_list
 
 

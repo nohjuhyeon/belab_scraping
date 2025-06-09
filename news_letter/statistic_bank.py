@@ -82,7 +82,7 @@ def statistic_bank():
     crawling_count = 0  # 크롤링된 데이터 개수 초기화
 
     # MongoDB 컬렉션 설정
-    collection = mongo_setting('news_scraping', 'news_list')
+    mongo_client,collection = mongo_setting('news_scraping', 'news_list')
 
     # Selenium 브라우저 초기화
     chrome_options = selenium_setting()
@@ -121,6 +121,6 @@ def statistic_bank():
     browser.quit()
     print('statistic bank crawling finish')
     print('crawling count : ', crawling_count)
-
+    mongo_client.close()
 # 크롤링 함수 실행
 # statistic_bank()

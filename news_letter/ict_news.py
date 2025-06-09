@@ -94,7 +94,7 @@ def ict_news():
     ICT 뉴스 웹사이트에서 뉴스 데이터를 크롤링하여 MongoDB에 저장하는 함수.
     """
     crawling_count = 0  # 크롤링된 뉴스 개수 초기화
-    collection = mongo_setting('news_scraping', 'news_list')  # MongoDB 컬렉션 설정
+    mongo_client,collection = mongo_setting('news_scraping', 'news_list')  # MongoDB 컬렉션 설정
     chrome_options = selenium_setting()  # Selenium 브라우저 옵션 설정
     browser = init_browser(chrome_options)  # 브라우저 초기화
 
@@ -141,3 +141,4 @@ def ict_news():
     browser.quit()  # 브라우저 종료
     print('ict news crawling finish')  # 크롤링 완료 메시지 출력
     print('crawling count : ', crawling_count)  # 크롤링된 뉴스 개수 출력
+    mongo_client.close()

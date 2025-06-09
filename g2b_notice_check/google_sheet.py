@@ -420,7 +420,7 @@ def category_new_data_get(keyword):
         ]
     }
 
-    collection = mongo_setting("news_scraping", "notice_list")  # MongoDB 설정
+    mongo_client,collection = mongo_setting("news_scraping", "notice_list")  # MongoDB 설정
     results = collection.find(query, {"_id": 0}) # '_id' 필드 제외
     new_df = [i for i in results]  # 결과를 리스트로 변환
     new_df = pd.DataFrame(new_df)  # DataFrame으로 변환
@@ -439,6 +439,7 @@ def category_new_data_get(keyword):
         },
         inplace=True,
     )
+    mongo_client.close()
 
     # Google Sheet에서 데이터 가져오기
     return new_df

@@ -149,7 +149,7 @@ def seoul_institute():
     서울연구원의 연구보고서와 세계도시동향 데이터를 크롤링하여 MongoDB에 저장합니다.
     """
     crawling_count = 0  # 크롤링된 데이터 개수 초기화
-    collection = mongo_setting('news_scraping', 'report_list')  # MongoDB 컬렉션 설정
+    mongo_client,collection = mongo_setting('news_scraping', 'report_list')  # MongoDB 컬렉션 설정
 
     # 기존에 저장된 뉴스 링크 가져오기
     results = collection.find({}, {'_id': 0, 'news_link': 1})
@@ -166,6 +166,6 @@ def seoul_institute():
     browser = init_browser(chrome_options)
     browser.get("https://www.si.re.kr/world_trends")  # 세계도시동향 페이지 접속
     crawling_count = world_trends(browser, link_list, collection, crawling_count)
-
+    mongo_client.close()
     print('seoul institute crawling finish')
     print('crawling count : ', crawling_count)

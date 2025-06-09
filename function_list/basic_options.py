@@ -114,4 +114,4 @@ def mongo_setting(database_name, collection_name):
     database = mongo_client[database_name]  # 데이터베이스 선택
     collection = database[collection_name]  # 컬렉션 선택
 
-    return collection  # MongoDB 컬렉션 반환
+    return mongo_client,collection  # MongoDB 컬렉션 반환

@@ -184,9 +184,10 @@ def naver_news():
     """
     네이버 뉴스 데이터를 크롤링하여 MongoDB에 저장하고 중복 데이터를 제거합니다.
     """
-    collection = mongo_setting('news_scraping', 'naver_news')
+    mongo_client,collection = mongo_setting('news_scraping', 'naver_news')
     tokenizer = AutoTokenizer.from_pretrained("KPF/KPF-bert-ner")
     model = AutoModelForTokenClassification.from_pretrained("KPF/KPF-bert-ner")
     link_list(collection)  # 뉴스 링크 수집
     news_contents(collection, tokenizer, model)  # 뉴스 상세 데이터 수집
     duplicated_data_delete(collection)  # 중복 데이터 삭제
+    mongo_client.close()

@@ -82,7 +82,7 @@ def venture_doctors():
     crawling_count = 0
 
     # MongoDB 설정
-    collection = mongo_setting('news_scraping', 'news_list')
+    mongo_client,collection = mongo_setting('news_scraping', 'news_list')
 
     # Selenium 설정 및 브라우저 초기화
     chrome_options = selenium_setting()
@@ -97,7 +97,7 @@ def venture_doctors():
 
     # 뉴스 크롤링 수행
     crawling_count = news_collection(browser, collection, title_list, crawling_count)
-
+    mongo_client.close()
     # 크롤링 결과 출력
     print('venture_doctors crawling finish')
     print('crawling count:', crawling_count)

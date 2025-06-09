@@ -167,7 +167,7 @@ def preparation_collection(existing_df):
         notice_list(List[dict]): 업데이트된 공고 리스트
     """
     notice_list = []
-    collection = mongo_setting('news_scraping', 'notice_list')
+    mongo_client,collection = mongo_setting('news_scraping', 'notice_list')
     notice_ids = existing_df.loc[existing_df['공고 유형'] == '사전 규격', '공고번호'].to_list()
     load_dotenv(dotenv_path='/app/belab_scraping/.env')
     folder_path = os.environ.get("folder_path")
@@ -176,5 +176,5 @@ def preparation_collection(existing_df):
     notice_list = preparation_search(notice_list, notice_ids, folder_path)
     if len(notice_list) > 0:
         collection.insert_many(notice_list)
-
+    mongo_client.close()
     return notice_list

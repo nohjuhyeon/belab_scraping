@@ -28,10 +28,11 @@ try:
 
     # 나라장터 데이터 수집 시작
     print("나라장터 공고를 찾습니다.")
-    collection = mongo_setting("news_scraping", "notice_list")  # MongoDB 설정
+    mongo_client,collection = mongo_setting("news_scraping", "notice_list")  # MongoDB 설정
     results = collection.find({}, {"_id": 0})  # MongoDB에서 기존 공고 데이터 가져오기
     existing_df = [i for i in results]  # 결과를 리스트로 변환
     existing_df = pd.DataFrame(existing_df)  # DataFrame으로 변환
+    mongo_client.close()
 
     # 컬럼 이름 변경 (가독성을 위해 한글로 변경)
     existing_df.rename(
