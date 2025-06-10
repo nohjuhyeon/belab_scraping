@@ -52,7 +52,7 @@ try:
 
     # 공고 데이터 필터링 및 수집
     notice_list = notice_collection(collection,existing_df)
-    collection.close()
+    mongo_client.close()
     # 전체 공고 업데이트
     total_sheet_update(existing_df, notice_list)
 
