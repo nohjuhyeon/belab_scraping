@@ -100,7 +100,7 @@ def notice_search(collection,notice_list, notice_ids, folder_path):
                 json.dump(item_list, file, ensure_ascii=False, indent=4)
         except Exception as e:
             print(f"JSON 저장 중 오류 발생: {e}")
-
+    
     except:
         # JSON 파일 읽기
         file_path = folder_path + "item_list.json"
@@ -123,8 +123,6 @@ def notice_search(collection,notice_list, notice_ids, folder_path):
         file_items = file_contents["response"]["body"]["items"]
         file_elements.extend(file_items)
 
-
-
     notice_id_list = []
     item_num = 0
     db_insert_count = 0
@@ -132,44 +130,44 @@ def notice_search(collection,notice_list, notice_ids, folder_path):
 
     # 공고 데이터 처리
     for item in item_list:
-        bidNtceNo = item["bidNtceNo"]
-        bidNtceOrd = item["bidNtceOrd"]
-        notice_id = f"{bidNtceNo}-{bidNtceOrd}"
-        item_num += 1
+        try:
+            bidNtceNo = item["bidNtceNo"]
+            bidNtceOrd = item["bidNtceOrd"]
+            notice_id = f"{bidNtceNo}-{bidNtceOrd}"
+            item_num += 1
 
-        # 진행 상황 출력
-        if item_num % 100 == 0:
-            print(item_num)
+            # # 진행 상황 출력
+            # if item_num % 100 == 0:
+            #     print(item_num)
 
-        # 중복 공고 ID 확인
-        if notice_id not in notice_ids and notice_id not in notice_id_list:
-            folder_clear(download_folder_path)
-            notice_id_list.append(notice_id)
-            notice_open_date = item["opengDt"]
-            notice_end_date = item["bidClseDt"]
-            notice_start_date = item["rgstDt"]
-            notice_title = item["bidNtceNm"]
-            notice_link = item["bidNtceDtlUrl"]
-            requesting_agency = item["dminsttNm"]
-            publishing_agency = item["ntceInsttNm"]
-            notice_price = item["presmptPrce"] or 0
-            file_list = []
-            for file_name_num in range(10):
-                file_name_key = 'ntceSpecFileNm' + str(file_name_num+1)
-                file_name = item[file_name_key].replace(" ", "")
-                download_link_key = 'ntceSpecDocUrl'+ str(file_name_num+1)
-                download_link = item[download_link_key]
-                if file_name != "" and download_link != "":
-                    file_list.append({'file_name':file_name,'download_link':download_link})    
+            # 중복 공고 ID 확인
+            if notice_id not in notice_ids and notice_id not in notice_id_list:
+                folder_clear(download_folder_path)
+                notice_id_list.append(notice_id)
+                notice_open_date = item["opengDt"]
+                notice_end_date = item["bidClseDt"]
+                notice_start_date = item["rgstDt"]
+                notice_title = item["bidNtceNm"]
+                notice_link = item["bidNtceDtlUrl"]
+                requesting_agency = item["dminsttNm"]
+                publishing_agency = item["ntceInsttNm"]
+                notice_price = item["presmptPrce"] or 0
+                file_list = []
+                for file_name_num in range(10):
+                    file_name_key = 'ntceSpecFileNm' + str(file_name_num+1)
+                    file_name = item[file_name_key].replace(" ", "")
+                    download_link_key = 'ntceSpecDocUrl'+ str(file_name_num+1)
+                    download_link = item[download_link_key]
+                    if file_name != "" and download_link != "":
+                        file_list.append({'file_name':file_name,'download_link':download_link})    
 
-            for file_element in file_elements:
-                if file_element['bidNtceNo'] == bidNtceNo and file_element['eorderAtchFileNm'] != "" and file_element['eorderAtchFileUrl'] != "":
-                    file_list.append({'file_name':file_element['eorderAtchFileNm'],'download_link':file_element['eorderAtchFileUrl']})    
-        
-            for file_element in file_list:
-                if "제안요청서" in file_element['file_name'] or "과업요청서" in file_element['file_name'] or "과업내용서" in file_element['file_name']:
-                    file_download(download_folder_path, file_element['file_name'],file_element['download_link'])
-            try:
+                for file_element in file_elements:
+                    if file_element['bidNtceNo'] == bidNtceNo and file_element['eorderAtchFileNm'] != "" and file_element['eorderAtchFileUrl'] != "":
+                        file_list.append({'file_name':file_element['eorderAtchFileNm'],'download_link':file_element['eorderAtchFileUrl']})    
+            
+                for file_element in file_list:
+                    if "제안요청서" in file_element['file_name'] or "과업요청서" in file_element['file_name'] or "과업내용서" in file_element['file_name']:
+                        file_download(download_folder_path, file_element['file_name'],file_element['download_link'])
                 # 파일 내용 확인 및 분류
                 it_notice_check,category_dict,category_list,summary,context = notice_file_check(download_folder_path)
                 category_list = notice_title_check(notice_title,category_list)
@@ -200,9 +198,10 @@ def notice_search(collection,notice_list, notice_ids, folder_path):
                 notice_list.append(dict_notice)
                 collection.insert_one(dict_notice)
                 db_insert_count += 1
-            except Exception as e:
-                print("저장 실패: {}".format(notice_id))
-                time.sleep(2)
+        except Exception as e:
+            print("저장 실패: {}".format(notice_id))
+            folder_clear(download_folder_path)
+            time.sleep(2)
     print("저장한 공고 수:", db_insert_count)
     return notice_list
 
