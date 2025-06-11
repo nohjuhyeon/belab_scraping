@@ -13,6 +13,7 @@ from function_list.basic_options import mongo_setting
 import pandas as pd
 from dotenv import load_dotenv
 loaded = load_dotenv(dotenv_path='/app/belab_scraping/.env')
+mongo_client,collection = mongo_setting("news_scraping", "notice_list")  # MongoDB 설정
 
 try:
     # GitHub 커밋 실행
@@ -27,7 +28,6 @@ try:
 
     # 나라장터 데이터 수집 시작
     print("나라장터 공고를 찾습니다.")
-    mongo_client,collection = mongo_setting("news_scraping", "notice_list")  # MongoDB 설정
     results = collection.find({}, {"_id": 0})  # MongoDB에서 기존 공고 데이터 가져오기
     existing_df = [i for i in results]  # 결과를 리스트로 변환
     existing_df = pd.DataFrame(existing_df)  # DataFrame으로 변환
@@ -51,7 +51,6 @@ try:
 
     # 공고 데이터 필터링 및 수집
     notice_list = notice_collection(collection,existing_df)
-    mongo_client.close()
     # 전체 공고 업데이트
     total_sheet_update(existing_df, notice_list)
 
@@ -126,6 +125,7 @@ except (KeyboardInterrupt, SystemExit):
     print("The notice check cannot be finished due to an error.")
 
 finally:
+    mongo_client.close()
     # GitHub 커밋 실행 및 공고 확인 완료 메시지 출력
     git_commit()
     print("공고 확인 완료!")
