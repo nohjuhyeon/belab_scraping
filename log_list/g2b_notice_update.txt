@@ -1279,3 +1279,4 @@ ISP/ISMP | 데이터 업데이트 및 정렬 완료.
 [main aed2b48] 자동 커밋: 2025-06-13 04:00:02.152323
  3 files changed, 69717 insertions(+), 117223 deletions(-)
  create mode 100644 "notice_list/\354\240\234\354\225\210\354\232\224\354\262\255\354\204\234.hwp"
+Already up to date.
