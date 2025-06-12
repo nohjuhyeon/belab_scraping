@@ -167,7 +167,7 @@ def notice_search(collection,notice_list, notice_ids, folder_path):
             
                 for file_element in file_list:
                     if "제안요청서" in file_element['file_name'] or "과업요청서" in file_element['file_name'] or "과업내용서" in file_element['file_name']:
-                        file_name = 'notice_file'+file_element['file_name'].split('.')[-1]
+                        file_name = 'notice_file.'+file_element['file_name'].split('.')[-1]
                         file_download(download_folder_path, file_name,file_element['download_link'])
                 # 파일 내용 확인 및 분류
                 it_notice_check,category_dict,category_list,summary,context = notice_file_check(download_folder_path)
