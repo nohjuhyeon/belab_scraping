@@ -29,30 +29,30 @@ def git_commit():
         subprocess.run(['git', 'config', '--global', 'user.name', github_username], check=True)
 
         # Git 상태 확인
-        # print("현재 Git 상태를 확인합니다...")
+        print("현재 Git 상태를 확인합니다...")
         status_result = subprocess.run(['git', 'status'], capture_output=True, text=True)
-        # print(status_result.stdout)
+        print(status_result.stdout)
 
         # 변경 사항이 없으면 커밋 단계를 생략
         if "nothing to commit, working tree clean" in status_result.stdout:
             pass
-            # print("변경 사항이 없으므로 커밋 단계를 건너뜁니다.")
+            print("변경 사항이 없으므로 커밋 단계를 건너뜁니다.")
         else:
             # 변경 사항 스테이징
-            # print("변경 사항을 스테이지에 추가합니다...")
+            print("변경 사항을 스테이지에 추가합니다...")
             subprocess.run(['git', 'add', '.'], check=True)
 
             # 커밋 생성
-            # print("커밋을 생성합니다...")
+            print("커밋을 생성합니다...")
             commit_message = f"자동 커밋: {datetime.now()}"
             subprocess.run(['git', 'commit', '-m', commit_message], check=True)
 
         # 원격 저장소에서 최신 변경 사항 가져오기
-        # print("원격 저장소에서 변경 사항을 가져옵니다...")
+        print("원격 저장소에서 변경 사항을 가져옵니다...")
         subprocess.run(['git', 'pull', '--rebase'], check=True)
 
         # 변경 사항 푸쉬
-        # print("변경 사항을 원격 저장소에 푸쉬합니다...")
+        print("변경 사항을 원격 저장소에 푸쉬합니다...")
         remote_url = f"https://{github_username}:{github_token}@github.com/{github_username}/belab_scraping.git"
         subprocess.run(['git', 'push', remote_url], check=True)
         print(f"{datetime.now()} : 작업이 완료되었습니다!")
