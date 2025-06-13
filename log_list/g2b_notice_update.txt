@@ -1323,3 +1323,44 @@ Already up to date.
 이메일 전송 완료!
 [main a1a89b1] 자동 커밋: 2025-06-13 12:00:02.260276
  2 files changed, 33 insertions(+)
+[main 7faabdd] 자동 커밋: 2025-06-13 12:04:30.510139
+ 2 files changed, 42212 insertions(+), 18789 deletions(-)
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   __pycache__/git_hub_commit.cpython-310.pyc
+	modified:   log_list/g2b_notice_update.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+2025-06-13 12:00:02.273609 : 작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-06-13 12:00:02.273684
+나라장터 공고를 찾습니다.
+총 공고 수 :  1731
+저장한 공고 수: 211
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   item_list.json
+	modified:   log_list/g2b_notice_update.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+2025-06-13 12:04:30.644399 : 작업 중 오류가 발생했습니다.
+공고 확인 완료!
