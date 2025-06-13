@@ -1366,3 +1366,55 @@ no changes added to commit (use "git add" and/or "git commit -a")
 공고 확인 완료!
 [main 6535e0a] 자동 커밋: 2025-06-13 16:00:02.532370
  1 file changed, 41 insertions(+)
+[main ff11b60] 자동 커밋: 2025-06-13 16:01:36.522516
+ 2 files changed, 10 insertions(+), 8 deletions(-)
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/g2b_notice_update.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+2025-06-13 16:00:02.542181 : 작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-06-13 16:00:02.542201
+나라장터 공고를 찾습니다.
+총 공고 수 :  1731
+저장한 공고 수: 0
+전체 공고 | 시작 날짜 : 2025-06-12 00:00:00 / 종료 날짜 : 2025-06-14 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터베이스 | 데이터 업데이트 및 정렬 완료.
+클라우드 컴퓨팅 | 데이터 업데이트 및 정렬 완료.
+네트워크 및 보안 | 데이터 업데이트 및 정렬 완료.
+AR/VR 및 메타버스 | 데이터 업데이트 및 정렬 완료.
+소프트웨어 개발 및 관리 | 데이터 업데이트 및 정렬 완료.
+블록체인 | 데이터 업데이트 및 정렬 완료.
+IoT | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP | 데이터 업데이트 및 정렬 완료.
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   item_list.json
+	modified:   log_list/g2b_notice_update.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+2025-06-13 16:01:36.588230 : 작업 중 오류가 발생했습니다.
+공고 확인 완료!
