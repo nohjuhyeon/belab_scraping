@@ -2001,3 +2001,5 @@ no changes added to commit (use "git add" and/or "git commit -a")
 공고 확인 완료!
 [main b75d40f] 자동 커밋: 2025-06-15 16:00:02.524650
  1 file changed, 52 insertions(+)
+[main 33a8cdb] 자동 커밋: 2025-06-15 20:00:02.981071
+ 1 file changed, 2 insertions(+)
