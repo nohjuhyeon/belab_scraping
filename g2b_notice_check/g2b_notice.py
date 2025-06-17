@@ -169,9 +169,11 @@ def notice_search(collection,notice_list, notice_ids, folder_path):
                     if "제안요청서" in file_element['file_name']:
                         file_name = '제안요청서_'+str(file_number)+'.'+file_element['file_name'].split('.')[-1]
                         file_number += 1                        
+                        file_download(download_folder_path, file_name,file_element['download_link'])
                     elif "과업요청서" in file_element['file_name']:
                         file_name = '과업요청서_'+str(file_number)+'.'+file_element['file_name'].split('.')[-1]
                         file_number += 1                        
+                        file_download(download_folder_path, file_name,file_element['download_link'])
                     elif "과업내용서" in file_element['file_name']:
                         file_name = '과업내용서_'+str(file_number)+'.'+file_element['file_name'].split('.')[-1]
                         file_number += 1
