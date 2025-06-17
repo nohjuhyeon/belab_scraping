@@ -176,6 +176,10 @@ def notice_search(collection,notice_list, notice_ids, folder_path):
                         file_name = '과업내용서_'+str(file_number)+'.'+file_element['file_name'].split('.')[-1]
                         file_number += 1
                         file_download(download_folder_path, file_name,file_element['download_link'])
+                    elif "과업지시서" in file_element['file_name']:
+                        file_name = '과업지시서_'+str(file_number)+'.'+file_element['file_name'].split('.')[-1]
+                        file_number += 1
+                        file_download(download_folder_path, file_name,file_element['download_link'])
                 # 파일 내용 확인 및 분류
                 it_notice_check,category_dict,category_list,summary,context = notice_file_check(download_folder_path)
                 category_list = notice_title_check(notice_title,category_list)
