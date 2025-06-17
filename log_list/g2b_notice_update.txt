@@ -2532,3 +2532,6 @@ no changes added to commit (use "git add" and/or "git commit -a")
 이메일 전송 완료!
 [main 991a32c] 자동 커밋: 2025-06-17 10:18:02.410098
  11 files changed, 0 insertions(+), 0 deletions(-)
+[main 825a4d3] 자동 커밋: 2025-06-17 12:00:02.521628
+ 3 files changed, 1223 insertions(+)
+ create mode 100644 "notice_list/\354\240\234\354\225\210\354\232\224\354\262\255\354\204\234_0.hwp"
