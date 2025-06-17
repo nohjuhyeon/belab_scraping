@@ -67,7 +67,7 @@ def notice_search(collection,notice_list, notice_ids, folder_path):
             os.makedirs(download_folder_path)  
         # 오늘 날짜와 2일 전 날짜를 가져와서 원하는 형식으로 변환
         search_end_date = datetime.now().strftime("%Y%m%d") + "1159"
-        search_start_date = (datetime.now() - timedelta(days=2)).strftime(
+        search_start_date = (datetime.now() - timedelta(days=4)).strftime(
             "%Y%m%d"
         ) + "0000"
         service_key = os.environ.get("API_SERVICE_KEY")
@@ -164,10 +164,11 @@ def notice_search(collection,notice_list, notice_ids, folder_path):
                 for file_element in file_elements:
                     if file_element['bidNtceNo'] == bidNtceNo and file_element['eorderAtchFileNm'] != "" and file_element['eorderAtchFileUrl'] != "":
                         file_list.append({'file_name':file_element['eorderAtchFileNm'],'download_link':file_element['eorderAtchFileUrl']})    
-            
+                file_number = 0            
                 for file_element in file_list:
                     if "제안요청서" in file_element['file_name'] or "과업요청서" in file_element['file_name'] or "과업내용서" in file_element['file_name']:
-                        file_name = 'notice_file.'+file_element['file_name'].split('.')[-1]
+                        file_name = 'notice_file'+str(file_number)+'.'+file_element['file_name'].split('.')[-1]
+                        file_number += 1
                         file_download(download_folder_path, file_name,file_element['download_link'])
                 # 파일 내용 확인 및 분류
                 it_notice_check,category_dict,category_list,summary,context = notice_file_check(download_folder_path)
