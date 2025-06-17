@@ -2539,3 +2539,5 @@ no changes added to commit (use "git add" and/or "git commit -a")
  4 files changed, 28799 insertions(+), 17585 deletions(-)
  create mode 100644 "notice_list/\352\263\274\354\227\205\354\247\200\354\213\234\354\204\234_0.hwp"
  delete mode 100644 "notice_list/\354\240\234\354\225\210\354\232\224\354\262\255\354\204\234_0.hwp"
+[main 66edc4d] 자동 커밋: 2025-06-17 20:00:05.346630
+ 3 files changed, 16 insertions(+), 12 deletions(-)
