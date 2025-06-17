@@ -2535,3 +2535,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 [main 825a4d3] 자동 커밋: 2025-06-17 12:00:02.521628
  3 files changed, 1223 insertions(+)
  create mode 100644 "notice_list/\354\240\234\354\225\210\354\232\224\354\262\255\354\204\234_0.hwp"
+[main 6098300] 자동 커밋: 2025-06-17 16:00:02.826837
+ 4 files changed, 28799 insertions(+), 17585 deletions(-)
+ create mode 100644 "notice_list/\352\263\274\354\227\205\354\247\200\354\213\234\354\204\234_0.hwp"
+ delete mode 100644 "notice_list/\354\240\234\354\225\210\354\232\224\354\262\255\354\204\234_0.hwp"
