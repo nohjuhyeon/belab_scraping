@@ -164,9 +164,9 @@ def notice_file_select(download_folder_path):
     keyword_file = ''
     for file_name in os.listdir(download_folder_path):
         # 파일 이름에서 특정 키워드 검색
-        if '과업지시서' in file_name or '과업내용서' in file_name or '과업요청서' in file_name:
+        if 'requestfortask' in file_name or 'statementofwork' in file_name or 'taskorder' in file_name:
             keyword_file = file_name
-        elif '제안요청서' in file_name and keyword_file == '':
+        elif 'requestforproposal' in file_name and keyword_file == '':
             keyword_file = file_name 
     return keyword_file
 
