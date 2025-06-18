@@ -2738,3 +2738,8 @@ Already up to date.
 [main 3d2cff0] 자동 커밋: 2025-06-18 12:00:02.569186
  3 files changed, 445 insertions(+)
  create mode 100644 notice_list/taskorder_0.hwp
+[main e4d951c] 자동 커밋: 2025-06-18 16:00:02.970218
+ 5 files changed, 38368 insertions(+), 19051 deletions(-)
+ create mode 100644 notice_list/requestforproposal_1.hwp
+ create mode 100644 notice_list/statementofwork_0.hwp
+ delete mode 100644 notice_list/taskorder_0.hwp
