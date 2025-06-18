@@ -2868,3 +2868,47 @@ no changes added to commit (use "git add" and/or "git commit -a")
  4 files changed, 225 insertions(+)
  delete mode 100644 notice_list/requestforproposal_0.hwpx
  create mode 100644 notice_list/taskorder_0.hwp
+[main 73d437b] 자동 커밋: 2025-06-19 08:00:57.335203
+ 1 file changed, 4 insertions(+)
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 7 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   item_list.json
+	modified:   log_list/g2b_notice_update.txt
+	deleted:    notice_list/requestforproposal_0.hwpx
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	notice_list/taskorder_0.hwp
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+2025-06-19 08:00:02.121376 : 작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-06-19 08:00:02.121409
+나라장터 공고를 찾습니다.
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 8 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/g2b_notice_update.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+2025-06-19 08:00:57.349471 : 작업 중 오류가 발생했습니다.
+공고 확인 완료!
