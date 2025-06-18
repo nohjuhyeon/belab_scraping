@@ -2864,3 +2864,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 [main 2764a73] 자동 커밋: 2025-06-19 04:00:02.320069
  3 files changed, 71770 insertions(+), 118055 deletions(-)
  create mode 100644 notice_list/requestforproposal_0.hwpx
+[main ad3e409] 자동 커밋: 2025-06-19 08:00:02.072544
+ 4 files changed, 225 insertions(+)
+ delete mode 100644 notice_list/requestforproposal_0.hwpx
+ create mode 100644 notice_list/taskorder_0.hwp
