@@ -2861,3 +2861,6 @@ no changes added to commit (use "git add" and/or "git commit -a")
 공고 확인 완료!
 [main 516b86d] 자동 커밋: 2025-06-19 00:00:02.989256
  1 file changed, 51 insertions(+)
+[main 2764a73] 자동 커밋: 2025-06-19 04:00:02.320069
+ 3 files changed, 71770 insertions(+), 118055 deletions(-)
+ create mode 100644 notice_list/requestforproposal_0.hwpx
