@@ -2962,3 +2962,7 @@ ISP/ISMP 메일이 성공적으로 발송되었습니다.
 이메일 전송 완료!
 [main 99435cc] 자동 커밋: 2025-06-19 09:41:02.137345
  1 file changed, 48 insertions(+)
+[main 90125b0] 자동 커밋: 2025-06-19 12:00:02.191377
+ 4 files changed, 26305 insertions(+), 17423 deletions(-)
+ create mode 100644 notice_list/statementofwork_0.hwpx
+ delete mode 100644 notice_list/taskorder_0.hwp
