@@ -3350,3 +3350,5 @@ no changes added to commit (use "git add" and/or "git commit -a")
 공고 확인 완료!
 [main 3b16e3f] 자동 커밋: 2025-06-20 16:00:03.107700
  1 file changed, 52 insertions(+)
+[main 86a05ea] 자동 커밋: 2025-06-20 20:00:02.660991
+ 2 files changed, 1686 insertions(+), 1684 deletions(-)
