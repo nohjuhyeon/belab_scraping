@@ -3501,3 +3501,5 @@ no changes added to commit (use "git add" and/or "git commit -a")
 공고 확인 완료!
 [main cf2ba51] 자동 커밋: 2025-06-21 08:00:02.016059
  1 file changed, 52 insertions(+)
+[main e7329e8] 자동 커밋: 2025-06-21 09:41:02.175034
+ 1 file changed, 2 insertions(+)
