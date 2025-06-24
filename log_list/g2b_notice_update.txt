@@ -4483,3 +4483,6 @@ no changes added to commit (use "git add" and/or "git commit -a")
 공고 확인 완료!
 [main 829fc7f] 자동 커밋: 2025-06-24 12:00:02.806016
  1 file changed, 52 insertions(+)
+[main 1be45fb] 자동 커밋: 2025-06-24 16:00:02.790475
+ 3 files changed, 30601 insertions(+), 8954 deletions(-)
+ create mode 100644 notice_list/taskorder_0.hwp
