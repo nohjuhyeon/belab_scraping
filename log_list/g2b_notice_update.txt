@@ -4329,3 +4329,101 @@ no changes added to commit (use "git add" and/or "git commit -a")
  delete mode 100644 notice_list/requestforproposal_0.hwp
  create mode 100644 notice_list/taskorder_0.pdf
  delete mode 100644 notice_list/taskorder_1.hwp
+[main 32e07d3] 자동 커밋: 2025-06-24 08:08:05.924659
+ 3 files changed, 4117 insertions(+), 3224 deletions(-)
+ delete mode 100644 notice_list/taskorder_0.pdf
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 11 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/g2b_notice_update.txt
+	deleted:    notice_list/requestforproposal_0.hwp
+	deleted:    notice_list/taskorder_1.hwp
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	notice_list/taskorder_0.pdf
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+2025-06-24 08:00:02.372475 : 작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-06-24 08:00:02.372491
+나라장터 공고를 찾습니다.
+총 공고 수 :  873
+저장한 공고 수: 192
+전체 공고 | 시작 날짜 : 2025-06-23 00:00:00 / 종료 날짜 : 2025-06-25 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터베이스 | 데이터 업데이트 및 정렬 완료.
+클라우드 컴퓨팅 | 데이터 업데이트 및 정렬 완료.
+네트워크 및 보안 | 데이터 업데이트 및 정렬 완료.
+AR/VR 및 메타버스 | 데이터 업데이트 및 정렬 완료.
+소프트웨어 개발 및 관리 | 데이터 업데이트 및 정렬 완료.
+블록체인 | 데이터 업데이트 및 정렬 완료.
+IoT | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP | 데이터 업데이트 및 정렬 완료.
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 12 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   item_list.json
+	modified:   log_list/g2b_notice_update.txt
+	deleted:    notice_list/taskorder_0.pdf
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+2025-06-24 08:08:05.968171 : 작업 중 오류가 발생했습니다.
+공고 확인 완료!
+----------------이메일 전송----------------
+2025-06-24 09:30:02.370485
+인공지능 메일이 성공적으로 발송되었습니다.
+인공지능 메일이 성공적으로 발송되었습니다.
+인공지능 메일이 성공적으로 발송되었습니다.
+인공지능 메일이 성공적으로 발송되었습니다.
+인공지능 메일이 성공적으로 발송되었습니다.
+데이터 메일이 성공적으로 발송되었습니다.
+데이터 메일이 성공적으로 발송되었습니다.
+데이터 메일이 성공적으로 발송되었습니다.
+데이터 메일이 성공적으로 발송되었습니다.
+데이터 메일이 성공적으로 발송되었습니다.
+클라우드 메일이 성공적으로 발송되었습니다.
+클라우드 메일이 성공적으로 발송되었습니다.
+클라우드 메일이 성공적으로 발송되었습니다.
+클라우드 메일이 성공적으로 발송되었습니다.
+클라우드 메일이 성공적으로 발송되었습니다.
+네트워크 및 보안 메일이 성공적으로 발송되었습니다.
+네트워크 및 보안 메일이 성공적으로 발송되었습니다.
+네트워크 및 보안 메일이 성공적으로 발송되었습니다.
+네트워크 및 보안 메일이 성공적으로 발송되었습니다.
+네트워크 및 보안 메일이 성공적으로 발송되었습니다.
+소프트웨어 개발 및 관리 메일이 성공적으로 발송되었습니다.
+소프트웨어 개발 및 관리 메일이 성공적으로 발송되었습니다.
+소프트웨어 개발 및 관리 메일이 성공적으로 발송되었습니다.
+소프트웨어 개발 및 관리 메일이 성공적으로 발송되었습니다.
+소프트웨어 개발 및 관리 메일이 성공적으로 발송되었습니다.
+IoT 메일이 성공적으로 발송되었습니다.
+IoT 메일이 성공적으로 발송되었습니다.
+IoT 메일이 성공적으로 발송되었습니다.
+IoT 메일이 성공적으로 발송되었습니다.
+IoT 메일이 성공적으로 발송되었습니다.
+ISP/ISMP 메일이 성공적으로 발송되었습니다.
+ISP/ISMP 메일이 성공적으로 발송되었습니다.
+ISP/ISMP 메일이 성공적으로 발송되었습니다.
+ISP/ISMP 메일이 성공적으로 발송되었습니다.
+ISP/ISMP 메일이 성공적으로 발송되었습니다.
+이메일 전송 완료!
