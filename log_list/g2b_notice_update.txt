@@ -4947,3 +4947,41 @@ no changes added to commit (use "git add" and/or "git commit -a")
 이메일 전송 완료!
 [main 643e269] 자동 커밋: 2025-06-26 09:41:02.022282
  1 file changed, 41 insertions(+)
+[main 4855776] 자동 커밋: 2025-06-26 09:41:32.518290
+ 1 file changed, 2 insertions(+)
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 12 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/g2b_notice_update.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+2025-06-26 09:41:02.032868 : 작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-06-26 09:41:02.032888
+나라장터 공고를 찾습니다.
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 13 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   log_list/g2b_notice_update.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+2025-06-26 09:41:32.527254 : 작업 중 오류가 발생했습니다.
+공고 확인 완료!
