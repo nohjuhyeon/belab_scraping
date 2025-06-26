@@ -5144,3 +5144,62 @@ no changes added to commit (use "git add" and/or "git commit -a")
 [main 29019d3] 자동 커밋: 2025-06-27 04:00:02.788660
  3 files changed, 55579 insertions(+), 91430 deletions(-)
  create mode 100644 notice_list/requestforproposal_0.hwp
+[main 92fed24] 자동 커밋: 2025-06-27 04:08:01.841160
+ 3 files changed, 225 insertions(+)
+ delete mode 100644 notice_list/requestforproposal_0.hwp
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   item_list.json
+	modified:   log_list/g2b_notice_update.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	notice_list/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+2025-06-27 04:00:03.018304 : 작업 중 오류가 발생했습니다.
+----------------공고 확인 시작----------------
+2025-06-27 04:00:03.018330
+나라장터 공고를 찾습니다.
+총 공고 수 :  1206
+저장한 공고 수: 171
+전체 공고 | 시작 날짜 : 2025-06-26 00:00:00 / 종료 날짜 : 2025-06-28 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터베이스 | 데이터 업데이트 및 정렬 완료.
+클라우드 컴퓨팅 | 데이터 업데이트 및 정렬 완료.
+네트워크 및 보안 | 데이터 업데이트 및 정렬 완료.
+AR/VR 및 메타버스 | 데이터 업데이트 및 정렬 완료.
+소프트웨어 개발 및 관리 | 데이터 업데이트 및 정렬 완료.
+블록체인 | 데이터 업데이트 및 정렬 완료.
+IoT | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP | 데이터 업데이트 및 정렬 완료.
+현재 Git 상태를 확인합니다...
+On branch main
+Your branch is ahead of 'origin/main' by 5 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   item_list.json
+	modified:   log_list/g2b_notice_update.txt
+	deleted:    notice_list/requestforproposal_0.hwp
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+변경 사항을 스테이지에 추가합니다...
+커밋을 생성합니다...
+원격 저장소에서 변경 사항을 가져옵니다...
+2025-06-27 04:08:01.887532 : 작업 중 오류가 발생했습니다.
+공고 확인 완료!
