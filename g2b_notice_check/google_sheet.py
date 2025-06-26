@@ -380,7 +380,7 @@ def category_sheet_update(spreadsheet_url, notice_df, notice_category):
 #     return new_df
 
 
-def category_new_data_get(keyword):
+def category_new_data_get(keyword,collection):
     """
     Google Sheet에서 새로 올라온 공고 데이터를 가져옴.
 
@@ -420,10 +420,11 @@ def category_new_data_get(keyword):
         ]
     }
 
-    mongo_client,collection = mongo_setting("news_scraping", "notice_list")  # MongoDB 설정
     results = collection.find(query, {"_id": 0}) # '_id' 필드 제외
     new_df = [i for i in results]  # 결과를 리스트로 변환
     new_df = pd.DataFrame(new_df)  # DataFrame으로 변환
+    results.close()  
+
     new_df.rename(
         columns={
             "notice_id": "공고번호",

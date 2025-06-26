@@ -31,7 +31,7 @@ try:
     results = collection.find({}, {"_id": 0})  # MongoDB에서 기존 공고 데이터 가져오기
     existing_df = [i for i in results]  # 결과를 리스트로 변환
     existing_df = pd.DataFrame(existing_df)  # DataFrame으로 변환
-
+    results.close()  
     # 컬럼 이름 변경 (가독성을 위해 한글로 변경)
     existing_df.rename(
         columns={
