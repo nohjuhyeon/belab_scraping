@@ -16,12 +16,12 @@ loaded = load_dotenv(dotenv_path='/app/belab_scraping/.env')
 mongo_client,collection = mongo_setting("news_scraping", "notice_list")  # MongoDB 설정
 
 try:
-    # GitHub 커밋 실행
-    git_commit()
-
     # 공고 확인 프로세스 시작 로그
     print("----------------공고 확인 시작----------------")
     print(datetime.now())
+    # GitHub 커밋 실행
+    git_commit()
+
 
     # 로그 파일 설정
     folder_path = os.environ.get("folder_path")  # 환경 변수에서 폴더 경로 가져오기

@@ -47,9 +47,24 @@ def git_commit():
             commit_message = f"자동 커밋: {datetime.now()}"
             subprocess.run(['git', 'commit', '-m', commit_message], check=True)
 
-        # 원격 저장소에서 최신 변경 사항 가져오기
-        print("원격 저장소에서 변경 사항을 가져옵니다...")
-        subprocess.run(['git', 'pull', '--rebase'], check=True)
+        # # 원격 저장소에서 최신 변경 사항 가져오기
+        # print("원격 저장소에서 변경 사항을 가져옵니다...")
+        # subprocess.run(['git', 'pull', '--rebase'], check=True)
+        try:
+            print("원격 저장소에서 변경 사항을 가져옵니다...")
+            result = subprocess.run(
+                ['git', 'pull', '--rebase'],
+                capture_output=True,
+                text=True,  # 자동으로 디코딩 처리
+                check=True  # 에러 발생 시 예외를 자동으로 발생시킴
+            )
+            print("명령 실행 성공!")
+        except subprocess.CalledProcessError as e:
+            print("에러 발생!")
+            print("명령어:", e.cmd)
+            print("returncode:", e.returncode)
+            print("stdout:", e.stdout)
+            print("stderr:", e.stderr)
 
         # 변경 사항 푸쉬
         print("변경 사항을 원격 저장소에 푸쉬합니다...")
