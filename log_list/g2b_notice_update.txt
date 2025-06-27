@@ -5575,3 +5575,7 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 698, in send
     raise SSLError(e, request=request)
 requests.exceptions.SSLError: HTTPSConnectionPool(host='sheets.googleapis.com', port=443): Max retries exceeded with url: /v4/spreadsheets/1DglQXgnMf4zuBDEG9StgRXgFmaAA7vIhHgAGtWI4TsQ/values/%27%EC%9E%85%EC%B0%B0%20%EA%B3%B5%EA%B3%A0%27:append?valueInputOption=RAW (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:2426)')))
+[main 543866b] 자동 커밋: 2025-06-27 20:00:02.123494
+ 2 files changed, 65 insertions(+)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   41e34a1..543866b  main -> main
