@@ -5266,3 +5266,7 @@ Traceback (most recent call last):
   File "/app/belab_scraping/g2b_notice_check/google_sheet.py", line 443, in category_new_data_get
     mongo_client.close()
 NameError: name 'mongo_client' is not defined
+[main f54b5c9] 자동 커밋: 2025-06-27 09:41:02.789078
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   ca68314..f54b5c9  main -> main
