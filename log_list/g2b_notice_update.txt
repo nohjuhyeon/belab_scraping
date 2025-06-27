@@ -5257,3 +5257,12 @@ no changes added to commit (use "git add" and/or "git commit -a")
 원격 저장소에서 변경 사항을 가져옵니다...
 2025-06-27 08:02:00.115567 : 작업 중 오류가 발생했습니다.
 공고 확인 완료!
+----------------이메일 전송----------------
+2025-06-27 09:30:02.109111
+이메일 전송 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_email_push.py", line 24, in <module>
+    ai_list = category_new_data_get(ai_keyword,collection)  # 구글 스프레드시트에서 데이터 가져오기
+  File "/app/belab_scraping/g2b_notice_check/google_sheet.py", line 443, in category_new_data_get
+    mongo_client.close()
+NameError: name 'mongo_client' is not defined
