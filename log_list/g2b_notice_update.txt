@@ -5579,3 +5579,40 @@ requests.exceptions.SSLError: HTTPSConnectionPool(host='sheets.googleapis.com', 
  2 files changed, 65 insertions(+)
 To https://github.com/nohjuhyeon/belab_scraping.git
    41e34a1..543866b  main -> main
+[main ae53c42] 자동 커밋: 2025-06-27 20:01:39.845862
+ 2 files changed, 9 insertions(+), 5 deletions(-)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   543866b..ae53c42  main -> main
+----------------공고 확인 시작----------------
+2025-06-27 20:00:02.107877
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-06-27 20:00:03.774486 : 작업이 완료되었습니다!
+나라장터 공고를 찾습니다.
+총 공고 수 :  1416
+저장한 공고 수: 0
+전체 공고 | 시작 날짜 : 2025-06-26 00:00:00 / 종료 날짜 : 2025-06-28 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터베이스 | 데이터 업데이트 및 정렬 완료.
+클라우드 컴퓨팅 | 데이터 업데이트 및 정렬 완료.
+네트워크 및 보안 | 데이터 업데이트 및 정렬 완료.
+AR/VR 및 메타버스 | 데이터 업데이트 및 정렬 완료.
+소프트웨어 개발 및 관리 | 데이터 업데이트 및 정렬 완료.
+블록체인 | 데이터 업데이트 및 정렬 완료.
+IoT | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP | 데이터 업데이트 및 정렬 완료.
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-06-27 20:01:41.676352 : 작업이 완료되었습니다!
+공고 확인 완료!
