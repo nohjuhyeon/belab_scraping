@@ -5426,3 +5426,7 @@ IoT | 데이터 업데이트 및 정렬 완료.
 ISP/ISMP | 데이터 업데이트 및 정렬 완료.
 2025-06-27 09:53:11.252194 : 작업이 완료되었습니다!
 공고 확인 완료!
+[main fb9530a] 자동 커밋: 2025-06-27 09:56:02.691776
+ 1 file changed, 27 insertions(+)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   8668f5c..fb9530a  main -> main
