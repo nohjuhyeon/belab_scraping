@@ -440,7 +440,6 @@ def category_new_data_get(keyword,collection):
         },
         inplace=True,
     )
-    mongo_client.close()
 
     # Google Sheet에서 데이터 가져오기
     return new_df
