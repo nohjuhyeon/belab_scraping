@@ -5904,3 +5904,7 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.10/site-packages/pymongo/pool_shared.py", line 149, in _raise_connection_failure
     raise AutoReconnect(msg) from error
 pymongo.errors.AutoReconnect: ac-f2ywkng-shard-00-02.8a8461o.mongodb.net:27017: connection closed (configured timeouts: connectTimeoutMS: 20000.0ms)
+[main 7040bba] 자동 커밋: 2025-06-29 00:00:02.940421
+ 2 files changed, 77 insertions(+)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   7be2c5f..7040bba  main -> main
