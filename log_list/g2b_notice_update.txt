@@ -6024,3 +6024,7 @@ error: please commit or stash them.
 
 2025-06-29 04:01:44.598564 : 작업이 완료되었습니다!
 공고 확인 완료!
+[main 17d89a6] 자동 커밋: 2025-06-29 08:00:02.780579
+ 2 files changed, 39 insertions(+)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   9e64b48..17d89a6  main -> main
