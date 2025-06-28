@@ -5987,3 +5987,40 @@ pymongo.errors.AutoReconnect: ac-f2ywkng-shard-00-02.8a8461o.mongodb.net:27017: 
  2 files changed, 77 insertions(+)
 To https://github.com/nohjuhyeon/belab_scraping.git
    2c902d9..826015e  main -> main
+[main 9e64b48] 자동 커밋: 2025-06-29 04:01:43.022922
+ 2 files changed, 19048 insertions(+), 81759 deletions(-)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   826015e..9e64b48  main -> main
+----------------공고 확인 시작----------------
+2025-06-29 04:00:02.865925
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-06-29 04:00:04.103212 : 작업이 완료되었습니다!
+나라장터 공고를 찾습니다.
+총 공고 수 :  527
+저장한 공고 수: 3
+전체 공고 | 시작 날짜 : 2025-06-27 00:00:00 / 종료 날짜 : 2025-06-30 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터베이스 | 데이터 업데이트 및 정렬 완료.
+클라우드 컴퓨팅 | 데이터 업데이트 및 정렬 완료.
+네트워크 및 보안 | 데이터 업데이트 및 정렬 완료.
+AR/VR 및 메타버스 | 데이터 업데이트 및 정렬 완료.
+소프트웨어 개발 및 관리 | 데이터 업데이트 및 정렬 완료.
+블록체인 | 데이터 업데이트 및 정렬 완료.
+IoT | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP | 데이터 업데이트 및 정렬 완료.
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-06-29 04:01:44.598564 : 작업이 완료되었습니다!
+공고 확인 완료!
