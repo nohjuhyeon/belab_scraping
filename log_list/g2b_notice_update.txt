@@ -6125,3 +6125,7 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.10/site-packages/gspread/http_client.py", line 128, in request
     raise APIError(response)
 gspread.exceptions.APIError: APIError: [503]: The service is currently unavailable.
+[main 591f1e2] 자동 커밋: 2025-06-29 12:00:02.636715
+ 2 files changed, 57 insertions(+)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   cb93aae..591f1e2  main -> main
