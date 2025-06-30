@@ -6993,3 +6993,8 @@ error: please commit or stash them.
  2 files changed, 39 insertions(+)
 To https://github.com/nohjuhyeon/belab_scraping.git
    b5b44c0..3262ac4  main -> main
+[main c0b0ac8] 자동 커밋: 2025-07-01 04:00:02.268369
+ 4 files changed, 62792 insertions(+), 3179 deletions(-)
+ create mode 100644 notice_list/requestforproposal_0.hwp
+To https://github.com/nohjuhyeon/belab_scraping.git
+   3262ac4..c0b0ac8  main -> main
