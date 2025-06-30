@@ -6686,3 +6686,119 @@ ISP/ISMP 메일이 성공적으로 발송되었습니다.
  2 files changed, 149 insertions(+)
 To https://github.com/nohjuhyeon/belab_scraping.git
    45c4879..08e683e  main -> main
+[main 217caff] 자동 커밋: 2025-06-30 09:59:12.300196
+ 2 files changed, 9043 insertions(+), 381 deletions(-)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   08e683e..217caff  main -> main
+----------------공고 확인 시작----------------
+2025-06-30 09:56:02.464024
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-06-30 09:56:03.718456 : 작업이 완료되었습니다!
+나라장터 공고를 찾습니다.
+총 공고 수 :  102
+저장한 공고 수: 78
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-06-30 09:59:13.576386 : 작업이 완료되었습니다!
+공고 확인 완료!
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 741, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 920, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 480, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 524, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.10/ssl.py", line 513, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/local/lib/python3.10/ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "/usr/local/lib/python3.10/ssl.py", line 1375, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 741, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 920, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 480, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 524, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.10/ssl.py", line 513, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/local/lib/python3.10/ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "/usr/local/lib/python3.10/ssl.py", line 1375, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 55, in <module>
+    total_sheet_update(existing_df, notice_list)
+  File "/app/belab_scraping/g2b_notice_check/google_sheet.py", line 170, in total_sheet_update
+    google_sheet_add(keyword, filtered_list, spreadsheet_url)
+  File "/app/belab_scraping/g2b_notice_check/google_sheet.py", line 55, in google_sheet_add
+    doc = gc.open_by_url(spreadsheet_url)
+  File "/usr/local/lib/python3.10/site-packages/gspread/client.py", line 189, in open_by_url
+    return self.open_by_key(extract_id_from_url(url))
+  File "/usr/local/lib/python3.10/site-packages/gspread/client.py", line 168, in open_by_key
+    spreadsheet = Spreadsheet(self.http_client, {"id": key})
+  File "/usr/local/lib/python3.10/site-packages/gspread/spreadsheet.py", line 29, in __init__
+    metadata = self.fetch_sheet_metadata()
+  File "/usr/local/lib/python3.10/site-packages/gspread/spreadsheet.py", line 230, in fetch_sheet_metadata
+    return self.client.fetch_sheet_metadata(self.id, params=params)
+  File "/usr/local/lib/python3.10/site-packages/gspread/http_client.py", line 305, in fetch_sheet_metadata
+    r = self.request("get", url, params=params)
+  File "/usr/local/lib/python3.10/site-packages/gspread/http_client.py", line 114, in request
+    response = self.session.request(
+  File "/usr/local/lib/python3.10/site-packages/google/auth/transport/requests.py", line 540, in request
+    response = super(AuthorizedSession, self).request(
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 682, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
