@@ -6998,3 +6998,11 @@ To https://github.com/nohjuhyeon/belab_scraping.git
  create mode 100644 notice_list/requestforproposal_0.hwp
 To https://github.com/nohjuhyeon/belab_scraping.git
    3262ac4..c0b0ac8  main -> main
+[main d140702] 자동 커밋: 2025-07-01 08:00:03.050047
+ 6 files changed, 7 insertions(+)
+ delete mode 100644 notice_list/requestforproposal_0.hwp
+ create mode 100644 notice_list/requestforproposal_1.hwpx
+ create mode 100644 notice_list/requestforproposal_2.hwpx
+ create mode 100644 notice_list/taskorder_0.hwpx
+To https://github.com/nohjuhyeon/belab_scraping.git
+   c0b0ac8..d140702  main -> main
