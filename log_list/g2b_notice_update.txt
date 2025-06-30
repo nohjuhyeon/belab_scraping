@@ -6682,3 +6682,7 @@ ISP/ISMP 메일이 성공적으로 발송되었습니다.
 ISP/ISMP 메일이 성공적으로 발송되었습니다.
 ISP/ISMP 메일이 성공적으로 발송되었습니다.
 이메일 전송 완료!
+[main 08e683e] 자동 커밋: 2025-06-30 09:56:02.483265
+ 2 files changed, 149 insertions(+)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   45c4879..08e683e  main -> main
