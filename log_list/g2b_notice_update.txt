@@ -6802,3 +6802,7 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 682, in send
     raise ConnectionError(err, request=request)
 requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[main 1c68648] 자동 커밋: 2025-06-30 12:00:02.315503
+ 2 files changed, 117 insertions(+)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   217caff..1c68648  main -> main
