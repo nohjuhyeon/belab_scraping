@@ -6534,3 +6534,151 @@ pymongo.errors.AutoReconnect: SSL handshake failed: ac-f2ywkng-shard-00-02.8a846
  2 files changed, 87 insertions(+)
 To https://github.com/nohjuhyeon/belab_scraping.git
    7ccf8d6..9ad1345  main -> main
+[main 45c4879] 자동 커밋: 2025-06-30 08:02:16.794804
+ 2 files changed, 1078 insertions(+), 57018 deletions(-)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   9ad1345..45c4879  main -> main
+----------------공고 확인 시작----------------
+2025-06-30 08:00:02.795797
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-06-30 08:00:04.163151 : 작업이 완료되었습니다!
+나라장터 공고를 찾습니다.
+총 공고 수 :  24
+저장한 공고 수: 18
+전체 공고 | 시작 날짜 : 2025-06-27 00:00:00 / 종료 날짜 : 2025-07-01 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터베이스 | 데이터 업데이트 및 정렬 완료.
+클라우드 컴퓨팅 | 데이터 업데이트 및 정렬 완료.
+네트워크 및 보안 | 데이터 업데이트 및 정렬 완료.
+AR/VR 및 메타버스 | 데이터 업데이트 및 정렬 완료.
+소프트웨어 개발 및 관리 | 데이터 업데이트 및 정렬 완료.
+블록체인 | 데이터 업데이트 및 정렬 완료.
+IoT | 데이터 업데이트 및 정렬 완료.
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-06-30 08:02:18.089207 : 작업이 완료되었습니다!
+공고 확인 완료!
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 516, in getresponse
+    httplib_response = super().getresponse()
+  File "/usr/local/lib/python3.10/http/client.py", line 1375, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.10/http/client.py", line 318, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.10/http/client.py", line 287, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 516, in getresponse
+    httplib_response = super().getresponse()
+  File "/usr/local/lib/python3.10/http/client.py", line 1375, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.10/http/client.py", line 318, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.10/http/client.py", line 287, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 121, in <module>
+    category_sheet_update(isp_url, isp_df, "ISP/ISMP")
+  File "/app/belab_scraping/g2b_notice_check/google_sheet.py", line 338, in category_sheet_update
+    google_sheet_add("새로 올라온 공고", filtered_list, spreadsheet_url)
+  File "/app/belab_scraping/g2b_notice_check/google_sheet.py", line 59, in google_sheet_add
+    sheet.append_rows(data_to_append)
+  File "/usr/local/lib/python3.10/site-packages/gspread/worksheet.py", line 1862, in append_rows
+    res = self.client.values_append(self.spreadsheet_id, range_label, params, body)
+  File "/usr/local/lib/python3.10/site-packages/gspread/http_client.py", line 191, in values_append
+    r = self.request("post", url, params=params, json=body)
+  File "/usr/local/lib/python3.10/site-packages/gspread/http_client.py", line 114, in request
+    response = self.session.request(
+  File "/usr/local/lib/python3.10/site-packages/google/auth/transport/requests.py", line 540, in request
+    response = super(AuthorizedSession, self).request(
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 682, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+----------------이메일 전송----------------
+2025-06-30 09:30:02.201049
+인공지능 메일이 성공적으로 발송되었습니다.
+인공지능 메일이 성공적으로 발송되었습니다.
+인공지능 메일이 성공적으로 발송되었습니다.
+인공지능 메일이 성공적으로 발송되었습니다.
+인공지능 메일이 성공적으로 발송되었습니다.
+데이터 메일이 성공적으로 발송되었습니다.
+데이터 메일이 성공적으로 발송되었습니다.
+데이터 메일이 성공적으로 발송되었습니다.
+데이터 메일이 성공적으로 발송되었습니다.
+데이터 메일이 성공적으로 발송되었습니다.
+클라우드 메일이 성공적으로 발송되었습니다.
+클라우드 메일이 성공적으로 발송되었습니다.
+클라우드 메일이 성공적으로 발송되었습니다.
+클라우드 메일이 성공적으로 발송되었습니다.
+클라우드 메일이 성공적으로 발송되었습니다.
+네트워크 및 보안 메일이 성공적으로 발송되었습니다.
+네트워크 및 보안 메일이 성공적으로 발송되었습니다.
+네트워크 및 보안 메일이 성공적으로 발송되었습니다.
+네트워크 및 보안 메일이 성공적으로 발송되었습니다.
+네트워크 및 보안 메일이 성공적으로 발송되었습니다.
+AR/VR 및 메타버스 메일이 성공적으로 발송되었습니다.
+AR/VR 및 메타버스 메일이 성공적으로 발송되었습니다.
+AR/VR 및 메타버스 메일이 성공적으로 발송되었습니다.
+AR/VR 및 메타버스 메일이 성공적으로 발송되었습니다.
+AR/VR 및 메타버스 메일이 성공적으로 발송되었습니다.
+소프트웨어 개발 및 관리 메일이 성공적으로 발송되었습니다.
+소프트웨어 개발 및 관리 메일이 성공적으로 발송되었습니다.
+소프트웨어 개발 및 관리 메일이 성공적으로 발송되었습니다.
+소프트웨어 개발 및 관리 메일이 성공적으로 발송되었습니다.
+소프트웨어 개발 및 관리 메일이 성공적으로 발송되었습니다.
+블록체인 메일이 성공적으로 발송되었습니다.
+블록체인 메일이 성공적으로 발송되었습니다.
+블록체인 메일이 성공적으로 발송되었습니다.
+블록체인 메일이 성공적으로 발송되었습니다.
+블록체인 메일이 성공적으로 발송되었습니다.
+IoT 메일이 성공적으로 발송되었습니다.
+IoT 메일이 성공적으로 발송되었습니다.
+IoT 메일이 성공적으로 발송되었습니다.
+IoT 메일이 성공적으로 발송되었습니다.
+IoT 메일이 성공적으로 발송되었습니다.
+ISP/ISMP 메일이 성공적으로 발송되었습니다.
+ISP/ISMP 메일이 성공적으로 발송되었습니다.
+ISP/ISMP 메일이 성공적으로 발송되었습니다.
+ISP/ISMP 메일이 성공적으로 발송되었습니다.
+ISP/ISMP 메일이 성공적으로 발송되었습니다.
+이메일 전송 완료!
