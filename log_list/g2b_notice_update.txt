@@ -6948,3 +6948,7 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 682, in send
     raise ConnectionError(err, request=request)
 requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[main 570a4a6] 자동 커밋: 2025-06-30 20:00:02.929617
+ 2 files changed, 102 insertions(+)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   2aaa38a..570a4a6  main -> main
