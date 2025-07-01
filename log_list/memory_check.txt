@@ -46,3 +46,8 @@
 /bin/sh: 1: .: cannot open /app/bemon2_billing_system/check_memory.sh: No such file
 /bin/sh: 1: .: cannot open /app/bemon2_billing_system/check_memory.sh: No such file
 /bin/sh: 1: .: cannot open /app/bemon2_billing_system/check_memory.sh: No such file
+==== Tue Jul  1 11:00:01 KST 2025 ====
+               total        used        free      shared  buff/cache   available
+Mem:           5.7Gi       1.5Gi       1.5Gi        12Mi       2.9Gi       4.1Gi
+Swap:          3.8Gi       291Mi       3.5Gi
+
