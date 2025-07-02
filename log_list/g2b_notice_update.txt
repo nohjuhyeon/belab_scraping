@@ -7300,3 +7300,41 @@ ISP/ISMP 메일이 성공적으로 발송되었습니다.
  create mode 100644 notice_list/taskorder_0.hwp
 To https://github.com/nohjuhyeon/belab_scraping.git
    3f189e7..af46f63  main -> main
+[main ea3628f] 자동 커밋: 2025-07-02 12:12:06.215626
+ 3 files changed, 36138 insertions(+), 15598 deletions(-)
+ delete mode 100644 notice_list/taskorder_0.hwp
+To https://github.com/nohjuhyeon/belab_scraping.git
+   af46f63..ea3628f  main -> main
+----------------공고 확인 시작----------------
+2025-07-02 12:00:02.268904
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-07-02 12:00:05.908141 : 작업이 완료되었습니다!
+나라장터 공고를 찾습니다.
+총 공고 수 :  1528
+저장한 공고 수: 329
+전체 공고 | 시작 날짜 : 2025-07-01 00:00:00 / 종료 날짜 : 2025-07-03 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터베이스 | 데이터 업데이트 및 정렬 완료.
+클라우드 컴퓨팅 | 데이터 업데이트 및 정렬 완료.
+네트워크 및 보안 | 데이터 업데이트 및 정렬 완료.
+AR/VR 및 메타버스 | 데이터 업데이트 및 정렬 완료.
+소프트웨어 개발 및 관리 | 데이터 업데이트 및 정렬 완료.
+블록체인 | 데이터 업데이트 및 정렬 완료.
+IoT | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP | 데이터 업데이트 및 정렬 완료.
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-07-02 12:12:09.324570 : 작업이 완료되었습니다!
+공고 확인 완료!
