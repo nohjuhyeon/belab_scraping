@@ -7295,3 +7295,8 @@ ISP/ISMP 메일이 성공적으로 발송되었습니다.
 ISP/ISMP 메일이 성공적으로 발송되었습니다.
 ISP/ISMP 메일이 성공적으로 발송되었습니다.
 이메일 전송 완료!
+[main af46f63] 자동 커밋: 2025-07-02 12:00:02.372514
+ 4 files changed, 501 insertions(+)
+ create mode 100644 notice_list/taskorder_0.hwp
+To https://github.com/nohjuhyeon/belab_scraping.git
+   3f189e7..af46f63  main -> main
