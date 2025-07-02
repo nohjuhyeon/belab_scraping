@@ -7476,3 +7476,8 @@ pymongo.errors.AutoReconnect: SSL handshake failed: ac-f2ywkng-shard-00-02.8a846
  2 files changed, 99 insertions(+)
 To https://github.com/nohjuhyeon/belab_scraping.git
    a720eb0..94eb53c  main -> main
+[main 367bf0c] 자동 커밋: 2025-07-03 04:00:02.475013
+ 4 files changed, 54364 insertions(+), 91757 deletions(-)
+ create mode 100644 notice_list/taskorder_0.hwp
+To https://github.com/nohjuhyeon/belab_scraping.git
+   94eb53c..367bf0c  main -> main
