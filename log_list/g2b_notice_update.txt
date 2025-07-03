@@ -7525,3 +7525,7 @@ IoT 메일이 성공적으로 발송되었습니다.
 IoT 메일이 성공적으로 발송되었습니다.
 IoT 메일이 성공적으로 발송되었습니다.
 이메일 전송 완료!
+[main 5bfeea6] 자동 커밋: 2025-07-03 12:00:02.583439
+ 2 files changed, 54 insertions(+)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   ff1000a..5bfeea6  main -> main
