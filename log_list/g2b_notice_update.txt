@@ -7922,3 +7922,8 @@ error: please commit or stash them.
  2 files changed, 47 insertions(+)
 To https://github.com/nohjuhyeon/belab_scraping.git
    c9f0bb4..33f46bc  main -> main
+[main bf02755] 자동 커밋: 2025-07-05 04:00:02.074711
+ 4 files changed, 54978 insertions(+), 85933 deletions(-)
+ create mode 100644 notice_list/taskorder_0.hwp
+To https://github.com/nohjuhyeon/belab_scraping.git
+   33f46bc..bf02755  main -> main
