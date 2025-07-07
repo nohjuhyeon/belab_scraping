@@ -9191,3 +9191,7 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.10/site-packages/requests/models.py", line 822, in generate
     raise ChunkedEncodingError(e)
 requests.exceptions.ChunkedEncodingError: Response ended prematurely
+[main 8f25257] 자동 커밋: 2025-07-08 04:00:02.177158
+ 2 files changed, 79 insertions(+)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   bde3519..8f25257  main -> main
