@@ -9443,3 +9443,41 @@ error: please commit or stash them.
  2 files changed, 47 insertions(+)
 To https://github.com/nohjuhyeon/belab_scraping.git
    8d81ed5..c1de43c  main -> main
+[main 23892d9] 자동 커밋: 2025-07-09 00:22:07.747522
+ 2 files changed, 102236 insertions(+), 44179 deletions(-)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   c1de43c..23892d9  main -> main
+----------------공고 확인 시작----------------
+2025-07-09 00:00:02.299444
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-07-09 00:00:04.200439 : 작업이 완료되었습니다!
+나라장터 공고를 찾습니다.
+총 공고 수 :  1491
+파일 다운로드 중 오류가 발생했습니다: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+저장한 공고 수: 537
+전체 공고 | 시작 날짜 : 2025-07-08 00:00:00 / 종료 날짜 : 2025-07-10 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터베이스 | 데이터 업데이트 및 정렬 완료.
+클라우드 컴퓨팅 | 데이터 업데이트 및 정렬 완료.
+네트워크 및 보안 | 데이터 업데이트 및 정렬 완료.
+AR/VR 및 메타버스 | 데이터 업데이트 및 정렬 완료.
+소프트웨어 개발 및 관리 | 데이터 업데이트 및 정렬 완료.
+블록체인 | 데이터 업데이트 및 정렬 완료.
+IoT | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP | 데이터 업데이트 및 정렬 완료.
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-07-09 00:22:10.099991 : 작업이 완료되었습니다!
+공고 확인 완료!
