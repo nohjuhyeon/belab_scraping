@@ -9790,3 +9790,9 @@ ISP/ISMP 메일이 성공적으로 발송되었습니다.
  2 files changed, 52 insertions(+)
 To https://github.com/nohjuhyeon/belab_scraping.git
    8b772ec..ae74240  main -> main
+[main 98626ca] 자동 커밋: 2025-07-10 16:00:03.014494
+ 4 files changed, 44460 insertions(+), 21358 deletions(-)
+ create mode 100644 notice_list/requestforproposal_0.hwp
+To https://github.com/nohjuhyeon/belab_scraping.git
+   ae74240..98626ca  main -> main
+Overwriting cache for 0 227
