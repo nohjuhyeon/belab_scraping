@@ -9796,3 +9796,41 @@ To https://github.com/nohjuhyeon/belab_scraping.git
 To https://github.com/nohjuhyeon/belab_scraping.git
    ae74240..98626ca  main -> main
 Overwriting cache for 0 227
+[main 6147b70] 자동 커밋: 2025-07-10 16:07:45.492619
+ 3 files changed, 12 insertions(+), 6 deletions(-)
+ delete mode 100644 notice_list/requestforproposal_0.hwp
+To https://github.com/nohjuhyeon/belab_scraping.git
+   98626ca..6147b70  main -> main
+----------------공고 확인 시작----------------
+2025-07-10 16:00:02.864308
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-07-10 16:00:06.707470 : 작업이 완료되었습니다!
+나라장터 공고를 찾습니다.
+총 공고 수 :  1593
+저장한 공고 수: 188
+전체 공고 | 시작 날짜 : 2025-07-09 00:00:00 / 종료 날짜 : 2025-07-11 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터베이스 | 데이터 업데이트 및 정렬 완료.
+클라우드 컴퓨팅 | 데이터 업데이트 및 정렬 완료.
+네트워크 및 보안 | 데이터 업데이트 및 정렬 완료.
+AR/VR 및 메타버스 | 데이터 업데이트 및 정렬 완료.
+소프트웨어 개발 및 관리 | 데이터 업데이트 및 정렬 완료.
+블록체인 | 데이터 업데이트 및 정렬 완료.
+IoT | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP | 데이터 업데이트 및 정렬 완료.
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-07-10 16:07:47.424014 : 작업이 완료되었습니다!
+공고 확인 완료!
