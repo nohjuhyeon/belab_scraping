@@ -10767,3 +10767,67 @@ pymongo.errors.ServerSelectionTimeoutError: SSL handshake failed: ac-f2ywkng-sha
  2 files changed, 74 insertions(+)
 To https://github.com/nohjuhyeon/belab_scraping.git
    9b0afb8..ac3ffea  main -> main
+[main 08c2238] 자동 커밋: 2025-07-13 00:00:34.271562
+ 1 file changed, 4 insertions(+)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   ac3ffea..08c2238  main -> main
+----------------공고 확인 시작----------------
+2025-07-13 00:00:02.741717
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-07-13 00:00:04.027522 : 작업이 완료되었습니다!
+나라장터 공고를 찾습니다.
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-07-13 00:00:35.615159 : 작업이 완료되었습니다!
+공고 확인 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 32, in <module>
+    existing_df = [i for i in results]  # 결과를 리스트로 변환
+  File "/app/belab_scraping/g2b_notice_update.py", line 32, in <listcomp>
+    existing_df = [i for i in results]  # 결과를 리스트로 변환
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/cursor.py", line 1284, in __next__
+    return self.next()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/cursor.py", line 1260, in next
+    if len(self._data) or self._refresh():
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/cursor.py", line 1208, in _refresh
+    self._send_message(q)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/cursor.py", line 1102, in _send_message
+    response = client._run_operation(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1917, in _run_operation
+    return self._retryable_read(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2026, in _retryable_read
+    return self._retry_internal(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1993, in _retry_internal
+    ).run()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2730, in run
+    return self._read() if self._is_read else self._write()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2875, in _read
+    self._server = self._get_server()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2823, in _get_server
+    return self._client._select_server(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1812, in _select_server
+    server = topology.select_server(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/topology.py", line 409, in select_server
+    server = self._select_server(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/topology.py", line 387, in _select_server
+    servers = self.select_servers(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/topology.py", line 294, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/topology.py", line 344, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: SSL handshake failed: ac-f2ywkng-shard-00-00.8a8461o.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1007) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms),SSL handshake failed: ac-f2ywkng-shard-00-02.8a8461o.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1007) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms),SSL handshake failed: ac-f2ywkng-shard-00-01.8a8461o.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1007) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 6872787292b3a4e5b0f23708, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-f2ywkng-shard-00-00.8a8461o.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-f2ywkng-shard-00-00.8a8461o.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1007) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>, <ServerDescription ('ac-f2ywkng-shard-00-01.8a8461o.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-f2ywkng-shard-00-01.8a8461o.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1007) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>, <ServerDescription ('ac-f2ywkng-shard-00-02.8a8461o.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-f2ywkng-shard-00-02.8a8461o.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1007) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
