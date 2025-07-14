@@ -11353,3 +11353,8 @@ ISP/ISMP 메일이 성공적으로 발송되었습니다.
  2 files changed, 43 insertions(+)
 To https://github.com/nohjuhyeon/belab_scraping.git
    5f30239..32f5b0d  main -> main
+[main 8c0c391] 자동 커밋: 2025-07-14 16:00:02.383314
+ 4 files changed, 43010 insertions(+), 18132 deletions(-)
+ create mode 100644 notice_list/requestforproposal_0.hwpx
+To https://github.com/nohjuhyeon/belab_scraping.git
+   32f5b0d..8c0c391  main -> main
