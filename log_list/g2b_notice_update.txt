@@ -11613,3 +11613,7 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.10/site-packages/pymongo/pool_shared.py", line 149, in _raise_connection_failure
     raise AutoReconnect(msg) from error
 pymongo.errors.AutoReconnect: SSL handshake failed: ac-f2ywkng-shard-00-01.8a8461o.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1007) (configured timeouts: connectTimeoutMS: 20000.0ms)
+[main a1975d6] 자동 커밋: 2025-07-15 04:00:02.441144
+ 2 files changed, 95 insertions(+)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   ed1512f..a1975d6  main -> main
