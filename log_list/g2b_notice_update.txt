@@ -11769,3 +11769,41 @@ ISP/ISMP 메일이 성공적으로 발송되었습니다.
  2 files changed, 90 insertions(+)
 To https://github.com/nohjuhyeon/belab_scraping.git
    09b9a10..4f5ebac  main -> main
+[main 88f2d96] 자동 커밋: 2025-07-15 12:08:38.364428
+ 2 files changed, 41126 insertions(+), 20365 deletions(-)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   4f5ebac..88f2d96  main -> main
+----------------공고 확인 시작----------------
+2025-07-15 12:00:02.390258
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-07-15 12:00:04.119529 : 작업이 완료되었습니다!
+나라장터 공고를 찾습니다.
+총 공고 수 :  1613
+파일 다운로드 중 오류가 발생했습니다: ('Connection broken: IncompleteRead(6886776 bytes read, 660616 more expected)', IncompleteRead(6886776 bytes read, 660616 more expected))
+저장한 공고 수: 187
+전체 공고 | 시작 날짜 : 2025-07-14 00:00:00 / 종료 날짜 : 2025-07-16 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터베이스 | 데이터 업데이트 및 정렬 완료.
+클라우드 컴퓨팅 | 데이터 업데이트 및 정렬 완료.
+네트워크 및 보안 | 데이터 업데이트 및 정렬 완료.
+AR/VR 및 메타버스 | 데이터 업데이트 및 정렬 완료.
+소프트웨어 개발 및 관리 | 데이터 업데이트 및 정렬 완료.
+블록체인 | 데이터 업데이트 및 정렬 완료.
+IoT | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP | 데이터 업데이트 및 정렬 완료.
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-07-15 12:08:40.465152 : 작업이 완료되었습니다!
+공고 확인 완료!
