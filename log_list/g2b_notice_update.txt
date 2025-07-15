@@ -11811,3 +11811,47 @@ error: please commit or stash them.
  2 files changed, 48 insertions(+)
 To https://github.com/nohjuhyeon/belab_scraping.git
    88f2d96..4109b19  main -> main
+[main bfd9821] 자동 커밋: 2025-07-15 16:04:08.222746
+ 2 files changed, 22 insertions(+), 18 deletions(-)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   4109b19..bfd9821  main -> main
+----------------공고 확인 시작----------------
+2025-07-15 16:00:02.008283
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-07-15 16:00:04.939158 : 작업이 완료되었습니다!
+나라장터 공고를 찾습니다.
+총 공고 수 :  1613
+저장한 공고 수: 0
+전체 공고 | 시작 날짜 : 2025-07-14 00:00:00 / 종료 날짜 : 2025-07-16 00:00:00
+전체 공고 | Data updated and sorted successfully.
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-07-15 16:04:10.018516 : 작업이 완료되었습니다!
+공고 확인 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 65, in <module>
+    category_sheet_update(ai_url, ai_df, "인공지능")
+  File "/app/belab_scraping/g2b_notice_check/google_sheet.py", line 300, in category_sheet_update
+    google_sheet_add("전체 공고", notice_list, spreadsheet_url)
+  File "/app/belab_scraping/g2b_notice_check/google_sheet.py", line 56, in google_sheet_add
+    sheet = doc.worksheet(notice_type)
+  File "/usr/local/lib/python3.10/site-packages/gspread/spreadsheet.py", line 325, in worksheet
+    sheet_data = self.fetch_sheet_metadata()
+  File "/usr/local/lib/python3.10/site-packages/gspread/spreadsheet.py", line 230, in fetch_sheet_metadata
+    return self.client.fetch_sheet_metadata(self.id, params=params)
+  File "/usr/local/lib/python3.10/site-packages/gspread/http_client.py", line 305, in fetch_sheet_metadata
+    r = self.request("get", url, params=params)
+  File "/usr/local/lib/python3.10/site-packages/gspread/http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [503]: The service is currently unavailable.
