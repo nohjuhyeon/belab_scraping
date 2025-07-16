@@ -12187,3 +12187,49 @@ error: please commit or stash them.
  2 files changed, 47 insertions(+)
 To https://github.com/nohjuhyeon/belab_scraping.git
    58eb79d..72aaa7f  main -> main
+[main 39a3da6] 자동 커밋: 2025-07-16 20:01:24.132600
+ 2 files changed, 11 insertions(+), 7 deletions(-)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   72aaa7f..39a3da6  main -> main
+----------------공고 확인 시작----------------
+2025-07-16 20:00:02.255786
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-07-16 20:00:03.805687 : 작업이 완료되었습니다!
+나라장터 공고를 찾습니다.
+총 공고 수 :  1710
+저장한 공고 수: 0
+전체 공고 | 시작 날짜 : 2025-07-15 00:00:00 / 종료 날짜 : 2025-07-17 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터베이스 | 데이터 업데이트 및 정렬 완료.
+클라우드 컴퓨팅 | 데이터 업데이트 및 정렬 완료.
+네트워크 및 보안 | 데이터 업데이트 및 정렬 완료.
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-07-16 20:01:26.076933 : 작업이 완료되었습니다!
+공고 확인 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 93, in <module>
+    category_sheet_update(metaverse_url, metaverse_df, "AR/VR 및 메타버스")
+  File "/app/belab_scraping/g2b_notice_check/google_sheet.py", line 300, in category_sheet_update
+    google_sheet_add("전체 공고", notice_list, spreadsheet_url)
+  File "/app/belab_scraping/g2b_notice_check/google_sheet.py", line 57, in google_sheet_add
+    sheet.clear()
+  File "/usr/local/lib/python3.10/site-packages/gspread/worksheet.py", line 2211, in clear
+    return self.client.values_clear(
+  File "/usr/local/lib/python3.10/site-packages/gspread/http_client.py", line 204, in values_clear
+    r = self.request("post", url)
+  File "/usr/local/lib/python3.10/site-packages/gspread/http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [503]: The service is currently unavailable.
