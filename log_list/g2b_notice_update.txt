@@ -12411,3 +12411,7 @@ ISP/ISMP 메일이 성공적으로 발송되었습니다.
 ISP/ISMP 메일이 성공적으로 발송되었습니다.
 ISP/ISMP 메일이 성공적으로 발송되었습니다.
 이메일 전송 완료!
+[main f6b8d5f] 자동 커밋: 2025-07-17 12:00:04.699311
+ 2 files changed, 85 insertions(+)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   f0344a9..f6b8d5f  main -> main
