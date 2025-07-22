@@ -13682,3 +13682,84 @@ error: please commit or stash them.
  2 files changed, 47 insertions(+)
 To https://github.com/nohjuhyeon/belab_scraping.git
    c0fb610..bfd111f  main -> main
+[main 8411383] 자동 커밋: 2025-07-22 08:01:43.400270
+ 2 files changed, 559 insertions(+)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   bfd111f..8411383  main -> main
+----------------공고 확인 시작----------------
+2025-07-22 08:00:02.610575
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-07-22 08:00:04.326547 : 작업이 완료되었습니다!
+나라장터 공고를 찾습니다.
+총 공고 수 :  1271
+저장한 공고 수: 5
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-07-22 08:01:45.034225 : 작업이 완료되었습니다!
+공고 확인 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 55, in <module>
+    total_sheet_update(existing_df, notice_list)
+  File "/app/belab_scraping/g2b_notice_check/google_sheet.py", line 131, in total_sheet_update
+    google_sheet_add("전체 공고", notice_list, spreadsheet_url)
+  File "/app/belab_scraping/g2b_notice_check/google_sheet.py", line 56, in google_sheet_add
+    sheet = doc.worksheet(notice_type)
+  File "/usr/local/lib/python3.10/site-packages/gspread/spreadsheet.py", line 325, in worksheet
+    sheet_data = self.fetch_sheet_metadata()
+  File "/usr/local/lib/python3.10/site-packages/gspread/spreadsheet.py", line 230, in fetch_sheet_metadata
+    return self.client.fetch_sheet_metadata(self.id, params=params)
+  File "/usr/local/lib/python3.10/site-packages/gspread/http_client.py", line 305, in fetch_sheet_metadata
+    r = self.request("get", url, params=params)
+  File "/usr/local/lib/python3.10/site-packages/gspread/http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [500]: Internal error encountered.
+----------------이메일 전송----------------
+2025-07-22 09:30:01.942370
+인공지능 메일이 성공적으로 발송되었습니다.
+인공지능 메일이 성공적으로 발송되었습니다.
+인공지능 메일이 성공적으로 발송되었습니다.
+인공지능 메일이 성공적으로 발송되었습니다.
+데이터 메일이 성공적으로 발송되었습니다.
+데이터 메일이 성공적으로 발송되었습니다.
+데이터 메일이 성공적으로 발송되었습니다.
+데이터 메일이 성공적으로 발송되었습니다.
+클라우드 메일이 성공적으로 발송되었습니다.
+클라우드 메일이 성공적으로 발송되었습니다.
+클라우드 메일이 성공적으로 발송되었습니다.
+클라우드 메일이 성공적으로 발송되었습니다.
+네트워크 및 보안 메일이 성공적으로 발송되었습니다.
+네트워크 및 보안 메일이 성공적으로 발송되었습니다.
+네트워크 및 보안 메일이 성공적으로 발송되었습니다.
+네트워크 및 보안 메일이 성공적으로 발송되었습니다.
+AR/VR 및 메타버스 메일이 성공적으로 발송되었습니다.
+AR/VR 및 메타버스 메일이 성공적으로 발송되었습니다.
+AR/VR 및 메타버스 메일이 성공적으로 발송되었습니다.
+AR/VR 및 메타버스 메일이 성공적으로 발송되었습니다.
+소프트웨어 개발 및 관리 메일이 성공적으로 발송되었습니다.
+소프트웨어 개발 및 관리 메일이 성공적으로 발송되었습니다.
+소프트웨어 개발 및 관리 메일이 성공적으로 발송되었습니다.
+소프트웨어 개발 및 관리 메일이 성공적으로 발송되었습니다.
+블록체인 메일이 성공적으로 발송되었습니다.
+블록체인 메일이 성공적으로 발송되었습니다.
+블록체인 메일이 성공적으로 발송되었습니다.
+블록체인 메일이 성공적으로 발송되었습니다.
+IoT 메일이 성공적으로 발송되었습니다.
+IoT 메일이 성공적으로 발송되었습니다.
+IoT 메일이 성공적으로 발송되었습니다.
+IoT 메일이 성공적으로 발송되었습니다.
+ISP/ISMP 메일이 성공적으로 발송되었습니다.
+ISP/ISMP 메일이 성공적으로 발송되었습니다.
+ISP/ISMP 메일이 성공적으로 발송되었습니다.
+ISP/ISMP 메일이 성공적으로 발송되었습니다.
+이메일 전송 완료!
