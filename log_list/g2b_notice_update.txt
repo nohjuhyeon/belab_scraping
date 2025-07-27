@@ -15065,3 +15065,61 @@ error: please commit or stash them.
  2 files changed, 47 insertions(+)
 To https://github.com/nohjuhyeon/belab_scraping.git
    5ed7696..eed75ba  main -> main
+[main 059982b] 자동 커밋: 2025-07-27 08:04:46.139652
+ 1 file changed, 4 insertions(+)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   eed75ba..059982b  main -> main
+----------------공고 확인 시작----------------
+2025-07-27 08:00:02.097873
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-07-27 08:00:03.487599 : 작업이 완료되었습니다!
+나라장터 공고를 찾습니다.
+총 공고 수 :  1744
+저장한 공고 수: 0
+전체 공고 | 시작 날짜 : 2025-07-25 00:00:00 / 종료 날짜 : 2025-07-28 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터베이스 | 데이터 업데이트 및 정렬 완료.
+클라우드 컴퓨팅 | 데이터 업데이트 및 정렬 완료.
+네트워크 및 보안 | 데이터 업데이트 및 정렬 완료.
+AR/VR 및 메타버스 | 데이터 업데이트 및 정렬 완료.
+소프트웨어 개발 및 관리 | 데이터 업데이트 및 정렬 완료.
+블록체인 | 데이터 업데이트 및 정렬 완료.
+IoT | 데이터 업데이트 및 정렬 완료.
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-07-27 08:04:47.314072 : 작업이 완료되었습니다!
+공고 확인 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 121, in <module>
+    category_sheet_update(isp_url, isp_df, "ISP/ISMP")
+  File "/app/belab_scraping/g2b_notice_check/google_sheet.py", line 300, in category_sheet_update
+    google_sheet_add("전체 공고", notice_list, spreadsheet_url)
+  File "/app/belab_scraping/g2b_notice_check/google_sheet.py", line 55, in google_sheet_add
+    doc = gc.open_by_url(spreadsheet_url)
+  File "/usr/local/lib/python3.10/site-packages/gspread/client.py", line 189, in open_by_url
+    return self.open_by_key(extract_id_from_url(url))
+  File "/usr/local/lib/python3.10/site-packages/gspread/client.py", line 174, in open_by_key
+    raise ex
+  File "/usr/local/lib/python3.10/site-packages/gspread/client.py", line 168, in open_by_key
+    spreadsheet = Spreadsheet(self.http_client, {"id": key})
+  File "/usr/local/lib/python3.10/site-packages/gspread/spreadsheet.py", line 29, in __init__
+    metadata = self.fetch_sheet_metadata()
+  File "/usr/local/lib/python3.10/site-packages/gspread/spreadsheet.py", line 230, in fetch_sheet_metadata
+    return self.client.fetch_sheet_metadata(self.id, params=params)
+  File "/usr/local/lib/python3.10/site-packages/gspread/http_client.py", line 305, in fetch_sheet_metadata
+    r = self.request("get", url, params=params)
+  File "/usr/local/lib/python3.10/site-packages/gspread/http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [503]: The service is currently unavailable.
