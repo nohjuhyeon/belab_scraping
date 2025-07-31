@@ -16201,3 +16201,9 @@ To https://github.com/nohjuhyeon/belab_scraping.git
  create mode 100644 notice_list/taskorder_0.hwpx
 To https://github.com/nohjuhyeon/belab_scraping.git
    01f910c..9787458  main -> main
+[main 9c96bf2] 자동 커밋: 2025-07-31 20:00:02.353163
+ 5 files changed, 30 insertions(+), 14 deletions(-)
+ create mode 100644 notice_list/taskorder_0.hwp
+ delete mode 100644 notice_list/taskorder_0.hwpx
+To https://github.com/nohjuhyeon/belab_scraping.git
+   9787458..9c96bf2  main -> main
