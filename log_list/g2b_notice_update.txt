@@ -16258,3 +16258,69 @@ gspread.exceptions.APIError: APIError: [503]: The service is currently unavailab
  2 files changed, 57 insertions(+)
 To https://github.com/nohjuhyeon/belab_scraping.git
    4d80eaf..7ae1b9f  main -> main
+[main 1febd35] 자동 커밋: 2025-08-01 00:17:57.859563
+ 2 files changed, 74184 insertions(+), 28226 deletions(-)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   7ae1b9f..1febd35  main -> main
+----------------공고 확인 시작----------------
+2025-08-01 00:00:02.579010
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-08-01 00:00:04.365171 : 작업이 완료되었습니다!
+나라장터 공고를 찾습니다.
+총 공고 수 :  2481
+저장한 공고 수: 416
+전체 공고 | 시작 날짜 : 2025-07-31 00:00:00 / 종료 날짜 : 2025-08-02 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-08-01 00:18:00.452674 : 작업이 완료되었습니다!
+공고 확인 완료!
+urllib3.exceptions.SSLError: EOF occurred in violation of protocol (_ssl.c:2426)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='sheets.googleapis.com', port=443): Max retries exceeded with url: /v4/spreadsheets/1tTaqo_BPZvHEKx_OcFOj3RoFr-e_9i5-ftPW4hS4Qq0/values/%27%EC%A0%84%EC%B2%B4%20%EA%B3%B5%EA%B3%A0%27:append?valueInputOption=RAW (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:2426)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 72, in <module>
+    category_sheet_update(data_url, data_df, "데이터베이스")
+  File "/app/belab_scraping/g2b_notice_check/google_sheet.py", line 300, in category_sheet_update
+    google_sheet_add("전체 공고", notice_list, spreadsheet_url)
+  File "/app/belab_scraping/g2b_notice_check/google_sheet.py", line 59, in google_sheet_add
+    sheet.append_rows(data_to_append)
+  File "/usr/local/lib/python3.10/site-packages/gspread/worksheet.py", line 1862, in append_rows
+    res = self.client.values_append(self.spreadsheet_id, range_label, params, body)
+  File "/usr/local/lib/python3.10/site-packages/gspread/http_client.py", line 191, in values_append
+    r = self.request("post", url, params=params, json=body)
+  File "/usr/local/lib/python3.10/site-packages/gspread/http_client.py", line 114, in request
+    response = self.session.request(
+  File "/usr/local/lib/python3.10/site-packages/google/auth/transport/requests.py", line 540, in request
+    response = super(AuthorizedSession, self).request(
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 698, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='sheets.googleapis.com', port=443): Max retries exceeded with url: /v4/spreadsheets/1tTaqo_BPZvHEKx_OcFOj3RoFr-e_9i5-ftPW4hS4Qq0/values/%27%EC%A0%84%EC%B2%B4%20%EA%B3%B5%EA%B3%A0%27:append?valueInputOption=RAW (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:2426)')))
