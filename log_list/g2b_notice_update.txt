@@ -17309,3 +17309,51 @@ error: please commit or stash them.
  2 files changed, 47 insertions(+)
 To https://github.com/nohjuhyeon/belab_scraping.git
    ca0dbd7..516e19e  main -> main
+[main 06e3cee] 자동 커밋: 2025-08-04 16:03:09.598075
+ 1 file changed, 4 insertions(+)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   516e19e..06e3cee  main -> main
+----------------공고 확인 시작----------------
+2025-08-04 16:00:02.501107
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-08-04 16:00:03.916081 : 작업이 완료되었습니다!
+나라장터 공고를 찾습니다.
+총 공고 수 :  1270
+저장한 공고 수: 0
+전체 공고 | 시작 날짜 : 2025-08-01 00:00:00 / 종료 날짜 : 2025-08-05 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터베이스 | 데이터 업데이트 및 정렬 완료.
+클라우드 컴퓨팅 | 데이터 업데이트 및 정렬 완료.
+네트워크 및 보안 | 데이터 업데이트 및 정렬 완료.
+AR/VR 및 메타버스 | 데이터 업데이트 및 정렬 완료.
+소프트웨어 개발 및 관리 | 데이터 업데이트 및 정렬 완료.
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-08-04 16:03:10.818968 : 작업이 완료되었습니다!
+공고 확인 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 107, in <module>
+    category_sheet_update(blockchain_url, blockchain_df, "블록체인")
+  File "/app/belab_scraping/g2b_notice_check/google_sheet.py", line 300, in category_sheet_update
+    google_sheet_add("전체 공고", notice_list, spreadsheet_url)
+  File "/app/belab_scraping/g2b_notice_check/google_sheet.py", line 57, in google_sheet_add
+    sheet.clear()
+  File "/usr/local/lib/python3.10/site-packages/gspread/worksheet.py", line 2211, in clear
+    return self.client.values_clear(
+  File "/usr/local/lib/python3.10/site-packages/gspread/http_client.py", line 204, in values_clear
+    r = self.request("post", url)
+  File "/usr/local/lib/python3.10/site-packages/gspread/http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [503]: The service is currently unavailable.
