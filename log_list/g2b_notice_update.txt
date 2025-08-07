@@ -18124,3 +18124,55 @@ ISP/ISMP 메일이 성공적으로 발송되었습니다.
  create mode 100644 .g2b_notice_email_push.py.swp
 To https://github.com/nohjuhyeon/belab_scraping.git
    26db6dc..654d8f7  main -> main
+[main 5e53845] 자동 커밋: 2025-08-07 12:12:20.995217
+ 2 files changed, 43359 insertions(+), 23041 deletions(-)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   654d8f7..5e53845  main -> main
+----------------공고 확인 시작----------------
+2025-08-07 12:00:02.617127
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-08-07 12:00:06.128115 : 작업이 완료되었습니다!
+나라장터 공고를 찾습니다.
+총 공고 수 :  2017
+Error processing response: Invalid json output: ```json
+{
+    "IT 관련 기술": [
+        {
+            "name": "데이터베이스",
+            "참조_텍스트": "이기종 센서 데이터를 관리하는 라이브러리"
+        },
+        {
+            "name": "소프트웨어 개발 및 관리",
+            "참조_텍스트": "적용도구 개발", "QGIS 기반 분석모델을 개발"
+        }
+    ]
+}
+```
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+저장한 공고 수: 183
+전체 공고 | 시작 날짜 : 2025-08-06 00:00:00 / 종료 날짜 : 2025-08-08 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터베이스 | 데이터 업데이트 및 정렬 완료.
+클라우드 컴퓨팅 | 데이터 업데이트 및 정렬 완료.
+네트워크 및 보안 | 데이터 업데이트 및 정렬 완료.
+AR/VR 및 메타버스 | 데이터 업데이트 및 정렬 완료.
+소프트웨어 개발 및 관리 | 데이터 업데이트 및 정렬 완료.
+블록체인 | 데이터 업데이트 및 정렬 완료.
+IoT | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP | 데이터 업데이트 및 정렬 완료.
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-08-07 12:12:23.497117 : 작업이 완료되었습니다!
+공고 확인 완료!
