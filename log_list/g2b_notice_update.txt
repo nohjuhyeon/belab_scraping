@@ -18815,3 +18815,54 @@ error: please commit or stash them.
 파일 다운로드 중 오류가 발생했습니다: 404 Client Error: Not Found for url: https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R25BK01002334&bidPbancOrd=000&fileType=&fileSeq=2
 파일 다운로드 중 오류가 발생했습니다: 404 Client Error: Not Found for url: https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R25BK01002176&bidPbancOrd=001&fileType=&fileSeq=2
 파일 다운로드 중 오류가 발생했습니다: 404 Client Error: Not Found for url: https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R25BK01002351&bidPbancOrd=000&fileType=&fileSeq=2
+[main a7bfdec] 자동 커밋: 2025-08-09 00:08:31.555955
+ 2 files changed, 107429 insertions(+), 131458 deletions(-)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   509870d..a7bfdec  main -> main
+파일 다운로드 중 오류가 발생했습니다: 404 Client Error: Not Found for url: https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R25BK01002365&bidPbancOrd=000&fileType=&fileSeq=2
+파일 다운로드 중 오류가 발생했습니다: 404 Client Error: Not Found for url: https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R25BK01001120&bidPbancOrd=000&fileType=&fileSeq=2
+파일 다운로드 중 오류가 발생했습니다: 404 Client Error: Not Found for url: https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R25BK01002348&bidPbancOrd=000&fileType=&fileSeq=2
+파일 다운로드 중 오류가 발생했습니다: 404 Client Error: Not Found for url: https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R25BK01002376&bidPbancOrd=000&fileType=&fileSeq=2
+파일 다운로드 중 오류가 발생했습니다: 404 Client Error: Not Found for url: https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R25BK00998263&bidPbancOrd=001&fileType=&fileSeq=2
+파일 다운로드 중 오류가 발생했습니다: 404 Client Error: Not Found for url: https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R25BK01002395&bidPbancOrd=000&fileType=&fileSeq=2
+파일 다운로드 중 오류가 발생했습니다: 404 Client Error: Not Found for url: https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R25BK01002407&bidPbancOrd=000&fileType=&fileSeq=2
+파일 다운로드 중 오류가 발생했습니다: 404 Client Error: Not Found for url: https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R25BK01002315&bidPbancOrd=000&fileType=&fileSeq=2
+파일 다운로드 중 오류가 발생했습니다: 404 Client Error: Not Found for url: https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R25BK01002415&bidPbancOrd=000&fileType=&fileSeq=2
+파일 다운로드 중 오류가 발생했습니다: 404 Client Error: Not Found for url: https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R25BK00999811&bidPbancOrd=000&fileType=&fileSeq=2
+파일 다운로드 중 오류가 발생했습니다: 404 Client Error: Not Found for url: https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R25BK01001356&bidPbancOrd=000&fileType=&fileSeq=2
+파일 다운로드 중 오류가 발생했습니다: 404 Client Error: Not Found for url: https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R25BK01001516&bidPbancOrd=000&fileType=&fileSeq=2
+파일 다운로드 중 오류가 발생했습니다: 404 Client Error: Not Found for url: https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R25BK01001566&bidPbancOrd=000&fileType=&fileSeq=2
+파일 다운로드 중 오류가 발생했습니다: 404 Client Error: Not Found for url: https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R25BK01001631&bidPbancOrd=000&fileType=&fileSeq=2
+파일 다운로드 중 오류가 발생했습니다: 404 Client Error: Not Found for url: https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R25BK01001663&bidPbancOrd=000&fileType=&fileSeq=2
+파일 다운로드 중 오류가 발생했습니다: 404 Client Error: Not Found for url: https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R25BK01002427&bidPbancOrd=000&fileType=&fileSeq=2
+파일 다운로드 중 오류가 발생했습니다: 404 Client Error: Not Found for url: https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R25BK01002441&bidPbancOrd=000&fileType=&fileSeq=2
+파일 다운로드 중 오류가 발생했습니다: 404 Client Error: Not Found for url: https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R25BK01002210&bidPbancOrd=000&fileType=&fileSeq=2
+파일 다운로드 중 오류가 발생했습니다: 404 Client Error: Not Found for url: https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R25BK01002428&bidPbancOrd=000&fileType=&fileSeq=2
+파일 다운로드 중 오류가 발생했습니다: 404 Client Error: Not Found for url: https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R25BK01002498&bidPbancOrd=000&fileType=&fileSeq=2
+파일 다운로드 중 오류가 발생했습니다: 404 Client Error: Not Found for url: https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R25BK01002040&bidPbancOrd=000&fileType=&fileSeq=2
+파일 다운로드 중 오류가 발생했습니다: 404 Client Error: Not Found for url: https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R25BK01002515&bidPbancOrd=000&fileType=&fileSeq=2
+파일 다운로드 중 오류가 발생했습니다: 404 Client Error: Not Found for url: https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R25BK01002507&bidPbancOrd=000&fileType=&fileSeq=2
+파일 다운로드 중 오류가 발생했습니다: 404 Client Error: Not Found for url: https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R25BK01002499&bidPbancOrd=000&fileType=&fileSeq=2
+파일 다운로드 중 오류가 발생했습니다: 404 Client Error: Not Found for url: https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R25BK01002547&bidPbancOrd=000&fileType=&fileSeq=3
+파일 다운로드 중 오류가 발생했습니다: 404 Client Error: Not Found for url: https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R25BK01002565&bidPbancOrd=000&fileType=&fileSeq=2
+저장한 공고 수: 370
+전체 공고 | 시작 날짜 : 2025-08-08 00:00:00 / 종료 날짜 : 2025-08-10 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터베이스 | 데이터 업데이트 및 정렬 완료.
+클라우드 컴퓨팅 | 데이터 업데이트 및 정렬 완료.
+네트워크 및 보안 | 데이터 업데이트 및 정렬 완료.
+AR/VR 및 메타버스 | 데이터 업데이트 및 정렬 완료.
+소프트웨어 개발 및 관리 | 데이터 업데이트 및 정렬 완료.
+블록체인 | 데이터 업데이트 및 정렬 완료.
+IoT | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP | 데이터 업데이트 및 정렬 완료.
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-08-09 00:08:34.404455 : 작업이 완료되었습니다!
+공고 확인 완료!
