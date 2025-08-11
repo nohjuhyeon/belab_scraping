@@ -19628,3 +19628,11 @@ error: please commit or stash them.
 
 2025-08-11 20:01:40.749820 : 작업이 완료되었습니다!
 공고 확인 완료!
+[main 391910f] 자동 커밋: 2025-08-12 00:00:02.138973
+ 2 files changed, 47 insertions(+)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   0270c80..391910f  main -> main
+Ignoring wrong pointing object 6 0 (offset 0)
+Ignoring wrong pointing object 8 0 (offset 0)
+Ignoring wrong pointing object 14 0 (offset 0)
+Ignoring wrong pointing object 19 0 (offset 0)
