@@ -19509,3 +19509,40 @@ IoT 메일이 성공적으로 발송되었습니다.
  2 files changed, 74 insertions(+)
 To https://github.com/nohjuhyeon/belab_scraping.git
    453a36f..3dd5cf7  main -> main
+[main c9f36c1] 자동 커밋: 2025-08-11 12:07:59.739651
+ 2 files changed, 38060 insertions(+), 19741 deletions(-)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   3dd5cf7..c9f36c1  main -> main
+----------------공고 확인 시작----------------
+2025-08-11 12:00:02.179381
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-08-11 12:00:03.534980 : 작업이 완료되었습니다!
+나라장터 공고를 찾습니다.
+총 공고 수 :  1337
+저장한 공고 수: 165
+전체 공고 | 시작 날짜 : 2025-08-08 00:00:00 / 종료 날짜 : 2025-08-12 00:00:00
+전체 공고 | Data updated and sorted successfully.
+인공지능 | 데이터 업데이트 및 정렬 완료.
+데이터베이스 | 데이터 업데이트 및 정렬 완료.
+클라우드 컴퓨팅 | 데이터 업데이트 및 정렬 완료.
+네트워크 및 보안 | 데이터 업데이트 및 정렬 완료.
+AR/VR 및 메타버스 | 데이터 업데이트 및 정렬 완료.
+소프트웨어 개발 및 관리 | 데이터 업데이트 및 정렬 완료.
+블록체인 | 데이터 업데이트 및 정렬 완료.
+IoT | 데이터 업데이트 및 정렬 완료.
+ISP/ISMP | 데이터 업데이트 및 정렬 완료.
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-08-11 12:08:01.774290 : 작업이 완료되었습니다!
+공고 확인 완료!
