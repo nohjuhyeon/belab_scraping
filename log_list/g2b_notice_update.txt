@@ -19636,3 +19636,43 @@ Ignoring wrong pointing object 6 0 (offset 0)
 Ignoring wrong pointing object 8 0 (offset 0)
 Ignoring wrong pointing object 14 0 (offset 0)
 Ignoring wrong pointing object 19 0 (offset 0)
+[main 428c01b] 자동 커밋: 2025-08-12 00:23:17.501527
+ 2 files changed, 56601 insertions(+), 64363 deletions(-)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   391910f..428c01b  main -> main
+----------------공고 확인 시작----------------
+2025-08-12 00:00:02.114791
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-08-12 00:00:03.679196 : 작업이 완료되었습니다!
+나라장터 공고를 찾습니다.
+총 공고 수 :  1267
+저장한 공고 수: 517
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-08-12 00:23:19.592150 : 작업이 완료되었습니다!
+공고 확인 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 55, in <module>
+    total_sheet_update(existing_df, notice_list)
+  File "/app/belab_scraping/g2b_notice_check/google_sheet.py", line 170, in total_sheet_update
+    google_sheet_add(keyword, filtered_list, spreadsheet_url)
+  File "/app/belab_scraping/g2b_notice_check/google_sheet.py", line 59, in google_sheet_add
+    sheet.append_rows(data_to_append)
+  File "/usr/local/lib/python3.10/site-packages/gspread/worksheet.py", line 1862, in append_rows
+    res = self.client.values_append(self.spreadsheet_id, range_label, params, body)
+  File "/usr/local/lib/python3.10/site-packages/gspread/http_client.py", line 191, in values_append
+    r = self.request("post", url, params=params, json=body)
+  File "/usr/local/lib/python3.10/site-packages/gspread/http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [503]: The service is currently unavailable.
