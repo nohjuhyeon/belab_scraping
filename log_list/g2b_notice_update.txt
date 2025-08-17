@@ -21246,3 +21246,7 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.10/site-packages/gspread/http_client.py", line 128, in request
     raise APIError(response)
 gspread.exceptions.APIError: APIError: [500]: Internal error encountered.
+[main 931ac06] 자동 커밋: 2025-08-17 20:00:01.947304
+ 2 files changed, 60 insertions(+)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   ea94a49..931ac06  main -> main
