@@ -3061,3 +3061,13 @@ Swap:          3.8Gi       524Ki       3.8Gi
 Mem:           5.7Gi       1.6Gi       836Mi        38Mi       3.6Gi       4.1Gi
 Swap:          3.8Gi       524Ki       3.8Gi
 
+==== Wed Aug 20 17:00:01 KST 2025 ====
+               total        used        free      shared  buff/cache   available
+Mem:           5.7Gi       1.6Gi       821Mi        38Mi       3.6Gi       4.1Gi
+Swap:          3.8Gi       524Ki       3.8Gi
+
+==== Wed Aug 20 19:00:01 KST 2025 ====
+               total        used        free      shared  buff/cache   available
+Mem:           5.7Gi       1.6Gi       814Mi        38Mi       3.6Gi       4.1Gi
+Swap:          3.8Gi       524Ki       3.8Gi
+
