@@ -22132,3 +22132,41 @@ json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
  2 files changed, 48 insertions(+)
 To https://github.com/nohjuhyeon/belab_scraping.git
    b71b0b9..3ac11b6  main -> main
+[main 81026cb] 자동 커밋: 2025-08-20 20:00:15.889195
+ 2 files changed, 10 insertions(+), 6 deletions(-)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   3ac11b6..81026cb  main -> main
+----------------공고 확인 시작----------------
+2025-08-20 20:00:01.979486
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-08-20 20:00:03.456027 : 작업이 완료되었습니다!
+나라장터 공고를 찾습니다.
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-08-20 20:00:17.854106 : 작업이 완료되었습니다!
+공고 확인 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 53, in <module>
+    notice_list = notice_collection(collection,existing_df)
+  File "/app/belab_scraping/g2b_notice_check/g2b_notice.py", line 240, in notice_collection
+    notice_list = notice_search(collection,notice_list, notice_ids, folder_path)
+  File "/app/belab_scraping/g2b_notice_check/g2b_notice.py", line 112, in notice_search
+    file_contents = json.loads(file_response.content)
+  File "/usr/local/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
