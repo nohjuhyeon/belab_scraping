@@ -22170,3 +22170,7 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.10/json/decoder.py", line 355, in raw_decode
     raise JSONDecodeError("Expecting value", s, err.value) from None
 json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[main c4ced20] 자동 커밋: 2025-08-21 00:00:02.343011
+ 2 files changed, 48 insertions(+)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   81026cb..c4ced20  main -> main
