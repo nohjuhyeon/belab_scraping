@@ -22611,3 +22611,7 @@ error: please commit or stash them.
 메일 발송 중 오류 발생: Connection unexpectedly closed
 메일 발송 중 오류 발생: Connection unexpectedly closed
 이메일 전송 완료!
+[main 7bb31e0] 자동 커밋: 2025-08-22 12:00:02.078424
+ 2 files changed, 82 insertions(+)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   21c55b0..7bb31e0  main -> main
