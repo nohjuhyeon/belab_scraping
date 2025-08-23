@@ -22798,3 +22798,7 @@ pymongo.errors.ConfigurationError: The resolution lifetime expired after 21.120 
  2 files changed, 137 insertions(+)
 To https://github.com/nohjuhyeon/belab_scraping.git
    24f9111..d5c5534  main -> main
+[main fdccbf7] 자동 커밋: 2025-08-23 16:00:02.527354
+ 2 files changed, 14 insertions(+)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   d5c5534..fdccbf7  main -> main
