@@ -22868,3 +22868,7 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.10/site-packages/pymongo/network_layer.py", line 359, in receive_data
     raise _OperationCancelled("operation cancelled") from None
 pymongo.errors._OperationCancelled: operation cancelled
+[main 7e075aa] 자동 커밋: 2025-08-23 20:00:02.654621
+ 2 files changed, 76 insertions(+)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   a46ab99..7e075aa  main -> main
