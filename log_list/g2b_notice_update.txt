@@ -22942,3 +22942,77 @@ pymongo.errors._OperationCancelled: operation cancelled
  2 files changed, 76 insertions(+)
 To https://github.com/nohjuhyeon/belab_scraping.git
    4781916..02d5e94  main -> main
+[main 91b5eff] 자동 커밋: 2025-08-24 00:00:48.477397
+ 1 file changed, 4 insertions(+)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   02d5e94..91b5eff  main -> main
+----------------공고 확인 시작----------------
+2025-08-24 00:00:02.699387
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-08-24 00:00:04.041382 : 작업이 완료되었습니다!
+나라장터 공고를 찾습니다.
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-08-24 00:00:49.785639 : 작업이 완료되었습니다!
+공고 확인 완료!
+pymongo.errors.AutoReconnect: connection pool paused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 32, in <module>
+    existing_df = [i for i in results]  # 결과를 리스트로 변환
+  File "/app/belab_scraping/g2b_notice_update.py", line 32, in <listcomp>
+    existing_df = [i for i in results]  # 결과를 리스트로 변환
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/cursor.py", line 1284, in __next__
+    return self.next()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/cursor.py", line 1260, in next
+    if len(self._data) or self._refresh():
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/cursor.py", line 1231, in _refresh
+    self._send_message(g)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/cursor.py", line 1102, in _send_message
+    response = client._run_operation(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1917, in _run_operation
+    return self._retryable_read(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2026, in _retryable_read
+    return self._retry_internal(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1993, in _retry_internal
+    ).run()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2730, in run
+    return self._read() if self._is_read else self._write()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2877, in _read
+    with self._client._conn_from_server(self._read_pref, self._server, self._session) as (
+  File "/usr/local/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1846, in _conn_from_server
+    with self._checkout(server, session) as conn:
+  File "/usr/local/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1756, in _checkout
+    with server.checkout(handler=err_handler) as conn:
+  File "/usr/local/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/pool.py", line 1119, in checkout
+    conn = self._get_conn(checkout_started_time, handler=handler)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/pool.py", line 1235, in _get_conn
+    self._raise_if_not_ready(checkout_started_time, emit_event=True)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/pool.py", line 1187, in _raise_if_not_ready
+    _raise_connection_failure(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/pool_shared.py", line 149, in _raise_connection_failure
+    raise AutoReconnect(msg) from error
+pymongo.errors.AutoReconnect: ac-f2ywkng-shard-00-02.8a8461o.mongodb.net:27017: connection pool paused (configured timeouts: connectTimeoutMS: 20000.0ms)
