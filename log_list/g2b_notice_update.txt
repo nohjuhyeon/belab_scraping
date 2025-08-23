@@ -22794,3 +22794,7 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/srv_resolver.py", line 125, in _resolve_uri
     raise ConfigurationError(str(exc)) from None
 pymongo.errors.ConfigurationError: The resolution lifetime expired after 21.120 seconds: Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.
+[main d5c5534] 자동 커밋: 2025-08-23 12:00:02.408986
+ 2 files changed, 137 insertions(+)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   24f9111..d5c5534  main -> main
