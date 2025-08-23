@@ -23016,3 +23016,7 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.10/site-packages/pymongo/pool_shared.py", line 149, in _raise_connection_failure
     raise AutoReconnect(msg) from error
 pymongo.errors.AutoReconnect: ac-f2ywkng-shard-00-02.8a8461o.mongodb.net:27017: connection pool paused (configured timeouts: connectTimeoutMS: 20000.0ms)
+[main 074e65e] 자동 커밋: 2025-08-24 04:00:02.949950
+ 2 files changed, 84 insertions(+)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   91b5eff..074e65e  main -> main
