@@ -23090,3 +23090,8 @@ pymongo.errors._OperationCancelled: operation cancelled
  2 files changed, 76 insertions(+)
 To https://github.com/nohjuhyeon/belab_scraping.git
    cd86a34..4c5151b  main -> main
+[main 464b264] 자동 커밋: 2025-08-24 12:00:02.961437
+ 4 files changed, 72237 insertions(+), 188773 deletions(-)
+ create mode 100644 notice_list/requestforproposal_0.hwpx
+To https://github.com/nohjuhyeon/belab_scraping.git
+   4c5151b..464b264  main -> main
