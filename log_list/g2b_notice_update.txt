@@ -23159,3 +23159,7 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/topology.py", line 344, in _select_servers_loop
     raise ServerSelectionTimeoutError(
 pymongo.errors.ServerSelectionTimeoutError: No replica set members match selector "Primary()", Timeout: 30s, Topology Description: <TopologyDescription id: 68aa8032e03d6eb910c0aabf, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-f2ywkng-shard-00-00.8a8461o.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.008152368944138288>, <ServerDescription ('ac-f2ywkng-shard-00-01.8a8461o.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-f2ywkng-shard-00-01.8a8461o.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1007) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>, <ServerDescription ('ac-f2ywkng-shard-00-02.8a8461o.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-f2ywkng-shard-00-02.8a8461o.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1007) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+[main a7fff46] 자동 커밋: 2025-08-24 16:00:02.315752
+ 2 files changed, 74 insertions(+)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   0a92d6e..a7fff46  main -> main
