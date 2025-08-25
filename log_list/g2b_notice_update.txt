@@ -23163,3 +23163,214 @@ pymongo.errors.ServerSelectionTimeoutError: No replica set members match selecto
  2 files changed, 74 insertions(+)
 To https://github.com/nohjuhyeon/belab_scraping.git
    0a92d6e..a7fff46  main -> main
+[main 7f88a48] 자동 커밋: 2025-08-24 16:00:33.793310
+ 1 file changed, 4 insertions(+)
+To https://github.com/nohjuhyeon/belab_scraping.git
+   a7fff46..7f88a48  main -> main
+----------------공고 확인 시작----------------
+2025-08-24 16:00:02.286338
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-08-24 16:00:03.668004 : 작업이 완료되었습니다!
+나라장터 공고를 찾습니다.
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-08-24 16:00:35.343655 : 작업이 완료되었습니다!
+공고 확인 완료!
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 32, in <module>
+    existing_df = [i for i in results]  # 결과를 리스트로 변환
+  File "/app/belab_scraping/g2b_notice_update.py", line 32, in <listcomp>
+    existing_df = [i for i in results]  # 결과를 리스트로 변환
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/cursor.py", line 1284, in __next__
+    return self.next()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/cursor.py", line 1260, in next
+    if len(self._data) or self._refresh():
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/cursor.py", line 1208, in _refresh
+    self._send_message(q)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/cursor.py", line 1102, in _send_message
+    response = client._run_operation(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1917, in _run_operation
+    return self._retryable_read(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2026, in _retryable_read
+    return self._retry_internal(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1993, in _retry_internal
+    ).run()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2730, in run
+    return self._read() if self._is_read else self._write()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2875, in _read
+    self._server = self._get_server()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 2823, in _get_server
+    return self._client._select_server(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1812, in _select_server
+    server = topology.select_server(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/topology.py", line 409, in select_server
+    server = self._select_server(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/topology.py", line 387, in _select_server
+    servers = self.select_servers(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/topology.py", line 294, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/topology.py", line 344, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: No replica set members match selector "Primary()", Timeout: 30s, Topology Description: <TopologyDescription id: 68aab8728ce92fd56a90b05e, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-f2ywkng-shard-00-00.8a8461o.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-f2ywkng-shard-00-00.8a8461o.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1007) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>, <ServerDescription ('ac-f2ywkng-shard-00-01.8a8461o.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.007926261983811855>, <ServerDescription ('ac-f2ywkng-shard-00-02.8a8461o.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-f2ywkng-shard-00-02.8a8461o.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1007) (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 16, in <module>
+    mongo_client,collection = mongo_setting("news_scraping", "notice_list")  # MongoDB 설정
+  File "/app/belab_scraping/function_list/basic_options.py", line 112, in mongo_setting
+    mongo_client = MongoClient(mongo_url,maxPoolSize=10,waitQueueTimeoutMS=5000)  # MongoDB 클라이언트 생성
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 884, in __init__
+    self._get_topology()  # type: ignore[unused-coroutine]
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1737, in _get_topology
+    self._resolve_srv()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 903, in _resolve_srv
+    res = uri_parser._parse_srv(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/uri_parser.py", line 163, in _parse_srv
+    nodes = dns_resolver.get_hosts()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/srv_resolver.py", line 157, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/srv_resolver.py", line 131, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/srv_resolver.py", line 125, in _resolve_uri
+    raise ConfigurationError(str(exc)) from None
+pymongo.errors.ConfigurationError: The resolution lifetime expired after 21.126 seconds: Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 16, in <module>
+    mongo_client,collection = mongo_setting("news_scraping", "notice_list")  # MongoDB 설정
+  File "/app/belab_scraping/function_list/basic_options.py", line 112, in mongo_setting
+    mongo_client = MongoClient(mongo_url,maxPoolSize=10,waitQueueTimeoutMS=5000)  # MongoDB 클라이언트 생성
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 884, in __init__
+    self._get_topology()  # type: ignore[unused-coroutine]
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1737, in _get_topology
+    self._resolve_srv()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 903, in _resolve_srv
+    res = uri_parser._parse_srv(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/uri_parser.py", line 163, in _parse_srv
+    nodes = dns_resolver.get_hosts()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/srv_resolver.py", line 157, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/srv_resolver.py", line 131, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/srv_resolver.py", line 125, in _resolve_uri
+    raise ConfigurationError(str(exc)) from None
+pymongo.errors.ConfigurationError: The resolution lifetime expired after 21.127 seconds: Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 16, in <module>
+    mongo_client,collection = mongo_setting("news_scraping", "notice_list")  # MongoDB 설정
+  File "/app/belab_scraping/function_list/basic_options.py", line 112, in mongo_setting
+    mongo_client = MongoClient(mongo_url,maxPoolSize=10,waitQueueTimeoutMS=5000)  # MongoDB 클라이언트 생성
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 884, in __init__
+    self._get_topology()  # type: ignore[unused-coroutine]
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1737, in _get_topology
+    self._resolve_srv()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 903, in _resolve_srv
+    res = uri_parser._parse_srv(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/uri_parser.py", line 163, in _parse_srv
+    nodes = dns_resolver.get_hosts()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/srv_resolver.py", line 157, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/srv_resolver.py", line 131, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/srv_resolver.py", line 125, in _resolve_uri
+    raise ConfigurationError(str(exc)) from None
+pymongo.errors.ConfigurationError: The resolution lifetime expired after 21.126 seconds: Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 16, in <module>
+    mongo_client,collection = mongo_setting("news_scraping", "notice_list")  # MongoDB 설정
+  File "/app/belab_scraping/function_list/basic_options.py", line 112, in mongo_setting
+    mongo_client = MongoClient(mongo_url,maxPoolSize=10,waitQueueTimeoutMS=5000)  # MongoDB 클라이언트 생성
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 884, in __init__
+    self._get_topology()  # type: ignore[unused-coroutine]
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1737, in _get_topology
+    self._resolve_srv()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 903, in _resolve_srv
+    res = uri_parser._parse_srv(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/uri_parser.py", line 163, in _parse_srv
+    nodes = dns_resolver.get_hosts()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/srv_resolver.py", line 157, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/srv_resolver.py", line 131, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/srv_resolver.py", line 125, in _resolve_uri
+    raise ConfigurationError(str(exc)) from None
+pymongo.errors.ConfigurationError: The resolution lifetime expired after 21.127 seconds: Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_email_push.py", line 11, in <module>
+    mongo_client,collection = mongo_setting("news_scraping", "notice_list")  # MongoDB 설정
+  File "/app/belab_scraping/function_list/basic_options.py", line 112, in mongo_setting
+    mongo_client = MongoClient(mongo_url,maxPoolSize=10,waitQueueTimeoutMS=5000)  # MongoDB 클라이언트 생성
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 884, in __init__
+    self._get_topology()  # type: ignore[unused-coroutine]
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1737, in _get_topology
+    self._resolve_srv()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 903, in _resolve_srv
+    res = uri_parser._parse_srv(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/uri_parser.py", line 163, in _parse_srv
+    nodes = dns_resolver.get_hosts()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/srv_resolver.py", line 157, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/srv_resolver.py", line 131, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/srv_resolver.py", line 125, in _resolve_uri
+    raise ConfigurationError(str(exc)) from None
+pymongo.errors.ConfigurationError: The resolution lifetime expired after 21.117 seconds: Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_email_push.py", line 91, in <module>
+    mongo_client.close()
+NameError: name 'mongo_client' is not defined
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 16, in <module>
+    mongo_client,collection = mongo_setting("news_scraping", "notice_list")  # MongoDB 설정
+  File "/app/belab_scraping/function_list/basic_options.py", line 112, in mongo_setting
+    mongo_client = MongoClient(mongo_url,maxPoolSize=10,waitQueueTimeoutMS=5000)  # MongoDB 클라이언트 생성
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 884, in __init__
+    self._get_topology()  # type: ignore[unused-coroutine]
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1737, in _get_topology
+    self._resolve_srv()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 903, in _resolve_srv
+    res = uri_parser._parse_srv(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/uri_parser.py", line 163, in _parse_srv
+    nodes = dns_resolver.get_hosts()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/srv_resolver.py", line 157, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/srv_resolver.py", line 131, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/srv_resolver.py", line 125, in _resolve_uri
+    raise ConfigurationError(str(exc)) from None
+pymongo.errors.ConfigurationError: The resolution lifetime expired after 21.130 seconds: Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.
+Traceback (most recent call last):
+  File "/app/belab_scraping/g2b_notice_update.py", line 16, in <module>
+    mongo_client,collection = mongo_setting("news_scraping", "notice_list")  # MongoDB 설정
+  File "/app/belab_scraping/function_list/basic_options.py", line 112, in mongo_setting
+    mongo_client = MongoClient(mongo_url,maxPoolSize=10,waitQueueTimeoutMS=5000)  # MongoDB 클라이언트 생성
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 884, in __init__
+    self._get_topology()  # type: ignore[unused-coroutine]
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 1737, in _get_topology
+    self._resolve_srv()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/mongo_client.py", line 903, in _resolve_srv
+    res = uri_parser._parse_srv(
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/uri_parser.py", line 163, in _parse_srv
+    nodes = dns_resolver.get_hosts()
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/srv_resolver.py", line 157, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/srv_resolver.py", line 131, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "/usr/local/lib/python3.10/site-packages/pymongo/synchronous/srv_resolver.py", line 125, in _resolve_uri
+    raise ConfigurationError(str(exc)) from None
+pymongo.errors.ConfigurationError: The resolution lifetime expired after 21.127 seconds: Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.

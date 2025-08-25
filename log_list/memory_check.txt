@@ -3301,3 +3301,73 @@ Swap:          3.8Gi       524Ki       3.8Gi
 Mem:           5.7Gi       2.7Gi       337Mi        38Mi       3.0Gi       3.0Gi
 Swap:          3.8Gi       524Ki       3.8Gi
 
+==== Sun Aug 24 17:00:01 KST 2025 ====
+               total        used        free      shared  buff/cache   available
+Mem:           5.7Gi       2.7Gi       339Mi        38Mi       3.0Gi       3.0Gi
+Swap:          3.8Gi       524Ki       3.8Gi
+
+==== Sun Aug 24 19:00:01 KST 2025 ====
+               total        used        free      shared  buff/cache   available
+Mem:           5.7Gi       2.7Gi       319Mi        38Mi       3.0Gi       3.0Gi
+Swap:          3.8Gi       524Ki       3.8Gi
+
+==== Sun Aug 24 21:00:01 KST 2025 ====
+               total        used        free      shared  buff/cache   available
+Mem:           5.7Gi       2.7Gi       299Mi        38Mi       3.0Gi       3.0Gi
+Swap:          3.8Gi       524Ki       3.8Gi
+
+==== Sun Aug 24 23:00:02 KST 2025 ====
+               total        used        free      shared  buff/cache   available
+Mem:           5.7Gi       2.7Gi       254Mi        38Mi       3.1Gi       3.0Gi
+Swap:          3.8Gi       524Ki       3.8Gi
+
+==== Mon Aug 25 01:00:01 KST 2025 ====
+               total        used        free      shared  buff/cache   available
+Mem:           5.7Gi       2.7Gi       323Mi        38Mi       3.0Gi       3.0Gi
+Swap:          3.8Gi       524Ki       3.8Gi
+
+==== Mon Aug 25 03:00:01 KST 2025 ====
+               total        used        free      shared  buff/cache   available
+Mem:           5.7Gi       2.7Gi       301Mi        38Mi       3.0Gi       3.0Gi
+Swap:          3.8Gi       524Ki       3.8Gi
+
+==== Mon Aug 25 05:00:01 KST 2025 ====
+               total        used        free      shared  buff/cache   available
+Mem:           5.7Gi       2.7Gi       257Mi        38Mi       3.1Gi       3.0Gi
+Swap:          3.8Gi       524Ki       3.8Gi
+
+==== Mon Aug 25 07:00:01 KST 2025 ====
+               total        used        free      shared  buff/cache   available
+Mem:           5.7Gi       2.7Gi       212Mi        38Mi       3.1Gi       3.0Gi
+Swap:          3.8Gi       524Ki       3.8Gi
+
+==== Mon Aug 25 09:00:01 KST 2025 ====
+               total        used        free      shared  buff/cache   available
+Mem:           5.7Gi       2.7Gi       296Mi        38Mi       3.0Gi       3.0Gi
+Swap:          3.8Gi       524Ki       3.8Gi
+
+==== Mon Aug 25 11:00:01 KST 2025 ====
+               total        used        free      shared  buff/cache   available
+Mem:           5.7Gi       2.7Gi       244Mi        38Mi       3.1Gi       3.0Gi
+Swap:          3.8Gi       524Ki       3.8Gi
+
+==== Mon Aug 25 13:00:01 KST 2025 ====
+               total        used        free      shared  buff/cache   available
+Mem:           5.7Gi       2.7Gi       182Mi        38Mi       3.1Gi       3.0Gi
+Swap:          3.8Gi       524Ki       3.8Gi
+
+==== Mon Aug 25 15:00:01 KST 2025 ====
+               total        used        free      shared  buff/cache   available
+Mem:           5.7Gi       2.7Gi       141Mi        38Mi       3.2Gi       3.0Gi
+Swap:          3.8Gi       524Ki       3.8Gi
+
+==== Mon Aug 25 17:00:01 KST 2025 ====
+               total        used        free      shared  buff/cache   available
+Mem:           5.7Gi       2.7Gi       200Mi        38Mi       3.1Gi       3.0Gi
+Swap:          3.8Gi       524Ki       3.8Gi
+
+==== Mon Aug 25 19:00:01 KST 2025 ====
+               total        used        free      shared  buff/cache   available
+Mem:           5.7Gi       2.7Gi       183Mi        38Mi       3.1Gi       3.0Gi
+Swap:          3.8Gi       524Ki       3.8Gi
+
