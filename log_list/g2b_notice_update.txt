@@ -23521,3 +23521,6 @@ pymongo.errors.ServerSelectionTimeoutError: No replica set members match selecto
  2 files changed, 74 insertions(+)
 To https://github.com/nohjuhyeon/belab_scraping.git
    029fa6d..fb4099a  main -> main
+----------------이메일 전송----------------
+2025-08-26 09:30:01.746382
+이메일 전송 완료!
