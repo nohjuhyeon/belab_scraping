@@ -23526,3 +23526,7 @@ To https://github.com/nohjuhyeon/belab_scraping.git
 이메일 전송 완료!
 [main 7b29aa8d] 자동 커밋: 2025-08-26 12:00:02.826251
  2 files changed, 2 insertions(+)
+[main 10988365] 자동 커밋: 2025-08-26 16:00:02.432624
+ 4 files changed, 96973 insertions(+), 17606 deletions(-)
+ delete mode 100644 notice_list/requestforproposal_0.hwpx
+ create mode 100644 notice_list/requestforproposal_0.pdf
