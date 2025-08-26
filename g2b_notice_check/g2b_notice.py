@@ -67,7 +67,7 @@ def notice_search(collection,notice_list, notice_ids, folder_path):
             os.makedirs(download_folder_path)  
         # 오늘 날짜와 2일 전 날짜를 가져와서 원하는 형식으로 변환
         search_end_date = datetime.now().strftime("%Y%m%d") + "1159"
-        search_start_date = (datetime.now() - timedelta(days=4)).strftime(
+        search_start_date = (datetime.now() - timedelta(days=5)).strftime(
             "%Y%m%d"
         ) + "0000"
         service_key = os.environ.get("API_SERVICE_KEY")
