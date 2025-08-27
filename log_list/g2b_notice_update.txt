@@ -23583,3 +23583,11 @@ error: please commit or stash them.
  create mode 100644 notice_list/requestforproposal_0.hwp
  delete mode 100644 notice_list/requestforproposal_0.pdf
  create mode 100644 notice_list/requestforproposal_1.hwp
+[main 10e06ba3] 자동 커밋: 2025-08-27 08:00:02.359091
+ 5 files changed, 116 insertions(+)
+ delete mode 100644 notice_list/requestforproposal_0.hwp
+ delete mode 100644 notice_list/requestforproposal_1.hwp
+ create mode 100644 notice_list/taskorder_0.hwp
+----------------이메일 전송----------------
+2025-08-27 09:30:01.933163
+이메일 전송 완료!
