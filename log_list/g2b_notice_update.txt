@@ -23593,3 +23593,6 @@ error: please commit or stash them.
 이메일 전송 완료!
 [main 7f7d3999] 자동 커밋: 2025-08-27 09:39:03.059853
  5 files changed, 564 insertions(+), 1 deletion(-)
+[main 345980ee] 자동 커밋: 2025-08-27 12:00:02.267997
+ 14 files changed, 24064 insertions(+), 19180 deletions(-)
+ create mode 100644 notice_list/taskorder_1.hwp
