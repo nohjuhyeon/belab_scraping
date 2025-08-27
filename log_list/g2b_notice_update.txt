@@ -23596,3 +23596,8 @@ error: please commit or stash them.
 [main 345980ee] 자동 커밋: 2025-08-27 12:00:02.267997
  14 files changed, 24064 insertions(+), 19180 deletions(-)
  create mode 100644 notice_list/taskorder_1.hwp
+[main 5fff1212] 자동 커밋: 2025-08-27 16:00:02.994853
+ 5 files changed, 29537 insertions(+), 20432 deletions(-)
+ delete mode 100644 notice_list/requestforproposal_0.hwp
+ create mode 100644 notice_list/taskorder_0.hwp
+ delete mode 100644 notice_list/taskorder_1.hwp
