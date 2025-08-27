@@ -23676,3 +23676,6 @@ error: please commit or stash them.
 공고 확인 완료!
 [main 2f2dcec7] 자동 커밋: 2025-08-28 00:00:02.101710
  1 file changed, 35 insertions(+)
+[main 6a3f16fc] 자동 커밋: 2025-08-28 04:00:02.353861
+ 3 files changed, 69261 insertions(+), 22750 deletions(-)
+ create mode 100644 notice_list/requestforproposal_0.hwp
