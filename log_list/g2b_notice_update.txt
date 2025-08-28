@@ -23736,3 +23736,6 @@ error: please commit or stash them.
 메일 발송 중 오류 발생: Connection unexpectedly closed
 메일 발송 중 오류 발생: Connection unexpectedly closed
 이메일 전송 완료!
+[main beada473] 자동 커밋: 2025-08-28 12:00:02.235416
+ 2 files changed, 146 insertions(+)
+ create mode 100755 test_notice_email_push.py
