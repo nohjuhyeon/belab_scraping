@@ -23739,3 +23739,5 @@ error: please commit or stash them.
 [main beada473] 자동 커밋: 2025-08-28 12:00:02.235416
  2 files changed, 146 insertions(+)
  create mode 100755 test_notice_email_push.py
+[main 2d631c11] 자동 커밋: 2025-08-28 16:00:02.492165
+ 3 files changed, 50266 insertions(+), 28729 deletions(-)
