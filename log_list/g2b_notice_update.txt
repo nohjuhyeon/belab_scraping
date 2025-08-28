@@ -23741,3 +23741,7 @@ error: please commit or stash them.
  create mode 100755 test_notice_email_push.py
 [main 2d631c11] 자동 커밋: 2025-08-28 16:00:02.492165
  3 files changed, 50266 insertions(+), 28729 deletions(-)
+[main c971f867] 자동 커밋: 2025-08-28 20:00:02.584786
+ 4 files changed, 18 insertions(+), 16 deletions(-)
+ delete mode 100644 notice_list/requestforproposal_0.hwpx
+ create mode 100644 notice_list/taskorder_0.hwp
