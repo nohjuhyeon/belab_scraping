@@ -23773,3 +23773,25 @@ error: please commit or stash them.
  4 files changed, 72522 insertions(+), 32560 deletions(-)
  delete mode 100644 notice_list/taskorder_0.hwp
  create mode 100644 notice_list/taskorder_0.pdf
+[main 370ee8a1] 자동 커밋: 2025-08-29 04:00:45.705886
+ 1 file changed, 4 insertions(+)
+----------------공고 확인 시작----------------
+2025-08-29 04:00:02.371956
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-08-29 04:00:07.783438 : 작업이 완료되었습니다!
+나라장터 공고를 찾습니다.
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-08-29 04:00:47.090860 : 작업이 완료되었습니다!
+공고 확인 완료!
