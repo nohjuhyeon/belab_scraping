@@ -23856,3 +23856,7 @@ error: please commit or stash them.
 이메일 전송 완료!
 [main ca2d6f80] 자동 커밋: 2025-08-29 12:00:04.191079
  1 file changed, 57 insertions(+)
+[main f5b19699] 자동 커밋: 2025-08-29 16:00:02.170991
+ 4 files changed, 56005 insertions(+), 36245 deletions(-)
+ create mode 100644 notice_list/requestforproposal_0.hwp
+ delete mode 100644 notice_list/taskorder_0.pdf
