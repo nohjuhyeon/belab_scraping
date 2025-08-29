@@ -23797,3 +23797,60 @@ error: please commit or stash them.
 공고 확인 완료!
 [main fa508efe] 자동 커밋: 2025-08-29 08:00:02.368237
  1 file changed, 22 insertions(+)
+[main d619a9bd] 자동 커밋: 2025-08-29 08:00:36.530694
+ 1 file changed, 2 insertions(+)
+----------------공고 확인 시작----------------
+2025-08-29 08:00:02.348713
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-08-29 08:00:03.614007 : 작업이 완료되었습니다!
+나라장터 공고를 찾습니다.
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-08-29 08:00:37.710772 : 작업이 완료되었습니다!
+공고 확인 완료!
+----------------이메일 전송----------------
+2025-08-29 09:30:01.999365
+메일 발송 중 오류 발생: Connection unexpectedly closed
+메일 발송 중 오류 발생: Connection unexpectedly closed
+메일 발송 중 오류 발생: Connection unexpectedly closed
+메일 발송 중 오류 발생: Connection unexpectedly closed
+메일 발송 중 오류 발생: Connection unexpectedly closed
+메일 발송 중 오류 발생: Connection unexpectedly closed
+메일 발송 중 오류 발생: Connection unexpectedly closed
+메일 발송 중 오류 발생: Connection unexpectedly closed
+메일 발송 중 오류 발생: Connection unexpectedly closed
+메일 발송 중 오류 발생: Connection unexpectedly closed
+메일 발송 중 오류 발생: Connection unexpectedly closed
+메일 발송 중 오류 발생: Connection unexpectedly closed
+메일 발송 중 오류 발생: Connection unexpectedly closed
+메일 발송 중 오류 발생: Connection unexpectedly closed
+메일 발송 중 오류 발생: Connection unexpectedly closed
+메일 발송 중 오류 발생: Connection unexpectedly closed
+메일 발송 중 오류 발생: Connection unexpectedly closed
+메일 발송 중 오류 발생: Connection unexpectedly closed
+메일 발송 중 오류 발생: Connection unexpectedly closed
+메일 발송 중 오류 발생: Connection unexpectedly closed
+메일 발송 중 오류 발생: Connection unexpectedly closed
+메일 발송 중 오류 발생: Connection unexpectedly closed
+메일 발송 중 오류 발생: Connection unexpectedly closed
+메일 발송 중 오류 발생: Connection unexpectedly closed
+메일 발송 중 오류 발생: Connection unexpectedly closed
+메일 발송 중 오류 발생: Connection unexpectedly closed
+메일 발송 중 오류 발생: Connection unexpectedly closed
+메일 발송 중 오류 발생: Connection unexpectedly closed
+메일 발송 중 오류 발생: Connection unexpectedly closed
+메일 발송 중 오류 발생: Connection unexpectedly closed
+메일 발송 중 오류 발생: Connection unexpectedly closed
+메일 발송 중 오류 발생: Connection unexpectedly closed
+이메일 전송 완료!
