@@ -23938,3 +23938,5 @@ error: please commit or stash them.
 공고 확인 완료!
 [main 911ffa1e] 자동 커밋: 2025-08-30 12:00:02.238901
  1 file changed, 22 insertions(+)
+[main d0ab736d] 자동 커밋: 2025-08-31 00:00:02.155959
+ 2 files changed, 2 insertions(+)
