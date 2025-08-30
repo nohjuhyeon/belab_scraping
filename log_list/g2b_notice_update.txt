@@ -23940,3 +23940,25 @@ error: please commit or stash them.
  1 file changed, 22 insertions(+)
 [main d0ab736d] 자동 커밋: 2025-08-31 00:00:02.155959
  2 files changed, 2 insertions(+)
+[main f7169ad4] 자동 커밋: 2025-08-31 00:01:32.455734
+ 1 file changed, 2 insertions(+)
+----------------공고 확인 시작----------------
+2025-08-31 00:00:02.115289
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-08-31 00:00:03.625286 : 작업이 완료되었습니다!
+나라장터 공고를 찾습니다.
+에러 발생!
+명령어: ['git', 'pull', '--rebase']
+returncode: 128
+stdout: 
+stderr: error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+2025-08-31 00:01:33.567584 : 작업이 완료되었습니다!
+공고 확인 완료!
